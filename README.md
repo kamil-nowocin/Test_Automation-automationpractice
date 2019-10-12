@@ -5,10 +5,11 @@
 [![Build Status](https://travis-ci.com/kamil-nowocin/Test_Automation-automationpractice.svg?branch=master)](https://travis-ci.com/kamil-nowocin/Test_Automation-automationpractice)
 ![GitHub last commit](https://img.shields.io/github/last-commit/kamil-nowocin/Test_Automation-automationpractice)
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/kamil-nowocin/Test_Automation-automationpractice)
-![GitHub commit activity](https://img.shields.io/github/commit-activity/m/kamil-nowocin/Test_Automation-automationpractice)  
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/kamil-nowocin/Test_Automation-automationpractice)
+# Test automation - http://automationpractice.com
 Framework Used: Java, TestNG, Selenium, Gradle, Cucumber, WebDriverManager, Faker & MockNeat, Travis CI  
 Design Pattern: Page Object Model
-# ABOUT PROJECT
+## ABOUT PROJECT
 Project made in my spare time to develop my skills in automation testing.  
 You don't have to download any WebDrivers - I'm using WebDriverManager, drivers will be downloaded by gradle.  
 Supported browsers:  
@@ -17,8 +18,8 @@ Supported browsers:
 * Opera
 * Safari
 * Edge
-# TEST REPORTS
-[kamil-nowocin.github.io/Test_Automation](https://kamil-nowocin.github.io/Test_Automation-automationpractice/)
-# HOW TO RUN
+## TEST REPORTS
+After each build tests results are automatically generated to [kamil-nowocin.github.io](https://kamil-nowocin.github.io/Test_Automation-automationpractice/)
+## HOW TO RUN
 `./gradlew runTests -Dbrowser="BROWSER_NAME"`  
 `./{run with tags TBA}`
