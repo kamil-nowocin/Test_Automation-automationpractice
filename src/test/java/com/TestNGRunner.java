@@ -1,15 +1,10 @@
 package com;
 
-import io.cucumber.testng.CucumberFeatureWrapper;
-import io.cucumber.testng.CucumberOptions;
-import io.cucumber.testng.PickleEventWrapper;
-import io.cucumber.testng.TestNGCucumberRunner;
+import io.cucumber.testng.*;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
-import java.io.IOException;
 
 @CucumberOptions(
         tags = "not @ignore",
@@ -42,7 +37,7 @@ public class TestNGRunner {
     }
 
     @AfterClass(alwaysRun = true)
-    public void tearDownClass() throws IOException {
+    public void tearDownClass() {
         testNGCucumberRunner.finish();
     }
 }
