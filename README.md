@@ -1,11 +1,12 @@
 ![Imgur](https://imgur.com/SeGMpNV.png)
 ![](https://img.shields.io/badge/language-java-critical)
+![](https://img.shields.io/badge/Allure%20Report-2.8.1-orange.svg)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/kamil-nowoicn/Test_Automation-automationpractice)
-![GitHub commit activity](https://img.shields.io/github/commit-activity/m/kamil-nowoicn/Test_Automation-automationpractice)
-![GitHub last commit](https://img.shields.io/github/last-commit/kamil-nowoicn/Test_Automation-automationpractice)
-[![Build Status](https://travis-ci.com/kamil-nowocin/Test_Automation-automationpractice.svg?branch=master)](https://travis-ci.com/kamil-nowocin/Test_Automation-automationpractice) 
-![](https://img.shields.io/badge/Allure%20Report-2.8.1-orange.svg)  
+[![Build Status](https://travis-ci.org/kamil-nowocin/Test_Automation-automationpractice.svg?branch=master)](https://travis-ci.org/kamil-nowocin/Test_Automation-automationpractice)
+![GitHub last commit](https://img.shields.io/github/last-commit/kamil-nowocin/Test_Automation-automationpractice)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/kamil-nowocin/Test_Automation-automationpractice)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/kamil-nowocin/Test_Automation-automationpractice)
+
 Framework Used: Java, TestNG, Selenium, Gradle, Cucumber, WebDriverManager, Faker & MockNeat, Travis CI  
 Design Pattern: Page Object Model
 # ABOUT PROJECT
