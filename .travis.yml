@@ -1,0 +1,42 @@
+os: linux
+language: java
+sudo: required
+env:
+  matrix:
+    - DISPLAY=:99.0
+  global:
+    - secure: J1R79L25h6N7MivXIPSbunviGcIaxaX5UxwwocjwV8cIQA5VtAWAMaNHlioyTa99WPUI6sIzs0NCNabx99xlcGEzr04zpqgM8HOPnoyRK3NJUZSs/4myKPFsqhupATfjRXbjQUvcmLCiTpS6LCYGUcLgwi9PPsStNno8nBWZXFlJK2fkm+9OF7Q7pUezPLpXtpY4DFVQ21qgMyYv6DS+oBSgvRasCmy9FAWVP5cy5FYA3o2SVHiDzR5VPu6m9x2sDtb72ram/ASvwBBzNyVzuVVFuluUvFJkXesoOgelllBjT3eqhftSxA2yy0xMFSeucqEXL3k/NuqHQZ30lANVp8HD63qaPFE7mDAGm8IVOjGITmxlfEBcgMHBAcP13ynl7yvXOE/F+/ml9o5CRr3yNMVet23VRbQGAk9SmTn2odFC0CrBrF6Mxy2/7dfznHUumfmDpaFv8UyJ9xbYilNiNVyQ9SQS8aD1d3Vfyi7Uw5XDYTkL1mLLXR13N7md/3lCQJcZ5Jc91BfrFcOJ4hphCGGNZXbVsVgqWlIYdQHko9NSMCwi+K6xujX0D7YHrXhKTdng4uMbqiXgFHk53oBpMtkuMXwlujQQF1bxYqWltIwggy/gVpYnhhBy0GHhdRCmKZmiSemm3CKeCHxfX1CL+beiXIk6Hbs/GDJW/LjhMvo=
+    - secure: AtFf+1SCQzhH9+pRywR9QIkjmO45euxPSK15o0burZAfUsxCcLkkkHL7OLq/c7vU/6slHhkDCk83uLyiq9MPTS3ruR6OfTJF29BcXlPEvGfOa9XlCpW1SGkAEMSHy7A0s0g8KVUHps8jaa5M1gVmdoLsDmax8ngGIGPAVRIsKj0RoyDK+dA1BXqyFxyDR7eifeWXepMtmWr+E9pHdZKqj4CIPxdVPBqE2ucD/kLEQ5s0rOppxyeZVLz9oAZmYKdpXeEhcyaMeF4DGR9+Yg/T755K5H40MYkVN8M9ZJhCQXOYbzkt9KrtvM/eGDduRCushMYIkvtXy2YJPsbKU/QreaeGY/fiMEgIylAm1hN7JShSluK+nhCS45FzOo6TNdRgXvdKaHpQPX7d5GPudy1BJmrDIhDqI4OeSvVAWsvduiVPomREgA41ND+dO55A0vs8LXxI16m/KePzx8y/vPo+UHT0ESjB4PtVo5Ke1isFHPwoiix/WmiL2ZDMiKrgUsMhANjw+bbFg4xYlvr835zXLgfhN94BGctWOKIqcQhgaOQQp1Ljaf/n6l9/0JDw0FskO5/bwCD1EjoUNWXiTG4DqismaIrlhAFNNrEApxDu59/S99JpYY/8E73yQ9Uur6arHjrRqARLQV+ISnQvgEekxHzW/daozPUFdBCZL/POpaQ=
+dist: trusty
+notifications:
+  email:
+    on_success: never
+    on_cancel: never
+    on_error: always
+    on_start: never
+    on_failure: always
+addons:
+  chrome: stable
+install:
+  #DOWNLOAD AND INSTALL ALL REQUIRED DRIVERS
+  - wget -N http://chromedriver.storage.googleapis.com/77.0.3865.40/chromedriver_linux64.zip -P ~/
+  - unzip ~/chromedriver_linux64.zip -d ~/
+  - rm ~/chromedriver_linux64.zip
+  - npm install -g allure-commandline --save-dev
+before_script:
+  - sh -e /etc/init.d/xvfb start
+  - sleep 3
+  - echo ========================================================================
+  - echo =========================BUILD EXECUTION STARTED========================
+  - echo ========================================================================
+script:
+  - ./gradlew check
+after_script:
+  - echo ========================================================================
+  - echo ========================BUILD EXECUTION FINISHED========================
+  - echo ========================================================================
+  - chmod 777 .travis/deploy.sh
+  - echo ========================================================================
+  - echo =========================UPLOADING TEST REPORTS=========================
+  - echo ========================================================================
+  - .travis/deploy.sh
