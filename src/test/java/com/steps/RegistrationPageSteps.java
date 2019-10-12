@@ -221,7 +221,7 @@ public class RegistrationPageSteps extends DriverFactory {
     public void iCanSeeWelcomeMessage() {
         Assert.assertTrue(basePage.isDisplayed(10, registrationPage.myAccountDashboard));
         Assert.assertEquals(registrationPage.myAccountDashboard.getText(),
-                "Welcome to your account. Here you can manage all of your personal information and orders.");
+                "Welcome to your account. Here you can manage all of your personal information and orders.aa");
     }
 
     @Step("I can see create an account error")
