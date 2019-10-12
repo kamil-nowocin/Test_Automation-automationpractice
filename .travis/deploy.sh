@@ -16,5 +16,6 @@ cd target/github-pages/
 git config user.name "Travis CI"
 git config user.email "deploy@travis-ci.org"
 # shellcheck disable=SC2035
-git commit -a -m "Auto deploy from Travis CI $TRAVIS_BUILD_NUMBER"
+git add -A
+git commit -m "Auto deploy from Travis CI $TRAVIS_BUILD_NUMBER"
 git push origin gh-pages
