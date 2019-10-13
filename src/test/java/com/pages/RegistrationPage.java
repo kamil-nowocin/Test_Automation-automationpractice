@@ -8,8 +8,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.ResourceBundle;
 
@@ -23,7 +21,6 @@ public class RegistrationPage extends BasePage {
     private MockNeat mockNeat = MockNeat.threadLocal();
     private String tempEmail = mockNeat.emails().val();
 
-    private static final Logger logger = LoggerFactory.getLogger(RegistrationPage.class);
     private static final ResourceBundle resourceBundleEmails = ResourceBundle.getBundle("invalidEmails");
     private static final ResourceBundle resourceBundleErrorMessages = ResourceBundle.getBundle("errorValidators");
 

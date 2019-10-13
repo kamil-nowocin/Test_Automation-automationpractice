@@ -39,5 +39,7 @@ public class TestNGRunner {
     @AfterClass(alwaysRun = true)
     public void tearDownClass() {
         testNGCucumberRunner.finish();
+        FrameworkEnvironment.allureWriteProperties();
+        FrameworkEnvironment.allureWriteExecutors();
     }
 }

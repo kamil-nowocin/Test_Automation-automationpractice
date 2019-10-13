@@ -13,11 +13,9 @@ import org.openqa.selenium.safari.SafariDriver;
 
 import java.util.concurrent.TimeUnit;
 
-public abstract class DriverFactory {
+public abstract class DriverFactory extends FrameworkEnvironment {
 
     protected static WebDriver driver;
-    private static final int TIMEOUT = 15;
-    private static final String DEFAULT_BROWSER = "chrome";
 
     private static String getBrowserName() {
         String browser = System.getProperty("browser");

@@ -7,20 +7,18 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import io.cucumber.datatable.DataTable;
-import io.qameta.allure.Feature;
-import io.qameta.allure.Severity;
-import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Step;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 
 import java.util.List;
 
-@Feature("REGISTRATION TESTS")
-@Severity(SeverityLevel.CRITICAL)
+@Listeners({Hooks.class})
 public class RegistrationPageSteps extends DriverFactory {
 
     private BasePage basePage = new BasePage(driver);
     private RegistrationPage registrationPage = new RegistrationPage(driver);
+    private static final String message = "Warning message didn't contain this phrase!";
 
     @Step("I click on Sign in button")
     @When("I click on Sign in button")
@@ -221,7 +219,7 @@ public class RegistrationPageSteps extends DriverFactory {
     public void iCanSeeWelcomeMessage() {
         Assert.assertTrue(basePage.isDisplayed(10, registrationPage.myAccountDashboard));
         Assert.assertEquals(registrationPage.myAccountDashboard.getText(),
-                "Welcome to your account. Here you can manage all of your personal information and orders.aa");
+                "Welcome to your account. Here you can manage all of your personal information and orders.");
     }
 
     @Step("I can see create an account error")
@@ -245,72 +243,72 @@ public class RegistrationPageSteps extends DriverFactory {
     @Step("I can see registration error which include one missing element")
     @Then("I can see registration error which include one missing element")
     public void iCanSeeRegistrationErrorWhichIncludeOneMissingElement() {
-        Assert.assertTrue(registrationPage.errorValidator("oneerror"));
+        Assert.assertTrue(registrationPage.errorValidator("oneerror"), message);
     }
 
     @Step("I can see warning message about missing first name input")
     @Then("I can see warning message about missing first name input")
     public void iCanSeeWarningMessageAboutMissingFirstNameInput() {
-        Assert.assertTrue(registrationPage.errorValidator("errorfirstname"));
+        Assert.assertTrue(registrationPage.errorValidator("errorfirstname"), message);
     }
 
     @Step("I can see warning message about missing last name input")
     @Then("I can see warning message about missing last name input")
     public void iCanSeeWarningMessageAboutMissingLastNameInput() {
-        Assert.assertTrue(registrationPage.errorValidator("errorlastname"));
+        Assert.assertTrue(registrationPage.errorValidator("errorlastname"), message);
     }
 
     @Step("I can see warning message about missing email address input")
     @Then("I can see warning message about missing email address input")
     public void iCanSeeWarningMessageAboutMissingEmailAddressInput() {
-        Assert.assertTrue(registrationPage.errorValidator("erroremail"));
+        Assert.assertTrue(registrationPage.errorValidator("erroremail"), message);
     }
 
     @Step("I can see warning message about missing password input")
     @Then("I can see warning message about missing password input")
     public void iCanSeeWarningMessageAboutMissingPasswordInput() {
-        Assert.assertTrue(registrationPage.errorValidator("errorpassword"));
+        Assert.assertTrue(registrationPage.errorValidator("errorpassword"), message);
     }
 
     @Step("I can see warning message about missing address input")
     @Then("I can see warning message about missing address input")
     public void iCanSeeWarningMessageAboutMissingAddressInput() {
-        Assert.assertTrue(registrationPage.errorValidator("erroraddress"));
+        Assert.assertTrue(registrationPage.errorValidator("erroraddress"), message);
     }
 
     @Step("I can see warning message about missing city input")
     @Then("I can see warning message about missing city input")
     public void iCanSeeWarningMessageAboutMissingCityInput() {
-        Assert.assertTrue(registrationPage.errorValidator("errorcity"));
+        Assert.assertTrue(registrationPage.errorValidator("errorcity"), message);
     }
 
     @Step("I can see warning message about missing state input")
     @Then("I can see warning message about missing state input")
     public void iCanSeeWarningMessageAboutMissingStateInput() {
-        Assert.assertTrue(registrationPage.errorValidator("errorstate"));
+        Assert.assertTrue(registrationPage.errorValidator("errorstate"), message);
     }
 
     @Step("I can see warning message about missing postal code input")
     @Then("I can see warning message about missing postal code input")
     public void iCanSeeWarningMessageAboutMissingPostalCodeInput() {
-        Assert.assertTrue(registrationPage.errorValidator("errorpostalcode"));
+        Assert.assertTrue(registrationPage.errorValidator("errorpostalcode"), message);
     }
 
     @Step("I can see warning message about missing country input")
     @Then("I can see warning message about missing country input")
     public void iCanSeeWarningMessageAboutMissingCountryInput() {
-        Assert.assertTrue(registrationPage.errorValidator("errorcountry"));
+        Assert.assertTrue(registrationPage.errorValidator("errorcountry"), message);
     }
 
     @Step("I can see warning message about missing mobile phone input")
     @Then("I can see warning message about missing mobile phone input")
     public void iCanSeeWarningMessageAboutMissingMobilePhoneInput() {
-        Assert.assertTrue(registrationPage.errorValidator("errormobilephone"));
+        Assert.assertTrue(registrationPage.errorValidator("errormobilephone"), message);
     }
 
     @Step("I can see warning message about missing email address alias")
     @Then("I can see warning message about missing email address alias")
     public void iCanSeeWarningMessageAboutMissingEmailAddressAlias() {
-        Assert.assertTrue(registrationPage.errorValidator("erroremailalias"));
+        Assert.assertTrue(registrationPage.errorValidator("erroremailalias"), message);
     }
 }

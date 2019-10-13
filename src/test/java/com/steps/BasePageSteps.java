@@ -5,7 +5,9 @@ import com.pages.base.BasePage;
 import cucumber.api.java.en.Given;
 import io.qameta.allure.Step;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 
+@Listeners({Hooks.class})
 public class BasePageSteps extends DriverFactory {
 
     private BasePage basePage = new BasePage(driver);
@@ -14,7 +16,7 @@ public class BasePageSteps extends DriverFactory {
     @Given("I open home page")
     public void iOpenHomePage() {
         basePage.openHomePage();
-        Assert.assertEquals(driver.getCurrentUrl(), "http://automationpractice.com/index.php");
+        Assert.assertEquals(driver.getCurrentUrl(), HOME_URL);
     }
 
     @Step("I can see Automationpractice.com website")

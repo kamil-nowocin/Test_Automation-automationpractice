@@ -5,14 +5,11 @@ import com.pages.LoginPage;
 import com.pages.base.BasePage;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
-import io.qameta.allure.Feature;
-import io.qameta.allure.Severity;
-import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Step;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 
-@Feature("LOGIN TESTS")
-@Severity(SeverityLevel.CRITICAL)
+@Listeners({Hooks.class})
 public class LoginPageSteps extends DriverFactory {
 
     private BasePage basePage = new BasePage(driver);

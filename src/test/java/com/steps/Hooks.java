@@ -4,30 +4,19 @@ import com.DriverFactory;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
-import io.qameta.allure.Allure;
 import io.qameta.allure.Attachment;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.testng.ITestListener;
 
-import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Paths;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
-public class Hooks extends DriverFactory {
+public class Hooks extends DriverFactory implements ITestListener {
 
-    private static final Logger logger = LoggerFactory.getLogger(Hooks.class);
-    private static final String todayDate = new SimpleDateFormat("yyyy-MM-dd HH:ss").format(new Date());
 
-    private static final String ANSI_RESET = "\u001B[0m";
-    private static final String ANSI_RED = "\u001B[31m";
-    private static final String ANSI_GREEN = "\u001B[32m";
-    private static final String ANSI_BLUE = "\u001b[34m";
 
     @Before
     public void beforeScenario(Scenario scenario) {
@@ -42,7 +31,6 @@ public class Hooks extends DriverFactory {
     }
 
     @After
-    @Attachment(type = "image/png")
     public void afterScenario(Scenario scenario) throws IOException {
         logger.debug(ANSI_BLUE + "##################################################################################"
                 + "############################" + ANSI_RESET);
@@ -61,8 +49,20 @@ public class Hooks extends DriverFactory {
             String currentPath = Paths.get(".").toAbsolutePath().normalize().toString();
             FileUtils.copyFile(scrFile, new File(currentPath + "/screenshots/" + scenario.getName()
                     + "-" + todayDate + ".png"));
-            Allure.addAttachment(scenario.getName(), new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES)));
+            allureSaveTextLog();
+            allureSaveScreenshotPNG();
         }
         destroyDriver();
+    }
+
+    @Attachment(value = "Scenario FAIL screenshot", type = "image/png")
+    private byte[] allureSaveScreenshotPNG() {
+        return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+    }
+
+    @Attachment(type = "text/plain")
+    private static String allureSaveTextLog() {
+        String message = "Text log isn't implemented yet! \nSorry...";
+        return message;
     }
 }

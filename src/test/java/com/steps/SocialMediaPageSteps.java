@@ -6,19 +6,18 @@ import com.pages.base.BasePage;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import io.qameta.allure.*;
+import io.qameta.allure.Step;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 
 import java.util.ArrayList;
 
-@Feature("SOCIAL MEDIA TESTS")
-@Severity(SeverityLevel.MINOR)
+@Listeners({Hooks.class})
 public class SocialMediaPageSteps extends DriverFactory {
 
     private BasePage basePage = new BasePage(driver);
     private SocialMediaPage socialMediaPage = new SocialMediaPage(driver);
-
-    private static final String message = "You weren't redirected to: ";
+    private static final String message = "Following page URL didn't contain: ";
 
     @Step("I scroll the website until I can see my Facebook logo")
     @When("I scroll the website until I can see my Facebook logo")
@@ -43,7 +42,7 @@ public class SocialMediaPageSteps extends DriverFactory {
         driver.switchTo().window(browserTabs.get(1));
 
         //ASSERT
-        Assert.assertTrue(driver.getCurrentUrl().contains(redirectedPage), message);
+        Assert.assertTrue(driver.getCurrentUrl().contains(redirectedPage), message + redirectedPage);
     }
 
     @Step("I scroll the website until I can see Twitter logo")
@@ -69,7 +68,7 @@ public class SocialMediaPageSteps extends DriverFactory {
         driver.switchTo().window(browserTabs.get(1));
 
         //ASSERT
-        Assert.assertTrue(driver.getCurrentUrl().contains(redirectedPage), message);
+        Assert.assertTrue(driver.getCurrentUrl().contains(redirectedPage), message + redirectedPage);
     }
 
     @Step("I scroll the website until I can see YouTube logo")
@@ -95,7 +94,7 @@ public class SocialMediaPageSteps extends DriverFactory {
         driver.switchTo().window(browserTabs.get(1));
 
         //ASSERT
-        Assert.assertTrue(driver.getCurrentUrl().contains(redirectedPage), message);
+        Assert.assertTrue(driver.getCurrentUrl().contains(redirectedPage), message + redirectedPage);
     }
 
     @Step("I scroll the website until I can see Google+ logo")
@@ -121,6 +120,6 @@ public class SocialMediaPageSteps extends DriverFactory {
         driver.switchTo().window(browserTabs.get(1));
 
         //ASSERT
-        Assert.assertTrue(driver.getCurrentUrl().contains(redirectedPage), message);
+        Assert.assertTrue(driver.getCurrentUrl().contains(redirectedPage), message + redirectedPage);
     }
 }

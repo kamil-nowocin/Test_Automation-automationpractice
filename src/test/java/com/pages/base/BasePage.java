@@ -1,5 +1,6 @@
 package com.pages.base;
 
+import com.FrameworkEnvironment;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
@@ -8,13 +9,11 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.NoSuchElementException;
 import java.util.Random;
 
-public class BasePage {
+public class BasePage extends FrameworkEnvironment {
 
     public BasePage(final WebDriver driver) {
         BasePage.driver = driver;
@@ -22,8 +21,6 @@ public class BasePage {
     }
 
     private static WebDriver driver;
-    private static final String HOME_URL = "http://automationpractice.com/index.php";
-    private static final Logger logger = LoggerFactory.getLogger(BasePage.class);
 
     public void openHomePage() {
         driver.get(HOME_URL);
