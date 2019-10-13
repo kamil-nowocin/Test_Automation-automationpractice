@@ -21,5 +21,5 @@ Supported browsers:
 ## TEST REPORTS
 After each build tests results are automatically generated to [kamil-nowocin.github.io](https://kamil-nowocin.github.io/Test_Automation-automationpractice/)
 ## HOW TO RUN
-`./gradlew runTests -Dbrowser="BROWSER_NAME"`  
+`./gradlew test -Dbrowser="BROWSER_NAME"`  
 `./{run with tags TBA}`
