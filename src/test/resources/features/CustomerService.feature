@@ -1,4 +1,3 @@
-@ignore
 Feature: As a user I would like to contact customer service
 
   Background: Navigate to Contact Us page
