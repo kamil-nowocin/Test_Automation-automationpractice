@@ -16,8 +16,6 @@ import java.nio.file.Paths;
 
 public class Hooks extends DriverFactory implements ITestListener {
 
-
-
     @Before
     public void beforeScenario(Scenario scenario) {
         logger.debug(ANSI_BLUE + "#################################################################################"
