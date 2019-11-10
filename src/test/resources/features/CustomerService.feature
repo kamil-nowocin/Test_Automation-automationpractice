@@ -37,7 +37,7 @@ Feature: As a user I would like to contact customer service
     And I can see success message 'Your message has been successfully sent to our team.'
 
 #--------------------------------------------------------------------------------
-  Scenario: As a user I am not bale to send request via contact us form - invalid email
+  Scenario: As a user I am not able to send request via contact us form - invalid email
     Given I am on Customer Service Contact Us page form
     When I choose Subject Heading
     And I write an invalid email address in contact us page
@@ -48,7 +48,7 @@ Feature: As a user I would like to contact customer service
     And I can see error message 'Invalid email address.'
 
 #--------------------------------------------------------------------------------
-  Scenario: As a user I am not bale to send request via contact us form - missing subject
+  Scenario: As a user I am not able to send request via contact us form - missing subject
     Given I am on Customer Service Contact Us page form
     When I don't choose Subject Heading
     And I write an email address in contact us page
@@ -59,7 +59,7 @@ Feature: As a user I would like to contact customer service
     And I can see error message 'Please select a subject from the list provided.'
 
 #--------------------------------------------------------------------------------
-  Scenario: As a user I am not bale to send request via contact us form - missing email address
+  Scenario: As a user I am not able to send request via contact us form - missing email address
     Given I am on Customer Service Contact Us page form
     When I choose Subject Heading
     And I don't write an email address
@@ -70,7 +70,7 @@ Feature: As a user I would like to contact customer service
     And I can see error message 'Invalid email address.'
 
 #--------------------------------------------------------------------------------
-  Scenario: As a user I am not bale to send request via contact us form - missing message
+  Scenario: As a user I am not able to send request via contact us form - missing message
     Given I am on Customer Service Contact Us page form
     When I choose Subject Heading
     And I write an email address in contact us page
@@ -81,7 +81,7 @@ Feature: As a user I would like to contact customer service
     And I can see error message 'The message cannot be blank.'
 
 #--------------------------------------------------------------------------------
-  Scenario: As a user I am not bale to send request via contact us form - missing all inputs
+  Scenario: As a user I am not able to send request via contact us form - missing all inputs
     Given I am on Customer Service Contact Us page form
     When I click Send button
     Then I can see error message 'Invalid email address.'

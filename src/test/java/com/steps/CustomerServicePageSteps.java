@@ -96,7 +96,7 @@ public class CustomerServicePageSteps extends DriverFactory {
     @Step("I write an invalid email address in contact us page")
     @And("I write an invalid email address in contact us page")
     public void iWriteAnInvalidEmailAddressInContactUsPage() {
-        registrationPage.sendInvalidEmailInput();
+        customerServicePage.emailAddressInput.sendKeys(resourceBundleInvalidEmails.getString("invalid" + basePage.randomValue(6, 1)));
     }
 
     @Step("I can see success message {string}")
