@@ -13,7 +13,7 @@ import org.openqa.selenium.safari.SafariDriver;
 
 import java.util.concurrent.TimeUnit;
 
-public abstract class DriverFactory extends FrameworkEnvironment {
+public class DriverFactory extends FrameworkEnvironment {
 
     protected static WebDriver driver;
 

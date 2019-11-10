@@ -17,7 +17,6 @@ public class SocialMediaPageSteps extends DriverFactory {
 
     private BasePage basePage = new BasePage(driver);
     private SocialMediaPage socialMediaPage = new SocialMediaPage(driver);
-    private static final String message = "Following page URL didn't contain: ";
 
     @Step("I scroll the website until I can see my Facebook logo")
     @When("I scroll the website until I can see my Facebook logo")
@@ -42,7 +41,7 @@ public class SocialMediaPageSteps extends DriverFactory {
         driver.switchTo().window(browserTabs.get(1));
 
         //ASSERT
-        Assert.assertTrue(driver.getCurrentUrl().contains(redirectedPage), message + redirectedPage);
+        Assert.assertTrue(driver.getCurrentUrl().contains(redirectedPage), PAGE_URL_DIDNT_CONTAIN + redirectedPage);
     }
 
     @Step("I scroll the website until I can see Twitter logo")
@@ -68,7 +67,7 @@ public class SocialMediaPageSteps extends DriverFactory {
         driver.switchTo().window(browserTabs.get(1));
 
         //ASSERT
-        Assert.assertTrue(driver.getCurrentUrl().contains(redirectedPage), message + redirectedPage);
+        Assert.assertTrue(driver.getCurrentUrl().contains(redirectedPage), PAGE_URL_DIDNT_CONTAIN + redirectedPage);
     }
 
     @Step("I scroll the website until I can see YouTube logo")
@@ -94,7 +93,7 @@ public class SocialMediaPageSteps extends DriverFactory {
         driver.switchTo().window(browserTabs.get(1));
 
         //ASSERT
-        Assert.assertTrue(driver.getCurrentUrl().contains(redirectedPage), message + redirectedPage);
+        Assert.assertTrue(driver.getCurrentUrl().contains(redirectedPage), PAGE_URL_DIDNT_CONTAIN + redirectedPage);
     }
 
     @Step("I scroll the website until I can see Google+ logo")
@@ -120,6 +119,6 @@ public class SocialMediaPageSteps extends DriverFactory {
         driver.switchTo().window(browserTabs.get(1));
 
         //ASSERT
-        Assert.assertTrue(driver.getCurrentUrl().contains(redirectedPage), message + redirectedPage);
+        Assert.assertTrue(driver.getCurrentUrl().contains(redirectedPage), PAGE_URL_DIDNT_CONTAIN + redirectedPage);
     }
 }

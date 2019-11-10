@@ -10,17 +10,18 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.security.SecureRandom;
 import java.util.NoSuchElementException;
 import java.util.Random;
 
 public class BasePage extends FrameworkEnvironment {
 
+    private static WebDriver driver;
+
     public BasePage(final WebDriver driver) {
         BasePage.driver = driver;
         PageFactory.initElements(driver, this);
     }
-
-    private static WebDriver driver;
 
     public void openHomePage() {
         driver.get(HOME_URL);
@@ -68,6 +69,15 @@ public class BasePage extends FrameworkEnvironment {
     public int randomValue(int max, int min) {
         Random random = new Random();
         return random.nextInt((max - min) + 1) + min;
+    }
+
+    public String randomString(int length) {
+        String characters = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+        SecureRandom secureRandom = new SecureRandom();
+        StringBuilder stringBuilder = new StringBuilder(length);
+        for (int i = 0; i < length; i++)
+            stringBuilder.append(characters.charAt(secureRandom.nextInt(characters.length())));
+        return stringBuilder.toString();
     }
 
     public void scrollWebsiteToElement(WebElement webElement) {

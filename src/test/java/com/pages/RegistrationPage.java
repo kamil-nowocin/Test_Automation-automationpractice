@@ -1,28 +1,17 @@
 package com.pages;
 
-import com.github.javafaker.Faker;
 import com.pages.base.BasePage;
-import net.andreinc.mockneat.MockNeat;
 import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
-import java.util.ResourceBundle;
-
 public class RegistrationPage extends BasePage {
 
     public RegistrationPage(final WebDriver driver) {
         super(driver);
     }
-
-    private Faker faker = new Faker();
-    private MockNeat mockNeat = MockNeat.threadLocal();
-    private String tempEmail = mockNeat.emails().val();
-
-    private static final ResourceBundle resourceBundleEmails = ResourceBundle.getBundle("invalidEmails");
-    private static final ResourceBundle resourceBundleErrorMessages = ResourceBundle.getBundle("errorValidators");
 
     //GENERAL//
     @FindBy(how = How.CSS, using = "#header > div.nav > div > div > nav > div.header_user_info > a")
@@ -126,6 +115,9 @@ public class RegistrationPage extends BasePage {
     @FindBy(how = How.ID, using = "submitAccount")
     public WebElement registerButton;
 
+
+    private String tempEmail = mockNeat.emails().val();
+
     //GENERAL//
     public String getTempEmail() {
         return tempEmail;
@@ -164,7 +156,7 @@ public class RegistrationPage extends BasePage {
 
     //DATA INPUTS//
     public void sendInvalidEmailInput() {
-        emailInput.sendKeys(resourceBundleEmails.getString("invalid" + randomValue(6, 1)));
+        emailInput.sendKeys(resourceBundleInvalidEmails.getString("invalid" + randomValue(6, 1)));
     }
 
     public void sendRegisteredEmailInput() {

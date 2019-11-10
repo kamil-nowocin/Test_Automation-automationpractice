@@ -1,6 +1,8 @@
 package com;
 
+import com.github.javafaker.Faker;
 import com.steps.Hooks;
+import net.andreinc.mockneat.MockNeat;
 import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,12 +13,20 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Properties;
+import java.util.ResourceBundle;
 
 public class FrameworkEnvironment {
 
     protected static Logger logger = LoggerFactory.getLogger(Hooks.class);
+    protected static Faker faker = new Faker();
+    protected static MockNeat mockNeat = MockNeat.threadLocal();
 
-    final int TIMEOUT = 15;
+    //BUNDLES//
+    protected static final ResourceBundle resourceBundleInvalidEmails = ResourceBundle.getBundle("invalidEmails");
+    protected static final ResourceBundle resourceBundleErrorMessages = ResourceBundle.getBundle("errorValidators");
+
+    //DATA//
+    protected static final int TIMEOUT = 15;
     protected static final String ANSI_RED = "\u001B[31m";
     protected static final String ANSI_RESET = "\u001B[0m";
     protected static final String ANSI_BLUE = "\u001b[34m";
@@ -24,15 +34,21 @@ public class FrameworkEnvironment {
     protected static final String EXECUTOR = "GRADLE";
     protected static final String DEFAULT_BROWSER = "chrome";
     protected static final String HOME_URL = "http://automationpractice.com/index.php";
-    protected final String todayDate = new SimpleDateFormat("yyyy-MM-dd HH:ss").format(new Date());
+    protected static final String TODAY_DATE = new SimpleDateFormat("yyyy-MM-dd HH:ss").format(new Date());
 
-    private static String TRAVIS_BUILD_NUMBER = System.getProperty
+    //MESSAGES//
+    protected static final String PAGE_URL_DIDNT_CONTAIN = "Following page URL didn't contain this URL! Expected: ";
+    protected static final String MESSAGE_DIDNT_CONTAIN = "Warning message didn't contain this phrase! Expected: ";
+    protected static final String WELCOME_MESSAGE = "Welcome to your account. Here you can manage all of your personal information and orders.";
+    protected static final String PAGE_NOTLOADED = "Page wasn't ready to execute tests!";
+
+    private static final String TRAVIS_BUILD_NUMBER = System.getProperty
             ("travis.buildNumber", "Build was made on localhost");
-    private static String TRAVIS_BUILD_WEB_URL = System.getProperty
+    private static final String TRAVIS_BUILD_WEB_URL = System.getProperty
             ("travis.buildURL", "Build was made on localhost");
-    private static String TRAVIS_BRANCH = System.getProperty
+    private static final String TRAVIS_BRANCH = System.getProperty
             ("travis.branch", "Master");
-    private static String BROWSER = System.getProperty
+    private static final String BROWSER = System.getProperty
             ("browser", "Chrome");
 
     static void allureWriteProperties() {
