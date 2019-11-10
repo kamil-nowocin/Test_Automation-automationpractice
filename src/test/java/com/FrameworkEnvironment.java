@@ -37,6 +37,11 @@ public class FrameworkEnvironment {
     protected static final String TODAY_DATE = new SimpleDateFormat("yyyy-MM-dd HH:ss").format(new Date());
 
     //MESSAGES//
+    protected static final String PAGE_URL_DIDNT_CONTAIN = "Following page URL didn't contain this URL! ";
+    protected static final String MESSAGE_DIDNT_CONTAIN = "Warning message didn't contain this phrase! ";
+    protected static final String WELCOME_MESSAGE = "Welcome to your account. Here you can manage all of your personal information and orders.";
+    protected static final String PAGE_NOTLOADED = "Page wasn't ready to execute tests! ";
+    protected static final String WRONG_RESULTS_NUMBER = "Results which have been found didn't match expected results! ";
     protected static final String PAGE_URL_DIDNT_CONTAIN = "Following page URL didn't contain this URL! Expected: ";
     protected static final String MESSAGE_DIDNT_CONTAIN = "Warning message didn't contain this phrase! Expected: ";
     protected static final String WELCOME_MESSAGE = "Welcome to your account. Here you can manage all of your personal information and orders.";
@@ -47,9 +52,13 @@ public class FrameworkEnvironment {
     private static final String TRAVIS_BUILD_WEB_URL = System.getProperty
             ("travis.buildURL", "Build was made on localhost");
     private static final String TRAVIS_BRANCH = System.getProperty
-            ("travis.branch", "Master");
+            ("travis.branch", "Build was made on localhost");
     private static final String BROWSER = System.getProperty
             ("browser", "Chrome");
+    private static final String OS_NAME = System.getProperty
+            ("travis.osName", "Build was made on localhost");
+    private static final String JAVA_VERSION = System.getProperty
+            ("travis.jdkVersion", "Build was made on localhost");
 
     static void allureWriteProperties() {
         Properties properties = new Properties();
@@ -58,6 +67,8 @@ public class FrameworkEnvironment {
         properties.setProperty("Travis build Run:", TRAVIS_BUILD_NUMBER);
         properties.setProperty("Branch:", TRAVIS_BRANCH);
         properties.setProperty("Browser:", BROWSER);
+        properties.setProperty("OS Name:", OS_NAME);
+        properties.setProperty("JDK Version:", JAVA_VERSION);
         try {
             properties.store(new FileOutputStream("build/allure-results/environment.properties"), null);
         } catch (IOException e) {
