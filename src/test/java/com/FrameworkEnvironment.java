@@ -37,11 +37,11 @@ public class FrameworkEnvironment {
     protected static final String TODAY_DATE = new SimpleDateFormat("yyyy-MM-dd HH:ss").format(new Date());
 
     //MESSAGES//
-    protected static final String PAGE_URL_DIDNT_CONTAIN = "Following page URL didn't contain this URL!";
-    protected static final String MESSAGE_DIDNT_CONTAIN = "Warning message didn't contain this phrase!";
-    protected static final String WELCOME_MESSAGE = "Welcome to your account. Here you can manage all of your personal information and orders.";
-    protected static final String PAGE_NOTLOADED = "Page wasn't ready to execute tests!";
-    protected static final String WRONG_RESULTS_NUMBER = "Results which have been found didn't match expected results!";
+    protected static final String PAGE_URL_DIDNT_CONTAIN = "Following page URL didn't contain this URL! ";
+    protected static final String MESSAGE_DIDNT_CONTAIN = "Warning message didn't contain this phrase! ";
+    protected static final String WELCOME_MESSAGE = "Welcome to your account. Here you can manage all of your personal information and orders. ";
+    protected static final String PAGE_NOTLOADED = "Page wasn't ready to execute tests! ";
+    protected static final String WRONG_RESULTS_NUMBER = "Results which have been found didn't match expected results! ";
 
     private static final String TRAVIS_BUILD_NUMBER = System.getProperty
             ("travis.buildNumber", "Build was made on localhost");
