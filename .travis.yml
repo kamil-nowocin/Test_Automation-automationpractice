@@ -32,7 +32,7 @@ before_script:
   - echo ========================================================================
 script:
   #RUN GRADLE
-  - ./gradlew test -Dtravis.buildNumber=$TRAVIS_BUILD_NUMBER -Dtravis.buildURL=$TRAVIS_BUILD_WEB_URL -Dtravis.branch=$TRAVIS_BRANCH
+  - ./gradlew test -Dtravis.buildNumber=$TRAVIS_BUILD_NUMBER -Dtravis.buildURL=$TRAVIS_BUILD_WEB_URL -Dtravis.branch=$TRAVIS_BRANCH -Dtravis.osName=$TRAVIS_OS_NAME -Dtravis.jdkVersion=$TRAVIS_JDK_VERSION
 after_script:
   - echo ========================================================================
   - echo ========================BUILD EXECUTION FINISHED========================
