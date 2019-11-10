@@ -15,7 +15,7 @@ Feature: A a user I would like to see results of searching phrase
       | Blouses       | 1       |
       | Printed Dress | 5       |
       | !@#$%^        | 0       |
-    
+
   Scenario: As a user I would like to use search box and be able to see results ordered by Product Name: Z to A
     Given I can see Automationpractice.com website
     When I search for phrase "Printed Dress"
