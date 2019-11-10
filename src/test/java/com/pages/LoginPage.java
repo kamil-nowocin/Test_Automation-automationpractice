@@ -12,7 +12,7 @@ public class LoginPage extends BasePage {
         super(driver);
     }
 
-    //GENERAL
+    //GENERAL//
     @FindBy(how = How.ID, using = "login_form")
     public WebElement loginForm;
 

@@ -46,7 +46,7 @@ public class Hooks extends DriverFactory implements ITestListener {
             File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
             String currentPath = Paths.get(".").toAbsolutePath().normalize().toString();
             FileUtils.copyFile(scrFile, new File(currentPath + "/screenshots/" + scenario.getName()
-                    + "-" + todayDate + ".png"));
+                    + "-" + TODAY_DATE + ".png"));
             allureSaveTextLog();
             allureSaveScreenshotPNG();
         }

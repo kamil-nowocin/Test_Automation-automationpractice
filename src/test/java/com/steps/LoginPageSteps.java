@@ -42,6 +42,6 @@ public class LoginPageSteps extends DriverFactory {
     @Step("I can see warning message with include {string}")
     @Then("I can see warning message with include {string}")
     public void iCanSeeWarningMessageWithInclude(String warningMessage) {
-        Assert.assertTrue(loginPage.errorValidator().contains(warningMessage), warningMessage);
+        Assert.assertTrue(loginPage.errorValidator().contains(warningMessage));
     }
 }
