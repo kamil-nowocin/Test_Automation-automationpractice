@@ -12,7 +12,6 @@ public class SocialMediaPage extends BasePage {
         super(driver);
     }
 
-    //GENERAL//
     @FindBy(how = How.XPATH, using = "//*[@class=\"facebook\"]")
     public WebElement facebookButton;
 

@@ -27,8 +27,8 @@ public class LoginPageSteps extends DriverFactory {
         loginPage.passwordInput.sendKeys(password);
     }
 
-    @Step("I click on submit button")
-    @And("I click on submit button")
+    @Step("I click on Submit button")
+    @And("I click on Submit button")
     public void iClickOnSubmitButton() {
         loginPage.signInButton.click();
     }

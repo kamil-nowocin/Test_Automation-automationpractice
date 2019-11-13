@@ -1,4 +1,4 @@
-Feature: As a user I would like to contact customer service
+Feature: As a user I would like to contact with customer service support
 
   Background: Navigate to Contact Us page
     Given I open home page

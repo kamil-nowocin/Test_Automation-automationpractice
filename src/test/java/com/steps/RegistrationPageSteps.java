@@ -8,6 +8,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import io.cucumber.datatable.DataTable;
 import io.qameta.allure.Step;
+import org.apache.commons.lang3.StringUtils;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 
@@ -19,6 +20,9 @@ public class RegistrationPageSteps extends DriverFactory {
     private BasePage basePage = new BasePage(driver);
     private RegistrationPage registrationPage = new RegistrationPage(driver);
 
+    private static String randomEmailAddress = mockNeat.emails().val();
+    private static String GET_RANDOMISED_EMAIL = "";
+
     @Step("I click on Sign in button")
     @When("I click on Sign in button")
     public void iClickOnSignInButton() {
@@ -28,23 +32,27 @@ public class RegistrationPageSteps extends DriverFactory {
     @Step("I write an email address")
     @When("I write an email address")
     public void iWriteAnEmailAddress() {
-        registrationPage.sendEmailInput();
+        //ARRANGE
+        GET_RANDOMISED_EMAIL = randomEmailAddress;
+
+        //ACT
+        registrationPage.emailInput.sendKeys(randomEmailAddress);
     }
 
     @Step("I write an invalid email address")
     @When("I write an invalid email address")
     public void iWriteAnInvalidEmailAddress() {
-        registrationPage.sendInvalidEmailInput();
+        registrationPage.emailInput.sendKeys(resourceBundleInvalidEmails.getString("invalid" + basePage.randomValue(6, 1)));
     }
 
     @Step("I write an email address which is already in database")
     @When("I write an email address which is already in database")
     public void iWriteAnEmailAddressWhichIsAlreadyInDatabase() {
-        registrationPage.sendRegisteredEmailInput();
+        registrationPage.emailInput.sendKeys("asfsafas@wp.pl");
     }
 
-    @Step("I click on create an account button")
-    @And("I click on create an account button")
+    @Step("I click on Create An Account button")
+    @And("I click on Create An Account button")
     public void iClickOnCreateAnAccountButton() {
         registrationPage.createAnAccountButton.click();
     }
@@ -74,26 +82,31 @@ public class RegistrationPageSteps extends DriverFactory {
     @Step("I choose gender")
     @And("I choose gender")
     public void iChooseGender() {
-        registrationPage.mrOrMrsRadioButtonClick();
+        if (basePage.randomValue(2, 1) == 1) {
+            registrationPage.mrButton.click();
+            logger.info("Chosen gender: Male");
+        } else {
+            registrationPage.mrsButton.click();
+            logger.info("Chosen gender: Female");
+        }
     }
 
     @Step("I write my first name")
     @And("I write my first name")
     public void iWriteMyFirstName() {
-        registrationPage.sendFirstNameInput();
+        registrationPage.firstNameInput.sendKeys(mockNeat.names().first().val());
     }
 
     @Step("I write my last name")
     @And("I write my last name")
     public void iWriteMyLastName() {
-        registrationPage.sendLastNameInput();
+        registrationPage.lastNameInput.sendKeys(mockNeat.names().last().val());
     }
 
     @Step("I check if email is already written and valid")
     @And("I check if email is already written and valid")
     public void iCheckIfEmailIsAlreadyWrittenAndValid() {
-        Assert.assertEquals(registrationPage.emailSecondInput.getAttribute("value"),
-                registrationPage.getTempEmail());
+        Assert.assertEquals(registrationPage.emailSecondInput.getAttribute("value"), GET_RANDOMISED_EMAIL);
     }
 
     @Step("I clear my email address")
@@ -105,19 +118,35 @@ public class RegistrationPageSteps extends DriverFactory {
     @Step("I write password")
     @And("I write password")
     public void iWritePassword() {
-        registrationPage.sendPasswordInput();
+        registrationPage.passwordInput.sendKeys(mockNeat.passwords().medium().val());
     }
 
     @Step("I choose date of birth")
     @And("I choose date of birth")
     public void iChooseDateOfBirth() {
-        registrationPage.sendDateOfBirth();
+        registrationPage.selectFromDropdownByIntValue(basePage.randomValue(28, 1), registrationPage.dayOfBirth);
+        registrationPage.selectFromDropdownByIntValue(basePage.randomValue(12, 1), registrationPage.monthOfBirth);
+        registrationPage.selectFromDropdownByIntValue(basePage.randomValue(119, 1), registrationPage.yearOfBirth);
     }
 
     @Step("I sign in to receive newsletter and special offers")
     @And("I sign in to receive newsletter and special offers")
     public void iSignInToReceiveNewsletterAndSpecialOffers() {
-        registrationPage.newsletterCheckboxOrSpecialOffersCheckboxClick();
+        //ARRANGE
+        int tempRandomValue = basePage.randomValue(3, 1);
+
+        //ACT
+        if (tempRandomValue == 1) {
+            registrationPage.newsletterCheckbox.click();
+            logger.info("Signed to receive newsletter");
+        } else if (tempRandomValue == 2) {
+            registrationPage.specialOffersCheckbox.click();
+            logger.info("Signed to receive special offers");
+        } else {
+            registrationPage.newsletterCheckbox.click();
+            registrationPage.specialOffersCheckbox.click();
+            logger.info("Signed to newsletter & special offers");
+        }
     }
 
     @Step("I check if my first & last name are already written and are correct")
@@ -132,73 +161,69 @@ public class RegistrationPageSteps extends DriverFactory {
     @Step("I write company name")
     @And("I write company name")
     public void iWriteCompanyName() {
-        registrationPage.sendCompanyInput();
+        registrationPage.companyInput.sendKeys(mockNeat.departments().val());
     }
 
     @Step("I write my addresses")
     @And("I write my addresses")
     public void iWriteMyAddresses() {
-        registrationPage.sendAddressesInput();
+        registrationPage.addressInput.sendKeys(faker.address().streetName());
+        registrationPage.addressSecondInput.sendKeys(faker.address().secondaryAddress(), faker.address().buildingNumber());
     }
 
     @Step("I write my address")
     @And("I write my address")
     public void iWriteMyAddress() {
-        registrationPage.sendOnlyRequiredAddressInput();
+        registrationPage.addressInput.sendKeys(faker.address().streetName(), faker.address().buildingNumber());
     }
 
-    @Step("I choose country")
-    @And("I choose country")
-    public void iChooseCountry() {
-        registrationPage.sendCountryDropDown("United States");
-    }
-
-    @Step("I choose - as a country")
-    @And("I choose - as a country")
-    public void iChooseAsACountry() {
-        registrationPage.sendCountryDropDown("-");
+    @Step("I choose country {string}")
+    @And("I choose country {string}")
+    public void iChooseCountry(String country) {
+        basePage.selectFromDropdownByStringValue(country, registrationPage.countryDropDown);
     }
 
     @Step("I write city name")
     @And("I write city name")
     public void iWriteCityName() {
-        registrationPage.sendCityInput();
+        registrationPage.cityInput.sendKeys(mockNeat.cities().us().val());
     }
 
     @Step("I choose state")
     @And("I choose state")
     public void iChooseState() {
-        registrationPage.sendStateDropDown();
+        registrationPage.selectFromDropdownByIntValue(basePage.randomValue(50, 1), registrationPage.stateDropDown);
     }
 
     @Step("I write postal code")
     @And("I write postal code")
     public void iWritePostalCode() {
-        registrationPage.sendPostalCodeInput();
+        registrationPage.postalCodeInput.sendKeys(StringUtils.left(faker.address().zipCode(), 5));
     }
 
     @Step("I write additional information")
     @And("I write additional information")
     public void iWriteAdditionalInformation() {
-        registrationPage.sendAdditionalInformationBox();
+        registrationPage.additionalInformationBox.sendKeys(faker.chuckNorris().fact());
     }
 
     @Step("I write home phone")
     @And("I write home phone")
     public void iWriteHomePhone() {
-        registrationPage.sendHomePhoneInput();
+        registrationPage.homePhoneInput.sendKeys(faker.phoneNumber().cellPhone());
     }
 
     @Step("I write mobile phone")
     @And("I write mobile phone")
     public void iWriteMobilePhone() {
-        registrationPage.sendMobilePhoneInput();
+        registrationPage.mobilePhoneInput.sendKeys(faker.phoneNumber().cellPhone());
     }
 
     @Step("I write my address alias")
     @And("I write my address alias")
     public void iWriteMyAddressAlias() {
-        registrationPage.sendAddressAliasInput();
+        registrationPage.addressAliasInput.clear();
+        registrationPage.addressAliasInput.sendKeys(mockNeat.emails().val());
     }
 
     @Step("I clear my email address alias")
@@ -207,8 +232,8 @@ public class RegistrationPageSteps extends DriverFactory {
         registrationPage.addressAliasInput.clear();
     }
 
-    @Step("I click on register button")
-    @And("I click on register button")
+    @Step("I click on Register button")
+    @And("I click on Register button")
     public void iClickOnRegisterButton() {
         registrationPage.registerButton.click();
     }

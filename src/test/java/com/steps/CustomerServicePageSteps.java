@@ -2,7 +2,6 @@ package com.steps;
 
 import com.DriverFactory;
 import com.pages.CustomerServicePage;
-import com.pages.RegistrationPage;
 import com.pages.base.BasePage;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
@@ -19,7 +18,6 @@ import java.nio.file.Paths;
 public class CustomerServicePageSteps extends DriverFactory {
 
     private BasePage basePage = new BasePage(driver);
-    private RegistrationPage registrationPage = new RegistrationPage(driver);
     private CustomerServicePage customerServicePage = new CustomerServicePage(driver);
 
     @Step("I click on Contact Us button")
