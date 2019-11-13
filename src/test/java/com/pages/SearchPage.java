@@ -19,5 +19,5 @@ public class SearchPage extends BasePage {
     public WebElement searchBoxSubmit;
 
     @FindBy(how = How.XPATH, using = "//span[@class='heading-counter']")
-    public  WebElement searchResultsNumber;
+    public WebElement searchResultsNumber;
 }

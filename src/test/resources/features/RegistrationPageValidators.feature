@@ -4,7 +4,7 @@ Feature: As a user I would like to see the error message where I made a mistake 
     Given I open home page
     When I click on Sign in button
     And I write an email address
-    And I click on create an account button
+    And I click on Create An Account button
     Then I can see registration page form
 
 #--------------------------------------------------------------------------------
@@ -15,13 +15,13 @@ Feature: As a user I would like to see the error message where I made a mistake 
     And I write password
     And I choose date of birth
     And I write my address
-    And I choose country
+    And I choose country "United States"
     And I write city name
     And I choose state
     And I write postal code
     And I write mobile phone
     And I write my address alias
-    And I click on register button
+    And I click on Register button
     Then I can see warning message about missing first name input
 
 #--------------------------------------------------------------------------------
@@ -31,13 +31,13 @@ Feature: As a user I would like to see the error message where I made a mistake 
     And I write my first name
     And I write password
     And I write my address
-    And I choose country
+    And I choose country "United States"
     And I write city name
     And I choose state
     And I write postal code
     And I write mobile phone
     And I write my address alias
-    And I click on register button
+    And I click on Register button
     Then I can see warning message about missing last name input
 
 #--------------------------------------------------------------------------------
@@ -49,13 +49,13 @@ Feature: As a user I would like to see the error message where I made a mistake 
     And I clear my email address
     And I write password
     And I write my address
-    And I choose country
+    And I choose country "United States"
     And I write city name
     And I choose state
     And I write postal code
     And I write mobile phone
     And I write my address alias
-    And I click on register button
+    And I click on Register button
     Then I can see warning message about missing email address input
 
 #--------------------------------------------------------------------------------
@@ -65,13 +65,13 @@ Feature: As a user I would like to see the error message where I made a mistake 
     And I write my first name
     And I write my last name
     And I write my address
-    And I choose country
+    And I choose country "United States"
     And I write city name
     And I choose state
     And I write postal code
     And I write mobile phone
     And I write my address alias
-    And I click on register button
+    And I click on Register button
     Then I can see warning message about missing password input
 
 #--------------------------------------------------------------------------------
@@ -81,13 +81,13 @@ Feature: As a user I would like to see the error message where I made a mistake 
     And I write my first name
     And I write my last name
     And I write password
-    And I choose country
+    And I choose country "United States"
     And I write city name
     And I choose state
     And I write postal code
     And I write mobile phone
     And I write my address alias
-    And I click on register button
+    And I click on Register button
     Then I can see warning message about missing address input
 
 #--------------------------------------------------------------------------------
@@ -98,12 +98,12 @@ Feature: As a user I would like to see the error message where I made a mistake 
     And I write my last name
     And I write password
     And I write my address
-    And I choose country
+    And I choose country "United States"
     And I choose state
     And I write postal code
     And I write mobile phone
     And I write my address alias
-    And I click on register button
+    And I click on Register button
     Then I can see warning message about missing city input
 
 #--------------------------------------------------------------------------------
@@ -114,12 +114,12 @@ Feature: As a user I would like to see the error message where I made a mistake 
     And I write my last name
     And I write password
     And I write my address
-    And I choose country
+    And I choose country "United States"
     And I write city name
     And I write postal code
     And I write mobile phone
     And I write my address alias
-    And I click on register button
+    And I click on Register button
     Then I can see warning message about missing state input
 
 #--------------------------------------------------------------------------------
@@ -130,12 +130,12 @@ Feature: As a user I would like to see the error message where I made a mistake 
     And I write my last name
     And I write password
     And I write my address
-    And I choose country
+    And I choose country "United States"
     And I write city name
     And I choose state
     And I write mobile phone
     And I write my address alias
-    And I click on register button
+    And I click on Register button
     Then I can see warning message about missing postal code input
 
 #--------------------------------------------------------------------------------
@@ -147,10 +147,10 @@ Feature: As a user I would like to see the error message where I made a mistake 
     And I write password
     And I write my address
     And I write city name
-    And I choose - as a country
+    And I choose country "-"
     And I write mobile phone
     And I write my address alias
-    And I click on register button
+    And I click on Register button
     Then I can see warning message about missing country input
 
 #--------------------------------------------------------------------------------
@@ -161,12 +161,12 @@ Feature: As a user I would like to see the error message where I made a mistake 
     And I write my last name
     And I write password
     And I write my address
-    And I choose country
+    And I choose country "United States"
     And I write city name
     And I choose state
     And I write postal code
     And I write my address alias
-    And I click on register button
+    And I click on Register button
     Then I can see warning message about missing mobile phone input
 
 #--------------------------------------------------------------------------------
@@ -177,11 +177,11 @@ Feature: As a user I would like to see the error message where I made a mistake 
     And I write my last name
     And I write password
     And I write my address
-    And I choose country
+    And I choose country "United States"
     And I write city name
     And I choose state
     And I write postal code
     And I write mobile phone
     And I clear my email address alias
-    And I click on register button
+    And I click on Register button
     Then I can see warning message about missing email address alias

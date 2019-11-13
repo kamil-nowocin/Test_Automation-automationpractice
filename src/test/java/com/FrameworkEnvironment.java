@@ -25,7 +25,7 @@ public class FrameworkEnvironment {
     protected static final ResourceBundle resourceBundleInvalidEmails = ResourceBundle.getBundle("invalidEmails");
     protected static final ResourceBundle resourceBundleErrorMessages = ResourceBundle.getBundle("errorValidators");
 
-    //DATA//
+    //STATIC DATA//
     protected static final int TIMEOUT = 15;
     protected static final String ANSI_RED = "\u001B[31m";
     protected static final String ANSI_RESET = "\u001B[0m";
@@ -36,8 +36,11 @@ public class FrameworkEnvironment {
     protected static final String HOME_URL = "http://automationpractice.com/index.php";
     protected static final String TODAY_DATE = new SimpleDateFormat("yyyy-MM-dd HH:ss").format(new Date());
 
+    //DYNAMIC DATA//
+    protected final String tempEmail = mockNeat.emails().val();
+
     //MESSAGES//
-    protected static final String PAGE_URL_DIDNT_CONTAIN = "Following page URL didn't contain this URL! ";
+    protected static final String PAGE_URL_DIDNT_CONTAIN = "Following page URL didn't contain: ";
     protected static final String MESSAGE_DIDNT_CONTAIN = "Warning message didn't contain this phrase! ";
     protected static final String WELCOME_MESSAGE = "Welcome to your account. Here you can manage all of your personal information and orders.";
     protected static final String PAGE_NOTLOADED = "Page wasn't ready to execute tests! ";
