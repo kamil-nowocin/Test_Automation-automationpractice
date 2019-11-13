@@ -1,6 +1,7 @@
 package com.steps;
 
 import com.DriverFactory;
+import com.FrameworkEnvironment;
 import com.pages.RegistrationPage;
 import com.pages.base.BasePage;
 import cucumber.api.java.en.And;
@@ -20,9 +21,6 @@ public class RegistrationPageSteps extends DriverFactory {
     private BasePage basePage = new BasePage(driver);
     private RegistrationPage registrationPage = new RegistrationPage(driver);
 
-    private static String randomEmailAddress = mockNeat.emails().val();
-    private static String GET_RANDOMISED_EMAIL = "";
-
     @Step("I click on Sign in button")
     @When("I click on Sign in button")
     public void iClickOnSignInButton() {
@@ -32,11 +30,8 @@ public class RegistrationPageSteps extends DriverFactory {
     @Step("I write an email address")
     @When("I write an email address")
     public void iWriteAnEmailAddress() {
-        //ARRANGE
-        GET_RANDOMISED_EMAIL = randomEmailAddress;
-
-        //ACT
-        registrationPage.emailInput.sendKeys(randomEmailAddress);
+        //registrationPage.sendEmailInput();
+        registrationPage.emailInput.sendKeys(tempEmail);
     }
 
     @Step("I write an invalid email address")
@@ -106,7 +101,7 @@ public class RegistrationPageSteps extends DriverFactory {
     @Step("I check if email is already written and valid")
     @And("I check if email is already written and valid")
     public void iCheckIfEmailIsAlreadyWrittenAndValid() {
-        Assert.assertEquals(registrationPage.emailSecondInput.getAttribute("value"), GET_RANDOMISED_EMAIL);
+        Assert.assertEquals(registrationPage.emailSecondInput.getAttribute("value"), tempEmail);
     }
 
     @Step("I clear my email address")
