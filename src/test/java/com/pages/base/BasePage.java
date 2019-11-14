@@ -66,6 +66,11 @@ public class BasePage extends FrameworkEnvironment {
         dropdown.selectByVisibleText(textValue);
     }
 
+    public void selectFromDropdownByValue(String textValue, WebElement elementName) {
+        Select dropdown = new Select(elementName);
+        dropdown.selectByValue(textValue);
+    }
+
     public int randomValue(int max, int min) {
         Random random = new Random();
         return random.nextInt((max - min) + 1) + min;
@@ -93,6 +98,11 @@ public class BasePage extends FrameworkEnvironment {
             return false;
         }
         return true;
+    }
+
+    public String errorValidator(WebElement element) {
+        waitForElementToBeVisible(10, element);
+        return element.getText();
     }
 
     //This method is just for testing purpose, it shouldn't be used in development environment//

@@ -60,7 +60,6 @@ public class Hooks extends DriverFactory implements ITestListener {
 
     @Attachment(type = "text/plain")
     private static String allureSaveTextLog() {
-        String message = "Text log isn't implemented yet! \nSorry...";
-        return message;
+        return "Text log isn't implemented yet! \nSorry...";
     }
 }

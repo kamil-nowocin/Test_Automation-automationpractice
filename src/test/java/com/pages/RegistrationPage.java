@@ -113,9 +113,4 @@ public class RegistrationPage extends BasePage {
 
     @FindBy(how = How.ID, using = "submitAccount")
     public WebElement registerButton;
-
-    public boolean errorValidator(String errorMessage) {
-        waitForElementToBeVisible(10, registerError);
-        return registerError.getText().contains(resourceBundleErrorMessages.getString(errorMessage));
-    }
 }

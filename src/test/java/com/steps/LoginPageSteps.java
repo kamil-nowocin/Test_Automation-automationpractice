@@ -36,12 +36,13 @@ public class LoginPageSteps extends DriverFactory {
     @Step("I can see login form")
     @Then("I can see login form")
     public void iCanSeeLoginForm() {
-        Assert.assertTrue(basePage.isDisplayed(10, loginPage.loginForm));
+        Assert.assertTrue(basePage.isDisplayed(10, loginPage.loginForm), VIEW_ERROR);
     }
 
     @Step("I can see warning message with include {string}")
     @Then("I can see warning message with include {string}")
     public void iCanSeeWarningMessageWithInclude(String warningMessage) {
-        Assert.assertTrue(loginPage.errorValidator().contains(warningMessage));
+        Assert.assertTrue(basePage.errorValidator(loginPage.loginError).contains(warningMessage),
+                MESSAGE_DIDNT_CONTAIN + warningMessage);
     }
 }

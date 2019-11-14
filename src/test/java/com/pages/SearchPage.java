@@ -20,4 +20,7 @@ public class SearchPage extends BasePage {
 
     @FindBy(how = How.XPATH, using = "//span[@class='heading-counter']")
     public WebElement searchResultsNumber;
+
+    @FindBy(how = How.XPATH, using = "//select[@id='selectProductSort']")
+    public WebElement dropdownSortBy;
 }

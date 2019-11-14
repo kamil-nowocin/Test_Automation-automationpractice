@@ -61,7 +61,6 @@ task runTests() {
                     project.sourceSets.test.compileClasspath,
                     project.sourceSets.main.runtimeClasspath,
                     project.sourceSets.test.runtimeClasspath)
-            //Very important link , to understand why this works: https://stackoverflow.com/questions/55575595/change-glue-in-build-gradle
             args = ['--plugin', 'pretty', '--glue', 'com.steps', 'src/test/resources/']
             systemProperties System.properties
         }
