@@ -22,7 +22,7 @@ Feature: As a user I would like to see the error message where I made a mistake 
     And I write mobile phone
     And I write my address alias
     And I click on Register button
-    Then I can see warning message about missing first name input
+    Then I can see warning message about missing "first name" input
 
 #--------------------------------------------------------------------------------
   Scenario: As a user I would like to see registration error when I don't fill last name input
@@ -38,7 +38,7 @@ Feature: As a user I would like to see the error message where I made a mistake 
     And I write mobile phone
     And I write my address alias
     And I click on Register button
-    Then I can see warning message about missing last name input
+    Then I can see warning message about missing "last name" input
 
 #--------------------------------------------------------------------------------
   Scenario: As a user I would like to see registration error when I don't fill email input
@@ -56,7 +56,7 @@ Feature: As a user I would like to see the error message where I made a mistake 
     And I write mobile phone
     And I write my address alias
     And I click on Register button
-    Then I can see warning message about missing email address input
+    Then I can see warning message about missing "email address" input
 
 #--------------------------------------------------------------------------------
   Scenario: As a user I would like to see registration error when I don't fill password input
@@ -72,7 +72,7 @@ Feature: As a user I would like to see the error message where I made a mistake 
     And I write mobile phone
     And I write my address alias
     And I click on Register button
-    Then I can see warning message about missing password input
+    Then I can see warning message about missing "password" input
 
 #--------------------------------------------------------------------------------
   Scenario: As a user I would like to see registration error when I don't fill input
@@ -88,7 +88,7 @@ Feature: As a user I would like to see the error message where I made a mistake 
     And I write mobile phone
     And I write my address alias
     And I click on Register button
-    Then I can see warning message about missing address input
+    Then I can see warning message about missing "address" input
 
 #--------------------------------------------------------------------------------
   Scenario: As a user I would like to see registration error when I don't fill city input
@@ -104,7 +104,7 @@ Feature: As a user I would like to see the error message where I made a mistake 
     And I write mobile phone
     And I write my address alias
     And I click on Register button
-    Then I can see warning message about missing city input
+    Then I can see warning message about missing "city" input
 
 #--------------------------------------------------------------------------------
   Scenario: As a user I would like to see registration error when I don't fill state input
@@ -120,7 +120,7 @@ Feature: As a user I would like to see the error message where I made a mistake 
     And I write mobile phone
     And I write my address alias
     And I click on Register button
-    Then I can see warning message about missing state input
+    Then I can see warning message about missing "state" input
 
 #--------------------------------------------------------------------------------
   Scenario: As a user I would like to see registration error when I don't fill postal code input
@@ -136,7 +136,7 @@ Feature: As a user I would like to see the error message where I made a mistake 
     And I write mobile phone
     And I write my address alias
     And I click on Register button
-    Then I can see warning message about missing postal code input
+    Then I can see warning message about missing "postal code" input
 
 #--------------------------------------------------------------------------------
   Scenario: As a user I would like to see registration error when I don't fill country input
@@ -151,7 +151,7 @@ Feature: As a user I would like to see the error message where I made a mistake 
     And I write mobile phone
     And I write my address alias
     And I click on Register button
-    Then I can see warning message about missing country input
+    Then I can see warning message about missing "country" input
 
 #--------------------------------------------------------------------------------
   Scenario: As a user I would like to see registration error when I don't fill mobile phone input
@@ -167,7 +167,7 @@ Feature: As a user I would like to see the error message where I made a mistake 
     And I write postal code
     And I write my address alias
     And I click on Register button
-    Then I can see warning message about missing mobile phone input
+    Then I can see warning message about missing "mobile phone" input
 
 #--------------------------------------------------------------------------------
   Scenario: As a user I would like to see registration error when I don't fill email alias input
@@ -184,4 +184,4 @@ Feature: As a user I would like to see the error message where I made a mistake 
     And I write mobile phone
     And I clear my email address alias
     And I click on Register button
-    Then I can see warning message about missing email address alias
+    Then I can see warning message about missing "email address alias" input

@@ -13,7 +13,7 @@ public class LoginPage extends BasePage {
     }
 
     @FindBy(how = How.CSS, using = "#center_column > div.alert.alert-danger")
-    private WebElement loginError;
+    public WebElement loginError;
 
     @FindBy(how = How.ID, using = "login_form")
     public WebElement loginForm;
@@ -26,9 +26,4 @@ public class LoginPage extends BasePage {
 
     @FindBy(how = How.ID, using = "SubmitLogin")
     public WebElement signInButton;
-
-    public String errorValidator() {
-        waitForElementToBeVisible(10, loginError);
-        return loginError.getText();
-    }
 }

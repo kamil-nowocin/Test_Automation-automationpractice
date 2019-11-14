@@ -1,7 +1,6 @@
 package com.steps;
 
 import com.DriverFactory;
-import com.FrameworkEnvironment;
 import com.pages.RegistrationPage;
 import com.pages.base.BasePage;
 import cucumber.api.java.en.And;
@@ -30,7 +29,6 @@ public class RegistrationPageSteps extends DriverFactory {
     @Step("I write an email address")
     @When("I write an email address")
     public void iWriteAnEmailAddress() {
-        //registrationPage.sendEmailInput();
         registrationPage.emailInput.sendKeys(tempEmail);
     }
 
@@ -55,7 +53,7 @@ public class RegistrationPageSteps extends DriverFactory {
     @Step("I can see registration page form")
     @Then("I can see registration page form")
     public void iCanSeeRegistrationPageForm() {
-        Assert.assertTrue(basePage.isDisplayed(10, registrationPage.createAccountBox));
+        Assert.assertTrue(basePage.isDisplayed(10, registrationPage.createAccountBox), VIEW_ERROR);
     }
 
     @Step("I write following data to registration form")
@@ -101,7 +99,7 @@ public class RegistrationPageSteps extends DriverFactory {
     @Step("I check if email is already written and valid")
     @And("I check if email is already written and valid")
     public void iCheckIfEmailIsAlreadyWrittenAndValid() {
-        Assert.assertEquals(registrationPage.emailSecondInput.getAttribute("value"), tempEmail);
+        Assert.assertEquals(registrationPage.emailSecondInput.getAttribute("value"), tempEmail, VALUE_ERROR);
     }
 
     @Step("I clear my email address")
@@ -148,9 +146,9 @@ public class RegistrationPageSteps extends DriverFactory {
     @And("I check if my first & last name are already written and are correct")
     public void iCheckIfMyFirstLastNameAreAlreadyWrittenAndAreCorrect() {
         Assert.assertEquals(registrationPage.firstNameInput.getAttribute("value"),
-                registrationPage.assertFirstNameInput.getAttribute("value"));
+                registrationPage.assertFirstNameInput.getAttribute("value"), VALUE_ERROR);
         Assert.assertEquals(registrationPage.lastNameInput.getAttribute("value"),
-                registrationPage.assertLastNameInput.getAttribute("value"));
+                registrationPage.assertLastNameInput.getAttribute("value"), VALUE_ERROR);
     }
 
     @Step("I write company name")
@@ -243,102 +241,87 @@ public class RegistrationPageSteps extends DriverFactory {
     @Step("I can see create an account error")
     @Then("I can see create an account error")
     public void iCanSeeCreateAnAccountError() {
-        Assert.assertTrue(basePage.isDisplayed(10, registrationPage.createAnAccountError));
+        Assert.assertTrue(basePage.isDisplayed(10, registrationPage.createAnAccountError), VIEW_ERROR);
     }
 
     @Step("I can see registration error")
     @Then("I can see registration error")
     public void iCanSeeRegistrationError() {
-        Assert.assertTrue(basePage.isDisplayed(10, registrationPage.registerError));
+        Assert.assertTrue(basePage.isDisplayed(10, registrationPage.registerError), VIEW_ERROR);
     }
 
     @Step("I can see create an account page")
     @Then("I can see create an account page")
     public void iCanSeeCreateAnAccountPage() {
-        Assert.assertTrue(basePage.isDisplayed(10, registrationPage.createAccountBox));
+        Assert.assertTrue(basePage.isDisplayed(10, registrationPage.createAccountBox), VIEW_ERROR);
     }
 
-    @Step("I can see registration error which include one missing element")
-    @Then("I can see registration error which include one missing element")
-    public void iCanSeeRegistrationErrorWhichIncludeOneMissingElement() {
-        Assert.assertTrue(registrationPage.errorValidator("oneerror"),
-                MESSAGE_DIDNT_CONTAIN + resourceBundleErrorMessages.getString("oneerror"));
-    }
-
-    @Step("I can see warning message about missing first name input")
-    @Then("I can see warning message about missing first name input")
-    public void iCanSeeWarningMessageAboutMissingFirstNameInput() {
-        Assert.assertTrue(registrationPage.errorValidator("errorfirstname"),
-                MESSAGE_DIDNT_CONTAIN + resourceBundleErrorMessages.getString("errorfirstname"));
-    }
-
-    @Step("I can see warning message about missing last name input")
-    @Then("I can see warning message about missing last name input")
-    public void iCanSeeWarningMessageAboutMissingLastNameInput() {
-        Assert.assertTrue(registrationPage.errorValidator("errorlastname"),
-                MESSAGE_DIDNT_CONTAIN + resourceBundleErrorMessages.getString("errorfirstname"));
-    }
-
-    @Step("I can see warning message about missing email address input")
-    @Then("I can see warning message about missing email address input")
-    public void iCanSeeWarningMessageAboutMissingEmailAddressInput() {
-        Assert.assertTrue(registrationPage.errorValidator("erroremail"),
-                MESSAGE_DIDNT_CONTAIN + resourceBundleErrorMessages.getString("erroremail"));
-    }
-
-    @Step("I can see warning message about missing password input")
-    @Then("I can see warning message about missing password input")
-    public void iCanSeeWarningMessageAboutMissingPasswordInput() {
-        Assert.assertTrue(registrationPage.errorValidator("errorpassword"),
-                MESSAGE_DIDNT_CONTAIN + resourceBundleErrorMessages.getString("errorpassword"));
-    }
-
-    @Step("I can see warning message about missing address input")
-    @Then("I can see warning message about missing address input")
-    public void iCanSeeWarningMessageAboutMissingAddressInput() {
-        Assert.assertTrue(registrationPage.errorValidator("erroraddress"),
-                MESSAGE_DIDNT_CONTAIN + resourceBundleErrorMessages.getString("erroraddress"));
-    }
-
-    @Step("I can see warning message about missing city input")
-    @Then("I can see warning message about missing city input")
-    public void iCanSeeWarningMessageAboutMissingCityInput() {
-        Assert.assertTrue(registrationPage.errorValidator("errorcity"),
-                MESSAGE_DIDNT_CONTAIN + resourceBundleErrorMessages.getString("errorcity"));
-    }
-
-    @Step("I can see warning message about missing state input")
-    @Then("I can see warning message about missing state input")
-    public void iCanSeeWarningMessageAboutMissingStateInput() {
-        Assert.assertTrue(registrationPage.errorValidator("errorstate"),
-                MESSAGE_DIDNT_CONTAIN + resourceBundleErrorMessages.getString("errorstate"));
-    }
-
-    @Step("I can see warning message about missing postal code input")
-    @Then("I can see warning message about missing postal code input")
-    public void iCanSeeWarningMessageAboutMissingPostalCodeInput() {
-        Assert.assertTrue(registrationPage.errorValidator("errorpostalcode"),
-                MESSAGE_DIDNT_CONTAIN + resourceBundleErrorMessages.getString("errorpostalcode"));
-    }
-
-    @Step("I can see warning message about missing country input")
-    @Then("I can see warning message about missing country input")
-    public void iCanSeeWarningMessageAboutMissingCountryInput() {
-        Assert.assertTrue(registrationPage.errorValidator("errorcountry"),
-                MESSAGE_DIDNT_CONTAIN + resourceBundleErrorMessages.getString("errorcountry"));
-    }
-
-    @Step("I can see warning message about missing mobile phone input")
-    @Then("I can see warning message about missing mobile phone input")
-    public void iCanSeeWarningMessageAboutMissingMobilePhoneInput() {
-        Assert.assertTrue(registrationPage.errorValidator("errormobilephone"),
-                MESSAGE_DIDNT_CONTAIN + resourceBundleErrorMessages.getString("errormobilephone"));
-    }
-
-    @Step("I can see warning message about missing email address alias")
-    @Then("I can see warning message about missing email address alias")
-    public void iCanSeeWarningMessageAboutMissingEmailAddressAlias() {
-        Assert.assertTrue(registrationPage.errorValidator("erroremailalias"),
-                MESSAGE_DIDNT_CONTAIN + resourceBundleErrorMessages.getString("erroremailalias"));
+    @Step("I can see warning message about missing {string} input")
+    @Then("I can see warning message about missing {string} input")
+    public void iCanSeeWarningMessageAboutMissingFInput(String stringName) {
+        switch (stringName.toLowerCase()) {
+            case "first name":
+                Assert.assertTrue(basePage.errorValidator(registrationPage.registerError).contains
+                                (resourceBundleErrorMessages.getString("errorfirstname")),
+                        MESSAGE_DIDNT_CONTAIN + resourceBundleErrorMessages.getString("errorfirstname"));
+                break;
+            case "last name":
+                Assert.assertTrue(basePage.errorValidator(registrationPage.registerError).contains
+                                (resourceBundleErrorMessages.getString("errorlastname")),
+                        MESSAGE_DIDNT_CONTAIN + resourceBundleErrorMessages.getString("errorlastname"));
+                break;
+            case "email address":
+                Assert.assertTrue(basePage.errorValidator(registrationPage.registerError).contains
+                                (resourceBundleErrorMessages.getString("erroremail")),
+                        MESSAGE_DIDNT_CONTAIN + resourceBundleErrorMessages.getString("erroremail"));
+                break;
+            case "password":
+                Assert.assertTrue(basePage.errorValidator(registrationPage.registerError).contains
+                                (resourceBundleErrorMessages.getString("errorpassword")),
+                        MESSAGE_DIDNT_CONTAIN + resourceBundleErrorMessages.getString("errorpassword"));
+                break;
+            case "address":
+                Assert.assertTrue(basePage.errorValidator(registrationPage.registerError).contains
+                                (resourceBundleErrorMessages.getString("erroraddress")),
+                        MESSAGE_DIDNT_CONTAIN + resourceBundleErrorMessages.getString("erroraddress"));
+                break;
+            case "city":
+                Assert.assertTrue(basePage.errorValidator(registrationPage.registerError).contains
+                                (resourceBundleErrorMessages.getString("errorcity")),
+                        MESSAGE_DIDNT_CONTAIN + resourceBundleErrorMessages.getString("errorcity"));
+                break;
+            case "state":
+                Assert.assertTrue(basePage.errorValidator(registrationPage.registerError).contains
+                                (resourceBundleErrorMessages.getString("errorstate")),
+                        MESSAGE_DIDNT_CONTAIN + resourceBundleErrorMessages.getString("errorstate"));
+                break;
+            case "postal code":
+                Assert.assertTrue(basePage.errorValidator(registrationPage.registerError).contains
+                                (resourceBundleErrorMessages.getString("errorpostalcode")),
+                        MESSAGE_DIDNT_CONTAIN + resourceBundleErrorMessages.getString("errorpostalcode"));
+                break;
+            case "country":
+                Assert.assertTrue(basePage.errorValidator(registrationPage.registerError).contains
+                                (resourceBundleErrorMessages.getString("errorcountry")),
+                        MESSAGE_DIDNT_CONTAIN + resourceBundleErrorMessages.getString("errorcountry"));
+                break;
+            case "mobile phone":
+                Assert.assertTrue(basePage.errorValidator(registrationPage.registerError).contains
+                                (resourceBundleErrorMessages.getString("errormobilephone")),
+                        MESSAGE_DIDNT_CONTAIN + resourceBundleErrorMessages.getString("errormobilephone"));
+                break;
+            case "email address alias":
+                Assert.assertTrue(basePage.errorValidator(registrationPage.registerError).contains
+                                (resourceBundleErrorMessages.getString("erroremailalias")),
+                        MESSAGE_DIDNT_CONTAIN + resourceBundleErrorMessages.getString("erroremailalias"));
+                break;
+            case "one missing element":
+                Assert.assertTrue(basePage.errorValidator(registrationPage.registerError).contains
+                                (resourceBundleErrorMessages.getString("oneerror")),
+                        MESSAGE_DIDNT_CONTAIN + resourceBundleErrorMessages.getString("oneerror"));
+                break;
+            default:
+                throw new IllegalStateException(INPUT_ERROR);
+        }
     }
 }

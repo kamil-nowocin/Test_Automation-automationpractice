@@ -21,38 +21,42 @@ public class SocialMediaPageSteps extends DriverFactory {
     @Step("I scroll the website until I can see {string} logo")
     @When("I scroll the website until I can see {string} logo")
     public void iScrollTheWebsiteUntilICanSeeLogo(String logoName) {
-        switch (logoName) {
-            case "Facebook":
+        switch (logoName.toLowerCase()) {
+            case "facebook":
                 basePage.scrollWebsiteToElement(socialMediaPage.facebookButton);
                 break;
-            case "Twitter":
+            case "twitter":
                 basePage.scrollWebsiteToElement(socialMediaPage.twitterButton);
                 break;
-            case "YouTube":
+            case "youtube":
                 basePage.scrollWebsiteToElement(socialMediaPage.youtubeButton);
                 break;
-            case "Google+":
+            case "google+":
                 basePage.scrollWebsiteToElement(socialMediaPage.googleButton);
                 break;
+            default:
+                throw new IllegalStateException(INPUT_ERROR);
         }
     }
 
     @Step("I click on {string} logo button")
     @And("I click on {string} logo button")
     public void iClickOnLogoButton(String logoName) {
-        switch (logoName) {
-            case "Facebook":
+        switch (logoName.toLowerCase()) {
+            case "facebook":
                 socialMediaPage.facebookButton.click();
                 break;
-            case "Twitter":
+            case "twitter":
                 socialMediaPage.twitterButton.click();
                 break;
-            case "YouTube":
+            case "youtube":
                 socialMediaPage.youtubeButton.click();
                 break;
-            case "Google+":
+            case "google+":
                 socialMediaPage.googleButton.click();
                 break;
+            default:
+                throw new IllegalStateException(INPUT_ERROR);
         }
     }
 
@@ -61,23 +65,25 @@ public class SocialMediaPageSteps extends DriverFactory {
     public void iAmRedirectedToSeleniumProfile(String logoName) {
         ArrayList<String> browserTabs = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(browserTabs.get(1));
-        switch (logoName) {
-            case "Facebook":
+        switch (logoName.toLowerCase()) {
+            case "facebook":
                 String facebook = "facebook.com";
                 Assert.assertTrue(driver.getCurrentUrl().contains(facebook), PAGE_URL_DIDNT_CONTAIN + facebook);
                 break;
-            case "Twitter":
+            case "twitter":
                 String twitter = "twitter.com";
                 Assert.assertTrue(driver.getCurrentUrl().contains(twitter), PAGE_URL_DIDNT_CONTAIN + twitter);
                 break;
-            case "YouTube":
+            case "youtube":
                 String yt = "youtube.com";
                 Assert.assertTrue(driver.getCurrentUrl().contains(yt), PAGE_URL_DIDNT_CONTAIN + yt);
                 break;
-            case "Google+":
+            case "google+":
                 String google = "google.com";
                 Assert.assertTrue(driver.getCurrentUrl().contains(google), PAGE_URL_DIDNT_CONTAIN + google);
                 break;
+            default:
+                throw new IllegalStateException(INPUT_ERROR);
         }
     }
 }

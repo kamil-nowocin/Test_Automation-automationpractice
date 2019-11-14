@@ -29,13 +29,13 @@ public class CustomerServicePageSteps extends DriverFactory {
     @Step("I can see Contact Us form")
     @Then("I can see Contact Us form")
     public void iCanSeeContactUsForm() {
-        Assert.assertTrue(basePage.isDisplayed(10, customerServicePage.contactUsForm));
+        Assert.assertTrue(basePage.isDisplayed(10, customerServicePage.contactUsForm), VIEW_ERROR);
     }
 
     @Step("I am on Customer Service Contact Us page form")
     @Given("I am on Customer Service Contact Us page form")
     public void iAmOnCustomerServiceContactUsPageForm() {
-        Assert.assertTrue(basePage.isDisplayed(10, customerServicePage.contactUsHeader));
+        Assert.assertTrue(basePage.isDisplayed(10, customerServicePage.contactUsHeader), VIEW_ERROR);
     }
 
     @Step("I choose Subject Heading")
@@ -50,6 +50,12 @@ public class CustomerServicePageSteps extends DriverFactory {
         customerServicePage.emailAddressInput.sendKeys(mockNeat.emails().val());
     }
 
+    @Step("I write an invalid email address in contact us page")
+    @And("I write an invalid email address in contact us page")
+    public void iWriteAnInvalidEmailAddressInContactUsPage() {
+        customerServicePage.emailAddressInput.sendKeys(resourceBundleInvalidEmails.getString("invalid" + basePage.randomValue(6, 1)));
+    }
+
     @Step("I write order reference")
     @And("I write order reference")
     public void iWriteOrderReference() {
@@ -60,12 +66,6 @@ public class CustomerServicePageSteps extends DriverFactory {
     @And("I write message")
     public void iWriteMessage() {
         customerServicePage.messageTextArea.sendKeys(faker.chuckNorris().fact());
-    }
-
-    @Step("I click Send button")
-    @Then("I click Send button")
-    public void iClickSendButton() {
-        customerServicePage.sendButton.click();
     }
 
     @Step("I choose file to attach")
@@ -88,14 +88,15 @@ public class CustomerServicePageSteps extends DriverFactory {
         customerServicePage.attachFileInput.sendKeys(path);
 
         //ASSERT
-        Assert.assertTrue(customerServicePage.chosenFileName.getText().contains(fileName));
+        Assert.assertTrue(customerServicePage.chosenFileName.getText().contains(fileName), _21VOID);
     }
 
-    @Step("I write an invalid email address in contact us page")
-    @And("I write an invalid email address in contact us page")
-    public void iWriteAnInvalidEmailAddressInContactUsPage() {
-        customerServicePage.emailAddressInput.sendKeys(resourceBundleInvalidEmails.getString("invalid" + basePage.randomValue(6, 1)));
+    @Step("I click Send button")
+    @Then("I click Send button")
+    public void iClickSendButton() {
+        customerServicePage.sendButton.click();
     }
+
 
     @Step("I can see success message {string}")
     @And("I can see success message {string}")

@@ -19,12 +19,12 @@ public class BasePageSteps extends DriverFactory {
         basePage.openHomePage();
 
         //ASSERT
-        Assert.assertEquals(driver.getCurrentUrl(), HOME_URL);
+        Assert.assertEquals(driver.getCurrentUrl(), HOME_URL, _21VOID);
     }
 
     @Step("I can see Automationpractice.com website")
     @Given("I can see Automationpractice.com website")
     public void iCanSeeAutomationpracticeComWebsite() {
-        Assert.assertTrue(basePage.isPageReady(), PAGE_NOTLOADED);
+        Assert.assertTrue(basePage.isPageReady(), PAGE_ERROR);
     }
 }
