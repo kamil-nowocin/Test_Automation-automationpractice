@@ -315,7 +315,7 @@ public class RegistrationPageSteps extends DriverFactory {
                                 (resourceBundleErrorMessages.getString("erroremailalias")),
                         MESSAGE_DIDNT_CONTAIN + resourceBundleErrorMessages.getString("erroremailalias"));
                 break;
-            case "one missing element":
+            case "one element":
                 Assert.assertTrue(basePage.errorValidator(registrationPage.registerError).contains
                                 (resourceBundleErrorMessages.getString("oneerror")),
                         MESSAGE_DIDNT_CONTAIN + resourceBundleErrorMessages.getString("oneerror"));

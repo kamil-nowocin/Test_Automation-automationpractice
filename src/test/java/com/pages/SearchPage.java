@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
+import java.util.List;
+
 public class SearchPage extends BasePage {
 
     public SearchPage(WebDriver driver) {
@@ -23,4 +25,10 @@ public class SearchPage extends BasePage {
 
     @FindBy(how = How.XPATH, using = "//select[@id='selectProductSort']")
     public WebElement dropdownSortBy;
+
+    @FindBy (how = How.XPATH, using = "//div[@class='right-block']//a[@class='product-name']")
+    public List<WebElement> productNames;
+
+    @FindBy (how = How.XPATH, using = "//div[@class='right-block']//div[@class='content_price']//span[@class='price product-price']")
+    public List<WebElement> productPrices;
 }

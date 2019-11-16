@@ -53,23 +53,31 @@ public class FrameworkEnvironment {
     protected static final String VIEW_ERROR =
             "Element wasn't displayed! ";
     protected static final String INPUT_ERROR =
-            "Invalid input type! ";
-    protected static final String VALUE_ERROR = "Value didn't match expected value! ";
+            "Invalid input type! Check your GHERKIN statement! ";
+    protected static final String VALUE_ERROR =
+            "Value didn't match expected value! ";
+    protected static final String SORTING_ERROR =
+            "Results didn't match expected sorting results! ";
     protected static final String _21VOID =
             "Upssss, something went really bad! Even Michael Scofield couldn't have predicted that error! :) ";
 
+    //ENVIRONMENT PROPERTIES//
     private static final String TRAVIS_BUILD_NUMBER = System.getProperty
             ("travis.buildNumber", "Build was made on localhost");
     private static final String TRAVIS_BUILD_WEB_URL = System.getProperty
             ("travis.buildURL", "Build was made on localhost");
     private static final String TRAVIS_BRANCH = System.getProperty
             ("travis.branch", "Build was made on localhost");
+    private static final String OS_NAME = System.getProperty
+            ("travis.osName", "Build was made on localhost");//DON'T KNOW HOW TO SET OS TYPE WHEN BUILD RUNS ON LOCAL MACHINE OR ONLINE
+    private static final String JAVA_VERSION = System.getProperty
+            ("travis.jdkVersion", "Build was made on localhost");//DOESN'T WORK, IDK WHY
+    static final String HOST_URL = System.getProperty
+            ("selenium.hostURL", "https://localhost:3000");
+    static final String HOST = System.getProperty
+            ("selenium.host", "Chrome");
     private static final String BROWSER = System.getProperty
             ("browser", "Chrome");
-    private static final String OS_NAME = System.getProperty
-            ("travis.osName", "Build was made on localhost");
-    private static final String JAVA_VERSION = System.getProperty
-            ("travis.jdkVersion", "Build was made on localhost");
 
     static void allureWriteProperties() {
         Properties properties = new Properties();
@@ -83,7 +91,7 @@ public class FrameworkEnvironment {
         try {
             properties.store(new FileOutputStream("build/allure-results/environment.properties"), null);
         } catch (IOException e) {
-            logger.error(String.valueOf(e));
+            logger.error("Failed to create properties file! ", e);
         }
     }
 
@@ -99,7 +107,7 @@ public class FrameworkEnvironment {
             fileWriter.write(jsonObject.toString());
             fileWriter.flush();
         } catch (IOException e) {
-            logger.error(String.valueOf(e));
+            logger.error("Failed to create json object!", e);
         }
     }
 }
