@@ -80,7 +80,7 @@ Feature: As a user I would like to register into automationpractice.com
     And I check if my first & last name are already written and are correct
     And I write my address alias
     And I click on Register button
-    Then I can see warning message about missing "one missing element" input
+    Then I can see warning message about missing "one element" input
 
 #--------------------------------------------------------------------------------
   Scenario: As a user I can't create an account - email is already in database (negative flow)
