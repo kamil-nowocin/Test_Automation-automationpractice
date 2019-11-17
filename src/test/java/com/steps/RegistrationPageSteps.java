@@ -125,10 +125,10 @@ public class RegistrationPageSteps extends DriverFactory {
     @Step("I sign in to receive newsletter and special offers")
     @And("I sign in to receive newsletter and special offers")
     public void iSignInToReceiveNewsletterAndSpecialOffers() {
-        //ARRANGE
+        //ARRANGE//
         int tempRandomValue = basePage.randomValue(3, 1);
 
-        //ACT
+        //ACT//
         if (tempRandomValue == 1) {
             registrationPage.newsletterCheckbox.click();
             logger.info("Signed to receive newsletter");
@@ -170,7 +170,7 @@ public class RegistrationPageSteps extends DriverFactory {
         registrationPage.addressInput.sendKeys(faker.address().streetName(), faker.address().buildingNumber());
     }
 
-    @Step("I choose country {string}")
+    @Step("I choose country {0}")
     @And("I choose country {string}")
     public void iChooseCountry(String country) {
         basePage.selectFromDropdownByStringValue(country, registrationPage.countryDropDown);
@@ -256,7 +256,7 @@ public class RegistrationPageSteps extends DriverFactory {
         Assert.assertTrue(basePage.isDisplayed(10, registrationPage.createAccountBox), VIEW_ERROR);
     }
 
-    @Step("I can see warning message about missing {string} input")
+    @Step("I can see warning message about missing {0} input")
     @Then("I can see warning message about missing {string} input")
     public void iCanSeeWarningMessageAboutMissingFInput(String stringName) {
         switch (stringName.toLowerCase()) {

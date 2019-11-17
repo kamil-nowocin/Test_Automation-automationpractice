@@ -8,10 +8,6 @@ import org.openqa.selenium.support.How;
 
 public class LoginPage extends BasePage {
 
-    public LoginPage(final WebDriver driver) {
-        super(driver);
-    }
-
     @FindBy(how = How.CSS, using = "#center_column > div.alert.alert-danger")
     public WebElement loginError;
 
@@ -26,4 +22,8 @@ public class LoginPage extends BasePage {
 
     @FindBy(how = How.ID, using = "SubmitLogin")
     public WebElement signInButton;
+
+    public LoginPage(final WebDriver driver) {
+        super(driver);
+    }
 }

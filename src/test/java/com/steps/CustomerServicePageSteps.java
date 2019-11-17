@@ -71,7 +71,7 @@ public class CustomerServicePageSteps extends DriverFactory {
     @Step("I choose file to attach")
     @And("I choose file to attach")
     public void iChooseFileToAttach() {
-        //ARRANGE
+        //ARRANGE//
         String fileName = "test.jpg";
         String currentPath = Paths.get(".").toAbsolutePath().normalize().toString();
         String path = currentPath
@@ -84,10 +84,10 @@ public class CustomerServicePageSteps extends DriverFactory {
                 + File.separator;
         path += fileName;
 
-        //ACT
+        //ACT//
         customerServicePage.attachFileInput.sendKeys(path);
 
-        //ASSERT
+        //ASSERT//
         Assert.assertTrue(customerServicePage.chosenFileName.getText().contains(fileName), _21VOID);
     }
 
@@ -98,14 +98,14 @@ public class CustomerServicePageSteps extends DriverFactory {
     }
 
 
-    @Step("I can see success message {string}")
+    @Step("I can see success message {0}")
     @And("I can see success message {string}")
     public void iCanSeeSuccessMessage(String successMessage) {
         Assert.assertTrue(customerServicePage.contactUsSuccessMessage.getText().contains(successMessage),
                 MESSAGE_DIDNT_CONTAIN + successMessage);
     }
 
-    @Step("I can see error message {string}")
+    @Step("I can see error message {0}")
     @And("I can see error message {string}")
     public void iCanSeeErrorMessage(String errorMessage) {
         Assert.assertTrue(customerServicePage.contactUsErrorMessage.getText().contains(errorMessage),

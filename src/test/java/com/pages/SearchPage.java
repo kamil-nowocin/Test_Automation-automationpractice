@@ -10,10 +10,6 @@ import java.util.List;
 
 public class SearchPage extends BasePage {
 
-    public SearchPage(WebDriver driver) {
-        super(driver);
-    }
-
     @FindBy(how = How.XPATH, using = "//input[@class='search_query form-control ac_input']")
     public WebElement searchBoxInput;
 
@@ -26,9 +22,16 @@ public class SearchPage extends BasePage {
     @FindBy(how = How.XPATH, using = "//select[@id='selectProductSort']")
     public WebElement dropdownSortBy;
 
-    @FindBy (how = How.XPATH, using = "//div[@class='right-block']//a[@class='product-name']")
+    @FindBy(how = How.XPATH, using = "//div[@id='center_column']//p")
+    public WebElement noResultsWereFoundHeader;
+
+    @FindBy(how = How.XPATH, using = "//div[@class='right-block']//a[@class='product-name']")
     public List<WebElement> productNames;
 
-    @FindBy (how = How.XPATH, using = "//div[@class='right-block']//div[@class='content_price']//span[@class='price product-price']")
+    @FindBy(how = How.XPATH, using = "//div[@class='right-block']//div[@class='content_price']//span[@class='price product-price']")
     public List<WebElement> productPrices;
+
+    public SearchPage(WebDriver driver) {
+        super(driver);
+    }
 }

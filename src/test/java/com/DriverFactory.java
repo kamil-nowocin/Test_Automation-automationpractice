@@ -43,6 +43,13 @@ public class DriverFactory extends FrameworkEnvironment {
         return getHost;
     }
 
+    protected static void destroyDriver() {
+        if (driver != null) {
+            driver.quit();
+            driver = null;
+        }
+    }
+
     protected void startBrowser() {
         if (driver == null) {
             switch (getHost().toLowerCase()) {
@@ -71,7 +78,7 @@ public class DriverFactory extends FrameworkEnvironment {
                     WebDriverManager.edgedriver().setup();
                     driver = new EdgeDriver();
                 case "browserstack":
-                    //https://www.browserstack.com/automate/capabilities <- generate your own capabilities
+                    //https://www.browserstack.com/automate/capabilities <- GENERATE YOUR OWN CAPABILITIES
                     DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
                     desiredCapabilities.setCapability("os", "Windows");
                     desiredCapabilities.setCapability("os_version", "10");
@@ -106,8 +113,8 @@ public class DriverFactory extends FrameworkEnvironment {
     }
 
     private RemoteWebDriver remoteWebDriver(DesiredCapabilities desiredCapabilities) {
-        //GET USER_NAME AND ACCESS_KEY FROM https://automate.browserstack.com/dashboard/v2
         //HOST_URL = https://USER_NAME:ACCESS_KEY@hub-cloud.browserstack.com/wd/hub
+        //GET USER_NAME AND ACCESS_KEY FROM https://automate.browserstack.com/dashboard/v2
         RemoteWebDriver remoteDriver = null;
         try {
             remoteDriver = new RemoteWebDriver(new URL(HOST_URL), desiredCapabilities);
@@ -115,12 +122,5 @@ public class DriverFactory extends FrameworkEnvironment {
             logger.error("Failed to launch remote driver!", e);
         }
         return remoteDriver;
-    }
-
-    protected static void destroyDriver() {
-        if (driver != null) {
-            driver.quit();
-            driver = null;
-        }
     }
 }
