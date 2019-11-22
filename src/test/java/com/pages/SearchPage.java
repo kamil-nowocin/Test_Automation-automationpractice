@@ -8,6 +8,11 @@ import org.openqa.selenium.support.How;
 
 import java.util.List;
 
+/**
+ * Test_Automation-automationpractice
+ *
+ * @author kamil.nowocin
+ **/
 public class SearchPage extends BasePage {
 
     @FindBy(how = How.XPATH, using = "//input[@class='search_query form-control ac_input']")

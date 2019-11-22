@@ -7,6 +7,11 @@ import io.qameta.allure.Step;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 
+/**
+ * Test_Automation-automationpractice
+ *
+ * @author kamil.nowocin
+ **/
 @Listeners({Hooks.class})
 public class BasePageSteps extends DriverFactory {
 
@@ -14,17 +19,16 @@ public class BasePageSteps extends DriverFactory {
 
     @Step("I open home page")
     @Given("I open home page")
-    public void iOpenHomePage() {
+    public void iOpenHomePage() throws Throwable {
         //ACT//
         basePage.openHomePage();
-
         //ASSERT//
         Assert.assertEquals(driver.getCurrentUrl(), HOME_URL, _21VOID);
     }
 
     @Step("I can see Automationpractice.com website")
     @Given("I can see Automationpractice.com website")
-    public void iCanSeeAutomationpracticeComWebsite() {
+    public void iCanSeeAutomationpracticeComWebsite() throws Throwable {
         Assert.assertTrue(basePage.isPageReady(), PAGE_ERROR);
     }
 }

@@ -15,6 +15,11 @@ import java.util.Date;
 import java.util.Properties;
 import java.util.ResourceBundle;
 
+/**
+ * Test_Automation-automationpractice
+ *
+ * @author kamil.nowocin
+ **/
 public class FrameworkEnvironment {
 
     protected static Logger logger = LoggerFactory.getLogger(Hooks.class);

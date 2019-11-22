@@ -7,11 +7,14 @@ import io.cucumber.testng.TestNGCucumberRunner;
 import io.qameta.allure.Description;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
+/**
+ * Test_Automation-automationpractice
+ *
+ * @author kamil.nowocin
+ **/
+@Listeners({TestNGListener.class})
 @CucumberOptions(
         tags = "not @ignore",
         features = {

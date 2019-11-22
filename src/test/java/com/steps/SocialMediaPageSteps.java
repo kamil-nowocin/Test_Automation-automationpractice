@@ -12,6 +12,11 @@ import org.testng.annotations.Listeners;
 
 import java.util.ArrayList;
 
+/**
+ * Test_Automation-automationpractice
+ *
+ * @author kamil.nowocin
+ **/
 @Listeners({Hooks.class})
 public class SocialMediaPageSteps extends DriverFactory {
 
@@ -20,7 +25,7 @@ public class SocialMediaPageSteps extends DriverFactory {
 
     @Step("I scroll the website until I can see {0} logo")
     @When("I scroll the website until I can see {string} logo")
-    public void iScrollTheWebsiteUntilICanSeeLogo(String logoName) {
+    public void iScrollTheWebsiteUntilICanSeeLogo(String logoName) throws Throwable {
         switch (logoName.toLowerCase()) {
             case "facebook":
                 basePage.scrollWebsiteToElement(socialMediaPage.facebookButton);
@@ -41,7 +46,7 @@ public class SocialMediaPageSteps extends DriverFactory {
 
     @Step("I click on {0} logo button")
     @And("I click on {string} logo button")
-    public void iClickOnLogoButton(String logoName) {
+    public void iClickOnLogoButton(String logoName) throws Throwable {
         switch (logoName.toLowerCase()) {
             case "facebook":
                 socialMediaPage.facebookButton.click();
@@ -62,10 +67,9 @@ public class SocialMediaPageSteps extends DriverFactory {
 
     @Step("I am redirected to Selenium {0} profile")
     @Then("I am redirected to Selenium {string} profile")
-    public void iAmRedirectedToSeleniumProfile(String logoName) {
+    public void iAmRedirectedToSeleniumProfile(String logoName) throws Throwable {
         //ARRANGE//
         ArrayList<String> browserTabs = new ArrayList<>(driver.getWindowHandles());
-
         //ACT//
         driver.switchTo().window(browserTabs.get(1));
         switch (logoName.toLowerCase()) {
