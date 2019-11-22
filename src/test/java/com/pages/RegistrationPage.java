@@ -13,7 +13,6 @@ import org.openqa.selenium.support.How;
  **/
 public class RegistrationPage extends BasePage {
 
-    //GENERAL//
     @FindBy(how = How.CSS, using = "#header > div.nav > div > div > nav > div.header_user_info > a")
     public WebElement signInButton;
 
@@ -38,7 +37,6 @@ public class RegistrationPage extends BasePage {
     @FindBy(how = How.CSS, using = "#create-account_form > h3")
     public WebElement createAccountBox;
 
-    //YOUR PERSONAL INFORMATION//
     @FindBy(how = How.ID, using = "id_gender1")
     public WebElement mrButton;
 
@@ -72,7 +70,6 @@ public class RegistrationPage extends BasePage {
     @FindBy(how = How.ID, using = "optin")
     public WebElement specialOffersCheckbox;
 
-    //YOUR ADDRESS//
     @FindBy(how = How.ID, using = "firstname")
     public WebElement assertFirstNameInput;
 

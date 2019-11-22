@@ -5,6 +5,7 @@ import com.TestNGListener;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
+import io.qameta.allure.Attachment;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -56,15 +57,5 @@ public class Hooks extends DriverFactory implements ITestListener {
             TestNGListener.allureSaveScreenshotPNG();
         }
         destroyDriver();
-    }
-  
-    @Attachment(type = "text/plain")
-    private static String allureSaveTextLog() {
-        return "Text log isn't implemented yet! \nSorry...";
-    }
-
-    @Attachment(value = "Scenario FAIL screenshot", type = "image/png")
-    private byte[] allureSaveScreenshotPNG() {
-        return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
     }
 }

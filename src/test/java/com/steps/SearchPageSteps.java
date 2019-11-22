@@ -53,7 +53,6 @@ public class SearchPageSteps extends DriverFactory {
         if (!searchPage.noResultsWereFoundHeader.isDisplayed()) {
             //ARRANGE//
             String[] listOfSearchedPhrases = searchPhrase.toLowerCase().split("[\\s]");
-
             //ACT//
             for (WebElement productName : searchPage.productNames) {
                 for (String singlePhrase : listOfSearchedPhrases) {

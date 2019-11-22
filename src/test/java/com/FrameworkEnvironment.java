@@ -79,12 +79,12 @@ public class FrameworkEnvironment {
             ("travis.osName", "Build was made on localhost");//DON'T KNOW HOW TO SET OS TYPE WHEN BUILD RUNS ON LOCAL MACHINE OR ONLINE
     private static final String JAVA_VERSION = System.getProperty
             ("travis.jdkVersion", "Build was made on localhost");//DOESN'T WORK, IDK WHY
-    static final String HOST_URL = System.getProperty
-            ("selenium.hostURL", "https://localhost:3000");
-    static final String HOST = System.getProperty
-            ("selenium.host", "Chrome");
     private static final String BROWSER = System.getProperty
             ("browser", "Chrome");
+    static final String HOST = System.getProperty
+            ("selenium.host", "Chrome");
+    static final String HOST_URL = System.getProperty
+            ("selenium.hostURL", "https://localhost:3000");
 
     static void allureWriteProperties() {
         Properties properties = new Properties();
