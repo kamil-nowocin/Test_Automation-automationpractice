@@ -67,10 +67,6 @@ public class FrameworkEnvironment {
             "Results which have been found didn't match expected item names! ";
     protected static final String _21VOID =
             "Upssss, something went really bad! Even Michael Scofield couldn't have predicted that error! :) ";
-    static final String HOST_URL = System.getProperty
-            ("selenium.hostURL", "https://localhost:3000");
-    static final String HOST = System.getProperty
-            ("selenium.host", "Chrome");
 
     //ENVIRONMENT PROPERTIES//
     private static final String TRAVIS_BUILD_NUMBER = System.getProperty
@@ -83,6 +79,10 @@ public class FrameworkEnvironment {
             ("travis.osName", "Build was made on localhost");//DON'T KNOW HOW TO SET OS TYPE WHEN BUILD RUNS ON LOCAL MACHINE OR ONLINE
     private static final String JAVA_VERSION = System.getProperty
             ("travis.jdkVersion", "Build was made on localhost");//DOESN'T WORK, IDK WHY
+    static final String HOST_URL = System.getProperty
+            ("selenium.hostURL", "https://localhost:3000");
+    static final String HOST = System.getProperty
+            ("selenium.host", "Chrome");
     private static final String BROWSER = System.getProperty
             ("browser", "Chrome");
 

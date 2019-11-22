@@ -22,6 +22,7 @@ public class BasePageSteps extends DriverFactory {
     public void iOpenHomePage() throws Throwable {
         //ACT//
         basePage.openHomePage();
+
         //ASSERT//
         Assert.assertEquals(driver.getCurrentUrl(), HOME_URL, _21VOID);
     }

@@ -25,7 +25,6 @@ public class CustomerServicePage extends BasePage {
 
     @FindBy(how = How.XPATH, using = "//p[@class='alert alert-success']")
     public WebElement contactUsSuccessMessage;
-
     //GENERAL//
     @FindBy(how = How.XPATH, using = "//div[@id='contact-link']")
     public WebElement contactUsButton;

@@ -57,4 +57,14 @@ public class Hooks extends DriverFactory implements ITestListener {
         }
         destroyDriver();
     }
+  
+    @Attachment(type = "text/plain")
+    private static String allureSaveTextLog() {
+        return "Text log isn't implemented yet! \nSorry...";
+    }
+
+    @Attachment(value = "Scenario FAIL screenshot", type = "image/png")
+    private byte[] allureSaveScreenshotPNG() {
+        return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+    }
 }

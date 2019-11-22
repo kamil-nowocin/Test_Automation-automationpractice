@@ -75,7 +75,9 @@ public class CustomerServicePageSteps extends DriverFactory {
 
     @Step("I choose file to attach")
     @And("I choose file to attach")
+
     public void iChooseFileToAttach() throws Throwable {
+
         //ARRANGE//
         String fileName = "test.jpg";
         String currentPath = Paths.get(".").toAbsolutePath().normalize().toString();
@@ -88,8 +90,10 @@ public class CustomerServicePageSteps extends DriverFactory {
                 + "resources"
                 + File.separator;
         path += fileName;
+
         //ACT//
         customerServicePage.attachFileInput.sendKeys(path);
+
         //ASSERT//
         Assert.assertTrue(customerServicePage.chosenFileName.getText().contains(fileName), _21VOID);
     }
