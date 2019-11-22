@@ -14,6 +14,11 @@ import java.security.SecureRandom;
 import java.util.NoSuchElementException;
 import java.util.Random;
 
+/**
+ * Test_Automation-automationpractice
+ *
+ * @author kamil.nowocin
+ **/
 public class BasePage extends FrameworkEnvironment {
 
     private static WebDriver driver;

@@ -17,6 +17,11 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * Test_Automation-automationpractice
+ *
+ * @author kamil.nowocin
+ **/
 public class DriverFactory extends FrameworkEnvironment {
 
     protected static WebDriver driver;

@@ -6,6 +6,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
+/**
+ * Test_Automation-automationpractice
+ *
+ * @author kamil.nowocin
+ **/
 public class SocialMediaPage extends BasePage {
 
     @FindBy(how = How.XPATH, using = "//*[@class=\"facebook\"]")

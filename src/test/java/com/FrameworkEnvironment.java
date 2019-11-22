@@ -15,6 +15,11 @@ import java.util.Date;
 import java.util.Properties;
 import java.util.ResourceBundle;
 
+/**
+ * Test_Automation-automationpractice
+ *
+ * @author kamil.nowocin
+ **/
 public class FrameworkEnvironment {
 
     protected static Logger logger = LoggerFactory.getLogger(Hooks.class);
@@ -62,10 +67,6 @@ public class FrameworkEnvironment {
             "Results which have been found didn't match expected item names! ";
     protected static final String _21VOID =
             "Upssss, something went really bad! Even Michael Scofield couldn't have predicted that error! :) ";
-    static final String HOST_URL = System.getProperty
-            ("selenium.hostURL", "https://localhost:3000");
-    static final String HOST = System.getProperty
-            ("selenium.host", "Chrome");
 
     //ENVIRONMENT PROPERTIES//
     private static final String TRAVIS_BUILD_NUMBER = System.getProperty

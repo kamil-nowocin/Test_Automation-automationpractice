@@ -15,6 +15,11 @@ import org.testng.annotations.Listeners;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Test_Automation-automationpractice
+ *
+ * @author kamil.nowocin
+ **/
 @Listeners({Hooks.class})
 public class SearchPageSteps extends DriverFactory {
 
@@ -23,29 +28,28 @@ public class SearchPageSteps extends DriverFactory {
 
     @Step("I search for phrase {0}")
     @When("I search for phrase {string}")
-    public void iSearchForPhrase(String searchPhrase) {
+    public void iSearchForPhrase(String searchPhrase) throws Throwable {
         searchPage.searchBoxInput.sendKeys(searchPhrase);
     }
 
     @Step("I click on search icon")
     @And("I click on search icon")
-    public void iClickOnSearchIcon() {
+    public void iClickOnSearchIcon() throws Throwable {
         searchPage.searchBoxSubmit.click();
     }
 
     @Step("I can see numbers of results equals to {0}")
     @Then("I can see numbers of results equals to {string}")
-    public void iCanSeeNumbersOfResultsEqualsTo(String expectedResults) {
+    public void iCanSeeNumbersOfResultsEqualsTo(String expectedResults) throws Throwable {
         //ARRANGE//
         String howMuchResults = searchPage.searchResultsNumber.getText().replaceAll("[^\\d]", "");
-
         //ASSERT//
         Assert.assertEquals(howMuchResults, expectedResults, RESULTS_ERROR + expectedResults);
     }
 
     @Step("I can see that every results which have been found contains phrase {0}")
     @And("I can see that every results which have been found contains phrase {string}")
-    public void iCanSeeThatEveryResultsWhichHaveBeenFoundContainsPhrase(String searchPhrase) {
+    public void iCanSeeThatEveryResultsWhichHaveBeenFoundContainsPhrase(String searchPhrase) throws Throwable {
         if (!searchPage.noResultsWereFoundHeader.isDisplayed()) {
             //ARRANGE//
             String[] listOfSearchedPhrases = searchPhrase.toLowerCase().split("[\\s]");
@@ -61,7 +65,7 @@ public class SearchPageSteps extends DriverFactory {
 
     @Step("I select from Dropdown Sort by {0}")
     @Then("I select from Dropdown Sort by {string}")
-    public void iSelectFromDropdownSortBy(String sortBy) {
+    public void iSelectFromDropdownSortBy(String sortBy) throws Throwable {
         switch (sortBy.toLowerCase()) {
             case "price: lowest first":
                 basePage.selectFromDropdownByValue("price:asc", searchPage.dropdownSortBy);
@@ -82,10 +86,9 @@ public class SearchPageSteps extends DriverFactory {
 
     @Step("I can see that results are correctly sorted by {0}")
     @And("I can see that results are correctly sorted by {string}")
-    public void iCanSeeThatResultsAreCorrectlySortedBy(String sortedBy) {
+    public void iCanSeeThatResultsAreCorrectlySortedBy(String sortedBy) throws Throwable {
         //ARRANGE//
         List<String> arrayList = new ArrayList<>();
-
         //ACT//
         switch (sortedBy.toLowerCase()) {
             case "price: lowest first":

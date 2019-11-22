@@ -13,7 +13,7 @@ Feature: A a user I would like to see results of searching phrase
     Examples:
       | search phrase | results |
       | T-shirts      | 1       |
-      | Blouses       | 1       |
+      | Blouse        | 1       |
       | Printed Dress | 5       |
       | !@#$%^        | 0       |
 
