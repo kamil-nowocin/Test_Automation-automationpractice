@@ -15,10 +15,10 @@ public class BasePageSteps extends DriverFactory {
     @Step("I open home page")
     @Given("I open home page")
     public void iOpenHomePage() {
-        //ACT
+        //ACT//
         basePage.openHomePage();
 
-        //ASSERT
+        //ASSERT//
         Assert.assertEquals(driver.getCurrentUrl(), HOME_URL, _21VOID);
     }
 

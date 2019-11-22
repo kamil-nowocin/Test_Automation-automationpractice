@@ -8,10 +8,6 @@ import org.openqa.selenium.support.How;
 
 public class CustomerServicePage extends BasePage {
 
-    public CustomerServicePage(final WebDriver driver) {
-        super(driver);
-    }
-
     //VIEW//
     @FindBy(how = How.XPATH, using = "//h1[@class='page-heading bottom-indent']")
     public WebElement contactUsHeader;
@@ -24,7 +20,6 @@ public class CustomerServicePage extends BasePage {
 
     @FindBy(how = How.XPATH, using = "//p[@class='alert alert-success']")
     public WebElement contactUsSuccessMessage;
-
     //GENERAL//
     @FindBy(how = How.XPATH, using = "//div[@id='contact-link']")
     public WebElement contactUsButton;
@@ -52,4 +47,8 @@ public class CustomerServicePage extends BasePage {
 
     @FindBy(how = How.XPATH, using = "//div[@class='submit']//button")
     public WebElement sendButton;
+
+    public CustomerServicePage(final WebDriver driver) {
+        super(driver);
+    }
 }

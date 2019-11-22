@@ -21,7 +21,7 @@ public class SearchPageSteps extends DriverFactory {
     private BasePage basePage = new BasePage(driver);
     private SearchPage searchPage = new SearchPage(driver);
 
-    @Step("I search for phrase {string}")
+    @Step("I search for phrase {0}")
     @When("I search for phrase {string}")
     public void iSearchForPhrase(String searchPhrase) {
         searchPage.searchBoxInput.sendKeys(searchPhrase);
@@ -33,17 +33,33 @@ public class SearchPageSteps extends DriverFactory {
         searchPage.searchBoxSubmit.click();
     }
 
-    @Step("I can see numbers of results equals to {string}")
+    @Step("I can see numbers of results equals to {0}")
     @Then("I can see numbers of results equals to {string}")
     public void iCanSeeNumbersOfResultsEqualsTo(String expectedResults) {
-        //ARRANGE
+        //ARRANGE//
         String howMuchResults = searchPage.searchResultsNumber.getText().replaceAll("[^\\d]", "");
 
-        //ASSERT
+        //ASSERT//
         Assert.assertEquals(howMuchResults, expectedResults, RESULTS_ERROR + expectedResults);
     }
 
-    @Step("I select from Dropdown Sort by {string}")
+    @Step("I can see that every results which have been found contains phrase {0}")
+    @And("I can see that every results which have been found contains phrase {string}")
+    public void iCanSeeThatEveryResultsWhichHaveBeenFoundContainsPhrase(String searchPhrase) {
+        if (!searchPage.noResultsWereFoundHeader.isDisplayed()) {
+            //ARRANGE//
+            String[] listOfSearchedPhrases = searchPhrase.toLowerCase().split("[\\s]");
+
+            //ACT//
+            for (WebElement productName : searchPage.productNames) {
+                for (String singlePhrase : listOfSearchedPhrases) {
+                    Assert.assertTrue(productName.getText().toLowerCase().contains(singlePhrase), SEARCH_ERROR);
+                }
+            }
+        }
+    }
+
+    @Step("I select from Dropdown Sort by {0}")
     @Then("I select from Dropdown Sort by {string}")
     public void iSelectFromDropdownSortBy(String sortBy) {
         switch (sortBy.toLowerCase()) {
@@ -64,10 +80,13 @@ public class SearchPageSteps extends DriverFactory {
         }
     }
 
-    @Step("I can see that results are correctly sorted by {string}")
+    @Step("I can see that results are correctly sorted by {0}")
     @And("I can see that results are correctly sorted by {string}")
     public void iCanSeeThatResultsAreCorrectlySortedBy(String sortedBy) {
+        //ARRANGE//
         List<String> arrayList = new ArrayList<>();
+
+        //ACT//
         switch (sortedBy.toLowerCase()) {
             case "price: lowest first":
                 for (WebElement productPrices : searchPage.productPrices) {

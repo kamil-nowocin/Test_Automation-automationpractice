@@ -18,7 +18,7 @@ public class SocialMediaPageSteps extends DriverFactory {
     private BasePage basePage = new BasePage(driver);
     private SocialMediaPage socialMediaPage = new SocialMediaPage(driver);
 
-    @Step("I scroll the website until I can see {string} logo")
+    @Step("I scroll the website until I can see {0} logo")
     @When("I scroll the website until I can see {string} logo")
     public void iScrollTheWebsiteUntilICanSeeLogo(String logoName) {
         switch (logoName.toLowerCase()) {
@@ -39,7 +39,7 @@ public class SocialMediaPageSteps extends DriverFactory {
         }
     }
 
-    @Step("I click on {string} logo button")
+    @Step("I click on {0} logo button")
     @And("I click on {string} logo button")
     public void iClickOnLogoButton(String logoName) {
         switch (logoName.toLowerCase()) {
@@ -60,10 +60,13 @@ public class SocialMediaPageSteps extends DriverFactory {
         }
     }
 
-    @Step("I am redirected to Selenium {string} profile")
+    @Step("I am redirected to Selenium {0} profile")
     @Then("I am redirected to Selenium {string} profile")
     public void iAmRedirectedToSeleniumProfile(String logoName) {
+        //ARRANGE//
         ArrayList<String> browserTabs = new ArrayList<>(driver.getWindowHandles());
+
+        //ACT//
         driver.switchTo().window(browserTabs.get(1));
         switch (logoName.toLowerCase()) {
             case "facebook":

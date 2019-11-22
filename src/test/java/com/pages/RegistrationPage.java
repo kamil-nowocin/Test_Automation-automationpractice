@@ -8,10 +8,6 @@ import org.openqa.selenium.support.How;
 
 public class RegistrationPage extends BasePage {
 
-    public RegistrationPage(final WebDriver driver) {
-        super(driver);
-    }
-
     //GENERAL//
     @FindBy(how = How.CSS, using = "#header > div.nav > div > div > nav > div.header_user_info > a")
     public WebElement signInButton;
@@ -113,4 +109,8 @@ public class RegistrationPage extends BasePage {
 
     @FindBy(how = How.ID, using = "submitAccount")
     public WebElement registerButton;
+
+    public RegistrationPage(final WebDriver driver) {
+        super(driver);
+    }
 }

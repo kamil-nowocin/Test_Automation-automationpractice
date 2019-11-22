@@ -8,10 +8,6 @@ import org.openqa.selenium.support.How;
 
 public class SocialMediaPage extends BasePage {
 
-    public SocialMediaPage(final WebDriver driver) {
-        super(driver);
-    }
-
     @FindBy(how = How.XPATH, using = "//*[@class=\"facebook\"]")
     public WebElement facebookButton;
 
@@ -23,4 +19,8 @@ public class SocialMediaPage extends BasePage {
 
     @FindBy(how = How.XPATH, using = "//*[@class=\"google-plus\"]")
     public WebElement googleButton;
+
+    public SocialMediaPage(final WebDriver driver) {
+        super(driver);
+    }
 }

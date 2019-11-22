@@ -25,6 +25,9 @@ public class FrameworkEnvironment {
     protected static final ResourceBundle resourceBundleInvalidEmails = ResourceBundle.getBundle("invalidEmails");
     protected static final ResourceBundle resourceBundleErrorMessages = ResourceBundle.getBundle("errorValidators");
 
+    //DYNAMIC DATA//
+    protected final String tempEmail = mockNeat.emails().val();
+
     //STATIC DATA//
     protected static final int TIMEOUT = 15;
     protected static final String ANSI_RED = "\u001B[31m";
@@ -36,9 +39,6 @@ public class FrameworkEnvironment {
     protected static final String HOME_URL = "http://automationpractice.com/index.php";
     protected static final String TODAY_DATE = new SimpleDateFormat("yyyy-MM-dd HH:ss").format(new Date());
 
-    //DYNAMIC DATA//
-    protected final String tempEmail = mockNeat.emails().val();
-
     //MESSAGES//
     protected static final String PAGE_URL_DIDNT_CONTAIN =
             "Following page URL didn't contain: ";
@@ -49,7 +49,7 @@ public class FrameworkEnvironment {
     protected static final String PAGE_ERROR =
             "Page wasn't ready to execute tests! ";
     protected static final String RESULTS_ERROR =
-            "Results which have been found didn't match expected results! ";
+            "Results which have been found didn't match expected number of results! ";
     protected static final String VIEW_ERROR =
             "Element wasn't displayed! ";
     protected static final String INPUT_ERROR =
@@ -58,8 +58,14 @@ public class FrameworkEnvironment {
             "Value didn't match expected value! ";
     protected static final String SORTING_ERROR =
             "Results didn't match expected sorting results! ";
+    protected static final String SEARCH_ERROR =
+            "Results which have been found didn't match expected item names! ";
     protected static final String _21VOID =
             "Upssss, something went really bad! Even Michael Scofield couldn't have predicted that error! :) ";
+    static final String HOST_URL = System.getProperty
+            ("selenium.hostURL", "https://localhost:3000");
+    static final String HOST = System.getProperty
+            ("selenium.host", "Chrome");
 
     //ENVIRONMENT PROPERTIES//
     private static final String TRAVIS_BUILD_NUMBER = System.getProperty

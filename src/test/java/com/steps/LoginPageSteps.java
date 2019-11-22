@@ -15,13 +15,13 @@ public class LoginPageSteps extends DriverFactory {
     private BasePage basePage = new BasePage(driver);
     private LoginPage loginPage = new LoginPage(driver);
 
-    @Step("I enter login {string}")
+    @Step("I enter login {0}")
     @And("I enter login {string}")
     public void iEnterLogin(String email) {
         loginPage.emailInput.sendKeys(email);
     }
 
-    @Step("I enter password {string}")
+    @Step("I enter password {0}")
     @And("I enter password {string}")
     public void iEnterPassword(String password) {
         loginPage.passwordInput.sendKeys(password);
@@ -39,7 +39,7 @@ public class LoginPageSteps extends DriverFactory {
         Assert.assertTrue(basePage.isDisplayed(10, loginPage.loginForm), VIEW_ERROR);
     }
 
-    @Step("I can see warning message with include {string}")
+    @Step("I can see warning message with include {0}")
     @Then("I can see warning message with include {string}")
     public void iCanSeeWarningMessageWithInclude(String warningMessage) {
         Assert.assertTrue(basePage.errorValidator(loginPage.loginError).contains(warningMessage),
