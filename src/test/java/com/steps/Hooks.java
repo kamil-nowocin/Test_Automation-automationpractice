@@ -5,8 +5,8 @@ import com.TestNGListener;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
-import io.qameta.allure.Attachment;
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.testng.ITestListener;
@@ -24,27 +24,21 @@ public class Hooks extends DriverFactory implements ITestListener {
 
     @Before
     public void beforeScenario(Scenario scenario) {
-        logger.info(ANSI_BLUE + "#################################################################################"
-                + "#############################" + ANSI_RESET);
-        logger.info(ANSI_BLUE + "================================================" + ANSI_RESET + "BEFORE SCENARIO"
-                + ANSI_BLUE + "===============================================" + ANSI_RESET);
-        logger.info(ANSI_BLUE + "#################################################################################"
-                + "#############################" + ANSI_RESET);
+        logger.info(ANSI_BLUE + StringUtils.repeat("#", 110) + ANSI_RESET);
+        logger.info(ANSI_BLUE + StringUtils.repeat("=", 46) + ANSI_RESET + " BEFORE SCENARIO "
+                + ANSI_BLUE + StringUtils.repeat("=", 47) + ANSI_RESET);
+        logger.info(ANSI_BLUE + StringUtils.repeat("#", 110) + ANSI_RESET);
         logger.info("SCENARIO NAME: " + scenario.getName().toUpperCase());
         startBrowser();
     }
 
     @After
     public void afterScenario(Scenario scenario) throws IOException {
-        logger.info(ANSI_BLUE + "##################################################################################"
-                + "############################" + ANSI_RESET);
+        logger.info(ANSI_BLUE + StringUtils.repeat("#", 110) + ANSI_RESET);
         String status = (scenario.isFailed() ? ANSI_RED + "FAILED" + ANSI_RESET : ANSI_GREEN + "SUCCESS" + ANSI_RESET);
-        logger.info(ANSI_BLUE + "====================================" + ANSI_RESET + "SCENARIO FINISHED WITH " +
-                status + " STATUS" + ANSI_BLUE + "=====================================" + ANSI_RESET);
-        logger.info(ANSI_BLUE + "============================================" + ANSI_RESET + "CLEANUP AFTER SCENARIO"
-                + ANSI_BLUE + "============================================" + ANSI_RESET);
-        logger.info(ANSI_BLUE + "##################################################################################"
-                + "############################" + ANSI_RESET);
+        logger.info(ANSI_BLUE + StringUtils.repeat("=", 35) + ANSI_RESET + " SCENARIO FINISHED WITH " +
+                status + " STATUS " + ANSI_BLUE + StringUtils.repeat("=", 35) + ANSI_RESET);
+        logger.info(ANSI_BLUE + StringUtils.repeat("#", 110) + ANSI_RESET);
         System.out.println("\n");
         if (scenario.isFailed()) {
             byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);

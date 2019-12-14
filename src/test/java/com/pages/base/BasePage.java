@@ -61,12 +61,12 @@ public class BasePage extends FrameworkEnvironment {
         }
     }
 
-    public void selectFromDropdownByIntValue(int value, WebElement elementName) {
+    public void selectFromDropdownByIndex(int value, WebElement elementName) {
         Select dropdown = new Select(elementName);
         dropdown.selectByIndex(value);
     }
 
-    public void selectFromDropdownByStringValue(String textValue, WebElement elementName) {
+    public void selectFromDropdownByText(String textValue, WebElement elementName) {
         Select dropdown = new Select(elementName);
         dropdown.selectByVisibleText(textValue);
     }

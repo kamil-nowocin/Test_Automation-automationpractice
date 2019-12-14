@@ -46,7 +46,7 @@ public class CustomerServicePageSteps extends DriverFactory {
     @Step("I choose Subject Heading")
     @When("I choose Subject Heading")
     public void iChooseSubjectHeading() throws Throwable {
-        basePage.selectFromDropdownByIntValue(1, customerServicePage.subjectHeadingDropdown);
+        basePage.selectFromDropdownByIndex(1, customerServicePage.subjectHeadingDropdown);
     }
 
     @Step("I write an email address in contact us page")

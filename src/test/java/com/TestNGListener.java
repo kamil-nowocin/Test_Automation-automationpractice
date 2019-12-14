@@ -1,6 +1,7 @@
 package com;
 
 import io.qameta.allure.Attachment;
+import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.testng.ITestContext;
@@ -18,16 +19,16 @@ public class TestNGListener extends FrameworkEnvironment implements ITestListene
 
     @Override
     public void onStart(ITestContext iTestContext) {
-        logger.info("##############################################################################################################");
-        logger.info("===============================STARTING TEST SUITE " + iTestContext.getStartDate() + "===============================");
-        logger.info("##############################################################################################################");
+        logger.info(StringUtils.repeat("#", 110));
+        logger.info(StringUtils.repeat("=", 31) + "STARTING TEST SUITE " + iTestContext.getStartDate() + StringUtils.repeat("=", 31));
+        logger.info(StringUtils.repeat("#", 110));
     }
 
     @Override
     public void onFinish(ITestContext iTestContext) {
-        logger.info("##############################################################################################################");
-        logger.info("==============================================END OF TEST SUITE===============================================");
-        logger.info("##############################################################################################################");
+        logger.info(StringUtils.repeat("#", 110));
+        logger.info(StringUtils.repeat("=", 45) + " END OF TEST SUITE " + StringUtils.repeat("=", 45));
+        logger.info(StringUtils.repeat("#", 110));
     }
 
     @Override

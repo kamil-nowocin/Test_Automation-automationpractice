@@ -122,9 +122,9 @@ public class RegistrationPageSteps extends DriverFactory {
     @Step("I choose date of birth")
     @And("I choose date of birth")
     public void iChooseDateOfBirth() throws Throwable {
-        registrationPage.selectFromDropdownByIntValue(basePage.randomValue(28, 1), registrationPage.dayOfBirth);
-        registrationPage.selectFromDropdownByIntValue(basePage.randomValue(12, 1), registrationPage.monthOfBirth);
-        registrationPage.selectFromDropdownByIntValue(basePage.randomValue(119, 1), registrationPage.yearOfBirth);
+        registrationPage.selectFromDropdownByIndex(basePage.randomValue(28, 1), registrationPage.dayOfBirth);
+        registrationPage.selectFromDropdownByIndex(basePage.randomValue(12, 1), registrationPage.monthOfBirth);
+        registrationPage.selectFromDropdownByIndex(basePage.randomValue(119, 1), registrationPage.yearOfBirth);
     }
 
     @Step("I sign in to receive newsletter and special offers")
@@ -177,7 +177,7 @@ public class RegistrationPageSteps extends DriverFactory {
     @Step("I choose country {0}")
     @And("I choose country {string}")
     public void iChooseCountry(String country) throws Throwable {
-        basePage.selectFromDropdownByStringValue(country, registrationPage.countryDropDown);
+        basePage.selectFromDropdownByText(country, registrationPage.countryDropDown);
     }
 
     @Step("I write city name")
@@ -189,7 +189,7 @@ public class RegistrationPageSteps extends DriverFactory {
     @Step("I choose state")
     @And("I choose state")
     public void iChooseState() throws Throwable {
-        registrationPage.selectFromDropdownByIntValue(basePage.randomValue(50, 1), registrationPage.stateDropDown);
+        registrationPage.selectFromDropdownByIndex(basePage.randomValue(50, 1), registrationPage.stateDropDown);
     }
 
     @Step("I write postal code")
