@@ -1,52 +1,56 @@
 {
   "uid" : "4b4757e66a1912dae1a509f688f20b0f",
   "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"#header > div.nav > div > div > nav > div.header_user_info > a\"}\n  (Session info: chrome=79.0.3945.88)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'localhost', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.4.0-101-generic', java.version: '1.8.0_151'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: /tmp/.com.google.Chrome.6U9P6B}, goog:chromeOptions: {debuggerAddress: localhost:44529}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: aa994099749b2ad3e103e98667e57292\n*** Element info: {Using=css selector, value=#header > div.nav > div > div > nav > div.header_user_info > a}",
+      "children" : [ {
+        "name" : "Runs Cucumber Feature",
+        "uid" : "1d93b02c52a77bf9",
+        "parentUid" : "826d2917d3b5f1e6f82ef37a271a1b0b",
+        "status" : "broken",
+        "time" : {
+          "start" : 1576684603770,
+          "stop" : 1576684624909,
+          "duration" : 21139
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "\"As a user I can create an account by filling up all fields\"", "\"As a user I would like to register into automationpractice.com\"" ]
+      } ],
+      "uid" : "826d2917d3b5f1e6f82ef37a271a1b0b"
+    }, {
+      "name" : "no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"#header > div.nav > div > div > nav > div.header_user_info > a\"}\n  (Session info: chrome=79.0.3945.88)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'localhost', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.4.0-101-generic', java.version: '1.8.0_151'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: /tmp/.com.google.Chrome.NQ1t7P}, goog:chromeOptions: {debuggerAddress: localhost:38880}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: 8462a4beb032344c10b9b99a18a0dff3\n*** Element info: {Using=css selector, value=#header > div.nav > div > div > nav > div.header_user_info > a}",
+      "children" : [ {
+        "name" : "Runs Cucumber Feature",
+        "uid" : "1f0aea2edafb7df7",
+        "parentUid" : "86b267d044241ffc3a2f2bb6031c1f52",
+        "status" : "broken",
+        "time" : {
+          "start" : 1576684624938,
+          "stop" : 1576684650359,
+          "duration" : 25421
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "\"As a user I can create an account by filling up only required fields\"", "\"As a user I would like to register into automationpractice.com\"" ]
+      } ],
+      "uid" : "86b267d044241ffc3a2f2bb6031c1f52"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  }, {
     "name" : "Product defects",
     "children" : [ {
-      "name" : "Element wasn't displayed!  did not expect to find [true] but found [false]",
-      "children" : [ {
-        "name" : "Runs Cucumber Feature",
-        "uid" : "1584ea194cc5c54a",
-        "parentUid" : "1994622a46169e9c9209dbd7a5c27174",
-        "status" : "failed",
-        "time" : {
-          "start" : 1576598271734,
-          "stop" : 1576598336417,
-          "duration" : 64683
-        },
-        "flaky" : false,
-        "newFailed" : true,
-        "parameters" : [ "\"As a user I would like to see registration error when I don't fill postal code input\"", "\"As a user I would like to see the error message where I made a mistake in the registration page form\"" ]
-      } ],
-      "uid" : "1994622a46169e9c9209dbd7a5c27174"
-    }, {
-      "name" : "Warning message didn't contain this phrase! Country is invalid did not expect to find [true] but found [false]",
-      "children" : [ {
-        "name" : "Runs Cucumber Feature",
-        "uid" : "55d2e25adaaf3ba7",
-        "parentUid" : "8cf2b76aae5c609dd2a148e5867dd3c4",
-        "status" : "failed",
-        "time" : {
-          "start" : 1576598336435,
-          "stop" : 1576598343678,
-          "duration" : 7243
-        },
-        "flaky" : false,
-        "newFailed" : true,
-        "parameters" : [ "\"As a user I would like to see registration error when I don't fill country input\"", "\"As a user I would like to see the error message where I made a mistake in the registration page form\"" ]
-      } ],
-      "uid" : "8cf2b76aae5c609dd2a148e5867dd3c4"
-    }, {
       "name" : "Results didn't match expected sorting results! : Lists differ at element [2]: 2898 != 3050 expected [2898] but found [3050]",
       "children" : [ {
         "name" : "Runs Cucumber Feature",
-        "uid" : "c2f8702db7c42dcd",
+        "uid" : "9a6fb51756067da6",
         "parentUid" : "810dfaed26675e443f20871c36917f11",
         "status" : "failed",
         "time" : {
-          "start" : 1576598394538,
-          "stop" : 1576598405628,
-          "duration" : 11090
+          "start" : 1576684777549,
+          "stop" : 1576684781709,
+          "duration" : 4160
         },
         "flaky" : false,
         "newFailed" : false,
