@@ -3,20 +3,37 @@
   "children" : [ {
     "name" : "Product defects",
     "children" : [ {
-      "name" : "Results which have been found didn't match expected sorting results! Price: Lowest first: Lists differ at element [2]: 2898 != 3050 expected [2898] but found [3050]",
+      "name" : "Results which have been found didn't match expected sorting results! Price: Highest first: Lists differ at element [1]: 3050 != 2898 expected [3050] but found [2898]",
       "children" : [ {
         "name" : "Runs Cucumber Feature",
-        "uid" : "885be4d8e5ca223",
-        "parentUid" : "e8da603ba720ed289e9790c02d8a9f72",
+        "uid" : "a8648eb827d59b5f",
+        "parentUid" : "79374982268fdfc4506bd0b0393e6e76",
         "status" : "failed",
         "time" : {
-          "start" : 1577299145050,
-          "stop" : 1577299159092,
-          "duration" : 14042
+          "start" : 1577307945621,
+          "stop" : 1577307959719,
+          "duration" : 14098
         },
         "flaky" : false,
         "newFailed" : false,
-        "parameters" : [ "\"As a user I would like to use search box and be able to see sorted results\"", "\"A a user I would like to see results of searching phrase\"" ]
+        "parameters" : [ "\"As a user I would like to use search box and be able to see sorted results by Price: Highest first\"", "\"A a user I would like to see results of searching phrase\"" ]
+      } ],
+      "uid" : "79374982268fdfc4506bd0b0393e6e76"
+    }, {
+      "name" : "Results which have been found didn't match expected sorting results! Price: Lowest first: Lists differ at element [2]: 2898 != 3050 expected [2898] but found [3050]",
+      "children" : [ {
+        "name" : "Runs Cucumber Feature",
+        "uid" : "8b5c61676d7033d9",
+        "parentUid" : "e8da603ba720ed289e9790c02d8a9f72",
+        "status" : "failed",
+        "time" : {
+          "start" : 1577307959728,
+          "stop" : 1577307973867,
+          "duration" : 14139
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "\"As a user I would like to use search box and be able to see sorted results by Price: Lowest first\"", "\"A a user I would like to see results of searching phrase\"" ]
       } ],
       "uid" : "e8da603ba720ed289e9790c02d8a9f72"
     } ],
