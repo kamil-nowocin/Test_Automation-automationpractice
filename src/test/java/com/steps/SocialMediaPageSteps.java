@@ -76,7 +76,7 @@ public class SocialMediaPageSteps extends DriverFactory {
             case "youtube":
                 socialMediaPage.youtubeButton.click();
                 break;
-            case "google+":
+            case "google":
                 socialMediaPage.googleButton.click();
                 break;
             default:

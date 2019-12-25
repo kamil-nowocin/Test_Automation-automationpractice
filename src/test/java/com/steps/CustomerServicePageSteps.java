@@ -53,7 +53,7 @@ public class CustomerServicePageSteps extends DriverFactory {
         final String subjectHeading = "Customer service";
 
         //ACT//
-        basePage.selectFromDropdownByText("Customer service", customerServicePage.subjectHeadingDropdown);
+        basePage.selectFromDropdownByText(subjectHeading, customerServicePage.subjectHeadingDropdown);
 
         //ASSERT//
         Assert.assertEquals(customerServicePage.chosenSubjectHeadingFromDropdown.getText().toLowerCase(),
