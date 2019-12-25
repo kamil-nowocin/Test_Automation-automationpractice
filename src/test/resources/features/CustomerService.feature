@@ -85,7 +85,7 @@ Feature: As a user I would like to contact with customer service support
     Then I click Send button
     And I can see error message 'The message cannot be blank.'
 
-#--------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------a
   Scenario: As a user I am not able to send request via contact us form, when all inputs are missing
     Given I am on Customer Service Contact Us page form
     When I click Send button

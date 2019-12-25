@@ -5,8 +5,6 @@ import io.cucumber.testng.CucumberOptions;
 import io.cucumber.testng.PickleEventWrapper;
 import io.cucumber.testng.TestNGCucumberRunner;
 import io.qameta.allure.Description;
-import io.qameta.allure.Severity;
-import io.qameta.allure.SeverityLevel;
 import org.testng.annotations.*;
 
 /**
@@ -37,7 +35,6 @@ public class TestNGRunner {
 
     @Test(groups = "Cucumber", description = "Runs Cucumber Feature", dataProvider = "scenarios")
     @Description("TEST DESCRIPTION")
-    @Severity(SeverityLevel.CRITICAL)
     public void scenario(PickleEventWrapper pickleEvent, CucumberFeatureWrapper cucumberFeature) throws Throwable {
         testNGCucumberRunner.runScenario(pickleEvent.getPickleEvent());
     }

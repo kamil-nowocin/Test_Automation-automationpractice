@@ -10,7 +10,7 @@ Feature: A a user I would like to see results of searching phrase
     When I open home page
 
 #--------------------------------------------------------------------------------
-  Scenario Outline: As a user I would like to use search box and be able to see results
+  Scenario Outline: As a user I would like to use search box and be able to see results of: <search phrase>
     Given I can see Automationpractice.com website
     When I search for phrase "<search phrase>"
     And I click on search icon
@@ -25,7 +25,7 @@ Feature: A a user I would like to see results of searching phrase
       | !@#$%^        | 0       |
 
 #--------------------------------------------------------------------------------
-  Scenario Outline: As a user I would like to use search box and be able to see sorted results
+  Scenario Outline: As a user I would like to use search box and be able to see sorted results by <sortBy>
     Given I can see Automationpractice.com website
     When I search for phrase "<searchPhrase>"
     And I click on search icon

@@ -10,7 +10,7 @@ Feature: As a user I would like to check if I'll be redirected to social media p
     Given I open home page
 
 #--------------------------------------------------------------------------------
-  Scenario Outline: As a user I click on social media company logo
+  Scenario Outline: As a user I click on social media <logoName> logo
     Given I can see Automationpractice.com website
     When I scroll the website until I can see "<logoName>" logo
     And I click on "<logoName>" logo button
