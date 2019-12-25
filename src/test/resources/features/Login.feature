@@ -1,3 +1,9 @@
+#/**
+#* Test_Automation-automationpractice
+#*
+#* @author kamil.nowocin
+#**/
+
 Feature: As a user I would like to log in automationpractice.com
 
   Background: Navigate to Login page
@@ -20,6 +26,7 @@ Feature: As a user I would like to log in automationpractice.com
     And I enter password "<password>"
     And I click on Submit button
     Then I can see warning message with include "<warningMessage>"
+
     Examples:
       | email                    | password | warningMessage            |
       | thanos.ALars@example.com | 12345    | Authentication failed     |

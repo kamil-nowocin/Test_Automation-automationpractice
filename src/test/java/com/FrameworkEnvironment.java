@@ -12,6 +12,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 import java.util.Properties;
 import java.util.ResourceBundle;
 
@@ -20,10 +21,11 @@ import java.util.ResourceBundle;
  *
  * @author kamil.nowocin
  **/
+
 public class FrameworkEnvironment {
 
     protected static Logger logger = LoggerFactory.getLogger(Hooks.class);
-    protected static Faker faker = new Faker();
+    protected static Faker faker = new Faker(new Locale("en-US"));
     protected static MockNeat mockNeat = MockNeat.threadLocal();
 
     //BUNDLES//
@@ -45,28 +47,28 @@ public class FrameworkEnvironment {
     protected static final String TODAY_DATE = new SimpleDateFormat("yyyy-MM-dd HH:ss").format(new Date());
 
     //MESSAGES//
-    protected static final String PAGE_URL_DIDNT_CONTAIN =
-            "Following page URL didn't contain: ";
-    protected static final String MESSAGE_DIDNT_CONTAIN =
-            "Warning message didn't contain this phrase! ";
     protected static final String WELCOME_MESSAGE =
             "Welcome to your account. Here you can manage all of your personal information and orders.";
+    protected static final String PAGE_URL_DIDNT_CONTAIN =
+            "Following page URL didn't contain this web address %s.com";
+    protected static final String MESSAGE_DIDNT_CONTAIN =
+            "Warning message didn't contain %s!";
     protected static final String PAGE_ERROR =
-            "Page wasn't ready to execute tests! ";
+            "Page wasn't ready to execute tests!";
     protected static final String RESULTS_ERROR =
-            "Results which have been found didn't match expected number of results! ";
-    protected static final String VIEW_ERROR =
-            "Element wasn't displayed! ";
-    protected static final String INPUT_ERROR =
-            "Invalid input type! Check your GHERKIN statement! ";
-    protected static final String VALUE_ERROR =
-            "Value didn't match expected value! ";
-    protected static final String SORTING_ERROR =
-            "Results didn't match expected sorting results! ";
+            "Results which have been found %s, didn't match expected number of results %s!";
     protected static final String SEARCH_ERROR =
-            "Results which have been found didn't match expected item names! ";
+            "Results which have been found didn't match expected item names!";
+    protected static final String SORTING_ERROR =
+            "Results which have been found didn't match expected sorting results! %s";
+    protected static final String VIEW_ERROR =
+            "Element wasn't displayed! %s";
+    protected static final String INPUT_ERROR =
+            "Invalid input type! %s is not supported!";
+    protected static final String VALUE_ERROR =
+            "Value didn't match expected value!";
     protected static final String _21VOID =
-            "Upssss, something went really bad! Even Michael Scofield couldn't have predicted that error! :) ";
+            "Upssss, something went really bad! Even Michael Scofield couldn't have predicted that error! :)";
 
     //ENVIRONMENT PROPERTIES//
     private static final String TRAVIS_BUILD_NUMBER = System.getProperty

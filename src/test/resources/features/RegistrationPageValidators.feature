@@ -1,3 +1,9 @@
+#/**
+#* Test_Automation-automationpractice
+#*
+#* @author kamil.nowocin
+#**/
+
 Feature: As a user I would like to see the error message where I made a mistake in the registration page form
 
   Background: Navigate to registration page

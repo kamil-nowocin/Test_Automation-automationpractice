@@ -11,6 +11,7 @@ import org.openqa.selenium.support.How;
  *
  * @author kamil.nowocin
  **/
+
 public class RegistrationPage extends BasePage {
 
     @FindBy(how = How.CSS, using = "#header > div.nav > div > div > nav > div.header_user_info > a")
@@ -91,11 +92,17 @@ public class RegistrationPage extends BasePage {
     @FindBy(how = How.ID, using = "id_state")
     public WebElement stateDropDown;
 
+    @FindBy(how = How.XPATH, using = "//p[@class='required id_state select form-group']//span")
+    public WebElement chosenStateFromDropdown;
+
     @FindBy(how = How.ID, using = "postcode")
     public WebElement postalCodeInput;
 
     @FindBy(how = How.ID, using = "id_country")
     public WebElement countryDropDown;
+
+    @FindBy(how = How.XPATH, using = "//div[@id='uniform-id_country']//span")
+    public WebElement chosenCountryFromDropdown;
 
     @FindBy(how = How.ID, using = "other")
     public WebElement additionalInformationBox;

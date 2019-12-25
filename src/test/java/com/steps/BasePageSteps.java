@@ -12,6 +12,7 @@ import org.testng.annotations.Listeners;
  *
  * @author kamil.nowocin
  **/
+
 @Listeners({Hooks.class})
 public class BasePageSteps extends DriverFactory {
 
@@ -30,6 +31,13 @@ public class BasePageSteps extends DriverFactory {
     @Step("I can see Automationpractice.com website")
     @Given("I can see Automationpractice.com website")
     public void iCanSeeAutomationpracticeComWebsite() throws Throwable {
-        Assert.assertTrue(basePage.isPageReady(), PAGE_ERROR);
+        //ARRANGE//
+        final boolean isPageReadyToExecuteTests;
+
+        //ACT//
+        isPageReadyToExecuteTests = basePage.isPageReady();
+
+        //ASSERT//
+        Assert.assertTrue(isPageReadyToExecuteTests, PAGE_ERROR);
     }
 }

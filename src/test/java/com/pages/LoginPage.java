@@ -11,6 +11,7 @@ import org.openqa.selenium.support.How;
  *
  * @author kamil.nowocin
  **/
+
 public class LoginPage extends BasePage {
 
     @FindBy(how = How.CSS, using = "#center_column > div.alert.alert-danger")

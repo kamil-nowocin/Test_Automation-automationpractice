@@ -15,6 +15,7 @@ import java.io.IOException;
  *
  * @author kamil.nowocin
  **/
+
 public class TestNGListener extends FrameworkEnvironment implements ITestListener {
 
     @Override

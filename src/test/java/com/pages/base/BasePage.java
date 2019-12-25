@@ -19,6 +19,7 @@ import java.util.Random;
  *
  * @author kamil.nowocin
  **/
+
 public class BasePage extends FrameworkEnvironment {
 
     private static WebDriver driver;

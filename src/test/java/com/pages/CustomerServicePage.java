@@ -11,6 +11,7 @@ import org.openqa.selenium.support.How;
  *
  * @author kamil.nowocin
  **/
+
 public class CustomerServicePage extends BasePage {
 
     @FindBy(how = How.XPATH, using = "//h1[@class='page-heading bottom-indent']")
@@ -30,6 +31,9 @@ public class CustomerServicePage extends BasePage {
 
     @FindBy(how = How.XPATH, using = "//div[@class='col-xs-12 col-md-3']//select[@id='id_contact']")
     public WebElement subjectHeadingDropdown;
+
+    @FindBy(how = How.XPATH, using = "//div[@class='col-xs-12 col-md-3']//div[@class='form-group selector1']//span")
+    public WebElement chosenSubjectHeadingFromDropdown;
 
     @FindBy(how = How.XPATH, using = "//div[@class='col-xs-12 col-md-3']//input[@id='email']")
     public WebElement emailAddressInput;

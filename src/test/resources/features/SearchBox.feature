@@ -1,3 +1,9 @@
+#/**
+#* Test_Automation-automationpractice
+#*
+#* @author kamil.nowocin
+#**/
+
 Feature: A a user I would like to see results of searching phrase
 
   Background: Navigate to Automationpractice.com website
@@ -10,6 +16,7 @@ Feature: A a user I would like to see results of searching phrase
     And I click on search icon
     Then I can see numbers of results equals to "<results>"
     And I can see that every results which have been found contains phrase "<search phrase>"
+
     Examples:
       | search phrase | results |
       | T-shirts      | 1       |
@@ -26,6 +33,7 @@ Feature: A a user I would like to see results of searching phrase
     And I can see that every results which have been found contains phrase "<searchPhrase>"
     Then I select from Dropdown Sort by "<sortBy>"
     And I can see that results are correctly sorted by "<sortedBy>"
+
     Examples:
       | searchPhrase  | expectedResults | sortBy               | sortedBy             |
       | Printed Dress | 5               | Product Name: Z to A | Product Name: Z to A |

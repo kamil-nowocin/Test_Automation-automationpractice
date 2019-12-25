@@ -1,3 +1,9 @@
+#/**
+#* Test_Automation-automationpractice
+#*
+#* @author kamil.nowocin
+#**/
+
 Feature: As a user I would like to register into automationpractice.com
 
   Background: Navigate to Sign Up page

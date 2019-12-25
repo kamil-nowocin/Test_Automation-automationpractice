@@ -1,3 +1,9 @@
+#/**
+#* Test_Automation-automationpractice
+#*
+#* @author kamil.nowocin
+#**/
+
 Feature: As a user I would like to contact with customer service support
 
   Background: Navigate to Contact Us page

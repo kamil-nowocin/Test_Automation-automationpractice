@@ -20,6 +20,7 @@ import java.nio.file.Paths;
  *
  * @author kamil.nowocin
  **/
+
 public class Hooks extends DriverFactory implements ITestListener {
 
     @Before
