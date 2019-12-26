@@ -1,3 +1,9 @@
+#/**
+#* Test_Automation-automationpractice
+#*
+#* @author kamil.nowocin
+#**/
+
 Feature: As a user I would like to log in automationpractice.com
 
   Background: Navigate to Login page
@@ -14,15 +20,15 @@ Feature: As a user I would like to log in automationpractice.com
     Then I can see welcome message
 
 #--------------------------------------------------------------------------------
-  Scenario Outline: As a user I can't log into automationpractice.com
+  Scenario Outline: As a user I can't log into automationpractice.com using email: <email>
     Given I can see login form
     When I enter login "<email>"
     And I enter password "<password>"
     And I click on Submit button
     Then I can see warning message with include "<warningMessage>"
+
     Examples:
       | email                    | password | warningMessage            |
       | thanos.ALars@example.com | 12345    | Authentication failed     |
       | thor.odinson@example.com |          | Password is required      |
       |                          | 12345    | An email address required |
-      |                          |          | An email address required |

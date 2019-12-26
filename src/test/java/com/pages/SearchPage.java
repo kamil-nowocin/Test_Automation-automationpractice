@@ -13,6 +13,7 @@ import java.util.List;
  *
  * @author kamil.nowocin
  **/
+
 public class SearchPage extends BasePage {
 
     @FindBy(how = How.XPATH, using = "//input[@class='search_query form-control ac_input']")
@@ -26,6 +27,9 @@ public class SearchPage extends BasePage {
 
     @FindBy(how = How.XPATH, using = "//select[@id='selectProductSort']")
     public WebElement dropdownSortBy;
+
+    @FindBy(how = How.XPATH, using = "//div[@id='uniform-selectProductSort']//span")
+    public WebElement chosenSortBy;
 
     @FindBy(how = How.XPATH, using = "//div[@id='center_column']//p")
     public WebElement noResultsWereFoundHeader;

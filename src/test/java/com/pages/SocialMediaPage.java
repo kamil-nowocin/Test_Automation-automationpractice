@@ -11,6 +11,7 @@ import org.openqa.selenium.support.How;
  *
  * @author kamil.nowocin
  **/
+
 public class SocialMediaPage extends BasePage {
 
     @FindBy(how = How.XPATH, using = "//*[@class=\"facebook\"]")

@@ -22,6 +22,7 @@ import java.util.concurrent.TimeUnit;
  *
  * @author kamil.nowocin
  **/
+
 public class DriverFactory extends FrameworkEnvironment {
 
     protected static WebDriver driver;
