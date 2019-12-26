@@ -3,37 +3,54 @@
   "children" : [ {
     "name" : "Test defects",
     "children" : [ {
-      "name" : "stale element reference: element is not attached to the page document\n  (Session info: chrome=79.0.3945.88)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'localhost', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.4.0-101-generic', java.version: '1.8.0_151'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: /tmp/.com.google.Chrome.HVB88N}, goog:chromeOptions: {debuggerAddress: localhost:44755}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: 6a50e0ddc6483171e2c44d48ce9d280b",
+      "name" : "stale element reference: element is not attached to the page document\n  (Session info: chrome=79.0.3945.88)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'localhost', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.4.0-101-generic', java.version: '1.8.0_151'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: /tmp/.com.google.Chrome.uyi6ld}, goog:chromeOptions: {debuggerAddress: localhost:44095}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: 7e12eae39923551e2f7417cf90097d91",
       "children" : [ {
         "name" : "Runs Cucumber Feature",
-        "uid" : "b5d571eb50885c80",
-        "parentUid" : "f7989138ebc46b7e14fe16bbcb3d6eda",
+        "uid" : "fca3fd2817a3bf60",
+        "parentUid" : "eb6519f0f887d89ab4920a0fa64bb08e",
         "status" : "broken",
         "time" : {
-          "start" : 1577365840092,
-          "stop" : 1577365854147,
-          "duration" : 14055
+          "start" : 1577369047595,
+          "stop" : 1577369062342,
+          "duration" : 14747
         },
         "flaky" : false,
         "newFailed" : false,
-        "parameters" : [ "\"As a user I would like to use search box and be able to see sorted results by Price: Highest first\"", "\"A a user I would like to see results of searching phrase\"" ]
+        "parameters" : [ "\"As a user I would like to use search box and be able to see sorted results by Product Name: A to Z\"", "\"A a user I would like to see results of searching phrase\"" ]
       } ],
-      "uid" : "f7989138ebc46b7e14fe16bbcb3d6eda"
+      "uid" : "eb6519f0f887d89ab4920a0fa64bb08e"
     } ],
     "uid" : "bdbf199525818fae7a8651db9eafe741"
   }, {
     "name" : "Product defects",
     "children" : [ {
+      "name" : "Results which have been found didn't match expected sorting results! Price: Highest first: Lists differ at element [1]: 3050 != 2898 expected [3050] but found [2898]",
+      "children" : [ {
+        "name" : "Runs Cucumber Feature",
+        "uid" : "a233451a5723d2d",
+        "parentUid" : "79374982268fdfc4506bd0b0393e6e76",
+        "status" : "failed",
+        "time" : {
+          "start" : 1577369062347,
+          "stop" : 1577369076681,
+          "duration" : 14334
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "\"As a user I would like to use search box and be able to see sorted results by Price: Highest first\"", "\"A a user I would like to see results of searching phrase\"" ]
+      } ],
+      "uid" : "79374982268fdfc4506bd0b0393e6e76"
+    }, {
       "name" : "Results which have been found didn't match expected sorting results! Price: Lowest first: Lists differ at element [2]: 2898 != 3050 expected [2898] but found [3050]",
       "children" : [ {
         "name" : "Runs Cucumber Feature",
-        "uid" : "d58a52f61dd3b644",
+        "uid" : "a18a56e0771a3334",
         "parentUid" : "e8da603ba720ed289e9790c02d8a9f72",
         "status" : "failed",
         "time" : {
-          "start" : 1577365854160,
-          "stop" : 1577365868043,
-          "duration" : 13883
+          "start" : 1577369076684,
+          "stop" : 1577369092416,
+          "duration" : 15732
         },
         "flaky" : false,
         "newFailed" : false,
