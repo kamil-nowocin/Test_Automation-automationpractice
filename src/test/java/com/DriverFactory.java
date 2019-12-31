@@ -65,9 +65,9 @@ public class DriverFactory extends FrameworkEnvironment {
         if (driver == null) {
             switch (getHost().toLowerCase()) {
                 case "chrome":
-                    //WebDriverManager.chromedriver().setup();
+                    WebDriverManager.chromedriver().setup();
                     ChromeOptions chromeOptions = new ChromeOptions();
-                    chromeOptions.addArguments("--lang=en-US");
+                    chromeOptions.addArguments();
                     driver = new ChromeDriver(chromeOptions);
                     break;
                 case "firefox":
