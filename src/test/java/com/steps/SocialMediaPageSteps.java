@@ -8,7 +8,6 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import io.qameta.allure.Step;
 import org.testng.Assert;
-import org.testng.annotations.Listeners;
 
 import java.util.ArrayList;
 
@@ -18,11 +17,10 @@ import java.util.ArrayList;
  * @author kamil.nowocin
  **/
 
-@Listeners({Hooks.class})
 public class SocialMediaPageSteps extends DriverFactory {
 
-    private BasePage basePage = new BasePage(driver);
-    private SocialMediaPage socialMediaPage = new SocialMediaPage(driver);
+    private BasePage basePage = new BasePage();
+    private SocialMediaPage socialMediaPage = new SocialMediaPage();
 
     @Step("I scroll the website until I can see {0} logo")
     @When("I scroll the website until I can see {string} logo")
@@ -31,29 +29,21 @@ public class SocialMediaPageSteps extends DriverFactory {
         switch (logoName.toLowerCase()) {
             case "facebook":
                 basePage.scrollWebsiteToElement(socialMediaPage.facebookButton);
-
-                //ASSERT
                 Assert.assertTrue(basePage.isDisplayed(10, socialMediaPage.facebookButton),
                         String.format(VIEW_ERROR, logoName.toUpperCase()));
                 break;
             case "twitter":
                 basePage.scrollWebsiteToElement(socialMediaPage.twitterButton);
-
-                //ASSERT//
                 Assert.assertTrue(basePage.isDisplayed(10, socialMediaPage.twitterButton),
                         String.format(VIEW_ERROR, logoName.toUpperCase()));
                 break;
             case "youtube":
                 basePage.scrollWebsiteToElement(socialMediaPage.youtubeButton);
-
-                //ASSERT//
                 Assert.assertTrue(basePage.isDisplayed(10, socialMediaPage.youtubeButton),
                         String.format(VIEW_ERROR, logoName.toUpperCase()));
                 break;
             case "google":
                 basePage.scrollWebsiteToElement(socialMediaPage.googleButton);
-
-                //ASSERT
                 Assert.assertTrue(basePage.isDisplayed(10, socialMediaPage.googleButton),
                         String.format(VIEW_ERROR, logoName.toUpperCase()));
                 break;
@@ -66,6 +56,7 @@ public class SocialMediaPageSteps extends DriverFactory {
     @And("I click on {string} logo button")
     public void iClickOnLogoButton(String logoName) throws Throwable {
         //ACT//
+        logger.info(String.format("Chosen social media platform: %S", logoName));
         switch (logoName.toLowerCase()) {
             case "facebook":
                 socialMediaPage.facebookButton.click();
@@ -92,6 +83,7 @@ public class SocialMediaPageSteps extends DriverFactory {
 
         //ACT//
         driver.switchTo().window(browserTabs.get(1));
+        logger.info(String.format("URL was: %S, URL expected: %S", driver.getCurrentUrl(), logoName + ".com"));
 
         //ASSERT//
         Assert.assertTrue(driver.getCurrentUrl().contains(logoName.toLowerCase() + ".com"),

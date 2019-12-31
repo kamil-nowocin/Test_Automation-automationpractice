@@ -25,9 +25,9 @@ import java.util.concurrent.TimeUnit;
 
 public class DriverFactory extends FrameworkEnvironment {
 
-    protected static WebDriver driver;
+    public static WebDriver driver;
 
-    private static String getBrowserName() {
+    public static String getBrowserName() {
         String getBrowser = System.getProperty("browser");
         if (getBrowser == null) {
             getBrowser = System.getenv("browser");
@@ -38,7 +38,7 @@ public class DriverFactory extends FrameworkEnvironment {
         return getBrowser;
     }
 
-    private static String getHost() {
+    public static String getHost() {
         String getHost = System.getProperty("selenium.host");
         if (getHost == null) {
             getHost = System.getenv("selenium.host");
@@ -49,26 +49,38 @@ public class DriverFactory extends FrameworkEnvironment {
         return getHost;
     }
 
+    protected RemoteWebDriver remoteWebDriver(DesiredCapabilities desiredCapabilities) {
+        //GET USER_NAME AND ACCESS_KEY FROM https://automate.browserstack.com/dashboard/v2
+        //HOST_URL = https://USER_NAME:ACCESS_KEY@hub-cloud.browserstack.com/wd/hub
+        RemoteWebDriver remoteDriver = null;
+        try {
+            remoteDriver = new RemoteWebDriver(new URL(HOST_URL), desiredCapabilities);
+        } catch (MalformedURLException e) {
+            logger.error("Failed to launch remote driver!", e);
+        }
+        return remoteDriver;
+    }
+
     protected void startBrowser() {
         if (driver == null) {
             switch (getHost().toLowerCase()) {
                 case "chrome":
-                    WebDriverManager.chromedriver().setup();
+                    //WebDriverManager.chromedriver().setup();
                     ChromeOptions chromeOptions = new ChromeOptions();
-                    chromeOptions.addArguments("");
-                    driver = new ChromeDriver();
+                    chromeOptions.addArguments("--lang=en-US");
+                    driver = new ChromeDriver(chromeOptions);
                     break;
                 case "firefox":
                     WebDriverManager.firefoxdriver().setup();
                     FirefoxOptions firefoxOptions = new FirefoxOptions();
                     firefoxOptions.addArguments("");
-                    driver = new FirefoxDriver();
+                    driver = new FirefoxDriver(firefoxOptions);
                     break;
                 case "opera":
                     WebDriverManager.operadriver().arch64().version("2.45").setup();
                     OperaOptions operaOptions = new OperaOptions();
                     operaOptions.addArguments("");
-                    driver = new OperaDriver();
+                    driver = new OperaDriver(operaOptions);
                     break;
                 case "safari":
                     driver = new SafariDriver();
@@ -109,18 +121,6 @@ public class DriverFactory extends FrameworkEnvironment {
         } else {
             throw new IllegalStateException("Driver has already been initialized. Quit it before using this method");
         }
-    }
-
-    private RemoteWebDriver remoteWebDriver(DesiredCapabilities desiredCapabilities) {
-        //GET USER_NAME AND ACCESS_KEY FROM https://automate.browserstack.com/dashboard/v2
-        //HOST_URL = https://USER_NAME:ACCESS_KEY@hub-cloud.browserstack.com/wd/hub
-        RemoteWebDriver remoteDriver = null;
-        try {
-            remoteDriver = new RemoteWebDriver(new URL(HOST_URL), desiredCapabilities);
-        } catch (MalformedURLException e) {
-            logger.error("Failed to launch remote driver!", e);
-        }
-        return remoteDriver;
     }
 
     protected static void destroyDriver() {

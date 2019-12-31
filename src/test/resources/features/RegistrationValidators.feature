@@ -8,6 +8,7 @@ Feature: As a user I would like to see the error message where I made a mistake 
 
   Background: Navigate to registration page
     Given I open home page
+    And I can see automationpractice.com website
     When I click on Sign in button
     And I write an email address
     And I click on Create An Account button

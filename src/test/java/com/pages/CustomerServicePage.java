@@ -1,7 +1,6 @@
 package com.pages;
 
 import com.pages.base.BasePage;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -55,8 +54,4 @@ public class CustomerServicePage extends BasePage {
 
     @FindBy(how = How.XPATH, using = "//div[@class='submit']//button")
     public WebElement sendButton;
-
-    public CustomerServicePage(final WebDriver driver) {
-        super(driver);
-    }
 }

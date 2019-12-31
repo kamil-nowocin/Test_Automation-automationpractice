@@ -2,8 +2,11 @@ package com;
 
 import com.github.javafaker.Faker;
 import com.steps.Hooks;
+import io.qameta.allure.Attachment;
 import net.andreinc.mockneat.MockNeat;
 import org.json.JSONObject;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -50,21 +53,21 @@ public class FrameworkEnvironment {
     protected static final String WELCOME_MESSAGE =
             "Welcome to your account. Here you can manage all of your personal information and orders.";
     protected static final String PAGE_URL_DIDNT_CONTAIN =
-            "Following page URL didn't contain this web address %s.com";
+            "Following page URL didn't contain this web address %S.com!";
     protected static final String MESSAGE_DIDNT_CONTAIN =
-            "Warning message didn't contain %s!";
+            "Warning message didn't contain %S!";
     protected static final String PAGE_ERROR =
             "Page wasn't ready to execute tests!";
     protected static final String RESULTS_ERROR =
-            "Results which have been found %s, didn't match expected number of results %s!";
+            "Results which have been found %S, didn't match expected number of results %s!";
     protected static final String SEARCH_ERROR =
             "Results which have been found didn't match expected item names!";
     protected static final String SORTING_ERROR =
-            "Results which have been found didn't match expected sorting results! %s";
+            "Results which have been found didn't match expected %S sorting results!";
     protected static final String VIEW_ERROR =
-            "Element wasn't displayed! %s";
+            "Element wasn't displayed %S!";
     protected static final String INPUT_ERROR =
-            "Invalid input type! %s is not supported!";
+            "Invalid input type! %S is not supported!";
     protected static final String VALUE_ERROR =
             "Value didn't match expected value!";
     protected static final String _21VOID =
@@ -88,28 +91,27 @@ public class FrameworkEnvironment {
     static final String HOST_URL = System.getProperty
             ("selenium.hostURL", "https://localhost:3000");
 
-    static void allureWriteProperties() {
+    protected static void allureWriteProperties() {
         Properties properties = new Properties();
         properties.setProperty("All tests were executed on:", HOME_URL);
         properties.setProperty("Travis build URL:", TRAVIS_BUILD_WEB_URL);
         properties.setProperty("Travis build Run:", TRAVIS_BUILD_NUMBER);
         properties.setProperty("Branch:", TRAVIS_BRANCH);
-        properties.setProperty("Browser:", BROWSER);
+        properties.setProperty("Browser:", HOST);
         properties.setProperty("OS Name:", OS_NAME);
         properties.setProperty("JDK Version:", JAVA_VERSION);
         try {
             properties.store(new FileOutputStream("build/allure-results/environment.properties"), null);
         } catch (IOException e) {
-            logger.error("Failed to create properties file! ", e);
+            logger.error("Failed to create properties file!", e);
         }
     }
 
-    static void allureWriteExecutors() {
+    protected static void allureWriteExecutors() {
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("name", EXECUTOR);
         jsonObject.put("type", EXECUTOR);
-        jsonObject.put("buildName", "Allure Report via Travis CI: " + TRAVIS_BUILD_NUMBER);
-        jsonObject.put("buildUrl", TRAVIS_BUILD_WEB_URL);
+        jsonObject.put("buildName", String.format("Allure Report via Travis CI: %s", TRAVIS_BUILD_NUMBER));
         jsonObject.put("reportUrl", TRAVIS_BUILD_WEB_URL);
         try {
             FileWriter fileWriter = new FileWriter("build/allure-results/executor.json");
@@ -119,4 +121,26 @@ public class FrameworkEnvironment {
             logger.error("Failed to create json object!", e);
         }
     }
+
+    @Attachment(type = "text/plain")
+    protected static String allureSaveTextLog() {
+        return "Text log isn't implemented yet! \nSorry...";
+    }
+
+    @Attachment(value = "Scenario FAIL screenshot", type = "image/png")
+    protected static byte[] allureSaveScreenshotPNG() {
+        return ((TakesScreenshot) DriverFactory.driver).getScreenshotAs(OutputType.BYTES);
+    }
+
+    //    @Attachment(value = "Scenario FAIL full screenshot", type = "image/png")
+//    public static byte[] allureSaveFullScreenshotPNG() throws IOException {
+//        //THIS DOESN'T LOOK GREAT IN ALLURE -> HOVERER IT CAN MAKE FULL SCREENSHOT OF WEBSITE
+//        BufferedImage screenshot = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(100)).takeScreenshot(DriverFactory.driver).getImage();
+//        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+//        ImageIO.write(screenshot, "PNG", byteArrayOutputStream);
+//        byteArrayOutputStream.flush();
+//        byte[] ss = byteArrayOutputStream.toByteArray();
+//        byteArrayOutputStream.close();
+//        return ss;
+//    }
 }

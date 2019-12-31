@@ -1,19 +1,13 @@
 package com.steps;
 
 import com.DriverFactory;
-import com.TestNGListener;
+import com.listeners.TestNGListener;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
-import org.apache.commons.io.FileUtils;
-import org.apache.commons.lang3.StringUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.testng.ITestListener;
-
-import java.io.File;
-import java.io.IOException;
-import java.nio.file.Paths;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 
 /**
  * Test_Automation-automationpractice
@@ -23,34 +17,41 @@ import java.nio.file.Paths;
 
 public class Hooks extends DriverFactory implements ITestListener {
 
+    /**
+     * For Cucumber -> Feature file
+     **/
     @Before
     public void beforeScenario(Scenario scenario) {
-        logger.info(ANSI_BLUE + StringUtils.repeat("#", 110) + ANSI_RESET);
-        logger.info(ANSI_BLUE + StringUtils.repeat("=", 46) + ANSI_RESET + " BEFORE SCENARIO "
-                + ANSI_BLUE + StringUtils.repeat("=", 47) + ANSI_RESET);
-        logger.info(ANSI_BLUE + StringUtils.repeat("#", 110) + ANSI_RESET);
-        logger.info("SCENARIO NAME: " + scenario.getName().toUpperCase());
+        TestNGListener.onScenarioStart(scenario);
         startBrowser();
     }
 
     @After
-    public void afterScenario(Scenario scenario) throws IOException {
-        logger.info(ANSI_BLUE + StringUtils.repeat("#", 110) + ANSI_RESET);
-        String status = (scenario.isFailed() ? ANSI_RED + "FAILED" + ANSI_RESET : ANSI_GREEN + "SUCCESS" + ANSI_RESET);
-        logger.info(ANSI_BLUE + StringUtils.repeat("=", 35) + ANSI_RESET + " SCENARIO FINISHED WITH " +
-                status + " STATUS " + ANSI_BLUE + StringUtils.repeat("=", 35) + ANSI_RESET);
-        logger.info(ANSI_BLUE + StringUtils.repeat("#", 110) + ANSI_RESET);
-        System.out.println("\n");
+    public void afterScenario(Scenario scenario) {
+        TestNGListener.onScenarioFinish(scenario);
         if (scenario.isFailed()) {
-            byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-            scenario.embed(screenshot, "image/png");
-            File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-            String currentPath = Paths.get(".").toAbsolutePath().normalize().toString();
-            FileUtils.copyFile(scrFile, new File(currentPath + "/screenshots/" + scenario.getName()
-                    + "-" + TODAY_DATE + ".png"));
+//            byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+//            scenario.embed(screenshot, "image/png");
+//            File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+//            String currentPath = Paths.get(".").toAbsolutePath().normalize().toString();
+//            FileUtils.copyFile(scrFile, new File(currentPath + "/screenshots/" + scenario.getName()
+//                    + "-" + TODAY_DATE + ".png"));
             TestNGListener.allureSaveTextLog();
             TestNGListener.allureSaveScreenshotPNG();
         }
+        destroyDriver();
+    }
+
+    /**
+     * For TestNG -> @Test annotation
+     **/
+    @BeforeMethod
+    public void beforeTest() {
+        startBrowser();
+    }
+
+    @AfterMethod
+    public void afterTest() {
         destroyDriver();
     }
 }

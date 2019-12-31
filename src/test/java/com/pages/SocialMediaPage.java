@@ -1,7 +1,6 @@
 package com.pages;
 
 import com.pages.base.BasePage;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -25,8 +24,4 @@ public class SocialMediaPage extends BasePage {
 
     @FindBy(how = How.XPATH, using = "//*[@class=\"google-plus\"]")
     public WebElement googleButton;
-
-    public SocialMediaPage(final WebDriver driver) {
-        super(driver);
-    }
 }

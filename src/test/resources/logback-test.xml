@@ -4,6 +4,8 @@
             <pattern>%d{HH:mm:ss} [%t] %-5level %logger{36} - %msg%n</pattern>
         </encoder>
     </appender>
+    <logger name="net.andreinc.mockneat.utils.file.FileManager" level="OFF"/>
+    <logger name="i.g.bonigarcia.wdm.WebDriverManager" level="OFF"/>
     <root level="INFO">
         <appender-ref ref="STDOUT"/>
     </root>
