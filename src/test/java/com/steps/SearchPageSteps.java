@@ -1,6 +1,6 @@
 package com.steps;
 
-import com.DriverFactory;
+import com.FrameworkEnvironment;
 import com.google.common.collect.Ordering;
 import com.pages.SearchPage;
 import com.pages.base.BasePage;
@@ -10,7 +10,6 @@ import cucumber.api.java.en.When;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import org.testng.annotations.Listeners;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,17 +20,17 @@ import java.util.List;
  * @author kamil.nowocin
  **/
 
-@Listeners({Hooks.class})
-public class SearchPageSteps extends DriverFactory {
+public class SearchPageSteps extends FrameworkEnvironment {
 
-    private BasePage basePage = new BasePage(driver);
-    private SearchPage searchPage = new SearchPage(driver);
+    private BasePage basePage = new BasePage();
+    private SearchPage searchPage = new SearchPage();
 
     @Step("I search for phrase {0}")
     @When("I search for phrase {string}")
     public void iSearchForPhrase(String searchPhrase) throws Throwable {
         //ACT//
         searchPage.searchBoxInput.sendKeys(searchPhrase);
+        logger.info(String.format("Search for: %S", searchPhrase));
 
         //ASSERT//
         Assert.assertEquals(searchPage.searchBoxInput.getAttribute("value").toLowerCase(),
@@ -49,9 +48,14 @@ public class SearchPageSteps extends DriverFactory {
     public void iCanSeeNumbersOfResultsEqualsTo(String expectedResults) throws Throwable {
         //ARRANGE//
         final String howManyResults = searchPage.searchResultsNumber.getText().replaceAll("[^\\d]", "");
+        logger.info(String.format("Found results: %S, expected: %S", howManyResults, expectedResults));
 
         //ASSERT//
         Assert.assertEquals(howManyResults, expectedResults, String.format(RESULTS_ERROR, howManyResults, expectedResults));
+//        //TODO
+//        if(expectedResults.equals("0")){
+//            Assert.assertTrue();
+//        }
     }
 
     @Step("I can see that every results which have been found contains phrase {0}")
@@ -61,7 +65,7 @@ public class SearchPageSteps extends DriverFactory {
         String[] listOfSearchedPhrases = searchPhrase.toLowerCase().split("[\\s]");
 
         //ACT//
-        if (!basePage.isDisplayed(10, searchPage.noResultsWereFoundHeader)) {
+        if (!searchPage.noResultsWereFoundHeader.isDisplayed()) {
             for (WebElement productName : searchPage.productNames) {
                 for (String singlePhrase : listOfSearchedPhrases) {
 
@@ -76,6 +80,7 @@ public class SearchPageSteps extends DriverFactory {
     @Then("I select from Dropdown Sort by {string}")
     public void iSelectFromDropdownSortBy(String sortBy) throws Throwable {
         //ACT//
+        logger.info(String.format("Chosen sort option: %S", sortBy));
         switch (sortBy.toLowerCase()) {
             case "price: lowest first":
                 basePage.selectFromDropdownByValue("price:asc", searchPage.dropdownSortBy);
@@ -92,6 +97,7 @@ public class SearchPageSteps extends DriverFactory {
             default:
                 throw new IllegalStateException(String.format(INPUT_ERROR, sortBy.toUpperCase()));
         }
+
         //ASSERT//
         Assert.assertEquals(searchPage.chosenSortBy.getText().toLowerCase(), sortBy.toLowerCase(), VALUE_ERROR);
     }
@@ -103,6 +109,7 @@ public class SearchPageSteps extends DriverFactory {
         List<String> arrayList = new ArrayList<>();
 
         //ACT//
+        logger.info(String.format("Sorted option: %S", sortedBy));
         switch (sortedBy.toLowerCase()) {
             case "price: lowest first":
                 for (WebElement productPrices : searchPage.productPrices) {

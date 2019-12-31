@@ -1,5 +1,6 @@
 package com.pages.base;
 
+import com.DriverFactory;
 import com.FrameworkEnvironment;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -11,6 +12,8 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.security.SecureRandom;
+import java.util.Arrays;
+import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Random;
 
@@ -22,15 +25,11 @@ import java.util.Random;
 
 public class BasePage extends FrameworkEnvironment {
 
-    private static WebDriver driver;
+    public final WebDriver driver;
 
-    public BasePage(final WebDriver driver) {
-        BasePage.driver = driver;
-        PageFactory.initElements(driver, this);
-    }
-
-    public void openHomePage() {
-        driver.get(HOME_URL);
+    public BasePage() {
+        this.driver = DriverFactory.driver;
+        PageFactory.initElements(this.driver, this);
     }
 
     public void waitForElementToBeClickable(int timeInSeconds, WebElement elementToClick) throws NoSuchElementException, WebDriverException {
@@ -109,6 +108,13 @@ public class BasePage extends FrameworkEnvironment {
     public String errorValidator(WebElement element) {
         waitForElementToBeVisible(10, element);
         return element.getText();
+    }
+
+    public String getRandomElementFromResourceBundleList(String resourceBundle) {
+        List<String> resourceBundleData = Arrays.asList((resourceBundle.split("\\s*, ")));
+        Random random = new Random();
+        return resourceBundleData.get(random.nextInt(resourceBundleData.size()));
+
     }
 
     //This method is just for testing purpose, it shouldn't be used in development environment//

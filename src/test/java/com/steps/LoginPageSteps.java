@@ -1,13 +1,12 @@
 package com.steps;
 
-import com.DriverFactory;
+import com.FrameworkEnvironment;
 import com.pages.LoginPage;
 import com.pages.base.BasePage;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import io.qameta.allure.Step;
 import org.testng.Assert;
-import org.testng.annotations.Listeners;
 
 /**
  * Test_Automation-automationpractice
@@ -15,17 +14,17 @@ import org.testng.annotations.Listeners;
  * @author kamil.nowocin
  **/
 
-@Listeners({Hooks.class})
-public class LoginPageSteps extends DriverFactory {
+public class LoginPageSteps extends FrameworkEnvironment {
 
-    private BasePage basePage = new BasePage(driver);
-    private LoginPage loginPage = new LoginPage(driver);
+    private BasePage basePage = new BasePage();
+    private LoginPage loginPage = new LoginPage();
 
     @Step("I enter login {0}")
     @And("I enter login {string}")
     public void iEnterLogin(String login) throws Throwable {
         //ACT//
         loginPage.emailInput.sendKeys(login);
+        logger.info(String.format("User login: %S", login));
 
         //ASSERT//
         Assert.assertEquals(loginPage.emailInput.getAttribute("value").toLowerCase(),
@@ -37,6 +36,7 @@ public class LoginPageSteps extends DriverFactory {
     public void iEnterPassword(String password) throws Throwable {
         //ACT//
         loginPage.passwordInput.sendKeys(password);
+        logger.info(String.format("User password: %S", password));
 
         //ASSERT//
         Assert.assertEquals(loginPage.passwordInput.getAttribute("value").toLowerCase(),

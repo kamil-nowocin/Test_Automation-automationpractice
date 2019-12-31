@@ -1,7 +1,6 @@
 package com.pages;
 
 import com.pages.base.BasePage;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -28,8 +27,4 @@ public class LoginPage extends BasePage {
 
     @FindBy(how = How.ID, using = "SubmitLogin")
     public WebElement signInButton;
-
-    public LoginPage(final WebDriver driver) {
-        super(driver);
-    }
 }

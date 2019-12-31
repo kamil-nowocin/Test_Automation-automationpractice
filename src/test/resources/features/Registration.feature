@@ -8,12 +8,13 @@ Feature: As a user I would like to register into automationpractice.com
 
   Background: Navigate to Sign Up page
     Given I open home page
+    And I can see automationpractice.com website
     When I click on Sign in button
-    Then I can see create an account page
+    Then I can see registration page form
 
 #--------------------------------------------------------------------------------
-  Scenario: Checking availability of registration page form
-    Given I can see create an account page
+  Scenario: As a user I check availability of registration page form
+    Given I can see registration page form
     When I write an email address
     And I click on Create An Account button
     Then I can see registration page form
@@ -73,8 +74,8 @@ Feature: As a user I would like to register into automationpractice.com
     Then I can see registration error
 
 #--------------------------------------------------------------------------------
-  #This scenario is created as "smart one", you can choose any of required field to be missing.
-  #Simply, just leave one and only one of data section as blank one.
+# This scenario is created as "smart one", you can choose any of required field to be missing.
+# Simply, just leave one and only one of data section as blank one.
   Scenario: As a user I can't create an account, when one of required fields is missing
     Given I can see registration page form
     When I write an email address

@@ -1,7 +1,6 @@
 package com.steps;
 
-import com.DriverFactory;
-import com.github.javafaker.Faker;
+import com.FrameworkEnvironment;
 import com.pages.RegistrationPage;
 import com.pages.base.BasePage;
 import cucumber.api.java.en.And;
@@ -10,9 +9,7 @@ import cucumber.api.java.en.When;
 import io.cucumber.datatable.DataTable;
 import io.qameta.allure.Step;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.commons.lang3.Validate;
 import org.testng.Assert;
-import org.testng.annotations.Listeners;
 
 import java.util.List;
 
@@ -22,11 +19,10 @@ import java.util.List;
  * @author kamil.nowocin
  **/
 
-@Listeners({Hooks.class})
-public class RegistrationPageSteps extends DriverFactory {
+public class RegistrationPageSteps extends FrameworkEnvironment {
 
-    private BasePage basePage = new BasePage(driver);
-    private RegistrationPage registrationPage = new RegistrationPage(driver);
+    private BasePage basePage = new BasePage();
+    private RegistrationPage registrationPage = new RegistrationPage();
 
     @Step("I click on Sign in button")
     @When("I click on Sign in button")
@@ -38,25 +34,27 @@ public class RegistrationPageSteps extends DriverFactory {
     @When("I write an email address")
     public void iWriteAnEmailAddress() throws Throwable {
         //ARRANGE//
-        final String userEmailAddress = tempEmail;
+        final String userValidEmailAddress = tempEmail;
 
         //ACT//
-        registrationPage.emailInput.sendKeys(userEmailAddress);
+        registrationPage.emailInput.sendKeys(userValidEmailAddress);
+        logger.info(String.format("User valid email: %S", userValidEmailAddress));
 
         //ASSERT//
         Assert.assertEquals(registrationPage.emailInput.getAttribute("value").toLowerCase(),
-                userEmailAddress.toLowerCase(), VALUE_ERROR);
+                userValidEmailAddress.toLowerCase(), VALUE_ERROR);
     }
 
     @Step("I write an invalid email address")
     @When("I write an invalid email address")
     public void iWriteAnInvalidEmailAddress() throws Throwable {
         //ARRANGE//
-        final String userInvalidEmailAddress = resourceBundleInvalidEmails.getString
-                ("invalid" + basePage.randomValue(6, 1));
+        final String userInvalidEmailAddress = basePage.getRandomElementFromResourceBundleList
+                (resourceBundleInvalidEmails.getString("invalidEmails"));
 
         //ACT//
         registrationPage.emailInput.sendKeys(userInvalidEmailAddress);
+        logger.info(String.format("User invalid email: %S", userInvalidEmailAddress));
 
         //ASSERT//
         Assert.assertEquals(registrationPage.emailInput.getAttribute("value").toLowerCase(),
@@ -71,6 +69,7 @@ public class RegistrationPageSteps extends DriverFactory {
 
         //ACT//
         registrationPage.emailInput.sendKeys(userRegisteredEmailAddress);
+        logger.info(String.format("User registered email: %S", userRegisteredEmailAddress));
 
         //ASSERT//
         Assert.assertEquals(registrationPage.emailInput.getAttribute("value").toLowerCase(),
@@ -92,64 +91,47 @@ public class RegistrationPageSteps extends DriverFactory {
 
     @Step("I write following data to registration form")
     @And("I write following data to registration form")
-    public void iWriteFollowingDataToRegistrationForm(DataTable dataTable) throws Throwable {
+    public RegistrationPageSteps iWriteFollowingDataToRegistrationForm(DataTable dataTable) throws Throwable {
         //ARRANGE//
         List<List<String>> data = dataTable.asLists();
         //(data.get(Row).get(Column))//
 
-        //ACT//
         registrationPage.firstNameInput.sendKeys(data.get(1).get(0));
-        //ASSERT//
         Assert.assertEquals(registrationPage.firstNameInput.getAttribute("value").toLowerCase(),
                 data.get(1).get(0).toLowerCase(), VALUE_ERROR);
 
-        //ACT//
         registrationPage.lastNameInput.sendKeys(data.get(1).get(1));
-        //ASSERT//
         Assert.assertEquals(registrationPage.lastNameInput.getAttribute("value").toLowerCase(),
                 data.get(1).get(1).toLowerCase(), VALUE_ERROR);
 
-        //ACT//
         registrationPage.passwordInput.sendKeys(data.get(1).get(2));
-        //ASSERT//
         Assert.assertEquals(registrationPage.passwordInput.getAttribute("value").toLowerCase(),
                 data.get(1).get(2).toLowerCase(), VALUE_ERROR);
 
-        //ACT//
         registrationPage.addressInput.sendKeys(data.get(1).get(3));
-        //ASSERT//
         Assert.assertEquals(registrationPage.addressInput.getAttribute("value").toLowerCase(),
                 data.get(1).get(3).toLowerCase(), VALUE_ERROR);
 
-        //ACT//
         registrationPage.cityInput.sendKeys(data.get(1).get(4));
-        //ASSERT//
         Assert.assertEquals(registrationPage.cityInput.getAttribute("value").toLowerCase(),
                 data.get(1).get(4).toLowerCase(), VALUE_ERROR);
 
-        //ACT//
         registrationPage.stateDropDown.sendKeys(data.get(1).get(5));
-        //ASSERT//
         Assert.assertEquals(registrationPage.chosenStateFromDropdown.getText().toLowerCase(),
                 data.get(1).get(5).toLowerCase(), VALUE_ERROR);
 
-        //ACT//
         registrationPage.postalCodeInput.sendKeys(data.get(1).get(6));
-        //ASSERT//
         Assert.assertEquals(registrationPage.postalCodeInput.getAttribute("value").toLowerCase(),
                 data.get(1).get(6).toLowerCase(), VALUE_ERROR);
 
-        //ACT//
         registrationPage.countryDropDown.sendKeys(data.get(1).get(7));
-        //ASSERT//
         Assert.assertEquals(registrationPage.chosenCountryFromDropdown.getText().toLowerCase(),
                 data.get(1).get(7).toLowerCase(), VALUE_ERROR);
 
-        //ACT//
         registrationPage.mobilePhoneInput.sendKeys(data.get(1).get(8));
-        //ASSERT//
         Assert.assertEquals(registrationPage.mobilePhoneInput.getAttribute("value").toLowerCase(),
                 data.get(1).get(8).toLowerCase(), VALUE_ERROR);
+        return this;
     }
 
     @Step("I choose gender")
@@ -161,16 +143,16 @@ public class RegistrationPageSteps extends DriverFactory {
         //ACT//
         if (randomNumber == 1) {
             registrationPage.mrButton.click();
+            logger.info("Chosen gender: Male");
 
             //ASSERT//
             Assert.assertTrue(registrationPage.mrButton.isSelected());
-            logger.info("Chosen gender: Male");
         } else {
             registrationPage.mrsButton.click();
+            logger.info("Chosen gender: Female");
 
             //ASSERT//
             Assert.assertTrue(registrationPage.mrsButton.isSelected());
-            logger.info("Chosen gender: Female");
         }
     }
 
@@ -182,6 +164,7 @@ public class RegistrationPageSteps extends DriverFactory {
 
         //ACT//
         registrationPage.firstNameInput.sendKeys(userFirstName);
+        logger.info(String.format("User first name: %S", userFirstName));
 
         //ASSERT//
         Assert.assertEquals(registrationPage.firstNameInput.getAttribute("value").toLowerCase(),
@@ -196,6 +179,7 @@ public class RegistrationPageSteps extends DriverFactory {
 
         //ACT//
         registrationPage.lastNameInput.sendKeys(userLastName);
+        logger.info(String.format("User last name: %S", userLastName));
 
         //ASSERT//
         Assert.assertEquals(registrationPage.lastNameInput.getAttribute("value").toLowerCase(),
@@ -223,6 +207,7 @@ public class RegistrationPageSteps extends DriverFactory {
 
         //ACT//
         registrationPage.passwordInput.sendKeys(userPassword);
+        logger.info(String.format("User password: %S", userPassword));
 
         //ASSERT//
         Assert.assertEquals(registrationPage.passwordInput.getAttribute("value").toLowerCase(),
@@ -232,9 +217,19 @@ public class RegistrationPageSteps extends DriverFactory {
     @Step("I choose date of birth")
     @And("I choose date of birth")
     public void iChooseDateOfBirth() throws Throwable {
-        registrationPage.selectFromDropdownByIndex(basePage.randomValue(28, 1), registrationPage.dayOfBirth);
-        registrationPage.selectFromDropdownByIndex(basePage.randomValue(12, 1), registrationPage.monthOfBirth);
-        registrationPage.selectFromDropdownByIndex(basePage.randomValue(119, 1), registrationPage.yearOfBirth);
+        //ARRANGE//
+        final int day = basePage.randomValue(28, 1);
+        final int month = basePage.randomValue(12, 1);
+        final int year = basePage.randomValue(2019, 1900);
+
+        //ACT//
+        registrationPage.selectFromDropdownByValue(Integer.toString(day), registrationPage.dayOfBirth);
+        registrationPage.selectFromDropdownByValue(Integer.toString(month), registrationPage.monthOfBirth);
+        registrationPage.selectFromDropdownByValue(Integer.toString(year), registrationPage.yearOfBirth);
+        logger.info(String.format("User birthday: %d-%d-%d ", day, month, year));
+
+        //ASSERT//
+        //{TODO}
     }
 
     @Step("I sign in to receive newsletter and special offers")
@@ -246,24 +241,24 @@ public class RegistrationPageSteps extends DriverFactory {
         //ACT//
         if (tempRandomValue == 1) {
             registrationPage.newsletterCheckbox.click();
+            logger.info("Signed to receive newsletter");
 
             //ASSERT//
             Assert.assertTrue(registrationPage.newsletterCheckbox.isSelected());
-            logger.info("Signed to receive newsletter");
         } else if (tempRandomValue == 2) {
             registrationPage.specialOffersCheckbox.click();
+            logger.info("Signed to receive special offers");
 
             //ASSERT//
             Assert.assertTrue(registrationPage.specialOffersCheckbox.isSelected());
-            logger.info("Signed to receive special offers");
         } else {
             registrationPage.newsletterCheckbox.click();
             registrationPage.specialOffersCheckbox.click();
+            logger.info("Signed to newsletter & special offers");
 
             //ASSERT//
             Assert.assertTrue(registrationPage.newsletterCheckbox.isSelected() &&
                     registrationPage.specialOffersCheckbox.isSelected());
-            logger.info("Signed to newsletter & special offers");
         }
     }
 
@@ -284,6 +279,7 @@ public class RegistrationPageSteps extends DriverFactory {
 
         //ACT//
         registrationPage.companyInput.sendKeys(companyName);
+        logger.info(String.format("Company name: %S", companyName));
 
         //ASSERT//
         Assert.assertEquals(registrationPage.companyInput.getAttribute("value").toLowerCase(),
@@ -300,6 +296,7 @@ public class RegistrationPageSteps extends DriverFactory {
         //ACT//
         registrationPage.addressInput.sendKeys(userAddress);
         registrationPage.addressSecondInput.sendKeys(userSecondAddress);
+        logger.info(String.format("User address: %S and %S", userAddress, userSecondAddress));
 
         //ASSERT//
         Assert.assertEquals(registrationPage.addressInput.getAttribute("value").toLowerCase(),
@@ -316,6 +313,7 @@ public class RegistrationPageSteps extends DriverFactory {
 
         //ACT//
         registrationPage.addressInput.sendKeys(userAddress);
+        logger.info(String.format("User address: %S", userAddress));
 
         //ASSERT//
         Assert.assertEquals(registrationPage.addressInput.getAttribute("value").toLowerCase(),
@@ -327,6 +325,7 @@ public class RegistrationPageSteps extends DriverFactory {
     public void iChooseCountry(String country) throws Throwable {
         //ACT//
         basePage.selectFromDropdownByText(country, registrationPage.countryDropDown);
+        logger.info(String.format("Chosen country: %S", country));
 
         //ASSERT//
         Assert.assertEquals(registrationPage.chosenCountryFromDropdown.getText().toLowerCase(),
@@ -341,6 +340,7 @@ public class RegistrationPageSteps extends DriverFactory {
 
         //ACT//
         registrationPage.cityInput.sendKeys(userCity);
+        logger.info(String.format("City name: %S", userCity));
 
         //ASSERT//
         Assert.assertEquals(registrationPage.cityInput.getAttribute("value").toLowerCase(),
@@ -355,6 +355,7 @@ public class RegistrationPageSteps extends DriverFactory {
 
         //ACT
         registrationPage.selectFromDropdownByText(userState, registrationPage.stateDropDown);
+        logger.info(String.format("State name: %S", userState));
 
         //ASSERT//
         Assert.assertEquals(registrationPage.chosenStateFromDropdown.getText().toLowerCase(),
@@ -369,6 +370,7 @@ public class RegistrationPageSteps extends DriverFactory {
 
         //ACT//
         registrationPage.postalCodeInput.sendKeys(userPostalCode);
+        logger.info(String.format("Postal code: %S", userPostalCode));
 
         //ASSERT//
         Assert.assertEquals(registrationPage.postalCodeInput.getAttribute("value").toLowerCase(),
@@ -383,6 +385,7 @@ public class RegistrationPageSteps extends DriverFactory {
 
         //ACT//
         registrationPage.additionalInformationBox.sendKeys(userAdditionalInformation);
+        logger.info(String.format("Additional information: %S", userAdditionalInformation));
 
         //ASSERT//
         Assert.assertEquals(registrationPage.additionalInformationBox.getAttribute("value").toLowerCase(),
@@ -397,6 +400,7 @@ public class RegistrationPageSteps extends DriverFactory {
 
         //ACT//
         registrationPage.homePhoneInput.sendKeys(userPhoneNumber);
+        logger.info(String.format("User phone number: %S", userPhoneNumber));
 
         //ASSERT//
         Assert.assertEquals(registrationPage.homePhoneInput.getAttribute("value").toLowerCase(),
@@ -411,6 +415,7 @@ public class RegistrationPageSteps extends DriverFactory {
 
         //ACT//
         registrationPage.mobilePhoneInput.sendKeys(userMobilePhone);
+        logger.info(String.format("User mobile phone number: %S", userMobilePhone));
 
         //ARRANGE//
         Assert.assertEquals(registrationPage.mobilePhoneInput.getAttribute("value").toLowerCase(),
@@ -426,6 +431,7 @@ public class RegistrationPageSteps extends DriverFactory {
         //ACT//
         registrationPage.addressAliasInput.clear();
         registrationPage.addressAliasInput.sendKeys(userAddressAlias);
+        logger.info(String.format("User alias: %S", userAddressAlias));
 
         //ASSERT//
         Assert.assertEquals(registrationPage.addressAliasInput.getAttribute("value").toLowerCase(),
@@ -464,13 +470,6 @@ public class RegistrationPageSteps extends DriverFactory {
     public void iCanSeeRegistrationError() throws Throwable {
         Assert.assertTrue(basePage.isDisplayed(10, registrationPage.registerError),
                 String.format(VIEW_ERROR, "registration error"));
-    }
-
-    @Step("I can see create an account page")
-    @Then("I can see create an account page")
-    public void iCanSeeCreateAnAccountPage() throws Throwable {
-        Assert.assertTrue(basePage.isDisplayed(10, registrationPage.createAccountBox),
-                String.format(VIEW_ERROR, "create an account page"));
     }
 
     @Step("I can see warning message about missing {0} input")

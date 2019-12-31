@@ -1,6 +1,6 @@
 package com.steps;
 
-import com.DriverFactory;
+import com.FrameworkEnvironment;
 import com.pages.CustomerServicePage;
 import com.pages.base.BasePage;
 import cucumber.api.java.en.And;
@@ -9,7 +9,6 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import io.qameta.allure.Step;
 import org.testng.Assert;
-import org.testng.annotations.Listeners;
 
 import java.io.File;
 import java.nio.file.Paths;
@@ -20,11 +19,10 @@ import java.nio.file.Paths;
  * @author kamil.nowocin
  **/
 
-@Listeners({Hooks.class})
-public class CustomerServicePageSteps extends DriverFactory {
+public class CustomerServicePageSteps extends FrameworkEnvironment {
 
-    private BasePage basePage = new BasePage(driver);
-    private CustomerServicePage customerServicePage = new CustomerServicePage(driver);
+    private BasePage basePage = new BasePage();
+    private CustomerServicePage customerServicePage = new CustomerServicePage();
 
     @Step("I click on Contact Us button")
     @When("I click on Contact Us button")
@@ -54,6 +52,7 @@ public class CustomerServicePageSteps extends DriverFactory {
 
         //ACT//
         basePage.selectFromDropdownByText(subjectHeading, customerServicePage.subjectHeadingDropdown);
+        logger.info(String.format("Chosen subject: %S", subjectHeading));
 
         //ASSERT//
         Assert.assertEquals(customerServicePage.chosenSubjectHeadingFromDropdown.getText().toLowerCase(),
@@ -64,29 +63,32 @@ public class CustomerServicePageSteps extends DriverFactory {
     @And("I write an email address in contact us page")
     public void iWriteAnEmailAddressInContactUsPage() throws Throwable {
         //ARRANGE//
-        final String userEmailAddress = mockNeat.emails().val();
+        final String userValidEmailAddress = mockNeat.emails().val();
 
         //ACT//
-        customerServicePage.emailAddressInput.sendKeys(userEmailAddress);
+        customerServicePage.emailAddressInput.sendKeys(userValidEmailAddress);
+        logger.info(String.format("User valid email: %S", userValidEmailAddress));
 
         //ASSERT//
         Assert.assertEquals(customerServicePage.emailAddressInput.getAttribute("value").toLowerCase(),
-                userEmailAddress.toLowerCase(), VALUE_ERROR);
+                userValidEmailAddress.toLowerCase(), VALUE_ERROR);
     }
 
     @Step("I write an invalid email address in contact us page")
     @And("I write an invalid email address in contact us page")
     public void iWriteAnInvalidEmailAddressInContactUsPage() throws Throwable {
         //ARRANGE//
-        final String userEmailAddress = resourceBundleInvalidEmails.getString
-                ("invalid" + basePage.randomValue(6, 1));
+        final String userInvalidEmailAddress = basePage.getRandomElementFromResourceBundleList
+                (resourceBundleInvalidEmails.getString("invalidEmails"));
+
 
         //ACT//
-        customerServicePage.emailAddressInput.sendKeys(userEmailAddress);
+        customerServicePage.emailAddressInput.sendKeys(userInvalidEmailAddress);
+        logger.info(String.format("User invalid email: %S", userInvalidEmailAddress));
 
-        //ARRANGE//
+        //ASSERT//
         Assert.assertEquals(customerServicePage.emailAddressInput.getAttribute("value").toLowerCase(),
-                userEmailAddress.toLowerCase(), VALUE_ERROR);
+                userInvalidEmailAddress.toLowerCase(), VALUE_ERROR);
     }
 
     @Step("I write order reference")
@@ -97,6 +99,7 @@ public class CustomerServicePageSteps extends DriverFactory {
 
         //ACT//
         customerServicePage.orderReferenceInput.sendKeys(orderReference);
+        logger.info(String.format("Order reference: %S", orderReference));
 
         //ASSERT//
         Assert.assertEquals(customerServicePage.orderReferenceInput.getAttribute("value").toLowerCase(),
@@ -111,6 +114,7 @@ public class CustomerServicePageSteps extends DriverFactory {
 
         //ACT//
         customerServicePage.messageTextArea.sendKeys(message);
+        logger.info(String.format("Message: %S", message));
 
         //ASSERT//
         Assert.assertEquals(customerServicePage.messageTextArea.getAttribute("value").toLowerCase(),

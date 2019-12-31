@@ -69,6 +69,10 @@ task runTests() {
 }
 
 test {
+    ignoreFailures = true
     useTestNG()
+            {
+                suites "src/test/resources/TestNG.xml"
+            }
     systemProperties System.properties
 }

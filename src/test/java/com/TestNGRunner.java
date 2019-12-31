@@ -5,7 +5,10 @@ import io.cucumber.testng.CucumberOptions;
 import io.cucumber.testng.PickleEventWrapper;
 import io.cucumber.testng.TestNGCucumberRunner;
 import io.qameta.allure.Description;
-import org.testng.annotations.*;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
 
 /**
  * Test_Automation-automationpractice
@@ -13,7 +16,6 @@ import org.testng.annotations.*;
  * @author kamil.nowocin
  **/
 
-@Listeners({TestNGListener.class})
 @CucumberOptions(
         tags = "not @ignore",
         features = {
