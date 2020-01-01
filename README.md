@@ -31,7 +31,7 @@ You can add some environment settings, before you run tests with this command, e
    - `-Dselenium.host="YOUR_HOST_NAME"` -> available hosts: Chrome, Firefox, Opera, Safari, Edge, Browserstack
    - `-Dbrowser="YOUR_BROWSER_NAME"` -> available browsers: Chrome, Firefox, IE
 5. Create your own runner :hammer_and_wrench:
-## Author
-**Kamil Nowocin** - *Initial work* - [Kamil Nowocin](https://github.com/kamil-nowocin)
+## Authors
+- **Kamil Nowocin** - *Initial work* - [Kamil Nowocin](https://github.com/kamil-nowocin)
 ## License
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
