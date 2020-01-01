@@ -32,7 +32,7 @@ public class DriverFactory extends FrameworkEnvironment {
         if (getBrowser == null) {
             getBrowser = System.getenv("browser");
             if (getBrowser == null) {
-                getBrowser = DEFAULT_BROWSER;
+                getBrowser = BROWSER;
             }
         }
         return getBrowser;

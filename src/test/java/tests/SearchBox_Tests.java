@@ -17,7 +17,7 @@ import org.testng.annotations.Test;
 @Epic("Regression Tests")
 @Feature("SEARCHBOX TESTS")
 @Listeners({TestNGListener.class})
-public class SearchBoxTests extends Hooks {
+public class SearchBox_Tests extends Hooks {
 
     @Owner("Kamil Nowocin")
     @Test(priority = 0,

@@ -17,7 +17,7 @@ import org.testng.annotations.Test;
 @Epic("Regression Tests")
 @Feature("CUSTOMER SERVICE TESTS")
 @Listeners({TestNGListener.class})
-public class CustomerServiceTests extends Hooks {
+public class CustomerService_Tests extends Hooks {
 
     @Owner("Kamil Nowocin")
     @Test(priority = 0,

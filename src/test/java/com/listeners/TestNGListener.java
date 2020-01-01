@@ -24,7 +24,7 @@ public class TestNGListener extends FrameworkEnvironment implements ITestListene
     }
 
     @Override
-    public void onStart(ITestContext iTestContext) {
+    public synchronized void onStart(ITestContext iTestContext) {
         logger.info(StringUtils.repeat("#", 110));
         logger.info(StringUtils.repeat("=", 31)
                 + "STARTING TEST SUITE " + iTestContext.getStartDate() + StringUtils.repeat("=", 31));
@@ -33,7 +33,7 @@ public class TestNGListener extends FrameworkEnvironment implements ITestListene
     }
 
     @Override
-    public void onFinish(ITestContext iTestContext) {
+    public synchronized void onFinish(ITestContext iTestContext) {
         System.out.println();
         logger.info(StringUtils.repeat("#", 110));
         logger.info(StringUtils.repeat("=", 32)
@@ -44,24 +44,24 @@ public class TestNGListener extends FrameworkEnvironment implements ITestListene
     }
 
     @Override
-    public void onTestStart(ITestResult iTestResult) {
+    public synchronized void onTestStart(ITestResult iTestResult) {
         logger.info(StringUtils.repeat("=", 48) + " TEST STARTED "
                 + StringUtils.repeat("=", 48));
         logger.info(ANSI_BLUE + "TEST NAME: " + getTestName(iTestResult).toUpperCase() + ANSI_RESET);
     }
 
     @Override
-    public void onTestSuccess(ITestResult iTestResult) {
+    public synchronized void onTestSuccess(ITestResult iTestResult) {
         logger.info(String.format("Chosen executor: %S", DriverFactory.getHost()));
         logger.info(StringUtils.repeat("=", 37) + " TEST FINISHED WITH "
                 + ANSI_GREEN + "SUCCESS STATUS " + ANSI_RESET + StringUtils.repeat("=", 38));
     }
 
     @Override
-    public void onTestFailure(ITestResult iTestResult) {
+    public synchronized void onTestFailure(ITestResult iTestResult) {
         logger.info(String.format("Chosen executor: %S", DriverFactory.getHost()));
         logger.info(StringUtils.repeat("=", 38) + " TEST FINISHED WITH "
-                + ANSI_RED + "FAILED STATUS " + ANSI_RESET + StringUtils.repeat("=", 38));
+                + ANSI_RED + "FAILED STATUS testng annotation" + ANSI_RESET + StringUtils.repeat("=", 38));
         allureSaveScreenshotPNG();
         allureSaveTextLog();
     }

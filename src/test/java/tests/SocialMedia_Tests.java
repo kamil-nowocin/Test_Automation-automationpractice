@@ -17,7 +17,7 @@ import org.testng.annotations.Test;
 @Epic("Regression Tests")
 @Feature("SOCIAL MEDIA TESTS")
 @Listeners({TestNGListener.class})
-public class SocialMediaTests extends Hooks {
+public class SocialMedia_Tests extends Hooks {
 
     @Owner("Kamil Nowocin")
     @Test(description = "I click on social media FACEBOOK logo",
