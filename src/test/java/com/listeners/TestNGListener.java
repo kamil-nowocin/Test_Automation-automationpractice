@@ -61,7 +61,7 @@ public class TestNGListener extends FrameworkEnvironment implements ITestListene
     public synchronized void onTestFailure(ITestResult iTestResult) {
         logger.info(String.format("Chosen executor: %S", DriverFactory.getHost()));
         logger.info(StringUtils.repeat("=", 38) + " TEST FINISHED WITH "
-                + ANSI_RED + "FAILED STATUS testng annotation" + ANSI_RESET + StringUtils.repeat("=", 38));
+                + ANSI_RED + "FAILED STATUS " + ANSI_RESET + StringUtils.repeat("=", 38));
         allureSaveScreenshotPNG();
         allureSaveTextLog();
     }
