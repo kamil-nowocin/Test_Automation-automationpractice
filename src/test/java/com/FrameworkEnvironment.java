@@ -45,7 +45,6 @@ public class FrameworkEnvironment {
     protected static final String ANSI_BLUE = "\u001b[34m";
     protected static final String ANSI_GREEN = "\u001B[32m";
     protected static final String EXECUTOR = "GRADLE";
-    protected static final String DEFAULT_BROWSER = "chrome";
     protected static final String HOME_URL = "http://automationpractice.com/index.php";
     protected static final String TODAY_DATE = new SimpleDateFormat("yyyy-MM-dd HH:ss").format(new Date());
 
@@ -84,7 +83,7 @@ public class FrameworkEnvironment {
             ("travis.osName", "Build was made on localhost");//DON'T KNOW HOW TO SET OS TYPE WHEN BUILD RUNS ON LOCAL MACHINE OR ONLINE
     private static final String JAVA_VERSION = System.getProperty
             ("travis.jdkVersion", "Build was made on localhost");//DOESN'T WORK, IDK WHY
-    private static final String BROWSER = System.getProperty
+    static final String BROWSER = System.getProperty
             ("browser", "Chrome");
     static final String HOST = System.getProperty
             ("selenium.host", "Chrome");
