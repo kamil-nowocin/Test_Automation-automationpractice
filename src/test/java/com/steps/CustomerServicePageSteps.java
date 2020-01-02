@@ -134,6 +134,8 @@ public class CustomerServicePageSteps extends FrameworkEnvironment {
                 + "test"
                 + File.separator
                 + "resources"
+                + File.separator
+                + "files"
                 + File.separator;
         path += fileName;
 

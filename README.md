@@ -25,13 +25,15 @@ After each build tests results are automatically generated to [kamil-nowocin.git
 There are multiple ways to run tests from this build. It all depends on what you want to do.
 1. Right click on `.feature` file, and Run -> This will run `.feature` file on default settings
 2. Right click on `TestNGRunner` file, and Run -> This will run all `.feature` files on default settings
-3. In terminal type `./gradlew runTests {run with tags TBA}` -> This will run all `.feature` files which provided tag
-4. In terminal type `./gradlew test` -> This will run all tests from tests package.`(src/test/java/tests)`  
+   - <sub><sup>This is highly unrecommended option since it's experimental file and doesn't work well, check build.gradle for more informations</sup></sub>
+3. In terminal type `./gradlew runTests` -> Thiws will run all `.feature` files
+4. In terminal type `./gradlew runTests {run with tags TBA}` -> This will run all `.feature` files which provided tag
+5. In terminal type `./gradlew test` -> This will run all tests from tests package.`(src/test/java/tests)`  
 You can add some environment settings, before you run tests with this command, e.g.
    - `-Dselenium.host="YOUR_HOST_NAME"` -> available hosts: Chrome, Firefox, Opera, Safari, Edge, Browserstack
    - `-Dbrowser="YOUR_BROWSER_NAME"` -> available browsers: Chrome, Firefox, IE
-5. Create your own runner :hammer_and_wrench:
+6. Create your own runner :hammer_and_wrench:
 ## AUTHORS
 - **Kamil Nowocin** - *Initial work* - [Kamil Nowocin](https://github.com/kamil-nowocin)
 ## LICENSE
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details

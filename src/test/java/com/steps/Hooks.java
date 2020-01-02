@@ -9,6 +9,8 @@ import org.testng.ITestListener;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
+import java.io.IOException;
+
 /**
  * Test_Automation-automationpractice
  *
@@ -16,31 +18,6 @@ import org.testng.annotations.BeforeMethod;
  **/
 
 public class Hooks extends DriverFactory implements ITestListener {
-
-    /**
-     * For Cucumber -> Feature file
-     **/
-    @Before
-    public void beforeScenario(Scenario scenario) {
-        TestNGListener.onScenarioStart(scenario);
-        startBrowser();
-    }
-
-    @After
-    public void afterScenario(Scenario scenario) {
-        TestNGListener.onScenarioFinish(scenario);
-        if (scenario.isFailed()) {
-//            byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-//            scenario.embed(screenshot, "image/png");
-//            File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-//            String currentPath = Paths.get(".").toAbsolutePath().normalize().toString();
-//            FileUtils.copyFile(scrFile, new File(currentPath + "/screenshots/" + scenario.getName()
-//                    + "-" + TODAY_DATE + ".png"));
-            TestNGListener.allureSaveTextLog();
-            TestNGListener.allureSaveScreenshotPNG();
-        }
-        destroyDriver();
-    }
 
     /**
      * For TestNG -> @Test annotation
@@ -52,6 +29,27 @@ public class Hooks extends DriverFactory implements ITestListener {
 
     @AfterMethod
     public void afterTest() {
+        destroyDriver();
+    }
+
+    /**
+     * For Cucumber -> Feature file
+     **/
+    @Before
+    public void beforeScenario(Scenario scenario) {
+        TestNGListener.onScenarioStart(scenario);
+        startBrowser();
+    }
+
+    @After
+    public void afterScenario(Scenario scenario) throws IOException {
+        TestNGListener.onScenarioFinish(scenario);
+        if (scenario.isFailed()) {
+            localSaveScreenshotPNG(scenario);
+            allureSaveScreenshotPNG();
+            allureSaveTextLog();
+
+        }
         destroyDriver();
     }
 }

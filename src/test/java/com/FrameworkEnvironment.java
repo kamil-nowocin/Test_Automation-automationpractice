@@ -2,17 +2,21 @@ package com;
 
 import com.github.javafaker.Faker;
 import com.steps.Hooks;
+import cucumber.api.Scenario;
 import io.qameta.allure.Attachment;
 import net.andreinc.mockneat.MockNeat;
+import org.apache.commons.io.FileUtils;
 import org.json.JSONObject;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.io.File;
 import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
@@ -131,7 +135,18 @@ public class FrameworkEnvironment {
         return ((TakesScreenshot) DriverFactory.driver).getScreenshotAs(OutputType.BYTES);
     }
 
-    //    @Attachment(value = "Scenario FAIL full screenshot", type = "image/png")
+    @Attachment(value = "Scenario FAIL screenshot", type = "image/png")
+    protected static byte[] localSaveScreenshotPNG(Scenario scenario) throws IOException {
+        byte[] screenshot = ((TakesScreenshot) DriverFactory.driver).getScreenshotAs(OutputType.BYTES);
+        scenario.embed(screenshot, "image/png");
+        File scrFile = ((TakesScreenshot) DriverFactory.driver).getScreenshotAs(OutputType.FILE);
+        String currentPath = Paths.get(".").toAbsolutePath().normalize().toString();
+        FileUtils.copyFile(scrFile, new File(currentPath + "/screenshots/" + scenario.getName()
+                + "-" + TODAY_DATE + ".png"));
+        return screenshot;
+    }
+
+//    @Attachment(value = "Scenario FAIL full screenshot", type = "image/png")
 //    public static byte[] allureSaveFullScreenshotPNG() throws IOException {
 //        //THIS DOESN'T LOOK GREAT IN ALLURE -> HOVERER IT CAN MAKE FULL SCREENSHOT OF WEBSITE
 //        BufferedImage screenshot = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(100)).takeScreenshot(DriverFactory.driver).getImage();

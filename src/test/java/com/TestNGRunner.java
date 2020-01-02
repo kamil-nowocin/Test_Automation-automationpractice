@@ -26,7 +26,8 @@ import org.testng.annotations.Test;
                 "json:target/reports/cucumber.json",
         }
 )
-
+//This is experimental file and doesn't work well when using current settings.
+//If you would like to use TestNGRunner for running feature files, you have to edit build.gradle file.
 public class TestNGRunner {
     private TestNGCucumberRunner testNGCucumberRunner;
 
