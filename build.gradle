@@ -52,6 +52,7 @@ configurations {
     }
 }
 
+//For Cucumber .feature files
 task runTests() {
     dependsOn assemble, compileTestJava
     doLast {
@@ -68,11 +69,25 @@ task runTests() {
     }
 }
 
+//For TestNG.xml files
+//If u want to use TestNGRunner you have to disable all suites
 test {
     ignoreFailures = true
     useTestNG()
             {
-                suites "src/test/resources/TestNG.xml"
+                suites "src/test/resources/XML Runners/TestNG-WEB.xml"
+                suites "src/test/resources/XML Runners/TestNG-API.xml"
             }
     systemProperties System.properties
+}
+
+//Experimental runner
+task exper(type: JavaExec, dependsOn: 'classes') {
+    main = 'org.testng.TestNG'
+    classpath = files("./src/test/resources",
+            project.sourceSets.main.compileClasspath,
+            project.sourceSets.test.compileClasspath,
+            project.sourceSets.main.runtimeClasspath,
+            project.sourceSets.test.runtimeClasspath)
+    args = ["./src/test/resources/TestNG-WEB.xml", "./src/test/resources/TestNG-API.xml"]
 }

@@ -17,7 +17,7 @@ import org.testng.ITestResult;
 public class TestNGListener extends FrameworkEnvironment implements ITestListener {
 
     /**
-     * For TestNG
+     * For TestNG tests
      */
     private static String getTestName(ITestResult iTestResult) {
         return iTestResult.getMethod().getDescription();
@@ -67,7 +67,7 @@ public class TestNGListener extends FrameworkEnvironment implements ITestListene
     }
 
     /**
-     * For Cucumber
+     * For Cucumber tests
      **/
     public static void onScenarioStart(Scenario scenario) {
         logger.info(StringUtils.repeat("#", 110));
@@ -84,7 +84,7 @@ public class TestNGListener extends FrameworkEnvironment implements ITestListene
         String status = (scenario.isFailed() ? ANSI_RED + "FAILED STATUS " + ANSI_RESET : ANSI_GREEN + "SUCCESS STATUS " + ANSI_RESET);
         logger.info(StringUtils.repeat("#", 110));
         logger.info(StringUtils.repeat("=", 36)
-                + " SCENARIO FINISHED WITH " + status + StringUtils.repeat("=", 36));
+                + " SCENARIO FINISHED WITH " + status + StringUtils.repeat("=", 35));
         logger.info(StringUtils.repeat("#", 110));
     }
 }
