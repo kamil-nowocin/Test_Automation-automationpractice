@@ -52,7 +52,7 @@ public class LoginPageSteps extends FrameworkEnvironment {
     @Step("I can see login form")
     @Then("I can see login form")
     public void iCanSeeLoginForm() throws Throwable {
-        Assert.assertTrue(basePage.isDisplayed(10, loginPage.loginForm),
+        Assert.assertTrue(basePage.isDisplayed(5, loginPage.loginForm),
                 String.format(VIEW_ERROR, "Login form"));
     }
 

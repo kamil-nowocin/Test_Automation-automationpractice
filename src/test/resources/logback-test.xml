@@ -1,12 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <configuration>
-    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <property name="LOG_PATH" value="logs"/>
+    <property name="LOG_ARCHIVE" value="${LOG_PATH}/archive"/>
+    <timestamp key="timestamp-by-second" datePattern="yyyyMMdd'T'HHmmss"/>
+
+    <!--LOGGER FOR CONSOLE-->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>INFO</level>
+        </filter>
         <encoder>
             <pattern>%d{HH:mm:ss} [%t] %-5level %logger{36} - %msg%n</pattern>
         </encoder>
     </appender>
     <logger name="net.andreinc.mockneat.utils.file.FileManager" level="OFF"/>
     <logger name="i.g.bonigarcia.wdm.WebDriverManager" level="OFF"/>
-    <root level="INFO">
-        <appender-ref ref="STDOUT"/>
+
+    <!--LOGGER FOR .LOG FILE-->
+    <appender name="SIFT" class="ch.qos.logback.classic.sift.SiftingAppender">
+        <discriminator>
+            <key>testid</key>
+            <defaultValue>unknown</defaultValue>
+        </discriminator>
+        <sift>
+            <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+                <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+                    <level>ALL</level>
+                    <onMatch>ACCEPT</onMatch>
+                </filter>
+                <file>${LOG_PATH}/${testid}-logfile-${timestamp-by-second}.log</file>
+                <encoder>
+                    <pattern>%d{HH:mm:ss} %-5level %logger{36} - %msg%n</pattern>
+                    <outputPatternAsHeader>true</outputPatternAsHeader>
+                </encoder>
+            </appender>
+        </sift>
+    </appender>
+
+    <root level="ALL">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="SIFT"/>
     </root>
 </configuration>

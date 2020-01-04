@@ -1,6 +1,6 @@
 package tests;
 
-import com.listeners.TestNGListener;
+import com.listeners.TestNGListener_WEB;
 import com.steps.BasePageSteps;
 import com.steps.Hooks;
 import com.steps.SocialMediaPageSteps;
@@ -16,7 +16,7 @@ import org.testng.annotations.Test;
 
 @Epic("Regression Tests")
 @Feature("SOCIAL MEDIA TESTS")
-@Listeners({TestNGListener.class})
+@Listeners({TestNGListener_WEB.class})
 public class SocialMedia_Tests extends Hooks {
 
     @Owner("Kamil Nowocin")
@@ -37,6 +37,8 @@ public class SocialMedia_Tests extends Hooks {
         basePageSteps.iCanSeeAutomationpracticeComWebsite();
         mediaPageSteps.iScrollTheWebsiteUntilICanSeeLogo("facebook");
         mediaPageSteps.iClickOnLogoButton("facebook");
+
+        //ASSERT//
         mediaPageSteps.iAmRedirectedToSeleniumProfile("facebook");
     }
 
@@ -49,6 +51,7 @@ public class SocialMedia_Tests extends Hooks {
     @Issue("TAP-040")
     @Story("POSITIVE FLOW")
     public void test_2() throws Throwable {
+        //ARRANGE//
         final BasePageSteps basePageSteps = new BasePageSteps();
         final SocialMediaPageSteps mediaPageSteps = new SocialMediaPageSteps();
 
@@ -57,6 +60,8 @@ public class SocialMedia_Tests extends Hooks {
         basePageSteps.iCanSeeAutomationpracticeComWebsite();
         mediaPageSteps.iScrollTheWebsiteUntilICanSeeLogo("twitter");
         mediaPageSteps.iClickOnLogoButton("twitter");
+
+        //ASSERT//
         mediaPageSteps.iAmRedirectedToSeleniumProfile("twitter");
     }
 
@@ -78,6 +83,8 @@ public class SocialMedia_Tests extends Hooks {
         basePageSteps.iCanSeeAutomationpracticeComWebsite();
         mediaPageSteps.iScrollTheWebsiteUntilICanSeeLogo("youtube");
         mediaPageSteps.iClickOnLogoButton("youtube");
+
+        //ASSERT//
         mediaPageSteps.iAmRedirectedToSeleniumProfile("youtube");
     }
 
@@ -99,6 +106,8 @@ public class SocialMedia_Tests extends Hooks {
         basePageSteps.iCanSeeAutomationpracticeComWebsite();
         mediaPageSteps.iScrollTheWebsiteUntilICanSeeLogo("google");
         mediaPageSteps.iClickOnLogoButton("google");
+
+        //ASSERT//
         mediaPageSteps.iAmRedirectedToSeleniumProfile("google");
     }
 }

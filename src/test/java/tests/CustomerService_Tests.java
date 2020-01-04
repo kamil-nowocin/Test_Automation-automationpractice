@@ -1,6 +1,6 @@
 package tests;
 
-import com.listeners.TestNGListener;
+import com.listeners.TestNGListener_WEB;
 import com.steps.BasePageSteps;
 import com.steps.CustomerServicePageSteps;
 import com.steps.Hooks;
@@ -16,7 +16,7 @@ import org.testng.annotations.Test;
 
 @Epic("Regression Tests")
 @Feature("CUSTOMER SERVICE TESTS")
-@Listeners({TestNGListener.class})
+@Listeners({TestNGListener_WEB.class})
 public class CustomerService_Tests extends Hooks {
 
     @Owner("Kamil Nowocin")
@@ -43,6 +43,8 @@ public class CustomerService_Tests extends Hooks {
         customerServicePageSteps.iWriteOrderReference();
         customerServicePageSteps.iWriteMessage();
         customerServicePageSteps.iClickSendButton();
+
+        //ASSERT//
         customerServicePageSteps.iCanSeeSuccessMessage("Your message has been successfully sent to our team.");
     }
 
@@ -69,6 +71,8 @@ public class CustomerService_Tests extends Hooks {
         customerServicePageSteps.iWriteAnEmailAddressInContactUsPage();
         customerServicePageSteps.iWriteMessage();
         customerServicePageSteps.iClickSendButton();
+
+        //ASSERT//
         customerServicePageSteps.iCanSeeSuccessMessage("Your message has been successfully sent to our team.");
     }
 
@@ -97,6 +101,8 @@ public class CustomerService_Tests extends Hooks {
         customerServicePageSteps.iChooseFileToAttach();
         customerServicePageSteps.iWriteMessage();
         customerServicePageSteps.iClickSendButton();
+
+        //ASSERT//
         customerServicePageSteps.iCanSeeSuccessMessage("Your message has been successfully sent to our team.");
     }
 
@@ -125,6 +131,8 @@ public class CustomerService_Tests extends Hooks {
         customerServicePageSteps.iChooseFileToAttach();
         customerServicePageSteps.iWriteMessage();
         customerServicePageSteps.iClickSendButton();
+
+        //ASSERT//
         customerServicePageSteps.iCanSeeErrorMessage("Invalid email address.");
     }
 
@@ -153,6 +161,8 @@ public class CustomerService_Tests extends Hooks {
         customerServicePageSteps.iChooseFileToAttach();
         customerServicePageSteps.iWriteMessage();
         customerServicePageSteps.iClickSendButton();
+
+        //ASSERT//
         customerServicePageSteps.iCanSeeErrorMessage("Please select a subject from the list provided.");
     }
 
@@ -181,6 +191,8 @@ public class CustomerService_Tests extends Hooks {
         customerServicePageSteps.iChooseFileToAttach();
         customerServicePageSteps.iWriteMessage();
         customerServicePageSteps.iClickSendButton();
+
+        //ASSERT//
         customerServicePageSteps.iCanSeeErrorMessage("Invalid email address.");
     }
 
@@ -209,6 +221,8 @@ public class CustomerService_Tests extends Hooks {
         customerServicePageSteps.iChooseFileToAttach();
         customerServicePageSteps.iDonTWriteMessage();
         customerServicePageSteps.iClickSendButton();
+
+        //ASSERT//
         customerServicePageSteps.iCanSeeErrorMessage("The message cannot be blank.");
     }
 
@@ -232,6 +246,8 @@ public class CustomerService_Tests extends Hooks {
         customerServicePageSteps.iCanSeeContactUsForm();
         customerServicePageSteps.iAmOnCustomerServiceContactUsPageForm();
         customerServicePageSteps.iClickSendButton();
+
+        //ASSERT//
         customerServicePageSteps.iCanSeeErrorMessage("Invalid email address.");
     }
 }

@@ -20,27 +20,29 @@ repositories {
 }
 
 dependencies {
-    //https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
+    // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
     compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
-    //https://mvnrepository.com/artifact/org.testng/testng
+    // https://mvnrepository.com/artifact/org.testng/testng
     testCompile group: 'org.testng', name: 'testng', version: '7.0.0'
-    //https://mvnrepository.com/artifact/io.cucumber/cucumber-testng
+    // https://mvnrepository.com/artifact/io.cucumber/cucumber-testng
     compile group: 'io.cucumber', name: 'cucumber-testng', version: '4.8.0'
-    //https://mvnrepository.com/artifact/com.github.javafaker/javafaker
+    // https://mvnrepository.com/artifact/com.github.javafaker/javafaker
     compile group: 'com.github.javafaker', name: 'javafaker', version: '1.0.1'
-    //https://bintray.com/nomemory/maven/mockneat
+    // https://bintray.com/nomemory/maven/mockneat
     compile 'net.andreinc.mockneat:mockneat:0.3.7'
-    //https://mvnrepository.com/artifact/ch.qos.logback/logback-classic
+    // https://mvnrepository.com/artifact/ch.qos.logback/logback-classic
     testCompile group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
-    //https://mvnrepository.com/artifact/org.apache.commons.io/commonsIO
+    // https://mvnrepository.com/artifact/org.apache.commons.io/commonsIO
     compile group: 'org.apache.commons.io', name: 'commonsIO', version: '2.5.0'
-    //https://github.com/bonigarcia/webdrivermanager/ - About WebDriverManager and how to use it
-    //https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager
+    // https://github.com/bonigarcia/webdrivermanager/ - About WebDriverManager and how to use it
+    // https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager
     compile group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '3.7.1'
-    //https://mvnrepository.com/artifact/io.qameta.allure/allure-testng
+    // https://mvnrepository.com/artifact/io.qameta.allure/allure-testng
     compile group: 'io.qameta.allure', name: 'allure-testng', version: '2.8.1'
     // https://mvnrepository.com/artifact/org.json/json
     compile group: 'org.json', name: 'json', version: '20190722'
+    // https://mvnrepository.com/artifact/io.rest-assured/rest-assured
+    testCompile group: 'io.rest-assured', name: 'rest-assured', version: '4.1.2'
 
     implementation("com.google.guava:guava:28.1-jre")
     testImplementation 'io.cucumber:cucumber-java:4.3.1'
@@ -75,8 +77,8 @@ test {
     ignoreFailures = true
     useTestNG()
             {
-                suites "src/test/resources/XML Runners/TestNG-WEB.xml"
-                suites "src/test/resources/XML Runners/TestNG-API.xml"
+                suites "src/test/resources/xml_runners/TestNG-WEB.xml"
+                suites "src/test/resources/xml_runners/TestNG-API.xml"
             }
     systemProperties System.properties
 }

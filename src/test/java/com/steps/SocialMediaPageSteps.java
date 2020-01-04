@@ -29,22 +29,22 @@ public class SocialMediaPageSteps extends DriverFactory {
         switch (logoName.toLowerCase()) {
             case "facebook":
                 basePage.scrollWebsiteToElement(socialMediaPage.facebookButton);
-                Assert.assertTrue(basePage.isDisplayed(10, socialMediaPage.facebookButton),
+                Assert.assertTrue(basePage.isDisplayed(5, socialMediaPage.facebookButton),
                         String.format(VIEW_ERROR, logoName.toUpperCase()));
                 break;
             case "twitter":
                 basePage.scrollWebsiteToElement(socialMediaPage.twitterButton);
-                Assert.assertTrue(basePage.isDisplayed(10, socialMediaPage.twitterButton),
+                Assert.assertTrue(basePage.isDisplayed(5, socialMediaPage.twitterButton),
                         String.format(VIEW_ERROR, logoName.toUpperCase()));
                 break;
             case "youtube":
                 basePage.scrollWebsiteToElement(socialMediaPage.youtubeButton);
-                Assert.assertTrue(basePage.isDisplayed(10, socialMediaPage.youtubeButton),
+                Assert.assertTrue(basePage.isDisplayed(5, socialMediaPage.youtubeButton),
                         String.format(VIEW_ERROR, logoName.toUpperCase()));
                 break;
             case "google":
                 basePage.scrollWebsiteToElement(socialMediaPage.googleButton);
-                Assert.assertTrue(basePage.isDisplayed(10, socialMediaPage.googleButton),
+                Assert.assertTrue(basePage.isDisplayed(5, socialMediaPage.googleButton),
                         String.format(VIEW_ERROR, logoName.toUpperCase()));
                 break;
             default:

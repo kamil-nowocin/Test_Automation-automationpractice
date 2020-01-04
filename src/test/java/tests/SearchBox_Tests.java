@@ -1,6 +1,6 @@
 package tests;
 
-import com.listeners.TestNGListener;
+import com.listeners.TestNGListener_WEB;
 import com.steps.BasePageSteps;
 import com.steps.Hooks;
 import com.steps.SearchPageSteps;
@@ -16,7 +16,7 @@ import org.testng.annotations.Test;
 
 @Epic("Regression Tests")
 @Feature("SEARCHBOX TESTS")
-@Listeners({TestNGListener.class})
+@Listeners({TestNGListener_WEB.class})
 public class SearchBox_Tests extends Hooks {
 
     @Owner("Kamil Nowocin")
@@ -38,6 +38,8 @@ public class SearchBox_Tests extends Hooks {
         searchPageSteps.iSearchForPhrase("T-shirts");
         searchPageSteps.iClickOnSearchIcon();
         searchPageSteps.iCanSeeNumbersOfResultsEqualsTo("1");
+
+        //ASSERT//
         searchPageSteps.iCanSeeThatEveryResultsWhichHaveBeenFoundContainsPhrase("T-shirts");
     }
 
@@ -60,6 +62,8 @@ public class SearchBox_Tests extends Hooks {
         searchPageSteps.iSearchForPhrase("Blouse");
         searchPageSteps.iClickOnSearchIcon();
         searchPageSteps.iCanSeeNumbersOfResultsEqualsTo("1");
+
+        //ASSERT//
         searchPageSteps.iCanSeeThatEveryResultsWhichHaveBeenFoundContainsPhrase("Blouse");
     }
 
@@ -82,6 +86,8 @@ public class SearchBox_Tests extends Hooks {
         searchPageSteps.iSearchForPhrase("Printed Dress");
         searchPageSteps.iClickOnSearchIcon();
         searchPageSteps.iCanSeeNumbersOfResultsEqualsTo("5");
+
+        //ASSERT//
         searchPageSteps.iCanSeeThatEveryResultsWhichHaveBeenFoundContainsPhrase("Printed Dress");
     }
 
@@ -104,6 +110,8 @@ public class SearchBox_Tests extends Hooks {
         searchPageSteps.iSearchForPhrase("!@#$%^");
         searchPageSteps.iClickOnSearchIcon();
         searchPageSteps.iCanSeeNumbersOfResultsEqualsTo("0");
+
+        //ASSERT//
         searchPageSteps.iCanSeeThatEveryResultsWhichHaveBeenFoundContainsPhrase("!@#$%^");
     }
 
@@ -128,6 +136,8 @@ public class SearchBox_Tests extends Hooks {
         searchPageSteps.iCanSeeNumbersOfResultsEqualsTo("5");
         searchPageSteps.iCanSeeThatEveryResultsWhichHaveBeenFoundContainsPhrase("Printed Dress");
         searchPageSteps.iSelectFromDropdownSortBy("Product Name: Z to A");
+
+        //ASSERT//
         searchPageSteps.iCanSeeThatResultsAreCorrectlySortedBy("Product Name: Z to A");
     }
 
@@ -152,6 +162,8 @@ public class SearchBox_Tests extends Hooks {
         searchPageSteps.iCanSeeNumbersOfResultsEqualsTo("5");
         searchPageSteps.iCanSeeThatEveryResultsWhichHaveBeenFoundContainsPhrase("Printed Dress");
         searchPageSteps.iSelectFromDropdownSortBy("Product Name: A to Z");
+
+        //ASSERT//
         searchPageSteps.iCanSeeThatResultsAreCorrectlySortedBy("Product Name: A to Z");
     }
 
@@ -177,6 +189,8 @@ public class SearchBox_Tests extends Hooks {
         searchPageSteps.iCanSeeNumbersOfResultsEqualsTo("5");
         searchPageSteps.iCanSeeThatEveryResultsWhichHaveBeenFoundContainsPhrase("Printed Dress");
         searchPageSteps.iSelectFromDropdownSortBy("Price: Highest first");
+
+        //ASSERT//
         searchPageSteps.iCanSeeThatResultsAreCorrectlySortedBy("Price: Highest first");
     }
 
@@ -203,6 +217,8 @@ public class SearchBox_Tests extends Hooks {
         searchPageSteps.iCanSeeNumbersOfResultsEqualsTo("5");
         searchPageSteps.iCanSeeThatEveryResultsWhichHaveBeenFoundContainsPhrase("Printed Dress");
         searchPageSteps.iSelectFromDropdownSortBy("Price: Lowest first");
+
+        //ASSERT//
         searchPageSteps.iCanSeeThatResultsAreCorrectlySortedBy("Price: Lowest first");
     }
 }

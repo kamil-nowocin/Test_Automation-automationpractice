@@ -1,6 +1,6 @@
 package tests;
 
-import com.listeners.TestNGListener;
+import com.listeners.TestNGListener_WEB;
 import com.steps.BasePageSteps;
 import com.steps.Hooks;
 import com.steps.LoginPageSteps;
@@ -17,7 +17,7 @@ import org.testng.annotations.Test;
 
 @Epic("Regression Tests")
 @Feature("LOGIN TESTS")
-@Listeners({TestNGListener.class})
+@Listeners({TestNGListener_WEB.class})
 public class Login_Tests extends Hooks {
 
     @Owner("Kamil Nowocin")
@@ -42,6 +42,8 @@ public class Login_Tests extends Hooks {
         loginPageSteps.iEnterLogin("thor.odinson@example.com");
         loginPageSteps.iEnterPassword("12345");
         loginPageSteps.iClickOnSubmitButton();
+
+        //ASSERT
         registrationPageSteps.iCanSeeWelcomeMessage();
     }
 
@@ -67,6 +69,8 @@ public class Login_Tests extends Hooks {
         loginPageSteps.iEnterLogin("thanos.ALars@example.com");
         loginPageSteps.iEnterPassword("12345");
         loginPageSteps.iClickOnSubmitButton();
+
+        //ASSERT//
         loginPageSteps.iCanSeeWarningMessageWithInclude("Authentication failed");
     }
 
@@ -92,6 +96,8 @@ public class Login_Tests extends Hooks {
         loginPageSteps.iEnterLogin("thor.odinson@example.com");
         loginPageSteps.iEnterPassword("");
         loginPageSteps.iClickOnSubmitButton();
+
+        //ASSERT//
         loginPageSteps.iCanSeeWarningMessageWithInclude("Password is required");
     }
 
@@ -117,6 +123,8 @@ public class Login_Tests extends Hooks {
         loginPageSteps.iEnterLogin("");
         loginPageSteps.iEnterPassword("12345");
         loginPageSteps.iClickOnSubmitButton();
+
+        //ASSERT//
         loginPageSteps.iCanSeeWarningMessageWithInclude("An email address required");
     }
 }
