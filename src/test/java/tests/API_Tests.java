@@ -33,7 +33,7 @@ public class API_Tests extends Hooks {
     @Override
     public void beforeTest(ITestResult iTestResult) {
         super.beforeTest(iTestResult);
-        DriverFactory.destroyDriver();
+        destroyDriver();
     }
 
     @Owner("Kamil Nowocin")
@@ -42,7 +42,6 @@ public class API_Tests extends Hooks {
     @Severity(SeverityLevel.BLOCKER)
     @Issue("TAP-043")
     public void test_1() throws Throwable {
-
         //ARRANGE//
         restHomeURL();
         RequestSpecification requestSpecification = RestAssured.given();

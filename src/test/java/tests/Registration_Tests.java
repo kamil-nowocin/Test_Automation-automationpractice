@@ -1,13 +1,18 @@
 package tests;
 
 import com.listeners.TestNGListener_WEB;
+import com.pages.base.BasePage;
 import com.steps.BasePageSteps;
 import com.steps.Hooks;
 import com.steps.RegistrationPageSteps;
+import io.cucumber.datatable.DataTable;
 import io.qameta.allure.*;
 import org.testng.annotations.Ignore;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * Test_Automation-automationpractice
@@ -40,7 +45,9 @@ public class Registration_Tests extends Hooks {
         registrationPageSteps.iCanSeeRegistrationPageForm();
         registrationPageSteps.iWriteAnEmailAddress();
         registrationPageSteps.iClickOnCreateAnAccountButton();
-        registrationPageSteps.iCanSeeRegistrationPageForm();
+
+        //ASSERT//
+        registrationPageSteps.iCanSeeAccountCreationPageForm();
     }
 
     @Owner("Kamil Nowocin")
@@ -152,7 +159,6 @@ public class Registration_Tests extends Hooks {
         registrationPageSteps.iCanSeeRegistrationError();
     }
 
-    @Ignore
     @Owner("Kamil Nowocin")
     @Test(priority = 1,
             description = "I can't create an account, when one of required fields is missing")
@@ -163,6 +169,12 @@ public class Registration_Tests extends Hooks {
     @Story("NEGATIVE FLOW")
     public void test_5() throws Throwable {
         //ARRANGE//
+        List<List<String>> infoInTheRaw = Arrays.asList
+                (
+                        Arrays.asList("First Name", "Last Name", "Password", "Address", "City", "State", "Postal Code", "Country", "Mobile Phone"),
+                        Arrays.asList("Thor", "Odinson", "#Passwd123", "", "City", "Alaska", "99503", "United States", "700-800-900")
+                );
+        DataTable dataTable = DataTable.create(infoInTheRaw);
         final BasePageSteps basePageSteps = new BasePageSteps();
         final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps();
 
@@ -173,7 +185,7 @@ public class Registration_Tests extends Hooks {
         registrationPageSteps.iCanSeeRegistrationPageForm();
         registrationPageSteps.iWriteAnEmailAddress();
         registrationPageSteps.iClickOnCreateAnAccountButton();
-        //registrationPageSteps.iWriteFollowingDataToRegistrationForm();
+        registrationPageSteps.iWriteFollowingDataToRegistrationForm(dataTable);
         registrationPageSteps.iCheckIfEmailIsAlreadyWrittenAndValid();
         registrationPageSteps.iCheckIfMyFirstLastNameAreAlreadyWrittenAndAreCorrect();
         registrationPageSteps.iWriteMyAddressAlias();

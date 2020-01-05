@@ -1,6 +1,7 @@
 package com;
 
 import com.github.javafaker.Faker;
+import com.listeners.TestNGListener_WEB;
 import com.steps.Hooks;
 import cucumber.api.Scenario;
 import io.qameta.allure.Attachment;
@@ -11,11 +12,13 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.testng.ITestResult;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -24,6 +27,7 @@ import java.util.Date;
 import java.util.Locale;
 import java.util.Properties;
 import java.util.ResourceBundle;
+import java.util.stream.Stream;
 
 /**
  * Test_Automation-automationpractice
@@ -79,21 +83,21 @@ public class FrameworkEnvironment {
             "Upssss, something went really bad! Even Michael Scofield couldn't have predicted that error! :)";
 
     //ENVIRONMENT PROPERTIES//
-    private static final String TRAVIS_BUILD_NUMBER = System.getProperty
+    protected static final String TRAVIS_BUILD_NUMBER = System.getProperty
             ("travis.buildNumber", "Build was made on localhost");
-    private static final String TRAVIS_BUILD_WEB_URL = System.getProperty
+    protected static final String TRAVIS_BUILD_WEB_URL = System.getProperty
             ("travis.buildURL", "Build was made on localhost");
-    private static final String TRAVIS_BRANCH = System.getProperty
+    protected static final String TRAVIS_BRANCH = System.getProperty
             ("travis.branch", "Build was made on localhost");
-    private static final String OS_NAME = System.getProperty
+    protected static final String OS_NAME = System.getProperty
             ("travis.osName", "Build was made on localhost");//DON'T KNOW HOW TO SET OS TYPE WHEN BUILD RUNS ON LOCAL MACHINE OR ONLINE
-    private static final String JAVA_VERSION = System.getProperty
+    protected static final String JAVA_VERSION = System.getProperty
             ("travis.jdkVersion", "Build was made on localhost");//DOESN'T WORK, IDK WHY
-    static final String BROWSER = System.getProperty
+    protected static final String BROWSER = System.getProperty
             ("browser", "Chrome");
-    static final String HOST = System.getProperty
+    protected static final String HOST = System.getProperty
             ("selenium.host", "Chrome");
-    static final String HOST_URL = System.getProperty
+    protected static final String HOST_URL = System.getProperty
             ("selenium.hostURL", "https://localhost:3000");
 
     protected static void allureWriteProperties() {
@@ -127,17 +131,48 @@ public class FrameworkEnvironment {
         }
     }
 
-    @Attachment(type = "text/plain")
-    protected static String allureSaveTextLog() {
-        return "Text log isn't implemented yet! \nSorry...";
+    @Attachment(value = "TestNG test FAIL logs", type = "text/plain")
+    protected static String allureSaveTextLog(ITestResult iTestResult) {
+        final String fileName = TestNGListener_WEB.getTestName(iTestResult);
+        String currentPath = Paths.get(".").toAbsolutePath().normalize().toString();
+        String path = currentPath
+                + File.separator
+                + "logs"
+                + File.separator;
+        path += fileName + ".log";
+        StringBuilder contentBuilder = new StringBuilder();
+        try (Stream<String> stream = Files.lines(Paths.get(path), StandardCharsets.UTF_8)) {
+            stream.forEach(s -> contentBuilder.append(s).append("\n"));
+        } catch (IOException e) {
+            logger.error("Failed to attach .logs object!", e);
+        }
+        return contentBuilder.toString();
+    }
+
+    @Attachment(value = "Cucumber scenario FAIL logs", type = "text/plain")
+    protected String allureSaveTextLogCucumber(Scenario scenario) {
+        final String fileName = scenario.getName().toUpperCase();
+        String currentPath = Paths.get(".").toAbsolutePath().normalize().toString();
+        String path = currentPath
+                + File.separator
+                + "logs"
+                + File.separator;
+        path += fileName + ".log";
+        StringBuilder contentBuilder = new StringBuilder();
+        try (Stream<String> stream = Files.lines(Paths.get(path), StandardCharsets.UTF_8)) {
+            stream.forEach(s -> contentBuilder.append(s).append("\n"));
+        } catch (IOException e) {
+            logger.error("Failed to attach .logs object!", e);
+        }
+        return contentBuilder.toString();
     }
 
     @Attachment(value = "Scenario FAIL screenshot", type = "image/png")
-    protected static byte[] allureSaveScreenshotPNG() {
+    protected byte[] allureSaveScreenshotPNG() {
         return ((TakesScreenshot) DriverFactory.driver).getScreenshotAs(OutputType.BYTES);
     }
 
-    protected static void localSaveScreenshotPNG(Scenario scenario) throws IOException {
+    protected void localSaveScreenshotPNG(Scenario scenario) throws IOException {
         byte[] screenshot = ((TakesScreenshot) DriverFactory.driver).getScreenshotAs(OutputType.BYTES);
         scenario.embed(screenshot, "image/png");
         File scrFile = ((TakesScreenshot) DriverFactory.driver).getScreenshotAs(OutputType.FILE);
@@ -146,7 +181,7 @@ public class FrameworkEnvironment {
                 + "-" + TODAY_DATE + ".png"));
     }
 
-    public static void deleteOldLogs() {
+    protected void deleteOldLogs() {
         String currentPath = Paths.get(".").toAbsolutePath().normalize().toString();
         try {
             Files.walk(Paths.get(currentPath + "/logs"))
@@ -156,26 +191,4 @@ public class FrameworkEnvironment {
         } catch (IOException ignored) {
         }
     }
-
-//    @Attachment(value = "Scenario FAIL full screenshot", type = "image/png")
-//    public static byte[] allureSaveFullScreenshotPNG() throws IOException {
-//        //THIS DOESN'T LOOK GREAT IN ALLURE -> HOVERER IT CAN MAKE FULL SCREENSHOT OF WEBSITE
-//        BufferedImage screenshot = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(100)).takeScreenshot(DriverFactory.driver).getImage();
-//        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-//        ImageIO.write(screenshot, "PNG", byteArrayOutputStream);
-//        byteArrayOutputStream.flush();
-//        byte[] ss = byteArrayOutputStream.toByteArray();
-//        byteArrayOutputStream.close();
-//        return ss;
-//    }
-
-    //    @Attachment(value = "tests log", type = "text/plain", fileExtension = ".log")
-//    public static File[] loginger(ITestResult iTestResult) {
-//        File f = new File("/Users/kamil.nowocin/Desktop/Test_Automation-automationpractice/logs");
-//        return f.listFiles(new FilenameFilter() {
-//            public boolean accept(File dir, String name) {
-//                return name.startsWith(TestNGListener_WEB.getTestName(iTestResult)) && name.endsWith(".log");
-//            }
-//        });
-//    }
 }

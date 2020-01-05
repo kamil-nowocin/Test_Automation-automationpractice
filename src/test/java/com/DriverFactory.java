@@ -27,7 +27,7 @@ public class DriverFactory extends FrameworkEnvironment {
 
     public static WebDriver driver;
 
-    public static String getBrowserName() {
+    private String getBrowserName() {
         String getBrowser = System.getProperty("browser");
         if (getBrowser == null) {
             getBrowser = System.getenv("browser");
@@ -38,7 +38,7 @@ public class DriverFactory extends FrameworkEnvironment {
         return getBrowser;
     }
 
-    public static String getHost() {
+    private String getHost() {
         String getHost = System.getProperty("selenium.host");
         if (getHost == null) {
             getHost = System.getenv("selenium.host");
@@ -113,6 +113,7 @@ public class DriverFactory extends FrameworkEnvironment {
                 default:
                     throw new IllegalStateException("This browser isn't supported yet. Sorry...");
             }
+            logger.info(String.format("Chosen executor: %S", getHost()));
             driver.manage().timeouts().implicitlyWait(TIMEOUT, TimeUnit.SECONDS);
             driver.manage().timeouts().pageLoadTimeout(TIMEOUT, TimeUnit.SECONDS);
             driver.manage().timeouts().setScriptTimeout(TIMEOUT, TimeUnit.SECONDS);
@@ -123,7 +124,7 @@ public class DriverFactory extends FrameworkEnvironment {
         }
     }
 
-    protected static void destroyDriver() {
+    protected void destroyDriver() {
         if (driver != null) {
             driver.quit();
             driver = null;
