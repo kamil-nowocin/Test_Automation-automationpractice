@@ -37,6 +37,7 @@ Feature: As a user I would like to see the error message where I made a mistake 
     When I choose gender
     And I write my first name
     And I write password
+    And I choose date of birth
     And I write my address
     And I choose country "United States"
     And I write city name
@@ -55,6 +56,7 @@ Feature: As a user I would like to see the error message where I made a mistake 
     And I write my last name
     And I clear my email address
     And I write password
+    And I choose date of birth
     And I write my address
     And I choose country "United States"
     And I write city name
@@ -71,6 +73,7 @@ Feature: As a user I would like to see the error message where I made a mistake 
     When I choose gender
     And I write my first name
     And I write my last name
+    And I choose date of birth
     And I write my address
     And I choose country "United States"
     And I write city name
@@ -82,12 +85,13 @@ Feature: As a user I would like to see the error message where I made a mistake 
     Then I can see warning message about missing "password" input
 
 #--------------------------------------------------------------------------------
-  Scenario: As a user I would like to see registration error, when I don't fill input
+  Scenario: As a user I would like to see registration error, when I don't fill address input
     Given I can see registration page form
     When I choose gender
     And I write my first name
     And I write my last name
     And I write password
+    And I choose date of birth
     And I choose country "United States"
     And I write city name
     And I choose state
@@ -104,6 +108,7 @@ Feature: As a user I would like to see the error message where I made a mistake 
     And I write my first name
     And I write my last name
     And I write password
+    And I choose date of birth
     And I write my address
     And I choose country "United States"
     And I choose state
@@ -120,6 +125,7 @@ Feature: As a user I would like to see the error message where I made a mistake 
     And I write my first name
     And I write my last name
     And I write password
+    And I choose date of birth
     And I write my address
     And I choose country "United States"
     And I write city name
@@ -136,6 +142,7 @@ Feature: As a user I would like to see the error message where I made a mistake 
     And I write my first name
     And I write my last name
     And I write password
+    And I choose date of birth
     And I write my address
     And I choose country "United States"
     And I write city name
@@ -152,6 +159,7 @@ Feature: As a user I would like to see the error message where I made a mistake 
     And I write my first name
     And I write my last name
     And I write password
+    And I choose date of birth
     And I write my address
     And I write city name
     And I choose country "-"
@@ -167,6 +175,7 @@ Feature: As a user I would like to see the error message where I made a mistake 
     And I write my first name
     And I write my last name
     And I write password
+    And I choose date of birth
     And I write my address
     And I choose country "United States"
     And I write city name
@@ -183,6 +192,7 @@ Feature: As a user I would like to see the error message where I made a mistake 
     And I write my first name
     And I write my last name
     And I write password
+    And I choose date of birth
     And I write my address
     And I choose country "United States"
     And I write city name

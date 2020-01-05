@@ -1,8 +1,6 @@
 package com.listeners;
 
-import com.DriverFactory;
 import com.FrameworkEnvironment;
-import cucumber.api.Scenario;
 import org.apache.commons.lang3.StringUtils;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
@@ -14,20 +12,20 @@ import org.testng.ITestResult;
  * @author kamil.nowocin
  **/
 
-public class TestNGListener extends FrameworkEnvironment implements ITestListener {
+public class TestNGListener_API extends FrameworkEnvironment implements ITestListener {
 
     /**
      * For TestNG tests
      */
-    private static String getTestName(ITestResult iTestResult) {
+    public static String getTestName(ITestResult iTestResult) {
         return iTestResult.getMethod().getDescription();
     }
 
     @Override
     public synchronized void onStart(ITestContext iTestContext) {
         logger.info(StringUtils.repeat("#", 110));
-        logger.info(StringUtils.repeat("=", 31)
-                + "STARTING TEST SUITE " + iTestContext.getStartDate() + StringUtils.repeat("=", 31));
+        logger.info(StringUtils.repeat("=", 29)
+                + "STARTING API TEST SUITE " + iTestContext.getStartDate() + StringUtils.repeat("=", 29));
         logger.info(StringUtils.repeat("#", 110));
         System.out.println();
     }
@@ -48,43 +46,18 @@ public class TestNGListener extends FrameworkEnvironment implements ITestListene
         logger.info(StringUtils.repeat("=", 48) + " TEST STARTED "
                 + StringUtils.repeat("=", 48));
         logger.info(ANSI_BLUE + "TEST NAME: " + getTestName(iTestResult).toUpperCase() + ANSI_RESET);
+        logger.info("Doing some magic behind the application... Wish you could see it ;)");
     }
 
     @Override
     public synchronized void onTestSuccess(ITestResult iTestResult) {
-        logger.info(String.format("Chosen executor: %S", DriverFactory.getHost()));
         logger.info(StringUtils.repeat("=", 37) + " TEST FINISHED WITH "
                 + ANSI_GREEN + "SUCCESS STATUS " + ANSI_RESET + StringUtils.repeat("=", 38));
     }
 
     @Override
     public synchronized void onTestFailure(ITestResult iTestResult) {
-        logger.info(String.format("Chosen executor: %S", DriverFactory.getHost()));
         logger.info(StringUtils.repeat("=", 38) + " TEST FINISHED WITH "
                 + ANSI_RED + "FAILED STATUS " + ANSI_RESET + StringUtils.repeat("=", 38));
-        allureSaveScreenshotPNG();
-        allureSaveTextLog();
-    }
-
-    /**
-     * For Cucumber tests
-     **/
-    public static void onScenarioStart(Scenario scenario) {
-        logger.info(StringUtils.repeat("#", 110));
-        logger.info(StringUtils.repeat("=", 46)
-                + " BEFORE SCENARIO " + StringUtils.repeat("=", 47));
-        logger.info(StringUtils.repeat("#", 110));
-        logger.info(ANSI_BLUE + "SCENARIO NAME: " + scenario.getName().toUpperCase() + ANSI_RESET);
-        System.out.println();
-    }
-
-    public static void onScenarioFinish(Scenario scenario) {
-        logger.info(String.format("Chosen executor: %S", DriverFactory.getHost()));
-        System.out.println();
-        String status = (scenario.isFailed() ? ANSI_RED + "FAILED STATUS " + ANSI_RESET : ANSI_GREEN + "SUCCESS STATUS " + ANSI_RESET);
-        logger.info(StringUtils.repeat("#", 110));
-        logger.info(StringUtils.repeat("=", 36)
-                + " SCENARIO FINISHED WITH " + status + StringUtils.repeat("=", 35));
-        logger.info(StringUtils.repeat("#", 110));
     }
 }

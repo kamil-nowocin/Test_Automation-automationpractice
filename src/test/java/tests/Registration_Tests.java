@@ -1,6 +1,6 @@
 package tests;
 
-import com.listeners.TestNGListener;
+import com.listeners.TestNGListener_WEB;
 import com.steps.BasePageSteps;
 import com.steps.Hooks;
 import com.steps.RegistrationPageSteps;
@@ -17,7 +17,7 @@ import org.testng.annotations.Test;
 
 @Epic("Regression Tests")
 @Feature("REGISTRATION TESTS")
-@Listeners({TestNGListener.class})
+@Listeners({TestNGListener_WEB.class})
 public class Registration_Tests extends Hooks {
 
     @Owner("Kamil Nowocin")
@@ -77,6 +77,8 @@ public class Registration_Tests extends Hooks {
         registrationPageSteps.iWriteMobilePhone();
         registrationPageSteps.iWriteMyAddressAlias();
         registrationPageSteps.iClickOnRegisterButton();
+
+        //ASSERT//
         registrationPageSteps.iCanSeeWelcomeMessage();
     }
 
@@ -119,6 +121,8 @@ public class Registration_Tests extends Hooks {
         registrationPageSteps.iWriteMobilePhone();
         registrationPageSteps.iWriteMyAddressAlias();
         registrationPageSteps.iClickOnRegisterButton();
+
+        //ASSERT//
         registrationPageSteps.iCanSeeWelcomeMessage();
     }
 
@@ -143,6 +147,8 @@ public class Registration_Tests extends Hooks {
         registrationPageSteps.iWriteAnEmailAddress();
         registrationPageSteps.iClickOnCreateAnAccountButton();
         registrationPageSteps.iClickOnRegisterButton();
+
+        //ASSERT//
         registrationPageSteps.iCanSeeRegistrationError();
     }
 
@@ -172,7 +178,9 @@ public class Registration_Tests extends Hooks {
         registrationPageSteps.iCheckIfMyFirstLastNameAreAlreadyWrittenAndAreCorrect();
         registrationPageSteps.iWriteMyAddressAlias();
         registrationPageSteps.iClickOnRegisterButton();
-        registrationPageSteps.iCanSeeWarningMessageAboutMissingFInput("one element");
+
+        //ASSERT//
+        registrationPageSteps.iCanSeeWarningMessageAboutMissingInput("one element");
     }
 
     @Owner("Kamil Nowocin")
@@ -195,6 +203,8 @@ public class Registration_Tests extends Hooks {
         registrationPageSteps.iCanSeeRegistrationPageForm();
         registrationPageSteps.iWriteAnEmailAddressWhichIsAlreadyInDatabase();
         registrationPageSteps.iClickOnCreateAnAccountButton();
+
+        //ASSERT//
         registrationPageSteps.iCanSeeRegistrationError();
     }
 
@@ -218,6 +228,8 @@ public class Registration_Tests extends Hooks {
         registrationPageSteps.iCanSeeRegistrationPageForm();
         registrationPageSteps.iWriteAnInvalidEmailAddress();
         registrationPageSteps.iClickOnCreateAnAccountButton();
+
+        //ASSERT//
         registrationPageSteps.iCanSeeRegistrationError();
     }
 }

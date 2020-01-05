@@ -16,6 +16,8 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -135,15 +137,24 @@ public class FrameworkEnvironment {
         return ((TakesScreenshot) DriverFactory.driver).getScreenshotAs(OutputType.BYTES);
     }
 
-    @Attachment(value = "Scenario FAIL screenshot", type = "image/png")
-    protected static byte[] localSaveScreenshotPNG(Scenario scenario) throws IOException {
+    protected static void localSaveScreenshotPNG(Scenario scenario) throws IOException {
         byte[] screenshot = ((TakesScreenshot) DriverFactory.driver).getScreenshotAs(OutputType.BYTES);
         scenario.embed(screenshot, "image/png");
         File scrFile = ((TakesScreenshot) DriverFactory.driver).getScreenshotAs(OutputType.FILE);
         String currentPath = Paths.get(".").toAbsolutePath().normalize().toString();
         FileUtils.copyFile(scrFile, new File(currentPath + "/screenshots/" + scenario.getName()
                 + "-" + TODAY_DATE + ".png"));
-        return screenshot;
+    }
+
+    public static void deleteOldLogs() {
+        String currentPath = Paths.get(".").toAbsolutePath().normalize().toString();
+        try {
+            Files.walk(Paths.get(currentPath + "/logs"))
+                    .filter(Files::isRegularFile)
+                    .map(Path::toFile)
+                    .forEach(File::delete);
+        } catch (IOException ignored) {
+        }
     }
 
 //    @Attachment(value = "Scenario FAIL full screenshot", type = "image/png")
@@ -156,5 +167,15 @@ public class FrameworkEnvironment {
 //        byte[] ss = byteArrayOutputStream.toByteArray();
 //        byteArrayOutputStream.close();
 //        return ss;
+//    }
+
+    //    @Attachment(value = "tests log", type = "text/plain", fileExtension = ".log")
+//    public static File[] loginger(ITestResult iTestResult) {
+//        File f = new File("/Users/kamil.nowocin/Desktop/Test_Automation-automationpractice/logs");
+//        return f.listFiles(new FilenameFilter() {
+//            public boolean accept(File dir, String name) {
+//                return name.startsWith(TestNGListener_WEB.getTestName(iTestResult)) && name.endsWith(".log");
+//            }
+//        });
 //    }
 }

@@ -85,7 +85,7 @@ public class RegistrationPageSteps extends FrameworkEnvironment {
     @Step("I can see registration page form")
     @Then("I can see registration page form")
     public void iCanSeeRegistrationPageForm() throws Throwable {
-        Assert.assertTrue(basePage.isDisplayed(10, registrationPage.createAccountBox),
+        Assert.assertTrue(basePage.isDisplayed(5, registrationPage.createAccountBox),
                 String.format(VIEW_ERROR, "Registration page form"));
     }
 
@@ -453,7 +453,7 @@ public class RegistrationPageSteps extends FrameworkEnvironment {
     @Step("I can see welcome message")
     @Then("I can see welcome message")
     public void iCanSeeWelcomeMessage() throws Throwable {
-        Assert.assertTrue(basePage.isDisplayed(10, registrationPage.myAccountDashboard));
+        Assert.assertTrue(basePage.isDisplayed(5, registrationPage.myAccountDashboard));
         Assert.assertEquals(registrationPage.myAccountDashboard.getText().toLowerCase(),
                 WELCOME_MESSAGE.toLowerCase(), VALUE_ERROR);
     }
@@ -461,20 +461,20 @@ public class RegistrationPageSteps extends FrameworkEnvironment {
     @Step("I can see create an account error")
     @Then("I can see create an account error")
     public void iCanSeeCreateAnAccountError() throws Throwable {
-        Assert.assertTrue(basePage.isDisplayed(10, registrationPage.createAnAccountError),
+        Assert.assertTrue(basePage.isDisplayed(5, registrationPage.createAnAccountError),
                 String.format(VIEW_ERROR, "create an account error"));
     }
 
     @Step("I can see registration error")
     @Then("I can see registration error")
     public void iCanSeeRegistrationError() throws Throwable {
-        Assert.assertTrue(basePage.isDisplayed(10, registrationPage.registerError),
+        Assert.assertTrue(basePage.isDisplayed(5, registrationPage.registerError),
                 String.format(VIEW_ERROR, "registration error"));
     }
 
     @Step("I can see warning message about missing {0} input")
     @Then("I can see warning message about missing {string} input")
-    public void iCanSeeWarningMessageAboutMissingFInput(String stringName) throws Throwable {
+    public void iCanSeeWarningMessageAboutMissingInput(String stringName) throws Throwable {
         switch (stringName.toLowerCase()) {
             case "first name":
                 Assert.assertTrue(basePage.errorValidator(registrationPage.registerError).toLowerCase().contains

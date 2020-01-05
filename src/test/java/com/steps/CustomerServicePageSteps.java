@@ -33,14 +33,14 @@ public class CustomerServicePageSteps extends FrameworkEnvironment {
     @Step("I can see Contact Us form")
     @Then("I can see Contact Us form")
     public void iCanSeeContactUsForm() throws Throwable {
-        Assert.assertTrue(basePage.isDisplayed(10, customerServicePage.contactUsForm),
+        Assert.assertTrue(basePage.isDisplayed(5, customerServicePage.contactUsForm),
                 String.format(VIEW_ERROR, "Contact Us form"));
     }
 
     @Step("I am on Customer Service Contact Us page form")
     @Given("I am on Customer Service Contact Us page form")
     public void iAmOnCustomerServiceContactUsPageForm() throws Throwable {
-        Assert.assertTrue(basePage.isDisplayed(10, customerServicePage.contactUsHeader),
+        Assert.assertTrue(basePage.isDisplayed(5, customerServicePage.contactUsHeader),
                 String.format(VIEW_ERROR, "Customer Service Contact Us page form"));
     }
 
