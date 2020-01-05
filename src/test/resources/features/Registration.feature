@@ -17,7 +17,7 @@ Feature: As a user I would like to register into automationpractice.com
     Given I can see registration page form
     When I write an email address
     And I click on Create An Account button
-    Then I can see registration page form
+    Then I can see account creation page form
 
 #--------------------------------------------------------------------------------
   Scenario: As a user I can create an account by filling up all fields

@@ -18,7 +18,7 @@ public class TestNGListener_API extends FrameworkEnvironment implements ITestLis
      * For TestNG tests
      */
     public static String getTestName(ITestResult iTestResult) {
-        return iTestResult.getMethod().getDescription();
+        return iTestResult.getMethod().getDescription().toUpperCase();
     }
 
     @Override
@@ -27,12 +27,10 @@ public class TestNGListener_API extends FrameworkEnvironment implements ITestLis
         logger.info(StringUtils.repeat("=", 29)
                 + "STARTING API TEST SUITE " + iTestContext.getStartDate() + StringUtils.repeat("=", 29));
         logger.info(StringUtils.repeat("#", 110));
-        System.out.println();
     }
 
     @Override
     public synchronized void onFinish(ITestContext iTestContext) {
-        System.out.println();
         logger.info(StringUtils.repeat("#", 110));
         logger.info(StringUtils.repeat("=", 32)
                 + "END OF TEST SUITE " + iTestContext.getEndDate() + StringUtils.repeat("=", 32));
@@ -45,7 +43,7 @@ public class TestNGListener_API extends FrameworkEnvironment implements ITestLis
     public synchronized void onTestStart(ITestResult iTestResult) {
         logger.info(StringUtils.repeat("=", 48) + " TEST STARTED "
                 + StringUtils.repeat("=", 48));
-        logger.info(ANSI_BLUE + "TEST NAME: " + getTestName(iTestResult).toUpperCase() + ANSI_RESET);
+        logger.info(ANSI_BLUE + "TEST NAME: " + getTestName(iTestResult) + ANSI_RESET);
         logger.info("Doing some magic behind the application... Wish you could see it ;)");
     }
 
@@ -59,5 +57,7 @@ public class TestNGListener_API extends FrameworkEnvironment implements ITestLis
     public synchronized void onTestFailure(ITestResult iTestResult) {
         logger.info(StringUtils.repeat("=", 38) + " TEST FINISHED WITH "
                 + ANSI_RED + "FAILED STATUS " + ANSI_RESET + StringUtils.repeat("=", 38));
+        //allureSaveTextLog();
+        //xd(iTestResult);
     }
 }

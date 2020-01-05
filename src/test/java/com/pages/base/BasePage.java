@@ -88,7 +88,7 @@ public class BasePage extends FrameworkEnvironment {
         }
     }
 
-    public static int randomValue(int max, int min) {
+    public int randomValue(int max, int min) {
         Random random = new Random();
         return random.nextInt((max - min) + 1) + min;
     }

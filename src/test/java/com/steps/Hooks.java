@@ -54,7 +54,7 @@ public class Hooks extends DriverFactory implements ITestListener {
         if (scenario.isFailed()) {
             localSaveScreenshotPNG(scenario);
             allureSaveScreenshotPNG();
-            allureSaveTextLog();
+            allureSaveTextLogCucumber(scenario);
         }
         MDC.remove("testid");
         destroyDriver();

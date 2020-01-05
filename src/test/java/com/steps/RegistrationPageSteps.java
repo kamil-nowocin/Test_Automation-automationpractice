@@ -89,6 +89,12 @@ public class RegistrationPageSteps extends FrameworkEnvironment {
                 String.format(VIEW_ERROR, "Registration page form"));
     }
 
+    @Then("I can see account creation page form")
+    public void iCanSeeAccountCreationPageForm() {
+        Assert.assertTrue(basePage.isDisplayed(5, registrationPage.accountCreationForm),
+                String.format(VIEW_ERROR, "Registration page form"));
+    }
+
     @Step("I write following data to registration form")
     @And("I write following data to registration form")
     public RegistrationPageSteps iWriteFollowingDataToRegistrationForm(DataTable dataTable) throws Throwable {
