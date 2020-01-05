@@ -7,7 +7,7 @@ cp -R target/github-pages/history build/allure-results
 # shellcheck disable=SC2164
 cd build
 allure generate --clean
-sleep 5
+sleep 10
 cd ..
 # shellcheck disable=SC2164
 cp -R build/allure-report/* target/github-pages/
