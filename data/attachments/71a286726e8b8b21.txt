@@ -1,0 +1,24 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+16:23:34 DEBUG io.github.bonigarcia.wdm.Shell - Running command on the shell: [google-chrome, --version]
+16:23:34 DEBUG io.github.bonigarcia.wdm.Shell - Result: Google Chrome 80.0.3987.87
+16:23:34 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Getting driver version for chrome80 from online versions.properties
+16:23:34 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 80.0.3987.16 (since Google Chrome 80 is installed in your machine)
+16:23:34 DEBUG io.github.bonigarcia.wdm.Preferences - Storing preference chrome=80 (valid until 2020-02-06 16:23:34)
+16:23:34 DEBUG io.github.bonigarcia.wdm.Preferences - Storing preference chrome80=80.0.3987.16 (valid until 2020-02-06 16:23:34)
+16:23:34 INFO  i.g.bonigarcia.wdm.WebDriverManager - Reading https://chromedriver.storage.googleapis.com/ to seek chromedriver
+16:23:35 INFO  io.github.bonigarcia.wdm.Downloader - Downloading https://chromedriver.storage.googleapis.com/80.0.3987.16/chromedriver_linux64.zip
+16:23:35 INFO  io.github.bonigarcia.wdm.Downloader - Extracting binary from compressed file chromedriver_linux64.zip
+16:23:35 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.m2/repository/webdriver/chromedriver/linux64/80.0.3987.16/chromedriver
+16:23:36 INFO  com.steps.Hooks - Chosen executor: CHROME
+16:23:37 INFO  com.steps.Hooks - ================================================ TEST STARTED ================================================
+16:23:37 INFO  com.steps.Hooks - [34mTEST NAME: I AM ABLE TO SEND REQUEST VIA CONTACT US FORM, ALL INPUTS ARE FILLED UP[0m
+16:23:38 INFO  com.steps.Hooks - [31mTEST WILL BE REPEATED (2/2): I AM ABLE TO SEND REQUEST VIA CONTACT US FORM, ALL INPUTS ARE FILLED UP[0m
+16:23:39 DEBUG io.github.bonigarcia.wdm.Preferences - Preference chrome=80 (valid until 2020-02-06 16:23:34)
+16:23:39 DEBUG io.github.bonigarcia.wdm.Preferences - Preference chrome80=80.0.3987.16 (valid until 2020-02-06 16:23:34)
+16:23:39 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 80.0.3987.16 (since Google Chrome 80 is installed in your machine)
+16:23:39 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 80.0.3987.16 found in cache
+16:23:39 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.m2/repository/webdriver/chromedriver/linux64/80.0.3987.16/chromedriver
+16:23:39 INFO  com.steps.Hooks - Chosen executor: CHROME
+16:23:39 INFO  com.steps.Hooks - ================================================ TEST STARTED ================================================
+16:23:39 INFO  com.steps.Hooks - [34mTEST NAME: I AM ABLE TO SEND REQUEST VIA CONTACT US FORM, ALL INPUTS ARE FILLED UP[0m
+16:23:54 INFO  com.steps.Hooks - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
