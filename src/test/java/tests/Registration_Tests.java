@@ -1,13 +1,12 @@
 package tests;
 
+import com.ExcelEnvironment;
 import com.listeners.TestNGListener_WEB;
-import com.pages.base.BasePage;
 import com.steps.BasePageSteps;
 import com.steps.Hooks;
 import com.steps.RegistrationPageSteps;
 import io.cucumber.datatable.DataTable;
 import io.qameta.allure.*;
-import org.testng.annotations.Ignore;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
@@ -35,6 +34,7 @@ public class Registration_Tests extends Hooks {
     @Story("POSITIVE FLOW")
     public void test_1() throws Throwable {
         //ARRANGE//
+        ExcelEnvironment.saveTestResultsXLSX(13);
         final BasePageSteps basePageSteps = new BasePageSteps();
         final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps();
 
@@ -60,6 +60,7 @@ public class Registration_Tests extends Hooks {
     @Story("POSITIVE FLOW")
     public void test_2() throws Throwable {
         //ARRANGE//
+        ExcelEnvironment.saveTestResultsXLSX(14);
         final BasePageSteps basePageSteps = new BasePageSteps();
         final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps();
 
@@ -99,6 +100,7 @@ public class Registration_Tests extends Hooks {
     @Story("POSITIVE FLOW")
     public void test_3() throws Throwable {
         //ARRANGE//
+        ExcelEnvironment.saveTestResultsXLSX(15);
         final BasePageSteps basePageSteps = new BasePageSteps();
         final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps();
 
@@ -143,6 +145,7 @@ public class Registration_Tests extends Hooks {
     @Story("NEGATIVE FLOW")
     public void test_4() throws Throwable {
         //ARRANGE//
+        ExcelEnvironment.saveTestResultsXLSX(16);
         final BasePageSteps basePageSteps = new BasePageSteps();
         final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps();
 
@@ -169,6 +172,7 @@ public class Registration_Tests extends Hooks {
     @Story("NEGATIVE FLOW")
     public void test_5() throws Throwable {
         //ARRANGE//
+        ExcelEnvironment.saveTestResultsXLSX(17);
         List<List<String>> infoInTheRaw = Arrays.asList
                 (
                         Arrays.asList("First Name", "Last Name", "Password", "Address", "City", "State", "Postal Code", "Country", "Mobile Phone"),
@@ -205,6 +209,7 @@ public class Registration_Tests extends Hooks {
     @Story("NEGATIVE FLOW")
     public void test_6() throws Throwable {
         //ARRANGE//
+        ExcelEnvironment.saveTestResultsXLSX(18);
         final BasePageSteps basePageSteps = new BasePageSteps();
         final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps();
 
@@ -230,6 +235,7 @@ public class Registration_Tests extends Hooks {
     @Story("NEGATIVE FLOW")
     public void test_7() throws Throwable {
         //ARRANGE//
+        ExcelEnvironment.saveTestResultsXLSX(19);
         final BasePageSteps basePageSteps = new BasePageSteps();
         final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps();
 

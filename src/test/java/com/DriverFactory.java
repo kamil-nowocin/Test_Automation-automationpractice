@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.opera.OperaOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -49,12 +50,10 @@ public class DriverFactory extends FrameworkEnvironment {
         return getHost;
     }
 
-    protected RemoteWebDriver remoteWebDriver(DesiredCapabilities desiredCapabilities) {
-        //GET USER_NAME AND ACCESS_KEY FROM https://automate.browserstack.com/dashboard/v2
-        //HOST_URL = https://USER_NAME:ACCESS_KEY@hub-cloud.browserstack.com/wd/hub
+    protected RemoteWebDriver remoteWebDriver(DesiredCapabilities desiredCapabilities, String remoteWebDriverURL) {
         RemoteWebDriver remoteDriver = null;
         try {
-            remoteDriver = new RemoteWebDriver(new URL(HOST_URL), desiredCapabilities);
+            remoteDriver = new RemoteWebDriver(new URL(remoteWebDriverURL), desiredCapabilities);
         } catch (MalformedURLException e) {
             logger.error("Failed to launch remote driver!", e);
         }
@@ -62,6 +61,7 @@ public class DriverFactory extends FrameworkEnvironment {
     }
 
     protected void startBrowser() {
+        DesiredCapabilities desiredCapabilities = null;
         if (driver == null) {
             switch (getHost().toLowerCase()) {
                 case "chrome":
@@ -88,9 +88,12 @@ public class DriverFactory extends FrameworkEnvironment {
                 case "edge":
                     WebDriverManager.edgedriver().setup();
                     driver = new EdgeDriver();
+                case "ie":
+                    WebDriverManager.iedriver().setup();
+                    driver = new InternetExplorerDriver();
+                    break;
                 case "browserstack":
-                    //https://www.browserstack.com/automate/capabilities <- generate your own capabilities
-                    DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
+                    desiredCapabilities = new DesiredCapabilities();
                     desiredCapabilities.setCapability("os", "Windows");
                     desiredCapabilities.setCapability("os_version", "10");
                     desiredCapabilities.setCapability("resolution", "1920x1080");
@@ -108,10 +111,13 @@ public class DriverFactory extends FrameworkEnvironment {
                         desiredCapabilities.setCapability("browser", "Chrome");
                         desiredCapabilities.setCapability("browser_version", "78.0");
                     }
-                    driver = remoteWebDriver(desiredCapabilities);
+                    //https://automate.browserstack.com/dashboard/v2 <- GET USER_NAME AND ACCESS_TOKEN FROM
+                    //https://www.browserstack.com/automate/capabilities <- GENERATE YOUR OWN CAPABILITIES
+                    //https://USER_NAME:ACCESS_TOKEN@hub-cloud.browserstack.com/wd/hub <- HOST_URL (.travis.yml for more information)
+                    driver = remoteWebDriver(desiredCapabilities, HOST_URL);
                     break;
                 default:
-                    throw new IllegalStateException("This browser isn't supported yet. Sorry...");
+                    throw new IllegalStateException("This browser isn't supported yet! Sorry...");
             }
             logger.info(String.format("Chosen executor: %S", getHost()));
             driver.manage().timeouts().implicitlyWait(TIMEOUT, TimeUnit.SECONDS);
@@ -120,7 +126,7 @@ public class DriverFactory extends FrameworkEnvironment {
             driver.manage().deleteAllCookies();
             driver.manage().window().maximize();
         } else {
-            throw new IllegalStateException("Driver has already been initialized. Quit it before using this method");
+            throw new IllegalStateException("Driver has already been initialized. Quit it before using this method!");
         }
     }
 

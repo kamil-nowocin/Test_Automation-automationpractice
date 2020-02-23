@@ -1,5 +1,6 @@
 package tests;
 
+import com.ExcelEnvironment;
 import com.listeners.TestNGListener_WEB;
 import com.steps.BasePageSteps;
 import com.steps.CustomerServicePageSteps;
@@ -29,6 +30,7 @@ public class CustomerService_Tests extends Hooks {
     @Story("POSITIVE FLOW")
     public void test_1() throws Throwable {
         //ARRANGE//
+        ExcelEnvironment.saveTestResultsXLSX(1);
         final BasePageSteps basePageSteps = new BasePageSteps();
         final CustomerServicePageSteps customerServicePageSteps = new CustomerServicePageSteps();
 
@@ -58,6 +60,7 @@ public class CustomerService_Tests extends Hooks {
     @Story("POSITIVE FLOW")
     public void test_2() throws Throwable {
         //ARRANGE//
+        ExcelEnvironment.saveTestResultsXLSX(2);
         final BasePageSteps basePageSteps = new BasePageSteps();
         final CustomerServicePageSteps customerServicePageSteps = new CustomerServicePageSteps();
 
@@ -86,6 +89,7 @@ public class CustomerService_Tests extends Hooks {
     @Story("POSITIVE FLOW")
     public void test_3() throws Throwable {
         //ARRANGE//
+        ExcelEnvironment.saveTestResultsXLSX(3);
         final BasePageSteps basePageSteps = new BasePageSteps();
         final CustomerServicePageSteps customerServicePageSteps = new CustomerServicePageSteps();
 
@@ -116,6 +120,7 @@ public class CustomerService_Tests extends Hooks {
     @Story("NEGATIVE FLOW")
     public void test_4() throws Throwable {
         //ARRANGE//
+        ExcelEnvironment.saveTestResultsXLSX(4);
         final BasePageSteps basePageSteps = new BasePageSteps();
         final CustomerServicePageSteps customerServicePageSteps = new CustomerServicePageSteps();
 
@@ -146,6 +151,7 @@ public class CustomerService_Tests extends Hooks {
     @Story("NEGATIVE FLOW")
     public void test_5() throws Throwable {
         //ARRANGE//
+        ExcelEnvironment.saveTestResultsXLSX(5);
         final BasePageSteps basePageSteps = new BasePageSteps();
         final CustomerServicePageSteps customerServicePageSteps = new CustomerServicePageSteps();
 
@@ -176,6 +182,7 @@ public class CustomerService_Tests extends Hooks {
     @Story("NEGATIVE FLOW")
     public void test_6() throws Throwable {
         //ARRANGE//
+        ExcelEnvironment.saveTestResultsXLSX(6);
         final BasePageSteps basePageSteps = new BasePageSteps();
         final CustomerServicePageSteps customerServicePageSteps = new CustomerServicePageSteps();
 
@@ -206,6 +213,7 @@ public class CustomerService_Tests extends Hooks {
     @Story("NEGATIVE FLOW")
     public void test_7() throws Throwable {
         //ARRANGE//
+        ExcelEnvironment.saveTestResultsXLSX(7);
         final BasePageSteps basePageSteps = new BasePageSteps();
         final CustomerServicePageSteps customerServicePageSteps = new CustomerServicePageSteps();
 
@@ -236,6 +244,7 @@ public class CustomerService_Tests extends Hooks {
     @Story("NEGATIVE FLOW")
     public void test_8() throws Throwable {
         //ARRANGE//
+        ExcelEnvironment.saveTestResultsXLSX(8);
         final BasePageSteps basePageSteps = new BasePageSteps();
         final CustomerServicePageSteps customerServicePageSteps = new CustomerServicePageSteps();
 
