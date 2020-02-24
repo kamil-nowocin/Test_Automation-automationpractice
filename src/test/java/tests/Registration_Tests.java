@@ -19,7 +19,7 @@ import java.util.List;
  * @author kamil.nowocin
  **/
 
-@Epic("Regression Tests")
+@Epic("Web App Tests")
 @Feature("REGISTRATION TESTS")
 @Listeners({TestNGListener_WEB.class})
 public class Registration_Tests extends Hooks {

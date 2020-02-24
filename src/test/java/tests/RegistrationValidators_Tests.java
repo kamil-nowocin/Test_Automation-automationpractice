@@ -15,7 +15,7 @@ import org.testng.annotations.Test;
  * @author kamil.nowocin
  **/
 
-@Epic("Regression Tests")
+@Epic("Web App Tests")
 @Feature("REGISTRATION VALIDATORS TESTS")
 @Listeners({TestNGListener_WEB.class})
 public class RegistrationValidators_Tests extends Hooks {

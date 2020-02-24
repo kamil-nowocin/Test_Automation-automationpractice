@@ -19,17 +19,19 @@ Supported browsers aka hosts:
 * *Opera*
 * *Safari*
 * *Edge*
+## FEATURES
+Framework now support .xlsx files. You can easily change test style to DDT.
 ## TEST REPORTS & LOGS
 After each CI/CD test run, tests results are automatically transfered to [kamil-nowocin.github.io](https://kamil-nowocin.github.io/Test_Automation-automationpractice/)  
 Local test results are stored in build/allure-report. In terminal type `allure generate build/allure-report --clean`  
-Local logs are stored separately, for each tests case. Logs will be deleted when you launch new test run.
+Local logs are stored separately in logs directory, for each tests case. Logs will be deleted when you launch new test run.  
+Local logs are also stored in files directory, they are saved into testData.xlsx
 ## HOW TO RUN
 There are multiple ways to run tests from this build. It all depends on what you want to do:
 1. Right click on `.feature` file, and Run -> This will run `.feature` file on default settings.
 2. Right click on `TestNGRunner` file, and Run -> This will run all `.feature` files on default settings.
    - <sub><sup>***This is highly unrecommended option since it's experimental file and doesn't work well, check build.gradle for more information.***</sup></sub>
 3. Right click on `TestNG.xml` file, and Run ->  This will run all test attached to specific runner.
-     - <sub><sup>***This is highly recommended option for launching tests.***</sup></sub>
 4. In terminal type `./gradlew runTests` -> This will run all `.feature` files.
 5. In terminal type `./gradlew runTests {run with tags TBA}` -> This will run all `.feature` files which provided tag.
 6. In terminal type `./gradlew test` -> This will run all tests from tests package.`(src/test/java/tests)`  

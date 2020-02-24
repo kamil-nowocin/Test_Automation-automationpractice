@@ -15,7 +15,7 @@ import org.testng.annotations.Test;
  * @author kamil.nowocin
  **/
 
-@Epic("Regression Tests")
+@Epic("Web App Tests")
 @Feature("SEARCHBOX TESTS")
 @Listeners({TestNGListener_WEB.class})
 public class SearchBox_Tests extends Hooks {

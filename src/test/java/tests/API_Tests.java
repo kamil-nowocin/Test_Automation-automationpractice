@@ -20,7 +20,7 @@ import org.testng.annotations.Test;
  * @author kamil.nowocin
  **/
 
-@Epic("Backend Tests")
+@Epic("API Tests")
 @Feature("HTTP Statuses")
 @Listeners({TestNGListener_API.class})
 public class API_Tests extends Hooks {

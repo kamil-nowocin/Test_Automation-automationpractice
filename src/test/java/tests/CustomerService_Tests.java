@@ -15,7 +15,7 @@ import org.testng.annotations.Test;
  * @author kamil.nowocin
  **/
 
-@Epic("Regression Tests")
+@Epic("Web App Tests")
 @Feature("CUSTOMER SERVICE TESTS")
 @Listeners({TestNGListener_WEB.class})
 public class CustomerService_Tests extends Hooks {
