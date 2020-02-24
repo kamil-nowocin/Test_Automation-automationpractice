@@ -1,5 +1,6 @@
 package com.listeners;
 
+import com.ExcelEnvironment;
 import com.FrameworkEnvironment;
 import org.apache.commons.lang3.StringUtils;
 import org.testng.ITestContext;
@@ -51,13 +52,16 @@ public class TestNGListener_API extends FrameworkEnvironment implements ITestLis
     public synchronized void onTestSuccess(ITestResult iTestResult) {
         logger.info(StringUtils.repeat("=", 37) + " TEST FINISHED WITH "
                 + ANSI_GREEN + "SUCCESS STATUS " + ANSI_RESET + StringUtils.repeat("=", 38));
+        ExcelEnvironment.setCellData(ExcelEnvironment.getRowNumber(), "PASSED", ExcelEnvironment.getColumnNumber2(),
+                getTestName(iTestResult), ExcelEnvironment.getColumnNumber());
     }
 
     @Override
     public synchronized void onTestFailure(ITestResult iTestResult) {
         logger.info(StringUtils.repeat("=", 38) + " TEST FINISHED WITH "
                 + ANSI_RED + "FAILED STATUS " + ANSI_RESET + StringUtils.repeat("=", 38));
-        //allureSaveTextLog();
-        //xd(iTestResult);
+        ExcelEnvironment.setCellData(ExcelEnvironment.getRowNumber(), "FAILED", ExcelEnvironment.getColumnNumber2(),
+                getTestName(iTestResult), ExcelEnvironment.getColumnNumber());
+        allureSaveTextLog(iTestResult);
     }
 }

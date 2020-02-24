@@ -1,5 +1,6 @@
 package tests;
 
+import com.ExcelEnvironment;
 import com.listeners.TestNGListener_WEB;
 import com.steps.BasePageSteps;
 import com.steps.Hooks;
@@ -29,6 +30,7 @@ public class SocialMedia_Tests extends Hooks {
     @Story("POSITIVE FLOW")
     public void test_1() throws Throwable {
         //ARRANGE//
+        ExcelEnvironment.saveTestResultsXLSX(39);
         final BasePageSteps basePageSteps = new BasePageSteps();
         final SocialMediaPageSteps mediaPageSteps = new SocialMediaPageSteps();
 
@@ -52,6 +54,7 @@ public class SocialMedia_Tests extends Hooks {
     @Story("POSITIVE FLOW")
     public void test_2() throws Throwable {
         //ARRANGE//
+        ExcelEnvironment.saveTestResultsXLSX(40);
         final BasePageSteps basePageSteps = new BasePageSteps();
         final SocialMediaPageSteps mediaPageSteps = new SocialMediaPageSteps();
 
@@ -75,6 +78,7 @@ public class SocialMedia_Tests extends Hooks {
     @Story("POSITIVE FLOW")
     public void test_3() throws Throwable {
         //ARRANGE//
+        ExcelEnvironment.saveTestResultsXLSX(41);
         final BasePageSteps basePageSteps = new BasePageSteps();
         final SocialMediaPageSteps mediaPageSteps = new SocialMediaPageSteps();
 
@@ -98,6 +102,7 @@ public class SocialMedia_Tests extends Hooks {
     @Story("POSITIVE FLOW")
     public void test_4() throws Throwable {
         //ARRANGE//
+        ExcelEnvironment.saveTestResultsXLSX(42);
         final BasePageSteps basePageSteps = new BasePageSteps();
         final SocialMediaPageSteps mediaPageSteps = new SocialMediaPageSteps();
 

@@ -1,6 +1,6 @@
 package tests;
 
-import com.DriverFactory;
+import com.ExcelEnvironment;
 import com.listeners.TestNGListener_API;
 import com.steps.Hooks;
 import io.qameta.allure.*;
@@ -29,8 +29,8 @@ public class API_Tests extends Hooks {
         return RestAssured.baseURI = "http://automationpractice.com/";
     }
 
-    @BeforeMethod
     @Override
+    @BeforeMethod
     public void beforeTest(ITestResult iTestResult) {
         super.beforeTest(iTestResult);
         destroyDriver();
@@ -43,6 +43,7 @@ public class API_Tests extends Hooks {
     @Issue("TAP-043")
     public void test_1() throws Throwable {
         //ARRANGE//
+        ExcelEnvironment.saveTestResultsXLSX(43);
         restHomeURL();
         RequestSpecification requestSpecification = RestAssured.given();
         Response response = requestSpecification.request(Method.GET);

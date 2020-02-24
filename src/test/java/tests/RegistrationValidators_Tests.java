@@ -1,5 +1,6 @@
 package tests;
 
+import com.ExcelEnvironment;
 import com.listeners.TestNGListener_WEB;
 import com.steps.BasePageSteps;
 import com.steps.Hooks;
@@ -29,6 +30,7 @@ public class RegistrationValidators_Tests extends Hooks {
     @Story("NEGATIVE FLOW")
     public void test_1() throws Throwable {
         //ARRANGE//
+        ExcelEnvironment.saveTestResultsXLSX(20);
         final BasePageSteps basePageSteps = new BasePageSteps();
         final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps();
 
@@ -66,6 +68,7 @@ public class RegistrationValidators_Tests extends Hooks {
     @Story("NEGATIVE FLOW")
     public void test_2() throws Throwable {
         //ARRANGE//
+        ExcelEnvironment.saveTestResultsXLSX(21);
         final BasePageSteps basePageSteps = new BasePageSteps();
         final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps();
 
@@ -103,6 +106,7 @@ public class RegistrationValidators_Tests extends Hooks {
     @Story("NEGATIVE FLOW")
     public void test_3() throws Throwable {
         //ARRANGE//
+        ExcelEnvironment.saveTestResultsXLSX(22);
         final BasePageSteps basePageSteps = new BasePageSteps();
         final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps();
 
@@ -142,6 +146,7 @@ public class RegistrationValidators_Tests extends Hooks {
     @Story("NEGATIVE FLOW")
     public void test_4() throws Throwable {
         //ARRANGE//
+        ExcelEnvironment.saveTestResultsXLSX(23);
         final BasePageSteps basePageSteps = new BasePageSteps();
         final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps();
 
@@ -179,6 +184,7 @@ public class RegistrationValidators_Tests extends Hooks {
     @Story("NEGATIVE FLOW")
     public void test_5() throws Throwable {
         //ARRANGE//
+        ExcelEnvironment.saveTestResultsXLSX(24);
         final BasePageSteps basePageSteps = new BasePageSteps();
         final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps();
 
@@ -216,6 +222,7 @@ public class RegistrationValidators_Tests extends Hooks {
     @Story("NEGATIVE FLOW")
     public void test_6() throws Throwable {
         //ARRANGE//
+        ExcelEnvironment.saveTestResultsXLSX(25);
         final BasePageSteps basePageSteps = new BasePageSteps();
         final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps();
 
@@ -253,6 +260,7 @@ public class RegistrationValidators_Tests extends Hooks {
     @Story("NEGATIVE FLOW")
     public void test_7() throws Throwable {
         //ARRANGE//
+        ExcelEnvironment.saveTestResultsXLSX(26);
         final BasePageSteps basePageSteps = new BasePageSteps();
         final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps();
 
@@ -290,6 +298,7 @@ public class RegistrationValidators_Tests extends Hooks {
     @Story("NEGATIVE FLOW")
     public void test_8() throws Throwable {
         //ARRANGE//
+        ExcelEnvironment.saveTestResultsXLSX(27);
         final BasePageSteps basePageSteps = new BasePageSteps();
         final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps();
 
@@ -327,6 +336,7 @@ public class RegistrationValidators_Tests extends Hooks {
     @Story("NEGATIVE FLOW")
     public void test_9() throws Throwable {
         //ARRANGE//
+        ExcelEnvironment.saveTestResultsXLSX(28);
         final BasePageSteps basePageSteps = new BasePageSteps();
         final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps();
 
@@ -363,6 +373,7 @@ public class RegistrationValidators_Tests extends Hooks {
     @Story("NEGATIVE FLOW")
     public void test_10() throws Throwable {
         //ARRANGE//
+        ExcelEnvironment.saveTestResultsXLSX(29);
         final BasePageSteps basePageSteps = new BasePageSteps();
         final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps();
 
@@ -400,6 +411,7 @@ public class RegistrationValidators_Tests extends Hooks {
     @Story("NEGATIVE FLOW")
     public void test_11() throws Throwable {
         //ARRANGE//
+        ExcelEnvironment.saveTestResultsXLSX(30);
         final BasePageSteps basePageSteps = new BasePageSteps();
         final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps();
 

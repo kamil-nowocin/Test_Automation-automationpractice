@@ -50,6 +50,8 @@ public class FrameworkEnvironment {
 
     //STATIC DATA//
     protected static final int TIMEOUT = 15;
+    protected static final int EXCEL_TC_NAME = 0;
+    protected static final int EXCEL_TC_RESULT = 4;
     protected static final String ANSI_RED = "\u001B[31m";
     protected static final String ANSI_RESET = "\u001B[0m";
     protected static final String ANSI_BLUE = "\u001b[34m";
@@ -100,6 +102,10 @@ public class FrameworkEnvironment {
     protected static final String HOST_URL = System.getProperty
             ("selenium.hostURL", "https://localhost:3000");
 
+    public static String getCurrentPath() {
+        return Paths.get(".").toAbsolutePath().normalize().toString();
+    }
+
     protected static void allureWriteProperties() {
         Properties properties = new Properties();
         properties.setProperty("All tests were executed on:", HOME_URL);
@@ -132,39 +138,13 @@ public class FrameworkEnvironment {
     }
 
     @Attachment(value = "TestNG test FAIL logs", type = "text/plain")
-    protected static String allureSaveTextLog(ITestResult iTestResult) {
-        final String fileName = TestNGListener_WEB.getTestName(iTestResult);
-        String currentPath = Paths.get(".").toAbsolutePath().normalize().toString();
-        String path = currentPath
-                + File.separator
-                + "logs"
-                + File.separator;
-        path += fileName + ".log";
-        StringBuilder contentBuilder = new StringBuilder();
-        try (Stream<String> stream = Files.lines(Paths.get(path), StandardCharsets.UTF_8)) {
-            stream.forEach(s -> contentBuilder.append(s).append("\n"));
-        } catch (IOException e) {
-            logger.error("Failed to attach .logs object!", e);
-        }
-        return contentBuilder.toString();
+    protected String allureSaveTextLog(ITestResult iTestResult) {
+        return logBuilder(TestNGListener_WEB.getTestName(iTestResult));
     }
 
     @Attachment(value = "Cucumber scenario FAIL logs", type = "text/plain")
     protected String allureSaveTextLogCucumber(Scenario scenario) {
-        final String fileName = scenario.getName().toUpperCase();
-        String currentPath = Paths.get(".").toAbsolutePath().normalize().toString();
-        String path = currentPath
-                + File.separator
-                + "logs"
-                + File.separator;
-        path += fileName + ".log";
-        StringBuilder contentBuilder = new StringBuilder();
-        try (Stream<String> stream = Files.lines(Paths.get(path), StandardCharsets.UTF_8)) {
-            stream.forEach(s -> contentBuilder.append(s).append("\n"));
-        } catch (IOException e) {
-            logger.error("Failed to attach .logs object!", e);
-        }
-        return contentBuilder.toString();
+        return logBuilder(scenario.toString());
     }
 
     @Attachment(value = "Scenario FAIL screenshot", type = "image/png")
@@ -172,19 +152,40 @@ public class FrameworkEnvironment {
         return ((TakesScreenshot) DriverFactory.driver).getScreenshotAs(OutputType.BYTES);
     }
 
+    protected String logBuilder(String fileName) {
+        String path = getCurrentPath()
+                + File.separator
+                + "logs"
+                + File.separator;
+        path += fileName + ".log";
+        StringBuilder contentBuilder = new StringBuilder();
+        try (Stream<String> stream = Files.lines(Paths.get(path), StandardCharsets.UTF_8)) {
+            stream.forEach(s -> contentBuilder.append(s).append("\n"));
+        } catch (IOException e) {
+            logger.error("Failed to attach .logs object!", e);
+        }
+        return contentBuilder.toString();
+    }
+
     protected void localSaveScreenshotPNG(Scenario scenario) throws IOException {
         byte[] screenshot = ((TakesScreenshot) DriverFactory.driver).getScreenshotAs(OutputType.BYTES);
         scenario.embed(screenshot, "image/png");
         File scrFile = ((TakesScreenshot) DriverFactory.driver).getScreenshotAs(OutputType.FILE);
-        String currentPath = Paths.get(".").toAbsolutePath().normalize().toString();
-        FileUtils.copyFile(scrFile, new File(currentPath + "/screenshots/" + scenario.getName()
-                + "-" + TODAY_DATE + ".png"));
+        FileUtils.copyFile(scrFile, new File(getCurrentPath()
+                + File.separator
+                + "screenshots"
+                + File.separator
+                + scenario.getName()
+                + "-"
+                + TODAY_DATE
+                + ".png"));
     }
 
     protected void deleteOldLogs() {
-        String currentPath = Paths.get(".").toAbsolutePath().normalize().toString();
         try {
-            Files.walk(Paths.get(currentPath + "/logs"))
+            Files.walk(Paths.get(getCurrentPath()
+                    + File.separator
+                    + "logs"))
                     .filter(Files::isRegularFile)
                     .map(Path::toFile)
                     .forEach(File::delete);

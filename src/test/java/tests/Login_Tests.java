@@ -1,5 +1,6 @@
 package tests;
 
+import com.ExcelEnvironment;
 import com.listeners.TestNGListener_WEB;
 import com.steps.BasePageSteps;
 import com.steps.Hooks;
@@ -30,6 +31,7 @@ public class Login_Tests extends Hooks {
     @Story("POSITIVE FLOW")
     public void test_1() throws Throwable {
         //ARRANGE//
+        ExcelEnvironment.saveTestResultsXLSX(9);
         final BasePageSteps basePageSteps = new BasePageSteps();
         final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps();
         final LoginPageSteps loginPageSteps = new LoginPageSteps();
@@ -57,6 +59,7 @@ public class Login_Tests extends Hooks {
     @Story("NEGATIVE FLOW")
     public void test_2() throws Throwable {
         //ARRANGE//
+        ExcelEnvironment.saveTestResultsXLSX(10);
         final BasePageSteps basePageSteps = new BasePageSteps();
         final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps();
         final LoginPageSteps loginPageSteps = new LoginPageSteps();
@@ -84,6 +87,7 @@ public class Login_Tests extends Hooks {
     @Story("NEGATIVE FLOW")
     public void test_3() throws Throwable {
         //ARRANGE//
+        ExcelEnvironment.saveTestResultsXLSX(11);
         final BasePageSteps basePageSteps = new BasePageSteps();
         final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps();
         final LoginPageSteps loginPageSteps = new LoginPageSteps();
@@ -111,6 +115,7 @@ public class Login_Tests extends Hooks {
     @Story("NEGATIVE FLOW")
     public void test_4() throws Throwable {
         //ARRANGE//
+        ExcelEnvironment.saveTestResultsXLSX(12);
         final BasePageSteps basePageSteps = new BasePageSteps();
         final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps();
         final LoginPageSteps loginPageSteps = new LoginPageSteps();

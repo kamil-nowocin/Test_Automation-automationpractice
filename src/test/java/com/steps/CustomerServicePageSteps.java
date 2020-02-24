@@ -81,7 +81,6 @@ public class CustomerServicePageSteps extends FrameworkEnvironment {
         final String userInvalidEmailAddress = basePage.getRandomElementFromResourceBundleList
                 (resourceBundleInvalidEmails.getString("invalidEmails"));
 
-
         //ACT//
         customerServicePage.emailAddressInput.sendKeys(userInvalidEmailAddress);
         logger.info(String.format("User invalid email: %S", userInvalidEmailAddress));
@@ -125,7 +124,7 @@ public class CustomerServicePageSteps extends FrameworkEnvironment {
     @And("I choose file to attach")
     public void iChooseFileToAttach() throws Throwable {
         //ARRANGE//
-        final String fileName = "test.jpg";
+        final String fileName = "testPhoto.jpg";
         String currentPath = Paths.get(".").toAbsolutePath().normalize().toString();
         String path = currentPath
                 + File.separator

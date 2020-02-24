@@ -1,5 +1,6 @@
 package tests;
 
+import com.ExcelEnvironment;
 import com.listeners.TestNGListener_WEB;
 import com.steps.BasePageSteps;
 import com.steps.Hooks;
@@ -29,6 +30,7 @@ public class SearchBox_Tests extends Hooks {
     @Story("POSITIVE FLOW")
     public void test_1() throws Throwable {
         //ARRANGE//
+        ExcelEnvironment.saveTestResultsXLSX(31);
         final BasePageSteps basePageSteps = new BasePageSteps();
         final SearchPageSteps searchPageSteps = new SearchPageSteps();
 
@@ -53,6 +55,7 @@ public class SearchBox_Tests extends Hooks {
     @Story("POSITIVE FLOW")
     public void test_2() throws Throwable {
         //ARRANGE//
+        ExcelEnvironment.saveTestResultsXLSX(32);
         final BasePageSteps basePageSteps = new BasePageSteps();
         final SearchPageSteps searchPageSteps = new SearchPageSteps();
 
@@ -77,6 +80,7 @@ public class SearchBox_Tests extends Hooks {
     @Story("POSITIVE FLOW")
     public void test_3() throws Throwable {
         //ARRANGE//
+        ExcelEnvironment.saveTestResultsXLSX(33);
         final BasePageSteps basePageSteps = new BasePageSteps();
         final SearchPageSteps searchPageSteps = new SearchPageSteps();
 
@@ -101,6 +105,7 @@ public class SearchBox_Tests extends Hooks {
     @Story("NEGATIVE FLOW")
     public void test_4() throws Throwable {
         //ARRANGE//
+        ExcelEnvironment.saveTestResultsXLSX(34);
         final BasePageSteps basePageSteps = new BasePageSteps();
         final SearchPageSteps searchPageSteps = new SearchPageSteps();
 
@@ -125,6 +130,7 @@ public class SearchBox_Tests extends Hooks {
     @Story("POSITIVE FLOW")
     public void test_5() throws Throwable {
         //ARRANGE//
+        ExcelEnvironment.saveTestResultsXLSX(35);
         final BasePageSteps basePageSteps = new BasePageSteps();
         final SearchPageSteps searchPageSteps = new SearchPageSteps();
 
@@ -151,6 +157,7 @@ public class SearchBox_Tests extends Hooks {
     @Story("POSITIVE FLOW")
     public void test_6() throws Throwable {
         //ARRANGE//
+        ExcelEnvironment.saveTestResultsXLSX(36);
         final BasePageSteps basePageSteps = new BasePageSteps();
         final SearchPageSteps searchPageSteps = new SearchPageSteps();
 
@@ -178,6 +185,7 @@ public class SearchBox_Tests extends Hooks {
     @Story("POSITIVE FLOW")
     public void test_7() throws Throwable {
         //ARRANGE//
+        ExcelEnvironment.saveTestResultsXLSX(37);
         final BasePageSteps basePageSteps = new BasePageSteps();
         final SearchPageSteps searchPageSteps = new SearchPageSteps();
 
@@ -194,7 +202,6 @@ public class SearchBox_Tests extends Hooks {
         searchPageSteps.iCanSeeThatResultsAreCorrectlySortedBy("Price: Highest first");
     }
 
-
     @Owner("Kamil Nowocin")
     @Test(priority = 0,
             description = "I would like to use search box and be able to see sorted results by: \"Price: Lowest first\"")
@@ -206,6 +213,7 @@ public class SearchBox_Tests extends Hooks {
     @Flaky
     public void test_8() throws Throwable {
         //ARRANGE//
+        ExcelEnvironment.saveTestResultsXLSX(38);
         final BasePageSteps basePageSteps = new BasePageSteps();
         final SearchPageSteps searchPageSteps = new SearchPageSteps();
 
