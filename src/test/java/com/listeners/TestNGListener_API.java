@@ -52,16 +52,16 @@ public class TestNGListener_API extends FrameworkEnvironment implements ITestLis
     public synchronized void onTestSuccess(ITestResult iTestResult) {
         logger.info(StringUtils.repeat("=", 37) + " TEST FINISHED WITH "
                 + ANSI_GREEN + "SUCCESS STATUS " + ANSI_RESET + StringUtils.repeat("=", 38));
-        ExcelEnvironment.setCellData(ExcelEnvironment.getRowNumber(), "PASSED", ExcelEnvironment.getColumnNumber2(),
-                getTestName(iTestResult), ExcelEnvironment.getColumnNumber());
+        ExcelEnvironment.setCellData(ExcelEnvironment.getExcelRowNumber(), "PASSED", EXCEL_TC_RESULT_COLUMN);
+        ExcelEnvironment.setCellData(ExcelEnvironment.getExcelRowNumber(), getTestName(iTestResult), EXCEL_TC_NAME_COLUMN);
     }
 
     @Override
     public synchronized void onTestFailure(ITestResult iTestResult) {
         logger.info(StringUtils.repeat("=", 38) + " TEST FINISHED WITH "
                 + ANSI_RED + "FAILED STATUS " + ANSI_RESET + StringUtils.repeat("=", 38));
-        ExcelEnvironment.setCellData(ExcelEnvironment.getRowNumber(), "FAILED", ExcelEnvironment.getColumnNumber2(),
-                getTestName(iTestResult), ExcelEnvironment.getColumnNumber());
+        ExcelEnvironment.setCellData(ExcelEnvironment.getExcelRowNumber(), "FAILED", EXCEL_TC_RESULT_COLUMN);
+        ExcelEnvironment.setCellData(ExcelEnvironment.getExcelRowNumber(), getTestName(iTestResult), EXCEL_TC_NAME_COLUMN);
         allureSaveTextLog(iTestResult);
     }
 }

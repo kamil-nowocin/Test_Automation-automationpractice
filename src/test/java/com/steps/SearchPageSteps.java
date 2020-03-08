@@ -4,6 +4,7 @@ import com.FrameworkEnvironment;
 import com.google.common.collect.Ordering;
 import com.pages.SearchPage;
 import com.pages.base.BasePage;
+import com.pages.base.MainPage;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -23,39 +24,42 @@ import java.util.List;
 public class SearchPageSteps extends FrameworkEnvironment {
 
     private BasePage basePage = new BasePage();
+    private MainPage mainPage = new MainPage();
     private SearchPage searchPage = new SearchPage();
 
     @Step("I search for phrase {0}")
     @When("I search for phrase {string}")
     public void iSearchForPhrase(String searchPhrase) throws Throwable {
         //ACT//
-        searchPage.searchBoxInput.sendKeys(searchPhrase);
+        mainPage.searchBoxInput.sendKeys(searchPhrase);
         logger.info(String.format("Search for: %S", searchPhrase));
 
         //ASSERT//
-        Assert.assertEquals(searchPage.searchBoxInput.getAttribute("value").toLowerCase(),
+        Assert.assertEquals(mainPage.searchBoxInput.getAttribute("value").toLowerCase(),
                 searchPhrase.toLowerCase(), VALUE_ERROR);
     }
 
     @Step("I click on search icon")
     @And("I click on search icon")
     public void iClickOnSearchIcon() throws Throwable {
-        searchPage.searchBoxSubmit.click();
+        mainPage.searchBoxSubmit.click();
     }
 
     @Step("I can see numbers of results equals to {0}")
     @Then("I can see numbers of results equals to {string}")
-    public void iCanSeeNumbersOfResultsEqualsTo(String expectedResults) throws Throwable {
+    public void iCanSeeNumbersOfResultsEqualsTo(String expectedCountOfResults) throws Throwable {
         //ARRANGE//
-        final String howManyResults = searchPage.searchResultsNumber.getText().replaceAll("[^\\d]", "");
-        logger.info(String.format("Found results: %S, expected: %S", howManyResults, expectedResults));
+        final String actualCountOfResults = searchPage.searchResultsNumber.getText().replaceAll("[^\\d]", "");
+        logger.info(String.format("Found results: %S, expected: %S", actualCountOfResults, expectedCountOfResults));
+
+        //ACT//
+        if (expectedCountOfResults.equals("0")) {
+            Assert.assertTrue(searchPage.noResultsWereFoundHeader.isDisplayed());
+        }
 
         //ASSERT//
-        Assert.assertEquals(howManyResults, expectedResults, String.format(RESULTS_ERROR, howManyResults, expectedResults));
-//        //TODO
-//        if(expectedResults.equals("0")){
-//            Assert.assertTrue();
-//        }
+        Assert.assertEquals(actualCountOfResults, expectedCountOfResults, String.format(RESULTS_ERROR,
+                actualCountOfResults, expectedCountOfResults));
     }
 
     @Step("I can see that every results which have been found contains phrase {0}")

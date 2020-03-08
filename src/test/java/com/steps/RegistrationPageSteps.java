@@ -1,8 +1,10 @@
 package com.steps;
 
 import com.FrameworkEnvironment;
+import com.pages.AuthenticationPage;
 import com.pages.RegistrationPage;
 import com.pages.base.BasePage;
+import com.pages.base.MainPage;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -11,7 +13,10 @@ import io.qameta.allure.Step;
 import org.apache.commons.lang3.StringUtils;
 import org.testng.Assert;
 
+import java.time.Month;
+import java.time.format.TextStyle;
 import java.util.List;
+import java.util.Locale;
 
 /**
  * Test_Automation-automationpractice
@@ -22,12 +27,14 @@ import java.util.List;
 public class RegistrationPageSteps extends FrameworkEnvironment {
 
     private BasePage basePage = new BasePage();
+    private MainPage mainPage = new MainPage();
     private RegistrationPage registrationPage = new RegistrationPage();
+    private AuthenticationPage authenticationPage = new AuthenticationPage();
 
     @Step("I click on Sign in button")
     @When("I click on Sign in button")
     public void iClickOnSignInButton() throws Throwable {
-        registrationPage.signInButton.click();
+        mainPage.signInButton.click();
     }
 
     @Step("I write an email address")
@@ -37,11 +44,11 @@ public class RegistrationPageSteps extends FrameworkEnvironment {
         final String userValidEmailAddress = tempEmail;
 
         //ACT//
-        registrationPage.emailInput.sendKeys(userValidEmailAddress);
+        authenticationPage.registerNewEmailInput.sendKeys(userValidEmailAddress);
         logger.info(String.format("User valid email: %S", userValidEmailAddress));
 
         //ASSERT//
-        Assert.assertEquals(registrationPage.emailInput.getAttribute("value").toLowerCase(),
+        Assert.assertEquals(authenticationPage.registerNewEmailInput.getAttribute("value").toLowerCase(),
                 userValidEmailAddress.toLowerCase(), VALUE_ERROR);
     }
 
@@ -53,11 +60,11 @@ public class RegistrationPageSteps extends FrameworkEnvironment {
                 (resourceBundleInvalidEmails.getString("invalidEmails"));
 
         //ACT//
-        registrationPage.emailInput.sendKeys(userInvalidEmailAddress);
+        authenticationPage.registerNewEmailInput.sendKeys(userInvalidEmailAddress);
         logger.info(String.format("User invalid email: %S", userInvalidEmailAddress));
 
         //ASSERT//
-        Assert.assertEquals(registrationPage.emailInput.getAttribute("value").toLowerCase(),
+        Assert.assertEquals(authenticationPage.registerNewEmailInput.getAttribute("value").toLowerCase(),
                 userInvalidEmailAddress.toLowerCase(), VALUE_ERROR);
     }
 
@@ -68,18 +75,18 @@ public class RegistrationPageSteps extends FrameworkEnvironment {
         final String userRegisteredEmailAddress = "asfsafas@wp.pl";
 
         //ACT//
-        registrationPage.emailInput.sendKeys(userRegisteredEmailAddress);
+        authenticationPage.registerNewEmailInput.sendKeys(userRegisteredEmailAddress);
         logger.info(String.format("User registered email: %S", userRegisteredEmailAddress));
 
         //ASSERT//
-        Assert.assertEquals(registrationPage.emailInput.getAttribute("value").toLowerCase(),
+        Assert.assertEquals(authenticationPage.registerNewEmailInput.getAttribute("value").toLowerCase(),
                 userRegisteredEmailAddress.toLowerCase(), VALUE_ERROR);
     }
 
     @Step("I click on Create An Account button")
     @And("I click on Create An Account button")
     public void iClickOnCreateAnAccountButton() throws Throwable {
-        registrationPage.createAnAccountButton.click();
+        authenticationPage.createAnAccountButton.click();
     }
 
     @Step("I can see registration page form")
@@ -90,18 +97,19 @@ public class RegistrationPageSteps extends FrameworkEnvironment {
     }
 
     @Then("I can see account creation page form")
-    public void iCanSeeAccountCreationPageForm() {
+    public void iCanSeeAccountCreationPageForm() throws Throwable {
         Assert.assertTrue(basePage.isDisplayed(5, registrationPage.accountCreationForm),
                 String.format(VIEW_ERROR, "Registration page form"));
     }
 
     @Step("I write following data to registration form")
     @And("I write following data to registration form")
-    public RegistrationPageSteps iWriteFollowingDataToRegistrationForm(DataTable dataTable) throws Throwable {
+    public void iWriteFollowingDataToRegistrationForm(DataTable dataTable) throws Throwable {
         //ARRANGE//
         List<List<String>> data = dataTable.asLists();
-        //(data.get(Row).get(Column))//
 
+        //ACT//
+        //(data.get(Row).get(Column))//
         registrationPage.firstNameInput.sendKeys(data.get(1).get(0));
         Assert.assertEquals(registrationPage.firstNameInput.getAttribute("value").toLowerCase(),
                 data.get(1).get(0).toLowerCase(), VALUE_ERROR);
@@ -137,14 +145,13 @@ public class RegistrationPageSteps extends FrameworkEnvironment {
         registrationPage.mobilePhoneInput.sendKeys(data.get(1).get(8));
         Assert.assertEquals(registrationPage.mobilePhoneInput.getAttribute("value").toLowerCase(),
                 data.get(1).get(8).toLowerCase(), VALUE_ERROR);
-        return this;
     }
 
     @Step("I choose gender")
     @And("I choose gender")
     public void iChooseGender() throws Throwable {
         //ARRANGE//
-        final int randomNumber = basePage.randomValue(2, 1);
+        final int randomNumber = basePage.randomIntValue(2, 1);
 
         //ACT//
         if (randomNumber == 1) {
@@ -224,9 +231,9 @@ public class RegistrationPageSteps extends FrameworkEnvironment {
     @And("I choose date of birth")
     public void iChooseDateOfBirth() throws Throwable {
         //ARRANGE//
-        final int day = basePage.randomValue(28, 1);
-        final int month = basePage.randomValue(12, 1);
-        final int year = basePage.randomValue(2019, 1900);
+        final int day = basePage.randomIntValue(28, 1);
+        final int month = basePage.randomIntValue(12, 1);
+        final int year = basePage.randomIntValue(2019, 1900);
 
         //ACT//
         registrationPage.selectFromDropdownByValue(Integer.toString(day), registrationPage.dayOfBirth);
@@ -235,14 +242,19 @@ public class RegistrationPageSteps extends FrameworkEnvironment {
         logger.info(String.format("User birthday: %d-%d-%d ", day, month, year));
 
         //ASSERT//
-        //{TODO}
+        Assert.assertEquals(registrationPage.chosenDayOfBirth.getText().replaceAll("[^\\d]", ""),
+                Integer.toString(day), VALUE_ERROR);
+        Assert.assertEquals(registrationPage.chosenMonthOfBirth.getText().replaceAll("\\s+", "").toUpperCase(),
+                Month.of(month).getDisplayName(TextStyle.FULL_STANDALONE, Locale.forLanguageTag("en-US")).toUpperCase(), VALUE_ERROR);
+        Assert.assertEquals(registrationPage.chosenYearOfBirth.getText().replaceAll("[^\\d]", ""),
+                Integer.toString(year), VALUE_ERROR);
     }
 
     @Step("I sign in to receive newsletter and special offers")
     @And("I sign in to receive newsletter and special offers")
     public void iSignInToReceiveNewsletterAndSpecialOffers() throws Throwable {
         //ARRANGE//
-        int tempRandomValue = basePage.randomValue(3, 1);
+        int tempRandomValue = basePage.randomIntValue(3, 1);
 
         //ACT//
         if (tempRandomValue == 1) {
@@ -467,7 +479,7 @@ public class RegistrationPageSteps extends FrameworkEnvironment {
     @Step("I can see create an account error")
     @Then("I can see create an account error")
     public void iCanSeeCreateAnAccountError() throws Throwable {
-        Assert.assertTrue(basePage.isDisplayed(5, registrationPage.createAnAccountError),
+        Assert.assertTrue(basePage.isDisplayed(5, authenticationPage.createAnAccountError),
                 String.format(VIEW_ERROR, "create an account error"));
     }
 
@@ -484,63 +496,63 @@ public class RegistrationPageSteps extends FrameworkEnvironment {
         switch (stringName.toLowerCase()) {
             case "first name":
                 Assert.assertTrue(basePage.errorValidator(registrationPage.registerError).toLowerCase().contains
-                                (resourceBundleErrorMessages.getString("errorfirstname").toLowerCase()),
-                        String.format(MESSAGE_DIDNT_CONTAIN, resourceBundleErrorMessages.getString("errorfirstname")));
+                                (resourceBundleErrorMessages.getString("error-FirstName").toLowerCase()),
+                        String.format(MESSAGE_DIDNT_CONTAIN, resourceBundleErrorMessages.getString("error-FirstName")));
                 break;
             case "last name":
                 Assert.assertTrue(basePage.errorValidator(registrationPage.registerError).toLowerCase().contains
-                                (resourceBundleErrorMessages.getString("errorlastname").toLowerCase()),
-                        String.format(MESSAGE_DIDNT_CONTAIN, resourceBundleErrorMessages.getString("errorlastname")));
+                                (resourceBundleErrorMessages.getString("error-LastName").toLowerCase()),
+                        String.format(MESSAGE_DIDNT_CONTAIN, resourceBundleErrorMessages.getString("error-LastName")));
                 break;
             case "email address":
                 Assert.assertTrue(basePage.errorValidator(registrationPage.registerError).toLowerCase().contains
-                                (resourceBundleErrorMessages.getString("erroremail").toLowerCase()),
-                        String.format(MESSAGE_DIDNT_CONTAIN, resourceBundleErrorMessages.getString("erroremail")));
+                                (resourceBundleErrorMessages.getString("error-Email").toLowerCase()),
+                        String.format(MESSAGE_DIDNT_CONTAIN, resourceBundleErrorMessages.getString("error-Email")));
                 break;
             case "password":
                 Assert.assertTrue(basePage.errorValidator(registrationPage.registerError).toLowerCase().contains
-                                (resourceBundleErrorMessages.getString("errorpassword").toLowerCase()),
-                        String.format(MESSAGE_DIDNT_CONTAIN, resourceBundleErrorMessages.getString("errorpassword")));
+                                (resourceBundleErrorMessages.getString("error-Password").toLowerCase()),
+                        String.format(MESSAGE_DIDNT_CONTAIN, resourceBundleErrorMessages.getString("error-Password")));
                 break;
             case "address":
                 Assert.assertTrue(basePage.errorValidator(registrationPage.registerError).toLowerCase().contains
-                                (resourceBundleErrorMessages.getString("erroraddress").toLowerCase()),
-                        String.format(MESSAGE_DIDNT_CONTAIN, resourceBundleErrorMessages.getString("erroraddress")));
+                                (resourceBundleErrorMessages.getString("error-Address").toLowerCase()),
+                        String.format(MESSAGE_DIDNT_CONTAIN, resourceBundleErrorMessages.getString("error-Address")));
                 break;
             case "city":
                 Assert.assertTrue(basePage.errorValidator(registrationPage.registerError).toLowerCase().contains
-                                (resourceBundleErrorMessages.getString("errorcity").toLowerCase()),
-                        String.format(MESSAGE_DIDNT_CONTAIN, resourceBundleErrorMessages.getString("errorcity")));
+                                (resourceBundleErrorMessages.getString("error-City").toLowerCase()),
+                        String.format(MESSAGE_DIDNT_CONTAIN, resourceBundleErrorMessages.getString("error-City")));
                 break;
             case "state":
                 Assert.assertTrue(basePage.errorValidator(registrationPage.registerError).toLowerCase().contains
-                                (resourceBundleErrorMessages.getString("errorstate").toLowerCase()),
-                        String.format(MESSAGE_DIDNT_CONTAIN, resourceBundleErrorMessages.getString("errorstate")));
+                                (resourceBundleErrorMessages.getString("error-State").toLowerCase()),
+                        String.format(MESSAGE_DIDNT_CONTAIN, resourceBundleErrorMessages.getString("error-State")));
                 break;
             case "postal code":
                 Assert.assertTrue(basePage.errorValidator(registrationPage.registerError).toLowerCase().contains
-                                (resourceBundleErrorMessages.getString("errorpostalcode").toLowerCase()),
-                        String.format(MESSAGE_DIDNT_CONTAIN, resourceBundleErrorMessages.getString("errorpostalcode")));
+                                (resourceBundleErrorMessages.getString("error-PostalCode").toLowerCase()),
+                        String.format(MESSAGE_DIDNT_CONTAIN, resourceBundleErrorMessages.getString("error-PostalCode")));
                 break;
             case "country":
                 Assert.assertTrue(basePage.errorValidator(registrationPage.registerError).toLowerCase().contains
-                                (resourceBundleErrorMessages.getString("errorcountry").toLowerCase()),
-                        String.format(MESSAGE_DIDNT_CONTAIN, resourceBundleErrorMessages.getString("errorcountry")));
+                                (resourceBundleErrorMessages.getString("error-Country").toLowerCase()),
+                        String.format(MESSAGE_DIDNT_CONTAIN, resourceBundleErrorMessages.getString("error-Country")));
                 break;
             case "mobile phone":
                 Assert.assertTrue(basePage.errorValidator(registrationPage.registerError).toLowerCase().contains
-                                (resourceBundleErrorMessages.getString("errormobilephone").toLowerCase()),
-                        String.format(MESSAGE_DIDNT_CONTAIN, resourceBundleErrorMessages.getString("errormobilephone")));
+                                (resourceBundleErrorMessages.getString("error-MobilePhone").toLowerCase()),
+                        String.format(MESSAGE_DIDNT_CONTAIN, resourceBundleErrorMessages.getString("error-MobilePhone")));
                 break;
             case "email address alias":
                 Assert.assertTrue(basePage.errorValidator(registrationPage.registerError).toLowerCase().contains
-                                (resourceBundleErrorMessages.getString("erroremailalias").toLowerCase()),
-                        String.format(MESSAGE_DIDNT_CONTAIN, resourceBundleErrorMessages.getString("erroremailalias")));
+                                (resourceBundleErrorMessages.getString("error-EmailAlias").toLowerCase()),
+                        String.format(MESSAGE_DIDNT_CONTAIN, resourceBundleErrorMessages.getString("error-EmailAlias")));
                 break;
             case "one element":
                 Assert.assertTrue(basePage.errorValidator(registrationPage.registerError).toLowerCase().contains
-                                (resourceBundleErrorMessages.getString("oneerror").toLowerCase()),
-                        String.format(MESSAGE_DIDNT_CONTAIN, resourceBundleErrorMessages.getString("oneerror")));
+                                (resourceBundleErrorMessages.getString("error-oneError").toLowerCase()),
+                        String.format(MESSAGE_DIDNT_CONTAIN, resourceBundleErrorMessages.getString("error-oneError")));
                 break;
             default:
                 throw new IllegalStateException(String.format(INPUT_ERROR, stringName.toUpperCase()));

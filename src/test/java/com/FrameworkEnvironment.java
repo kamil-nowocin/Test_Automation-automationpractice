@@ -50,8 +50,8 @@ public class FrameworkEnvironment {
 
     //STATIC DATA//
     protected static final int TIMEOUT = 15;
-    protected static final int EXCEL_TC_NAME = 0;
-    protected static final int EXCEL_TC_RESULT = 4;
+    protected static final int EXCEL_TC_NAME_COLUMN = 0;
+    protected static final int EXCEL_TC_RESULT_COLUMN = 4;
     protected static final String ANSI_RED = "\u001B[31m";
     protected static final String ANSI_RESET = "\u001B[0m";
     protected static final String ANSI_BLUE = "\u001b[34m";
@@ -189,7 +189,8 @@ public class FrameworkEnvironment {
                     .filter(Files::isRegularFile)
                     .map(Path::toFile)
                     .forEach(File::delete);
-        } catch (IOException ignored) {
+        } catch (IOException e) {
+            logger.error("Failed to delete logs files!", e);
         }
     }
 }

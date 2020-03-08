@@ -2,9 +2,9 @@ package tests;
 
 import com.ExcelEnvironment;
 import com.listeners.TestNGListener_WEB;
+import com.steps.AuthenticationPageSteps;
 import com.steps.BasePageSteps;
 import com.steps.Hooks;
-import com.steps.LoginPageSteps;
 import com.steps.RegistrationPageSteps;
 import io.qameta.allure.*;
 import org.testng.annotations.Listeners;
@@ -19,7 +19,7 @@ import org.testng.annotations.Test;
 @Epic("Web App Tests")
 @Feature("LOGIN TESTS")
 @Listeners({TestNGListener_WEB.class})
-public class Login_Tests extends Hooks {
+public class Authentication_Tests extends Hooks {
 
     @Owner("Kamil Nowocin")
     @Test(priority = 0,
@@ -34,16 +34,16 @@ public class Login_Tests extends Hooks {
         ExcelEnvironment.saveTestResultsXLSX(9);
         final BasePageSteps basePageSteps = new BasePageSteps();
         final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps();
-        final LoginPageSteps loginPageSteps = new LoginPageSteps();
+        final AuthenticationPageSteps authenticationPageSteps = new AuthenticationPageSteps();
 
         //ACT//
         basePageSteps.iOpenHomePage();
         basePageSteps.iCanSeeAutomationpracticeComWebsite();
         registrationPageSteps.iClickOnSignInButton();
-        loginPageSteps.iCanSeeLoginForm();
-        loginPageSteps.iEnterLogin("thor.odinson@example.com");
-        loginPageSteps.iEnterPassword("12345");
-        loginPageSteps.iClickOnSubmitButton();
+        authenticationPageSteps.iCanSeeLoginForm();
+        authenticationPageSteps.iEnterLogin("thor.odinson@example.com");
+        authenticationPageSteps.iEnterPassword("12345");
+        authenticationPageSteps.iClickOnSubmitButton();
 
         //ASSERT
         registrationPageSteps.iCanSeeWelcomeMessage();
@@ -62,19 +62,19 @@ public class Login_Tests extends Hooks {
         ExcelEnvironment.saveTestResultsXLSX(10);
         final BasePageSteps basePageSteps = new BasePageSteps();
         final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps();
-        final LoginPageSteps loginPageSteps = new LoginPageSteps();
+        final AuthenticationPageSteps authenticationPageSteps = new AuthenticationPageSteps();
 
         //ACT//
         basePageSteps.iOpenHomePage();
         basePageSteps.iCanSeeAutomationpracticeComWebsite();
         registrationPageSteps.iClickOnSignInButton();
-        loginPageSteps.iCanSeeLoginForm();
-        loginPageSteps.iEnterLogin("thanos.ALars@example.com");
-        loginPageSteps.iEnterPassword("12345");
-        loginPageSteps.iClickOnSubmitButton();
+        authenticationPageSteps.iCanSeeLoginForm();
+        authenticationPageSteps.iEnterLogin("thanos.ALars@example.com");
+        authenticationPageSteps.iEnterPassword("12345");
+        authenticationPageSteps.iClickOnSubmitButton();
 
         //ASSERT//
-        loginPageSteps.iCanSeeWarningMessageWithInclude("Authentication failed");
+        authenticationPageSteps.iCanSeeWarningMessageWithInclude("Authentication failed");
     }
 
     @Owner("Kamil Nowocin")
@@ -90,19 +90,19 @@ public class Login_Tests extends Hooks {
         ExcelEnvironment.saveTestResultsXLSX(11);
         final BasePageSteps basePageSteps = new BasePageSteps();
         final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps();
-        final LoginPageSteps loginPageSteps = new LoginPageSteps();
+        final AuthenticationPageSteps authenticationPageSteps = new AuthenticationPageSteps();
 
         //ACT//
         basePageSteps.iOpenHomePage();
         basePageSteps.iCanSeeAutomationpracticeComWebsite();
         registrationPageSteps.iClickOnSignInButton();
-        loginPageSteps.iCanSeeLoginForm();
-        loginPageSteps.iEnterLogin("thor.odinson@example.com");
-        loginPageSteps.iEnterPassword("");
-        loginPageSteps.iClickOnSubmitButton();
+        authenticationPageSteps.iCanSeeLoginForm();
+        authenticationPageSteps.iEnterLogin("thor.odinson@example.com");
+        authenticationPageSteps.iEnterPassword("");
+        authenticationPageSteps.iClickOnSubmitButton();
 
         //ASSERT//
-        loginPageSteps.iCanSeeWarningMessageWithInclude("Password is required");
+        authenticationPageSteps.iCanSeeWarningMessageWithInclude("Password is required");
     }
 
     @Owner("Kamil Nowocin")
@@ -118,18 +118,18 @@ public class Login_Tests extends Hooks {
         ExcelEnvironment.saveTestResultsXLSX(12);
         final BasePageSteps basePageSteps = new BasePageSteps();
         final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps();
-        final LoginPageSteps loginPageSteps = new LoginPageSteps();
+        final AuthenticationPageSteps authenticationPageSteps = new AuthenticationPageSteps();
 
         //ACT//
         basePageSteps.iOpenHomePage();
         basePageSteps.iCanSeeAutomationpracticeComWebsite();
         registrationPageSteps.iClickOnSignInButton();
-        loginPageSteps.iCanSeeLoginForm();
-        loginPageSteps.iEnterLogin("");
-        loginPageSteps.iEnterPassword("12345");
-        loginPageSteps.iClickOnSubmitButton();
+        authenticationPageSteps.iCanSeeLoginForm();
+        authenticationPageSteps.iEnterLogin("");
+        authenticationPageSteps.iEnterPassword("12345");
+        authenticationPageSteps.iClickOnSubmitButton();
 
         //ASSERT//
-        loginPageSteps.iCanSeeWarningMessageWithInclude("An email address required");
+        authenticationPageSteps.iCanSeeWarningMessageWithInclude("An email address required");
     }
 }

@@ -15,12 +15,6 @@ import java.util.List;
 
 public class SearchPage extends BasePage {
 
-    @FindBy(how = How.XPATH, using = "//input[@class='search_query form-control ac_input']")
-    public WebElement searchBoxInput;
-
-    @FindBy(how = How.XPATH, using = "//form[@id='searchbox']//button[@type='submit']")
-    public WebElement searchBoxSubmit;
-
     @FindBy(how = How.XPATH, using = "//span[@class='heading-counter']")
     public WebElement searchResultsNumber;
 

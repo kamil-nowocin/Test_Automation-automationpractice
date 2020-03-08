@@ -2,7 +2,9 @@ package com.steps;
 
 import com.DriverFactory;
 import com.pages.base.BasePage;
+import com.pages.base.MainPage;
 import cucumber.api.java.en.Given;
+import cucumber.api.java.en.When;
 import io.qameta.allure.Step;
 import org.testng.Assert;
 
@@ -15,6 +17,9 @@ import org.testng.Assert;
 public class BasePageSteps extends DriverFactory {
 
     private BasePage basePage = new BasePage();
+    private MainPage mainPage = new MainPage();
+    private AuthenticationPageSteps authenticationPageSteps = new AuthenticationPageSteps();
+    private RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps();
 
     @Step("I open home page")
     @Given("I open home page")
@@ -40,5 +45,30 @@ public class BasePageSteps extends DriverFactory {
 
         //ASSERT//
         Assert.assertTrue(isPageReadyToExecuteTests, PAGE_ERROR);
+    }
+
+    @Step("I am logged as customer {string} using {string} password")
+    @When("I am logged as customer {string} using {string} password")
+    public void iAmLoggedAsCustomerUsingPassword(String email, String password) throws Throwable {
+        //ARRANGE//
+        final String defaultUserName = "Thor Odinson";
+
+        //ACT//
+        registrationPageSteps.iClickOnSignInButton();
+        authenticationPageSteps.iEnterLogin(email);
+        authenticationPageSteps.iEnterPassword(password);
+        authenticationPageSteps.iClickOnSubmitButton();
+
+        //ASSERT//
+        Assert.assertEquals(mainPage.loggedUser.getText().toUpperCase(), defaultUserName.toUpperCase(), VALUE_ERROR);
+    }
+
+    @Step("I am on MyAccount details page")
+    @Given("I am on MyAccount details page")
+    public void iAmOnMyAccountDetailsPage() {
+        //ARRANGE//
+        //ACT//
+        //ASSERT//
+        //TODO
     }
 }

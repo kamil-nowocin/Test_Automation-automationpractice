@@ -3,6 +3,7 @@ package com.steps;
 import com.FrameworkEnvironment;
 import com.pages.CustomerServicePage;
 import com.pages.base.BasePage;
+import com.pages.base.MainPage;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -22,12 +23,13 @@ import java.nio.file.Paths;
 public class CustomerServicePageSteps extends FrameworkEnvironment {
 
     private BasePage basePage = new BasePage();
+    private MainPage mainPage = new MainPage();
     private CustomerServicePage customerServicePage = new CustomerServicePage();
 
     @Step("I click on Contact Us button")
     @When("I click on Contact Us button")
     public void iClickOnContactUsButton() throws Throwable {
-        customerServicePage.contactUsButton.click();
+        mainPage.contactUsButton.click();
     }
 
     @Step("I can see Contact Us form")
@@ -94,7 +96,7 @@ public class CustomerServicePageSteps extends FrameworkEnvironment {
     @And("I write order reference")
     public void iWriteOrderReference() throws Throwable {
         //ARRANGE//
-        final String orderReference = basePage.randomString(10);
+        final String orderReference = basePage.randomStringValue(10);
 
         //ACT//
         customerServicePage.orderReferenceInput.sendKeys(orderReference);

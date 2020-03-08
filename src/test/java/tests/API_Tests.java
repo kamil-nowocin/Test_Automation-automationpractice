@@ -5,14 +5,12 @@ import com.listeners.TestNGListener_API;
 import com.steps.Hooks;
 import io.qameta.allure.*;
 import io.restassured.RestAssured;
-import io.restassured.http.Method;
-import io.restassured.response.Response;
-import io.restassured.specification.RequestSpecification;
-import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+
+import static io.restassured.RestAssured.given;
 
 /**
  * Test_Automation-automationpractice
@@ -30,7 +28,7 @@ public class API_Tests extends Hooks {
     }
 
     @Override
-    @BeforeMethod
+    @BeforeMethod(description = "Setting up Test Class")
     public void beforeTest(ITestResult iTestResult) {
         super.beforeTest(iTestResult);
         destroyDriver();
@@ -44,14 +42,8 @@ public class API_Tests extends Hooks {
     public void test_1() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(43);
-        restHomeURL();
-        RequestSpecification requestSpecification = RestAssured.given();
-        Response response = requestSpecification.request(Method.GET);
 
         //ACT//
-        int actualResponse = response.getStatusCode();
-
-        //ASSERT//
-        Assert.assertEquals(actualResponse, 200);
+        given().when().get(restHomeURL()).then().assertThat().statusCode(200);
     }
 }

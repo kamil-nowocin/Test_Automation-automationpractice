@@ -88,12 +88,12 @@ public class BasePage extends FrameworkEnvironment {
         }
     }
 
-    public int randomValue(int max, int min) {
+    public int randomIntValue(int max, int min) {
         Random random = new Random();
         return random.nextInt((max - min) + 1) + min;
     }
 
-    public String randomString(int length) {
+    public String randomStringValue(int length) {
         String characters = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
         SecureRandom secureRandom = new SecureRandom();
         StringBuilder stringBuilder = new StringBuilder(length);
@@ -110,7 +110,8 @@ public class BasePage extends FrameworkEnvironment {
     public boolean isPageReady() {
         try {
             WebDriverWait wait = new WebDriverWait(driver, 10);
-            wait.until(webDriver -> ((JavascriptExecutor) webDriver).executeScript("return document.readyState").equals("complete"));
+            wait.until(webDriver ->
+                    ((JavascriptExecutor) webDriver).executeScript("return document.readyState").equals("complete"));
         } catch (WebDriverException e) {
             logger.error(String.format("Page wasn't ready to execute tests: %s", driver.getCurrentUrl()));
             return false;
@@ -129,7 +130,7 @@ public class BasePage extends FrameworkEnvironment {
         return resourceBundleData.get(random.nextInt(resourceBundleData.size()));
     }
 
-    //This method is just for testing purpose, it shouldn't be used in development environment//
+    //This method is just for testing purpose, it shouldn't be used in development environment
     public void sleep(int seconds) {
         try {
             Thread.sleep(seconds * 1000);

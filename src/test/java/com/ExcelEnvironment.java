@@ -17,42 +17,27 @@ import java.io.FileOutputStream;
 
 public class ExcelEnvironment extends FrameworkEnvironment {
 
-    public static String testDataExcelPath = null;
-    public static int rowNumber;
-    public static int columnNumber;
-    public static int columnNumber2;
+    private static final String testDataExcelFileName = "testdata.xlsx";
+    private static String testDataExcelPath = null;
     private static XSSFWorkbook excelWorkBook;
     private static XSSFSheet excelSheet;
-    private static XSSFCell excelCell;
-    private static XSSFCell excelCell2;
     private static XSSFRow excelRow;
-    private static final String testDataExcelFileName = "testdata.xlsx";
 
-    public static void setRowNumber(int _rowNumber) {
-        rowNumber = _rowNumber;
+    public static int excelRowNumber;
+
+    public static void setExcelRowNumber(int _rowNumber) {
+        excelRowNumber = _rowNumber;
     }
 
-    public static int getRowNumber() {
-        return rowNumber;
+    public static int getExcelRowNumber() {
+        return excelRowNumber;
     }
 
-    public static void setColumnNumber(int _columnNumber) {
-        columnNumber = _columnNumber;
+    public static void saveTestResultsXLSX(int whichRowNumber) {
+        setExcelRowNumber(whichRowNumber);
     }
 
-    public static int getColumnNumber() {
-        return columnNumber;
-    }
-
-    public static void setColumnNumber2(int _columnNumber2) {
-        columnNumber2 = _columnNumber2;
-    }
-
-    public static int getColumnNumber2() {
-        return columnNumber2;
-    }
-
-    public static void setExcelSheet(String sheetName) {
+    public static void setExcelSheet(String excelSheetName) {
         testDataExcelPath = FrameworkEnvironment.getCurrentPath()
                 + File.separator
                 + "src"
@@ -66,35 +51,22 @@ public class ExcelEnvironment extends FrameworkEnvironment {
         try {
             FileInputStream ExcelFile = new FileInputStream(testDataExcelPath + testDataExcelFileName);
             excelWorkBook = new XSSFWorkbook(ExcelFile);
-            excelSheet = excelWorkBook.getSheet(sheetName);
+            excelSheet = excelWorkBook.getSheet(excelSheetName);
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public static XSSFRow getRowData(int RowNum) {
-        try {
-            excelRow = excelSheet.getRow(RowNum);
-            return excelRow;
-        } catch (Exception e) {
-            throw (e);
-        }
+    public static XSSFRow getRowData(int rowNumber) {
+        excelRow = excelSheet.getRow(rowNumber);
+        return excelRow;
     }
 
-    public static void setCellData(int RowNum, String firstValue, int ColNum, String secondValue, int ColNum2) {
+    public static void setCellData(int rowNumber, String stringValue, int columnNumber) {
         try {
-            excelRow = excelSheet.getRow(RowNum);
-            excelCell = excelRow.getCell(ColNum);
-            excelCell2 = excelRow.getCell(ColNum2);
-            if (excelCell == null) {
-                excelCell = excelRow.createCell(ColNum);
-                excelCell.setCellValue(firstValue);
-                excelCell2 = excelRow.createCell(ColNum2);
-                excelCell2.setCellValue(secondValue);
-            } else {
-                excelCell.setCellValue(firstValue);
-                excelCell2.setCellValue(secondValue);
-            }
+            excelRow = excelSheet.getRow(rowNumber);
+            XSSFCell excelCell = excelRow.getCell(columnNumber);
+            excelCell.setCellValue(stringValue);
             FileOutputStream fileOut = new FileOutputStream(testDataExcelPath + testDataExcelFileName);
             excelWorkBook.write(fileOut);
             fileOut.flush();
@@ -102,11 +74,5 @@ public class ExcelEnvironment extends FrameworkEnvironment {
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
-
-    public static void saveTestResultsXLSX(int whichRowNumber) {
-        ExcelEnvironment.setRowNumber(whichRowNumber);
-        ExcelEnvironment.setColumnNumber(EXCEL_TC_NAME);
-        ExcelEnvironment.setColumnNumber2(EXCEL_TC_RESULT);
     }
 }

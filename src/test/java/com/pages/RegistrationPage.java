@@ -13,18 +13,6 @@ import org.openqa.selenium.support.How;
 
 public class RegistrationPage extends BasePage {
 
-    @FindBy(how = How.CSS, using = "#header > div.nav > div > div > nav > div.header_user_info > a")
-    public WebElement signInButton;
-
-    @FindBy(how = How.ID, using = "email_create")
-    public WebElement emailInput;
-
-    @FindBy(how = How.ID, using = "SubmitCreate")
-    public WebElement createAnAccountButton;
-
-    @FindBy(how = How.ID, using = "create_account_error")
-    public WebElement createAnAccountError;
-
     @FindBy(how = How.CSS, using = "#center_column > div")
     public WebElement registerError;
 
@@ -58,11 +46,20 @@ public class RegistrationPage extends BasePage {
     @FindBy(how = How.ID, using = "days")
     public WebElement dayOfBirth;
 
+    @FindBy(how = How.XPATH, using = "//div[@id='uniform-days']//span")
+    public WebElement chosenDayOfBirth;
+
     @FindBy(how = How.ID, using = "months")
     public WebElement monthOfBirth;
 
+    @FindBy(how = How.XPATH, using = "//div[@id='uniform-months']//span")
+    public WebElement chosenMonthOfBirth;
+
     @FindBy(how = How.ID, using = "years")
     public WebElement yearOfBirth;
+
+    @FindBy(how = How.XPATH, using = "//div[@id='uniform-years']//span")
+    public WebElement chosenYearOfBirth;
 
     @FindBy(how = How.ID, using = "newsletter")
     public WebElement newsletterCheckbox;
