@@ -1,0 +1,28 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+18:36:52 DEBUG io.github.bonigarcia.wdm.Preferences - Preference chrome=80 (valid until 2020-03-09 18:30:56)
+18:36:52 DEBUG io.github.bonigarcia.wdm.Preferences - Preference chrome80=80.0.3987.106 (valid until 2020-03-09 18:30:56)
+18:36:52 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 80.0.3987.106 (since Google Chrome 80 is installed in your machine)
+18:36:52 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 80.0.3987.106 found in cache
+18:36:52 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.m2/repository/webdriver/chromedriver/linux64/80.0.3987.106/chromedriver
+18:36:52 INFO  com.steps.Hooks - Chosen executor: CHROME
+18:36:52 INFO  com.steps.Hooks - ================================================ TEST STARTED ================================================
+18:36:52 INFO  com.steps.Hooks - [34mTEST NAME: I WOULD LIKE TO USE SEARCH BOX AND BE ABLE TO SEE SORTED RESULTS BY: "PRICE: HIGHEST FIRST"[0m
+18:36:54 INFO  com.steps.Hooks - Search for: PRINTED DRESS
+18:36:55 INFO  com.steps.Hooks - Found results: 5, expected: 5
+18:36:55 INFO  com.steps.Hooks - Chosen sort option: PRICE: HIGHEST FIRST
+18:36:55 INFO  com.steps.Hooks - Sorted option: PRICE: HIGHEST FIRST
+18:36:56 INFO  com.steps.Hooks - [31mTEST WILL BE REPEATED (2/2): I WOULD LIKE TO USE SEARCH BOX AND BE ABLE TO SEE SORTED RESULTS BY: "PRICE: HIGHEST FIRST"[0m
+18:36:56 DEBUG io.github.bonigarcia.wdm.Preferences - Preference chrome=80 (valid until 2020-03-09 18:30:56)
+18:36:56 DEBUG io.github.bonigarcia.wdm.Preferences - Preference chrome80=80.0.3987.106 (valid until 2020-03-09 18:30:56)
+18:36:56 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 80.0.3987.106 (since Google Chrome 80 is installed in your machine)
+18:36:56 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 80.0.3987.106 found in cache
+18:36:56 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.m2/repository/webdriver/chromedriver/linux64/80.0.3987.106/chromedriver
+18:36:56 INFO  com.steps.Hooks - Chosen executor: CHROME
+18:36:56 INFO  com.steps.Hooks - ================================================ TEST STARTED ================================================
+18:36:56 INFO  com.steps.Hooks - [34mTEST NAME: I WOULD LIKE TO USE SEARCH BOX AND BE ABLE TO SEE SORTED RESULTS BY: "PRICE: HIGHEST FIRST"[0m
+18:36:58 INFO  com.steps.Hooks - Search for: PRINTED DRESS
+18:36:59 INFO  com.steps.Hooks - Found results: 5, expected: 5
+18:36:59 INFO  com.steps.Hooks - Chosen sort option: PRICE: HIGHEST FIRST
+18:36:59 INFO  com.steps.Hooks - Sorted option: PRICE: HIGHEST FIRST
+18:36:59 INFO  com.steps.Hooks - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+18:37:00 ERROR com.steps.Hooks - java.lang.AssertionError: Results which have been found didn't match expected PRICE: HIGHEST FIRST sorting results!: Lists differ at element [1]: 3050 != 2898 expected [3050] but found [2898]
