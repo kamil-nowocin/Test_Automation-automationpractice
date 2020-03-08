@@ -1,0 +1,28 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+17:59:22 DEBUG io.github.bonigarcia.wdm.Preferences - Preference chrome=80 (valid until 2020-03-09 17:56:07)
+17:59:22 DEBUG io.github.bonigarcia.wdm.Preferences - Preference chrome80=80.0.3987.106 (valid until 2020-03-09 17:56:07)
+17:59:22 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 80.0.3987.106 (since Google Chrome 80 is installed in your machine)
+17:59:22 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 80.0.3987.106 found in cache
+17:59:22 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.m2/repository/webdriver/chromedriver/linux64/80.0.3987.106/chromedriver
+17:59:22 INFO  com.steps.Hooks - Chosen executor: CHROME
+17:59:23 INFO  com.steps.Hooks - ================================================ TEST STARTED ================================================
+17:59:23 INFO  com.steps.Hooks - [34mTEST NAME: I WOULD LIKE TO SEE REGISTRATION ERROR, WHEN I DON'T FILL POSTAL CODE INPUT[0m
+17:59:25 INFO  com.steps.Hooks - User valid email: TOUGHHARWOOD@HOTMAIL.COM
+18:00:12 ERROR com.steps.Hooks - Couldn't display element: Proxy element for: DefaultElementLocator 'By.cssSelector: #create-account_form > h3' 
+18:00:12 INFO  com.steps.Hooks - [31mTEST WILL BE REPEATED (2/2): I WOULD LIKE TO SEE REGISTRATION ERROR, WHEN I DON'T FILL POSTAL CODE INPUT[0m
+18:00:12 DEBUG io.github.bonigarcia.wdm.Preferences - Preference chrome=80 (valid until 2020-03-09 17:56:07)
+18:00:12 DEBUG io.github.bonigarcia.wdm.Preferences - Preference chrome80=80.0.3987.106 (valid until 2020-03-09 17:56:07)
+18:00:12 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 80.0.3987.106 (since Google Chrome 80 is installed in your machine)
+18:00:12 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 80.0.3987.106 found in cache
+18:00:12 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.m2/repository/webdriver/chromedriver/linux64/80.0.3987.106/chromedriver
+18:00:12 INFO  com.steps.Hooks - Chosen executor: CHROME
+18:00:12 INFO  com.steps.Hooks - ================================================ TEST STARTED ================================================
+18:00:12 INFO  com.steps.Hooks - [34mTEST NAME: I WOULD LIKE TO SEE REGISTRATION ERROR, WHEN I DON'T FILL POSTAL CODE INPUT[0m
+18:00:14 INFO  com.steps.Hooks - User valid email: TEINDSAUNDRA@YAHOO.COM
+18:00:16 INFO  com.steps.Hooks - Chosen gender: Female
+18:00:16 INFO  com.steps.Hooks - User first name: KATHY
+18:00:16 INFO  com.steps.Hooks - User last name: RABINOVICH
+18:00:16 INFO  com.steps.Hooks - User password: PEDI'CAB7
+18:00:16 INFO  com.steps.Hooks - User birthday: 2-3-1947 
+18:00:16 INFO  com.steps.Hooks - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+18:00:17 ERROR com.steps.Hooks - java.lang.AssertionError: Value didn't match expected value! expected [3] but found [MARCH]

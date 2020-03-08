@@ -1,0 +1,30 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+17:57:53 DEBUG io.github.bonigarcia.wdm.Preferences - Preference chrome=80 (valid until 2020-03-09 17:56:07)
+17:57:53 DEBUG io.github.bonigarcia.wdm.Preferences - Preference chrome80=80.0.3987.106 (valid until 2020-03-09 17:56:07)
+17:57:53 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 80.0.3987.106 (since Google Chrome 80 is installed in your machine)
+17:57:53 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 80.0.3987.106 found in cache
+17:57:53 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.m2/repository/webdriver/chromedriver/linux64/80.0.3987.106/chromedriver
+17:57:54 INFO  com.steps.Hooks - Chosen executor: CHROME
+17:57:54 INFO  com.steps.Hooks - ================================================ TEST STARTED ================================================
+17:57:54 INFO  com.steps.Hooks - [34mTEST NAME: I WOULD LIKE TO SEE REGISTRATION ERROR, WHEN I DON'T FILL FIRST NAME INPUT[0m
+17:57:56 INFO  com.steps.Hooks - User valid email: HEXBRITTANY@GMX.COM
+17:57:57 INFO  com.steps.Hooks - Chosen gender: Male
+17:57:57 INFO  com.steps.Hooks - User last name: BORUM
+17:57:57 INFO  com.steps.Hooks - User password: FOREG!OERS
+17:57:58 INFO  com.steps.Hooks - User birthday: 16-3-1945 
+17:57:58 INFO  com.steps.Hooks - [31mTEST WILL BE REPEATED (2/2): I WOULD LIKE TO SEE REGISTRATION ERROR, WHEN I DON'T FILL FIRST NAME INPUT[0m
+17:57:58 DEBUG io.github.bonigarcia.wdm.Preferences - Preference chrome=80 (valid until 2020-03-09 17:56:07)
+17:57:58 DEBUG io.github.bonigarcia.wdm.Preferences - Preference chrome80=80.0.3987.106 (valid until 2020-03-09 17:56:07)
+17:57:58 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 80.0.3987.106 (since Google Chrome 80 is installed in your machine)
+17:57:58 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 80.0.3987.106 found in cache
+17:57:58 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.m2/repository/webdriver/chromedriver/linux64/80.0.3987.106/chromedriver
+17:57:58 INFO  com.steps.Hooks - Chosen executor: CHROME
+17:57:59 INFO  com.steps.Hooks - ================================================ TEST STARTED ================================================
+17:57:59 INFO  com.steps.Hooks - [34mTEST NAME: I WOULD LIKE TO SEE REGISTRATION ERROR, WHEN I DON'T FILL FIRST NAME INPUT[0m
+17:58:01 INFO  com.steps.Hooks - User valid email: WHACKINGCOOLS@LIVE.COM
+17:58:02 INFO  com.steps.Hooks - Chosen gender: Female
+17:58:02 INFO  com.steps.Hooks - User last name: SEKEL
+17:58:02 INFO  com.steps.Hooks - User password: PRAEPOSTO?R
+17:58:03 INFO  com.steps.Hooks - User birthday: 12-7-1900 
+17:58:03 INFO  com.steps.Hooks - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+17:58:03 ERROR com.steps.Hooks - java.lang.AssertionError: Value didn't match expected value! expected [7] but found [JULY]
