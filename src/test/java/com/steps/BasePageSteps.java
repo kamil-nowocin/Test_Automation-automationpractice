@@ -65,7 +65,7 @@ public class BasePageSteps extends DriverFactory {
 
     @Step("I am on MyAccount details page")
     @Given("I am on MyAccount details page")
-    public void iAmOnMyAccountDetailsPage() {
+    public void iAmOnMyAccountDetailsPage() throws Throwable {
         //ARRANGE//
         //ACT//
         //ASSERT//

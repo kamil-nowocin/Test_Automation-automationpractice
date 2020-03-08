@@ -24,7 +24,7 @@ public class PaymentSteps extends DriverFactory {
 
     @Step("I click on Proceed To Checkout button")
     @And("I click on Proceed To Checkout button")
-    public void iClickOnProceedToCheckoutButton() {
+    public void iClickOnProceedToCheckoutButton() throws Throwable {
         //ARRANGE//
         //ACT//
         //ASSERT//
