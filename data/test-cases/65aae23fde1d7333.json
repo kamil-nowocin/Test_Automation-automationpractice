@@ -1,0 +1,317 @@
+{
+  "uid" : "65aae23fde1d7333",
+  "name" : "I would like to see registration error, when I don't fill city input",
+  "fullName" : "tests.RegistrationValidators_Tests.test_6",
+  "historyId" : "e5969733590005c0a6c360b72d6c2dd2",
+  "time" : {
+    "start" : 1583772547939,
+    "stop" : 1583772599633,
+    "duration" : 51694
+  },
+  "description" : "As a user I would like to see the error message where I made a mistake in the registration page form ->\nI would like to see registration error, when I don't fill city input",
+  "descriptionHtml" : "<p>As a user I would like to see the error message where I made a mistake in the registration page form -&gt;\nI would like to see registration error, when I don't fill city input</p>\n",
+  "status" : "failed",
+  "statusMessage" : "Element wasn't displayed REGISTRATION PAGE FORM! did not expect to find [true] but found [false]",
+  "statusTrace" : "java.lang.AssertionError: Element wasn't displayed REGISTRATION PAGE FORM! did not expect to find [true] but found [false]\n\tat org.testng.Assert.fail(Assert.java:97)\n\tat org.testng.Assert.failNotEquals(Assert.java:969)\n\tat org.testng.Assert.assertTrue(Assert.java:43)\n\tat com.steps.RegistrationPageSteps.iCanSeeRegistrationPageForm_aroundBody10(RegistrationPageSteps.java:88)\n\tat com.steps.RegistrationPageSteps$AjcClosure11.run(RegistrationPageSteps.java:1)\n\tat org.aspectj.runtime.reflect.JoinPointImpl.proceed(JoinPointImpl.java:149)\n\tat io.qameta.allure.aspects.StepsAspects.step(StepsAspects.java:50)\n\tat com.steps.RegistrationPageSteps.iCanSeeRegistrationPageForm(RegistrationPageSteps.java:88)\n\tat tests.RegistrationValidators_Tests.test_6(RegistrationValidators_Tests.java:235)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)\n\tat org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)\n\tat org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:204)\n\tat org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)\n\tat org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)\n\tat org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)\n\tat org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)\n\tat org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)\n\tat java.util.ArrayList.forEach(ArrayList.java:1255)\n\tat org.testng.TestRunner.privateRun(TestRunner.java:770)\n\tat org.testng.TestRunner.run(TestRunner.java:591)\n\tat org.testng.SuiteRunner.runTest(SuiteRunner.java:402)\n\tat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)\n\tat org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)\n\tat org.testng.SuiteRunner.run(SuiteRunner.java:304)\n\tat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)\n\tat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)\n\tat org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)\n\tat org.testng.TestNG.runSuitesLocally(TestNG.java:1102)\n\tat org.testng.TestNG.runSuites(TestNG.java:1032)\n\tat org.testng.TestNG.run(TestNG.java:1000)\n\tat org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:139)\n\tat org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:89)\n\tat org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)\n\tat org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)\n\tat org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)\n\tat org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)\n\tat com.sun.proxy.$Proxy1.stop(Unknown Source)\n\tat org.gradle.api.internal.tasks.testing.worker.TestWorker.stop(TestWorker.java:123)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)\n\tat org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)\n\tat org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:155)\n\tat org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:137)\n\tat org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)\n\tat org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)\n\tat org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:46)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)\n\tat org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55)\n\tat java.lang.Thread.run(Thread.java:748)\n",
+  "flaky" : true,
+  "newFailed" : true,
+  "beforeStages" : [ {
+    "name" : "Setting up Test Class",
+    "time" : {
+      "start" : 1583772547334,
+      "stop" : 1583772547936,
+      "duration" : 602
+    },
+    "description" : "Setting up Test Class",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "Setting up data Excel File",
+    "time" : {
+      "start" : 1583772043897,
+      "stop" : 1583772045165,
+      "duration" : 1268
+    },
+    "description" : "Setting up data Excel File",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "As a user I would like to see the error message where I made a mistake in the registration page form ->\nI would like to see registration error, when I don't fill city input",
+    "status" : "failed",
+    "statusMessage" : "Element wasn't displayed REGISTRATION PAGE FORM! did not expect to find [true] but found [false]",
+    "statusTrace" : "java.lang.AssertionError: Element wasn't displayed REGISTRATION PAGE FORM! did not expect to find [true] but found [false]\n\tat org.testng.Assert.fail(Assert.java:97)\n\tat org.testng.Assert.failNotEquals(Assert.java:969)\n\tat org.testng.Assert.assertTrue(Assert.java:43)\n\tat com.steps.RegistrationPageSteps.iCanSeeRegistrationPageForm_aroundBody10(RegistrationPageSteps.java:88)\n\tat com.steps.RegistrationPageSteps$AjcClosure11.run(RegistrationPageSteps.java:1)\n\tat org.aspectj.runtime.reflect.JoinPointImpl.proceed(JoinPointImpl.java:149)\n\tat io.qameta.allure.aspects.StepsAspects.step(StepsAspects.java:50)\n\tat com.steps.RegistrationPageSteps.iCanSeeRegistrationPageForm(RegistrationPageSteps.java:88)\n\tat tests.RegistrationValidators_Tests.test_6(RegistrationValidators_Tests.java:235)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)\n\tat org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)\n\tat org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:204)\n\tat org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)\n\tat org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)\n\tat org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)\n\tat org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)\n\tat org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)\n\tat java.util.ArrayList.forEach(ArrayList.java:1255)\n\tat org.testng.TestRunner.privateRun(TestRunner.java:770)\n\tat org.testng.TestRunner.run(TestRunner.java:591)\n\tat org.testng.SuiteRunner.runTest(SuiteRunner.java:402)\n\tat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)\n\tat org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)\n\tat org.testng.SuiteRunner.run(SuiteRunner.java:304)\n\tat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)\n\tat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)\n\tat org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)\n\tat org.testng.TestNG.runSuitesLocally(TestNG.java:1102)\n\tat org.testng.TestNG.runSuites(TestNG.java:1032)\n\tat org.testng.TestNG.run(TestNG.java:1000)\n\tat org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:139)\n\tat org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:89)\n\tat org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)\n\tat org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)\n\tat org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)\n\tat org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)\n\tat com.sun.proxy.$Proxy1.stop(Unknown Source)\n\tat org.gradle.api.internal.tasks.testing.worker.TestWorker.stop(TestWorker.java:123)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)\n\tat org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)\n\tat org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:155)\n\tat org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:137)\n\tat org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)\n\tat org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)\n\tat org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:46)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)\n\tat org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55)\n\tat java.lang.Thread.run(Thread.java:748)\n",
+    "steps" : [ {
+      "name" : "I open home page",
+      "time" : {
+        "start" : 1583772547939,
+        "stop" : 1583772549969,
+        "duration" : 2030
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I can see automationpractice.com website",
+      "time" : {
+        "start" : 1583772549970,
+        "stop" : 1583772549983,
+        "duration" : 13
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I click on Sign in button",
+      "time" : {
+        "start" : 1583772549983,
+        "stop" : 1583772552097,
+        "duration" : 2114
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I write an email address",
+      "time" : {
+        "start" : 1583772552098,
+        "stop" : 1583772552315,
+        "duration" : 217
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I click on Create An Account button",
+      "time" : {
+        "start" : 1583772552315,
+        "stop" : 1583772554462,
+        "duration" : 2147
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I can see registration page form",
+      "time" : {
+        "start" : 1583772554462,
+        "stop" : 1583772599531,
+        "duration" : 45069
+      },
+      "status" : "failed",
+      "statusMessage" : "Element wasn't displayed REGISTRATION PAGE FORM! did not expect to find [true] but found [false]",
+      "statusTrace" : "java.lang.AssertionError: Element wasn't displayed REGISTRATION PAGE FORM! did not expect to find [true] but found [false]\n\tat org.testng.Assert.fail(Assert.java:97)\n\tat org.testng.Assert.failNotEquals(Assert.java:969)\n\tat org.testng.Assert.assertTrue(Assert.java:43)\n\tat com.steps.RegistrationPageSteps.iCanSeeRegistrationPageForm_aroundBody10(RegistrationPageSteps.java:88)\n\tat com.steps.RegistrationPageSteps$AjcClosure11.run(RegistrationPageSteps.java:1)\n\tat org.aspectj.runtime.reflect.JoinPointImpl.proceed(JoinPointImpl.java:149)\n\tat io.qameta.allure.aspects.StepsAspects.step(StepsAspects.java:50)\n\tat com.steps.RegistrationPageSteps.iCanSeeRegistrationPageForm(RegistrationPageSteps.java:88)\n\tat tests.RegistrationValidators_Tests.test_6(RegistrationValidators_Tests.java:235)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)\n\tat org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)\n\tat org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:204)\n\tat org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)\n\tat org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)\n\tat org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)\n\tat org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)\n\tat org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)\n\tat java.util.ArrayList.forEach(ArrayList.java:1255)\n\tat org.testng.TestRunner.privateRun(TestRunner.java:770)\n\tat org.testng.TestRunner.run(TestRunner.java:591)\n\tat org.testng.SuiteRunner.runTest(SuiteRunner.java:402)\n\tat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)\n\tat org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)\n\tat org.testng.SuiteRunner.run(SuiteRunner.java:304)\n\tat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)\n\tat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)\n\tat org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)\n\tat org.testng.TestNG.runSuitesLocally(TestNG.java:1102)\n\tat org.testng.TestNG.runSuites(TestNG.java:1032)\n\tat org.testng.TestNG.run(TestNG.java:1000)\n\tat org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:139)\n\tat org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:89)\n\tat org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)\n\tat org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)\n\tat org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)\n\tat org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)\n\tat com.sun.proxy.$Proxy1.stop(Unknown Source)\n\tat org.gradle.api.internal.tasks.testing.worker.TestWorker.stop(TestWorker.java:123)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)\n\tat org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)\n\tat org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:155)\n\tat org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:137)\n\tat org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)\n\tat org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)\n\tat org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:46)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)\n\tat org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55)\n\tat java.lang.Thread.run(Thread.java:748)\n",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "7eb6c9c4e9cd35cb",
+      "name" : "Scenario FAIL screenshot",
+      "source" : "7eb6c9c4e9cd35cb.png",
+      "type" : "image/png",
+      "size" : 86801
+    }, {
+      "uid" : "4e022bc57ea8e897",
+      "name" : "TestNG test FAIL logs",
+      "source" : "4e022bc57ea8e897.txt",
+      "type" : "text/plain",
+      "size" : 2900
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 6,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "Teardown Test Class",
+    "time" : {
+      "start" : 1583772599635,
+      "stop" : 1583772599705,
+      "duration" : 70
+    },
+    "description" : "Teardown Test Class",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "tests.RegistrationValidators_Tests"
+  }, {
+    "name" : "testClass",
+    "value" : "tests.RegistrationValidators_Tests"
+  }, {
+    "name" : "testMethod",
+    "value" : "test_6"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Automationpractice.com WEB - Kamil Nowocin"
+  }, {
+    "name" : "suite",
+    "value" : "Automated tests for WEB client"
+  }, {
+    "name" : "subSuite",
+    "value" : "tests.RegistrationValidators_Tests"
+  }, {
+    "name" : "host",
+    "value" : "localhost"
+  }, {
+    "name" : "thread",
+    "value" : "5055@localhost.Test worker(9)"
+  }, {
+    "name" : "epic",
+    "value" : "Web App Tests"
+  }, {
+    "name" : "feature",
+    "value" : "REGISTRATION VALIDATORS TESTS"
+  }, {
+    "name" : "story",
+    "value" : "NEGATIVE FLOW"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "owner",
+    "value" : "Kamil Nowocin"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ {
+    "name" : "TAP-025",
+    "url" : "https://tracker.FAKECOMPANY.com/jira/browse/TAP-025",
+    "type" : "issue"
+  } ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "owner" : "Kamil Nowocin",
+    "retries" : [ {
+      "uid" : "e79a869bbb2648de",
+      "status" : "skipped",
+      "statusDetails" : "Element wasn't displayed REGISTRATION PAGE FORM! did not expect to find [true] but found [false]",
+      "time" : {
+        "start" : 1583772496288,
+        "stop" : 1583772547259,
+        "duration" : 50971
+      }
+    } ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 4,
+        "broken" : 1,
+        "skipped" : 0,
+        "passed" : 77,
+        "unknown" : 0,
+        "total" : 82
+      },
+      "items" : [ {
+        "uid" : "9319f64f51716a3f",
+        "reportUrl" : "https://travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/152333574/#testresult/9319f64f51716a3f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1583692517246,
+          "stop" : 1583692538900,
+          "duration" : 21654
+        }
+      }, {
+        "uid" : "b55ab6da18f551d1",
+        "reportUrl" : "https://travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/152333308/#testresult/b55ab6da18f551d1",
+        "status" : "failed",
+        "statusDetails" : "Value didn't match expected value! expected [6] but found [JUNE]",
+        "time" : {
+          "start" : 1583691972892,
+          "stop" : 1583691979128,
+          "duration" : 6236
+        }
+      }, {
+        "uid" : "40edc9ac1a0db30c",
+        "reportUrl" : "https://travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/152332219/#testresult/40edc9ac1a0db30c",
+        "status" : "failed",
+        "statusDetails" : "Value didn't match expected value! expected [4] but found [APRIL]",
+        "time" : {
+          "start" : 1583690348335,
+          "stop" : 1583690352690,
+          "duration" : 4355
+        }
+      }, {
+        "uid" : "ae9867522162fc52",
+        "reportUrl" : "https://travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/152332084/#testresult/ae9867522162fc52",
+        "status" : "failed",
+        "statusDetails" : "Value didn't match expected value! expected [6] but found [JUNE]",
+        "time" : {
+          "start" : 1583690132254,
+          "stop" : 1583690137337,
+          "duration" : 5083
+        }
+      }, {
+        "uid" : "240ef9f5aac6b4c2",
+        "reportUrl" : "https://travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/152329231/#testresult/240ef9f5aac6b4c2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1583685873312,
+          "stop" : 1583685897410,
+          "duration" : 24098
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "65aae23fde1d7333.json",
+  "parameterValues" : [ ]
+}
