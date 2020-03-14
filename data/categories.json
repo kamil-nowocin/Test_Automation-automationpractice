@@ -6,13 +6,13 @@
       "name" : "Results which have been found didn't match expected PRICE: HIGHEST FIRST sorting results!: Lists differ at element [1]: 3050 != 2898 expected [3050] but found [2898]",
       "children" : [ {
         "name" : "I would like to use search box and be able to see sorted results by: \"Price: Highest first\"",
-        "uid" : "6691a02c551d10e8",
+        "uid" : "b761e4ba5cbcf384",
         "parentUid" : "0a6fc401c36ebc9f0bc9ac8dda384cc1",
         "status" : "failed",
         "time" : {
-          "start" : 1584118298294,
-          "stop" : 1584118302923,
-          "duration" : 4629
+          "start" : 1584204626226,
+          "stop" : 1584204631377,
+          "duration" : 5151
         },
         "flaky" : false,
         "newFailed" : false,
@@ -20,33 +20,16 @@
       } ],
       "uid" : "0a6fc401c36ebc9f0bc9ac8dda384cc1"
     }, {
-      "name" : "Results which have been found didn't match expected PRICE: LOWEST FIRST sorting results!: Lists differ at element [2]: 2898 != 3050 expected [2898] but found [3050]",
-      "children" : [ {
-        "name" : "I would like to use search box and be able to see sorted results by: \"Price: Lowest first\"",
-        "uid" : "4cc2797fe3edf801",
-        "parentUid" : "24d5bdee484bfa3d337726450a0221e0",
-        "status" : "failed",
-        "time" : {
-          "start" : 1584118309431,
-          "stop" : 1584118314082,
-          "duration" : 4651
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "24d5bdee484bfa3d337726450a0221e0"
-    }, {
       "name" : "null",
       "children" : [ {
         "name" : "As a developer I'd like to see working POC with .xlsx file",
-        "uid" : "57da24194b8d399b",
+        "uid" : "cb4d854e3e84216f",
         "parentUid" : "666d1a31450af3ae8459f14f07f9a1b4",
         "status" : "failed",
         "time" : {
-          "start" : 1584118342276,
-          "stop" : 1584118342281,
-          "duration" : 5
+          "start" : 1584204667036,
+          "stop" : 1584204667038,
+          "duration" : 2
         },
         "flaky" : false,
         "newFailed" : false,
@@ -55,6 +38,27 @@
       "uid" : "666d1a31450af3ae8459f14f07f9a1b4"
     } ],
     "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  }, {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "stale element reference: element is not attached to the page document\n  (Session info: chrome=80.0.3987.132)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'localhost', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.4.0-101-generic', java.version: '1.8.0_151'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.132, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: /tmp/.com.google.Chrome.o7GHvp}, goog:chromeOptions: {debuggerAddress: localhost:33600}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: c01c86f3a3b9fd2f412ed559faea6177",
+      "children" : [ {
+        "name" : "I would like to use search box and be able to see sorted results by: \"Price: Lowest first\"",
+        "uid" : "fd4786615e34a40b",
+        "parentUid" : "490cbfcfa8887ed9888ed91fc3bc8e24",
+        "status" : "broken",
+        "time" : {
+          "start" : 1584204636200,
+          "stop" : 1584204639959,
+          "duration" : 3759
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "490cbfcfa8887ed9888ed91fc3bc8e24"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
   } ],
   "name" : "categories"
 }
