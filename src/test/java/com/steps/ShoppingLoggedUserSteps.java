@@ -168,12 +168,12 @@ public class ShoppingLoggedUserSteps extends DriverFactory {
                 String.format(VIEW_ERROR, "Product added successfully header"));
 
         Assert.assertEquals(productDetailsPage.popupPaneFinalProductTotalPrice.getText()
-                        .replaceAll("[^$0-9.]", "").replace(".", ","),
-                $decimalFormat.format(contextInjection.finalProductTotalPrice), VALUE_ERROR);
+                        .replaceAll("[^$0-9.]", ""),
+                $decimalFormat.format(contextInjection.finalProductTotalPrice).replace(",", "."), VALUE_ERROR);
 
         Assert.assertEquals(productDetailsPage.popupPaneFinalOrderTotalPrice.getText()
-                        .replaceAll("[^$0-9.]", "").replace(".", ","),
-                $decimalFormat.format(contextInjection.finalOrderTotalPrice), VALUE_ERROR);
+                        .replaceAll("[^$0-9.]", ""),
+                $decimalFormat.format(contextInjection.finalOrderTotalPrice).replace(",", "."), VALUE_ERROR);
     }
 
     @Step("I click on Proceed To Checkout button \\(from modal)")
