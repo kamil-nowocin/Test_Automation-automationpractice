@@ -22,7 +22,7 @@ public class SocialMediaPageSteps extends DriverFactory {
     private BasePage basePage = new BasePage();
     private SocialMediaPage socialMediaPage = new SocialMediaPage();
 
-    @Step("I scroll the website until I can see {0} logo")
+    @Step("I scroll the website until I can see *{0}* logo")
     @When("I scroll the website until I can see {string} logo")
     public void iScrollTheWebsiteUntilICanSeeLogo(String logoName) throws Throwable {
         //ACT//
@@ -56,7 +56,7 @@ public class SocialMediaPageSteps extends DriverFactory {
         }
     }
 
-    @Step("I click on {0} logo button")
+    @Step("I click on *{0}* logo button")
     @And("I click on {string} logo button")
     public void iClickOnLogoButton(String logoName) throws Throwable {
         //ACT//
@@ -83,7 +83,7 @@ public class SocialMediaPageSteps extends DriverFactory {
         logger.info(String.format("Chosen social media platform: %S", logoName));
     }
 
-    @Step("I am redirected to Selenium {0} profile")
+    @Step("I am redirected to Selenium *{0}* profile")
     @Then("I am redirected to Selenium {string} profile")
     public void iAmRedirectedToSeleniumProfile(String logoName) throws Throwable {
         //ARRANGE//

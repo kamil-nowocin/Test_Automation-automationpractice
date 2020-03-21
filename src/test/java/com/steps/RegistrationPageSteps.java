@@ -372,7 +372,7 @@ public class RegistrationPageSteps extends FrameworkEnvironment {
                 userAddress.toLowerCase(), VALUE_ERROR);
     }
 
-    @Step("I choose country {0}")
+    @Step("I choose country *{0}*")
     @And("I choose country {string}")
     public void iChooseCountry(String country) throws Throwable {
         //ARRANGE//
@@ -530,7 +530,7 @@ public class RegistrationPageSteps extends FrameworkEnvironment {
                 String.format(VIEW_ERROR, "Registration error header"));
     }
 
-    @Step("I can see warning message about missing {0} input")
+    @Step("I can see warning message about missing *{0}* input")
     @Then("I can see warning message about missing {string} input")
     public void iCanSeeWarningMessageAboutMissingInput(String stringName) throws Throwable {
         switch (stringName.toLowerCase()) {

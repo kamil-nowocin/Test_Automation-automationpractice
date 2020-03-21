@@ -38,7 +38,7 @@ public class ShoppingLoggedUserSteps extends DriverFactory {
         this.contextInjection = contextInjection;
     }
 
-    @Step("I click on {0} button from sub menu")
+    @Step("I click on *{0}* button from sub menu")
     @And("I click on {string} button from sub menu")
     public void iClickOnButtonFromSubMenu(String category) throws Throwable {
         //ACT//
@@ -65,7 +65,7 @@ public class ShoppingLoggedUserSteps extends DriverFactory {
                 ("\\s+", "").toLowerCase(), category.toLowerCase(), VALUE_ERROR);
     }
 
-    @Step("I click on following product {0}")
+    @Step("I click on following product *{0}*")
     @And("I click on following product {string}")
     public void iClickOnFollowingProduct(String productName) throws Throwable {
         //ARRANGE//
@@ -176,13 +176,13 @@ public class ShoppingLoggedUserSteps extends DriverFactory {
                 $decimalFormat.format(contextInjection.finalOrderTotalPrice), VALUE_ERROR);
     }
 
-    @Step("I click on Proceed To Checkout button \\(from modal)")
+    @Step("I click on Proceed To Checkout button (from modal)")
     @And("I click on Proceed To Checkout button \\(from modal)")
     public void iClickOnProceedToCheckoutButtonFromModal() throws Throwable {
         productDetailsPage.proceedToCheckoutButton.click();
     }
 
-    @Step("I can see Shopping-Cart {0} form with valid information")
+    @Step("I can see Shopping-Cart *{0}* form with valid information")
     @And("I can see Shopping-Cart {string} form with valid information")
     public void iCanSeeShoppingCartFormWithValidInformation(String shoppingSummaryTab) throws Throwable {
         //ARRANGE//
@@ -270,7 +270,7 @@ public class ShoppingLoggedUserSteps extends DriverFactory {
         }
     }
 
-    @Step("I click on Proceed To Checkout button \\(from shopping-cart)")
+    @Step("I click on Proceed To Checkout button (from shopping-cart)")
     @And("I click on Proceed To Checkout button \\(from shopping-cart)")
     public void iClickOnProceedToCheckoutButtonFromShoppingCart() throws Throwable {
         shoppingCartSummaryPage.proceedToCheckoutButton.click();
@@ -290,7 +290,7 @@ public class ShoppingLoggedUserSteps extends DriverFactory {
         Assert.assertEquals(shoppingCartSummaryPage.orderComment.getAttribute("value").toLowerCase(), orderComment.toLowerCase(), VALUE_ERROR);
     }
 
-    @Step("I choose shipping option{0}")
+    @Step("I choose shipping option *{0}*")
     @And("I choose shipping option {string}")
     public void iChooseShippingOption(String shippingOption) throws Throwable {
         //ACT//

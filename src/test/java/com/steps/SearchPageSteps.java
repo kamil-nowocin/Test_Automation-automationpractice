@@ -27,7 +27,7 @@ public class SearchPageSteps extends FrameworkEnvironment {
     private MainPage mainPage = new MainPage();
     private SearchPage searchPage = new SearchPage();
 
-    @Step("I search for phrase {0}")
+    @Step("I search for phrase *{0}*")
     @When("I search for phrase {string}")
     public void iSearchForPhrase(String searchPhrase) throws Throwable {
         //ACT//
@@ -45,7 +45,7 @@ public class SearchPageSteps extends FrameworkEnvironment {
         mainPage.searchBoxSubmit.click();
     }
 
-    @Step("I can see numbers of results equals to {0}")
+    @Step("I can see numbers of results equals to *{0}*")
     @Then("I can see numbers of results equals to {string}")
     public void iCanSeeNumbersOfResultsEqualsTo(String expectedCountOfResults) throws Throwable {
         //ARRANGE//
@@ -63,7 +63,7 @@ public class SearchPageSteps extends FrameworkEnvironment {
                 actualCountOfResults, expectedCountOfResults));
     }
 
-    @Step("I can see that every results which have been found contains phrase {0}")
+    @Step("I can see that every results which have been found contains phrase *{0}*")
     @And("I can see that every results which have been found contains phrase {string}")
     public void iCanSeeThatEveryResultsWhichHaveBeenFoundContainsPhrase(String searchPhrase) throws Throwable {
         //ARRANGE//
@@ -78,10 +78,13 @@ public class SearchPageSteps extends FrameworkEnvironment {
                     Assert.assertTrue(productName.getText().toLowerCase().contains(singlePhrase.toLowerCase()), SEARCH_ERROR);
                 }
             }
+
+        } else {
+            Assert.assertTrue(basePage.isDisplayed(5, searchPage.noResultsWereFoundHeader), VIEW_ERROR);
         }
     }
 
-    @Step("I select from Dropdown Sort by {0}")
+    @Step("I select from Dropdown Sort by *{0}*")
     @Then("I select from Dropdown Sort by {string}")
     public void iSelectFromDropdownSortBy(String sortBy) throws Throwable {
         //ACT//
@@ -111,7 +114,7 @@ public class SearchPageSteps extends FrameworkEnvironment {
         Assert.assertEquals(searchPage.readSortByDropdown.getText().toLowerCase(), sortBy.toLowerCase(), VALUE_ERROR);
     }
 
-    @Step("I can see that results are correctly sorted by {0}")
+    @Step("I can see that results are correctly sorted by *{0}*")
     @And("I can see that results are correctly sorted by {string}")
     public void iCanSeeThatResultsAreCorrectlySortedBy(String sortedBy) throws Throwable {
         //ARRANGE//

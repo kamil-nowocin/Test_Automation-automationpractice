@@ -1,4 +1,4 @@
-package tests;
+package tests.API;
 
 import com.ExcelEnvironment;
 import com.listeners.TestNGListener_API;

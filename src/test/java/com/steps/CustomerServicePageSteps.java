@@ -46,7 +46,7 @@ public class CustomerServicePageSteps extends FrameworkEnvironment {
                 String.format(VIEW_ERROR, "Customer Service Contact Us page form"));
     }
 
-    @Step("I choose Subject Heading {string}")
+    @Step("I choose Subject Heading *{0}*")
     @When("I choose Subject Heading {string}")
     public void iChooseSubjectHeading(String subjectHeading) throws Throwable {
         //ACT//
@@ -152,14 +152,14 @@ public class CustomerServicePageSteps extends FrameworkEnvironment {
     }
 
 
-    @Step("I can see success message {0}")
+    @Step("I can see success message *{0}*")
     @And("I can see success message {string}")
     public void iCanSeeSuccessMessage(String successMessage) throws Throwable {
         Assert.assertTrue(customerServicePage.contactUsSuccessMessage.getText().toLowerCase().contains
                 (successMessage.toLowerCase()), String.format(MESSAGE_DIDNT_CONTAIN, successMessage.toUpperCase()));
     }
 
-    @Step("I can see error message {0}")
+    @Step("I can see error message *{0}*")
     @And("I can see error message {string}")
     public void iCanSeeErrorMessage(String errorMessage) throws Throwable {
         Assert.assertTrue(customerServicePage.contactUsErrorMessage.getText().toLowerCase().contains

@@ -27,7 +27,7 @@ public class AuthenticationPageSteps extends FrameworkEnvironment {
                 String.format(VIEW_ERROR, "Login form"));
     }
 
-    @Step("I enter login {0}")
+    @Step("I enter login *{0}*")
     @And("I enter login {string}")
     public void iEnterLogin(String login) throws Throwable {
         //ACT//
@@ -39,7 +39,7 @@ public class AuthenticationPageSteps extends FrameworkEnvironment {
                 login.toLowerCase(), VALUE_ERROR);
     }
 
-    @Step("I enter password {0}")
+    @Step("I enter password *{0}*")
     @And("I enter password {string}")
     public void iEnterPassword(String password) throws Throwable {
         //ACT//
@@ -58,7 +58,7 @@ public class AuthenticationPageSteps extends FrameworkEnvironment {
     }
 
 
-    @Step("I can see warning message with include {0}")
+    @Step("I can see warning message with include *{0}*")
     @Then("I can see warning message with include {string}")
     public void iCanSeeWarningMessageWithInclude(String warningMessage) throws Throwable {
         Assert.assertTrue(basePage.errorValidator(authenticationPage.registeredLoginError).toLowerCase().contains(warningMessage.toLowerCase()),

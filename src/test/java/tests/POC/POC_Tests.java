@@ -1,4 +1,4 @@
-package tests;
+package tests.POC;
 
 import com.ExcelEnvironment;
 import com.steps.Hooks;

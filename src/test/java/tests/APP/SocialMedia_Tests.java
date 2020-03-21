@@ -1,4 +1,4 @@
-package tests;
+package tests.APP;
 
 import com.ContextInjection;
 import com.ExcelEnvironment;

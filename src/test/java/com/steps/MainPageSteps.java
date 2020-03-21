@@ -57,7 +57,7 @@ public class MainPageSteps extends DriverFactory {
         Assert.assertTrue(isPageReadyToExecuteTests, PAGE_ERROR);
     }
 
-    @Step("I am logged as customer {string} using {string} password")
+    @Step("I am logged as customer *{0}* using *{0}* password")
     @When("I am logged as customer {string} using {string} password")
     public void iAmLoggedAsCustomerUsingPassword(String email, String password) throws Throwable {
         //ARRANGE//
