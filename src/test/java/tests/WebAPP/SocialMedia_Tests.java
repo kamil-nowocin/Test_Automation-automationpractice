@@ -1,9 +1,10 @@
-package tests;
+package tests.WebAPP;
 
+import com.ContextInjection;
 import com.ExcelEnvironment;
 import com.listeners.TestNGListener_WEB;
-import com.steps.BasePageSteps;
 import com.steps.Hooks;
+import com.steps.MainPageSteps;
 import com.steps.SocialMediaPageSteps;
 import io.qameta.allure.*;
 import org.testng.annotations.Listeners;
@@ -20,23 +21,23 @@ import org.testng.annotations.Test;
 @Listeners({TestNGListener_WEB.class})
 public class SocialMedia_Tests extends Hooks {
 
-    @Owner("Kamil Nowocin")
-    @Test(description = "I click on social media FACEBOOK logo",
-            priority = 0)
-    @Description("As a user I would like to be redirected to social media pages from automationpractice.com ->\n" +
-            "I click on social media FACEBOOK logo")
-    @Severity(SeverityLevel.MINOR)
-    @Issue("TAP-039")
+    @Issue("TAP-0041")
     @Story("POSITIVE FLOW")
+    @Owner("Kamil Nowocin")
+    @Severity(SeverityLevel.MINOR)
+    @Description("[US-777]/[1] I click on social media \"Facebook\" logo")
+    @Test(description = "[US-777]/[1] I click on social media \"Facebook\" logo",
+            priority = 0)
     public void test_1() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(39);
-        final BasePageSteps basePageSteps = new BasePageSteps();
+        ExcelEnvironment.saveTestResultsXLSX(41);
+
+        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
         final SocialMediaPageSteps mediaPageSteps = new SocialMediaPageSteps();
 
         //ACT//
-        basePageSteps.iOpenHomePage();
-        basePageSteps.iCanSeeAutomationpracticeComWebsite();
+        mainPageSteps.iOpenHomePage();
+        mainPageSteps.iCanSeeAutomationpracticeComWebsite();
         mediaPageSteps.iScrollTheWebsiteUntilICanSeeLogo("facebook");
         mediaPageSteps.iClickOnLogoButton("facebook");
 
@@ -45,22 +46,22 @@ public class SocialMedia_Tests extends Hooks {
     }
 
     @Owner("Kamil Nowocin")
-    @Test(description = "I click on social media TWITTER logo",
+    @Test(description = "[US-777]/[2] I click on social media \"Twitter\" logo",
             priority = 0)
-    @Description("As a user I would like to be redirected to social media pages from automationpractice.com ->\n" +
-            "I click on social media TWITTER logo")
+    @Description("[US-777]/[2] I click on social media \"Twitter\" logo")
     @Severity(SeverityLevel.MINOR)
-    @Issue("TAP-040")
+    @Issue("TAP-0042")
     @Story("POSITIVE FLOW")
     public void test_2() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(40);
-        final BasePageSteps basePageSteps = new BasePageSteps();
+        ExcelEnvironment.saveTestResultsXLSX(42);
+
+        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
         final SocialMediaPageSteps mediaPageSteps = new SocialMediaPageSteps();
 
         //ACT//
-        basePageSteps.iOpenHomePage();
-        basePageSteps.iCanSeeAutomationpracticeComWebsite();
+        mainPageSteps.iOpenHomePage();
+        mainPageSteps.iCanSeeAutomationpracticeComWebsite();
         mediaPageSteps.iScrollTheWebsiteUntilICanSeeLogo("twitter");
         mediaPageSteps.iClickOnLogoButton("twitter");
 
@@ -69,22 +70,22 @@ public class SocialMedia_Tests extends Hooks {
     }
 
     @Owner("Kamil Nowocin")
-    @Test(description = "I click on social media YOUTUBE logo",
+    @Test(description = "[US-777]/[3] I click on social media \"YouTube\" logo",
             priority = 0)
-    @Description("As a user I would like to be redirected to social media pages from automationpractice.com ->\n" +
-            "I click on social media YOUTUBE logo")
+    @Description("[US-777]/[3] I click on social media \"YouTube\" logo")
     @Severity(SeverityLevel.MINOR)
-    @Issue("TAP-041")
+    @Issue("TAP-0043")
     @Story("POSITIVE FLOW")
     public void test_3() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(41);
-        final BasePageSteps basePageSteps = new BasePageSteps();
+        ExcelEnvironment.saveTestResultsXLSX(43);
+
+        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
         final SocialMediaPageSteps mediaPageSteps = new SocialMediaPageSteps();
 
         //ACT//
-        basePageSteps.iOpenHomePage();
-        basePageSteps.iCanSeeAutomationpracticeComWebsite();
+        mainPageSteps.iOpenHomePage();
+        mainPageSteps.iCanSeeAutomationpracticeComWebsite();
         mediaPageSteps.iScrollTheWebsiteUntilICanSeeLogo("youtube");
         mediaPageSteps.iClickOnLogoButton("youtube");
 
@@ -93,22 +94,22 @@ public class SocialMedia_Tests extends Hooks {
     }
 
     @Owner("Kamil Nowocin")
-    @Test(description = "I click on social media GOOGLE+ logo",
+    @Test(description = "[US-777]/[4] I click on social media \"Google+\" logo",
             priority = 0)
-    @Description("As a user I would like to be redirected to social media pages from automationpractice.com ->\n" +
-            "I click on social media GOOGLE+ logo")
+    @Description("[US-777]/[4] I click on social media \"Google+\" logo")
     @Severity(SeverityLevel.MINOR)
-    @Issue("TAP-042")
+    @Issue("TAP-0044")
     @Story("POSITIVE FLOW")
     public void test_4() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(42);
-        final BasePageSteps basePageSteps = new BasePageSteps();
+        ExcelEnvironment.saveTestResultsXLSX(44);
+
+        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
         final SocialMediaPageSteps mediaPageSteps = new SocialMediaPageSteps();
 
         //ACT//
-        basePageSteps.iOpenHomePage();
-        basePageSteps.iCanSeeAutomationpracticeComWebsite();
+        mainPageSteps.iOpenHomePage();
+        mainPageSteps.iCanSeeAutomationpracticeComWebsite();
         mediaPageSteps.iScrollTheWebsiteUntilICanSeeLogo("google");
         mediaPageSteps.iClickOnLogoButton("google");
 

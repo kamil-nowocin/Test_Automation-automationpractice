@@ -4,7 +4,11 @@
 #* @author kamil.nowocin
 #**/
 
+@registrationValidators
 Feature: As a user I would like to see the error message where I made a mistake in the registration page form
+#--------------------------------------------------------------------------------#
+# [US] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-444              #
+#--------------------------------------------------------------------------------#
 
   Background: Navigate to registration page
     Given I open home page
@@ -14,8 +18,10 @@ Feature: As a user I would like to see the error message where I made a mistake 
     And I click on Create An Account button
     Then I can see registration page form
 
-#--------------------------------------------------------------------------------
-  Scenario: As a user I would like to see registration error, when I don't fill first name input
+#--------------------------------------------------------------------------------#
+# [ZEPHYR] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-0020
+  @non-smoke @normal @regression
+  Scenario:[US-444]/[1] As a user I would like to see registration error, when I don't fill first name input
     Given I can see registration page form
     When I choose gender
     And I write my last name
@@ -31,8 +37,10 @@ Feature: As a user I would like to see the error message where I made a mistake 
     And I click on Register button
     Then I can see warning message about missing "first name" input
 
-#--------------------------------------------------------------------------------
-  Scenario: As a user I would like to see registration error, when I don't fill last name input
+#--------------------------------------------------------------------------------#
+# [ZEPHYR] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-0021
+  @non-smoke @normal @regression
+  Scenario:[US-444]/[2] As a user I would like to see registration error, when I don't fill last name input
     Given I can see registration page form
     When I choose gender
     And I write my first name
@@ -48,8 +56,10 @@ Feature: As a user I would like to see the error message where I made a mistake 
     And I click on Register button
     Then I can see warning message about missing "last name" input
 
-#--------------------------------------------------------------------------------
-  Scenario: As a user I would like to see registration error, when I don't fill email input
+#--------------------------------------------------------------------------------#
+# [ZEPHYR] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-0022
+  @non-smoke @normal @regression
+  Scenario:[US-444]/[3] As a user I would like to see registration error, when I don't fill email input
     Given I can see registration page form
     When I choose gender
     And I write my first name
@@ -67,8 +77,10 @@ Feature: As a user I would like to see the error message where I made a mistake 
     And I click on Register button
     Then I can see warning message about missing "email address" input
 
-#--------------------------------------------------------------------------------
-  Scenario: As a user I would like to see registration error, when I don't fill password input
+#--------------------------------------------------------------------------------#
+# [ZEPHYR] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-0023
+  @non-smoke @normal @regression
+  Scenario:[US-444]/[4] As a user I would like to see registration error, when I don't fill password input
     Given I can see registration page form
     When I choose gender
     And I write my first name
@@ -84,8 +96,10 @@ Feature: As a user I would like to see the error message where I made a mistake 
     And I click on Register button
     Then I can see warning message about missing "password" input
 
-#--------------------------------------------------------------------------------
-  Scenario: As a user I would like to see registration error, when I don't fill address input
+#--------------------------------------------------------------------------------#
+# [ZEPHYR] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-0024
+  @non-smoke @normal @regression
+  Scenario:[US-444]/[5] As a user I would like to see registration error, when I don't fill address input
     Given I can see registration page form
     When I choose gender
     And I write my first name
@@ -101,8 +115,10 @@ Feature: As a user I would like to see the error message where I made a mistake 
     And I click on Register button
     Then I can see warning message about missing "address" input
 
-#--------------------------------------------------------------------------------
-  Scenario: As a user I would like to see registration error, when I don't fill city input
+#--------------------------------------------------------------------------------#
+# [ZEPHYR] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-0025
+  @non-smoke @normal @regression
+  Scenario:[US-444]/[6] As a user I would like to see registration error, when I don't fill city input
     Given I can see registration page form
     When I choose gender
     And I write my first name
@@ -118,8 +134,10 @@ Feature: As a user I would like to see the error message where I made a mistake 
     And I click on Register button
     Then I can see warning message about missing "city" input
 
-#--------------------------------------------------------------------------------
-  Scenario: As a user I would like to see registration error, when I don't fill state input
+#--------------------------------------------------------------------------------#
+# [ZEPHYR] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-0026
+  @non-smoke @normal @regression
+  Scenario:[US-444]/[7] As a user I would like to see registration error, when I don't fill state input
     Given I can see registration page form
     When I choose gender
     And I write my first name
@@ -135,8 +153,10 @@ Feature: As a user I would like to see the error message where I made a mistake 
     And I click on Register button
     Then I can see warning message about missing "state" input
 
-#--------------------------------------------------------------------------------
-  Scenario: As a user I would like to see registration error, when I don't fill postal code input
+#--------------------------------------------------------------------------------#
+# [ZEPHYR] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-0027
+  @non-smoke @normal @regression
+  Scenario:[US-444]/[8] As a user I would like to see registration error, when I don't fill postal code input
     Given I can see registration page form
     When I choose gender
     And I write my first name
@@ -152,8 +172,10 @@ Feature: As a user I would like to see the error message where I made a mistake 
     And I click on Register button
     Then I can see warning message about missing "postal code" input
 
-#--------------------------------------------------------------------------------
-  Scenario: As a user I would like to see registration error, when I don't fill country input
+#--------------------------------------------------------------------------------#
+# [ZEPHYR] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-0028
+  @non-smoke @normal @regression
+  Scenario:[US-444]/[9] As a user I would like to see registration error, when I don't fill country input
     Given I can see registration page form
     When I choose gender
     And I write my first name
@@ -168,8 +190,10 @@ Feature: As a user I would like to see the error message where I made a mistake 
     And I click on Register button
     Then I can see warning message about missing "country" input
 
-#--------------------------------------------------------------------------------
-  Scenario: As a user I would like to see registration error, when I don't fill mobile phone input
+#--------------------------------------------------------------------------------#
+# [ZEPHYR] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-0029
+  @non-smoke @normal @regression
+  Scenario:[US-444]/[10] As a user I would like to see registration error, when I don't fill mobile phone input
     Given I can see registration page form
     When I choose gender
     And I write my first name
@@ -185,8 +209,10 @@ Feature: As a user I would like to see the error message where I made a mistake 
     And I click on Register button
     Then I can see warning message about missing "mobile phone" input
 
-#--------------------------------------------------------------------------------
-  Scenario: As a user I would like to see registration error, when I don't fill email alias input
+#--------------------------------------------------------------------------------#
+# [ZEPHYR] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-0030
+  @non-smoke @normal @regression
+  Scenario:[US-444]/[11] As a user I would like to see registration error, when I don't fill email alias input
     Given I can see registration page form
     When I choose gender
     And I write my first name

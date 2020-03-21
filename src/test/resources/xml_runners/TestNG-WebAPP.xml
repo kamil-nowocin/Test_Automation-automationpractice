@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Automationpractice.com WEB - Kamil Nowocin">
+    <listeners>
+        <listener class-name="com.listeners.TestNGAnnotationTransformer"/>
+    </listeners>
+    <test name="Automated tests for WEB client">
+        <classes>
+            <class name="tests.WebAPP.CustomerService_Tests"/>
+            <class name="tests.WebAPP.Authentication_Tests"/>
+            <class name="tests.WebAPP.Registration_Tests"/>
+            <class name="tests.WebAPP.RegistrationValidators_Tests"/>
+            <class name="tests.WebAPP.SearchBox_Tests"/>
+            <class name="tests.WebAPP.SocialMedia_Tests"/>
+            <class name="tests.WebAPP.ShoppingLoggedUser_Tests"/>
+        </classes>
+    </test>
+</suite>

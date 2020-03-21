@@ -4,13 +4,22 @@
 #* @author kamil.nowocin
 #**/
 
+@searchBox
 Feature: A a user I would like to see results of searching phrase
+#--------------------------------------------------------------------------------#
+# [US] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-555              #
+#--------------------------------------------------------------------------------#
 
   Background: Navigate to automationpractice.com website
     When I open home page
 
-#--------------------------------------------------------------------------------
-  Scenario Outline: As a user I would like to use search box and be able to see results of: <search phrase>
+#--------------------------------------------------------------------------------#
+# [ZEPHYR] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-0031
+# [ZEPHYR] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-0032
+# [ZEPHYR] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-0033
+# [ZEPHYR] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-0034
+  @non-smoke @critical @regression
+  Scenario Outline:[US-555]/[1] As a user I would like to use search box and be able to see results of: "<search phrase>"
     Given I can see automationpractice.com website
     When I search for phrase "<search phrase>"
     And I click on search icon
@@ -24,8 +33,13 @@ Feature: A a user I would like to see results of searching phrase
       | Printed Dress | 5       |
       | !@#$%^        | 0       |
 
-#--------------------------------------------------------------------------------
-  Scenario Outline: As a user I would like to use search box and be able to see sorted results by: <sort by>
+#--------------------------------------------------------------------------------#
+# [ZEPHYR] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-0035
+# [ZEPHYR] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-0036
+# [ZEPHYR] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-0037
+# [ZEPHYR] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-0038
+  @non-smoke @critical @regression
+  Scenario Outline:[US-555]/[2] As a user I would like to use search box and be able to see results sorted by: "<sort by>"
     Given I can see automationpractice.com website
     When I search for phrase "<search phrase>"
     And I click on search icon

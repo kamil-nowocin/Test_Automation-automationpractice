@@ -13,6 +13,7 @@ import org.openqa.selenium.support.How;
 
 public class SocialMediaPage extends BasePage {
 
+    //BUTTONS & INPUTS & DROPDOWN//
     @FindBy(how = How.XPATH, using = "//*[@class=\"facebook\"]")
     public WebElement facebookButton;
 

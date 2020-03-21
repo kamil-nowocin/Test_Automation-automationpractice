@@ -1,4 +1,4 @@
-package tests;
+package tests.WebAPI;
 
 import com.ExcelEnvironment;
 import com.listeners.TestNGListener_API;
@@ -34,14 +34,16 @@ public class API_Tests extends Hooks {
         destroyDriver();
     }
 
+    @Issue("TAP/API-0001")
+    @Story("HTTP STATUSES")
     @Owner("Kamil Nowocin")
-    @Test(description = "HTTP status check", priority = 0)
-    @Description("As a user I would like to check availability of automationpractice.com")
     @Severity(SeverityLevel.BLOCKER)
-    @Issue("TAP-043")
+    @Description("[US-XXX]/[1] As a user I would like to check availability of automationpractice.com")
+    @Test(description = "[US-XXX]/[1] I would like to check availability of automationpractice.com",
+            priority = 0)
     public void test_1() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(43);
+        ExcelEnvironment.saveTestResultsXLSX(45);
 
         //ACT//
         given().when().get(restHomeURL()).then().assertThat().statusCode(200);

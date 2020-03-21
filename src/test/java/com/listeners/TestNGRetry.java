@@ -21,10 +21,11 @@ public class TestNGRetry extends FrameworkEnvironment implements IRetryAnalyzer 
             if (retryStatus < retryLimit) {
                 retryStatus++;
                 iTestResult.setStatus(ITestResult.FAILURE);
-                logger.info(String.format(ANSI_RED + "TEST WILL BE REPEATED (%d/2): %S" + ANSI_RESET,
-                        retryStatus, iTestResult.getMethod().getDescription()));
+                logger.info(String.format(ANSI_RED + "TEST WILL BE REPEATED (%d/2): %S" + ANSI_RESET, retryStatus,
+                        iTestResult.getMethod().getDescription()));
                 return true;
             }
+
         } else {
             iTestResult.setStatus(ITestResult.SUCCESS);
         }

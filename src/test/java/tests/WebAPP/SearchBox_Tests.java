@@ -1,9 +1,10 @@
-package tests;
+package tests.WebAPP;
 
+import com.ContextInjection;
 import com.ExcelEnvironment;
 import com.listeners.TestNGListener_WEB;
-import com.steps.BasePageSteps;
 import com.steps.Hooks;
+import com.steps.MainPageSteps;
 import com.steps.SearchPageSteps;
 import io.qameta.allure.*;
 import org.testng.annotations.Listeners;
@@ -20,23 +21,23 @@ import org.testng.annotations.Test;
 @Listeners({TestNGListener_WEB.class})
 public class SearchBox_Tests extends Hooks {
 
-    @Owner("Kamil Nowocin")
-    @Test(priority = 0,
-            description = "I would like to use search box and be able to see results of: \"T-Shirts\"")
-    @Description("A a user I would like to see results of searching phrase ->\n" +
-            "I would like to use search box and be able to see results of: \"T-Shirts\"")
-    @Severity(SeverityLevel.NORMAL)
-    @Issue("TAP-031")
+    @Issue("TAP-0031")
     @Story("POSITIVE FLOW")
+    @Owner("Kamil Nowocin")
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("[US-555]/[1] As a user I would like to use search box and be able to see results of: \"T-shirts\"")
+    @Test(description = "[US-555]/[1] I would like to use search box and be able to see results of: \"T-shirts\"",
+            priority = 0)
     public void test_1() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(31);
-        final BasePageSteps basePageSteps = new BasePageSteps();
+
+        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
         final SearchPageSteps searchPageSteps = new SearchPageSteps();
 
         //ACT//
-        basePageSteps.iOpenHomePage();
-        basePageSteps.iCanSeeAutomationpracticeComWebsite();
+        mainPageSteps.iOpenHomePage();
+        mainPageSteps.iCanSeeAutomationpracticeComWebsite();
         searchPageSteps.iSearchForPhrase("T-shirts");
         searchPageSteps.iClickOnSearchIcon();
         searchPageSteps.iCanSeeNumbersOfResultsEqualsTo("1");
@@ -45,23 +46,23 @@ public class SearchBox_Tests extends Hooks {
         searchPageSteps.iCanSeeThatEveryResultsWhichHaveBeenFoundContainsPhrase("T-shirts");
     }
 
-    @Owner("Kamil Nowocin")
-    @Test(priority = 0,
-            description = "I would like to use search box and be able to see results of: \"Blouse\" ")
-    @Description("A a user I would like to see results of searching phrase ->\n" +
-            "I would like to use search box and be able to see results of: \"Blouse\"")
-    @Severity(SeverityLevel.NORMAL)
-    @Issue("TAP-032")
+    @Issue("TAP-0032")
     @Story("POSITIVE FLOW")
+    @Owner("Kamil Nowocin")
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("[US-555]/[2] As a user I would like to use search box and be able to see results of: \"Blouse\">")
+    @Test(description = "[US-555]/[2] I would like to use search box and be able to see results of: \"Blouse\">",
+            priority = 0)
     public void test_2() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(32);
-        final BasePageSteps basePageSteps = new BasePageSteps();
+
+        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
         final SearchPageSteps searchPageSteps = new SearchPageSteps();
 
         //ACT//
-        basePageSteps.iOpenHomePage();
-        basePageSteps.iCanSeeAutomationpracticeComWebsite();
+        mainPageSteps.iOpenHomePage();
+        mainPageSteps.iCanSeeAutomationpracticeComWebsite();
         searchPageSteps.iSearchForPhrase("Blouse");
         searchPageSteps.iClickOnSearchIcon();
         searchPageSteps.iCanSeeNumbersOfResultsEqualsTo("1");
@@ -70,23 +71,23 @@ public class SearchBox_Tests extends Hooks {
         searchPageSteps.iCanSeeThatEveryResultsWhichHaveBeenFoundContainsPhrase("Blouse");
     }
 
-    @Owner("Kamil Nowocin")
-    @Test(priority = 0,
-            description = "I would like to use search box and be able to see results of: \"Printed Dress\"")
-    @Description("A a user I would like to see results of searching phrase ->\n" +
-            "I would like to use search box and be able to see results of: \"Printed Dress\"")
-    @Severity(SeverityLevel.NORMAL)
-    @Issue("TAP-033")
+    @Issue("TAP-0033")
     @Story("POSITIVE FLOW")
+    @Owner("Kamil Nowocin")
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("[US-555]/[3] As a user I would like to use search box and be able to see results of: \"Printed Dress\">")
+    @Test(description = "[US-555]/[3] I would like to use search box and be able to see results of: \"Printed Dress\">",
+            priority = 0)
     public void test_3() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(33);
-        final BasePageSteps basePageSteps = new BasePageSteps();
+
+        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
         final SearchPageSteps searchPageSteps = new SearchPageSteps();
 
         //ACT//
-        basePageSteps.iOpenHomePage();
-        basePageSteps.iCanSeeAutomationpracticeComWebsite();
+        mainPageSteps.iOpenHomePage();
+        mainPageSteps.iCanSeeAutomationpracticeComWebsite();
         searchPageSteps.iSearchForPhrase("Printed Dress");
         searchPageSteps.iClickOnSearchIcon();
         searchPageSteps.iCanSeeNumbersOfResultsEqualsTo("5");
@@ -95,23 +96,23 @@ public class SearchBox_Tests extends Hooks {
         searchPageSteps.iCanSeeThatEveryResultsWhichHaveBeenFoundContainsPhrase("Printed Dress");
     }
 
-    @Owner("Kamil Nowocin")
-    @Test(priority = 0,
-            description = "I would like to use search box and be able to see results of: \"UNDEFINED PRODUCT\"")
-    @Description("A a user I would like to see results of searching phrase ->\n" +
-            "I would like to use search box and be able to see results of: \"UNDEFINED PRODUCT\"")
-    @Severity(SeverityLevel.NORMAL)
-    @Issue("TAP-034")
+    @Issue("TAP-0034")
     @Story("NEGATIVE FLOW")
+    @Owner("Kamil Nowocin")
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("[US-555]/[4] As a user I would like to use search box and be able to see results of: \"!@#$%^\">")
+    @Test(description = "[US-555]/[4] I would like to use search box and be able to see results of: \"!@#$%^\">",
+            priority = 0)
     public void test_4() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(34);
-        final BasePageSteps basePageSteps = new BasePageSteps();
+
+        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
         final SearchPageSteps searchPageSteps = new SearchPageSteps();
 
         //ACT//
-        basePageSteps.iOpenHomePage();
-        basePageSteps.iCanSeeAutomationpracticeComWebsite();
+        mainPageSteps.iOpenHomePage();
+        mainPageSteps.iCanSeeAutomationpracticeComWebsite();
         searchPageSteps.iSearchForPhrase("!@#$%^");
         searchPageSteps.iClickOnSearchIcon();
         searchPageSteps.iCanSeeNumbersOfResultsEqualsTo("0");
@@ -120,23 +121,23 @@ public class SearchBox_Tests extends Hooks {
         searchPageSteps.iCanSeeThatEveryResultsWhichHaveBeenFoundContainsPhrase("!@#$%^");
     }
 
-    @Owner("Kamil Nowocin")
-    @Test(priority = 0,
-            description = "I would like to use search box and be able to see sorted results by: \"Product Name: Z to A\"")
-    @Description("A a user I would like to see results of searching phrase ->\n" +
-            "I would like to use search box and be able to see sorted results by: \"Product Name: Z to A\"")
-    @Severity(SeverityLevel.NORMAL)
-    @Issue("TAP-035")
+    @Issue("TAP-0035")
     @Story("POSITIVE FLOW")
+    @Owner("Kamil Nowocin")
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("[US-555]/[5] As a user I would like to use search box and be able to see results sorted by: \"Product Name: Z to A\"")
+    @Test(description = "[US-555]/[5] I would like to use search box and be able to see results sorted by: \"Product Name: Z to A\"",
+            priority = 0)
     public void test_5() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(35);
-        final BasePageSteps basePageSteps = new BasePageSteps();
+
+        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
         final SearchPageSteps searchPageSteps = new SearchPageSteps();
 
         //ACT//
-        basePageSteps.iOpenHomePage();
-        basePageSteps.iCanSeeAutomationpracticeComWebsite();
+        mainPageSteps.iOpenHomePage();
+        mainPageSteps.iCanSeeAutomationpracticeComWebsite();
         searchPageSteps.iSearchForPhrase("Printed Dress");
         searchPageSteps.iClickOnSearchIcon();
         searchPageSteps.iCanSeeNumbersOfResultsEqualsTo("5");
@@ -147,23 +148,23 @@ public class SearchBox_Tests extends Hooks {
         searchPageSteps.iCanSeeThatResultsAreCorrectlySortedBy("Product Name: Z to A");
     }
 
-    @Owner("Kamil Nowocin")
-    @Test(priority = 0,
-            description = "I would like to use search box and be able to see sorted results by: \"Product Name: A to Z\"")
-    @Description("A a user I would like to see results of searching phrase ->\n" +
-            "I would like to use search box and be able to see sorted results by: \"Product Name: A to Z\"")
-    @Severity(SeverityLevel.NORMAL)
-    @Issue("TAP-036")
+    @Issue("TAP-0036")
     @Story("POSITIVE FLOW")
+    @Owner("Kamil Nowocin")
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("[US-555]/[6] As a user I would like to use search box and be able to see results sorted by: \"Product Name: A to Z\"")
+    @Test(description = "[US-555]/[6] I would like to use search box and be able to see results sorted by: \"Product Name: A to Z\"",
+            priority = 0)
     public void test_6() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(36);
-        final BasePageSteps basePageSteps = new BasePageSteps();
+
+        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
         final SearchPageSteps searchPageSteps = new SearchPageSteps();
 
         //ACT//
-        basePageSteps.iOpenHomePage();
-        basePageSteps.iCanSeeAutomationpracticeComWebsite();
+        mainPageSteps.iOpenHomePage();
+        mainPageSteps.iCanSeeAutomationpracticeComWebsite();
         searchPageSteps.iSearchForPhrase("Printed Dress");
         searchPageSteps.iClickOnSearchIcon();
         searchPageSteps.iCanSeeNumbersOfResultsEqualsTo("5");
@@ -175,23 +176,23 @@ public class SearchBox_Tests extends Hooks {
     }
 
     @Flaky
-    @Owner("Kamil Nowocin")
-    @Test(priority = 0,
-            description = "I would like to use search box and be able to see sorted results by: \"Price: Highest first\"")
-    @Description("A a user I would like to see results of searching phrase ->\n" +
-            "I would like to use search box and be able to see sorted results by: \"Price: Highest first\"")
-    @Severity(SeverityLevel.NORMAL)
-    @Issue("TAP-037")
+    @Issue("TAP-0037")
     @Story("POSITIVE FLOW")
+    @Owner("Kamil Nowocin")
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("[US-555]/[7] As a user I would like to use search box and be able to see results sorted by: \"Price: Highest first\"")
+    @Test(description = "[US-555]/[7] I would like to use search box and be able to see results sorted by: \"Price: Highest first\"",
+            priority = 0)
     public void test_7() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(37);
-        final BasePageSteps basePageSteps = new BasePageSteps();
+
+        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
         final SearchPageSteps searchPageSteps = new SearchPageSteps();
 
         //ACT//
-        basePageSteps.iOpenHomePage();
-        basePageSteps.iCanSeeAutomationpracticeComWebsite();
+        mainPageSteps.iOpenHomePage();
+        mainPageSteps.iCanSeeAutomationpracticeComWebsite();
         searchPageSteps.iSearchForPhrase("Printed Dress");
         searchPageSteps.iClickOnSearchIcon();
         searchPageSteps.iCanSeeNumbersOfResultsEqualsTo("5");
@@ -202,24 +203,24 @@ public class SearchBox_Tests extends Hooks {
         searchPageSteps.iCanSeeThatResultsAreCorrectlySortedBy("Price: Highest first");
     }
 
-    @Owner("Kamil Nowocin")
-    @Test(priority = 0,
-            description = "I would like to use search box and be able to see sorted results by: \"Price: Lowest first\"")
-    @Description("A a user I would like to see results of searching phrase ->\n" +
-            "I would like to use search box and be able to see sorted results by: \"Price: Lowest first\"")
-    @Severity(SeverityLevel.NORMAL)
-    @Issue("TAP-038")
-    @Story("POSITIVE FLOW")
     @Flaky
+    @Issue("TAP-0038")
+    @Story("POSITIVE FLOW")
+    @Owner("Kamil Nowocin")
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("[US-555]/[8] As a user I would like to use search box and be able to see results sorted by: \"Price: Lowest first\"")
+    @Test(description = "[US-555]/[8] I would like to use search box and be able to see results sorted by: \"Price: Lowest first\"",
+            priority = 0)
     public void test_8() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(38);
-        final BasePageSteps basePageSteps = new BasePageSteps();
+
+        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
         final SearchPageSteps searchPageSteps = new SearchPageSteps();
 
         //ACT//
-        basePageSteps.iOpenHomePage();
-        basePageSteps.iCanSeeAutomationpracticeComWebsite();
+        mainPageSteps.iOpenHomePage();
+        mainPageSteps.iCanSeeAutomationpracticeComWebsite();
         searchPageSteps.iSearchForPhrase("Printed Dress");
         searchPageSteps.iClickOnSearchIcon();
         searchPageSteps.iCanSeeNumbersOfResultsEqualsTo("5");

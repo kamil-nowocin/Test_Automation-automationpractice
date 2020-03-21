@@ -1,10 +1,12 @@
 package com.steps;
 
+import com.ContextInjection;
 import com.DriverFactory;
+import com.google.inject.Inject;
 import com.pages.base.BasePage;
 import com.pages.base.MainPage;
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.When;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.When;
 import io.qameta.allure.Step;
 import org.testng.Assert;
 
@@ -14,24 +16,31 @@ import org.testng.Assert;
  * @author kamil.nowocin
  **/
 
-public class BasePageSteps extends DriverFactory {
+public class MainPageSteps extends DriverFactory {
+
+    private ContextInjection contextInjection;
 
     private BasePage basePage = new BasePage();
     private MainPage mainPage = new MainPage();
+    private RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps(new ContextInjection());
     private AuthenticationPageSteps authenticationPageSteps = new AuthenticationPageSteps();
-    private RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps();
+
+    @Inject
+    public MainPageSteps(ContextInjection contextInjection) {
+        this.contextInjection = contextInjection;
+    }
 
     @Step("I open home page")
     @Given("I open home page")
     public void iOpenHomePage() throws Throwable {
         //ARRANGE//
-        final String home_page = "http://automationpractice.com";
+        final String expectedPageURL = "http://automationpractice.com/index.php";
 
         //ACT//
-        driver.get(home_page);
+        driver.get(HOME_URL);
 
         //ASSERT//
-        Assert.assertEquals(driver.getCurrentUrl(), HOME_URL, _21VOID);
+        Assert.assertEquals(driver.getCurrentUrl(), expectedPageURL, _21VOID);
     }
 
     @Step("I can see automationpractice.com website")
@@ -42,16 +51,17 @@ public class BasePageSteps extends DriverFactory {
 
         //ACT//
         isPageReadyToExecuteTests = basePage.isPageReady();
+        logger.info(String.format("Page ready: %S", isPageReadyToExecuteTests));
 
         //ASSERT//
         Assert.assertTrue(isPageReadyToExecuteTests, PAGE_ERROR);
     }
 
-    @Step("I am logged as customer {string} using {string} password")
+    @Step("I am logged as customer *{0}* using *{1}* password")
     @When("I am logged as customer {string} using {string} password")
     public void iAmLoggedAsCustomerUsingPassword(String email, String password) throws Throwable {
         //ARRANGE//
-        final String defaultUserName = "Thor Odinson";
+        final String defaultUserName = contextInjection.defaultCustomerUserName;
 
         //ACT//
         registrationPageSteps.iClickOnSignInButton();
@@ -60,15 +70,12 @@ public class BasePageSteps extends DriverFactory {
         authenticationPageSteps.iClickOnSubmitButton();
 
         //ASSERT//
-        Assert.assertEquals(mainPage.loggedUser.getText().toUpperCase(), defaultUserName.toUpperCase(), VALUE_ERROR);
+        Assert.assertEquals(mainPage.currentLoggedUserName.getText().toLowerCase(), defaultUserName.toLowerCase(), VALUE_ERROR);
     }
 
     @Step("I am on MyAccount details page")
     @Given("I am on MyAccount details page")
     public void iAmOnMyAccountDetailsPage() throws Throwable {
-        //ARRANGE//
-        //ACT//
-        //ASSERT//
-        //TODO
+        registrationPageSteps.iCanSeeWelcomeMessage();
     }
 }

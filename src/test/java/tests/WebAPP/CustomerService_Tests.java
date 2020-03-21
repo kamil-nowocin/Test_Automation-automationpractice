@@ -1,10 +1,11 @@
-package tests;
+package tests.WebAPP;
 
+import com.ContextInjection;
 import com.ExcelEnvironment;
 import com.listeners.TestNGListener_WEB;
-import com.steps.BasePageSteps;
 import com.steps.CustomerServicePageSteps;
 import com.steps.Hooks;
+import com.steps.MainPageSteps;
 import io.qameta.allure.*;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -20,27 +21,28 @@ import org.testng.annotations.Test;
 @Listeners({TestNGListener_WEB.class})
 public class CustomerService_Tests extends Hooks {
 
-    @Owner("Kamil Nowocin")
-    @Test(priority = 0,
-            description = "I am able to send request via contact us form, all inputs are filled up")
-    @Description("As a user I would like to contact with customer service support ->\n" +
-            "I will send request via contact us form, all inputs are filled up")
-    @Severity(SeverityLevel.NORMAL)
-    @Issue("TAP-001")
+    @Issue("TAP-0005")
     @Story("POSITIVE FLOW")
+    @Owner("Kamil Nowocin")
+    @Severity(SeverityLevel.NORMAL)
+    @Description("[US-222]/[1] As a user I am able to send request via contact us form, all inputs are filled up")
+    @Test(description = "[US-222]/[1] I am able to send request via contact us form, all inputs are filled up",
+            priority = 0)
     public void test_1() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(1);
-        final BasePageSteps basePageSteps = new BasePageSteps();
+        ExcelEnvironment.saveTestResultsXLSX(5);
+
+
+        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
         final CustomerServicePageSteps customerServicePageSteps = new CustomerServicePageSteps();
 
         //ACT//
-        basePageSteps.iOpenHomePage();
-        basePageSteps.iCanSeeAutomationpracticeComWebsite();
+        mainPageSteps.iOpenHomePage();
+        mainPageSteps.iCanSeeAutomationpracticeComWebsite();
         customerServicePageSteps.iClickOnContactUsButton();
         customerServicePageSteps.iCanSeeContactUsForm();
         customerServicePageSteps.iAmOnCustomerServiceContactUsPageForm();
-        customerServicePageSteps.iChooseSubjectHeading();
+        customerServicePageSteps.iChooseSubjectHeading("Customer service");
         customerServicePageSteps.iWriteAnEmailAddressInContactUsPage();
         customerServicePageSteps.iWriteOrderReference();
         customerServicePageSteps.iWriteMessage();
@@ -50,27 +52,27 @@ public class CustomerService_Tests extends Hooks {
         customerServicePageSteps.iCanSeeSuccessMessage("Your message has been successfully sent to our team.");
     }
 
-    @Owner("Kamil Nowocin")
-    @Test(priority = 0,
-            description = "I am able to send request via contact us form, all required inputs are filled up")
-    @Description("As a user I would like to contact with customer service support ->\n" +
-            "I will send request via contact us form, all required inputs are filled up")
-    @Severity(SeverityLevel.NORMAL)
-    @Issue("TAP-002")
+    @Issue("TAP-0006")
     @Story("POSITIVE FLOW")
+    @Owner("Kamil Nowocin")
+    @Severity(SeverityLevel.NORMAL)
+    @Description("[US-222]/[2] As a user I am able to send request via contact us form, all required inputs are filled up")
+    @Test(description = "[US-222]/[2] I am able to send request via contact us form, all required inputs are filled up",
+            priority = 0)
     public void test_2() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(2);
-        final BasePageSteps basePageSteps = new BasePageSteps();
+        ExcelEnvironment.saveTestResultsXLSX(6);
+
+        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
         final CustomerServicePageSteps customerServicePageSteps = new CustomerServicePageSteps();
 
         //ACT//
-        basePageSteps.iOpenHomePage();
-        basePageSteps.iCanSeeAutomationpracticeComWebsite();
+        mainPageSteps.iOpenHomePage();
+        mainPageSteps.iCanSeeAutomationpracticeComWebsite();
         customerServicePageSteps.iClickOnContactUsButton();
         customerServicePageSteps.iCanSeeContactUsForm();
         customerServicePageSteps.iAmOnCustomerServiceContactUsPageForm();
-        customerServicePageSteps.iChooseSubjectHeading();
+        customerServicePageSteps.iChooseSubjectHeading("Customer service");
         customerServicePageSteps.iWriteAnEmailAddressInContactUsPage();
         customerServicePageSteps.iWriteMessage();
         customerServicePageSteps.iClickSendButton();
@@ -79,27 +81,27 @@ public class CustomerService_Tests extends Hooks {
         customerServicePageSteps.iCanSeeSuccessMessage("Your message has been successfully sent to our team.");
     }
 
-    @Owner("Kamil Nowocin")
-    @Test(priority = 0,
-            description = "I am able to send request via contact us form witch attached file")
-    @Description("As a user I would like to contact with customer service support ->\n" +
-            "I will send request via contact us form witch attached file")
-    @Severity(SeverityLevel.NORMAL)
-    @Issue("TAP-003")
+    @Issue("TAP-0007")
     @Story("POSITIVE FLOW")
+    @Owner("Kamil Nowocin")
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("[US-222]/[3] As a user I am able to send request via contact us form witch attached file")
+    @Test(description = "[US-222]/[3] I am able to send request via contact us form witch attached file",
+            priority = 0)
     public void test_3() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(3);
-        final BasePageSteps basePageSteps = new BasePageSteps();
+        ExcelEnvironment.saveTestResultsXLSX(7);
+
+        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
         final CustomerServicePageSteps customerServicePageSteps = new CustomerServicePageSteps();
 
         //ACT//
-        basePageSteps.iOpenHomePage();
-        basePageSteps.iCanSeeAutomationpracticeComWebsite();
+        mainPageSteps.iOpenHomePage();
+        mainPageSteps.iCanSeeAutomationpracticeComWebsite();
         customerServicePageSteps.iClickOnContactUsButton();
         customerServicePageSteps.iCanSeeContactUsForm();
         customerServicePageSteps.iAmOnCustomerServiceContactUsPageForm();
-        customerServicePageSteps.iChooseSubjectHeading();
+        customerServicePageSteps.iChooseSubjectHeading("Customer service");
         customerServicePageSteps.iWriteAnEmailAddressInContactUsPage();
         customerServicePageSteps.iWriteOrderReference();
         customerServicePageSteps.iChooseFileToAttach();
@@ -110,27 +112,27 @@ public class CustomerService_Tests extends Hooks {
         customerServicePageSteps.iCanSeeSuccessMessage("Your message has been successfully sent to our team.");
     }
 
-    @Owner("Kamil Nowocin")
-    @Test(priority = 0,
-            description = "I am not able to send request via contact us form, email input is invalid")
-    @Description("As a user I would like to contact with customer service support ->\n" +
-            "I will send request via contact us form, email input is invalid")
-    @Severity(SeverityLevel.NORMAL)
-    @Issue("TAP-004")
+    @Issue("TAP-0008")
     @Story("NEGATIVE FLOW")
+    @Owner("Kamil Nowocin")
+    @Severity(SeverityLevel.NORMAL)
+    @Description("[US-222]/[4] As a user I am not able to send request via contact us form, email input is invalid")
+    @Test(description = "[US-222]/[4] I am not able to send request via contact us form, email input is invalid",
+            priority = 0)
     public void test_4() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(4);
-        final BasePageSteps basePageSteps = new BasePageSteps();
+        ExcelEnvironment.saveTestResultsXLSX(8);
+
+        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
         final CustomerServicePageSteps customerServicePageSteps = new CustomerServicePageSteps();
 
         //ACT//
-        basePageSteps.iOpenHomePage();
-        basePageSteps.iCanSeeAutomationpracticeComWebsite();
+        mainPageSteps.iOpenHomePage();
+        mainPageSteps.iCanSeeAutomationpracticeComWebsite();
         customerServicePageSteps.iClickOnContactUsButton();
         customerServicePageSteps.iCanSeeContactUsForm();
         customerServicePageSteps.iAmOnCustomerServiceContactUsPageForm();
-        customerServicePageSteps.iChooseSubjectHeading();
+        customerServicePageSteps.iChooseSubjectHeading("Customer service");
         customerServicePageSteps.iWriteAnInvalidEmailAddressInContactUsPage();
         customerServicePageSteps.iWriteOrderReference();
         customerServicePageSteps.iChooseFileToAttach();
@@ -141,23 +143,23 @@ public class CustomerService_Tests extends Hooks {
         customerServicePageSteps.iCanSeeErrorMessage("Invalid email address.");
     }
 
-    @Owner("Kamil Nowocin")
-    @Test(priority = 0,
-            description = "I am not able to send request via contact us form, subject is missing")
-    @Description("As a user I would like to contact with customer service support ->\n" +
-            "I will send request via contact us form, subject is missing")
-    @Severity(SeverityLevel.NORMAL)
-    @Issue("TAP-005")
+    @Issue("TAP-0009")
     @Story("NEGATIVE FLOW")
+    @Owner("Kamil Nowocin")
+    @Severity(SeverityLevel.NORMAL)
+    @Description("[US-222]/[5] As a user I am not able to send request via contact us form, subject is missing")
+    @Test(description = "[US-222]/[5] I am not able to send request via contact us form, subject is missing",
+            priority = 0)
     public void test_5() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(5);
-        final BasePageSteps basePageSteps = new BasePageSteps();
+        ExcelEnvironment.saveTestResultsXLSX(9);
+
+        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
         final CustomerServicePageSteps customerServicePageSteps = new CustomerServicePageSteps();
 
         //ACT//
-        basePageSteps.iOpenHomePage();
-        basePageSteps.iCanSeeAutomationpracticeComWebsite();
+        mainPageSteps.iOpenHomePage();
+        mainPageSteps.iCanSeeAutomationpracticeComWebsite();
         customerServicePageSteps.iClickOnContactUsButton();
         customerServicePageSteps.iCanSeeContactUsForm();
         customerServicePageSteps.iAmOnCustomerServiceContactUsPageForm();
@@ -172,27 +174,27 @@ public class CustomerService_Tests extends Hooks {
         customerServicePageSteps.iCanSeeErrorMessage("Please select a subject from the list provided.");
     }
 
-    @Owner("Kamil Nowocin")
-    @Test(priority = 0,
-            description = "I am not able to send request via contact us form, email address is missing")
-    @Description("As a user I would like to contact with customer service support ->\n" +
-            "I will send request via contact us form, email address is missing")
-    @Severity(SeverityLevel.NORMAL)
-    @Issue("TAP-006")
+    @Issue("TAP-0010")
     @Story("NEGATIVE FLOW")
+    @Owner("Kamil Nowocin")
+    @Severity(SeverityLevel.NORMAL)
+    @Description("[US-222]/[6] As a user I am not able to send request via contact us form, email address is missing")
+    @Test(description = "[US-222]/[6] I am not able to send request via contact us form, email address is missing",
+            priority = 0)
     public void test_6() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(6);
-        final BasePageSteps basePageSteps = new BasePageSteps();
+        ExcelEnvironment.saveTestResultsXLSX(10);
+
+        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
         final CustomerServicePageSteps customerServicePageSteps = new CustomerServicePageSteps();
 
         //ACT//
-        basePageSteps.iOpenHomePage();
-        basePageSteps.iCanSeeAutomationpracticeComWebsite();
+        mainPageSteps.iOpenHomePage();
+        mainPageSteps.iCanSeeAutomationpracticeComWebsite();
         customerServicePageSteps.iClickOnContactUsButton();
         customerServicePageSteps.iCanSeeContactUsForm();
         customerServicePageSteps.iAmOnCustomerServiceContactUsPageForm();
-        customerServicePageSteps.iChooseSubjectHeading();
+        customerServicePageSteps.iChooseSubjectHeading("Customer service");
         customerServicePageSteps.iDonTWriteAnEmailAddress();
         customerServicePageSteps.iWriteOrderReference();
         customerServicePageSteps.iChooseFileToAttach();
@@ -203,27 +205,27 @@ public class CustomerService_Tests extends Hooks {
         customerServicePageSteps.iCanSeeErrorMessage("Invalid email address.");
     }
 
-    @Owner("Kamil Nowocin")
-    @Test(priority = 0,
-            description = "I am not able to send request via contact us form, message input is missing")
-    @Description("As a user I would like to contact with customer service support ->\n" +
-            "I will send request via contact us form, message input is missing")
-    @Severity(SeverityLevel.NORMAL)
-    @Issue("TAP-007")
+    @Issue("TAP-0011")
     @Story("NEGATIVE FLOW")
+    @Owner("Kamil Nowocin")
+    @Severity(SeverityLevel.NORMAL)
+    @Description("[US-222]/[7] As a user I am not able to send request via contact us form, message input is missing")
+    @Test(description = "[US-222]/[7] I am not able to send request via contact us form, message input is missing",
+            priority = 0)
     public void test_7() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(7);
-        final BasePageSteps basePageSteps = new BasePageSteps();
+        ExcelEnvironment.saveTestResultsXLSX(11);
+
+        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
         final CustomerServicePageSteps customerServicePageSteps = new CustomerServicePageSteps();
 
         //ACT//
-        basePageSteps.iOpenHomePage();
-        basePageSteps.iCanSeeAutomationpracticeComWebsite();
+        mainPageSteps.iOpenHomePage();
+        mainPageSteps.iCanSeeAutomationpracticeComWebsite();
         customerServicePageSteps.iClickOnContactUsButton();
         customerServicePageSteps.iCanSeeContactUsForm();
         customerServicePageSteps.iAmOnCustomerServiceContactUsPageForm();
-        customerServicePageSteps.iChooseSubjectHeading();
+        customerServicePageSteps.iChooseSubjectHeading("Customer service");
         customerServicePageSteps.iWriteAnEmailAddressInContactUsPage();
         customerServicePageSteps.iWriteOrderReference();
         customerServicePageSteps.iChooseFileToAttach();
@@ -234,23 +236,23 @@ public class CustomerService_Tests extends Hooks {
         customerServicePageSteps.iCanSeeErrorMessage("The message cannot be blank.");
     }
 
-    @Owner("Kamil Nowocin")
-    @Test(priority = 0,
-            description = "I am not able to send request via contact us form, all inputs are missing")
-    @Description("As a user I would like to contact with customer service support ->\n" +
-            "I will send request via contact us form, all inputs are missing")
-    @Severity(SeverityLevel.NORMAL)
-    @Issue("TAP-008")
+    @Issue("TAP-0012")
     @Story("NEGATIVE FLOW")
+    @Owner("Kamil Nowocin")
+    @Severity(SeverityLevel.NORMAL)
+    @Description("[US-222]/[8] As a user I am not able to send request via contact us form, all inputs are missing")
+    @Test(description = "[US-222]/[8] I am not able to send request via contact us form, all inputs are missing",
+            priority = 0)
     public void test_8() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(8);
-        final BasePageSteps basePageSteps = new BasePageSteps();
+        ExcelEnvironment.saveTestResultsXLSX(12);
+
+        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
         final CustomerServicePageSteps customerServicePageSteps = new CustomerServicePageSteps();
 
         //ACT//
-        basePageSteps.iOpenHomePage();
-        basePageSteps.iCanSeeAutomationpracticeComWebsite();
+        mainPageSteps.iOpenHomePage();
+        mainPageSteps.iCanSeeAutomationpracticeComWebsite();
         customerServicePageSteps.iClickOnContactUsButton();
         customerServicePageSteps.iCanSeeContactUsForm();
         customerServicePageSteps.iAmOnCustomerServiceContactUsPageForm();

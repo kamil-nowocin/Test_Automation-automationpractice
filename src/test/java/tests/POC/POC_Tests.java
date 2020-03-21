@@ -1,4 +1,4 @@
-package tests;
+package tests.POC;
 
 import com.ExcelEnvironment;
 import com.steps.Hooks;
@@ -17,26 +17,26 @@ import org.testng.annotations.Test;
 @Ignore
 @Epic("POC Tests")
 @Feature("POC Tests")
-public class EXCEL_POC_Tests extends Hooks {
+//@Listeners({TestNGListener_WEB.class}) //ENABLE TO SAVE RESULTS IN EXCEL
+public class POC_Tests extends Hooks {
 
     @Step("Some POC step")
     public void testSteps(XSSFRow row) {
         System.out.println("DATA SET 1: " + row.getCell(5).toString());
         System.out.println("DATA SET 2: " + row.getCell(7).toString());
-
     }
 
     @Ignore
-    @Owner("Kamil Nowocin")
-    @Test(priority = 0,
-            description = "As a developer I'd like to see working POC with .xlsx file")
-    @Description("As a developer I'd like to see working POC with .xlsx file")
-    @Severity(SeverityLevel.MINOR)
     @Issue("TAP-POC")
     @Story("POC Tests")
+    @Owner("Kamil Nowocin")
+    @Severity(SeverityLevel.MINOR)
+    @Description("As a developer I'd like to see working POC with .xlsx file")
+    @Test(description = "As a developer I'd like to see working POC with .xlsx file",
+            priority = 0)
     public void excelTest() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(1);
+        ExcelEnvironment.saveTestResultsXLSX(50);
 
         //ACT//
         testSteps(ExcelEnvironment.getRowData(1));

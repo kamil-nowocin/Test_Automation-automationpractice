@@ -4,10 +4,10 @@ import com.FrameworkEnvironment;
 import com.pages.CustomerServicePage;
 import com.pages.base.BasePage;
 import com.pages.base.MainPage;
-import cucumber.api.java.en.And;
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import io.qameta.allure.Step;
 import org.testng.Assert;
 
@@ -35,7 +35,7 @@ public class CustomerServicePageSteps extends FrameworkEnvironment {
     @Step("I can see Contact Us form")
     @Then("I can see Contact Us form")
     public void iCanSeeContactUsForm() throws Throwable {
-        Assert.assertTrue(basePage.isDisplayed(5, customerServicePage.contactUsForm),
+        Assert.assertTrue(basePage.isDisplayed(5, customerServicePage.contactUsPane),
                 String.format(VIEW_ERROR, "Contact Us form"));
     }
 
@@ -46,18 +46,15 @@ public class CustomerServicePageSteps extends FrameworkEnvironment {
                 String.format(VIEW_ERROR, "Customer Service Contact Us page form"));
     }
 
-    @Step("I choose Subject Heading")
-    @When("I choose Subject Heading")
-    public void iChooseSubjectHeading() throws Throwable {
-        //ARRANGE//
-        final String subjectHeading = "Customer service";
-
+    @Step("I choose Subject Heading *{0}*")
+    @When("I choose Subject Heading {string}")
+    public void iChooseSubjectHeading(String subjectHeading) throws Throwable {
         //ACT//
         basePage.selectFromDropdownByText(subjectHeading, customerServicePage.subjectHeadingDropdown);
         logger.info(String.format("Chosen subject: %S", subjectHeading));
 
         //ASSERT//
-        Assert.assertEquals(customerServicePage.chosenSubjectHeadingFromDropdown.getText().toLowerCase(),
+        Assert.assertEquals(customerServicePage.readSubjectHeading.getText().toLowerCase(),
                 subjectHeading.toLowerCase(), VALUE_ERROR);
     }
 
@@ -142,10 +139,10 @@ public class CustomerServicePageSteps extends FrameworkEnvironment {
 
         //ACT//
         customerServicePage.attachFileInput.sendKeys(path);
+        logger.info(String.format("Uploaded file name: %S", fileName));
 
         //ASSERT//
-        Assert.assertEquals(customerServicePage.chosenFileName.getText().toLowerCase(),
-                fileName.toLowerCase(), VALUE_ERROR);
+        Assert.assertEquals(customerServicePage.readFileName.getText().toLowerCase(), fileName.toLowerCase(), VALUE_ERROR);
     }
 
     @Step("I click Send button")
@@ -155,14 +152,14 @@ public class CustomerServicePageSteps extends FrameworkEnvironment {
     }
 
 
-    @Step("I can see success message {0}")
+    @Step("I can see success message *{0}*")
     @And("I can see success message {string}")
     public void iCanSeeSuccessMessage(String successMessage) throws Throwable {
         Assert.assertTrue(customerServicePage.contactUsSuccessMessage.getText().toLowerCase().contains
                 (successMessage.toLowerCase()), String.format(MESSAGE_DIDNT_CONTAIN, successMessage.toUpperCase()));
     }
 
-    @Step("I can see error message {0}")
+    @Step("I can see error message *{0}*")
     @And("I can see error message {string}")
     public void iCanSeeErrorMessage(String errorMessage) throws Throwable {
         Assert.assertTrue(customerServicePage.contactUsErrorMessage.getText().toLowerCase().contains

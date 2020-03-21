@@ -4,7 +4,11 @@
 #* @author kamil.nowocin
 #**/
 
+@registration
 Feature: As a user I would like to register into automationpractice.com
+#--------------------------------------------------------------------------------#
+# [US] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-333              #
+#--------------------------------------------------------------------------------#
 
   Background: Navigate to Sign Up page
     Given I open home page
@@ -12,15 +16,19 @@ Feature: As a user I would like to register into automationpractice.com
     When I click on Sign in button
     Then I can see registration page form
 
-#--------------------------------------------------------------------------------
-  Scenario: As a user I check availability of registration page form
+#--------------------------------------------------------------------------------#
+# [ZEPHYR] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-0013
+  @smoke @blocker @regression
+  Scenario:[US-333]/[1] As a user I check availability of registration page form
     Given I can see registration page form
     When I write an email address
     And I click on Create An Account button
     Then I can see account creation page form
 
-#--------------------------------------------------------------------------------
-  Scenario: As a user I can create an account by filling up all fields
+#--------------------------------------------------------------------------------#
+# [ZEPHYR] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-0014
+  @smoke @critical @regression
+  Scenario:[US-333]/[2] As a user I can create an account by filling up all fields
     Given I can see registration page form
     When I write an email address
     And I click on Create An Account button
@@ -45,8 +53,10 @@ Feature: As a user I would like to register into automationpractice.com
     And I click on Register button
     Then I can see welcome message
 
-#--------------------------------------------------------------------------------
-  Scenario: As a user I can create an account by filling up only required fields
+#--------------------------------------------------------------------------------#
+# [ZEPHYR] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-0015
+  @non-smoke @critical @regression
+  Scenario:[US-333]/[3] As a user I can create an account by filling up only required fields
     Given I can see registration page form
     When I write an email address
     And I click on Create An Account button
@@ -65,18 +75,22 @@ Feature: As a user I would like to register into automationpractice.com
     And I click on Register button
     Then I can see welcome message
 
-#--------------------------------------------------------------------------------
-  Scenario: As a user I can't create an account without filling up fields
+#--------------------------------------------------------------------------------#
+# [ZEPHYR] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-0016
+  @non-smoke @normal @regression
+  Scenario:[US-333]/[4] As a user I can't create an account without filling up fields
     Given I can see registration page form
     When I write an email address
     And I click on Create An Account button
     And I click on Register button
     Then I can see registration error
 
-#--------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------#
+# [ZEPHYR] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-0017
 # This scenario is created as "smart one", you can choose any of required field to be missing.
 # Simply, just leave one and only one of data section as blank one.
-  Scenario: As a user I can't create an account, when one of required fields is missing
+  @non-smoke @normal @regression
+  Scenario:[US-333]/[5] As a user I can't create an account, when one of required fields is missing
     Given I can see registration page form
     When I write an email address
     And I click on Create An Account button
@@ -89,15 +103,19 @@ Feature: As a user I would like to register into automationpractice.com
     And I click on Register button
     Then I can see warning message about missing "one element" input
 
-#--------------------------------------------------------------------------------
-  Scenario: As a user I can't create an account, when email is already in database
+#--------------------------------------------------------------------------------#
+# [ZEPHYR] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-0018
+  @smoke @critical @regression
+  Scenario:[US-333]/[6] As a user I can't create an account, when email is already in database
     Given I can see registration page form
     When I write an email address which is already in database
     And I click on Create An Account button
     Then I can see registration error
 
-#--------------------------------------------------------------------------------
-  Scenario: As a user I can't create an account, when email has wrong format
+#--------------------------------------------------------------------------------#
+# [ZEPHYR] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-0019
+  @non-smoke @critical @regression
+  Scenario:[US-333]/[7] As a user I can't create an account, when email has wrong format
     Given I can see registration page form
     When I write an invalid email address
     And I click on Create An Account button

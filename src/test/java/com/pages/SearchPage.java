@@ -15,17 +15,19 @@ import java.util.List;
 
 public class SearchPage extends BasePage {
 
+    //VIEW//
     @FindBy(how = How.XPATH, using = "//span[@class='heading-counter']")
     public WebElement searchResultsNumber;
 
-    @FindBy(how = How.XPATH, using = "//select[@id='selectProductSort']")
-    public WebElement dropdownSortBy;
-
-    @FindBy(how = How.XPATH, using = "//div[@id='uniform-selectProductSort']//span")
-    public WebElement chosenSortBy;
-
     @FindBy(how = How.XPATH, using = "//div[@id='center_column']//p")
     public WebElement noResultsWereFoundHeader;
+
+    //BUTTONS & INPUTS & DROPDOWN//
+    @FindBy(how = How.XPATH, using = "//select[@id='selectProductSort']")
+    public WebElement sortByDropdown;
+
+    @FindBy(how = How.XPATH, using = "//div[@id='uniform-selectProductSort']//span")
+    public WebElement readSortByDropdown;
 
     @FindBy(how = How.XPATH, using = "//div[@class='right-block']//a[@class='product-name']")
     public List<WebElement> productNames;

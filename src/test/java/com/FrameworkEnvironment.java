@@ -4,6 +4,7 @@ import com.github.javafaker.Faker;
 import com.listeners.TestNGListener_WEB;
 import com.steps.Hooks;
 import cucumber.api.Scenario;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.Attachment;
 import net.andreinc.mockneat.MockNeat;
 import org.apache.commons.io.FileUtils;
@@ -22,6 +23,8 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
@@ -37,16 +40,14 @@ import java.util.stream.Stream;
 
 public class FrameworkEnvironment {
 
-    protected static Logger logger = LoggerFactory.getLogger(Hooks.class);
-    protected static Faker faker = new Faker(new Locale("en-US"));
+    protected static Faker faker = new Faker(Locale.US);
     protected static MockNeat mockNeat = MockNeat.threadLocal();
+    protected static Logger logger = LoggerFactory.getLogger(Hooks.class);
+    protected static DecimalFormat $decimalFormat = new DecimalFormat("$#0.00", new DecimalFormatSymbols(Locale.US));
 
     //BUNDLES//
     protected static final ResourceBundle resourceBundleInvalidEmails = ResourceBundle.getBundle("invalidEmails");
     protected static final ResourceBundle resourceBundleErrorMessages = ResourceBundle.getBundle("errorValidators");
-
-    //DYNAMIC DATA//
-    protected final String tempEmail = mockNeat.emails().val();
 
     //STATIC DATA//
     protected static final int TIMEOUT = 15;
@@ -57,7 +58,7 @@ public class FrameworkEnvironment {
     protected static final String ANSI_BLUE = "\u001b[34m";
     protected static final String ANSI_GREEN = "\u001B[32m";
     protected static final String EXECUTOR = "GRADLE";
-    protected static final String HOME_URL = "http://automationpractice.com/index.php";
+    protected static final String HOME_URL = "http://automationpractice.com";
     protected static final String TODAY_DATE = new SimpleDateFormat("yyyy-MM-dd HH:ss").format(new Date());
 
     //MESSAGES//
@@ -190,7 +191,17 @@ public class FrameworkEnvironment {
                     .map(Path::toFile)
                     .forEach(File::delete);
         } catch (IOException e) {
-            logger.error("Failed to delete logs files!", e);
+            logger.error("Failed to delete log files!", e);
+        }
+    }
+
+    public void printWebDriverManagerVersions(Boolean boolStatus) {
+        if (boolStatus) {
+            logger.info("ChromeDriver available versions: " + WebDriverManager.chromedriver().getVersions());
+            logger.info("GeckoDriver available versions: " + WebDriverManager.firefoxdriver().getVersions());
+            logger.info("OperaDriver available versions: " + WebDriverManager.operadriver().getVersions());
+            logger.info("EdgeDriver available versions: " + WebDriverManager.edgedriver().getVersions());
+            logger.info("IE available versions: " + WebDriverManager.iedriver().getVersions());
         }
     }
 }

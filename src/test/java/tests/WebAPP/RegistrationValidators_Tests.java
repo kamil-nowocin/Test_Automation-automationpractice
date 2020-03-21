@@ -1,9 +1,10 @@
-package tests;
+package tests.WebAPP;
 
+import com.ContextInjection;
 import com.ExcelEnvironment;
 import com.listeners.TestNGListener_WEB;
-import com.steps.BasePageSteps;
 import com.steps.Hooks;
+import com.steps.MainPageSteps;
 import com.steps.RegistrationPageSteps;
 import io.qameta.allure.*;
 import org.testng.annotations.Listeners;
@@ -20,23 +21,23 @@ import org.testng.annotations.Test;
 @Listeners({TestNGListener_WEB.class})
 public class RegistrationValidators_Tests extends Hooks {
 
-    @Owner("Kamil Nowocin")
-    @Test(priority = 0,
-            description = "I would like to see registration error, when I don't fill first name input")
-    @Description("As a user I would like to see the error message where I made a mistake in the registration page form ->\n" +
-            "I would like to see registration error, when I don't fill first name input")
-    @Severity(SeverityLevel.NORMAL)
-    @Issue("TAP-020")
+    @Issue("TAP-0020")
     @Story("NEGATIVE FLOW")
+    @Owner("Kamil Nowocin")
+    @Severity(SeverityLevel.NORMAL)
+    @Description("[US-444]/[1] As a user I would like to see registration error, when I don't fill first name input")
+    @Test(description = "[US-444]/[1] I would like to see registration error, when I don't fill first name input",
+            priority = 0)
     public void test_1() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(20);
-        final BasePageSteps basePageSteps = new BasePageSteps();
-        final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps();
+
+        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
+        final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps(new ContextInjection());
 
         //ACT//
-        basePageSteps.iOpenHomePage();
-        basePageSteps.iCanSeeAutomationpracticeComWebsite();
+        mainPageSteps.iOpenHomePage();
+        mainPageSteps.iCanSeeAutomationpracticeComWebsite();
         registrationPageSteps.iClickOnSignInButton();
         registrationPageSteps.iWriteAnEmailAddress();
         registrationPageSteps.iClickOnCreateAnAccountButton();
@@ -58,23 +59,23 @@ public class RegistrationValidators_Tests extends Hooks {
         registrationPageSteps.iCanSeeWarningMessageAboutMissingInput("first name");
     }
 
-    @Owner("Kamil Nowocin")
-    @Test(priority = 0,
-            description = "I would like to see registration error, when I don't fill last name input")
-    @Description("As a user I would like to see the error message where I made a mistake in the registration page form ->\n" +
-            "I would like to see registration error, when I don't fill last name input")
-    @Severity(SeverityLevel.NORMAL)
-    @Issue("TAP-021")
+    @Issue("TAP-0021")
     @Story("NEGATIVE FLOW")
+    @Owner("Kamil Nowocin")
+    @Severity(SeverityLevel.NORMAL)
+    @Description("[US-444]/[2] As a user I would like to see registration error, when I don't fill last name input")
+    @Test(description = "[US-444]/[2] I would like to see registration error, when I don't fill last name input",
+            priority = 0)
     public void test_2() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(21);
-        final BasePageSteps basePageSteps = new BasePageSteps();
-        final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps();
+
+        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
+        final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps(new ContextInjection());
 
         //ACT//
-        basePageSteps.iOpenHomePage();
-        basePageSteps.iCanSeeAutomationpracticeComWebsite();
+        mainPageSteps.iOpenHomePage();
+        mainPageSteps.iCanSeeAutomationpracticeComWebsite();
         registrationPageSteps.iClickOnSignInButton();
         registrationPageSteps.iWriteAnEmailAddress();
         registrationPageSteps.iClickOnCreateAnAccountButton();
@@ -96,23 +97,23 @@ public class RegistrationValidators_Tests extends Hooks {
         registrationPageSteps.iCanSeeWarningMessageAboutMissingInput("last name");
     }
 
-    @Owner("Kamil Nowocin")
-    @Test(priority = 0,
-            description = "I would like to see registration error, when I don't fill email input")
-    @Description("As a user I would like to see the error message where I made a mistake in the registration page form ->\n" +
-            "I would like to see registration error, when I don't fill email input")
-    @Severity(SeverityLevel.NORMAL)
-    @Issue("TAP-022")
+    @Issue("TAP-0022")
     @Story("NEGATIVE FLOW")
+    @Owner("Kamil Nowocin")
+    @Severity(SeverityLevel.NORMAL)
+    @Description("[US-444]/[3] As a user I would like to see registration error, when I don't fill email input")
+    @Test(description = "[US-444]/[3] I would like to see registration error, when I don't fill email input",
+            priority = 0)
     public void test_3() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(22);
-        final BasePageSteps basePageSteps = new BasePageSteps();
-        final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps();
+
+        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
+        final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps(new ContextInjection());
 
         //ACT//
-        basePageSteps.iOpenHomePage();
-        basePageSteps.iCanSeeAutomationpracticeComWebsite();
+        mainPageSteps.iOpenHomePage();
+        mainPageSteps.iCanSeeAutomationpracticeComWebsite();
         registrationPageSteps.iClickOnSignInButton();
         registrationPageSteps.iWriteAnEmailAddress();
         registrationPageSteps.iClickOnCreateAnAccountButton();
@@ -136,23 +137,23 @@ public class RegistrationValidators_Tests extends Hooks {
         registrationPageSteps.iCanSeeWarningMessageAboutMissingInput("email address");
     }
 
-    @Owner("Kamil Nowocin")
-    @Test(priority = 0,
-            description = "I would like to see registration error, when I don't fill password input")
-    @Description("As a user I would like to see the error message where I made a mistake in the registration page form ->\n" +
-            "I would like to see registration error, when I don't fill password input")
-    @Severity(SeverityLevel.NORMAL)
-    @Issue("TAP-023")
+    @Issue("TAP-0023")
     @Story("NEGATIVE FLOW")
+    @Owner("Kamil Nowocin")
+    @Severity(SeverityLevel.NORMAL)
+    @Description("[US-444]/[4] As a user I would like to see registration error, when I don't fill password input")
+    @Test(description = "[US-444]/[4] I would like to see registration error, when I don't fill password input",
+            priority = 0)
     public void test_4() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(23);
-        final BasePageSteps basePageSteps = new BasePageSteps();
-        final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps();
+
+        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
+        final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps(new ContextInjection());
 
         //ACT//
-        basePageSteps.iOpenHomePage();
-        basePageSteps.iCanSeeAutomationpracticeComWebsite();
+        mainPageSteps.iOpenHomePage();
+        mainPageSteps.iCanSeeAutomationpracticeComWebsite();
         registrationPageSteps.iClickOnSignInButton();
         registrationPageSteps.iWriteAnEmailAddress();
         registrationPageSteps.iClickOnCreateAnAccountButton();
@@ -174,23 +175,23 @@ public class RegistrationValidators_Tests extends Hooks {
         registrationPageSteps.iCanSeeWarningMessageAboutMissingInput("password");
     }
 
-    @Owner("Kamil Nowocin")
-    @Test(priority = 0,
-            description = "I would like to see registration error, when I don't fill address input")
-    @Description("As a user I would like to see the error message where I made a mistake in the registration page form ->\n" +
-            "I would like to see registration error, when I don't fill address input")
-    @Severity(SeverityLevel.NORMAL)
-    @Issue("TAP-024")
+    @Issue("TAP-0024")
     @Story("NEGATIVE FLOW")
+    @Owner("Kamil Nowocin")
+    @Severity(SeverityLevel.NORMAL)
+    @Description("[US-444]/[5] As a user I would like to see registration error, when I don't fill address input")
+    @Test(description = "[US-444]/[5] I would like to see registration error, when I don't fill address input",
+            priority = 0)
     public void test_5() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(24);
-        final BasePageSteps basePageSteps = new BasePageSteps();
-        final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps();
+
+        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
+        final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps(new ContextInjection());
 
         //ACT//
-        basePageSteps.iOpenHomePage();
-        basePageSteps.iCanSeeAutomationpracticeComWebsite();
+        mainPageSteps.iOpenHomePage();
+        mainPageSteps.iCanSeeAutomationpracticeComWebsite();
         registrationPageSteps.iClickOnSignInButton();
         registrationPageSteps.iWriteAnEmailAddress();
         registrationPageSteps.iClickOnCreateAnAccountButton();
@@ -212,23 +213,23 @@ public class RegistrationValidators_Tests extends Hooks {
         registrationPageSteps.iCanSeeWarningMessageAboutMissingInput("address");
     }
 
-    @Owner("Kamil Nowocin")
-    @Test(priority = 0,
-            description = "I would like to see registration error, when I don't fill city input")
-    @Description("As a user I would like to see the error message where I made a mistake in the registration page form ->\n" +
-            "I would like to see registration error, when I don't fill city input")
-    @Severity(SeverityLevel.NORMAL)
-    @Issue("TAP-025")
+    @Issue("TAP-0025")
     @Story("NEGATIVE FLOW")
+    @Owner("Kamil Nowocin")
+    @Severity(SeverityLevel.NORMAL)
+    @Description("[US-444]/[6] As a user I would like to see registration error, when I don't fill city input")
+    @Test(description = "[US-444]/[6] I would like to see registration error, when I don't fill city input",
+            priority = 0)
     public void test_6() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(25);
-        final BasePageSteps basePageSteps = new BasePageSteps();
-        final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps();
+
+        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
+        final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps(new ContextInjection());
 
         //ACT//
-        basePageSteps.iOpenHomePage();
-        basePageSteps.iCanSeeAutomationpracticeComWebsite();
+        mainPageSteps.iOpenHomePage();
+        mainPageSteps.iCanSeeAutomationpracticeComWebsite();
         registrationPageSteps.iClickOnSignInButton();
         registrationPageSteps.iWriteAnEmailAddress();
         registrationPageSteps.iClickOnCreateAnAccountButton();
@@ -250,23 +251,23 @@ public class RegistrationValidators_Tests extends Hooks {
         registrationPageSteps.iCanSeeWarningMessageAboutMissingInput("city");
     }
 
-    @Owner("Kamil Nowocin")
-    @Test(priority = 0,
-            description = "I would like to see registration error, when I don't fill state input")
-    @Description("As a user I would like to see the error message where I made a mistake in the registration page form ->\n" +
-            "I would like to see registration error, when I don't fill state input")
-    @Severity(SeverityLevel.NORMAL)
-    @Issue("TAP-026")
+    @Issue("TAP-0026")
     @Story("NEGATIVE FLOW")
+    @Owner("Kamil Nowocin")
+    @Severity(SeverityLevel.NORMAL)
+    @Description("[US-444]/[7] As a user I would like to see registration error, when I don't fill state input")
+    @Test(description = "[US-444]/[7] I would like to see registration error, when I don't fill state input",
+            priority = 0)
     public void test_7() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(26);
-        final BasePageSteps basePageSteps = new BasePageSteps();
-        final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps();
+
+        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
+        final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps(new ContextInjection());
 
         //ACT//
-        basePageSteps.iOpenHomePage();
-        basePageSteps.iCanSeeAutomationpracticeComWebsite();
+        mainPageSteps.iOpenHomePage();
+        mainPageSteps.iCanSeeAutomationpracticeComWebsite();
         registrationPageSteps.iClickOnSignInButton();
         registrationPageSteps.iWriteAnEmailAddress();
         registrationPageSteps.iClickOnCreateAnAccountButton();
@@ -288,23 +289,23 @@ public class RegistrationValidators_Tests extends Hooks {
         registrationPageSteps.iCanSeeWarningMessageAboutMissingInput("state");
     }
 
-    @Owner("Kamil Nowocin")
-    @Test(priority = 0,
-            description = "I would like to see registration error, when I don't fill postal code input")
-    @Description("As a user I would like to see the error message where I made a mistake in the registration page form ->\n" +
-            "I would like to see registration error, when I don't fill postal code input")
-    @Severity(SeverityLevel.NORMAL)
-    @Issue("TAP-027")
+    @Issue("TAP-0027")
     @Story("NEGATIVE FLOW")
+    @Owner("Kamil Nowocin")
+    @Severity(SeverityLevel.NORMAL)
+    @Description("[US-444]/[8] As a user I would like to see registration error, when I don't fill postal code input")
+    @Test(description = "[US-444]/[8] I would like to see registration error, when I don't fill postal code input",
+            priority = 0)
     public void test_8() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(27);
-        final BasePageSteps basePageSteps = new BasePageSteps();
-        final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps();
+
+        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
+        final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps(new ContextInjection());
 
         //ACT//
-        basePageSteps.iOpenHomePage();
-        basePageSteps.iCanSeeAutomationpracticeComWebsite();
+        mainPageSteps.iOpenHomePage();
+        mainPageSteps.iCanSeeAutomationpracticeComWebsite();
         registrationPageSteps.iClickOnSignInButton();
         registrationPageSteps.iWriteAnEmailAddress();
         registrationPageSteps.iClickOnCreateAnAccountButton();
@@ -326,23 +327,23 @@ public class RegistrationValidators_Tests extends Hooks {
         registrationPageSteps.iCanSeeWarningMessageAboutMissingInput("postal code");
     }
 
-    @Owner("Kamil Nowocin")
-    @Test(priority = 0,
-            description = "I would like to see registration error, when I don't fill country input")
-    @Description("As a user I would like to see the error message where I made a mistake in the registration page form ->\n" +
-            "I would like to see registration error, when I don't fill country input")
-    @Severity(SeverityLevel.NORMAL)
-    @Issue("TAP-028")
+    @Issue("TAP-0028")
     @Story("NEGATIVE FLOW")
+    @Owner("Kamil Nowocin")
+    @Severity(SeverityLevel.NORMAL)
+    @Description("[US-444]/[9] As a user I would like to see registration error, when I don't fill country input")
+    @Test(description = "[US-444]/[9] I would like to see registration error, when I don't fill country input",
+            priority = 0)
     public void test_9() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(28);
-        final BasePageSteps basePageSteps = new BasePageSteps();
-        final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps();
+
+        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
+        final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps(new ContextInjection());
 
         //ACT//
-        basePageSteps.iOpenHomePage();
-        basePageSteps.iCanSeeAutomationpracticeComWebsite();
+        mainPageSteps.iOpenHomePage();
+        mainPageSteps.iCanSeeAutomationpracticeComWebsite();
         registrationPageSteps.iClickOnSignInButton();
         registrationPageSteps.iWriteAnEmailAddress();
         registrationPageSteps.iClickOnCreateAnAccountButton();
@@ -363,23 +364,23 @@ public class RegistrationValidators_Tests extends Hooks {
         registrationPageSteps.iCanSeeWarningMessageAboutMissingInput("country");
     }
 
-    @Owner("Kamil Nowocin")
-    @Test(priority = 0,
-            description = "I would like to see registration error, when I don't fill mobile phone input")
-    @Description("As a user I would like to see the error message where I made a mistake in the registration page form ->\n" +
-            "I would like to see registration error, when I don't fill mobile phone input")
-    @Severity(SeverityLevel.NORMAL)
-    @Issue("TAP-029")
+    @Issue("TAP-0029")
     @Story("NEGATIVE FLOW")
+    @Owner("Kamil Nowocin")
+    @Severity(SeverityLevel.NORMAL)
+    @Description("[US-444]/[10] As a user I would like to see registration error, when I don't fill mobile phone input")
+    @Test(description = "[US-444]/[10] I would like to see registration error, when I don't fill mobile phone input",
+            priority = 0)
     public void test_10() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(29);
-        final BasePageSteps basePageSteps = new BasePageSteps();
-        final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps();
+
+        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
+        final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps(new ContextInjection());
 
         //ACT//
-        basePageSteps.iOpenHomePage();
-        basePageSteps.iCanSeeAutomationpracticeComWebsite();
+        mainPageSteps.iOpenHomePage();
+        mainPageSteps.iCanSeeAutomationpracticeComWebsite();
         registrationPageSteps.iClickOnSignInButton();
         registrationPageSteps.iWriteAnEmailAddress();
         registrationPageSteps.iClickOnCreateAnAccountButton();
@@ -401,23 +402,23 @@ public class RegistrationValidators_Tests extends Hooks {
         registrationPageSteps.iCanSeeWarningMessageAboutMissingInput("mobile phone");
     }
 
-    @Owner("Kamil Nowocin")
-    @Test(priority = 0,
-            description = "I would like to see registration error, when I don't fill email alias address input")
-    @Description("As a user I would like to see the error message where I made a mistake in the registration page form ->\n" +
-            "I would like to see registration error, when I don't fill email alias address input")
-    @Severity(SeverityLevel.NORMAL)
-    @Issue("TAP-030")
+    @Issue("TAP-0030")
     @Story("NEGATIVE FLOW")
+    @Owner("Kamil Nowocin")
+    @Severity(SeverityLevel.NORMAL)
+    @Description("[US-444]/[11] As a user I would like to see registration error, when I don't fill email alias input")
+    @Test(description = "[US-444]/[11] I would like to see registration error, when I don't fill email alias input",
+            priority = 0)
     public void test_11() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(30);
-        final BasePageSteps basePageSteps = new BasePageSteps();
-        final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps();
+
+        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
+        final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps(new ContextInjection());
 
         //ACT//
-        basePageSteps.iOpenHomePage();
-        basePageSteps.iCanSeeAutomationpracticeComWebsite();
+        mainPageSteps.iOpenHomePage();
+        mainPageSteps.iCanSeeAutomationpracticeComWebsite();
         registrationPageSteps.iClickOnSignInButton();
         registrationPageSteps.iWriteAnEmailAddress();
         registrationPageSteps.iClickOnCreateAnAccountButton();
