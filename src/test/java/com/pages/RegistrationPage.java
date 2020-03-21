@@ -13,18 +13,11 @@ import org.openqa.selenium.support.How;
 
 public class RegistrationPage extends BasePage {
 
-    @FindBy(how = How.CSS, using = "#center_column > div")
-    public WebElement registerError;
-
+    //VIEW//
     @FindBy(how = How.ID, using = "account-creation_form")
-    public WebElement accountCreationForm;
+    public WebElement accountCreationPane;
 
-    @FindBy(how = How.CSS, using = "#center_column > p")
-    public WebElement myAccountDashboard;
-
-    @FindBy(how = How.CSS, using = "#create-account_form > h3")
-    public WebElement createAccountBox;
-
+    //BUTTONS & INPUTS & DROPDOWN//
     @FindBy(how = How.ID, using = "id_gender1")
     public WebElement mrButton;
 
@@ -38,7 +31,7 @@ public class RegistrationPage extends BasePage {
     public WebElement lastNameInput;
 
     @FindBy(how = How.ID, using = "email")
-    public WebElement emailSecondInput;
+    public WebElement emailInput;
 
     @FindBy(how = How.ID, using = "passwd")
     public WebElement passwordInput;
@@ -47,19 +40,19 @@ public class RegistrationPage extends BasePage {
     public WebElement dayOfBirth;
 
     @FindBy(how = How.XPATH, using = "//div[@id='uniform-days']//span")
-    public WebElement chosenDayOfBirth;
+    public WebElement readDayOfBirth;
 
     @FindBy(how = How.ID, using = "months")
     public WebElement monthOfBirth;
 
     @FindBy(how = How.XPATH, using = "//div[@id='uniform-months']//span")
-    public WebElement chosenMonthOfBirth;
+    public WebElement readMonthOfBirth;
 
     @FindBy(how = How.ID, using = "years")
     public WebElement yearOfBirth;
 
     @FindBy(how = How.XPATH, using = "//div[@id='uniform-years']//span")
-    public WebElement chosenYearOfBirth;
+    public WebElement readYearOfBirth;
 
     @FindBy(how = How.ID, using = "newsletter")
     public WebElement newsletterCheckbox;
@@ -89,7 +82,7 @@ public class RegistrationPage extends BasePage {
     public WebElement stateDropDown;
 
     @FindBy(how = How.XPATH, using = "//p[@class='required id_state select form-group']//span")
-    public WebElement chosenStateFromDropdown;
+    public WebElement readStateDropdown;
 
     @FindBy(how = How.ID, using = "postcode")
     public WebElement postalCodeInput;
@@ -98,7 +91,7 @@ public class RegistrationPage extends BasePage {
     public WebElement countryDropDown;
 
     @FindBy(how = How.XPATH, using = "//div[@id='uniform-id_country']//span")
-    public WebElement chosenCountryFromDropdown;
+    public WebElement readCountryDropdown;
 
     @FindBy(how = How.ID, using = "other")
     public WebElement additionalInformationBox;
@@ -114,4 +107,8 @@ public class RegistrationPage extends BasePage {
 
     @FindBy(how = How.ID, using = "submitAccount")
     public WebElement registerButton;
+
+    //MESSAGES//
+    @FindBy(how = How.CSS, using = "#center_column > div")
+    public WebElement registerError;
 }

@@ -12,11 +12,13 @@ import org.openqa.selenium.support.How;
 
 public class MainPage extends BasePage {
 
-    @FindBy(how = How.CSS, using = "#header > div.nav > div > div > nav > div.header_user_info > a")
-    public WebElement signInButton;
-
+    //VIEW//
     @FindBy(how = How.XPATH, using = "//a[@class='account']//span")
-    public WebElement loggedUser;
+    public WebElement currentLoggedUserName;
+
+    //BUTTONS & INPUTS & DROPDOWN//
+    @FindBy(how = How.XPATH, using = "//a[@class='login']")
+    public WebElement signInButton;
 
     @FindBy(how = How.XPATH, using = "//div[@id='contact-link']")
     public WebElement contactUsButton;
@@ -26,4 +28,17 @@ public class MainPage extends BasePage {
 
     @FindBy(how = How.XPATH, using = "//form[@id='searchbox']//button[@type='submit']")
     public WebElement searchBoxSubmit;
+
+    //SUB-MENU//
+    @FindBy(how = How.XPATH, using = "//li//a[@title='Women' and not(img)]")
+    public WebElement subMenuWomen;
+
+    @FindBy(how = How.XPATH, using = "(//li//a[@title='Dresses' and not(img)])[2]")
+    public WebElement subMenuDresses;
+
+    @FindBy(how = How.XPATH, using = "(//li//a[@title='T-shirts' and not(img)])[2]")
+    public WebElement subMenuTshirts;
+
+    @FindBy(how = How.XPATH, using = "//span[@class='cat-name']")
+    public WebElement subMenuChosenCategory;
 }

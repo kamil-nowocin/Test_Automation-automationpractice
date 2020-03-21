@@ -1,10 +1,11 @@
 package tests;
 
+import com.ContextInjection;
 import com.ExcelEnvironment;
 import com.listeners.TestNGListener_WEB;
 import com.steps.AuthenticationPageSteps;
-import com.steps.BasePageSteps;
 import com.steps.Hooks;
+import com.steps.MainPageSteps;
 import com.steps.RegistrationPageSteps;
 import io.qameta.allure.*;
 import org.testng.annotations.Listeners;
@@ -32,13 +33,14 @@ public class Authentication_Tests extends Hooks {
     public void test_1() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(9);
-        final BasePageSteps basePageSteps = new BasePageSteps();
-        final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps();
+
+        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
+        final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps(new ContextInjection());
         final AuthenticationPageSteps authenticationPageSteps = new AuthenticationPageSteps();
 
         //ACT//
-        basePageSteps.iOpenHomePage();
-        basePageSteps.iCanSeeAutomationpracticeComWebsite();
+        mainPageSteps.iOpenHomePage();
+        mainPageSteps.iCanSeeAutomationpracticeComWebsite();
         registrationPageSteps.iClickOnSignInButton();
         authenticationPageSteps.iCanSeeLoginForm();
         authenticationPageSteps.iEnterLogin("thor.odinson@example.com");
@@ -60,13 +62,14 @@ public class Authentication_Tests extends Hooks {
     public void test_2() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(10);
-        final BasePageSteps basePageSteps = new BasePageSteps();
-        final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps();
+
+        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
+        final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps(new ContextInjection());
         final AuthenticationPageSteps authenticationPageSteps = new AuthenticationPageSteps();
 
         //ACT//
-        basePageSteps.iOpenHomePage();
-        basePageSteps.iCanSeeAutomationpracticeComWebsite();
+        mainPageSteps.iOpenHomePage();
+        mainPageSteps.iCanSeeAutomationpracticeComWebsite();
         registrationPageSteps.iClickOnSignInButton();
         authenticationPageSteps.iCanSeeLoginForm();
         authenticationPageSteps.iEnterLogin("thanos.ALars@example.com");
@@ -88,13 +91,14 @@ public class Authentication_Tests extends Hooks {
     public void test_3() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(11);
-        final BasePageSteps basePageSteps = new BasePageSteps();
-        final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps();
+
+        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
+        final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps(new ContextInjection());
         final AuthenticationPageSteps authenticationPageSteps = new AuthenticationPageSteps();
 
         //ACT//
-        basePageSteps.iOpenHomePage();
-        basePageSteps.iCanSeeAutomationpracticeComWebsite();
+        mainPageSteps.iOpenHomePage();
+        mainPageSteps.iCanSeeAutomationpracticeComWebsite();
         registrationPageSteps.iClickOnSignInButton();
         authenticationPageSteps.iCanSeeLoginForm();
         authenticationPageSteps.iEnterLogin("thor.odinson@example.com");
@@ -116,13 +120,14 @@ public class Authentication_Tests extends Hooks {
     public void test_4() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(12);
-        final BasePageSteps basePageSteps = new BasePageSteps();
-        final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps();
+
+        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
+        final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps(new ContextInjection());
         final AuthenticationPageSteps authenticationPageSteps = new AuthenticationPageSteps();
 
         //ACT//
-        basePageSteps.iOpenHomePage();
-        basePageSteps.iCanSeeAutomationpracticeComWebsite();
+        mainPageSteps.iOpenHomePage();
+        mainPageSteps.iCanSeeAutomationpracticeComWebsite();
         registrationPageSteps.iClickOnSignInButton();
         authenticationPageSteps.iCanSeeLoginForm();
         authenticationPageSteps.iEnterLogin("");

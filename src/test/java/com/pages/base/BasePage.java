@@ -29,62 +29,79 @@ public class BasePage extends FrameworkEnvironment {
 
     public BasePage() {
         this.driver = DriverFactory.driver;
+        //PageFactory.initElements(new AjaxElementLocatorFactory(this.driver, TIMEOUT), this);
         PageFactory.initElements(this.driver, this);
     }
 
-    public void waitForElementToBeClickable(int timeInSeconds, WebElement elementToClick) throws NoSuchElementException, WebDriverException {
+    public void waitForElementToBeClickable(int timeInSeconds, WebElement webElement) throws
+            NoSuchElementException, WebDriverException {
         try {
             WebDriverWait wait = new WebDriverWait(driver, timeInSeconds);
-            wait.until(ExpectedConditions.elementToBeClickable(elementToClick));
+            wait.until(ExpectedConditions.elementToBeClickable(webElement));
         } catch (Exception e) {
-            logger.error(String.format("Couldn't click on element: %s ", elementToClick));
+            logger.error(String.format("Couldn't click on element: %s", webElement));
         }
     }
 
-    public void waitForElementToBeVisible(int timeInSeconds, WebElement elementToBeVisible) throws NoSuchElementException, WebDriverException {
+    public void waitForElementToBeVisible(int timeInSeconds, WebElement webElement) throws
+            NoSuchElementException, WebDriverException {
         try {
             WebDriverWait wait = new WebDriverWait(driver, timeInSeconds);
-            wait.until(ExpectedConditions.visibilityOf(elementToBeVisible));
+            wait.until(ExpectedConditions.visibilityOf(webElement));
         } catch (Exception e) {
-            logger.error(String.format("Element wasn't visible: %s!", elementToBeVisible));
+            logger.error(String.format("Element wasn't visible: %s!", webElement));
         }
     }
 
-    public boolean isDisplayed(int timeInSeconds, WebElement elementToBeDisplayed) throws NoSuchElementException, WebDriverException {
+    public void waitForElementToHaveAttribute(int timeInSeconds, WebElement webElement, String attribute, String value) throws
+            NoSuchElementException, WebDriverException {
         try {
             WebDriverWait wait = new WebDriverWait(driver, timeInSeconds);
-            wait.until(ExpectedConditions.visibilityOf(elementToBeDisplayed));
-            return elementToBeDisplayed.isDisplayed();
+            wait.until(ExpectedConditions.attributeContains(webElement, attribute, value));
         } catch (Exception e) {
-            logger.error(String.format("Couldn't display element: %s ", elementToBeDisplayed));
+            logger.error(String.format("Could't find attribute: %S on web element: %S", attribute, webElement));
+        }
+    }
+
+    public boolean isDisplayed(int timeInSeconds, WebElement webElement) throws
+            NoSuchElementException, WebDriverException {
+        try {
+            WebDriverWait wait = new WebDriverWait(driver, timeInSeconds);
+            wait.until(ExpectedConditions.visibilityOf(webElement));
+            return webElement.isDisplayed();
+        } catch (Exception e) {
+            logger.error(String.format("Couldn't display element: %s ", webElement));
             return false;
         }
     }
 
-    public void selectFromDropdownByIndex(int value, WebElement elementName) throws NoSuchElementException {
+    public void selectFromDropdownByIndex(int value, WebElement webElement) throws
+            NoSuchElementException {
         try {
-            Select dropdown = new Select(elementName);
+            Select dropdown = new Select(webElement);
             dropdown.selectByIndex(value);
         } catch (Exception e) {
-            logger.error(String.format("Couldn't select element: %s ", elementName));
+            logger.error(String.format("Couldn't select element: %s ", webElement));
         }
     }
 
-    public void selectFromDropdownByText(String textValue, WebElement elementName) throws NoSuchElementException {
+    public void selectFromDropdownByText(String textValue, WebElement webElement) throws
+            NoSuchElementException {
         try {
-            Select dropdown = new Select(elementName);
+            Select dropdown = new Select(webElement);
             dropdown.selectByVisibleText(textValue);
         } catch (Exception e) {
-            logger.error(String.format("Couldn't select element: %s ", elementName));
+            logger.error(String.format("Couldn't select element: %s ", webElement));
         }
     }
 
-    public void selectFromDropdownByValue(String textValue, WebElement elementName) throws NoSuchElementException {
+    public void selectFromDropdownByValue(String textValue, WebElement webElement) throws
+            NoSuchElementException {
         try {
-            Select dropdown = new Select(elementName);
+            Select dropdown = new Select(webElement);
             dropdown.selectByValue(textValue);
         } catch (Exception e) {
-            logger.error(String.format("Couldn't select element: %s ", elementName));
+            logger.error(String.format("Couldn't select element: %s ", webElement));
         }
     }
 
@@ -109,7 +126,7 @@ public class BasePage extends FrameworkEnvironment {
 
     public boolean isPageReady() {
         try {
-            WebDriverWait wait = new WebDriverWait(driver, 10);
+            WebDriverWait wait = new WebDriverWait(driver, TIMEOUT);
             wait.until(webDriver ->
                     ((JavascriptExecutor) webDriver).executeScript("return document.readyState").equals("complete"));
         } catch (WebDriverException e) {
@@ -119,9 +136,9 @@ public class BasePage extends FrameworkEnvironment {
         return true;
     }
 
-    public String errorValidator(WebElement element) {
-        waitForElementToBeVisible(10, element);
-        return element.getText();
+    public String errorValidator(WebElement webElement) {
+        waitForElementToBeVisible(TIMEOUT, webElement);
+        return webElement.getText();
     }
 
     public String getRandomElementFromResourceBundleList(String resourceBundle) {
@@ -130,7 +147,7 @@ public class BasePage extends FrameworkEnvironment {
         return resourceBundleData.get(random.nextInt(resourceBundleData.size()));
     }
 
-    //This method is just for testing purpose, it shouldn't be used in development environment
+    //Just for testing purpose, it shouldn't be used in development environment
     public void sleep(int seconds) {
         try {
             Thread.sleep(seconds * 1000);

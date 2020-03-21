@@ -5,9 +5,9 @@ import com.google.common.collect.Ordering;
 import com.pages.SearchPage;
 import com.pages.base.BasePage;
 import com.pages.base.MainPage;
-import cucumber.api.java.en.And;
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -32,7 +32,7 @@ public class SearchPageSteps extends FrameworkEnvironment {
     public void iSearchForPhrase(String searchPhrase) throws Throwable {
         //ACT//
         mainPage.searchBoxInput.sendKeys(searchPhrase);
-        logger.info(String.format("Search for: %S", searchPhrase));
+        logger.info(String.format("User search for: %S", searchPhrase));
 
         //ASSERT//
         Assert.assertEquals(mainPage.searchBoxInput.getAttribute("value").toLowerCase(),
@@ -50,12 +50,13 @@ public class SearchPageSteps extends FrameworkEnvironment {
     public void iCanSeeNumbersOfResultsEqualsTo(String expectedCountOfResults) throws Throwable {
         //ARRANGE//
         final String actualCountOfResults = searchPage.searchResultsNumber.getText().replaceAll("[^\\d]", "");
-        logger.info(String.format("Found results: %S, expected: %S", actualCountOfResults, expectedCountOfResults));
 
         //ACT//
         if (expectedCountOfResults.equals("0")) {
-            Assert.assertTrue(searchPage.noResultsWereFoundHeader.isDisplayed());
+            Assert.assertTrue(basePage.isDisplayed(5, searchPage.noResultsWereFoundHeader),
+                    String.format(VIEW_ERROR, "No results were found header"));
         }
+        logger.info(String.format("Found results: %S, expected: %S", actualCountOfResults, expectedCountOfResults));
 
         //ASSERT//
         Assert.assertEquals(actualCountOfResults, expectedCountOfResults, String.format(RESULTS_ERROR,
@@ -84,26 +85,30 @@ public class SearchPageSteps extends FrameworkEnvironment {
     @Then("I select from Dropdown Sort by {string}")
     public void iSelectFromDropdownSortBy(String sortBy) throws Throwable {
         //ACT//
-        logger.info(String.format("Chosen sort option: %S", sortBy));
         switch (sortBy.toLowerCase()) {
             case "price: lowest first":
-                basePage.selectFromDropdownByValue("price:asc", searchPage.dropdownSortBy);
+                basePage.selectFromDropdownByValue("price:asc", searchPage.sortByDropdown);
                 break;
+
             case "price: highest first":
-                basePage.selectFromDropdownByValue("price:desc", searchPage.dropdownSortBy);
+                basePage.selectFromDropdownByValue("price:desc", searchPage.sortByDropdown);
                 break;
+
             case "product name: a to z":
-                basePage.selectFromDropdownByValue("name:asc", searchPage.dropdownSortBy);
+                basePage.selectFromDropdownByValue("name:asc", searchPage.sortByDropdown);
                 break;
+
             case "product name: z to a":
-                basePage.selectFromDropdownByValue("name:desc", searchPage.dropdownSortBy);
+                basePage.selectFromDropdownByValue("name:desc", searchPage.sortByDropdown);
                 break;
+
             default:
                 throw new IllegalStateException(String.format(INPUT_ERROR, sortBy.toUpperCase()));
         }
+        logger.info(String.format("Chosen sort option: %S", sortBy));
 
         //ASSERT//
-        Assert.assertEquals(searchPage.chosenSortBy.getText().toLowerCase(), sortBy.toLowerCase(), VALUE_ERROR);
+        Assert.assertEquals(searchPage.readSortByDropdown.getText().toLowerCase(), sortBy.toLowerCase(), VALUE_ERROR);
     }
 
     @Step("I can see that results are correctly sorted by {0}")
@@ -113,22 +118,24 @@ public class SearchPageSteps extends FrameworkEnvironment {
         List<String> arrayList = new ArrayList<>();
 
         //ACT//
-        logger.info(String.format("Sorted option: %S", sortedBy));
+        logger.info(String.format("Actual sort option: %S", sortedBy));
         switch (sortedBy.toLowerCase()) {
             case "price: lowest first":
                 for (WebElement productPrices : searchPage.productPrices) {
-                    arrayList.add(productPrices.getText().replaceAll("[^0-9]", ""));
+                    arrayList.add(productPrices.getText().replaceAll("[^$0-9.]", ""));
                 }
                 List<String> lowestPriceList = Ordering.natural().sortedCopy(arrayList);
                 Assert.assertEquals(arrayList, lowestPriceList, String.format(SORTING_ERROR, sortedBy));
                 break;
+
             case "price: highest first":
                 for (WebElement productPrices : searchPage.productPrices) {
-                    arrayList.add(productPrices.getText().replaceAll("[^0-9]", ""));
+                    arrayList.add(productPrices.getText().replaceAll("[^$0-9.]", ""));
                 }
                 List<String> highestPriceList = Ordering.natural().reverse().sortedCopy(arrayList);
                 Assert.assertEquals(arrayList, highestPriceList, String.format(SORTING_ERROR, sortedBy));
                 break;
+
             case "product name: a to z":
                 for (WebElement productName : searchPage.productNames) {
                     arrayList.add(productName.getText());
@@ -136,6 +143,7 @@ public class SearchPageSteps extends FrameworkEnvironment {
                 List<String> sortedNames = Ordering.natural().sortedCopy(arrayList);
                 Assert.assertEquals(arrayList, sortedNames, String.format(SORTING_ERROR, sortedBy));
                 break;
+
             case "product name: z to a":
                 for (WebElement productName : searchPage.productNames) {
                     arrayList.add(productName.getText());
@@ -143,6 +151,7 @@ public class SearchPageSteps extends FrameworkEnvironment {
                 List<String> reverseSortedNames = Ordering.natural().reverse().sortedCopy(arrayList);
                 Assert.assertEquals(arrayList, reverseSortedNames, String.format(SORTING_ERROR, sortedBy));
                 break;
+
             default:
                 throw new IllegalStateException(String.format(INPUT_ERROR, sortedBy.toUpperCase()));
         }

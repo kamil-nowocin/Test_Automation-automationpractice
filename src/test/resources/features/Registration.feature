@@ -4,6 +4,7 @@
 #* @author kamil.nowocin
 #**/
 
+@registration
 Feature: As a user I would like to register into automationpractice.com
 
   Background: Navigate to Sign Up page
@@ -13,14 +14,16 @@ Feature: As a user I would like to register into automationpractice.com
     Then I can see registration page form
 
 #--------------------------------------------------------------------------------
-  Scenario: As a user I check availability of registration page form
+  @smoke @major @regression
+  Scenario:[1] As a user I check availability of registration page form
     Given I can see registration page form
     When I write an email address
     And I click on Create An Account button
     Then I can see account creation page form
 
 #--------------------------------------------------------------------------------
-  Scenario: As a user I can create an account by filling up all fields
+  @smoke @critical @regression
+  Scenario:[2] As a user I can create an account by filling up all fields
     Given I can see registration page form
     When I write an email address
     And I click on Create An Account button
@@ -46,7 +49,8 @@ Feature: As a user I would like to register into automationpractice.com
     Then I can see welcome message
 
 #--------------------------------------------------------------------------------
-  Scenario: As a user I can create an account by filling up only required fields
+  @non-smoke @critical @regression
+  Scenario:[3] As a user I can create an account by filling up only required fields
     Given I can see registration page form
     When I write an email address
     And I click on Create An Account button
@@ -66,7 +70,8 @@ Feature: As a user I would like to register into automationpractice.com
     Then I can see welcome message
 
 #--------------------------------------------------------------------------------
-  Scenario: As a user I can't create an account without filling up fields
+  @non-smoke @medium @regression
+  Scenario:[4] As a user I can't create an account without filling up fields
     Given I can see registration page form
     When I write an email address
     And I click on Create An Account button
@@ -76,7 +81,8 @@ Feature: As a user I would like to register into automationpractice.com
 #--------------------------------------------------------------------------------
 # This scenario is created as "smart one", you can choose any of required field to be missing.
 # Simply, just leave one and only one of data section as blank one.
-  Scenario: As a user I can't create an account, when one of required fields is missing
+  @non-smoke @medium @regression
+  Scenario:[5] As a user I can't create an account, when one of required fields is missing
     Given I can see registration page form
     When I write an email address
     And I click on Create An Account button
@@ -90,14 +96,16 @@ Feature: As a user I would like to register into automationpractice.com
     Then I can see warning message about missing "one element" input
 
 #--------------------------------------------------------------------------------
-  Scenario: As a user I can't create an account, when email is already in database
+  @smoke @major @regression
+  Scenario:[6] As a user I can't create an account, when email is already in database
     Given I can see registration page form
     When I write an email address which is already in database
     And I click on Create An Account button
     Then I can see registration error
 
 #--------------------------------------------------------------------------------
-  Scenario: As a user I can't create an account, when email has wrong format
+  @non-smoke @major @regression
+  Scenario:[7] As a user I can't create an account, when email has wrong format
     Given I can see registration page form
     When I write an invalid email address
     And I click on Create An Account button

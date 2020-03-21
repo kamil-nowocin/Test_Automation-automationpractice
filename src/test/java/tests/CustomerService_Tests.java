@@ -1,10 +1,11 @@
 package tests;
 
+import com.ContextInjection;
 import com.ExcelEnvironment;
 import com.listeners.TestNGListener_WEB;
-import com.steps.BasePageSteps;
 import com.steps.CustomerServicePageSteps;
 import com.steps.Hooks;
+import com.steps.MainPageSteps;
 import io.qameta.allure.*;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -31,16 +32,18 @@ public class CustomerService_Tests extends Hooks {
     public void test_1() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(1);
-        final BasePageSteps basePageSteps = new BasePageSteps();
+
+
+        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
         final CustomerServicePageSteps customerServicePageSteps = new CustomerServicePageSteps();
 
         //ACT//
-        basePageSteps.iOpenHomePage();
-        basePageSteps.iCanSeeAutomationpracticeComWebsite();
+        mainPageSteps.iOpenHomePage();
+        mainPageSteps.iCanSeeAutomationpracticeComWebsite();
         customerServicePageSteps.iClickOnContactUsButton();
         customerServicePageSteps.iCanSeeContactUsForm();
         customerServicePageSteps.iAmOnCustomerServiceContactUsPageForm();
-        customerServicePageSteps.iChooseSubjectHeading();
+        customerServicePageSteps.iChooseSubjectHeading("Customer service");
         customerServicePageSteps.iWriteAnEmailAddressInContactUsPage();
         customerServicePageSteps.iWriteOrderReference();
         customerServicePageSteps.iWriteMessage();
@@ -61,16 +64,17 @@ public class CustomerService_Tests extends Hooks {
     public void test_2() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(2);
-        final BasePageSteps basePageSteps = new BasePageSteps();
+
+        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
         final CustomerServicePageSteps customerServicePageSteps = new CustomerServicePageSteps();
 
         //ACT//
-        basePageSteps.iOpenHomePage();
-        basePageSteps.iCanSeeAutomationpracticeComWebsite();
+        mainPageSteps.iOpenHomePage();
+        mainPageSteps.iCanSeeAutomationpracticeComWebsite();
         customerServicePageSteps.iClickOnContactUsButton();
         customerServicePageSteps.iCanSeeContactUsForm();
         customerServicePageSteps.iAmOnCustomerServiceContactUsPageForm();
-        customerServicePageSteps.iChooseSubjectHeading();
+        customerServicePageSteps.iChooseSubjectHeading("Customer service");
         customerServicePageSteps.iWriteAnEmailAddressInContactUsPage();
         customerServicePageSteps.iWriteMessage();
         customerServicePageSteps.iClickSendButton();
@@ -90,16 +94,17 @@ public class CustomerService_Tests extends Hooks {
     public void test_3() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(3);
-        final BasePageSteps basePageSteps = new BasePageSteps();
+
+        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
         final CustomerServicePageSteps customerServicePageSteps = new CustomerServicePageSteps();
 
         //ACT//
-        basePageSteps.iOpenHomePage();
-        basePageSteps.iCanSeeAutomationpracticeComWebsite();
+        mainPageSteps.iOpenHomePage();
+        mainPageSteps.iCanSeeAutomationpracticeComWebsite();
         customerServicePageSteps.iClickOnContactUsButton();
         customerServicePageSteps.iCanSeeContactUsForm();
         customerServicePageSteps.iAmOnCustomerServiceContactUsPageForm();
-        customerServicePageSteps.iChooseSubjectHeading();
+        customerServicePageSteps.iChooseSubjectHeading("Customer service");
         customerServicePageSteps.iWriteAnEmailAddressInContactUsPage();
         customerServicePageSteps.iWriteOrderReference();
         customerServicePageSteps.iChooseFileToAttach();
@@ -121,16 +126,17 @@ public class CustomerService_Tests extends Hooks {
     public void test_4() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(4);
-        final BasePageSteps basePageSteps = new BasePageSteps();
+
+        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
         final CustomerServicePageSteps customerServicePageSteps = new CustomerServicePageSteps();
 
         //ACT//
-        basePageSteps.iOpenHomePage();
-        basePageSteps.iCanSeeAutomationpracticeComWebsite();
+        mainPageSteps.iOpenHomePage();
+        mainPageSteps.iCanSeeAutomationpracticeComWebsite();
         customerServicePageSteps.iClickOnContactUsButton();
         customerServicePageSteps.iCanSeeContactUsForm();
         customerServicePageSteps.iAmOnCustomerServiceContactUsPageForm();
-        customerServicePageSteps.iChooseSubjectHeading();
+        customerServicePageSteps.iChooseSubjectHeading("Customer service");
         customerServicePageSteps.iWriteAnInvalidEmailAddressInContactUsPage();
         customerServicePageSteps.iWriteOrderReference();
         customerServicePageSteps.iChooseFileToAttach();
@@ -152,12 +158,13 @@ public class CustomerService_Tests extends Hooks {
     public void test_5() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(5);
-        final BasePageSteps basePageSteps = new BasePageSteps();
+
+        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
         final CustomerServicePageSteps customerServicePageSteps = new CustomerServicePageSteps();
 
         //ACT//
-        basePageSteps.iOpenHomePage();
-        basePageSteps.iCanSeeAutomationpracticeComWebsite();
+        mainPageSteps.iOpenHomePage();
+        mainPageSteps.iCanSeeAutomationpracticeComWebsite();
         customerServicePageSteps.iClickOnContactUsButton();
         customerServicePageSteps.iCanSeeContactUsForm();
         customerServicePageSteps.iAmOnCustomerServiceContactUsPageForm();
@@ -183,16 +190,17 @@ public class CustomerService_Tests extends Hooks {
     public void test_6() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(6);
-        final BasePageSteps basePageSteps = new BasePageSteps();
+
+        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
         final CustomerServicePageSteps customerServicePageSteps = new CustomerServicePageSteps();
 
         //ACT//
-        basePageSteps.iOpenHomePage();
-        basePageSteps.iCanSeeAutomationpracticeComWebsite();
+        mainPageSteps.iOpenHomePage();
+        mainPageSteps.iCanSeeAutomationpracticeComWebsite();
         customerServicePageSteps.iClickOnContactUsButton();
         customerServicePageSteps.iCanSeeContactUsForm();
         customerServicePageSteps.iAmOnCustomerServiceContactUsPageForm();
-        customerServicePageSteps.iChooseSubjectHeading();
+        customerServicePageSteps.iChooseSubjectHeading("Customer service");
         customerServicePageSteps.iDonTWriteAnEmailAddress();
         customerServicePageSteps.iWriteOrderReference();
         customerServicePageSteps.iChooseFileToAttach();
@@ -214,16 +222,17 @@ public class CustomerService_Tests extends Hooks {
     public void test_7() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(7);
-        final BasePageSteps basePageSteps = new BasePageSteps();
+
+        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
         final CustomerServicePageSteps customerServicePageSteps = new CustomerServicePageSteps();
 
         //ACT//
-        basePageSteps.iOpenHomePage();
-        basePageSteps.iCanSeeAutomationpracticeComWebsite();
+        mainPageSteps.iOpenHomePage();
+        mainPageSteps.iCanSeeAutomationpracticeComWebsite();
         customerServicePageSteps.iClickOnContactUsButton();
         customerServicePageSteps.iCanSeeContactUsForm();
         customerServicePageSteps.iAmOnCustomerServiceContactUsPageForm();
-        customerServicePageSteps.iChooseSubjectHeading();
+        customerServicePageSteps.iChooseSubjectHeading("Customer service");
         customerServicePageSteps.iWriteAnEmailAddressInContactUsPage();
         customerServicePageSteps.iWriteOrderReference();
         customerServicePageSteps.iChooseFileToAttach();
@@ -245,12 +254,13 @@ public class CustomerService_Tests extends Hooks {
     public void test_8() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(8);
-        final BasePageSteps basePageSteps = new BasePageSteps();
+
+        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
         final CustomerServicePageSteps customerServicePageSteps = new CustomerServicePageSteps();
 
         //ACT//
-        basePageSteps.iOpenHomePage();
-        basePageSteps.iCanSeeAutomationpracticeComWebsite();
+        mainPageSteps.iOpenHomePage();
+        mainPageSteps.iCanSeeAutomationpracticeComWebsite();
         customerServicePageSteps.iClickOnContactUsButton();
         customerServicePageSteps.iCanSeeContactUsForm();
         customerServicePageSteps.iAmOnCustomerServiceContactUsPageForm();

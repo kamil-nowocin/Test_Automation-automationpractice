@@ -3,9 +3,9 @@ package com.steps;
 import com.DriverFactory;
 import com.pages.SocialMediaPage;
 import com.pages.base.BasePage;
-import cucumber.api.java.en.And;
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import io.qameta.allure.Step;
 import org.testng.Assert;
 
@@ -32,21 +32,25 @@ public class SocialMediaPageSteps extends DriverFactory {
                 Assert.assertTrue(basePage.isDisplayed(5, socialMediaPage.facebookButton),
                         String.format(VIEW_ERROR, logoName.toUpperCase()));
                 break;
+
             case "twitter":
                 basePage.scrollWebsiteToElement(socialMediaPage.twitterButton);
                 Assert.assertTrue(basePage.isDisplayed(5, socialMediaPage.twitterButton),
                         String.format(VIEW_ERROR, logoName.toUpperCase()));
                 break;
+
             case "youtube":
                 basePage.scrollWebsiteToElement(socialMediaPage.youtubeButton);
                 Assert.assertTrue(basePage.isDisplayed(5, socialMediaPage.youtubeButton),
                         String.format(VIEW_ERROR, logoName.toUpperCase()));
                 break;
+
             case "google":
                 basePage.scrollWebsiteToElement(socialMediaPage.googleButton);
                 Assert.assertTrue(basePage.isDisplayed(5, socialMediaPage.googleButton),
                         String.format(VIEW_ERROR, logoName.toUpperCase()));
                 break;
+
             default:
                 throw new IllegalStateException(String.format(INPUT_ERROR, logoName.toUpperCase()));
         }
@@ -56,23 +60,27 @@ public class SocialMediaPageSteps extends DriverFactory {
     @And("I click on {string} logo button")
     public void iClickOnLogoButton(String logoName) throws Throwable {
         //ACT//
-        logger.info(String.format("Chosen social media platform: %S", logoName));
         switch (logoName.toLowerCase()) {
             case "facebook":
                 socialMediaPage.facebookButton.click();
                 break;
+
             case "twitter":
                 socialMediaPage.twitterButton.click();
                 break;
+
             case "youtube":
                 socialMediaPage.youtubeButton.click();
                 break;
+
             case "google":
                 socialMediaPage.googleButton.click();
                 break;
+
             default:
                 throw new IllegalStateException(String.format(INPUT_ERROR, logoName.toUpperCase()));
         }
+        logger.info(String.format("Chosen social media platform: %S", logoName));
     }
 
     @Step("I am redirected to Selenium {0} profile")
@@ -83,7 +91,7 @@ public class SocialMediaPageSteps extends DriverFactory {
 
         //ACT//
         driver.switchTo().window(browserTabs.get(1));
-        logger.info(String.format("URL was: %S, URL expected: %S", driver.getCurrentUrl(), logoName + ".com"));
+        logger.info(String.format("URL was: %S\n URL expected: %S", driver.getCurrentUrl(), logoName + ".com"));
 
         //ASSERT//
         Assert.assertTrue(driver.getCurrentUrl().contains(logoName.toLowerCase() + ".com"),

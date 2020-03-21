@@ -61,37 +61,45 @@ public class DriverFactory extends FrameworkEnvironment {
     }
 
     protected void startBrowser() {
+        printWebDriverManagerVersions(false);
         DesiredCapabilities desiredCapabilities = null;
         if (driver == null) {
             switch (getHost().toLowerCase()) {
                 case "chrome":
-                    WebDriverManager.chromedriver().setup();
+                    WebDriverManager.chromedriver().version("79.0.3945.36").setup();
                     ChromeOptions chromeOptions = new ChromeOptions();
                     chromeOptions.addArguments();
                     driver = new ChromeDriver(chromeOptions);
                     break;
+
                 case "firefox":
                     WebDriverManager.firefoxdriver().setup();
                     FirefoxOptions firefoxOptions = new FirefoxOptions();
                     firefoxOptions.addArguments("");
                     driver = new FirefoxDriver(firefoxOptions);
                     break;
+
                 case "opera":
                     WebDriverManager.operadriver().arch64().version("2.45").setup();
                     OperaOptions operaOptions = new OperaOptions();
                     operaOptions.addArguments("");
                     driver = new OperaDriver(operaOptions);
                     break;
-                case "safari":
-                    driver = new SafariDriver();
-                    break;
+
                 case "edge":
                     WebDriverManager.edgedriver().setup();
                     driver = new EdgeDriver();
+                    break;
+
                 case "ie":
                     WebDriverManager.iedriver().setup();
                     driver = new InternetExplorerDriver();
                     break;
+
+                case "safari":
+                    driver = new SafariDriver();
+                    break;
+
                 case "browserstack":
                     desiredCapabilities = new DesiredCapabilities();
                     desiredCapabilities.setCapability("os", "Windows");
@@ -116,6 +124,7 @@ public class DriverFactory extends FrameworkEnvironment {
                     //https://USER_NAME:ACCESS_TOKEN@hub-cloud.browserstack.com/wd/hub <- HOST_URL (.travis.yml for more information)
                     driver = remoteWebDriver(desiredCapabilities, HOST_URL);
                     break;
+
                 default:
                     throw new IllegalStateException("This browser isn't supported yet! Sorry...");
             }

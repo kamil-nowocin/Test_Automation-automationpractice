@@ -41,7 +41,7 @@ public class API_Tests extends Hooks {
     @Issue("TAP-043")
     public void test_1() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(43);
+        ExcelEnvironment.saveTestResultsXLSX(44);
 
         //ACT//
         given().when().get(restHomeURL()).then().assertThat().statusCode(200);

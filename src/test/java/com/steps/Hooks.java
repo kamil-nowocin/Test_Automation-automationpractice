@@ -5,8 +5,8 @@ import com.ExcelEnvironment;
 import com.listeners.TestNGListener_API;
 import com.listeners.TestNGListener_WEB;
 import cucumber.api.Scenario;
-import cucumber.api.java.After;
-import cucumber.api.java.Before;
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import org.slf4j.MDC;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -29,7 +29,7 @@ public class Hooks extends DriverFactory implements ITestListener {
      **/
     @BeforeTest(description = "Setting up data Excel File")
     public void dataSetup() {
-        ExcelEnvironment.setExcelSheet("automationData");
+        ExcelEnvironment.setExcelSheet(ExcelEnvironment.testDataExcelSheetName);
     }
 
     @BeforeMethod(description = "Setting up Test Class")

@@ -1,9 +1,10 @@
 package tests;
 
+import com.ContextInjection;
 import com.ExcelEnvironment;
 import com.listeners.TestNGListener_WEB;
-import com.steps.BasePageSteps;
 import com.steps.Hooks;
+import com.steps.MainPageSteps;
 import com.steps.SocialMediaPageSteps;
 import io.qameta.allure.*;
 import org.testng.annotations.Listeners;
@@ -31,12 +32,13 @@ public class SocialMedia_Tests extends Hooks {
     public void test_1() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(39);
-        final BasePageSteps basePageSteps = new BasePageSteps();
+
+        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
         final SocialMediaPageSteps mediaPageSteps = new SocialMediaPageSteps();
 
         //ACT//
-        basePageSteps.iOpenHomePage();
-        basePageSteps.iCanSeeAutomationpracticeComWebsite();
+        mainPageSteps.iOpenHomePage();
+        mainPageSteps.iCanSeeAutomationpracticeComWebsite();
         mediaPageSteps.iScrollTheWebsiteUntilICanSeeLogo("facebook");
         mediaPageSteps.iClickOnLogoButton("facebook");
 
@@ -55,12 +57,13 @@ public class SocialMedia_Tests extends Hooks {
     public void test_2() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(40);
-        final BasePageSteps basePageSteps = new BasePageSteps();
+
+        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
         final SocialMediaPageSteps mediaPageSteps = new SocialMediaPageSteps();
 
         //ACT//
-        basePageSteps.iOpenHomePage();
-        basePageSteps.iCanSeeAutomationpracticeComWebsite();
+        mainPageSteps.iOpenHomePage();
+        mainPageSteps.iCanSeeAutomationpracticeComWebsite();
         mediaPageSteps.iScrollTheWebsiteUntilICanSeeLogo("twitter");
         mediaPageSteps.iClickOnLogoButton("twitter");
 
@@ -79,12 +82,13 @@ public class SocialMedia_Tests extends Hooks {
     public void test_3() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(41);
-        final BasePageSteps basePageSteps = new BasePageSteps();
+
+        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
         final SocialMediaPageSteps mediaPageSteps = new SocialMediaPageSteps();
 
         //ACT//
-        basePageSteps.iOpenHomePage();
-        basePageSteps.iCanSeeAutomationpracticeComWebsite();
+        mainPageSteps.iOpenHomePage();
+        mainPageSteps.iCanSeeAutomationpracticeComWebsite();
         mediaPageSteps.iScrollTheWebsiteUntilICanSeeLogo("youtube");
         mediaPageSteps.iClickOnLogoButton("youtube");
 
@@ -103,12 +107,13 @@ public class SocialMedia_Tests extends Hooks {
     public void test_4() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(42);
-        final BasePageSteps basePageSteps = new BasePageSteps();
+
+        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
         final SocialMediaPageSteps mediaPageSteps = new SocialMediaPageSteps();
 
         //ACT//
-        basePageSteps.iOpenHomePage();
-        basePageSteps.iCanSeeAutomationpracticeComWebsite();
+        mainPageSteps.iOpenHomePage();
+        mainPageSteps.iCanSeeAutomationpracticeComWebsite();
         mediaPageSteps.iScrollTheWebsiteUntilICanSeeLogo("google");
         mediaPageSteps.iClickOnLogoButton("google");
 

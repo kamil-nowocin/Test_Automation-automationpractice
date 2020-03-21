@@ -17,13 +17,16 @@ import java.io.FileOutputStream;
 
 public class ExcelEnvironment extends FrameworkEnvironment {
 
-    private static final String testDataExcelFileName = "testdata.xlsx";
     private static String testDataExcelPath = null;
-    private static XSSFWorkbook excelWorkBook;
-    private static XSSFSheet excelSheet;
+
     private static XSSFRow excelRow;
+    private static XSSFSheet excelSheet;
+    private static XSSFWorkbook excelWorkBook;
 
     public static int excelRowNumber;
+
+    public static final String testDataExcelFileName = "testdata.xlsx";
+    public static final String testDataExcelSheetName = "automationData";
 
     public static void setExcelRowNumber(int _rowNumber) {
         excelRowNumber = _rowNumber;

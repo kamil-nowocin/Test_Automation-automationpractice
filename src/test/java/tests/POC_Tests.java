@@ -17,13 +17,13 @@ import org.testng.annotations.Test;
 @Ignore
 @Epic("POC Tests")
 @Feature("POC Tests")
-public class EXCEL_POC_Tests extends Hooks {
+//@Listeners({TestNGListener_WEB.class})
+public class POC_Tests extends Hooks {
 
     @Step("Some POC step")
     public void testSteps(XSSFRow row) {
-        System.out.println("DATA SET 1: " + row.getCell(5).toString());
-        System.out.println("DATA SET 2: " + row.getCell(7).toString());
-
+        System.out.println("DATA SET 1: " + row.getCell(12).toString());
+        System.out.println("DATA SET 2: " + row.getCell(14).toString());
     }
 
     @Ignore

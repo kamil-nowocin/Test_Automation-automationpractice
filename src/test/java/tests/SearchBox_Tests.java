@@ -1,9 +1,10 @@
 package tests;
 
+import com.ContextInjection;
 import com.ExcelEnvironment;
 import com.listeners.TestNGListener_WEB;
-import com.steps.BasePageSteps;
 import com.steps.Hooks;
+import com.steps.MainPageSteps;
 import com.steps.SearchPageSteps;
 import io.qameta.allure.*;
 import org.testng.annotations.Listeners;
@@ -31,12 +32,13 @@ public class SearchBox_Tests extends Hooks {
     public void test_1() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(31);
-        final BasePageSteps basePageSteps = new BasePageSteps();
+
+        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
         final SearchPageSteps searchPageSteps = new SearchPageSteps();
 
         //ACT//
-        basePageSteps.iOpenHomePage();
-        basePageSteps.iCanSeeAutomationpracticeComWebsite();
+        mainPageSteps.iOpenHomePage();
+        mainPageSteps.iCanSeeAutomationpracticeComWebsite();
         searchPageSteps.iSearchForPhrase("T-shirts");
         searchPageSteps.iClickOnSearchIcon();
         searchPageSteps.iCanSeeNumbersOfResultsEqualsTo("1");
@@ -56,12 +58,13 @@ public class SearchBox_Tests extends Hooks {
     public void test_2() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(32);
-        final BasePageSteps basePageSteps = new BasePageSteps();
+
+        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
         final SearchPageSteps searchPageSteps = new SearchPageSteps();
 
         //ACT//
-        basePageSteps.iOpenHomePage();
-        basePageSteps.iCanSeeAutomationpracticeComWebsite();
+        mainPageSteps.iOpenHomePage();
+        mainPageSteps.iCanSeeAutomationpracticeComWebsite();
         searchPageSteps.iSearchForPhrase("Blouse");
         searchPageSteps.iClickOnSearchIcon();
         searchPageSteps.iCanSeeNumbersOfResultsEqualsTo("1");
@@ -81,12 +84,13 @@ public class SearchBox_Tests extends Hooks {
     public void test_3() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(33);
-        final BasePageSteps basePageSteps = new BasePageSteps();
+
+        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
         final SearchPageSteps searchPageSteps = new SearchPageSteps();
 
         //ACT//
-        basePageSteps.iOpenHomePage();
-        basePageSteps.iCanSeeAutomationpracticeComWebsite();
+        mainPageSteps.iOpenHomePage();
+        mainPageSteps.iCanSeeAutomationpracticeComWebsite();
         searchPageSteps.iSearchForPhrase("Printed Dress");
         searchPageSteps.iClickOnSearchIcon();
         searchPageSteps.iCanSeeNumbersOfResultsEqualsTo("5");
@@ -106,12 +110,13 @@ public class SearchBox_Tests extends Hooks {
     public void test_4() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(34);
-        final BasePageSteps basePageSteps = new BasePageSteps();
+
+        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
         final SearchPageSteps searchPageSteps = new SearchPageSteps();
 
         //ACT//
-        basePageSteps.iOpenHomePage();
-        basePageSteps.iCanSeeAutomationpracticeComWebsite();
+        mainPageSteps.iOpenHomePage();
+        mainPageSteps.iCanSeeAutomationpracticeComWebsite();
         searchPageSteps.iSearchForPhrase("!@#$%^");
         searchPageSteps.iClickOnSearchIcon();
         searchPageSteps.iCanSeeNumbersOfResultsEqualsTo("0");
@@ -131,12 +136,13 @@ public class SearchBox_Tests extends Hooks {
     public void test_5() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(35);
-        final BasePageSteps basePageSteps = new BasePageSteps();
+
+        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
         final SearchPageSteps searchPageSteps = new SearchPageSteps();
 
         //ACT//
-        basePageSteps.iOpenHomePage();
-        basePageSteps.iCanSeeAutomationpracticeComWebsite();
+        mainPageSteps.iOpenHomePage();
+        mainPageSteps.iCanSeeAutomationpracticeComWebsite();
         searchPageSteps.iSearchForPhrase("Printed Dress");
         searchPageSteps.iClickOnSearchIcon();
         searchPageSteps.iCanSeeNumbersOfResultsEqualsTo("5");
@@ -158,12 +164,13 @@ public class SearchBox_Tests extends Hooks {
     public void test_6() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(36);
-        final BasePageSteps basePageSteps = new BasePageSteps();
+
+        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
         final SearchPageSteps searchPageSteps = new SearchPageSteps();
 
         //ACT//
-        basePageSteps.iOpenHomePage();
-        basePageSteps.iCanSeeAutomationpracticeComWebsite();
+        mainPageSteps.iOpenHomePage();
+        mainPageSteps.iCanSeeAutomationpracticeComWebsite();
         searchPageSteps.iSearchForPhrase("Printed Dress");
         searchPageSteps.iClickOnSearchIcon();
         searchPageSteps.iCanSeeNumbersOfResultsEqualsTo("5");
@@ -186,12 +193,13 @@ public class SearchBox_Tests extends Hooks {
     public void test_7() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(37);
-        final BasePageSteps basePageSteps = new BasePageSteps();
+
+        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
         final SearchPageSteps searchPageSteps = new SearchPageSteps();
 
         //ACT//
-        basePageSteps.iOpenHomePage();
-        basePageSteps.iCanSeeAutomationpracticeComWebsite();
+        mainPageSteps.iOpenHomePage();
+        mainPageSteps.iCanSeeAutomationpracticeComWebsite();
         searchPageSteps.iSearchForPhrase("Printed Dress");
         searchPageSteps.iClickOnSearchIcon();
         searchPageSteps.iCanSeeNumbersOfResultsEqualsTo("5");
@@ -214,12 +222,13 @@ public class SearchBox_Tests extends Hooks {
     public void test_8() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(38);
-        final BasePageSteps basePageSteps = new BasePageSteps();
+
+        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
         final SearchPageSteps searchPageSteps = new SearchPageSteps();
 
         //ACT//
-        basePageSteps.iOpenHomePage();
-        basePageSteps.iCanSeeAutomationpracticeComWebsite();
+        mainPageSteps.iOpenHomePage();
+        mainPageSteps.iCanSeeAutomationpracticeComWebsite();
         searchPageSteps.iSearchForPhrase("Printed Dress");
         searchPageSteps.iClickOnSearchIcon();
         searchPageSteps.iCanSeeNumbersOfResultsEqualsTo("5");

@@ -1,9 +1,10 @@
 package tests;
 
+import com.ContextInjection;
 import com.ExcelEnvironment;
 import com.listeners.TestNGListener_WEB;
-import com.steps.BasePageSteps;
 import com.steps.Hooks;
+import com.steps.MainPageSteps;
 import com.steps.RegistrationPageSteps;
 import io.cucumber.datatable.DataTable;
 import io.qameta.allure.*;
@@ -35,12 +36,13 @@ public class Registration_Tests extends Hooks {
     public void test_1() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(13);
-        final BasePageSteps basePageSteps = new BasePageSteps();
-        final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps();
+
+        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
+        final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps(new ContextInjection());
 
         //ACT//
-        basePageSteps.iOpenHomePage();
-        basePageSteps.iCanSeeAutomationpracticeComWebsite();
+        mainPageSteps.iOpenHomePage();
+        mainPageSteps.iCanSeeAutomationpracticeComWebsite();
         registrationPageSteps.iClickOnSignInButton();
         registrationPageSteps.iCanSeeRegistrationPageForm();
         registrationPageSteps.iWriteAnEmailAddress();
@@ -61,12 +63,13 @@ public class Registration_Tests extends Hooks {
     public void test_2() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(14);
-        final BasePageSteps basePageSteps = new BasePageSteps();
-        final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps();
+
+        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
+        final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps(new ContextInjection());
 
         //ACT//
-        basePageSteps.iOpenHomePage();
-        basePageSteps.iCanSeeAutomationpracticeComWebsite();
+        mainPageSteps.iOpenHomePage();
+        mainPageSteps.iCanSeeAutomationpracticeComWebsite();
         registrationPageSteps.iClickOnSignInButton();
         registrationPageSteps.iCanSeeRegistrationPageForm();
         registrationPageSteps.iWriteAnEmailAddress();
@@ -96,7 +99,7 @@ public class Registration_Tests extends Hooks {
     }
 
     @Owner("Kamil Nowocin")
-    @Test(priority = 1,
+    @Test(priority = 1, dependsOnMethods = {"test_1"},
             description = "I can create an account by filling up only required fields")
     @Description("As a user I would like to register into automationpractice.com ->\n" +
             "I can create an account by filling up only required fields")
@@ -106,12 +109,13 @@ public class Registration_Tests extends Hooks {
     public void test_3() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(15);
-        final BasePageSteps basePageSteps = new BasePageSteps();
-        final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps();
+
+        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
+        final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps(new ContextInjection());
 
         //ACT//
-        basePageSteps.iOpenHomePage();
-        basePageSteps.iCanSeeAutomationpracticeComWebsite();
+        mainPageSteps.iOpenHomePage();
+        mainPageSteps.iCanSeeAutomationpracticeComWebsite();
         registrationPageSteps.iClickOnSignInButton();
         registrationPageSteps.iCanSeeRegistrationPageForm();
         registrationPageSteps.iWriteAnEmailAddress();
@@ -136,7 +140,7 @@ public class Registration_Tests extends Hooks {
     }
 
     @Owner("Kamil Nowocin")
-    @Test(priority = 1,
+    @Test(priority = 1, dependsOnMethods = {"test_1"},
             description = "I can't create an account without filling up fields")
     @Description("As a user I would like to register into automationpractice.com ->\n" +
             "I can't create an account without filling up fields")
@@ -146,12 +150,13 @@ public class Registration_Tests extends Hooks {
     public void test_4() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(16);
-        final BasePageSteps basePageSteps = new BasePageSteps();
-        final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps();
+
+        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
+        final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps(new ContextInjection());
 
         //ACT//
-        basePageSteps.iOpenHomePage();
-        basePageSteps.iCanSeeAutomationpracticeComWebsite();
+        mainPageSteps.iOpenHomePage();
+        mainPageSteps.iCanSeeAutomationpracticeComWebsite();
         registrationPageSteps.iClickOnSignInButton();
         registrationPageSteps.iCanSeeRegistrationPageForm();
         registrationPageSteps.iWriteAnEmailAddress();
@@ -163,7 +168,7 @@ public class Registration_Tests extends Hooks {
     }
 
     @Owner("Kamil Nowocin")
-    @Test(priority = 1,
+    @Test(priority = 1, dependsOnMethods = {"test_1"},
             description = "I can't create an account, when one of required fields is missing")
     @Description("As a user I would like to register into automationpractice.com ->\n" +
             "I can't create an account, when one of required fields is missing")
@@ -173,23 +178,24 @@ public class Registration_Tests extends Hooks {
     public void test_5() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(17);
-        List<List<String>> infoInTheRaw = Arrays.asList
+        List<List<String>> registrationDetails = Arrays.asList
                 (
                         Arrays.asList("First Name", "Last Name", "Password", "Address", "City", "State", "Postal Code", "Country", "Mobile Phone"),
                         Arrays.asList("Thor", "Odinson", "#Passwd123", "", "City", "Alaska", "99503", "United States", "700-800-900")
                 );
-        DataTable dataTable = DataTable.create(infoInTheRaw);
-        final BasePageSteps basePageSteps = new BasePageSteps();
-        final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps();
+        DataTable registrationDetailsDataTable = DataTable.create(registrationDetails);
+
+        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
+        final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps(new ContextInjection());
 
         //ACT//
-        basePageSteps.iOpenHomePage();
-        basePageSteps.iCanSeeAutomationpracticeComWebsite();
+        mainPageSteps.iOpenHomePage();
+        mainPageSteps.iCanSeeAutomationpracticeComWebsite();
         registrationPageSteps.iClickOnSignInButton();
         registrationPageSteps.iCanSeeRegistrationPageForm();
         registrationPageSteps.iWriteAnEmailAddress();
         registrationPageSteps.iClickOnCreateAnAccountButton();
-        registrationPageSteps.iWriteFollowingDataToRegistrationForm(dataTable);
+        registrationPageSteps.iWriteFollowingDataToRegistrationForm(registrationDetailsDataTable);
         registrationPageSteps.iCheckIfEmailIsAlreadyWrittenAndValid();
         registrationPageSteps.iCheckIfMyFirstLastNameAreAlreadyWrittenAndAreCorrect();
         registrationPageSteps.iWriteMyAddressAlias();
@@ -200,7 +206,7 @@ public class Registration_Tests extends Hooks {
     }
 
     @Owner("Kamil Nowocin")
-    @Test(priority = 1,
+    @Test(priority = 1, dependsOnMethods = {"test_1"},
             description = "I can't create an account, when email is already in database")
     @Description("As a user I would like to register into automationpractice.com ->\n" +
             "I can't create an account, when email is already in database")
@@ -210,12 +216,13 @@ public class Registration_Tests extends Hooks {
     public void test_6() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(18);
-        final BasePageSteps basePageSteps = new BasePageSteps();
-        final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps();
+
+        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
+        final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps(new ContextInjection());
 
         //ACT//
-        basePageSteps.iOpenHomePage();
-        basePageSteps.iCanSeeAutomationpracticeComWebsite();
+        mainPageSteps.iOpenHomePage();
+        mainPageSteps.iCanSeeAutomationpracticeComWebsite();
         registrationPageSteps.iClickOnSignInButton();
         registrationPageSteps.iCanSeeRegistrationPageForm();
         registrationPageSteps.iWriteAnEmailAddressWhichIsAlreadyInDatabase();
@@ -226,7 +233,7 @@ public class Registration_Tests extends Hooks {
     }
 
     @Owner("Kamil Nowocin")
-    @Test(priority = 1,
+    @Test(priority = 1, dependsOnMethods = {"test_1"},
             description = "I can't create an account, when email has wrong format")
     @Description("As a user I would like to register into automationpractice.com ->\n" +
             "I can't create an account, when email has wrong format")
@@ -236,12 +243,13 @@ public class Registration_Tests extends Hooks {
     public void test_7() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(19);
-        final BasePageSteps basePageSteps = new BasePageSteps();
-        final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps();
+
+        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
+        final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps(new ContextInjection());
 
         //ACT//
-        basePageSteps.iOpenHomePage();
-        basePageSteps.iCanSeeAutomationpracticeComWebsite();
+        mainPageSteps.iOpenHomePage();
+        mainPageSteps.iCanSeeAutomationpracticeComWebsite();
         registrationPageSteps.iClickOnSignInButton();
         registrationPageSteps.iCanSeeRegistrationPageForm();
         registrationPageSteps.iWriteAnInvalidEmailAddress();
