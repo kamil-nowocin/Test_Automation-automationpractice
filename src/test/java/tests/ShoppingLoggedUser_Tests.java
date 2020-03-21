@@ -26,17 +26,18 @@ import java.util.List;
 @Feature("SHOPPING TESTS")
 @Listeners({TestNGListener_WEB.class})
 public class ShoppingLoggedUser_Tests extends Hooks {
+
     @Owner("Kamil Nowocin")
     @Test(priority = 0,
             description = "I would like to buy new Faded Short Sleeve T-shirts from automationpractice.com")
-    @Description("As a user I would like to buy new clothes from automationpractice.com ->\n" +
-            "User is already successfully logged")
+    @Description("(User is already successfully logged) As a user I would like to buy new clothes from automationpractice.com ->\n" +
+            "I would like to buy new \"Faded Short Sleeve T-shirts\"")
     @Severity(SeverityLevel.CRITICAL)
-    @Issue("TAP-044")
+    @Issue("TAP-0039")
     @Story("POSITIVE FLOW")
     public void test_1() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(43);
+        ExcelEnvironment.saveTestResultsXLSX(39);
         List<List<String>> orderDetails = Arrays.asList
                 (
                         Arrays.asList("Quantity", " Size", "Colour"),

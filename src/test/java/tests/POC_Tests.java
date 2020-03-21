@@ -17,7 +17,7 @@ import org.testng.annotations.Test;
 @Ignore
 @Epic("POC Tests")
 @Feature("POC Tests")
-//@Listeners({TestNGListener_WEB.class})
+//@Listeners({TestNGListener_WEB.class}) //ENABLE TO SAVE RESULTS IN EXCEL
 public class POC_Tests extends Hooks {
 
     @Step("Some POC step")
@@ -36,7 +36,7 @@ public class POC_Tests extends Hooks {
     @Story("POC Tests")
     public void excelTest() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(1);
+        ExcelEnvironment.saveTestResultsXLSX(50);
 
         //ACT//
         testSteps(ExcelEnvironment.getRowData(1));

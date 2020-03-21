@@ -27,11 +27,11 @@ public class SocialMedia_Tests extends Hooks {
     @Description("As a user I would like to be redirected to social media pages from automationpractice.com ->\n" +
             "I click on social media FACEBOOK logo")
     @Severity(SeverityLevel.MINOR)
-    @Issue("TAP-039")
+    @Issue("TAP-0041")
     @Story("POSITIVE FLOW")
     public void test_1() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(39);
+        ExcelEnvironment.saveTestResultsXLSX(41);
 
         final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
         final SocialMediaPageSteps mediaPageSteps = new SocialMediaPageSteps();
@@ -52,11 +52,11 @@ public class SocialMedia_Tests extends Hooks {
     @Description("As a user I would like to be redirected to social media pages from automationpractice.com ->\n" +
             "I click on social media TWITTER logo")
     @Severity(SeverityLevel.MINOR)
-    @Issue("TAP-040")
+    @Issue("TAP-0042")
     @Story("POSITIVE FLOW")
     public void test_2() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(40);
+        ExcelEnvironment.saveTestResultsXLSX(42);
 
         final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
         final SocialMediaPageSteps mediaPageSteps = new SocialMediaPageSteps();
@@ -77,11 +77,11 @@ public class SocialMedia_Tests extends Hooks {
     @Description("As a user I would like to be redirected to social media pages from automationpractice.com ->\n" +
             "I click on social media YOUTUBE logo")
     @Severity(SeverityLevel.MINOR)
-    @Issue("TAP-041")
+    @Issue("TAP-0043")
     @Story("POSITIVE FLOW")
     public void test_3() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(41);
+        ExcelEnvironment.saveTestResultsXLSX(43);
 
         final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
         final SocialMediaPageSteps mediaPageSteps = new SocialMediaPageSteps();
@@ -102,11 +102,11 @@ public class SocialMedia_Tests extends Hooks {
     @Description("As a user I would like to be redirected to social media pages from automationpractice.com ->\n" +
             "I click on social media GOOGLE+ logo")
     @Severity(SeverityLevel.MINOR)
-    @Issue("TAP-042")
+    @Issue("TAP-0044")
     @Story("POSITIVE FLOW")
     public void test_4() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(42);
+        ExcelEnvironment.saveTestResultsXLSX(44);
 
         final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
         final SocialMediaPageSteps mediaPageSteps = new SocialMediaPageSteps();

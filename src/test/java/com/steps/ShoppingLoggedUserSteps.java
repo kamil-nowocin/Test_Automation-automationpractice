@@ -134,7 +134,7 @@ public class ShoppingLoggedUserSteps extends DriverFactory {
 
         //INJECTIONS//
         contextInjection.productUnitPrice = Double.parseDouble
-                (productDetailsPage.productPrice.getText().replaceAll("[$]*[^0-9.]", ""));
+                (productDetailsPage.productPrice.getText().replaceAll("[^0-9.]", ""));
         contextInjection.productQuantity = Double.parseDouble(productQuantity);
         contextInjection.productSize = productSize;
         contextInjection.productColor = productColor;
@@ -168,12 +168,12 @@ public class ShoppingLoggedUserSteps extends DriverFactory {
                 String.format(VIEW_ERROR, "Product added successfully header"));
 
         Assert.assertEquals(productDetailsPage.popupPaneFinalProductTotalPrice.getText()
-                        .replaceAll("[$]*[^0-9.]", "").replace(".", ","),
-                decimalFormat.format(contextInjection.finalProductTotalPrice), VALUE_ERROR);
+                        .replaceAll("[^$0-9.]", "").replace(".", ","),
+                $decimalFormat.format(contextInjection.finalProductTotalPrice), VALUE_ERROR);
 
         Assert.assertEquals(productDetailsPage.popupPaneFinalOrderTotalPrice.getText()
-                        .replaceAll("[$]*[^0-9.]", "").replace(".", ","),
-                decimalFormat.format(contextInjection.finalOrderTotalPrice), VALUE_ERROR);
+                        .replaceAll("[^$0-9.]", "").replace(".", ","),
+                $decimalFormat.format(contextInjection.finalOrderTotalPrice), VALUE_ERROR);
     }
 
     @Step("I click on Proceed To Checkout button \\(from modal)")
@@ -204,15 +204,15 @@ public class ShoppingLoggedUserSteps extends DriverFactory {
                 Assert.assertEquals(shoppingCartSummaryPage.productName.getText().toLowerCase(),
                         contextInjection.productName.toLowerCase(), VALUE_ERROR);
                 Assert.assertEquals(Double.parseDouble(shoppingCartSummaryPage.productUnitPrice.getText()
-                        .replaceAll("[$]*[^0-9.]", "")), contextInjection.productUnitPrice, VALUE_ERROR);
+                        .replaceAll("[^0-9.]", "")), contextInjection.productUnitPrice, VALUE_ERROR);
                 Assert.assertEquals(Double.parseDouble(shoppingCartSummaryPage.productQuantity.getAttribute
                         ("value").toLowerCase()), contextInjection.productQuantity, VALUE_ERROR);
                 Assert.assertEquals(shoppingCartSummaryPage.productTotalPrice.getText()
-                                .replaceAll("[$]*[^0-9.]", "").replace(".", ","),
-                        decimalFormat.format(contextInjection.finalProductTotalPrice), VALUE_ERROR);
+                                .replaceAll("[^$0-9.]", "").replace(".", ","),
+                        $decimalFormat.format(contextInjection.finalProductTotalPrice), VALUE_ERROR);
                 //TODO - how tax is calculated in america?
                 //Assert.assertEquals(shoppingCartSummaryPage.productTotalOrderPriceTAX.getText()
-                //              .replaceAll("[$]*[^0-9.]", "").replace(".", ","),
+                //              .replaceAll("[$]*[^$0-9.]", "").replace(".", ","),
                 //    decimalFormat.format(productTotalOrderPriceWithTax), VALUE_ERROR);
                 break;
 
@@ -315,7 +315,7 @@ public class ShoppingLoggedUserSteps extends DriverFactory {
 
         //ASSERT//
         Assert.assertEquals(Double.parseDouble(shoppingCartSummaryPage.readMyCarrierPrice.getText()
-                .replaceAll("[$]*[^0-9.]", "")), contextInjection.SHIPPING_PRICE, VALUE_ERROR);
+                .replaceAll("[^0-9.]", "")), contextInjection.SHIPPING_PRICE, VALUE_ERROR);
     }
 
     @Step("I click on Terms of Service checkbox")

@@ -4,8 +4,11 @@
 #* @author kamil.nowocin
 #**/
 
-@validators
+@registrationValidators
 Feature: As a user I would like to see the error message where I made a mistake in the registration page form
+#--------------------------------------------------------------------------------#
+# [US] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-4444             #
+#--------------------------------------------------------------------------------#
 
   Background: Navigate to registration page
     Given I open home page
@@ -15,7 +18,9 @@ Feature: As a user I would like to see the error message where I made a mistake 
     And I click on Create An Account button
     Then I can see registration page form
 
-#--------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------#
+# [ZEPHYR] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-0020
+
   @non-smoke @major @regression
   Scenario:[1] As a user I would like to see registration error, when I don't fill first name input
     Given I can see registration page form
@@ -33,7 +38,9 @@ Feature: As a user I would like to see the error message where I made a mistake 
     And I click on Register button
     Then I can see warning message about missing "first name" input
 
-#--------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------#
+# [ZEPHYR] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-0021
+
   @non-smoke @major @regression
   Scenario:[2] As a user I would like to see registration error, when I don't fill last name input
     Given I can see registration page form
@@ -51,7 +58,9 @@ Feature: As a user I would like to see the error message where I made a mistake 
     And I click on Register button
     Then I can see warning message about missing "last name" input
 
-#--------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------#
+# [ZEPHYR] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-0022
+
   @non-smoke @major @regression
   Scenario:[3] As a user I would like to see registration error, when I don't fill email input
     Given I can see registration page form
@@ -71,7 +80,9 @@ Feature: As a user I would like to see the error message where I made a mistake 
     And I click on Register button
     Then I can see warning message about missing "email address" input
 
-#--------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------#
+# [ZEPHYR] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-0023
+
   @non-smoke @major @regression
   Scenario:[4] As a user I would like to see registration error, when I don't fill password input
     Given I can see registration page form
@@ -89,7 +100,9 @@ Feature: As a user I would like to see the error message where I made a mistake 
     And I click on Register button
     Then I can see warning message about missing "password" input
 
-#--------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------#
+# [ZEPHYR] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-0024
+
   @non-smoke @major @regression
   Scenario:[5] As a user I would like to see registration error, when I don't fill address input
     Given I can see registration page form
@@ -107,7 +120,9 @@ Feature: As a user I would like to see the error message where I made a mistake 
     And I click on Register button
     Then I can see warning message about missing "address" input
 
-#--------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------#
+# [ZEPHYR] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-0025
+
   @non-smoke @major @regression
   Scenario:[6] As a user I would like to see registration error, when I don't fill city input
     Given I can see registration page form
@@ -125,7 +140,9 @@ Feature: As a user I would like to see the error message where I made a mistake 
     And I click on Register button
     Then I can see warning message about missing "city" input
 
-#--------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------#
+# [ZEPHYR] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-0026
+
   @non-smoke @major @regression
   Scenario:[7] As a user I would like to see registration error, when I don't fill state input
     Given I can see registration page form
@@ -143,7 +160,9 @@ Feature: As a user I would like to see the error message where I made a mistake 
     And I click on Register button
     Then I can see warning message about missing "state" input
 
-#--------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------#
+# [ZEPHYR] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-0027
+
   @non-smoke @major @regression
   Scenario:[8] As a user I would like to see registration error, when I don't fill postal code input
     Given I can see registration page form
@@ -161,7 +180,9 @@ Feature: As a user I would like to see the error message where I made a mistake 
     And I click on Register button
     Then I can see warning message about missing "postal code" input
 
-#--------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------#
+# [ZEPHYR] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-0028
+
   @non-smoke @major @regression
   Scenario:[9] As a user I would like to see registration error, when I don't fill country input
     Given I can see registration page form
@@ -178,7 +199,9 @@ Feature: As a user I would like to see the error message where I made a mistake 
     And I click on Register button
     Then I can see warning message about missing "country" input
 
-#--------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------#
+# [ZEPHYR] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-0029
+
   @non-smoke @major @regression
   Scenario:[10] As a user I would like to see registration error, when I don't fill mobile phone input
     Given I can see registration page form
@@ -196,7 +219,9 @@ Feature: As a user I would like to see the error message where I made a mistake 
     And I click on Register button
     Then I can see warning message about missing "mobile phone" input
 
-#--------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------#
+# [ZEPHYR] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-0030
+
   @non-smoke @major @regression
   Scenario:[11] As a user I would like to see registration error, when I don't fill email alias input
     Given I can see registration page form

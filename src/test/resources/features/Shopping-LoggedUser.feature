@@ -6,6 +6,9 @@
 
 @shopping
 Feature: As a user I would like to buy new clothes from automationpractice.com - User is already successfully logged
+#--------------------------------------------------------------------------------#
+# [US] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-6666             #
+#--------------------------------------------------------------------------------#
 
   Background: Navigate to automationpractice.com website
     Given I open home page
@@ -13,7 +16,10 @@ Feature: As a user I would like to buy new clothes from automationpractice.com -
     When I am logged as customer "thor.odinson@example.com" using "12345" password
     Then I can see welcome message
 
-#--------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------#
+# [ZEPHYR] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-0039
+# [ZEPHYR] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-0040
+
   @smoke @major @regression
   Scenario Outline:[1] As a user I would like to buy new <dress name>
     Given I am on MyAccount details page

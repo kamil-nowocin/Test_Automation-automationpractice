@@ -27,11 +27,11 @@ public class CustomerService_Tests extends Hooks {
     @Description("As a user I would like to contact with customer service support ->\n" +
             "I will send request via contact us form, all inputs are filled up")
     @Severity(SeverityLevel.NORMAL)
-    @Issue("TAP-001")
+    @Issue("TAP-0005")
     @Story("POSITIVE FLOW")
     public void test_1() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(1);
+        ExcelEnvironment.saveTestResultsXLSX(5);
 
 
         final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
@@ -59,11 +59,11 @@ public class CustomerService_Tests extends Hooks {
     @Description("As a user I would like to contact with customer service support ->\n" +
             "I will send request via contact us form, all required inputs are filled up")
     @Severity(SeverityLevel.NORMAL)
-    @Issue("TAP-002")
+    @Issue("TAP-0006")
     @Story("POSITIVE FLOW")
     public void test_2() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(2);
+        ExcelEnvironment.saveTestResultsXLSX(6);
 
         final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
         final CustomerServicePageSteps customerServicePageSteps = new CustomerServicePageSteps();
@@ -89,11 +89,11 @@ public class CustomerService_Tests extends Hooks {
     @Description("As a user I would like to contact with customer service support ->\n" +
             "I will send request via contact us form witch attached file")
     @Severity(SeverityLevel.NORMAL)
-    @Issue("TAP-003")
+    @Issue("TAP-0007")
     @Story("POSITIVE FLOW")
     public void test_3() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(3);
+        ExcelEnvironment.saveTestResultsXLSX(7);
 
         final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
         final CustomerServicePageSteps customerServicePageSteps = new CustomerServicePageSteps();
@@ -121,11 +121,11 @@ public class CustomerService_Tests extends Hooks {
     @Description("As a user I would like to contact with customer service support ->\n" +
             "I will send request via contact us form, email input is invalid")
     @Severity(SeverityLevel.NORMAL)
-    @Issue("TAP-004")
+    @Issue("TAP-0008")
     @Story("NEGATIVE FLOW")
     public void test_4() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(4);
+        ExcelEnvironment.saveTestResultsXLSX(8);
 
         final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
         final CustomerServicePageSteps customerServicePageSteps = new CustomerServicePageSteps();
@@ -153,11 +153,11 @@ public class CustomerService_Tests extends Hooks {
     @Description("As a user I would like to contact with customer service support ->\n" +
             "I will send request via contact us form, subject is missing")
     @Severity(SeverityLevel.NORMAL)
-    @Issue("TAP-005")
+    @Issue("TAP-0009")
     @Story("NEGATIVE FLOW")
     public void test_5() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(5);
+        ExcelEnvironment.saveTestResultsXLSX(9);
 
         final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
         final CustomerServicePageSteps customerServicePageSteps = new CustomerServicePageSteps();
@@ -185,11 +185,11 @@ public class CustomerService_Tests extends Hooks {
     @Description("As a user I would like to contact with customer service support ->\n" +
             "I will send request via contact us form, email address is missing")
     @Severity(SeverityLevel.NORMAL)
-    @Issue("TAP-006")
+    @Issue("TAP-0010")
     @Story("NEGATIVE FLOW")
     public void test_6() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(6);
+        ExcelEnvironment.saveTestResultsXLSX(10);
 
         final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
         final CustomerServicePageSteps customerServicePageSteps = new CustomerServicePageSteps();
@@ -217,11 +217,11 @@ public class CustomerService_Tests extends Hooks {
     @Description("As a user I would like to contact with customer service support ->\n" +
             "I will send request via contact us form, message input is missing")
     @Severity(SeverityLevel.NORMAL)
-    @Issue("TAP-007")
+    @Issue("TAP-0011")
     @Story("NEGATIVE FLOW")
     public void test_7() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(7);
+        ExcelEnvironment.saveTestResultsXLSX(11);
 
         final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
         final CustomerServicePageSteps customerServicePageSteps = new CustomerServicePageSteps();
@@ -249,11 +249,11 @@ public class CustomerService_Tests extends Hooks {
     @Description("As a user I would like to contact with customer service support ->\n" +
             "I will send request via contact us form, all inputs are missing")
     @Severity(SeverityLevel.NORMAL)
-    @Issue("TAP-008")
+    @Issue("TAP-0012")
     @Story("NEGATIVE FLOW")
     public void test_8() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(8);
+        ExcelEnvironment.saveTestResultsXLSX(12);
 
         final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
         final CustomerServicePageSteps customerServicePageSteps = new CustomerServicePageSteps();

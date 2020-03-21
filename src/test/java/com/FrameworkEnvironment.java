@@ -42,7 +42,7 @@ public class FrameworkEnvironment {
     protected static Logger logger = LoggerFactory.getLogger(Hooks.class);
     protected static Faker faker = new Faker(new Locale("en-US"));
     protected static MockNeat mockNeat = MockNeat.threadLocal();
-    protected static DecimalFormat decimalFormat = new DecimalFormat("#0.00");
+    protected static DecimalFormat $decimalFormat = new DecimalFormat("$#0.00");
 
     //BUNDLES//
     protected static final ResourceBundle resourceBundleInvalidEmails = ResourceBundle.getBundle("invalidEmails");

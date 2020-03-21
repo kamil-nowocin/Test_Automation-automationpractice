@@ -27,7 +27,7 @@ public class RegistrationValidators_Tests extends Hooks {
     @Description("As a user I would like to see the error message where I made a mistake in the registration page form ->\n" +
             "I would like to see registration error, when I don't fill first name input")
     @Severity(SeverityLevel.NORMAL)
-    @Issue("TAP-020")
+    @Issue("TAP-0020")
     @Story("NEGATIVE FLOW")
     public void test_1() throws Throwable {
         //ARRANGE//
@@ -66,7 +66,7 @@ public class RegistrationValidators_Tests extends Hooks {
     @Description("As a user I would like to see the error message where I made a mistake in the registration page form ->\n" +
             "I would like to see registration error, when I don't fill last name input")
     @Severity(SeverityLevel.NORMAL)
-    @Issue("TAP-021")
+    @Issue("TAP-0021")
     @Story("NEGATIVE FLOW")
     public void test_2() throws Throwable {
         //ARRANGE//
@@ -105,7 +105,7 @@ public class RegistrationValidators_Tests extends Hooks {
     @Description("As a user I would like to see the error message where I made a mistake in the registration page form ->\n" +
             "I would like to see registration error, when I don't fill email input")
     @Severity(SeverityLevel.NORMAL)
-    @Issue("TAP-022")
+    @Issue("TAP-0022")
     @Story("NEGATIVE FLOW")
     public void test_3() throws Throwable {
         //ARRANGE//
@@ -146,7 +146,7 @@ public class RegistrationValidators_Tests extends Hooks {
     @Description("As a user I would like to see the error message where I made a mistake in the registration page form ->\n" +
             "I would like to see registration error, when I don't fill password input")
     @Severity(SeverityLevel.NORMAL)
-    @Issue("TAP-023")
+    @Issue("TAP-0023")
     @Story("NEGATIVE FLOW")
     public void test_4() throws Throwable {
         //ARRANGE//
@@ -185,7 +185,7 @@ public class RegistrationValidators_Tests extends Hooks {
     @Description("As a user I would like to see the error message where I made a mistake in the registration page form ->\n" +
             "I would like to see registration error, when I don't fill address input")
     @Severity(SeverityLevel.NORMAL)
-    @Issue("TAP-024")
+    @Issue("TAP-0024")
     @Story("NEGATIVE FLOW")
     public void test_5() throws Throwable {
         //ARRANGE//
@@ -224,7 +224,7 @@ public class RegistrationValidators_Tests extends Hooks {
     @Description("As a user I would like to see the error message where I made a mistake in the registration page form ->\n" +
             "I would like to see registration error, when I don't fill city input")
     @Severity(SeverityLevel.NORMAL)
-    @Issue("TAP-025")
+    @Issue("TAP-0025")
     @Story("NEGATIVE FLOW")
     public void test_6() throws Throwable {
         //ARRANGE//
@@ -263,7 +263,7 @@ public class RegistrationValidators_Tests extends Hooks {
     @Description("As a user I would like to see the error message where I made a mistake in the registration page form ->\n" +
             "I would like to see registration error, when I don't fill state input")
     @Severity(SeverityLevel.NORMAL)
-    @Issue("TAP-026")
+    @Issue("TAP-0026")
     @Story("NEGATIVE FLOW")
     public void test_7() throws Throwable {
         //ARRANGE//
@@ -302,7 +302,7 @@ public class RegistrationValidators_Tests extends Hooks {
     @Description("As a user I would like to see the error message where I made a mistake in the registration page form ->\n" +
             "I would like to see registration error, when I don't fill postal code input")
     @Severity(SeverityLevel.NORMAL)
-    @Issue("TAP-027")
+    @Issue("TAP-0027")
     @Story("NEGATIVE FLOW")
     public void test_8() throws Throwable {
         //ARRANGE//
@@ -341,7 +341,7 @@ public class RegistrationValidators_Tests extends Hooks {
     @Description("As a user I would like to see the error message where I made a mistake in the registration page form ->\n" +
             "I would like to see registration error, when I don't fill country input")
     @Severity(SeverityLevel.NORMAL)
-    @Issue("TAP-028")
+    @Issue("TAP-0028")
     @Story("NEGATIVE FLOW")
     public void test_9() throws Throwable {
         //ARRANGE//
@@ -379,7 +379,7 @@ public class RegistrationValidators_Tests extends Hooks {
     @Description("As a user I would like to see the error message where I made a mistake in the registration page form ->\n" +
             "I would like to see registration error, when I don't fill mobile phone input")
     @Severity(SeverityLevel.NORMAL)
-    @Issue("TAP-029")
+    @Issue("TAP-0029")
     @Story("NEGATIVE FLOW")
     public void test_10() throws Throwable {
         //ARRANGE//
@@ -418,7 +418,7 @@ public class RegistrationValidators_Tests extends Hooks {
     @Description("As a user I would like to see the error message where I made a mistake in the registration page form ->\n" +
             "I would like to see registration error, when I don't fill email alias address input")
     @Severity(SeverityLevel.NORMAL)
-    @Issue("TAP-030")
+    @Issue("TAP-0030")
     @Story("NEGATIVE FLOW")
     public void test_11() throws Throwable {
         //ARRANGE//

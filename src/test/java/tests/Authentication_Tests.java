@@ -28,11 +28,11 @@ public class Authentication_Tests extends Hooks {
     @Description("As a user I would like to log in automationpractice.com ->\n" +
             "I can log into automationpractice.com using registered email thor.odinson@example.com")
     @Severity(SeverityLevel.CRITICAL)
-    @Issue("TAP-009")
+    @Issue("TAP-0001")
     @Story("POSITIVE FLOW")
     public void test_1() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(9);
+        ExcelEnvironment.saveTestResultsXLSX(1);
 
         final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
         final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps(new ContextInjection());
@@ -57,11 +57,11 @@ public class Authentication_Tests extends Hooks {
     @Description("As a user I would like to log in automationpractice.com ->\n" +
             "I can't log into automationpractice.com using email thanos.ALars@example.com and wrong password")
     @Severity(SeverityLevel.CRITICAL)
-    @Issue("TAP-010")
+    @Issue("TAP-0002")
     @Story("NEGATIVE FLOW")
     public void test_2() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(10);
+        ExcelEnvironment.saveTestResultsXLSX(2);
 
         final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
         final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps(new ContextInjection());
@@ -86,11 +86,11 @@ public class Authentication_Tests extends Hooks {
     @Description("As a user I would like to log in automationpractice.com ->\n" +
             "I can't log into automationpractice.com using email thor.odinson@example.com without password")
     @Severity(SeverityLevel.CRITICAL)
-    @Issue("TAP-011")
+    @Issue("TAP-0003")
     @Story("NEGATIVE FLOW")
     public void test_3() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(11);
+        ExcelEnvironment.saveTestResultsXLSX(3);
 
         final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
         final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps(new ContextInjection());
@@ -115,11 +115,11 @@ public class Authentication_Tests extends Hooks {
     @Description("As a user I would like to log in automationpractice.com ->\n" +
             "I can't log into automationpractice.com using email \"null\" with password")
     @Severity(SeverityLevel.CRITICAL)
-    @Issue("TAP-012")
+    @Issue("TAP-0004")
     @Story("NEGATIVE FLOW")
     public void test_4() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(12);
+        ExcelEnvironment.saveTestResultsXLSX(4);
 
         final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
         final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps(new ContextInjection());

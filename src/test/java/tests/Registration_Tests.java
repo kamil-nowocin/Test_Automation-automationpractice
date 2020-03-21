@@ -31,7 +31,7 @@ public class Registration_Tests extends Hooks {
     @Description("As a user I would like to register into automationpractice.com ->\n" +
             "I am checking availability of registration page form")
     @Severity(SeverityLevel.BLOCKER)
-    @Issue("TAP-013")
+    @Issue("TAP-0013")
     @Story("POSITIVE FLOW")
     public void test_1() throws Throwable {
         //ARRANGE//
@@ -58,7 +58,7 @@ public class Registration_Tests extends Hooks {
     @Description("As a user I would like to register into automationpractice.com ->\n" +
             "I can create an account by filling up all fields")
     @Severity(SeverityLevel.CRITICAL)
-    @Issue("TAP-014")
+    @Issue("TAP-0014")
     @Story("POSITIVE FLOW")
     public void test_2() throws Throwable {
         //ARRANGE//
@@ -104,7 +104,7 @@ public class Registration_Tests extends Hooks {
     @Description("As a user I would like to register into automationpractice.com ->\n" +
             "I can create an account by filling up only required fields")
     @Severity(SeverityLevel.BLOCKER)
-    @Issue("TAP-015")
+    @Issue("TAP-0015")
     @Story("POSITIVE FLOW")
     public void test_3() throws Throwable {
         //ARRANGE//
@@ -145,7 +145,7 @@ public class Registration_Tests extends Hooks {
     @Description("As a user I would like to register into automationpractice.com ->\n" +
             "I can't create an account without filling up fields")
     @Severity(SeverityLevel.CRITICAL)
-    @Issue("TAP-016")
+    @Issue("TAP-0016")
     @Story("NEGATIVE FLOW")
     public void test_4() throws Throwable {
         //ARRANGE//
@@ -173,7 +173,7 @@ public class Registration_Tests extends Hooks {
     @Description("As a user I would like to register into automationpractice.com ->\n" +
             "I can't create an account, when one of required fields is missing")
     @Severity(SeverityLevel.CRITICAL)
-    @Issue("TAP-017")
+    @Issue("TAP-0017")
     @Story("NEGATIVE FLOW")
     public void test_5() throws Throwable {
         //ARRANGE//
@@ -211,7 +211,7 @@ public class Registration_Tests extends Hooks {
     @Description("As a user I would like to register into automationpractice.com ->\n" +
             "I can't create an account, when email is already in database")
     @Severity(SeverityLevel.CRITICAL)
-    @Issue("TAP-018")
+    @Issue("TAP-0018")
     @Story("NEGATIVE FLOW")
     public void test_6() throws Throwable {
         //ARRANGE//
@@ -238,7 +238,7 @@ public class Registration_Tests extends Hooks {
     @Description("As a user I would like to register into automationpractice.com ->\n" +
             "I can't create an account, when email has wrong format")
     @Severity(SeverityLevel.CRITICAL)
-    @Issue("TAP-019")
+    @Issue("TAP-0019")
     @Story("NEGATIVE FLOW")
     public void test_7() throws Throwable {
         //ARRANGE//

@@ -6,11 +6,19 @@
 
 @socialMedia
 Feature: As a user I would like to be redirected to social media pages from automationpractice.com
+#--------------------------------------------------------------------------------#
+# [US] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-7777             #
+#--------------------------------------------------------------------------------#
 
   Background: Navigate to automationpractice.com website
     Given I open home page
 
-#--------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------#
+# [ZEPHYR] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-0041
+# [ZEPHYR] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-0042
+# [ZEPHYR] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-0043
+# [ZEPHYR] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-0044
+
   @non-smoke @medium @regression
   Scenario Outline:[1] I click on social media "<logo name>" logo
     Given I can see automationpractice.com website

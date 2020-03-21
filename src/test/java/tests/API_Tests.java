@@ -38,10 +38,10 @@ public class API_Tests extends Hooks {
     @Test(description = "HTTP status check", priority = 0)
     @Description("As a user I would like to check availability of automationpractice.com")
     @Severity(SeverityLevel.BLOCKER)
-    @Issue("TAP-043")
+    @Issue("TAP-0000")
     public void test_1() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(44);
+        ExcelEnvironment.saveTestResultsXLSX(45);
 
         //ACT//
         given().when().get(restHomeURL()).then().assertThat().statusCode(200);
