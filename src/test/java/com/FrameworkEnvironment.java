@@ -24,6 +24,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
@@ -42,7 +43,7 @@ public class FrameworkEnvironment {
     protected static Logger logger = LoggerFactory.getLogger(Hooks.class);
     protected static Faker faker = new Faker(new Locale("en-US"));
     protected static MockNeat mockNeat = MockNeat.threadLocal();
-    protected static DecimalFormat $decimalFormat = new DecimalFormat("$#0.00");
+    protected static DecimalFormat $decimalFormat = new DecimalFormat("$#0.00", new DecimalFormatSymbols(Locale.US));
 
     //BUNDLES//
     protected static final ResourceBundle resourceBundleInvalidEmails = ResourceBundle.getBundle("invalidEmails");

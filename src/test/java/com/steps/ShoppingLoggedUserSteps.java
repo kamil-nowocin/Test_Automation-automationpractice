@@ -169,11 +169,11 @@ public class ShoppingLoggedUserSteps extends DriverFactory {
 
         Assert.assertEquals(productDetailsPage.popupPaneFinalProductTotalPrice.getText()
                         .replaceAll("[^$0-9.]", ""),
-                $decimalFormat.format(contextInjection.finalProductTotalPrice).replace(",", "."), VALUE_ERROR);
+                $decimalFormat.format(contextInjection.finalProductTotalPrice), VALUE_ERROR);
 
         Assert.assertEquals(productDetailsPage.popupPaneFinalOrderTotalPrice.getText()
                         .replaceAll("[^$0-9.]", ""),
-                $decimalFormat.format(contextInjection.finalOrderTotalPrice).replace(",", "."), VALUE_ERROR);
+                $decimalFormat.format(contextInjection.finalOrderTotalPrice), VALUE_ERROR);
     }
 
     @Step("I click on Proceed To Checkout button \\(from modal)")
@@ -208,7 +208,7 @@ public class ShoppingLoggedUserSteps extends DriverFactory {
                 Assert.assertEquals(Double.parseDouble(shoppingCartSummaryPage.productQuantity.getAttribute
                         ("value").toLowerCase()), contextInjection.productQuantity, VALUE_ERROR);
                 Assert.assertEquals(shoppingCartSummaryPage.productTotalPrice.getText()
-                                .replaceAll("[^$0-9.]", "").replace(".", ","),
+                                .replaceAll("[^$0-9.]", ""),
                         $decimalFormat.format(contextInjection.finalProductTotalPrice), VALUE_ERROR);
                 //TODO - how tax is calculated in america?
                 //Assert.assertEquals(shoppingCartSummaryPage.productTotalOrderPriceTAX.getText()
