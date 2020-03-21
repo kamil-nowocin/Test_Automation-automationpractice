@@ -7,7 +7,7 @@
 @registrationValidators
 Feature: As a user I would like to see the error message where I made a mistake in the registration page form
 #--------------------------------------------------------------------------------#
-# [US] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-4444             #
+# [US] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-444              #
 #--------------------------------------------------------------------------------#
 
   Background: Navigate to registration page
@@ -20,9 +20,8 @@ Feature: As a user I would like to see the error message where I made a mistake 
 
 #--------------------------------------------------------------------------------#
 # [ZEPHYR] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-0020
-
-  @non-smoke @major @regression
-  Scenario:[1] As a user I would like to see registration error, when I don't fill first name input
+  @non-smoke @normal @regression
+  Scenario:[US-444]/[1] As a user I would like to see registration error, when I don't fill first name input
     Given I can see registration page form
     When I choose gender
     And I write my last name
@@ -40,9 +39,8 @@ Feature: As a user I would like to see the error message where I made a mistake 
 
 #--------------------------------------------------------------------------------#
 # [ZEPHYR] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-0021
-
-  @non-smoke @major @regression
-  Scenario:[2] As a user I would like to see registration error, when I don't fill last name input
+  @non-smoke @normal @regression
+  Scenario:[US-444]/[2] As a user I would like to see registration error, when I don't fill last name input
     Given I can see registration page form
     When I choose gender
     And I write my first name
@@ -60,9 +58,8 @@ Feature: As a user I would like to see the error message where I made a mistake 
 
 #--------------------------------------------------------------------------------#
 # [ZEPHYR] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-0022
-
-  @non-smoke @major @regression
-  Scenario:[3] As a user I would like to see registration error, when I don't fill email input
+  @non-smoke @normal @regression
+  Scenario:[US-444]/[3] As a user I would like to see registration error, when I don't fill email input
     Given I can see registration page form
     When I choose gender
     And I write my first name
@@ -82,9 +79,8 @@ Feature: As a user I would like to see the error message where I made a mistake 
 
 #--------------------------------------------------------------------------------#
 # [ZEPHYR] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-0023
-
-  @non-smoke @major @regression
-  Scenario:[4] As a user I would like to see registration error, when I don't fill password input
+  @non-smoke @normal @regression
+  Scenario:[US-444]/[4] As a user I would like to see registration error, when I don't fill password input
     Given I can see registration page form
     When I choose gender
     And I write my first name
@@ -102,9 +98,8 @@ Feature: As a user I would like to see the error message where I made a mistake 
 
 #--------------------------------------------------------------------------------#
 # [ZEPHYR] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-0024
-
-  @non-smoke @major @regression
-  Scenario:[5] As a user I would like to see registration error, when I don't fill address input
+  @non-smoke @normal @regression
+  Scenario:[US-444]/[5] As a user I would like to see registration error, when I don't fill address input
     Given I can see registration page form
     When I choose gender
     And I write my first name
@@ -122,9 +117,8 @@ Feature: As a user I would like to see the error message where I made a mistake 
 
 #--------------------------------------------------------------------------------#
 # [ZEPHYR] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-0025
-
-  @non-smoke @major @regression
-  Scenario:[6] As a user I would like to see registration error, when I don't fill city input
+  @non-smoke @normal @regression
+  Scenario:[US-444]/[6] As a user I would like to see registration error, when I don't fill city input
     Given I can see registration page form
     When I choose gender
     And I write my first name
@@ -142,9 +136,8 @@ Feature: As a user I would like to see the error message where I made a mistake 
 
 #--------------------------------------------------------------------------------#
 # [ZEPHYR] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-0026
-
-  @non-smoke @major @regression
-  Scenario:[7] As a user I would like to see registration error, when I don't fill state input
+  @non-smoke @normal @regression
+  Scenario:[US-444]/[7] As a user I would like to see registration error, when I don't fill state input
     Given I can see registration page form
     When I choose gender
     And I write my first name
@@ -162,9 +155,8 @@ Feature: As a user I would like to see the error message where I made a mistake 
 
 #--------------------------------------------------------------------------------#
 # [ZEPHYR] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-0027
-
-  @non-smoke @major @regression
-  Scenario:[8] As a user I would like to see registration error, when I don't fill postal code input
+  @non-smoke @normal @regression
+  Scenario:[US-444]/[8] As a user I would like to see registration error, when I don't fill postal code input
     Given I can see registration page form
     When I choose gender
     And I write my first name
@@ -182,9 +174,8 @@ Feature: As a user I would like to see the error message where I made a mistake 
 
 #--------------------------------------------------------------------------------#
 # [ZEPHYR] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-0028
-
-  @non-smoke @major @regression
-  Scenario:[9] As a user I would like to see registration error, when I don't fill country input
+  @non-smoke @normal @regression
+  Scenario:[US-444]/[9] As a user I would like to see registration error, when I don't fill country input
     Given I can see registration page form
     When I choose gender
     And I write my first name
@@ -201,9 +192,8 @@ Feature: As a user I would like to see the error message where I made a mistake 
 
 #--------------------------------------------------------------------------------#
 # [ZEPHYR] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-0029
-
-  @non-smoke @major @regression
-  Scenario:[10] As a user I would like to see registration error, when I don't fill mobile phone input
+  @non-smoke @normal @regression
+  Scenario:[US-444]/[10] As a user I would like to see registration error, when I don't fill mobile phone input
     Given I can see registration page form
     When I choose gender
     And I write my first name
@@ -221,9 +211,8 @@ Feature: As a user I would like to see the error message where I made a mistake 
 
 #--------------------------------------------------------------------------------#
 # [ZEPHYR] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-0030
-
-  @non-smoke @major @regression
-  Scenario:[11] As a user I would like to see registration error, when I don't fill email alias input
+  @non-smoke @normal @regression
+  Scenario:[US-444]/[11] As a user I would like to see registration error, when I don't fill email alias input
     Given I can see registration page form
     When I choose gender
     And I write my first name

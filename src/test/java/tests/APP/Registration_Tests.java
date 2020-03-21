@@ -103,7 +103,7 @@ public class Registration_Tests extends Hooks {
             description = "I can create an account by filling up only required fields")
     @Description("As a user I would like to register into automationpractice.com ->\n" +
             "I can create an account by filling up only required fields")
-    @Severity(SeverityLevel.BLOCKER)
+    @Severity(SeverityLevel.CRITICAL)
     @Issue("TAP-0015")
     @Story("POSITIVE FLOW")
     public void test_3() throws Throwable {
@@ -144,7 +144,7 @@ public class Registration_Tests extends Hooks {
             description = "I can't create an account without filling up fields")
     @Description("As a user I would like to register into automationpractice.com ->\n" +
             "I can't create an account without filling up fields")
-    @Severity(SeverityLevel.CRITICAL)
+    @Severity(SeverityLevel.NORMAL)
     @Issue("TAP-0016")
     @Story("NEGATIVE FLOW")
     public void test_4() throws Throwable {
@@ -172,7 +172,7 @@ public class Registration_Tests extends Hooks {
             description = "I can't create an account, when one of required fields is missing")
     @Description("As a user I would like to register into automationpractice.com ->\n" +
             "I can't create an account, when one of required fields is missing")
-    @Severity(SeverityLevel.CRITICAL)
+    @Severity(SeverityLevel.NORMAL)
     @Issue("TAP-0017")
     @Story("NEGATIVE FLOW")
     public void test_5() throws Throwable {

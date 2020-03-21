@@ -7,7 +7,7 @@
 @shopping
 Feature: As a user I would like to buy new clothes from automationpractice.com - User is already successfully logged
 #--------------------------------------------------------------------------------#
-# [US] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-6666             #
+# [US] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-666              #
 #--------------------------------------------------------------------------------#
 
   Background: Navigate to automationpractice.com website
@@ -19,9 +19,8 @@ Feature: As a user I would like to buy new clothes from automationpractice.com -
 #--------------------------------------------------------------------------------#
 # [ZEPHYR] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-0039
 # [ZEPHYR] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-0040
-
-  @smoke @major @regression
-  Scenario Outline:[1] As a user I would like to buy new <dress name>
+  @smoke @critical @regression
+  Scenario Outline:[US-666]/[1] As a user I would like to buy new <dress name>
     Given I am on MyAccount details page
     And I click on "Women" button from sub menu
     And I click on following product "<dress name>"

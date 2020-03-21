@@ -26,7 +26,7 @@ public class SearchBox_Tests extends Hooks {
             description = "I would like to use search box and be able to see results of: \"T-Shirts\"")
     @Description("A a user I would like to see results of searching phrase ->\n" +
             "I would like to use search box and be able to see results of: \"T-Shirts\"")
-    @Severity(SeverityLevel.NORMAL)
+    @Severity(SeverityLevel.CRITICAL)
     @Issue("TAP-0031")
     @Story("POSITIVE FLOW")
     public void test_1() throws Throwable {
@@ -52,7 +52,7 @@ public class SearchBox_Tests extends Hooks {
             description = "I would like to use search box and be able to see results of: \"Blouse\" ")
     @Description("A a user I would like to see results of searching phrase ->\n" +
             "I would like to use search box and be able to see results of: \"Blouse\"")
-    @Severity(SeverityLevel.NORMAL)
+    @Severity(SeverityLevel.CRITICAL)
     @Issue("TAP-0032")
     @Story("POSITIVE FLOW")
     public void test_2() throws Throwable {
@@ -78,7 +78,7 @@ public class SearchBox_Tests extends Hooks {
             description = "I would like to use search box and be able to see results of: \"Printed Dress\"")
     @Description("A a user I would like to see results of searching phrase ->\n" +
             "I would like to use search box and be able to see results of: \"Printed Dress\"")
-    @Severity(SeverityLevel.NORMAL)
+    @Severity(SeverityLevel.CRITICAL)
     @Issue("TAP-0033")
     @Story("POSITIVE FLOW")
     public void test_3() throws Throwable {
@@ -104,7 +104,7 @@ public class SearchBox_Tests extends Hooks {
             description = "I would like to use search box and be able to see results of: \"UNDEFINED PRODUCT\"")
     @Description("A a user I would like to see results of searching phrase ->\n" +
             "I would like to use search box and be able to see results of: \"UNDEFINED PRODUCT\"")
-    @Severity(SeverityLevel.NORMAL)
+    @Severity(SeverityLevel.CRITICAL)
     @Issue("TAP-0034")
     @Story("NEGATIVE FLOW")
     public void test_4() throws Throwable {
@@ -130,7 +130,7 @@ public class SearchBox_Tests extends Hooks {
             description = "I would like to use search box and be able to see sorted results by: \"Product Name: Z to A\"")
     @Description("A a user I would like to see results of searching phrase ->\n" +
             "I would like to use search box and be able to see sorted results by: \"Product Name: Z to A\"")
-    @Severity(SeverityLevel.NORMAL)
+    @Severity(SeverityLevel.CRITICAL)
     @Issue("TAP-0035")
     @Story("POSITIVE FLOW")
     public void test_5() throws Throwable {
@@ -158,7 +158,7 @@ public class SearchBox_Tests extends Hooks {
             description = "I would like to use search box and be able to see sorted results by: \"Product Name: A to Z\"")
     @Description("A a user I would like to see results of searching phrase ->\n" +
             "I would like to use search box and be able to see sorted results by: \"Product Name: A to Z\"")
-    @Severity(SeverityLevel.NORMAL)
+    @Severity(SeverityLevel.CRITICAL)
     @Issue("TAP-0036")
     @Story("POSITIVE FLOW")
     public void test_6() throws Throwable {
@@ -187,7 +187,7 @@ public class SearchBox_Tests extends Hooks {
             description = "I would like to use search box and be able to see sorted results by: \"Price: Highest first\"")
     @Description("A a user I would like to see results of searching phrase ->\n" +
             "I would like to use search box and be able to see sorted results by: \"Price: Highest first\"")
-    @Severity(SeverityLevel.NORMAL)
+    @Severity(SeverityLevel.CRITICAL)
     @Issue("TAP-0037")
     @Story("POSITIVE FLOW")
     public void test_7() throws Throwable {
@@ -215,7 +215,7 @@ public class SearchBox_Tests extends Hooks {
             description = "I would like to use search box and be able to see sorted results by: \"Price: Lowest first\"")
     @Description("A a user I would like to see results of searching phrase ->\n" +
             "I would like to use search box and be able to see sorted results by: \"Price: Lowest first\"")
-    @Severity(SeverityLevel.NORMAL)
+    @Severity(SeverityLevel.CRITICAL)
     @Issue("TAP-0038")
     @Story("POSITIVE FLOW")
     @Flaky

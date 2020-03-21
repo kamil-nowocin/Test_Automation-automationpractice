@@ -88,7 +88,7 @@ public class CustomerService_Tests extends Hooks {
             description = "I am able to send request via contact us form witch attached file")
     @Description("As a user I would like to contact with customer service support ->\n" +
             "I will send request via contact us form witch attached file")
-    @Severity(SeverityLevel.NORMAL)
+    @Severity(SeverityLevel.CRITICAL)
     @Issue("TAP-0007")
     @Story("POSITIVE FLOW")
     public void test_3() throws Throwable {

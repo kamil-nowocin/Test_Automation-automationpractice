@@ -56,7 +56,7 @@ public class Authentication_Tests extends Hooks {
             description = "I can't log into automationpractice.com using unregistered email thanos.ALars@example.com and wrong password")
     @Description("As a user I would like to log in automationpractice.com ->\n" +
             "I can't log into automationpractice.com using email thanos.ALars@example.com and wrong password")
-    @Severity(SeverityLevel.CRITICAL)
+    @Severity(SeverityLevel.NORMAL)
     @Issue("TAP-0002")
     @Story("NEGATIVE FLOW")
     public void test_2() throws Throwable {
@@ -85,7 +85,7 @@ public class Authentication_Tests extends Hooks {
             description = "I can't log into automationpractice.com using registered email thor.odinson@example.com without password")
     @Description("As a user I would like to log in automationpractice.com ->\n" +
             "I can't log into automationpractice.com using email thor.odinson@example.com without password")
-    @Severity(SeverityLevel.CRITICAL)
+    @Severity(SeverityLevel.NORMAL)
     @Issue("TAP-0003")
     @Story("NEGATIVE FLOW")
     public void test_3() throws Throwable {
@@ -114,7 +114,7 @@ public class Authentication_Tests extends Hooks {
             description = "I can't log into automationpractice.com using email \"null\" with password")
     @Description("As a user I would like to log in automationpractice.com ->\n" +
             "I can't log into automationpractice.com using email \"null\" with password")
-    @Severity(SeverityLevel.CRITICAL)
+    @Severity(SeverityLevel.NORMAL)
     @Issue("TAP-0004")
     @Story("NEGATIVE FLOW")
     public void test_4() throws Throwable {
