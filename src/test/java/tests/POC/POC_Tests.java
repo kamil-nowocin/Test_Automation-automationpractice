@@ -27,13 +27,13 @@ public class POC_Tests extends Hooks {
     }
 
     @Ignore
-    @Owner("Kamil Nowocin")
-    @Test(priority = 0,
-            description = "As a developer I'd like to see working POC with .xlsx file")
-    @Description("As a developer I'd like to see working POC with .xlsx file")
-    @Severity(SeverityLevel.MINOR)
     @Issue("TAP-POC")
     @Story("POC Tests")
+    @Owner("Kamil Nowocin")
+    @Severity(SeverityLevel.MINOR)
+    @Description("As a developer I'd like to see working POC with .xlsx file")
+    @Test(description = "As a developer I'd like to see working POC with .xlsx file",
+            priority = 0)
     public void excelTest() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(50);

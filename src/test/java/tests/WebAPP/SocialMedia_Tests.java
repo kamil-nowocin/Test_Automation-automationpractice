@@ -1,4 +1,4 @@
-package tests.APP;
+package tests.WebAPP;
 
 import com.ContextInjection;
 import com.ExcelEnvironment;
@@ -21,14 +21,13 @@ import org.testng.annotations.Test;
 @Listeners({TestNGListener_WEB.class})
 public class SocialMedia_Tests extends Hooks {
 
-    @Owner("Kamil Nowocin")
-    @Test(description = "I click on social media FACEBOOK logo",
-            priority = 0)
-    @Description("As a user I would like to be redirected to social media pages from automationpractice.com ->\n" +
-            "I click on social media FACEBOOK logo")
-    @Severity(SeverityLevel.MINOR)
     @Issue("TAP-0041")
     @Story("POSITIVE FLOW")
+    @Owner("Kamil Nowocin")
+    @Severity(SeverityLevel.MINOR)
+    @Description("[US-777]/[1] I click on social media \"Facebook\" logo")
+    @Test(description = "[US-777]/[1] I click on social media \"Facebook\" logo",
+            priority = 0)
     public void test_1() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(41);
@@ -47,10 +46,9 @@ public class SocialMedia_Tests extends Hooks {
     }
 
     @Owner("Kamil Nowocin")
-    @Test(description = "I click on social media TWITTER logo",
+    @Test(description = "[US-777]/[2] I click on social media \"Twitter\" logo",
             priority = 0)
-    @Description("As a user I would like to be redirected to social media pages from automationpractice.com ->\n" +
-            "I click on social media TWITTER logo")
+    @Description("[US-777]/[2] I click on social media \"Twitter\" logo")
     @Severity(SeverityLevel.MINOR)
     @Issue("TAP-0042")
     @Story("POSITIVE FLOW")
@@ -72,10 +70,9 @@ public class SocialMedia_Tests extends Hooks {
     }
 
     @Owner("Kamil Nowocin")
-    @Test(description = "I click on social media YOUTUBE logo",
+    @Test(description = "[US-777]/[3] I click on social media \"YouTube\" logo",
             priority = 0)
-    @Description("As a user I would like to be redirected to social media pages from automationpractice.com ->\n" +
-            "I click on social media YOUTUBE logo")
+    @Description("[US-777]/[3] I click on social media \"YouTube\" logo")
     @Severity(SeverityLevel.MINOR)
     @Issue("TAP-0043")
     @Story("POSITIVE FLOW")
@@ -97,10 +94,9 @@ public class SocialMedia_Tests extends Hooks {
     }
 
     @Owner("Kamil Nowocin")
-    @Test(description = "I click on social media GOOGLE+ logo",
+    @Test(description = "[US-777]/[4] I click on social media \"Google+\" logo",
             priority = 0)
-    @Description("As a user I would like to be redirected to social media pages from automationpractice.com ->\n" +
-            "I click on social media GOOGLE+ logo")
+    @Description("[US-777]/[4] I click on social media \"Google+\" logo")
     @Severity(SeverityLevel.MINOR)
     @Issue("TAP-0044")
     @Story("POSITIVE FLOW")

@@ -1,4 +1,4 @@
-package tests.APP;
+package tests.WebAPP;
 
 import com.ContextInjection;
 import com.ExcelEnvironment;
@@ -25,14 +25,13 @@ import java.util.List;
 @Listeners({TestNGListener_WEB.class})
 public class Registration_Tests extends Hooks {
 
-    @Owner("Kamil Nowocin")
-    @Test(priority = 0,
-            description = "I check availability of registration page form")
-    @Description("As a user I would like to register into automationpractice.com ->\n" +
-            "I am checking availability of registration page form")
-    @Severity(SeverityLevel.BLOCKER)
     @Issue("TAP-0013")
     @Story("POSITIVE FLOW")
+    @Owner("Kamil Nowocin")
+    @Severity(SeverityLevel.BLOCKER)
+    @Description("[US-333]/[1] As a user I check availability of registration page form")
+    @Test(description = "[US-333]/[1] I check availability of registration page form",
+            priority = 0)
     public void test_1() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(13);
@@ -52,14 +51,13 @@ public class Registration_Tests extends Hooks {
         registrationPageSteps.iCanSeeAccountCreationPageForm();
     }
 
-    @Owner("Kamil Nowocin")
-    @Test(priority = 1, dependsOnMethods = {"test_1"},
-            description = "I can create an account by filling up all fields")
-    @Description("As a user I would like to register into automationpractice.com ->\n" +
-            "I can create an account by filling up all fields")
-    @Severity(SeverityLevel.CRITICAL)
     @Issue("TAP-0014")
     @Story("POSITIVE FLOW")
+    @Owner("Kamil Nowocin")
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("[US-333]/[2] As a user I can create an account by filling up all fields")
+    @Test(description = "[US-333]/[2] I can create an account by filling up all fields",
+            priority = 1, dependsOnMethods = {"test_1"})
     public void test_2() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(14);
@@ -98,14 +96,13 @@ public class Registration_Tests extends Hooks {
         registrationPageSteps.iCanSeeWelcomeMessage();
     }
 
-    @Owner("Kamil Nowocin")
-    @Test(priority = 1, dependsOnMethods = {"test_1"},
-            description = "I can create an account by filling up only required fields")
-    @Description("As a user I would like to register into automationpractice.com ->\n" +
-            "I can create an account by filling up only required fields")
-    @Severity(SeverityLevel.CRITICAL)
     @Issue("TAP-0015")
     @Story("POSITIVE FLOW")
+    @Owner("Kamil Nowocin")
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("[US-333]/[3] As a user I can create an account by filling up only required fields")
+    @Test(description = "[US-333]/[3] I can create an account by filling up only required fields",
+            priority = 1, dependsOnMethods = {"test_1"})
     public void test_3() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(15);
@@ -139,14 +136,13 @@ public class Registration_Tests extends Hooks {
         registrationPageSteps.iCanSeeWelcomeMessage();
     }
 
-    @Owner("Kamil Nowocin")
-    @Test(priority = 1, dependsOnMethods = {"test_1"},
-            description = "I can't create an account without filling up fields")
-    @Description("As a user I would like to register into automationpractice.com ->\n" +
-            "I can't create an account without filling up fields")
-    @Severity(SeverityLevel.NORMAL)
     @Issue("TAP-0016")
     @Story("NEGATIVE FLOW")
+    @Owner("Kamil Nowocin")
+    @Severity(SeverityLevel.NORMAL)
+    @Description("US-333]/[4] As a user I can't create an account without filling up fields")
+    @Test(description = "US-333]/[4] I can't create an account without filling up fields",
+            priority = 1, dependsOnMethods = {"test_1"})
     public void test_4() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(16);
@@ -167,14 +163,13 @@ public class Registration_Tests extends Hooks {
         registrationPageSteps.iCanSeeRegistrationError();
     }
 
-    @Owner("Kamil Nowocin")
-    @Test(priority = 1, dependsOnMethods = {"test_1"},
-            description = "I can't create an account, when one of required fields is missing")
-    @Description("As a user I would like to register into automationpractice.com ->\n" +
-            "I can't create an account, when one of required fields is missing")
-    @Severity(SeverityLevel.NORMAL)
     @Issue("TAP-0017")
     @Story("NEGATIVE FLOW")
+    @Owner("Kamil Nowocin")
+    @Severity(SeverityLevel.NORMAL)
+    @Description("[US-333]/[5] As a user I can't create an account, when one of required fields is missing")
+    @Test(description = "[US-333]/[5] I can't create an account, when one of required fields is missing",
+            priority = 1, dependsOnMethods = {"test_1"})
     public void test_5() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(17);
@@ -205,14 +200,13 @@ public class Registration_Tests extends Hooks {
         registrationPageSteps.iCanSeeWarningMessageAboutMissingInput("one element");
     }
 
-    @Owner("Kamil Nowocin")
-    @Test(priority = 1, dependsOnMethods = {"test_1"},
-            description = "I can't create an account, when email is already in database")
-    @Description("As a user I would like to register into automationpractice.com ->\n" +
-            "I can't create an account, when email is already in database")
-    @Severity(SeverityLevel.CRITICAL)
     @Issue("TAP-0018")
     @Story("NEGATIVE FLOW")
+    @Owner("Kamil Nowocin")
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("[US-333]/[6] As a user I can't create an account, when email is already in database")
+    @Test(description = "[US-333]/[6] I can't create an account, when email is already in database",
+            priority = 1, dependsOnMethods = {"test_1"})
     public void test_6() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(18);
@@ -232,14 +226,13 @@ public class Registration_Tests extends Hooks {
         registrationPageSteps.iCanSeeRegistrationError();
     }
 
-    @Owner("Kamil Nowocin")
-    @Test(priority = 1, dependsOnMethods = {"test_1"},
-            description = "I can't create an account, when email has wrong format")
-    @Description("As a user I would like to register into automationpractice.com ->\n" +
-            "I can't create an account, when email has wrong format")
-    @Severity(SeverityLevel.CRITICAL)
     @Issue("TAP-0019")
     @Story("NEGATIVE FLOW")
+    @Owner("Kamil Nowocin")
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("[US-333]/[7] As a user I can't create an account, when email has wrong format")
+    @Test(description = "[US-333]/[7] I can't create an account, when email has wrong format",
+            priority = 1, dependsOnMethods = {"test_1"})
     public void test_7() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(19);

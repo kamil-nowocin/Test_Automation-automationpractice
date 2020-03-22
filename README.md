@@ -26,11 +26,12 @@ Supported browsers aka hosts:
 * Support for Allure Report
 * Support for .xlsx files
 * Support for Fake & Mock data
+* Support for BrowserStack
 ## TEST RESULTS
-* After each CI/CD cycle run, tests results will be automatically uploaded to [kamil_nowocin/allure_report](https://kamil-nowocin.github.io/Test_Automation-automationpractice/) 
+* After each CI/CD cycle run, tests results will be automatically uploaded to [kamil_nowocin/github.io/allure_report](https://kamil-nowocin.github.io/Test_Automation-automationpractice/) 
 * After each LOCAL cycle run, tests results will be stored in build/allure-report.  
 In terminal type `allure generate build/allure-report --clean` to generate local Allure Test Results
-##LOGS
+## TEST LOGS
 There are two types of log information saved after each test run:  
 * Detailed logs in log directory. Warning! These logs will be deleted when you launch new test run.  
 * Colorful logs in testdata.xls file. Warning! These logs will be overwritten when you launch new test run. <sub><sup>(Only for TestNG runners)</sup></sub>

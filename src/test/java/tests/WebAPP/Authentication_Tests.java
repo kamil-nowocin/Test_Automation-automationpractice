@@ -1,4 +1,4 @@
-package tests.APP;
+package tests.WebAPP;
 
 import com.ContextInjection;
 import com.ExcelEnvironment;
@@ -22,14 +22,13 @@ import org.testng.annotations.Test;
 @Listeners({TestNGListener_WEB.class})
 public class Authentication_Tests extends Hooks {
 
-    @Owner("Kamil Nowocin")
-    @Test(priority = 0,
-            description = "I can log into automationpractice.com using registered email thor.odinson@example.com")
-    @Description("As a user I would like to log in automationpractice.com ->\n" +
-            "I can log into automationpractice.com using registered email thor.odinson@example.com")
-    @Severity(SeverityLevel.CRITICAL)
     @Issue("TAP-0001")
     @Story("POSITIVE FLOW")
+    @Owner("Kamil Nowocin")
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("[US-111]/[1] As a user I can log into automationpractice.com using registered email \"thor.odinson@example.com\" & password \"12345\"")
+    @Test(description = "[US-111]/[1] I can log into automationpractice.com using registered email \"thor.odinson@example.com\" & password \"12345\"",
+            priority = 0)
     public void test_1() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(1);
@@ -51,14 +50,13 @@ public class Authentication_Tests extends Hooks {
         registrationPageSteps.iCanSeeWelcomeMessage();
     }
 
-    @Owner("Kamil Nowocin")
-    @Test(priority = 0,
-            description = "I can't log into automationpractice.com using unregistered email thanos.ALars@example.com and wrong password")
-    @Description("As a user I would like to log in automationpractice.com ->\n" +
-            "I can't log into automationpractice.com using email thanos.ALars@example.com and wrong password")
-    @Severity(SeverityLevel.NORMAL)
     @Issue("TAP-0002")
     @Story("NEGATIVE FLOW")
+    @Severity(SeverityLevel.NORMAL)
+    @Owner("Kamil Nowocin")
+    @Description("[US-111]/[2] As a user I can't log into automationpractice.com using email \"thanos.ALars@example.com\" & password \"12345\"")
+    @Test(description = "[US-111]/[2] I can't log into automationpractice.com using email \"thanos.ALars@example.com\" & password \"12345\"",
+            priority = 0)
     public void test_2() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(2);
@@ -80,14 +78,13 @@ public class Authentication_Tests extends Hooks {
         authenticationPageSteps.iCanSeeWarningMessageWithInclude("Authentication failed");
     }
 
-    @Owner("Kamil Nowocin")
-    @Test(priority = 0,
-            description = "I can't log into automationpractice.com using registered email thor.odinson@example.com without password")
-    @Description("As a user I would like to log in automationpractice.com ->\n" +
-            "I can't log into automationpractice.com using email thor.odinson@example.com without password")
-    @Severity(SeverityLevel.NORMAL)
     @Issue("TAP-0003")
     @Story("NEGATIVE FLOW")
+    @Owner("Kamil Nowocin")
+    @Severity(SeverityLevel.NORMAL)
+    @Description("[US-111]/[2] As a user I can't log into automationpractice.com using email \"thor.odinson@example.com\" & password \"null\"")
+    @Test(description = "[US-111]/[3] I can't log into automationpractice.com using email \"thor.odinson@example.com\" & password \"null\"",
+            priority = 0)
     public void test_3() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(3);
@@ -109,14 +106,13 @@ public class Authentication_Tests extends Hooks {
         authenticationPageSteps.iCanSeeWarningMessageWithInclude("Password is required");
     }
 
-    @Owner("Kamil Nowocin")
-    @Test(priority = 0,
-            description = "I can't log into automationpractice.com using email \"null\" with password")
-    @Description("As a user I would like to log in automationpractice.com ->\n" +
-            "I can't log into automationpractice.com using email \"null\" with password")
-    @Severity(SeverityLevel.NORMAL)
     @Issue("TAP-0004")
     @Story("NEGATIVE FLOW")
+    @Owner("Kamil Nowocin")
+    @Severity(SeverityLevel.NORMAL)
+    @Description("[US-111]/[2] As a user I can't log into automationpractice.com using email \"null\" & password \"12345\"")
+    @Test(description = "[US-111]/[4] I can't log into automationpractice.com using email \"null\" & password \"12345\"",
+            priority = 0)
     public void test_4() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(4);

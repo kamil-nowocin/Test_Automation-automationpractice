@@ -18,19 +18,23 @@ Feature: As a user I would like to log in automationpractice.com
 #--------------------------------------------------------------------------------#
 # [ZEPHYR] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-0001
   @smoke @critical @regression
-  Scenario:[US-111]/[1] As a user I can log into automationpractice.com using registered email "thor.odinson@example.com"
+  Scenario Outline:[US-111]/[1] As a user I can log into automationpractice.com using registered email "<email>" & password "<password>"
     Given I can see login form
-    When I enter login "thor.odinson@example.com"
-    And I enter password "12345"
+    When I enter login "<email>"
+    And I enter password "<password>>"
     And I click on Submit button
     Then I can see welcome message
+
+    Examples:
+      | email                    | password |
+      | thor.odinson@example.com | 12345    |
 
 #--------------------------------------------------------------------------------#
 # [ZEPHYR] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-0002
 # [ZEPHYR] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-0003
 # [ZEPHYR] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-0004
   @non-smoke @normal @regression
-  Scenario Outline:[US-111]/[2] As a user I can't log into automationpractice.com using email: <email>
+  Scenario Outline:[US-111]/[2] As a user I can't log into automationpractice.com using email "<email>" & password "<password>"
     Given I can see login form
     When I enter login "<email>"
     And I enter password "<password>"

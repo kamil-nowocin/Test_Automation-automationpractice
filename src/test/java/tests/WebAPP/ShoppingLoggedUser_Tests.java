@@ -1,4 +1,4 @@
-package tests.APP;
+package tests.WebAPP;
 
 import com.ContextInjection;
 import com.ExcelEnvironment;
@@ -27,14 +27,13 @@ import java.util.List;
 @Listeners({TestNGListener_WEB.class})
 public class ShoppingLoggedUser_Tests extends Hooks {
 
-    @Owner("Kamil Nowocin")
-    @Test(priority = 0,
-            description = "I would like to buy new Faded Short Sleeve T-shirts from automationpractice.com")
-    @Description("(User is already successfully logged) As a user I would like to buy new clothes from automationpractice.com ->\n" +
-            "I would like to buy new \"Faded Short Sleeve T-shirts\"")
-    @Severity(SeverityLevel.CRITICAL)
     @Issue("TAP-0039")
     @Story("POSITIVE FLOW")
+    @Owner("Kamil Nowocin")
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("[US-666]/[1] As a user I would like to buy new \"Faded Short Sleeve T-shirts\"")
+    @Test(description = "[US-666]/[1] I would like to buy new \"Faded Short Sleeve T-shirts\"",
+            priority = 0)
     public void test_1() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(39);
@@ -85,14 +84,13 @@ public class ShoppingLoggedUser_Tests extends Hooks {
         shoppingLoggedUserSteps.iCanSeeShoppingCartFormWithValidInformation("Order confirmation");
     }
 
-    @Owner("Kamil Nowocin")
-    @Test(priority = 0,
-            description = "I would like to buy new Blouse from automationpractice.com")
-    @Description("(User is already successfully logged) As a user I would like to buy new clothes from automationpractice.com ->\n" +
-            "I would like to buy new \"Blouse\"")
-    @Severity(SeverityLevel.CRITICAL)
     @Issue("TAP-0040")
     @Story("POSITIVE FLOW")
+    @Owner("Kamil Nowocin")
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("[US-666]/[2] As a user I would like to buy new \"Blouse\"")
+    @Test(description = "[US-666]/[2] I would like to buy new \"Blouse\"",
+            priority = 0)
     public void test_2() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(40);

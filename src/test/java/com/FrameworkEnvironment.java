@@ -40,9 +40,9 @@ import java.util.stream.Stream;
 
 public class FrameworkEnvironment {
 
-    protected static Logger logger = LoggerFactory.getLogger(Hooks.class);
-    protected static Faker faker = new Faker(new Locale("en-US"));
+    protected static Faker faker = new Faker(Locale.US);
     protected static MockNeat mockNeat = MockNeat.threadLocal();
+    protected static Logger logger = LoggerFactory.getLogger(Hooks.class);
     protected static DecimalFormat $decimalFormat = new DecimalFormat("$#0.00", new DecimalFormatSymbols(Locale.US));
 
     //BUNDLES//
@@ -197,10 +197,10 @@ public class FrameworkEnvironment {
 
     public void printWebDriverManagerVersions(Boolean boolStatus) {
         if (boolStatus) {
-            logger.info("ChromeDriver available versions: " + WebDriverManager.chromedriver().getVersions() + "\n");
-            logger.info("GeckoDriver available versions: " + WebDriverManager.firefoxdriver().getVersions() + "\n");
-            logger.info("OperaDriver available versions: " + WebDriverManager.operadriver().getVersions() + "\n");
-            logger.info("EdgeDriver available versions: " + WebDriverManager.edgedriver().getVersions() + "\n");
+            logger.info("ChromeDriver available versions: " + WebDriverManager.chromedriver().getVersions());
+            logger.info("GeckoDriver available versions: " + WebDriverManager.firefoxdriver().getVersions());
+            logger.info("OperaDriver available versions: " + WebDriverManager.operadriver().getVersions());
+            logger.info("EdgeDriver available versions: " + WebDriverManager.edgedriver().getVersions());
             logger.info("IE available versions: " + WebDriverManager.iedriver().getVersions());
         }
     }

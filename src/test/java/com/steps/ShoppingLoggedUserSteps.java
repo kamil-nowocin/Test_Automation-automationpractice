@@ -40,9 +40,9 @@ public class ShoppingLoggedUserSteps extends DriverFactory {
 
     @Step("I click on *{0}* button from sub menu")
     @And("I click on {string} button from sub menu")
-    public void iClickOnButtonFromSubMenu(String category) throws Throwable {
+    public void iClickOnButtonFromSubMenu(String subMenuCategory) throws Throwable {
         //ACT//
-        switch (category.toLowerCase()) {
+        switch (subMenuCategory.toLowerCase()) {
             case "women":
                 mainPage.subMenuWomen.click();
                 break;
@@ -56,13 +56,13 @@ public class ShoppingLoggedUserSteps extends DriverFactory {
                 break;
 
             default:
-                throw new IllegalStateException(String.format(INPUT_ERROR, category.toUpperCase()));
+                throw new IllegalStateException(String.format(INPUT_ERROR, subMenuCategory.toUpperCase()));
         }
-        logger.info(String.format("User clicked on: %S submenu category", category));
+        logger.info(String.format("User clicked on: %S submenu category", subMenuCategory));
 
         //ASSERT//
         Assert.assertEquals(mainPage.subMenuChosenCategory.getText().replaceAll
-                ("\\s+", "").toLowerCase(), category.toLowerCase(), VALUE_ERROR);
+                ("\\s+", "").toLowerCase(), subMenuCategory.toLowerCase(), VALUE_ERROR);
     }
 
     @Step("I click on following product *{0}*")
@@ -210,10 +210,10 @@ public class ShoppingLoggedUserSteps extends DriverFactory {
                 Assert.assertEquals(shoppingCartSummaryPage.productTotalPrice.getText()
                                 .replaceAll("[^$0-9.]", ""),
                         $decimalFormat.format(contextInjection.finalProductTotalPrice), VALUE_ERROR);
-                //TODO - how tax is calculated in america?
-                //Assert.assertEquals(shoppingCartSummaryPage.productTotalOrderPriceTAX.getText()
-                //              .replaceAll("[$]*[^$0-9.]", "").replace(".", ","),
-                //    decimalFormat.format(productTotalOrderPriceWithTax), VALUE_ERROR);
+/*                //TODO - how tax is calculated in america?
+                Assert.assertEquals(shoppingCartSummaryPage.productTotalOrderPriceTAX.getText()
+                                .replaceAll("[$]*[^$0-9.]", ""),
+                        $decimalFormat.format(productTotalOrderPriceWithTax), VALUE_ERROR);*/
                 break;
 
             case "addresses":
@@ -287,7 +287,8 @@ public class ShoppingLoggedUserSteps extends DriverFactory {
         logger.info(String.format("User comment order: %S", orderComment.toUpperCase()));
 
         //ASSERT//
-        Assert.assertEquals(shoppingCartSummaryPage.orderComment.getAttribute("value").toLowerCase(), orderComment.toLowerCase(), VALUE_ERROR);
+        Assert.assertEquals(shoppingCartSummaryPage.orderComment.getAttribute("value").toLowerCase(),
+                orderComment.toLowerCase(), VALUE_ERROR);
     }
 
     @Step("I choose shipping option *{0}*")

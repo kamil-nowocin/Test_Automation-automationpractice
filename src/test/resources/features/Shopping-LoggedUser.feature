@@ -20,7 +20,7 @@ Feature: As a user I would like to buy new clothes from automationpractice.com -
 # [ZEPHYR] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-0039
 # [ZEPHYR] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-0040
   @smoke @critical @regression
-  Scenario Outline:[US-666]/[1] As a user I would like to buy new <dress name>
+  Scenario Outline:[US-666]/[1] As a user I would like to buy new "<dress name>"
     Given I am on MyAccount details page
     And I click on "Women" button from sub menu
     And I click on following product "<dress name>"

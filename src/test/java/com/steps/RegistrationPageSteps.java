@@ -186,12 +186,14 @@ public class RegistrationPageSteps extends FrameworkEnvironment {
         if (randomNumber == 1) {
             registrationPage.mrButton.click();
             logger.info("User gender: Male");
+
             //ASSERT//
             Assert.assertTrue(registrationPage.mrButton.isSelected());
 
         } else {
             registrationPage.mrsButton.click();
             logger.info("User gender: Female");
+
             //ASSERT//
             Assert.assertTrue(registrationPage.mrsButton.isSelected());
         }
@@ -282,7 +284,7 @@ public class RegistrationPageSteps extends FrameworkEnvironment {
     @And("I sign in to receive newsletter and special offers")
     public void iSignInToReceiveNewsletterAndSpecialOffers() throws Throwable {
         //ARRANGE//
-        int tempRandomValue = basePage.randomIntValue(3, 1);
+        int tempRandomValue = basePage.randomIntValue(3, 3);
 
         //ACT//
         if (tempRandomValue == 1) {
@@ -302,8 +304,7 @@ public class RegistrationPageSteps extends FrameworkEnvironment {
             Assert.assertTrue(registrationPage.specialOffersCheckbox.isSelected());
 
         } else {
-            if (!registrationPage.newsletterCheckbox.isSelected() &&
-                    registrationPage.specialOffersCheckbox.isSelected()) {
+            if (!registrationPage.newsletterCheckbox.isSelected() && !registrationPage.specialOffersCheckbox.isSelected()) {
                 registrationPage.newsletterCheckbox.click();
                 registrationPage.specialOffersCheckbox.click();
                 logger.info("User signed to receive newsletter & special offers");

@@ -80,7 +80,8 @@ public class SearchPageSteps extends FrameworkEnvironment {
             }
 
         } else {
-            Assert.assertTrue(basePage.isDisplayed(5, searchPage.noResultsWereFoundHeader), VIEW_ERROR);
+            Assert.assertTrue(basePage.isDisplayed(5, searchPage.noResultsWereFoundHeader),
+                    String.format(VIEW_ERROR, "No result header"));
         }
     }
 
