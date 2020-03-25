@@ -1,0 +1,364 @@
+{
+  "uid" : "1d8ea1b6bca12d92",
+  "name" : "[US-555]/[8] I would like to use search box and be able to see results sorted by: \"Price: Lowest first\"",
+  "fullName" : "tests.WebAPP.SearchBox_Tests.test_8",
+  "historyId" : "4197e701ef12f09f24b37ff8c8b337d0",
+  "time" : {
+    "start" : 1585155242214,
+    "stop" : 1585155246391,
+    "duration" : 4177
+  },
+  "description" : "[US-555]/[8] As a user I would like to use search box and be able to see results sorted by: \"Price: Lowest first\"",
+  "descriptionHtml" : "<p>[US-555]/[8] As a user I would like to use search box and be able to see results sorted by: &quot;Price: Lowest first&quot;</p>\n",
+  "status" : "failed",
+  "statusMessage" : "Results which have been found didn't match expected PRICE: LOWEST FIRST sorting results!: Lists differ at element [2]: $28.98 != $30.50 expected [$28.98] but found [$30.50]",
+  "statusTrace" : "java.lang.AssertionError: Results which have been found didn't match expected PRICE: LOWEST FIRST sorting results!: Lists differ at element [2]: $28.98 != $30.50 expected [$28.98] but found [$30.50]\n\tat org.testng.Assert.fail(Assert.java:97)\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:136)\n\tat org.testng.Assert.assertEquals(Assert.java:1033)\n\tat com.steps.SearchPageSteps.iCanSeeThatResultsAreCorrectlySortedBy_aroundBody10(SearchPageSteps.java:132)\n\tat com.steps.SearchPageSteps$AjcClosure11.run(SearchPageSteps.java:1)\n\tat org.aspectj.runtime.reflect.JoinPointImpl.proceed(JoinPointImpl.java:149)\n\tat io.qameta.allure.aspects.StepsAspects.step(StepsAspects.java:50)\n\tat com.steps.SearchPageSteps.iCanSeeThatResultsAreCorrectlySortedBy(SearchPageSteps.java:122)\n\tat tests.WebAPP.SearchBox_Tests.test_8(SearchBox_Tests.java:231)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)\n\tat org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)\n\tat org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:204)\n\tat org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)\n\tat org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)\n\tat org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)\n\tat org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)\n\tat org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)\n\tat java.util.ArrayList.forEach(ArrayList.java:1255)\n\tat org.testng.TestRunner.privateRun(TestRunner.java:770)\n\tat org.testng.TestRunner.run(TestRunner.java:591)\n\tat org.testng.SuiteRunner.runTest(SuiteRunner.java:402)\n\tat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)\n\tat org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)\n\tat org.testng.SuiteRunner.run(SuiteRunner.java:304)\n\tat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)\n\tat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)\n\tat org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)\n\tat org.testng.TestNG.runSuitesLocally(TestNG.java:1102)\n\tat org.testng.TestNG.runSuites(TestNG.java:1032)\n\tat org.testng.TestNG.run(TestNG.java:1000)\n\tat org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:139)\n\tat org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:89)\n\tat org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)\n\tat org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)\n\tat org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)\n\tat org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)\n\tat com.sun.proxy.$Proxy1.stop(Unknown Source)\n\tat org.gradle.api.internal.tasks.testing.worker.TestWorker.stop(TestWorker.java:123)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)\n\tat org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)\n\tat org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:155)\n\tat org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:137)\n\tat org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)\n\tat org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)\n\tat org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:46)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)\n\tat org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55)\n\tat java.lang.Thread.run(Thread.java:748)\n",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "Setting up data Excel File",
+    "time" : {
+      "start" : 1585154972476,
+      "stop" : 1585154974529,
+      "duration" : 2053
+    },
+    "description" : "Setting up data Excel File",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "Setting up Test Class",
+    "time" : {
+      "start" : 1585155241557,
+      "stop" : 1585155242212,
+      "duration" : 655
+    },
+    "description" : "Setting up Test Class",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "[US-555]/[8] As a user I would like to use search box and be able to see results sorted by: \"Price: Lowest first\"",
+    "status" : "failed",
+    "statusMessage" : "Results which have been found didn't match expected PRICE: LOWEST FIRST sorting results!: Lists differ at element [2]: $28.98 != $30.50 expected [$28.98] but found [$30.50]",
+    "statusTrace" : "java.lang.AssertionError: Results which have been found didn't match expected PRICE: LOWEST FIRST sorting results!: Lists differ at element [2]: $28.98 != $30.50 expected [$28.98] but found [$30.50]\n\tat org.testng.Assert.fail(Assert.java:97)\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:136)\n\tat org.testng.Assert.assertEquals(Assert.java:1033)\n\tat com.steps.SearchPageSteps.iCanSeeThatResultsAreCorrectlySortedBy_aroundBody10(SearchPageSteps.java:132)\n\tat com.steps.SearchPageSteps$AjcClosure11.run(SearchPageSteps.java:1)\n\tat org.aspectj.runtime.reflect.JoinPointImpl.proceed(JoinPointImpl.java:149)\n\tat io.qameta.allure.aspects.StepsAspects.step(StepsAspects.java:50)\n\tat com.steps.SearchPageSteps.iCanSeeThatResultsAreCorrectlySortedBy(SearchPageSteps.java:122)\n\tat tests.WebAPP.SearchBox_Tests.test_8(SearchBox_Tests.java:231)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)\n\tat org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)\n\tat org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:204)\n\tat org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)\n\tat org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)\n\tat org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)\n\tat org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)\n\tat org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)\n\tat java.util.ArrayList.forEach(ArrayList.java:1255)\n\tat org.testng.TestRunner.privateRun(TestRunner.java:770)\n\tat org.testng.TestRunner.run(TestRunner.java:591)\n\tat org.testng.SuiteRunner.runTest(SuiteRunner.java:402)\n\tat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)\n\tat org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)\n\tat org.testng.SuiteRunner.run(SuiteRunner.java:304)\n\tat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)\n\tat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)\n\tat org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)\n\tat org.testng.TestNG.runSuitesLocally(TestNG.java:1102)\n\tat org.testng.TestNG.runSuites(TestNG.java:1032)\n\tat org.testng.TestNG.run(TestNG.java:1000)\n\tat org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:139)\n\tat org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:89)\n\tat org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)\n\tat org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)\n\tat org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)\n\tat org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)\n\tat com.sun.proxy.$Proxy1.stop(Unknown Source)\n\tat org.gradle.api.internal.tasks.testing.worker.TestWorker.stop(TestWorker.java:123)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)\n\tat org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)\n\tat org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:155)\n\tat org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:137)\n\tat org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)\n\tat org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)\n\tat org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:46)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)\n\tat org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55)\n\tat java.lang.Thread.run(Thread.java:748)\n",
+    "steps" : [ {
+      "name" : "I open home page",
+      "time" : {
+        "start" : 1585155242215,
+        "stop" : 1585155243786,
+        "duration" : 1571
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I can see automationpractice.com website",
+      "time" : {
+        "start" : 1585155243787,
+        "stop" : 1585155243793,
+        "duration" : 6
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I search for phrase *Printed Dress*",
+      "time" : {
+        "start" : 1585155243793,
+        "stop" : 1585155243997,
+        "duration" : 204
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "searchPhrase",
+        "value" : "Printed Dress"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "I click on search icon",
+      "time" : {
+        "start" : 1585155243997,
+        "stop" : 1585155244759,
+        "duration" : 762
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I can see numbers of results equals to *5*",
+      "time" : {
+        "start" : 1585155244759,
+        "stop" : 1585155244796,
+        "duration" : 37
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "expectedCountOfResults",
+        "value" : "5"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "I can see that every results which have been found contains phrase *Printed Dress*",
+      "time" : {
+        "start" : 1585155244796,
+        "stop" : 1585155244990,
+        "duration" : 194
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "searchPhrase",
+        "value" : "Printed Dress"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "I select from Dropdown Sort by *Price: Lowest first*",
+      "time" : {
+        "start" : 1585155244990,
+        "stop" : 1585155245760,
+        "duration" : 770
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "sortBy",
+        "value" : "Price: Lowest first"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "I can see that results are correctly sorted by *Price: Lowest first*",
+      "time" : {
+        "start" : 1585155245760,
+        "stop" : 1585155245860,
+        "duration" : 100
+      },
+      "status" : "failed",
+      "statusMessage" : "Results which have been found didn't match expected PRICE: LOWEST FIRST sorting results!: Lists differ at element [2]: $28.98 != $30.50 expected [$28.98] but found [$30.50]",
+      "statusTrace" : "java.lang.AssertionError: Results which have been found didn't match expected PRICE: LOWEST FIRST sorting results!: Lists differ at element [2]: $28.98 != $30.50 expected [$28.98] but found [$30.50]\n\tat org.testng.Assert.fail(Assert.java:97)\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:136)\n\tat org.testng.Assert.assertEquals(Assert.java:1033)\n\tat com.steps.SearchPageSteps.iCanSeeThatResultsAreCorrectlySortedBy_aroundBody10(SearchPageSteps.java:132)\n\tat com.steps.SearchPageSteps$AjcClosure11.run(SearchPageSteps.java:1)\n\tat org.aspectj.runtime.reflect.JoinPointImpl.proceed(JoinPointImpl.java:149)\n\tat io.qameta.allure.aspects.StepsAspects.step(StepsAspects.java:50)\n\tat com.steps.SearchPageSteps.iCanSeeThatResultsAreCorrectlySortedBy(SearchPageSteps.java:122)\n\tat tests.WebAPP.SearchBox_Tests.test_8(SearchBox_Tests.java:231)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)\n\tat org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)\n\tat org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:204)\n\tat org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)\n\tat org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)\n\tat org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)\n\tat org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)\n\tat org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)\n\tat java.util.ArrayList.forEach(ArrayList.java:1255)\n\tat org.testng.TestRunner.privateRun(TestRunner.java:770)\n\tat org.testng.TestRunner.run(TestRunner.java:591)\n\tat org.testng.SuiteRunner.runTest(SuiteRunner.java:402)\n\tat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)\n\tat org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)\n\tat org.testng.SuiteRunner.run(SuiteRunner.java:304)\n\tat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)\n\tat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)\n\tat org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)\n\tat org.testng.TestNG.runSuitesLocally(TestNG.java:1102)\n\tat org.testng.TestNG.runSuites(TestNG.java:1032)\n\tat org.testng.TestNG.run(TestNG.java:1000)\n\tat org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:139)\n\tat org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:89)\n\tat org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)\n\tat org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)\n\tat org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)\n\tat org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)\n\tat com.sun.proxy.$Proxy1.stop(Unknown Source)\n\tat org.gradle.api.internal.tasks.testing.worker.TestWorker.stop(TestWorker.java:123)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)\n\tat org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)\n\tat org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:155)\n\tat org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:137)\n\tat org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)\n\tat org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)\n\tat org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:46)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)\n\tat org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55)\n\tat java.lang.Thread.run(Thread.java:748)\n",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "sortedBy",
+        "value" : "Price: Lowest first"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "38c085794452b88b",
+      "name" : "Scenario FAIL screenshot",
+      "source" : "38c085794452b88b.png",
+      "type" : "image/png",
+      "size" : 160570
+    }, {
+      "uid" : "8c518192a0a9ac9",
+      "name" : "TestNG test FAIL logs",
+      "source" : "8c518192a0a9ac9.txt",
+      "type" : "text/plain",
+      "size" : 2543
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 8,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "Teardown Test Class",
+    "time" : {
+      "start" : 1585155246392,
+      "stop" : 1585155246469,
+      "duration" : 77
+    },
+    "description" : "Teardown Test Class",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "tests.WebAPP.SearchBox_Tests"
+  }, {
+    "name" : "testClass",
+    "value" : "tests.WebAPP.SearchBox_Tests"
+  }, {
+    "name" : "testMethod",
+    "value" : "test_8"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Automationpractice.com WEB - Kamil Nowocin"
+  }, {
+    "name" : "suite",
+    "value" : "Automated tests for WEB client"
+  }, {
+    "name" : "subSuite",
+    "value" : "tests.WebAPP.SearchBox_Tests"
+  }, {
+    "name" : "host",
+    "value" : "localhost"
+  }, {
+    "name" : "thread",
+    "value" : "5045@localhost.Test worker(9)"
+  }, {
+    "name" : "epic",
+    "value" : "Web App Tests"
+  }, {
+    "name" : "feature",
+    "value" : "SEARCHBOX TESTS"
+  }, {
+    "name" : "story",
+    "value" : "POSITIVE FLOW"
+  }, {
+    "name" : "severity",
+    "value" : "critical"
+  }, {
+    "name" : "owner",
+    "value" : "Kamil Nowocin"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ {
+    "name" : "TAP-0038",
+    "url" : "https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-TAP-0038",
+    "type" : "issue"
+  } ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "critical",
+    "owner" : "Kamil Nowocin",
+    "retries" : [ {
+      "uid" : "922a9be09daf2a84",
+      "status" : "skipped",
+      "statusDetails" : "Results which have been found didn't match expected PRICE: LOWEST FIRST sorting results!: Lists differ at element [2]: $28.98 != $30.50 expected [$28.98] but found [$30.50]",
+      "time" : {
+        "start" : 1585155237719,
+        "stop" : 1585155241464,
+        "duration" : 3745
+      }
+    } ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 7,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 7
+      },
+      "items" : [ {
+        "uid" : "365b4f8ebf335469",
+        "reportUrl" : "https://travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/154829524/#testresult/365b4f8ebf335469",
+        "status" : "failed",
+        "statusDetails" : "Results which have been found didn't match expected PRICE: LOWEST FIRST sorting results!: Lists differ at element [2]: $28.98 != $30.50 expected [$28.98] but found [$30.50]",
+        "time" : {
+          "start" : 1585068792433,
+          "stop" : 1585068796240,
+          "duration" : 3807
+        }
+      }, {
+        "uid" : "fa96e5a604a99073",
+        "reportUrl" : "https://travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/154640832/#testresult/fa96e5a604a99073",
+        "status" : "failed",
+        "statusDetails" : "Results which have been found didn't match expected PRICE: LOWEST FIRST sorting results!: Lists differ at element [2]: $28.98 != $30.50 expected [$28.98] but found [$30.50]",
+        "time" : {
+          "start" : 1584982394563,
+          "stop" : 1584982398418,
+          "duration" : 3855
+        }
+      }, {
+        "uid" : "aa06930f0b5434de",
+        "reportUrl" : "https://travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/154487083/#testresult/aa06930f0b5434de",
+        "status" : "failed",
+        "statusDetails" : "Results which have been found didn't match expected PRICE: LOWEST FIRST sorting results!: Lists differ at element [2]: $28.98 != $30.50 expected [$28.98] but found [$30.50]",
+        "time" : {
+          "start" : 1584895889980,
+          "stop" : 1584895893938,
+          "duration" : 3958
+        }
+      }, {
+        "uid" : "771ba7a9ac5c1a",
+        "reportUrl" : "https://travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/154459577/#testresult/771ba7a9ac5c1a",
+        "status" : "failed",
+        "statusDetails" : "Results which have been found didn't match expected PRICE: LOWEST FIRST sorting results!: Lists differ at element [2]: $28.98 != $30.50 expected [$28.98] but found [$30.50]",
+        "time" : {
+          "start" : 1584869709592,
+          "stop" : 1584869714016,
+          "duration" : 4424
+        }
+      }, {
+        "uid" : "e786f2bbb9bd7522",
+        "reportUrl" : "https://travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/154459169/#testresult/e786f2bbb9bd7522",
+        "status" : "failed",
+        "statusDetails" : "Results which have been found didn't match expected PRICE: LOWEST FIRST sorting results!: Lists differ at element [2]: $28.98 != $30.50 expected [$28.98] but found [$30.50]",
+        "time" : {
+          "start" : 1584868988893,
+          "stop" : 1584868992428,
+          "duration" : 3535
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "1d8ea1b6bca12d92.json",
+  "parameterValues" : [ ]
+}
