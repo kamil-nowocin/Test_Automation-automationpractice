@@ -1,0 +1,21 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+16:50:05 INFO  i.g.bonigarcia.wdm.WebDriverManager - Reading https://chromedriver.storage.googleapis.com/ to seek chromedriver
+16:50:06 INFO  io.github.bonigarcia.wdm.Downloader - Downloading https://chromedriver.storage.googleapis.com/79.0.3945.36/chromedriver_linux64.zip
+16:50:06 INFO  io.github.bonigarcia.wdm.Downloader - Extracting binary from compressed file chromedriver_linux64.zip
+16:50:06 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.m2/repository/webdriver/chromedriver/linux64/79.0.3945.36/chromedriver
+16:50:08 INFO  com.steps.Hooks - Chosen executor: CHROME
+16:50:09 INFO  com.steps.Hooks - ================================================ TEST STARTED ================================================
+16:50:09 INFO  com.steps.Hooks - [34mTEST NAME: [US-222]/[1] I AM ABLE TO SEND REQUEST VIA CONTACT US FORM, ALL INPUTS ARE FILLED UP[0m
+16:50:16 INFO  com.steps.Hooks - Page ready: TRUE
+16:50:22 INFO  com.steps.Hooks - Chosen subject: CUSTOMER SERVICE
+16:50:22 INFO  com.steps.Hooks - User valid email: KITSCHCONCLAVE@GMX.COM
+16:50:23 INFO  com.steps.Hooks - Order reference: 0MQMSNGKDH
+16:50:25 INFO  com.steps.Hooks - Message: CHUCK NORRIS IS IMMUTABLE. IF SOMETHING'S GOING TO CHANGE, IT'S GOING TO HAVE TO BE THE REST OF THE UNIVERSE.
+16:50:43 INFO  com.steps.Hooks - [31mTEST WILL BE REPEATED (2/2): [US-222]/[1] I AM ABLE TO SEND REQUEST VIA CONTACT US FORM, ALL INPUTS ARE FILLED UP[0m
+16:50:43 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 79.0.3945.36 found in cache
+16:50:43 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.m2/repository/webdriver/chromedriver/linux64/79.0.3945.36/chromedriver
+16:50:44 INFO  com.steps.Hooks - Chosen executor: CHROME
+16:50:44 INFO  com.steps.Hooks - ================================================ TEST STARTED ================================================
+16:50:44 INFO  com.steps.Hooks - [34mTEST NAME: [US-222]/[1] I AM ABLE TO SEND REQUEST VIA CONTACT US FORM, ALL INPUTS ARE FILLED UP[0m
+16:50:50 INFO  com.steps.Hooks - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+16:50:51 ERROR com.steps.Hooks - java.lang.AssertionError: Upssss, something went really bad! Even Michael Scofield couldn't have predicted that error! :) expected [http://automationpractice.com/index.php] but found [http://automationpractice.com/]
