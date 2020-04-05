@@ -27,8 +27,8 @@ Supported browsers aka hosts:
 * Support for .xlsx files
 * Support for Fake & Mock data
 * Support for BrowserStack
-## TEST RESULTS
-* After each CI/CD cycle run, tests results will be automatically uploaded to [kamil_nowocin/github.io/allure_report](https://kamil-nowocin.github.io/Test_Automation-automationpractice/) 
+## TEST RESULTS (Allure Report)
+* After each CI/CD cycle run, tests results will be automatically uploaded to [kamil_nowocin.github.io/Test_Automation](https://kamil-nowocin.github.io/Test_Automation-automationpractice/) 
 * After each LOCAL cycle run, tests results will be stored in build/allure-report.  
 In terminal type `allure generate build/allure-report --clean` to generate local Allure Test Results
 ## TEST LOGS
