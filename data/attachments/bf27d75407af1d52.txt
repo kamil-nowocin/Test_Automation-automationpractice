@@ -1,0 +1,24 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+11:08:50 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 79.0.3945.36 found in cache
+11:08:50 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.m2/repository/webdriver/chromedriver/linux64/79.0.3945.36/chromedriver
+11:08:50 INFO  com.steps.Hooks - Chosen executor: CHROME
+11:08:50 INFO  com.steps.Hooks - ================================================ TEST STARTED ================================================
+11:08:50 INFO  com.steps.Hooks - [34mTEST NAME: [US-555]/[7] I WOULD LIKE TO USE SEARCH BOX AND BE ABLE TO SEE RESULTS SORTED BY: "PRICE: HIGHEST FIRST"[0m
+11:08:52 INFO  com.steps.Hooks - Page ready: TRUE
+11:08:52 INFO  com.steps.Hooks - User search for: PRINTED DRESS
+11:08:54 INFO  com.steps.Hooks - Found results: 5, expected: 5
+11:08:54 INFO  com.steps.Hooks - Chosen sort option: PRICE: HIGHEST FIRST
+11:08:54 INFO  com.steps.Hooks - Actual sort option: PRICE: HIGHEST FIRST
+11:08:54 INFO  com.steps.Hooks - [31mTEST WILL BE REPEATED (2/2): [US-555]/[7] I WOULD LIKE TO USE SEARCH BOX AND BE ABLE TO SEE RESULTS SORTED BY: "PRICE: HIGHEST FIRST"[0m
+11:08:54 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 79.0.3945.36 found in cache
+11:08:54 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.m2/repository/webdriver/chromedriver/linux64/79.0.3945.36/chromedriver
+11:08:55 INFO  com.steps.Hooks - Chosen executor: CHROME
+11:08:55 INFO  com.steps.Hooks - ================================================ TEST STARTED ================================================
+11:08:55 INFO  com.steps.Hooks - [34mTEST NAME: [US-555]/[7] I WOULD LIKE TO USE SEARCH BOX AND BE ABLE TO SEE RESULTS SORTED BY: "PRICE: HIGHEST FIRST"[0m
+11:08:57 INFO  com.steps.Hooks - Page ready: TRUE
+11:08:57 INFO  com.steps.Hooks - User search for: PRINTED DRESS
+11:08:58 INFO  com.steps.Hooks - Found results: 5, expected: 5
+11:08:59 INFO  com.steps.Hooks - Chosen sort option: PRICE: HIGHEST FIRST
+11:08:59 INFO  com.steps.Hooks - Actual sort option: PRICE: HIGHEST FIRST
+11:08:59 INFO  com.steps.Hooks - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+11:09:00 ERROR com.steps.Hooks - java.lang.AssertionError: Results which have been found didn't match expected PRICE: HIGHEST FIRST sorting results!: Lists differ at element [1]: $30.50 != $28.98 expected [$30.50] but found [$28.98]
