@@ -1,0 +1,30 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+11:30:20 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 79.0.3945.36 found in cache
+11:30:20 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.m2/repository/webdriver/chromedriver/linux64/79.0.3945.36/chromedriver
+11:30:21 INFO  com.steps.Hooks - Chosen executor: CHROME
+11:30:21 INFO  com.steps.Hooks - ================================================ TEST STARTED ================================================
+11:30:21 INFO  com.steps.Hooks - [34mTEST NAME: [US-555]/[8] I WOULD LIKE TO USE SEARCH BOX AND BE ABLE TO SEE RESULTS SORTED BY: "PRICE: LOWEST FIRST"[0m
+11:30:23 INFO  com.steps.Hooks - Page ready: TRUE
+11:30:23 INFO  com.steps.Hooks - User search for: PRINTED DRESS
+11:30:24 INFO  com.steps.Hooks - Found results: 5, expected: 5
+11:30:25 INFO  com.steps.Hooks - Chosen sort option: PRICE: LOWEST FIRST
+11:30:25 INFO  com.steps.Hooks - Actual sort option: PRICE: LOWEST FIRST
+11:30:25 INFO  com.steps.Hooks - [31mTEST WILL BE REPEATED (2/2): [US-555]/[8] I WOULD LIKE TO USE SEARCH BOX AND BE ABLE TO SEE RESULTS SORTED BY: "PRICE: LOWEST FIRST"[0m
+11:30:25 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 79.0.3945.36 found in cache
+11:30:25 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.m2/repository/webdriver/chromedriver/linux64/79.0.3945.36/chromedriver
+11:30:26 INFO  com.steps.Hooks - Chosen executor: CHROME
+11:30:26 INFO  com.steps.Hooks - ================================================ TEST STARTED ================================================
+11:30:26 INFO  com.steps.Hooks - [34mTEST NAME: [US-555]/[8] I WOULD LIKE TO USE SEARCH BOX AND BE ABLE TO SEE RESULTS SORTED BY: "PRICE: LOWEST FIRST"[0m
+11:30:28 INFO  com.steps.Hooks - Page ready: TRUE
+11:30:28 INFO  com.steps.Hooks - User search for: PRINTED DRESS
+11:30:29 INFO  com.steps.Hooks - Found results: 5, expected: 5
+11:30:30 INFO  com.steps.Hooks - Chosen sort option: PRICE: LOWEST FIRST
+11:30:30 INFO  com.steps.Hooks - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+11:30:31 ERROR com.steps.Hooks - org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=80.0.3987.163)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'localhost', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.4.0-101-generic', java.version: '1.8.0_151'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.163, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: /tmp/.com.google.Chrome.tLjcWl}, goog:chromeOptions: {debuggerAddress: localhost:40806}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 8c43bef6b6c3f6a1bba210254cf6a956
