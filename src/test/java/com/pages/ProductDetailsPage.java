@@ -22,7 +22,7 @@ public class ProductDetailsPage extends BasePage {
 
     //POPUP//
     @FindBy(how = How.XPATH, using = "//div[@id='layer_cart']//div[@class='clearfix']")
-    public WebElement productDetailsPopupPane;
+    public WebElement popupPaneProductDetails;
 
     @FindBy(how = How.XPATH, using = "//div[@id='layer_cart']//div[@class='clearfix']//i[@class='icon-ok']//parent::h2")
     public WebElement popupPaneAddedSuccessfully;

@@ -22,6 +22,7 @@ import org.testng.annotations.Test;
 public class SocialMedia_Tests extends Hooks {
 
     @Issue("TAP-0041")
+    @TmsLink("STORY-777")
     @Story("POSITIVE FLOW")
     @Owner("Kamil Nowocin")
     @Severity(SeverityLevel.MINOR)
@@ -45,13 +46,14 @@ public class SocialMedia_Tests extends Hooks {
         mediaPageSteps.iAmRedirectedToSeleniumProfile("facebook");
     }
 
+    @Issue("TAP-0042")
+    @TmsLink("STORY-777")
+    @Story("POSITIVE FLOW")
     @Owner("Kamil Nowocin")
+    @Severity(SeverityLevel.MINOR)
     @Test(description = "[US-777]/[2] I click on social media \"Twitter\" logo",
             priority = 0)
     @Description("[US-777]/[2] I click on social media \"Twitter\" logo")
-    @Severity(SeverityLevel.MINOR)
-    @Issue("TAP-0042")
-    @Story("POSITIVE FLOW")
     public void test_2() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(42);
@@ -69,13 +71,14 @@ public class SocialMedia_Tests extends Hooks {
         mediaPageSteps.iAmRedirectedToSeleniumProfile("twitter");
     }
 
+    @Issue("TAP-0043")
+    @TmsLink("STORY-777")
+    @Story("POSITIVE FLOW")
     @Owner("Kamil Nowocin")
+    @Severity(SeverityLevel.MINOR)
     @Test(description = "[US-777]/[3] I click on social media \"YouTube\" logo",
             priority = 0)
     @Description("[US-777]/[3] I click on social media \"YouTube\" logo")
-    @Severity(SeverityLevel.MINOR)
-    @Issue("TAP-0043")
-    @Story("POSITIVE FLOW")
     public void test_3() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(43);
@@ -93,13 +96,14 @@ public class SocialMedia_Tests extends Hooks {
         mediaPageSteps.iAmRedirectedToSeleniumProfile("youtube");
     }
 
+    @Issue("TAP-0044")
+    @TmsLink("STORY-777")
+    @Story("POSITIVE FLOW")
     @Owner("Kamil Nowocin")
+    @Severity(SeverityLevel.MINOR)
     @Test(description = "[US-777]/[4] I click on social media \"Google+\" logo",
             priority = 0)
     @Description("[US-777]/[4] I click on social media \"Google+\" logo")
-    @Severity(SeverityLevel.MINOR)
-    @Issue("TAP-0044")
-    @Story("POSITIVE FLOW")
     public void test_4() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(44);

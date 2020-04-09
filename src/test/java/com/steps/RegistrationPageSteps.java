@@ -82,7 +82,7 @@ public class RegistrationPageSteps extends FrameworkEnvironment {
     @When("I write an email address which is already in database")
     public void iWriteAnEmailAddressWhichIsAlreadyInDatabase() throws Throwable {
         //ARRANGE//
-        final String userRegisteredEmailAddress = "asfsafas@wp.pl";
+        final String userRegisteredEmailAddress = contextInjection.defaultRegisteredEmailAddress;
 
         //ACT//
         authenticationPage.createAnAccountEmailInput.sendKeys(userRegisteredEmailAddress);
@@ -117,7 +117,7 @@ public class RegistrationPageSteps extends FrameworkEnvironment {
     @And("I write following data to registration form")
     public void iWriteFollowingDataToRegistrationForm(DataTable dataTable) throws Throwable {
         //ARRANGE//
-        //(data.get(Row).get(Column))
+        //data.get(Row).get(Column)
         List<List<String>> data = dataTable.asLists();
         final String userFirstName = data.get(1).get(0);
         final String userLastName = data.get(1).get(1);

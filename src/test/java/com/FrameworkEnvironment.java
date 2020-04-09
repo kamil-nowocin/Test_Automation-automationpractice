@@ -3,7 +3,7 @@ package com;
 import com.github.javafaker.Faker;
 import com.listeners.TestNGListener_WEB;
 import com.steps.Hooks;
-import cucumber.api.Scenario;
+import io.cucumber.java.Scenario;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.Attachment;
 import net.andreinc.mockneat.MockNeat;
@@ -150,7 +150,7 @@ public class FrameworkEnvironment {
 
     @Attachment(value = "Scenario FAIL screenshot", type = "image/png")
     protected byte[] allureSaveScreenshotPNG() {
-        return ((TakesScreenshot) DriverFactory.driver).getScreenshotAs(OutputType.BYTES);
+        return ((TakesScreenshot) DriverFactory.getDriver()).getScreenshotAs(OutputType.BYTES);
     }
 
     protected String logBuilder(String fileName) {
@@ -169,9 +169,9 @@ public class FrameworkEnvironment {
     }
 
     protected void localSaveScreenshotPNG(Scenario scenario) throws IOException {
-        byte[] screenshot = ((TakesScreenshot) DriverFactory.driver).getScreenshotAs(OutputType.BYTES);
-        scenario.embed(screenshot, "image/png");
-        File scrFile = ((TakesScreenshot) DriverFactory.driver).getScreenshotAs(OutputType.FILE);
+        byte[] screenshot = ((TakesScreenshot) DriverFactory.getDriver()).getScreenshotAs(OutputType.BYTES);
+        scenario.embed(screenshot, "image/png", "SCREENSHOT");
+        File scrFile = ((TakesScreenshot) DriverFactory.getDriver()).getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(scrFile, new File(getCurrentPath()
                 + File.separator
                 + "screenshots"

@@ -4,12 +4,13 @@ import com.DriverFactory;
 import com.ExcelEnvironment;
 import com.listeners.TestNGListener_API;
 import com.listeners.TestNGListener_WEB;
-import cucumber.api.Scenario;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
 import org.slf4j.MDC;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
@@ -42,7 +43,7 @@ public class Hooks extends DriverFactory implements ITestListener {
     @AfterMethod(description = "Teardown Test Class")
     public void afterTest() {
         MDC.remove("testid");
-        destroyDriver();
+        removeDriver();
     }
 
     /**
@@ -64,6 +65,6 @@ public class Hooks extends DriverFactory implements ITestListener {
             allureSaveTextLogCucumber(scenario);
         }
         MDC.remove("testid");
-        destroyDriver();
+        removeDriver();
     }
 }

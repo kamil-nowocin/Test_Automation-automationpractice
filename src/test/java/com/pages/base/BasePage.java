@@ -3,7 +3,6 @@ package com.pages.base;
 import com.DriverFactory;
 import com.FrameworkEnvironment;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
@@ -25,18 +24,15 @@ import java.util.Random;
 
 public class BasePage extends FrameworkEnvironment {
 
-    public final WebDriver driver;
-
     public BasePage() {
-        this.driver = DriverFactory.driver;
-        //PageFactory.initElements(new AjaxElementLocatorFactory(this.driver, TIMEOUT), this);
-        PageFactory.initElements(this.driver, this);
+        //PageFactory.initElements(new AjaxElementLocatorFactory(DriverFactory.getDriver(), TIMEOUT), this);
+        PageFactory.initElements(DriverFactory.getDriver(), this);
     }
 
     public void waitForElementToBeClickable(int timeInSeconds, WebElement webElement) throws
             NoSuchElementException, WebDriverException {
         try {
-            WebDriverWait wait = new WebDriverWait(driver, timeInSeconds);
+            WebDriverWait wait = new WebDriverWait(DriverFactory.getDriver(), timeInSeconds);
             wait.until(ExpectedConditions.elementToBeClickable(webElement));
         } catch (Exception e) {
             logger.error(String.format("Couldn't click on element: %s", webElement));
@@ -46,7 +42,7 @@ public class BasePage extends FrameworkEnvironment {
     public void waitForElementToBeVisible(int timeInSeconds, WebElement webElement) throws
             NoSuchElementException, WebDriverException {
         try {
-            WebDriverWait wait = new WebDriverWait(driver, timeInSeconds);
+            WebDriverWait wait = new WebDriverWait(DriverFactory.getDriver(), timeInSeconds);
             wait.until(ExpectedConditions.visibilityOf(webElement));
         } catch (Exception e) {
             logger.error(String.format("Element wasn't visible: %s!", webElement));
@@ -56,7 +52,7 @@ public class BasePage extends FrameworkEnvironment {
     public void waitForElementToHaveAttribute(int timeInSeconds, WebElement webElement, String attribute, String value) throws
             NoSuchElementException, WebDriverException {
         try {
-            WebDriverWait wait = new WebDriverWait(driver, timeInSeconds);
+            WebDriverWait wait = new WebDriverWait(DriverFactory.getDriver(), timeInSeconds);
             wait.until(ExpectedConditions.attributeContains(webElement, attribute, value));
         } catch (Exception e) {
             logger.error(String.format("Could't find attribute: %S on web element: %S", attribute, webElement));
@@ -66,7 +62,7 @@ public class BasePage extends FrameworkEnvironment {
     public boolean isDisplayed(int timeInSeconds, WebElement webElement) throws
             NoSuchElementException, WebDriverException {
         try {
-            WebDriverWait wait = new WebDriverWait(driver, timeInSeconds);
+            WebDriverWait wait = new WebDriverWait(DriverFactory.getDriver(), timeInSeconds);
             wait.until(ExpectedConditions.visibilityOf(webElement));
             return webElement.isDisplayed();
         } catch (Exception e) {
@@ -120,17 +116,17 @@ public class BasePage extends FrameworkEnvironment {
     }
 
     public void scrollWebsiteToElement(WebElement webElement) {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
+        JavascriptExecutor js = (JavascriptExecutor) DriverFactory.getDriver();
         js.executeScript("arguments[0].scrollIntoView(true);", webElement);
     }
 
     public boolean isPageReady() {
         try {
-            WebDriverWait wait = new WebDriverWait(driver, TIMEOUT);
+            WebDriverWait wait = new WebDriverWait(DriverFactory.getDriver(), TIMEOUT);
             wait.until(webDriver ->
                     ((JavascriptExecutor) webDriver).executeScript("return document.readyState").equals("complete"));
         } catch (WebDriverException e) {
-            logger.error(String.format("Page wasn't ready to execute tests: %s", driver.getCurrentUrl()));
+            logger.error(String.format("Page wasn't ready to execute tests: %s", DriverFactory.getDriver().getCurrentUrl()));
             return false;
         }
         return true;

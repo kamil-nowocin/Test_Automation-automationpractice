@@ -26,6 +26,7 @@ import java.util.List;
 public class Registration_Tests extends Hooks {
 
     @Issue("TAP-0013")
+    @TmsLink("STORY-333")
     @Story("POSITIVE FLOW")
     @Owner("Kamil Nowocin")
     @Severity(SeverityLevel.BLOCKER)
@@ -52,6 +53,7 @@ public class Registration_Tests extends Hooks {
     }
 
     @Issue("TAP-0014")
+    @TmsLink("STORY-333")
     @Story("POSITIVE FLOW")
     @Owner("Kamil Nowocin")
     @Severity(SeverityLevel.CRITICAL)
@@ -97,6 +99,7 @@ public class Registration_Tests extends Hooks {
     }
 
     @Issue("TAP-0015")
+    @TmsLink("STORY-333")
     @Story("POSITIVE FLOW")
     @Owner("Kamil Nowocin")
     @Severity(SeverityLevel.CRITICAL)
@@ -137,6 +140,7 @@ public class Registration_Tests extends Hooks {
     }
 
     @Issue("TAP-0016")
+    @TmsLink("STORY-333")
     @Story("NEGATIVE FLOW")
     @Owner("Kamil Nowocin")
     @Severity(SeverityLevel.NORMAL)
@@ -164,6 +168,7 @@ public class Registration_Tests extends Hooks {
     }
 
     @Issue("TAP-0017")
+    @TmsLink("STORY-333")
     @Story("NEGATIVE FLOW")
     @Owner("Kamil Nowocin")
     @Severity(SeverityLevel.NORMAL)
@@ -201,6 +206,7 @@ public class Registration_Tests extends Hooks {
     }
 
     @Issue("TAP-0018")
+    @TmsLink("STORY-333")
     @Story("NEGATIVE FLOW")
     @Owner("Kamil Nowocin")
     @Severity(SeverityLevel.CRITICAL)
@@ -227,6 +233,7 @@ public class Registration_Tests extends Hooks {
     }
 
     @Issue("TAP-0019")
+    @TmsLink("STORY-333")
     @Story("NEGATIVE FLOW")
     @Owner("Kamil Nowocin")
     @Severity(SeverityLevel.CRITICAL)

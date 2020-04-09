@@ -46,7 +46,7 @@ Feature: As a user I would like to buy new clothes from automationpractice.com -
     And I click on I Confirm My Order button
     And I can see Shopping-Cart "Order confirmation" form with valid information
 
-    Examples:
+    Examples: SCENARIO OUTLINE DATA
       | dress name                  | quantity | size | colour | payment Method   |
       | Faded Short Sleeve T-shirts | 5        | M    | Blue   | Pay by check     |
       | Blouse                      | 2        | S    | Black  | Pay by bank wire |

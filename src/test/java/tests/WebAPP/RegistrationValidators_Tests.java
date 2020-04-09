@@ -22,6 +22,7 @@ import org.testng.annotations.Test;
 public class RegistrationValidators_Tests extends Hooks {
 
     @Issue("TAP-0020")
+    @TmsLink("STORY-444")
     @Story("NEGATIVE FLOW")
     @Owner("Kamil Nowocin")
     @Severity(SeverityLevel.NORMAL)
@@ -60,6 +61,7 @@ public class RegistrationValidators_Tests extends Hooks {
     }
 
     @Issue("TAP-0021")
+    @TmsLink("STORY-444")
     @Story("NEGATIVE FLOW")
     @Owner("Kamil Nowocin")
     @Severity(SeverityLevel.NORMAL)
@@ -98,6 +100,7 @@ public class RegistrationValidators_Tests extends Hooks {
     }
 
     @Issue("TAP-0022")
+    @TmsLink("STORY-444")
     @Story("NEGATIVE FLOW")
     @Owner("Kamil Nowocin")
     @Severity(SeverityLevel.NORMAL)
@@ -138,6 +141,7 @@ public class RegistrationValidators_Tests extends Hooks {
     }
 
     @Issue("TAP-0023")
+    @TmsLink("STORY-444")
     @Story("NEGATIVE FLOW")
     @Owner("Kamil Nowocin")
     @Severity(SeverityLevel.NORMAL)
@@ -176,6 +180,7 @@ public class RegistrationValidators_Tests extends Hooks {
     }
 
     @Issue("TAP-0024")
+    @TmsLink("STORY-444")
     @Story("NEGATIVE FLOW")
     @Owner("Kamil Nowocin")
     @Severity(SeverityLevel.NORMAL)
@@ -214,6 +219,7 @@ public class RegistrationValidators_Tests extends Hooks {
     }
 
     @Issue("TAP-0025")
+    @TmsLink("STORY-444")
     @Story("NEGATIVE FLOW")
     @Owner("Kamil Nowocin")
     @Severity(SeverityLevel.NORMAL)
@@ -252,6 +258,7 @@ public class RegistrationValidators_Tests extends Hooks {
     }
 
     @Issue("TAP-0026")
+    @TmsLink("STORY-444")
     @Story("NEGATIVE FLOW")
     @Owner("Kamil Nowocin")
     @Severity(SeverityLevel.NORMAL)
@@ -290,6 +297,7 @@ public class RegistrationValidators_Tests extends Hooks {
     }
 
     @Issue("TAP-0027")
+    @TmsLink("STORY-444")
     @Story("NEGATIVE FLOW")
     @Owner("Kamil Nowocin")
     @Severity(SeverityLevel.NORMAL)
@@ -328,6 +336,7 @@ public class RegistrationValidators_Tests extends Hooks {
     }
 
     @Issue("TAP-0028")
+    @TmsLink("STORY-444")
     @Story("NEGATIVE FLOW")
     @Owner("Kamil Nowocin")
     @Severity(SeverityLevel.NORMAL)
@@ -365,6 +374,7 @@ public class RegistrationValidators_Tests extends Hooks {
     }
 
     @Issue("TAP-0029")
+    @TmsLink("STORY-444")
     @Story("NEGATIVE FLOW")
     @Owner("Kamil Nowocin")
     @Severity(SeverityLevel.NORMAL)
@@ -403,6 +413,7 @@ public class RegistrationValidators_Tests extends Hooks {
     }
 
     @Issue("TAP-0030")
+    @TmsLink("STORY-444")
     @Story("NEGATIVE FLOW")
     @Owner("Kamil Nowocin")
     @Severity(SeverityLevel.NORMAL)

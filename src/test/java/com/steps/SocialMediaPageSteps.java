@@ -87,14 +87,14 @@ public class SocialMediaPageSteps extends DriverFactory {
     @Then("I am redirected to Selenium {string} profile")
     public void iAmRedirectedToSeleniumProfile(String logoName) throws Throwable {
         //ARRANGE//
-        ArrayList<String> browserTabs = new ArrayList<>(driver.getWindowHandles());
+        ArrayList<String> browserTabs = new ArrayList<>(DriverFactory.getDriver().getWindowHandles());
 
         //ACT//
-        driver.switchTo().window(browserTabs.get(1));
-        logger.info(String.format("URL was: %S\n URL expected: %S", driver.getCurrentUrl(), logoName + ".com"));
+        DriverFactory.getDriver().switchTo().window(browserTabs.get(1));
+        logger.info(String.format("URL was: %S\n URL expected: %S", DriverFactory.getDriver().getCurrentUrl(), logoName + ".com"));
 
         //ASSERT//
-        Assert.assertTrue(driver.getCurrentUrl().contains(logoName.toLowerCase() + ".com"),
+        Assert.assertTrue(DriverFactory.getDriver().getCurrentUrl().contains(logoName.toLowerCase() + ".com"),
                 String.format(PAGE_URL_DIDNT_CONTAIN, logoName.toUpperCase()));
     }
 }

@@ -12,7 +12,6 @@ import io.qameta.allure.Step;
 import org.testng.Assert;
 
 import java.io.File;
-import java.nio.file.Paths;
 
 /**
  * Test_Automation-automationpractice
@@ -124,8 +123,7 @@ public class CustomerServicePageSteps extends FrameworkEnvironment {
     public void iChooseFileToAttach() throws Throwable {
         //ARRANGE//
         final String fileName = "testPhoto.jpg";
-        String currentPath = Paths.get(".").toAbsolutePath().normalize().toString();
-        String path = currentPath
+        String path = getCurrentPath()
                 + File.separator
                 + "src"
                 + File.separator

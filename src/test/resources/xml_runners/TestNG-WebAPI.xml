@@ -4,7 +4,7 @@
     <listeners>
         <listener class-name="com.listeners.TestNGAnnotationTransformer"/>
     </listeners>
-    <test name="Automated tests for API client">
+    <test name="Automated tests for API client" group-by-instances="true">
         <classes>
             <class name="tests.WebAPI.API_Tests"/>
         </classes>

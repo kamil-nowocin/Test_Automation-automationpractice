@@ -41,7 +41,7 @@ public class ExcelEnvironment extends FrameworkEnvironment {
     }
 
     public static void setExcelSheet(String excelSheetName) {
-        testDataExcelPath = FrameworkEnvironment.getCurrentPath()
+        testDataExcelPath = getCurrentPath()
                 + File.separator
                 + "src"
                 + File.separator

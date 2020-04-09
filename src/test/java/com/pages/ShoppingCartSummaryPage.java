@@ -51,25 +51,26 @@ public class ShoppingCartSummaryPage extends BasePage {
      **/
     //VIEW//
     @FindBy(how = How.XPATH, using = "//ul[@id='address_delivery']//li[@class='address_firstname address_lastname']")
-    public WebElement customerFirstLastName;
+    public WebElement readCustomerFirstLastName;
 
     @FindBy(how = How.XPATH, using = "//ul[@id='address_delivery']//li[@class='address_company']")
-    public WebElement customerCompanyName;
+    public WebElement readCustomerCompanyName;
 
     @FindBy(how = How.XPATH, using = "//ul[@id='address_delivery']//li[@class='address_address1 address_address2']")
-    public WebElement customerAddress;
+    public WebElement readCustomerAddress;
 
     @FindBy(how = How.XPATH, using = "//ul[@id='address_delivery']//li[@class='address_city address_state_name address_postcode']")
-    public WebElement customerCity;
+    public WebElement readCustomerCity;
 
     @FindBy(how = How.XPATH, using = "//ul[@id='address_delivery']//li[@class='address_country_name']")
-    public WebElement customerCountry;
+    public WebElement readCustomerCountry;
 
     @FindBy(how = How.XPATH, using = "//ul[@id='address_delivery']//li[@class='address_phone_mobile']")
-    public WebElement customerMobilePhone;
+    public WebElement readCustomerMobilePhone;
 
+    //BUTTONS & INPUTS & DROPDOWN//
     @FindBy(how = How.XPATH, using = "//textarea[@name='message']")
-    public WebElement orderComment;
+    public WebElement orderCommentInput;
 
     /**
      * SHIPPING
@@ -88,6 +89,7 @@ public class ShoppingCartSummaryPage extends BasePage {
     /**
      * YOUR PAYMENT METHOD
      **/
+    //VIEW//
     @FindBy(how = How.XPATH, using = "//a[@class='bankwire']")
     public WebElement bankWirePaymentBox;
 
@@ -97,7 +99,7 @@ public class ShoppingCartSummaryPage extends BasePage {
     /**
      * Order confirmation
      **/
-    //VIEW//
+    //MESSAGES//
     @FindBy(how = How.XPATH, using = "//p[@class='alert alert-success']")
     public WebElement paymentByCheckSuccessful;
 

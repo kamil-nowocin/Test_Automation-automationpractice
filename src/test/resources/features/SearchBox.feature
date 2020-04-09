@@ -26,7 +26,7 @@ Feature: A a user I would like to see results of searching phrase
     Then I can see numbers of results equals to "<results>"
     And I can see that every results which have been found contains phrase "<search phrase>"
 
-    Examples:
+    Examples: SCENARIO OUTLINE DATA
       | search phrase | results |
       | T-shirts      | 1       |
       | Blouse        | 1       |
@@ -48,7 +48,7 @@ Feature: A a user I would like to see results of searching phrase
     Then I select from Dropdown Sort by "<sort by>"
     And I can see that results are correctly sorted by "<sorted by>"
 
-    Examples:
+    Examples: SCENARIO OUTLINE DATA
       | search phrase | expected results | sort by              | sorted by            |
       | Printed Dress | 5                | Product Name: Z to A | Product Name: Z to A |
       | Printed Dress | 5                | Product Name: A to Z | Product Name: A to Z |
