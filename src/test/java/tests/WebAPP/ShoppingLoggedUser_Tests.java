@@ -28,6 +28,7 @@ import java.util.List;
 public class ShoppingLoggedUser_Tests extends Hooks {
 
     @Issue("TAP-0039")
+    @TmsLink("STORY-666")
     @Story("POSITIVE FLOW")
     @Owner("Kamil Nowocin")
     @Severity(SeverityLevel.CRITICAL)
@@ -85,6 +86,7 @@ public class ShoppingLoggedUser_Tests extends Hooks {
     }
 
     @Issue("TAP-0040")
+    @TmsLink("STORY-666")
     @Story("POSITIVE FLOW")
     @Owner("Kamil Nowocin")
     @Severity(SeverityLevel.CRITICAL)

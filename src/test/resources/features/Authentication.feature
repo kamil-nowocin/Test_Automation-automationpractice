@@ -21,11 +21,11 @@ Feature: As a user I would like to log in automationpractice.com
   Scenario Outline:[US-111]/[1] As a user I can log into automationpractice.com using registered email "<email>" & password "<password>"
     Given I can see login form
     When I enter login "<email>"
-    And I enter password "<password>>"
+    And I enter password "<password>"
     And I click on Submit button
     Then I can see welcome message
 
-    Examples:
+    Examples: SCENARIO OUTLINE DATA
       | email                    | password |
       | thor.odinson@example.com | 12345    |
 
@@ -41,7 +41,7 @@ Feature: As a user I would like to log in automationpractice.com
     And I click on Submit button
     Then I can see warning message with include "<warning message>"
 
-    Examples:
+    Examples: SCENARIO OUTLINE DATA
       | email                    | password | warning message           |
       | thanos.ALars@example.com | 12345    | Authentication failed     |
       | thor.odinson@example.com |          | Password is required      |

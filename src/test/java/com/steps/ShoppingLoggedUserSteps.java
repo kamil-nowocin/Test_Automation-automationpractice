@@ -70,7 +70,7 @@ public class ShoppingLoggedUserSteps extends DriverFactory {
     public void iClickOnFollowingProduct(String productName) throws Throwable {
         //ARRANGE//
         contextInjection.productName = productName;
-        WebElement whichProductToClick = driver.findElement(new By.ByXPath
+        WebElement whichProductToClick = DriverFactory.getDriver().findElement(new By.ByXPath
                 ("//div[@id='center_column']//a[@class='product-name' and contains(text(),'" + productName + "')]"));
 
         //ACT//
@@ -161,7 +161,7 @@ public class ShoppingLoggedUserSteps extends DriverFactory {
         contextInjection.finalOrderTotalPrice = (contextInjection.productUnitPrice * contextInjection.productQuantity) + contextInjection.SHIPPING_PRICE;
 
         //ASSERT//
-        Assert.assertTrue(basePage.isDisplayed(5, productDetailsPage.productDetailsPopupPane),
+        Assert.assertTrue(basePage.isDisplayed(5, productDetailsPage.popupPaneProductDetails),
                 String.format(VIEW_ERROR, "Product details popup"));
 
         Assert.assertTrue(basePage.isDisplayed(5, productDetailsPage.popupPaneAddedSuccessfully),
@@ -222,15 +222,15 @@ public class ShoppingLoggedUserSteps extends DriverFactory {
                         contextInjection.addresses.toLowerCase(), VALUE_ERROR);
 
                 //GENERAL//
-                Assert.assertEquals(shoppingCartSummaryPage.customerFirstLastName.getText().toLowerCase(),
+                Assert.assertEquals(shoppingCartSummaryPage.readCustomerFirstLastName.getText().toLowerCase(),
                         contextInjection.defaultCustomerFirstLastName.toLowerCase(), VALUE_ERROR);
-                Assert.assertEquals(shoppingCartSummaryPage.customerCompanyName.getText().toLowerCase(),
+                Assert.assertEquals(shoppingCartSummaryPage.readCustomerCompanyName.getText().toLowerCase(),
                         contextInjection.defaultCustomerCompanyName.toLowerCase(), VALUE_ERROR);
-                Assert.assertEquals(shoppingCartSummaryPage.customerAddress.getText().toLowerCase(),
+                Assert.assertEquals(shoppingCartSummaryPage.readCustomerAddress.getText().toLowerCase(),
                         contextInjection.defaultCustomerAddress.toLowerCase(), VALUE_ERROR);
-                Assert.assertEquals(shoppingCartSummaryPage.customerCountry.getText().toLowerCase(),
+                Assert.assertEquals(shoppingCartSummaryPage.readCustomerCountry.getText().toLowerCase(),
                         contextInjection.defaultCustomerCountry.toLowerCase(), VALUE_ERROR);
-                Assert.assertEquals(shoppingCartSummaryPage.customerMobilePhone.getText().toLowerCase(),
+                Assert.assertEquals(shoppingCartSummaryPage.readCustomerMobilePhone.getText().toLowerCase(),
                         contextInjection.defaultCustomerMobilePhone.toLowerCase(), VALUE_ERROR);
                 break;
 
@@ -283,11 +283,11 @@ public class ShoppingLoggedUserSteps extends DriverFactory {
         final String orderComment = faker.backToTheFuture().quote();
 
         //ACT//
-        shoppingCartSummaryPage.orderComment.sendKeys(orderComment);
+        shoppingCartSummaryPage.orderCommentInput.sendKeys(orderComment);
         logger.info(String.format("User comment order: %S", orderComment.toUpperCase()));
 
         //ASSERT//
-        Assert.assertEquals(shoppingCartSummaryPage.orderComment.getAttribute("value").toLowerCase(),
+        Assert.assertEquals(shoppingCartSummaryPage.orderCommentInput.getAttribute("value").toLowerCase(),
                 orderComment.toLowerCase(), VALUE_ERROR);
     }
 

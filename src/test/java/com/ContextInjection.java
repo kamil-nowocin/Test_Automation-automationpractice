@@ -1,6 +1,6 @@
 package com;
 
-import cucumber.runtime.java.guice.ScenarioScoped;
+import io.cucumber.guice.ScenarioScoped;
 
 /**
  * Test_Automation-automationpractice
@@ -14,8 +14,8 @@ public class ContextInjection {
     /**
      * DATA SETS
      **/
-    public String generatedEmail;
     public String paymentType;
+    public String generatedEmail;
 
     public String productName;
     public String productSize;
@@ -29,6 +29,7 @@ public class ContextInjection {
      * DEFAULT
      **/
     //CUSTOMER DATA//
+    public final String defaultRegisteredEmailAddress = "asfsafas@wp.pl";
     public final String defaultCustomerUserName = "Thor Odinson";
     public final String defaultCustomerFirstLastName = "Thor Odinson";
     public final String defaultCustomerCompanyName = "Avengers";
@@ -45,5 +46,5 @@ public class ContextInjection {
 
     //ORDER DATA//
     public final double SHIPPING_PRICE = 2.00;
-    public final double TAX_VALUE = 0;
+    public final double TAX_VALUE = 0.00;
 }

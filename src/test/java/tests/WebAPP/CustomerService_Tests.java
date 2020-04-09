@@ -22,6 +22,7 @@ import org.testng.annotations.Test;
 public class CustomerService_Tests extends Hooks {
 
     @Issue("TAP-0005")
+    @TmsLink("STORY-222")
     @Story("POSITIVE FLOW")
     @Owner("Kamil Nowocin")
     @Severity(SeverityLevel.NORMAL)
@@ -53,6 +54,7 @@ public class CustomerService_Tests extends Hooks {
     }
 
     @Issue("TAP-0006")
+    @TmsLink("STORY-222")
     @Story("POSITIVE FLOW")
     @Owner("Kamil Nowocin")
     @Severity(SeverityLevel.NORMAL)
@@ -82,6 +84,7 @@ public class CustomerService_Tests extends Hooks {
     }
 
     @Issue("TAP-0007")
+    @TmsLink("STORY-222")
     @Story("POSITIVE FLOW")
     @Owner("Kamil Nowocin")
     @Severity(SeverityLevel.CRITICAL)
@@ -113,6 +116,7 @@ public class CustomerService_Tests extends Hooks {
     }
 
     @Issue("TAP-0008")
+    @TmsLink("STORY-222")
     @Story("NEGATIVE FLOW")
     @Owner("Kamil Nowocin")
     @Severity(SeverityLevel.NORMAL)
@@ -144,6 +148,7 @@ public class CustomerService_Tests extends Hooks {
     }
 
     @Issue("TAP-0009")
+    @TmsLink("STORY-222")
     @Story("NEGATIVE FLOW")
     @Owner("Kamil Nowocin")
     @Severity(SeverityLevel.NORMAL)
@@ -175,6 +180,7 @@ public class CustomerService_Tests extends Hooks {
     }
 
     @Issue("TAP-0010")
+    @TmsLink("STORY-222")
     @Story("NEGATIVE FLOW")
     @Owner("Kamil Nowocin")
     @Severity(SeverityLevel.NORMAL)
@@ -206,6 +212,7 @@ public class CustomerService_Tests extends Hooks {
     }
 
     @Issue("TAP-0011")
+    @TmsLink("STORY-222")
     @Story("NEGATIVE FLOW")
     @Owner("Kamil Nowocin")
     @Severity(SeverityLevel.NORMAL)
@@ -237,6 +244,7 @@ public class CustomerService_Tests extends Hooks {
     }
 
     @Issue("TAP-0012")
+    @TmsLink("STORY-222")
     @Story("NEGATIVE FLOW")
     @Owner("Kamil Nowocin")
     @Severity(SeverityLevel.NORMAL)

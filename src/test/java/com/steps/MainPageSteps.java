@@ -37,10 +37,10 @@ public class MainPageSteps extends DriverFactory {
         final String expectedPageURL = "http://automationpractice.com/index.php";
 
         //ACT//
-        driver.get(HOME_URL);
+        DriverFactory.getDriver().get(HOME_URL);
 
         //ASSERT//
-        Assert.assertEquals(driver.getCurrentUrl(), expectedPageURL, _21VOID);
+        Assert.assertEquals(DriverFactory.getDriver().getCurrentUrl(), expectedPageURL, _21VOID);
     }
 
     @Step("I can see automationpractice.com website")

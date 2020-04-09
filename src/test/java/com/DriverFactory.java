@@ -16,6 +16,8 @@ import org.openqa.selenium.safari.SafariDriver;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -26,7 +28,34 @@ import java.util.concurrent.TimeUnit;
 
 public class DriverFactory extends FrameworkEnvironment {
 
-    public static WebDriver driver;
+    private static ThreadLocal<WebDriver> drivers = new ThreadLocal<>();
+    private static List<WebDriver> storedDrivers = new ArrayList<>();
+
+    static {
+        Runtime.getRuntime().addShutdownHook(new Thread() {
+            public void run() {
+                storedDrivers.forEach(WebDriver::close);
+                storedDrivers.forEach(WebDriver::quit);
+            }
+        });
+    }
+
+    public static WebDriver getDriver() {
+        return drivers.get();
+    }
+
+    public static void addDriver(WebDriver driver) {
+        storedDrivers.add(driver);
+        drivers.set(driver);
+    }
+
+    public static void removeDriver() {
+        getDriver().close();
+        storedDrivers.remove(drivers.get());
+        drivers.remove();
+    }
+
+    private WebDriver driver;
 
     private String getBrowserName() {
         String getBrowser = System.getProperty("browser");
@@ -63,41 +92,41 @@ public class DriverFactory extends FrameworkEnvironment {
     protected void startBrowser() {
         printWebDriverManagerVersions(false);
         DesiredCapabilities desiredCapabilities = null;
-        if (driver == null) {
+        if (DriverFactory.getDriver() == null) {
             switch (getHost().toLowerCase()) {
                 case "chrome":
-                    WebDriverManager.chromedriver().version("79.0.3945.36").setup();
+                    WebDriverManager.chromedriver().setup();
                     ChromeOptions chromeOptions = new ChromeOptions();
                     chromeOptions.addArguments();
-                    driver = new ChromeDriver(chromeOptions);
+                    DriverFactory.addDriver(driver = new ChromeDriver(chromeOptions));
                     break;
 
                 case "firefox":
                     WebDriverManager.firefoxdriver().setup();
                     FirefoxOptions firefoxOptions = new FirefoxOptions();
                     firefoxOptions.addArguments("");
-                    driver = new FirefoxDriver(firefoxOptions);
+                    DriverFactory.addDriver(driver = new FirefoxDriver(firefoxOptions));
                     break;
 
                 case "opera":
                     WebDriverManager.operadriver().arch64().version("2.45").setup();
                     OperaOptions operaOptions = new OperaOptions();
                     operaOptions.addArguments("");
-                    driver = new OperaDriver(operaOptions);
+                    DriverFactory.addDriver(driver = new OperaDriver(operaOptions));
                     break;
 
                 case "edge":
                     WebDriverManager.edgedriver().setup();
-                    driver = new EdgeDriver();
+                    DriverFactory.addDriver(driver = new EdgeDriver());
                     break;
 
                 case "ie":
                     WebDriverManager.iedriver().setup();
-                    driver = new InternetExplorerDriver();
+                    DriverFactory.addDriver(driver = new InternetExplorerDriver());
                     break;
 
                 case "safari":
-                    driver = new SafariDriver();
+                    DriverFactory.addDriver(driver = new SafariDriver());
                     break;
 
                 case "browserstack":
@@ -122,24 +151,24 @@ public class DriverFactory extends FrameworkEnvironment {
                     //https://automate.browserstack.com/dashboard/v2 <- GET USER_NAME AND ACCESS_TOKEN FROM
                     //https://www.browserstack.com/automate/capabilities <- GENERATE YOUR OWN CAPABILITIES
                     //https://USER_NAME:ACCESS_TOKEN@hub-cloud.browserstack.com/wd/hub <- HOST_URL (.travis.yml for more information)
-                    driver = remoteWebDriver(desiredCapabilities, HOST_URL);
+                    DriverFactory.addDriver(driver = remoteWebDriver(desiredCapabilities, HOST_URL));
                     break;
 
                 default:
                     throw new IllegalStateException("This browser isn't supported yet! Sorry...");
             }
             logger.info(String.format("Chosen executor: %S", getHost()));
-            driver.manage().timeouts().implicitlyWait(TIMEOUT, TimeUnit.SECONDS);
-            driver.manage().timeouts().pageLoadTimeout(TIMEOUT, TimeUnit.SECONDS);
-            driver.manage().timeouts().setScriptTimeout(TIMEOUT, TimeUnit.SECONDS);
-            driver.manage().deleteAllCookies();
-            driver.manage().window().maximize();
+            getDriver().manage().timeouts().implicitlyWait(TIMEOUT, TimeUnit.SECONDS);
+            getDriver().manage().timeouts().pageLoadTimeout(TIMEOUT, TimeUnit.SECONDS);
+            getDriver().manage().timeouts().setScriptTimeout(TIMEOUT, TimeUnit.SECONDS);
+            getDriver().manage().deleteAllCookies();
+            getDriver().manage().window().maximize();
         } else {
             throw new IllegalStateException("Driver has already been initialized. Quit it before using this method!");
         }
     }
 
-    protected void destroyDriver() {
+    public void destroyDriver() {
         if (driver != null) {
             driver.quit();
             driver = null;

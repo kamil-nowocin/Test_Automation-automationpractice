@@ -5,8 +5,6 @@ import com.listeners.TestNGListener_API;
 import com.steps.Hooks;
 import io.qameta.allure.*;
 import io.restassured.RestAssured;
-import org.testng.ITestResult;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
@@ -27,14 +25,8 @@ public class API_Tests extends Hooks {
         return RestAssured.baseURI = "http://automationpractice.com/";
     }
 
-    @Override
-    @BeforeMethod(description = "Setting up Test Class")
-    public void beforeTest(ITestResult iTestResult) {
-        super.beforeTest(iTestResult);
-        destroyDriver();
-    }
-
     @Issue("TAP/API-0001")
+    @TmsLink("JIRA-000")
     @Story("HTTP STATUSES")
     @Owner("Kamil Nowocin")
     @Severity(SeverityLevel.BLOCKER)

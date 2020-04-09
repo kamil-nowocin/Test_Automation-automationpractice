@@ -23,6 +23,7 @@ import org.testng.annotations.Test;
 public class Authentication_Tests extends Hooks {
 
     @Issue("TAP-0001")
+    @TmsLink("STORY-111")
     @Story("POSITIVE FLOW")
     @Owner("Kamil Nowocin")
     @Severity(SeverityLevel.CRITICAL)
@@ -51,6 +52,7 @@ public class Authentication_Tests extends Hooks {
     }
 
     @Issue("TAP-0002")
+    @TmsLink("STORY-111")
     @Story("NEGATIVE FLOW")
     @Severity(SeverityLevel.NORMAL)
     @Owner("Kamil Nowocin")
@@ -79,6 +81,7 @@ public class Authentication_Tests extends Hooks {
     }
 
     @Issue("TAP-0003")
+    @TmsLink("STORY-111")
     @Story("NEGATIVE FLOW")
     @Owner("Kamil Nowocin")
     @Severity(SeverityLevel.NORMAL)
@@ -107,6 +110,7 @@ public class Authentication_Tests extends Hooks {
     }
 
     @Issue("TAP-0004")
+    @TmsLink("STORY-111")
     @Story("NEGATIVE FLOW")
     @Owner("Kamil Nowocin")
     @Severity(SeverityLevel.NORMAL)

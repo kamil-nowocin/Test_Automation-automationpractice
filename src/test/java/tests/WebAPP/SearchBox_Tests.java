@@ -22,6 +22,7 @@ import org.testng.annotations.Test;
 public class SearchBox_Tests extends Hooks {
 
     @Issue("TAP-0031")
+    @TmsLink("STORY-555")
     @Story("POSITIVE FLOW")
     @Owner("Kamil Nowocin")
     @Severity(SeverityLevel.CRITICAL)
@@ -47,6 +48,7 @@ public class SearchBox_Tests extends Hooks {
     }
 
     @Issue("TAP-0032")
+    @TmsLink("STORY-555")
     @Story("POSITIVE FLOW")
     @Owner("Kamil Nowocin")
     @Severity(SeverityLevel.CRITICAL)
@@ -72,6 +74,7 @@ public class SearchBox_Tests extends Hooks {
     }
 
     @Issue("TAP-0033")
+    @TmsLink("STORY-555")
     @Story("POSITIVE FLOW")
     @Owner("Kamil Nowocin")
     @Severity(SeverityLevel.CRITICAL)
@@ -97,6 +100,7 @@ public class SearchBox_Tests extends Hooks {
     }
 
     @Issue("TAP-0034")
+    @TmsLink("STORY-555")
     @Story("NEGATIVE FLOW")
     @Owner("Kamil Nowocin")
     @Severity(SeverityLevel.CRITICAL)
@@ -122,6 +126,7 @@ public class SearchBox_Tests extends Hooks {
     }
 
     @Issue("TAP-0035")
+    @TmsLink("STORY-555")
     @Story("POSITIVE FLOW")
     @Owner("Kamil Nowocin")
     @Severity(SeverityLevel.CRITICAL)
@@ -149,6 +154,7 @@ public class SearchBox_Tests extends Hooks {
     }
 
     @Issue("TAP-0036")
+    @TmsLink("STORY-555")
     @Story("POSITIVE FLOW")
     @Owner("Kamil Nowocin")
     @Severity(SeverityLevel.CRITICAL)
@@ -177,6 +183,7 @@ public class SearchBox_Tests extends Hooks {
 
     @Flaky
     @Issue("TAP-0037")
+    @TmsLink("STORY-555")
     @Story("POSITIVE FLOW")
     @Owner("Kamil Nowocin")
     @Severity(SeverityLevel.CRITICAL)
@@ -205,6 +212,7 @@ public class SearchBox_Tests extends Hooks {
 
     @Flaky
     @Issue("TAP-0038")
+    @TmsLink("STORY-555")
     @Story("POSITIVE FLOW")
     @Owner("Kamil Nowocin")
     @Severity(SeverityLevel.CRITICAL)

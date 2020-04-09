@@ -2,7 +2,7 @@ package com.listeners;
 
 import com.ExcelEnvironment;
 import com.FrameworkEnvironment;
-import cucumber.api.Scenario;
+import io.cucumber.java.Scenario;
 import org.apache.commons.lang3.StringUtils;
 import org.testng.ITestContext;
 import org.testng.ITestListener;

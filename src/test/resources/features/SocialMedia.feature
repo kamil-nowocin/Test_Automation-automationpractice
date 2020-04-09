@@ -24,8 +24,7 @@ Feature: As a user I would like to be redirected to social media pages from auto
     When I scroll the website until I can see "<logo name>" logo
     And I click on "<logo name>" logo button
     Then I am redirected to Selenium "<logo name>" profile
-
-    Examples:
+    Examples: SCENARIO OUTLINE DATA
       | logo name |
       | Facebook  |
       | Twitter   |
