@@ -29,7 +29,7 @@ public class Registration_Tests extends Hooks {
     @TmsLink("STORY-333")
     @Story("POSITIVE FLOW")
     @Owner("Kamil Nowocin")
-    @Severity(SeverityLevel.BLOCKER)
+    @Severity(SeverityLevel.CRITICAL)
     @Description("[US-333]/[1] As a user I check availability of registration page form")
     @Test(description = "[US-333]/[1] I check availability of registration page form",
             priority = 0)

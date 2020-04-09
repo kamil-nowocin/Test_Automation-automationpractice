@@ -52,8 +52,8 @@ public class SearchBox_Tests extends Hooks {
     @Story("POSITIVE FLOW")
     @Owner("Kamil Nowocin")
     @Severity(SeverityLevel.CRITICAL)
-    @Description("[US-555]/[2] As a user I would like to use search box and be able to see results of: \"Blouse\">")
-    @Test(description = "[US-555]/[2] I would like to use search box and be able to see results of: \"Blouse\">",
+    @Description("[US-555]/[2] As a user I would like to use search box and be able to see results of: \"Blouse\"")
+    @Test(description = "[US-555]/[2] I would like to use search box and be able to see results of: \"Blouse\"",
             priority = 0)
     public void test_2() throws Throwable {
         //ARRANGE//
@@ -78,8 +78,8 @@ public class SearchBox_Tests extends Hooks {
     @Story("POSITIVE FLOW")
     @Owner("Kamil Nowocin")
     @Severity(SeverityLevel.CRITICAL)
-    @Description("[US-555]/[3] As a user I would like to use search box and be able to see results of: \"Printed Dress\">")
-    @Test(description = "[US-555]/[3] I would like to use search box and be able to see results of: \"Printed Dress\">",
+    @Description("[US-555]/[3] As a user I would like to use search box and be able to see results of: \"Printed Dress\"")
+    @Test(description = "[US-555]/[3] I would like to use search box and be able to see results of: \"Printed Dress\"",
             priority = 0)
     public void test_3() throws Throwable {
         //ARRANGE//
@@ -104,8 +104,8 @@ public class SearchBox_Tests extends Hooks {
     @Story("NEGATIVE FLOW")
     @Owner("Kamil Nowocin")
     @Severity(SeverityLevel.CRITICAL)
-    @Description("[US-555]/[4] As a user I would like to use search box and be able to see results of: \"!@#$%^\">")
-    @Test(description = "[US-555]/[4] I would like to use search box and be able to see results of: \"!@#$%^\">",
+    @Description("[US-555]/[4] As a user I would like to use search box and be able to see results of: \"!@#$%^\"")
+    @Test(description = "[US-555]/[4] I would like to use search box and be able to see results of: \"!@#$%^\"",
             priority = 0)
     public void test_4() throws Throwable {
         //ARRANGE//

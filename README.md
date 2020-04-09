@@ -21,20 +21,14 @@ Supported browsers aka hosts:
 * *Edge*
 * *Internet Explorer*
 * *Safari*
+* *BrowserStack*
 ## FEATURES
 * Support for WebDriverManager
 * Support for Allure Report
 * Support for .xlsx files
 * Support for Fake & Mock data
 * Support for BrowserStack
-## TEST RESULTS (Allure Report)
-* After each CI/CD cycle run, tests results will be automatically uploaded to [kamil_nowocin.github.io/Test_Automation](https://kamil-nowocin.github.io/Test_Automation-automationpractice/) 
-* After each LOCAL cycle run, tests results will be stored in build/allure-report.  
-In terminal type `allure generate build/allure-report --clean` to generate local Allure Test Results
-## TEST LOGS
-There are two types of log information saved after each test run:  
-* Detailed logs in log directory. Warning! These logs will be deleted when you launch new test run.  
-* Colorful logs in testdata.xls file. Warning! These logs will be overwritten when you launch new test run. <sub><sup>(Only for TestNG runners)</sup></sub>
+* Support for Parallel Testing 
 ## HOW TO RUN TESTS
 There are multiple ways to run tests from this build. It all depends on what you want to do:
 1. Right click on `.feature` file, and Run -> This will run `.feature` file on default settings.
@@ -45,8 +39,16 @@ There are multiple ways to run tests from this build. It all depends on what you
 5. In terminal type `./gradlew runTests {run with tags TBA}` -> This will run all `.feature` files which provided tag.
 6. In terminal type `./gradlew test` -> This will run all tests from tests package.`(src/test/java/tests)`  
 You can add some environment settings, before you run tests with this command, e.g.
-   - `-Dselenium.host="YOUR_HOST_NAME"` -> available hosts: Chrome, Firefox, Opera, Safari, Edge, Browserstack
+   - `-Dselenium.host="YOUR_HOST_NAME"` -> available hosts: Chrome, Firefox, Opera, Safari, Edge, IE, Safari, BrowserStack
 7. Create your own runner :hammer_and_wrench:
+## TEST RESULTS (Allure Report)
+* After each CI/CD cycle run, tests results will be automatically uploaded to [kamil_nowocin.github.io/Test_Automation](https://kamil-nowocin.github.io/Test_Automation-automationpractice/) 
+* After each LOCAL cycle run, tests results will be stored in build/allure-report.  
+In terminal type `allure generate build/allure-report --clean` to generate local Allure Test Results
+## TEST LOGS
+There are two types of log information saved after each test run:  
+* Detailed logs in log directory. Warning! These logs will be deleted when you launch new test run.  
+* Colorful logs in testdata.xls file. Warning! These logs will be overwritten when you launch new test run. <sub><sup>(Only for TestNG runners)</sup></sub>
 ## AUTHORS
 - **Kamil Nowocin** - *Initial work* - [Kamil Nowocin](https://github.com/kamil-nowocin)
 ## LICENSE
