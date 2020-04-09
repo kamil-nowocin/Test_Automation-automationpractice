@@ -1,35 +1,56 @@
 {
   "uid" : "4b4757e66a1912dae1a509f688f20b0f",
   "children" : [ {
-    "name" : "Product defects",
+    "name" : "Test defects",
     "children" : [ {
-      "name" : "Element wasn't displayed REGISTRATION PAGE FORM! expected [true] but found [false]",
+      "name" : "no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"#id_gender2\"}\n  (Session info: chrome=81.0.4044.92)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'localhost', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.4.0-101-generic', java.version: '1.8.0_151'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.92, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: /tmp/.com.google.Chrome.j4lxeT}, goog:chromeOptions: {debuggerAddress: localhost:45303}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: b5afcf7864090cac0d72a1061f34bfbb\n*** Element info: {Using=id, value=id_gender2}",
       "children" : [ {
-        "name" : "[US-444]/[2] I would like to see registration error, when I don't fill last name input",
-        "uid" : "f675a86beac8ca1a",
-        "parentUid" : "da17c2c9dc98991f9e71a1e98b3cfbd5",
-        "status" : "failed",
+        "name" : "[US-333]/[2] I can create an account by filling up all fields",
+        "uid" : "6d5503ada4fc89af",
+        "parentUid" : "b48aae1b7222588236bb74fd888322c9",
+        "status" : "broken",
         "time" : {
-          "start" : 1586462245261,
-          "stop" : 1586462294983,
-          "duration" : 49722
+          "start" : 1586465073577,
+          "stop" : 1586465093017,
+          "duration" : 19440
         },
         "flaky" : false,
-        "newFailed" : true,
+        "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "da17c2c9dc98991f9e71a1e98b3cfbd5"
+      "uid" : "b48aae1b7222588236bb74fd888322c9"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  }, {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "Results which have been found didn't match expected PRICE: HIGHEST FIRST sorting results!: Lists differ at element [1]: $30.50 != $28.98 expected [$30.50] but found [$28.98]",
+      "children" : [ {
+        "name" : "[US-555]/[7] I would like to use search box and be able to see results sorted by: \"Price: Highest first\"",
+        "uid" : "f649780ffbc55",
+        "parentUid" : "3f8c16955563a5b1b79fc6371c363fab",
+        "status" : "failed",
+        "time" : {
+          "start" : 1586465255548,
+          "stop" : 1586465260535,
+          "duration" : 4987
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "3f8c16955563a5b1b79fc6371c363fab"
     }, {
       "name" : "Results which have been found didn't match expected PRICE: LOWEST FIRST sorting results!: Lists differ at element [2]: $28.98 != $30.50 expected [$28.98] but found [$30.50]",
       "children" : [ {
         "name" : "[US-555]/[8] I would like to use search box and be able to see results sorted by: \"Price: Lowest first\"",
-        "uid" : "80cc65aa55f209ca",
+        "uid" : "3f8c58dede6cc44",
         "parentUid" : "f0b18b6dd90c4522e3ae3fe0e12c66f2",
         "status" : "failed",
         "time" : {
-          "start" : 1586462614976,
-          "stop" : 1586462621243,
-          "duration" : 6267
+          "start" : 1586465265786,
+          "stop" : 1586465272213,
+          "duration" : 6427
         },
         "flaky" : false,
         "newFailed" : false,
@@ -40,13 +61,13 @@
       "name" : "null",
       "children" : [ {
         "name" : "As a developer I'd like to see working POC with .xlsx file",
-        "uid" : "c5c2b9f74c36386f",
+        "uid" : "8aa3cbe1fa6b0b5e",
         "parentUid" : "666d1a31450af3ae8459f14f07f9a1b4",
         "status" : "failed",
         "time" : {
-          "start" : 1586462694004,
-          "stop" : 1586462695247,
-          "duration" : 1243
+          "start" : 1586465343355,
+          "stop" : 1586465344142,
+          "duration" : 787
         },
         "flaky" : false,
         "newFailed" : false,
@@ -55,27 +76,6 @@
       "uid" : "666d1a31450af3ae8459f14f07f9a1b4"
     } ],
     "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
-  }, {
-    "name" : "Test defects",
-    "children" : [ {
-      "name" : "stale element reference: element is not attached to the page document\n  (Session info: chrome=81.0.4044.92)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'localhost', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.4.0-101-generic', java.version: '1.8.0_151'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.92, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: /tmp/.com.google.Chrome.uqqNFZ}, goog:chromeOptions: {debuggerAddress: localhost:43481}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 90325b06e2ce1f3ce0ebda8ea31c2008",
-      "children" : [ {
-        "name" : "[US-555]/[7] I would like to use search box and be able to see results sorted by: \"Price: Highest first\"",
-        "uid" : "8783835f8e876d0e",
-        "parentUid" : "456a84a7f5918fd5b64cd40deba48459",
-        "status" : "broken",
-        "time" : {
-          "start" : 1586462604194,
-          "stop" : 1586462608464,
-          "duration" : 4270
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "456a84a7f5918fd5b64cd40deba48459"
-    } ],
-    "uid" : "bdbf199525818fae7a8651db9eafe741"
   } ],
   "name" : "categories"
 }
