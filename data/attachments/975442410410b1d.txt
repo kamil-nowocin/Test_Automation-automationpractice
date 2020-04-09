@@ -1,0 +1,30 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+19:49:13 DEBUG io.github.bonigarcia.wdm.Preferences - Preference chrome=81 (valid until 2020-04-10 19:43:58)
+19:49:13 DEBUG io.github.bonigarcia.wdm.Preferences - Preference chrome81=81.0.4044.69 (valid until 2020-04-10 19:43:58)
+19:49:13 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 81.0.4044.69 (since Google Chrome 81 is installed in your machine)
+19:49:13 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 81.0.4044.69 found in cache
+19:49:13 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.m2/repository/webdriver/chromedriver/linux64/81.0.4044.69/chromedriver
+19:49:13 INFO  com.steps.Hooks - Chosen executor: CHROME
+19:49:13 INFO  com.steps.Hooks - ================================================ TEST STARTED ================================================
+19:49:13 INFO  com.steps.Hooks - [34mTEST NAME: [US-555]/[8] I WOULD LIKE TO USE SEARCH BOX AND BE ABLE TO SEE RESULTS SORTED BY: "PRICE: LOWEST FIRST"[0m
+19:49:15 INFO  com.steps.Hooks - Page ready: TRUE
+19:49:15 INFO  com.steps.Hooks - User search for: PRINTED DRESS
+19:49:16 INFO  com.steps.Hooks - Found results: 5, expected: 5
+19:49:17 INFO  com.steps.Hooks - Chosen sort option: PRICE: LOWEST FIRST
+19:49:17 INFO  com.steps.Hooks - Actual sort option: PRICE: LOWEST FIRST
+19:49:17 INFO  com.steps.Hooks - [31mTEST WILL BE REPEATED (2/2): [US-555]/[8] I WOULD LIKE TO USE SEARCH BOX AND BE ABLE TO SEE RESULTS SORTED BY: "PRICE: LOWEST FIRST"[0m
+19:49:17 DEBUG io.github.bonigarcia.wdm.Preferences - Preference chrome=81 (valid until 2020-04-10 19:43:58)
+19:49:17 DEBUG io.github.bonigarcia.wdm.Preferences - Preference chrome81=81.0.4044.69 (valid until 2020-04-10 19:43:58)
+19:49:17 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 81.0.4044.69 (since Google Chrome 81 is installed in your machine)
+19:49:17 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 81.0.4044.69 found in cache
+19:49:17 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.m2/repository/webdriver/chromedriver/linux64/81.0.4044.69/chromedriver
+19:49:18 INFO  com.steps.Hooks - Chosen executor: CHROME
+19:49:18 INFO  com.steps.Hooks - ================================================ TEST STARTED ================================================
+19:49:18 INFO  com.steps.Hooks - [34mTEST NAME: [US-555]/[8] I WOULD LIKE TO USE SEARCH BOX AND BE ABLE TO SEE RESULTS SORTED BY: "PRICE: LOWEST FIRST"[0m
+19:49:19 INFO  com.steps.Hooks - Page ready: TRUE
+19:49:20 INFO  com.steps.Hooks - User search for: PRINTED DRESS
+19:49:21 INFO  com.steps.Hooks - Found results: 5, expected: 5
+19:49:22 INFO  com.steps.Hooks - Chosen sort option: PRICE: LOWEST FIRST
+19:49:22 INFO  com.steps.Hooks - Actual sort option: PRICE: LOWEST FIRST
+19:49:22 INFO  com.steps.Hooks - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+19:49:23 ERROR com.steps.Hooks - java.lang.AssertionError: Results which have been found didn't match expected PRICE: LOWEST FIRST sorting results!: Lists differ at element [2]: $28.98 != $30.50 expected [$28.98] but found [$30.50]
