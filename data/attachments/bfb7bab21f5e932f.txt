@@ -1,0 +1,26 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+19:31:22 DEBUG io.github.bonigarcia.wdm.Preferences - Preference chrome=81 (valid until 2020-04-10 19:26:43)
+19:31:22 DEBUG io.github.bonigarcia.wdm.Preferences - Preference chrome81=81.0.4044.69 (valid until 2020-04-10 19:26:43)
+19:31:22 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 81.0.4044.69 (since Google Chrome 81 is installed in your machine)
+19:31:22 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 81.0.4044.69 found in cache
+19:31:22 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.m2/repository/webdriver/chromedriver/linux64/81.0.4044.69/chromedriver
+19:31:22 INFO  com.steps.Hooks - Chosen executor: CHROME
+19:31:22 INFO  com.steps.Hooks - ================================================ TEST STARTED ================================================
+19:31:22 INFO  com.steps.Hooks - [34mTEST NAME: [US-444]/[6] I WOULD LIKE TO SEE REGISTRATION ERROR, WHEN I DON'T FILL CITY INPUT[0m
+19:31:23 INFO  com.steps.Hooks - Page ready: TRUE
+19:31:25 INFO  com.steps.Hooks - User valid email: GLEGKATRINA@MAIL.COM
+19:32:12 ERROR com.steps.Hooks - Couldn't display element: Proxy element for: DefaultElementLocator 'By.id: create-account_form' 
+19:32:12 INFO  com.steps.Hooks - [31mTEST WILL BE REPEATED (2/2): [US-444]/[6] I WOULD LIKE TO SEE REGISTRATION ERROR, WHEN I DON'T FILL CITY INPUT[0m
+19:32:12 DEBUG io.github.bonigarcia.wdm.Preferences - Preference chrome=81 (valid until 2020-04-10 19:26:43)
+19:32:12 DEBUG io.github.bonigarcia.wdm.Preferences - Preference chrome81=81.0.4044.69 (valid until 2020-04-10 19:26:43)
+19:32:12 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 81.0.4044.69 (since Google Chrome 81 is installed in your machine)
+19:32:12 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 81.0.4044.69 found in cache
+19:32:12 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.m2/repository/webdriver/chromedriver/linux64/81.0.4044.69/chromedriver
+19:32:12 INFO  com.steps.Hooks - Chosen executor: CHROME
+19:32:13 INFO  com.steps.Hooks - ================================================ TEST STARTED ================================================
+19:32:13 INFO  com.steps.Hooks - [34mTEST NAME: [US-444]/[6] I WOULD LIKE TO SEE REGISTRATION ERROR, WHEN I DON'T FILL CITY INPUT[0m
+19:32:16 INFO  com.steps.Hooks - Page ready: TRUE
+19:32:19 INFO  com.steps.Hooks - User valid email: STEWEDMANDI@EMAIL.COM
+19:33:05 ERROR com.steps.Hooks - Couldn't display element: Proxy element for: DefaultElementLocator 'By.id: create-account_form' 
+19:33:05 INFO  com.steps.Hooks - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+19:33:06 ERROR com.steps.Hooks - java.lang.AssertionError: Element wasn't displayed REGISTRATION PAGE FORM! expected [true] but found [false]
