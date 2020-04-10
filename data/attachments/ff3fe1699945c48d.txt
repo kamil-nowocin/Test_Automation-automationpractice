@@ -1,0 +1,32 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+19:02:53 DEBUG io.github.bonigarcia.wdm.Preferences - Preference chrome=81 (valid until 2020-04-11 19:01:12)
+19:02:53 DEBUG io.github.bonigarcia.wdm.Preferences - Preference chrome81=81.0.4044.69 (valid until 2020-04-11 19:01:12)
+19:02:53 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 81.0.4044.69 (since Google Chrome 81 is installed in your machine)
+19:02:53 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 81.0.4044.69 found in cache
+19:02:53 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.m2/repository/webdriver/chromedriver/linux64/81.0.4044.69/chromedriver
+19:02:53 INFO  com.steps.Hooks - Chosen executor: CHROME
+19:02:53 INFO  com.steps.Hooks - ================================================ TEST STARTED ================================================
+19:02:53 INFO  com.steps.Hooks - [34mTEST NAME: [US-333]/[3] I CAN CREATE AN ACCOUNT BY FILLING UP ONLY REQUIRED FIELDS[0m
+19:02:55 INFO  com.steps.Hooks - Page ready: "TRUE"
+19:02:57 INFO  com.steps.Hooks - User valid email: "DOZYKARLGAARD@HOTMAIL.CO.UK"
+19:03:12 INFO  com.steps.Hooks - [31mTEST WILL BE REPEATED (2/2): [US-333]/[3] I CAN CREATE AN ACCOUNT BY FILLING UP ONLY REQUIRED FIELDS[0m
+19:03:12 DEBUG io.github.bonigarcia.wdm.Preferences - Preference chrome=81 (valid until 2020-04-11 19:01:12)
+19:03:12 DEBUG io.github.bonigarcia.wdm.Preferences - Preference chrome81=81.0.4044.69 (valid until 2020-04-11 19:01:12)
+19:03:12 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 81.0.4044.69 (since Google Chrome 81 is installed in your machine)
+19:03:12 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 81.0.4044.69 found in cache
+19:03:12 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.m2/repository/webdriver/chromedriver/linux64/81.0.4044.69/chromedriver
+19:03:13 INFO  com.steps.Hooks - Chosen executor: CHROME
+19:03:13 INFO  com.steps.Hooks - ================================================ TEST STARTED ================================================
+19:03:13 INFO  com.steps.Hooks - [34mTEST NAME: [US-333]/[3] I CAN CREATE AN ACCOUNT BY FILLING UP ONLY REQUIRED FIELDS[0m
+19:03:14 INFO  com.steps.Hooks - Page ready: "TRUE"
+19:03:15 INFO  com.steps.Hooks - User valid email: "GLARELEE@GMX.COM"
+19:03:31 INFO  com.steps.Hooks - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+19:03:31 ERROR com.steps.Hooks - org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@id='customer_firstname']"}
+  (Session info: chrome=81.0.4044.92)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'localhost', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.4.0-101-generic', java.version: '1.8.0_151'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.92, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: /tmp/.com.google.Chrome.5waPGz}, goog:chromeOptions: {debuggerAddress: localhost:42567}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 0e2b250345a59d6784a4b3b10dd90f8c
+*** Element info: {Using=xpath, value=//input[@id='customer_firstname']}
