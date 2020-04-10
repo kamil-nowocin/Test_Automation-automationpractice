@@ -51,7 +51,7 @@ public class RegistrationPageSteps extends FrameworkEnvironment {
     @When("I write an email address")
     public void iWriteAnEmailAddress() throws Throwable {
         //ARRANGE//
-        contextInjection.generatedEmail = mockNeat.emails().val();
+        contextInjection.generatedEmail = faker.random().hex(5) + mockNeat.emails().get();
 
         //ACT//
         authenticationPage.createAnAccountEmailInput.sendKeys(contextInjection.generatedEmail);

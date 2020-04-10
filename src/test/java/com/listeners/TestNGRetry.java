@@ -12,16 +12,16 @@ import org.testng.ITestResult;
 
 public class TestNGRetry extends FrameworkEnvironment implements IRetryAnalyzer {
 
-    private int retryStatus = 1;
+    private int retryStatus = 0;
 
     @Override
     public boolean retry(ITestResult iTestResult) {
         if (!iTestResult.isSuccess()) {
-            int retryLimit = 2;
+            int retryLimit = 1;
             if (retryStatus < retryLimit) {
                 retryStatus++;
                 iTestResult.setStatus(ITestResult.FAILURE);
-                logger.info(String.format(ANSI_RED + "TEST WILL BE REPEATED (%d/2): %S" + ANSI_RESET, retryStatus,
+                logger.info(String.format(ANSI_RED + "TEST RETRY (%d/" + retryLimit + "): %S" + ANSI_RESET, retryStatus,
                         iTestResult.getMethod().getDescription()));
                 return true;
             }

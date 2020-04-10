@@ -147,7 +147,7 @@ public class DriverFactory extends FrameworkEnvironment {
                 default:
                     throw new IllegalStateException("This browser isn't supported yet! Sorry...");
             }
-            logger.info(String.format("Chosen executor: %S", getHost()));
+            logger.info(String.format("Chosen executor: \"%S\"", getHost()));
             getDriver().manage().timeouts().implicitlyWait(TIMEOUT, TimeUnit.SECONDS);
             getDriver().manage().timeouts().pageLoadTimeout(TIMEOUT, TimeUnit.SECONDS);
             getDriver().manage().timeouts().setScriptTimeout(TIMEOUT, TimeUnit.SECONDS);

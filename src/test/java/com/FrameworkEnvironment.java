@@ -41,7 +41,7 @@ import java.util.stream.Stream;
 public class FrameworkEnvironment {
 
     protected static Faker faker = new Faker(Locale.US);
-    protected static MockNeat mockNeat = MockNeat.threadLocal();
+    protected static MockNeat mockNeat = MockNeat.secure();
     protected static Logger logger = LoggerFactory.getLogger(Hooks.class);
     protected static DecimalFormat $decimalFormat = new DecimalFormat("$#0.00", new DecimalFormatSymbols(Locale.US));
 
@@ -49,7 +49,7 @@ public class FrameworkEnvironment {
     protected static final ResourceBundle resourceBundleInvalidEmails = ResourceBundle.getBundle("invalidEmails");
     protected static final ResourceBundle resourceBundleErrorMessages = ResourceBundle.getBundle("errorValidators");
 
-    //STATIC DATA//
+    //DATA//
     protected static final int TIMEOUT = 15;
     protected static final int EXCEL_TC_NAME_COLUMN = 0;
     protected static final int EXCEL_TC_RESULT_COLUMN = 4;
