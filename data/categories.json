@@ -3,71 +3,54 @@
   "children" : [ {
     "name" : "Test defects",
     "children" : [ {
-      "name" : "no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"#id_gender2\"}\n  (Session info: chrome=81.0.4044.92)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'localhost', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.4.0-101-generic', java.version: '1.8.0_151'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.92, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: /tmp/.com.google.Chrome.GmJaYm}, goog:chromeOptions: {debuggerAddress: localhost:33923}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: fd108cb9e5f8751475a259237ab2a827\n*** Element info: {Using=id, value=id_gender2}",
+      "name" : "no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"#id_gender1\"}\n  (Session info: chrome=81.0.4044.92)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'localhost', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.4.0-101-generic', java.version: '1.8.0_151'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.92, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: /tmp/.com.google.Chrome.d3uXZU}, goog:chromeOptions: {debuggerAddress: localhost:36116}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: ed959be2bc4ef45986f75bb37b386960\n*** Element info: {Using=id, value=id_gender1}",
       "children" : [ {
         "name" : "[US-333]/[2] I can create an account by filling up all fields",
-        "uid" : "72cbe3df7d976544",
-        "parentUid" : "404063b770757f80511f7a76e9541f69",
+        "uid" : "4ed115cf564a585f",
+        "parentUid" : "54d9db4bf2230521c7e6c91b56a26cd3",
         "status" : "broken",
         "time" : {
-          "start" : 1586538000498,
-          "stop" : 1586538020687,
-          "duration" : 20189
+          "start" : 1586542336793,
+          "stop" : 1586542355542,
+          "duration" : 18749
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "404063b770757f80511f7a76e9541f69"
+      "uid" : "54d9db4bf2230521c7e6c91b56a26cd3"
+    }, {
+      "name" : "no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"#customer_firstname\"}\n  (Session info: chrome=81.0.4044.92)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'localhost', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.4.0-101-generic', java.version: '1.8.0_151'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.92, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: /tmp/.com.google.Chrome.SwxuFx}, goog:chromeOptions: {debuggerAddress: localhost:42566}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 0d81414aaae52d2fff88e5b4e81a5d3a\n*** Element info: {Using=id, value=customer_firstname}",
+      "children" : [ {
+        "name" : "[US-333]/[3] I can create an account by filling up only required fields",
+        "uid" : "731c6d0421d5567e",
+        "parentUid" : "4014ae3cb9a02d9c7fc5a22300411150",
+        "status" : "broken",
+        "time" : {
+          "start" : 1586542374469,
+          "stop" : 1586542394010,
+          "duration" : 19541
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "4014ae3cb9a02d9c7fc5a22300411150"
     } ],
     "uid" : "bdbf199525818fae7a8651db9eafe741"
   }, {
     "name" : "Product defects",
     "children" : [ {
-      "name" : "Results which have been found didn't match expected PRICE: HIGHEST FIRST sorting results!: Lists differ at element [1]: $30.50 != $28.98 expected [$30.50] but found [$28.98]",
-      "children" : [ {
-        "name" : "[US-555]/[7] I would like to use search box and be able to see results sorted by: \"Price: Highest first\"",
-        "uid" : "69ce1b259319c601",
-        "parentUid" : "3f8c16955563a5b1b79fc6371c363fab",
-        "status" : "failed",
-        "time" : {
-          "start" : 1586538204812,
-          "stop" : 1586538209635,
-          "duration" : 4823
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "3f8c16955563a5b1b79fc6371c363fab"
-    }, {
-      "name" : "Results which have been found didn't match expected PRICE: LOWEST FIRST sorting results!: Lists differ at element [2]: $28.98 != $30.50 expected [$28.98] but found [$30.50]",
-      "children" : [ {
-        "name" : "[US-555]/[8] I would like to use search box and be able to see results sorted by: \"Price: Lowest first\"",
-        "uid" : "37faf127cbd930cc",
-        "parentUid" : "f0b18b6dd90c4522e3ae3fe0e12c66f2",
-        "status" : "failed",
-        "time" : {
-          "start" : 1586538214240,
-          "stop" : 1586538218509,
-          "duration" : 4269
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "f0b18b6dd90c4522e3ae3fe0e12c66f2"
-    }, {
       "name" : "null",
       "children" : [ {
         "name" : "As a developer I'd like to see working POC with .xlsx file",
-        "uid" : "d2c0f588ad4d13ff",
+        "uid" : "f92e176c93eb4cf0",
         "parentUid" : "666d1a31450af3ae8459f14f07f9a1b4",
         "status" : "failed",
         "time" : {
-          "start" : 1586538279626,
-          "stop" : 1586538280520,
-          "duration" : 894
+          "start" : 1586542746835,
+          "stop" : 1586542747914,
+          "duration" : 1079
         },
         "flaky" : false,
         "newFailed" : false,
