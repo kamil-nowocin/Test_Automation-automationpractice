@@ -14,6 +14,6 @@ import org.openqa.selenium.support.How;
 public class AccountDetailsPage extends BasePage {
 
     //VIEW//
-    @FindBy(how = How.CSS, using = "#center_column > p")
+    @FindBy(how = How.XPATH, using = "//p[@class='info-account']")
     public WebElement myAccountDetailsDashboard;
 }

@@ -17,38 +17,38 @@ public class AuthenticationPage extends BasePage {
      * CREATE AN ACCOUNT
      **/
     //VIEW//
-    @FindBy(how = How.ID, using = "create-account_form")
+    @FindBy(how = How.XPATH, using = "//form[@id='create-account_form']")
     public WebElement createAccountPane;
 
     //BUTTONS & INPUTS & DROPDOWN//
-    @FindBy(how = How.ID, using = "email_create")
+    @FindBy(how = How.XPATH, using = "//input[@id='email_create']")
     public WebElement createAnAccountEmailInput;
 
-    @FindBy(how = How.ID, using = "SubmitCreate")
+    @FindBy(how = How.XPATH, using = "//button[@id='SubmitCreate']")
     public WebElement createAnAccountButton;
 
     //MESSAGES//
-    @FindBy(how = How.ID, using = "create_account_error")
+    @FindBy(how = How.XPATH, using = "//div[@id='create_account_error']")
     public WebElement createAnAccountError;
 
     /**
      * ALREADY REGISTERED
      **/
     //VIEW//
-    @FindBy(how = How.ID, using = "login_form")
+    @FindBy(how = How.XPATH, using = "//form[@id='login_form']")
     public WebElement registeredPane;
 
     //BUTTONS & INPUTS & DROPDOWN//
-    @FindBy(how = How.ID, using = "email")
+    @FindBy(how = How.XPATH, using = "//input[@id='email']")
     public WebElement registeredEmailInput;
 
-    @FindBy(how = How.ID, using = "passwd")
+    @FindBy(how = How.XPATH, using = "//input[@id='passwd']")
     public WebElement registeredPasswordInput;
 
-    @FindBy(how = How.ID, using = "SubmitLogin")
+    @FindBy(how = How.XPATH, using = "//button[@id='SubmitLogin']")
     public WebElement registeredSignInButton;
 
     //MESSAGES//
-    @FindBy(how = How.CSS, using = "#center_column > div.alert.alert-danger")
+    @FindBy(how = How.XPATH, using = "//div[@class='alert alert-danger']")
     public WebElement registeredLoginError;
 }

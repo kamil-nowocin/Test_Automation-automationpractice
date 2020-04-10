@@ -37,7 +37,7 @@ public class ProductDetailsPage extends BasePage {
     public WebElement popupPaneFinalOrderTotalPrice;
 
     //BUTTONS & INPUTS & DROPDOWN//
-    @FindBy(how = How.ID, using = "quantity_wanted")
+    @FindBy(how = How.XPATH, using = "//input[@id='quantity_wanted']")
     public WebElement quantityInput;
 
     @FindBy(how = How.XPATH, using = "//div[@id='uniform-group_1']//select")
