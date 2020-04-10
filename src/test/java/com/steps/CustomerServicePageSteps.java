@@ -21,9 +21,9 @@ import java.io.File;
 
 public class CustomerServicePageSteps extends FrameworkEnvironment {
 
-    private BasePage basePage = new BasePage();
-    private MainPage mainPage = new MainPage();
-    private CustomerServicePage customerServicePage = new CustomerServicePage();
+    private final BasePage basePage = new BasePage();
+    private final MainPage mainPage = new MainPage();
+    private final CustomerServicePage customerServicePage = new CustomerServicePage();
 
     @Step("I click on Contact Us button")
     @When("I click on Contact Us button")
@@ -34,14 +34,14 @@ public class CustomerServicePageSteps extends FrameworkEnvironment {
     @Step("I can see Contact Us form")
     @Then("I can see Contact Us form")
     public void iCanSeeContactUsForm() throws Throwable {
-        Assert.assertTrue(basePage.isDisplayed(5, customerServicePage.contactUsPane),
+        Assert.assertTrue(basePage.waitForElementToBeDisplayed(5, customerServicePage.contactUsPane),
                 String.format(VIEW_ERROR, "Contact Us form"));
     }
 
     @Step("I am on Customer Service Contact Us page form")
     @Given("I am on Customer Service Contact Us page form")
     public void iAmOnCustomerServiceContactUsPageForm() throws Throwable {
-        Assert.assertTrue(basePage.isDisplayed(5, customerServicePage.contactUsHeader),
+        Assert.assertTrue(basePage.waitForElementToBeDisplayed(5, customerServicePage.contactUsHeader),
                 String.format(VIEW_ERROR, "Customer Service Contact Us page form"));
     }
 
@@ -50,7 +50,7 @@ public class CustomerServicePageSteps extends FrameworkEnvironment {
     public void iChooseSubjectHeading(String subjectHeading) throws Throwable {
         //ACT//
         basePage.selectFromDropdownByText(subjectHeading, customerServicePage.subjectHeadingDropdown);
-        logger.info(String.format("Chosen subject: %S", subjectHeading));
+        logger.info(String.format("Chosen subject: \"%S\"", subjectHeading));
 
         //ASSERT//
         Assert.assertEquals(customerServicePage.readSubjectHeading.getText().toLowerCase(),
@@ -65,7 +65,7 @@ public class CustomerServicePageSteps extends FrameworkEnvironment {
 
         //ACT//
         customerServicePage.emailAddressInput.sendKeys(userValidEmailAddress);
-        logger.info(String.format("User valid email: %S", userValidEmailAddress));
+        logger.info(String.format("User valid email: \"%S\"", userValidEmailAddress));
 
         //ASSERT//
         Assert.assertEquals(customerServicePage.emailAddressInput.getAttribute("value").toLowerCase(),
@@ -81,7 +81,7 @@ public class CustomerServicePageSteps extends FrameworkEnvironment {
 
         //ACT//
         customerServicePage.emailAddressInput.sendKeys(userInvalidEmailAddress);
-        logger.info(String.format("User invalid email: %S", userInvalidEmailAddress));
+        logger.info(String.format("User invalid email: \"%S\"", userInvalidEmailAddress));
 
         //ASSERT//
         Assert.assertEquals(customerServicePage.emailAddressInput.getAttribute("value").toLowerCase(),
@@ -96,7 +96,7 @@ public class CustomerServicePageSteps extends FrameworkEnvironment {
 
         //ACT//
         customerServicePage.orderReferenceInput.sendKeys(orderReference);
-        logger.info(String.format("Order reference: %S", orderReference));
+        logger.info(String.format("Order reference: \"%S\"", orderReference));
 
         //ASSERT//
         Assert.assertEquals(customerServicePage.orderReferenceInput.getAttribute("value").toLowerCase(),
@@ -111,7 +111,7 @@ public class CustomerServicePageSteps extends FrameworkEnvironment {
 
         //ACT//
         customerServicePage.messageTextArea.sendKeys(message);
-        logger.info(String.format("Message: %S", message));
+        logger.info(String.format("Message: \"%S\"", message));
 
         //ASSERT//
         Assert.assertEquals(customerServicePage.messageTextArea.getAttribute("value").toLowerCase(),
@@ -137,7 +137,7 @@ public class CustomerServicePageSteps extends FrameworkEnvironment {
 
         //ACT//
         customerServicePage.attachFileInput.sendKeys(path);
-        logger.info(String.format("Uploaded file name: %S", fileName));
+        logger.info(String.format("Uploaded file name: \"%S\"", fileName));
 
         //ASSERT//
         Assert.assertEquals(customerServicePage.readFileName.getText().toLowerCase(), fileName.toLowerCase(), VALUE_ERROR);

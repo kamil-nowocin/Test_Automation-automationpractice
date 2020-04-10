@@ -25,7 +25,6 @@ public class TestNGRetry extends FrameworkEnvironment implements IRetryAnalyzer 
                         iTestResult.getMethod().getDescription()));
                 return true;
             }
-
         } else {
             iTestResult.setStatus(ITestResult.SUCCESS);
         }

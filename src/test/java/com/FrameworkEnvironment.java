@@ -201,7 +201,7 @@ public class FrameworkEnvironment {
             logger.info("GeckoDriver available versions: " + WebDriverManager.firefoxdriver().getVersions());
             logger.info("OperaDriver available versions: " + WebDriverManager.operadriver().getVersions());
             logger.info("EdgeDriver available versions: " + WebDriverManager.edgedriver().getVersions());
-            logger.info("IE available versions: " + WebDriverManager.iedriver().getVersions());
+            logger.info("IEDriver available versions: " + WebDriverManager.iedriver().getVersions());
         }
     }
 }

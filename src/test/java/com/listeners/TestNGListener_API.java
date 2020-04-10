@@ -26,7 +26,7 @@ public class TestNGListener_API extends FrameworkEnvironment implements ITestLis
     public synchronized void onStart(ITestContext iTestContext) {
         logger.info(StringUtils.repeat("#", 110));
         logger.info(StringUtils.repeat("=", 29)
-                + "STARTING API TEST SUITE " + iTestContext.getStartDate() + StringUtils.repeat("=", 29));
+                + "STARTING API TEST SUITE " + iTestContext.getStartDate() + StringUtils.repeat("=", 28));
         logger.info(StringUtils.repeat("#", 110));
     }
 
@@ -34,7 +34,7 @@ public class TestNGListener_API extends FrameworkEnvironment implements ITestLis
     public synchronized void onFinish(ITestContext iTestContext) {
         logger.info(StringUtils.repeat("#", 110));
         logger.info(StringUtils.repeat("=", 32)
-                + "END OF TEST SUITE " + iTestContext.getEndDate() + StringUtils.repeat("=", 32));
+                + "END OF TEST SUITE " + iTestContext.getEndDate() + StringUtils.repeat("=", 31));
         logger.info(StringUtils.repeat("#", 110));
         FrameworkEnvironment.allureWriteExecutors();
         FrameworkEnvironment.allureWriteProperties();

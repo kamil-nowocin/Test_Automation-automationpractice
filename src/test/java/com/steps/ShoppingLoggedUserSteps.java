@@ -26,12 +26,12 @@ import java.util.List;
 
 public class ShoppingLoggedUserSteps extends DriverFactory {
 
-    private ContextInjection contextInjection;
+    private final ContextInjection contextInjection;
 
-    private BasePage basePage = new BasePage();
-    private MainPage mainPage = new MainPage();
-    private ProductDetailsPage productDetailsPage = new ProductDetailsPage();
-    private ShoppingCartSummaryPage shoppingCartSummaryPage = new ShoppingCartSummaryPage();
+    private final BasePage basePage = new BasePage();
+    private final MainPage mainPage = new MainPage();
+    private final ProductDetailsPage productDetailsPage = new ProductDetailsPage();
+    private final ShoppingCartSummaryPage shoppingCartSummaryPage = new ShoppingCartSummaryPage();
 
     @Inject
     public ShoppingLoggedUserSteps(ContextInjection contextInjection) {
@@ -46,19 +46,16 @@ public class ShoppingLoggedUserSteps extends DriverFactory {
             case "women":
                 mainPage.subMenuWomen.click();
                 break;
-
             case "dress":
                 mainPage.subMenuDresses.click();
                 break;
-
             case "t-shirts":
                 mainPage.subMenuTshirts.click();
                 break;
-
             default:
                 throw new IllegalStateException(String.format(INPUT_ERROR, subMenuCategory.toUpperCase()));
         }
-        logger.info(String.format("User clicked on: %S submenu category", subMenuCategory));
+        logger.info(String.format("User clicked on: \"%S\" submenu category", subMenuCategory));
 
         //ASSERT//
         Assert.assertEquals(mainPage.subMenuChosenCategory.getText().replaceAll
@@ -97,39 +94,31 @@ public class ShoppingLoggedUserSteps extends DriverFactory {
             case "orange":
                 productDetailsPage.orangeColorButton.click();
                 break;
-
             case "blue":
                 productDetailsPage.blueColorButton.click();
                 break;
-
             case "white":
                 productDetailsPage.whiteColorButton.click();
                 break;
-
             case "black":
                 productDetailsPage.blackColorButton.click();
                 break;
-
             case "beige":
                 productDetailsPage.beigeColorButton.click();
                 break;
-
             case "pink":
                 productDetailsPage.pinkColorButton.click();
                 break;
-
             case "green":
                 productDetailsPage.greenColorButton.click();
                 break;
-
             case "yellow":
                 productDetailsPage.yellowColorButton.click();
                 break;
-
             default:
                 throw new IllegalStateException(String.format(INPUT_ERROR, productColor.toUpperCase()));
         }
-        logger.info(String.format("Chosen product details:\n Quantity: %S\n Size: %S\n Color: %S",
+        logger.info(String.format("Chosen product details:\n Quantity: \"%S\"\n Size: \"%S\"\n Color: \"%S\"",
                 productQuantity, productSize, productColor));
 
         //INJECTIONS//
@@ -161,16 +150,13 @@ public class ShoppingLoggedUserSteps extends DriverFactory {
         contextInjection.finalOrderTotalPrice = (contextInjection.productUnitPrice * contextInjection.productQuantity) + contextInjection.SHIPPING_PRICE;
 
         //ASSERT//
-        Assert.assertTrue(basePage.isDisplayed(5, productDetailsPage.popupPaneProductDetails),
+        Assert.assertTrue(basePage.waitForElementToBeDisplayed(5, productDetailsPage.popupPaneProductDetails),
                 String.format(VIEW_ERROR, "Product details popup"));
-
-        Assert.assertTrue(basePage.isDisplayed(5, productDetailsPage.popupPaneAddedSuccessfully),
+        Assert.assertTrue(basePage.waitForElementToBeDisplayed(5, productDetailsPage.popupPaneAddedSuccessfully),
                 String.format(VIEW_ERROR, "Product added successfully header"));
-
         Assert.assertEquals(productDetailsPage.popupPaneFinalProductTotalPrice.getText()
                         .replaceAll("[^$0-9.]", ""),
                 $decimalFormat.format(contextInjection.finalProductTotalPrice), VALUE_ERROR);
-
         Assert.assertEquals(productDetailsPage.popupPaneFinalOrderTotalPrice.getText()
                         .replaceAll("[^$0-9.]", ""),
                 $decimalFormat.format(contextInjection.finalOrderTotalPrice), VALUE_ERROR);
@@ -186,7 +172,7 @@ public class ShoppingLoggedUserSteps extends DriverFactory {
     @And("I can see Shopping-Cart {string} form with valid information")
     public void iCanSeeShoppingCartFormWithValidInformation(String shoppingSummaryTab) throws Throwable {
         //ARRANGE//
-        Assert.assertTrue(basePage.isDisplayed(5, shoppingCartSummaryPage.navigationTopLabelHeader),
+        Assert.assertTrue(basePage.waitForElementToBeDisplayed(5, shoppingCartSummaryPage.navigationTopLabelHeader),
                 String.format(VIEW_ERROR, "Navigation top label header"));
 
         final String navigationTopLabelHeaderText = shoppingCartSummaryPage.navigationTopLabelHeader.getText();
@@ -215,7 +201,6 @@ public class ShoppingLoggedUserSteps extends DriverFactory {
                                 .replaceAll("[$]*[^$0-9.]", ""),
                         $decimalFormat.format(productTotalOrderPriceWithTax), VALUE_ERROR);*/
                 break;
-
             case "addresses":
                 //NAVIGATION LABEL//
                 Assert.assertEquals(navigationTopLabelHeaderText.toLowerCase(),
@@ -233,19 +218,16 @@ public class ShoppingLoggedUserSteps extends DriverFactory {
                 Assert.assertEquals(shoppingCartSummaryPage.readCustomerMobilePhone.getText().toLowerCase(),
                         contextInjection.defaultCustomerMobilePhone.toLowerCase(), VALUE_ERROR);
                 break;
-
             case "shipping":
                 //NAVIGATION LABEL//
                 Assert.assertEquals(navigationTopLabelHeaderText.toLowerCase(),
                         contextInjection.shipping.toLowerCase(), VALUE_ERROR);
                 break;
-
             case "your payment method":
                 //NAVIGATION LABEL//
                 Assert.assertEquals(navigationTopLabelHeaderText.toLowerCase(),
                         contextInjection.yourPaymentMethod.toLowerCase(), VALUE_ERROR);
                 break;
-
             case "order confirmation":
                 //NAVIGATION LABEL//
                 Assert.assertEquals(navigationTopLabelHeaderText.toLowerCase(),
@@ -253,18 +235,15 @@ public class ShoppingLoggedUserSteps extends DriverFactory {
 
                 //GENERAL//
                 if (contextInjection.paymentType.toLowerCase().equals("pay by check")) {
-                    Assert.assertTrue(basePage.isDisplayed(5, shoppingCartSummaryPage.paymentByCheckSuccessful),
+                    Assert.assertTrue(basePage.waitForElementToBeDisplayed(5, shoppingCartSummaryPage.paymentByCheckSuccessful),
                             String.format(VIEW_ERROR, "Order confirmation header"));
-
                 } else if (contextInjection.paymentType.toLowerCase().equals("pay by bank wire")) {
-                    Assert.assertTrue(basePage.isDisplayed(5, shoppingCartSummaryPage.paymentByBankWireSuccessful),
+                    Assert.assertTrue(basePage.waitForElementToBeDisplayed(5, shoppingCartSummaryPage.paymentByBankWireSuccessful),
                             String.format(VIEW_ERROR, "Order confirmation header"));
-
                 } else {
                     Assert.fail(contextInjection.paymentType + ANSI_RED + "Something went wrong! Check your payment type." + ANSI_RESET);
                 }
                 break;
-
             default:
                 throw new IllegalStateException(String.format(INPUT_ERROR, shoppingSummaryTab.toUpperCase()));
         }
@@ -284,7 +263,7 @@ public class ShoppingLoggedUserSteps extends DriverFactory {
 
         //ACT//
         shoppingCartSummaryPage.orderCommentInput.sendKeys(orderComment);
-        logger.info(String.format("User comment order: %S", orderComment.toUpperCase()));
+        logger.info(String.format("User comment order: \"%S\"", orderComment.toUpperCase()));
 
         //ASSERT//
         Assert.assertEquals(shoppingCartSummaryPage.orderCommentInput.getAttribute("value").toLowerCase(),
@@ -304,15 +283,13 @@ public class ShoppingLoggedUserSteps extends DriverFactory {
                 //ASSERT//
                 Assert.assertTrue(shoppingCartSummaryPage.myCarrierRadioButton.isSelected());
                 break;
-
             case "":
                 //TODO (when possible, probably never)
                 break;
-
             default:
                 throw new IllegalStateException(String.format(INPUT_ERROR, shippingOption.toUpperCase()));
         }
-        logger.info(String.format("User chosen shipping method: %S", shippingOption.toUpperCase()));
+        logger.info(String.format("User chosen shipping method: \"%S\"", shippingOption.toUpperCase()));
 
         //ASSERT//
         Assert.assertEquals(Double.parseDouble(shoppingCartSummaryPage.readMyCarrierPrice.getText()
@@ -326,7 +303,6 @@ public class ShoppingLoggedUserSteps extends DriverFactory {
         if (!shoppingCartSummaryPage.tosCheckbox.isSelected()) {
             shoppingCartSummaryPage.tosCheckbox.click();
             logger.info("User selected Terms of Service checkbox");
-
         } else {
             logger.info("User didn't select Terms of Service checkbox(pre-selected)");
         }
@@ -347,15 +323,13 @@ public class ShoppingLoggedUserSteps extends DriverFactory {
             case "pay by check":
                 shoppingCartSummaryPage.chequePaymentBox.click();
                 break;
-
             case "pay by bank wire":
                 shoppingCartSummaryPage.bankWirePaymentBox.click();
                 break;
-
             default:
                 throw new IllegalStateException(String.format(INPUT_ERROR, contextInjection.paymentType.toUpperCase()));
         }
-        logger.info(String.format("User chosen payment method: %S", contextInjection.paymentType));
+        logger.info(String.format("User chosen payment method: \"%S\"", contextInjection.paymentType));
     }
 
     @Step("I click on I Confirm My Order button")

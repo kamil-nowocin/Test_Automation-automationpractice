@@ -19,8 +19,8 @@ import java.util.ArrayList;
 
 public class SocialMediaPageSteps extends DriverFactory {
 
-    private BasePage basePage = new BasePage();
-    private SocialMediaPage socialMediaPage = new SocialMediaPage();
+    private final BasePage basePage = new BasePage();
+    private final SocialMediaPage socialMediaPage = new SocialMediaPage();
 
     @Step("I scroll the website until I can see *{0}* logo")
     @When("I scroll the website until I can see {string} logo")
@@ -29,28 +29,24 @@ public class SocialMediaPageSteps extends DriverFactory {
         switch (logoName.toLowerCase()) {
             case "facebook":
                 basePage.scrollWebsiteToElement(socialMediaPage.facebookButton);
-                Assert.assertTrue(basePage.isDisplayed(5, socialMediaPage.facebookButton),
+                Assert.assertTrue(basePage.waitForElementToBeDisplayed(5, socialMediaPage.facebookButton),
                         String.format(VIEW_ERROR, logoName.toUpperCase()));
                 break;
-
             case "twitter":
                 basePage.scrollWebsiteToElement(socialMediaPage.twitterButton);
-                Assert.assertTrue(basePage.isDisplayed(5, socialMediaPage.twitterButton),
+                Assert.assertTrue(basePage.waitForElementToBeDisplayed(5, socialMediaPage.twitterButton),
                         String.format(VIEW_ERROR, logoName.toUpperCase()));
                 break;
-
             case "youtube":
                 basePage.scrollWebsiteToElement(socialMediaPage.youtubeButton);
-                Assert.assertTrue(basePage.isDisplayed(5, socialMediaPage.youtubeButton),
+                Assert.assertTrue(basePage.waitForElementToBeDisplayed(5, socialMediaPage.youtubeButton),
                         String.format(VIEW_ERROR, logoName.toUpperCase()));
                 break;
-
             case "google":
                 basePage.scrollWebsiteToElement(socialMediaPage.googleButton);
-                Assert.assertTrue(basePage.isDisplayed(5, socialMediaPage.googleButton),
+                Assert.assertTrue(basePage.waitForElementToBeDisplayed(5, socialMediaPage.googleButton),
                         String.format(VIEW_ERROR, logoName.toUpperCase()));
                 break;
-
             default:
                 throw new IllegalStateException(String.format(INPUT_ERROR, logoName.toUpperCase()));
         }
@@ -64,23 +60,19 @@ public class SocialMediaPageSteps extends DriverFactory {
             case "facebook":
                 socialMediaPage.facebookButton.click();
                 break;
-
             case "twitter":
                 socialMediaPage.twitterButton.click();
                 break;
-
             case "youtube":
                 socialMediaPage.youtubeButton.click();
                 break;
-
             case "google":
                 socialMediaPage.googleButton.click();
                 break;
-
             default:
                 throw new IllegalStateException(String.format(INPUT_ERROR, logoName.toUpperCase()));
         }
-        logger.info(String.format("Chosen social media platform: %S", logoName));
+        logger.info(String.format("Chosen social media platform: \"%S\"", logoName));
     }
 
     @Step("I am redirected to Selenium *{0}* profile")
@@ -91,7 +83,7 @@ public class SocialMediaPageSteps extends DriverFactory {
 
         //ACT//
         DriverFactory.getDriver().switchTo().window(browserTabs.get(1));
-        logger.info(String.format("URL was: %S\n URL expected: %S", DriverFactory.getDriver().getCurrentUrl(), logoName + ".com"));
+        logger.info(String.format("URL was: \"%S\"\n URL expected: \"%S\"", DriverFactory.getDriver().getCurrentUrl(), logoName + ".com"));
 
         //ASSERT//
         Assert.assertTrue(DriverFactory.getDriver().getCurrentUrl().contains(logoName.toLowerCase() + ".com"),

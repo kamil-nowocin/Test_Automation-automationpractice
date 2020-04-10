@@ -18,12 +18,12 @@ import org.testng.Assert;
 
 public class MainPageSteps extends DriverFactory {
 
-    private ContextInjection contextInjection;
+    private final ContextInjection contextInjection;
 
-    private BasePage basePage = new BasePage();
-    private MainPage mainPage = new MainPage();
-    private RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps(new ContextInjection());
-    private AuthenticationPageSteps authenticationPageSteps = new AuthenticationPageSteps();
+    private final BasePage basePage = new BasePage();
+    private final MainPage mainPage = new MainPage();
+    private final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps(new ContextInjection());
+    private final AuthenticationPageSteps authenticationPageSteps = new AuthenticationPageSteps();
 
     @Inject
     public MainPageSteps(ContextInjection contextInjection) {
@@ -51,7 +51,7 @@ public class MainPageSteps extends DriverFactory {
 
         //ACT//
         isPageReadyToExecuteTests = basePage.isPageReady();
-        logger.info(String.format("Page ready: %S", isPageReadyToExecuteTests));
+        logger.info(String.format("Page ready: \"%S\"", isPageReadyToExecuteTests));
 
         //ASSERT//
         Assert.assertTrue(isPageReadyToExecuteTests, PAGE_ERROR);

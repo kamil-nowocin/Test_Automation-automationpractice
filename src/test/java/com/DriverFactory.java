@@ -28,16 +28,15 @@ import java.util.concurrent.TimeUnit;
 
 public class DriverFactory extends FrameworkEnvironment {
 
-    private static ThreadLocal<WebDriver> drivers = new ThreadLocal<>();
-    private static List<WebDriver> storedDrivers = new ArrayList<>();
+    private WebDriver driver;
+    private static final ThreadLocal<WebDriver> drivers = new ThreadLocal<>();
+    private static final List<WebDriver> storedDrivers = new ArrayList<>();
 
     static {
-        Runtime.getRuntime().addShutdownHook(new Thread() {
-            public void run() {
-                storedDrivers.forEach(WebDriver::close);
-                storedDrivers.forEach(WebDriver::quit);
-            }
-        });
+        Runtime.getRuntime().addShutdownHook(new Thread(() -> {
+            storedDrivers.forEach(WebDriver::close);
+            storedDrivers.forEach(WebDriver::quit);
+        }));
     }
 
     public static WebDriver getDriver() {
@@ -54,8 +53,6 @@ public class DriverFactory extends FrameworkEnvironment {
         storedDrivers.remove(drivers.get());
         drivers.remove();
     }
-
-    private WebDriver driver;
 
     private String getBrowserName() {
         String getBrowser = System.getProperty("browser");
@@ -91,7 +88,7 @@ public class DriverFactory extends FrameworkEnvironment {
 
     protected void startBrowser() {
         printWebDriverManagerVersions(false);
-        DesiredCapabilities desiredCapabilities = null;
+        DesiredCapabilities desiredCapabilities;
         if (DriverFactory.getDriver() == null) {
             switch (getHost().toLowerCase()) {
                 case "chrome":
@@ -100,35 +97,29 @@ public class DriverFactory extends FrameworkEnvironment {
                     chromeOptions.addArguments();
                     DriverFactory.addDriver(driver = new ChromeDriver(chromeOptions));
                     break;
-
                 case "firefox":
                     WebDriverManager.firefoxdriver().setup();
                     FirefoxOptions firefoxOptions = new FirefoxOptions();
                     firefoxOptions.addArguments("");
                     DriverFactory.addDriver(driver = new FirefoxDriver(firefoxOptions));
                     break;
-
                 case "opera":
                     WebDriverManager.operadriver().arch64().version("2.45").setup();
                     OperaOptions operaOptions = new OperaOptions();
                     operaOptions.addArguments("");
                     DriverFactory.addDriver(driver = new OperaDriver(operaOptions));
                     break;
-
                 case "edge":
                     WebDriverManager.edgedriver().setup();
                     DriverFactory.addDriver(driver = new EdgeDriver());
                     break;
-
                 case "ie":
                     WebDriverManager.iedriver().setup();
                     DriverFactory.addDriver(driver = new InternetExplorerDriver());
                     break;
-
                 case "safari":
                     DriverFactory.addDriver(driver = new SafariDriver());
                     break;
-
                 case "browserstack":
                     desiredCapabilities = new DesiredCapabilities();
                     desiredCapabilities.setCapability("os", "Windows");
@@ -153,7 +144,6 @@ public class DriverFactory extends FrameworkEnvironment {
                     //https://USER_NAME:ACCESS_TOKEN@hub-cloud.browserstack.com/wd/hub <- HOST_URL (.travis.yml for more information)
                     DriverFactory.addDriver(driver = remoteWebDriver(desiredCapabilities, HOST_URL));
                     break;
-
                 default:
                     throw new IllegalStateException("This browser isn't supported yet! Sorry...");
             }

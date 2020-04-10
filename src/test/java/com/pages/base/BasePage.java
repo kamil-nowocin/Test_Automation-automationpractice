@@ -2,9 +2,7 @@ package com.pages.base;
 
 import com.DriverFactory;
 import com.FrameworkEnvironment;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriverException;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -34,8 +32,8 @@ public class BasePage extends FrameworkEnvironment {
         try {
             WebDriverWait wait = new WebDriverWait(DriverFactory.getDriver(), timeInSeconds);
             wait.until(ExpectedConditions.elementToBeClickable(webElement));
-        } catch (Exception e) {
-            logger.error(String.format("Couldn't click on element: %s", webElement));
+        } catch (NoSuchElementException e) {
+            logger.error(String.format("Couldn't click on element \"%S\" !", webElement));
         }
     }
 
@@ -44,8 +42,8 @@ public class BasePage extends FrameworkEnvironment {
         try {
             WebDriverWait wait = new WebDriverWait(DriverFactory.getDriver(), timeInSeconds);
             wait.until(ExpectedConditions.visibilityOf(webElement));
-        } catch (Exception e) {
-            logger.error(String.format("Element wasn't visible: %s!", webElement));
+        } catch (NoSuchElementException e) {
+            logger.error(String.format("Element wasn't visible \"%S\" !", webElement));
         }
     }
 
@@ -54,50 +52,56 @@ public class BasePage extends FrameworkEnvironment {
         try {
             WebDriverWait wait = new WebDriverWait(DriverFactory.getDriver(), timeInSeconds);
             wait.until(ExpectedConditions.attributeContains(webElement, attribute, value));
-        } catch (Exception e) {
-            logger.error(String.format("Could't find attribute: %S on web element: %S", attribute, webElement));
+        } catch (NotFoundException e) {
+            logger.error(String.format("Could't find attribute \"%S\" on element \"%S\" !", attribute, webElement));
         }
     }
 
-    public boolean isDisplayed(int timeInSeconds, WebElement webElement) throws
+    public boolean waitForElementToBeDisplayed(int timeInSeconds, WebElement webElement) throws
             NoSuchElementException, WebDriverException {
         try {
             WebDriverWait wait = new WebDriverWait(DriverFactory.getDriver(), timeInSeconds);
             wait.until(ExpectedConditions.visibilityOf(webElement));
-            return webElement.isDisplayed();
-        } catch (Exception e) {
-            logger.error(String.format("Couldn't display element: %s ", webElement));
+            return true;
+        } catch (NoSuchElementException e) {
+            logger.error(String.format("Couldn't display element \"%S\" !", webElement));
             return false;
         }
     }
 
-    public void selectFromDropdownByIndex(int value, WebElement webElement) throws
-            NoSuchElementException {
+    public boolean isElementDisplayed(By selector) throws NoSuchElementException {
+        try {
+            DriverFactory.getDriver().findElement(selector);
+            return true;
+        } catch (NoSuchElementException e) {
+            return false;
+        }
+    }
+
+    public void selectFromDropdownByIndex(int value, WebElement webElement) throws NoSuchElementException {
         try {
             Select dropdown = new Select(webElement);
             dropdown.selectByIndex(value);
-        } catch (Exception e) {
-            logger.error(String.format("Couldn't select element: %s ", webElement));
+        } catch (NoSuchElementException e) {
+            logger.error(String.format("Couldn't select \"%S\" from element \"%S\" !", value, webElement));
         }
     }
 
-    public void selectFromDropdownByText(String textValue, WebElement webElement) throws
-            NoSuchElementException {
+    public void selectFromDropdownByText(String textValue, WebElement webElement) throws NoSuchElementException {
         try {
             Select dropdown = new Select(webElement);
             dropdown.selectByVisibleText(textValue);
-        } catch (Exception e) {
-            logger.error(String.format("Couldn't select element: %s ", webElement));
+        } catch (NoSuchElementException e) {
+            logger.error(String.format("Couldn't select \"%S\" from element \"%S\" !", textValue, webElement));
         }
     }
 
-    public void selectFromDropdownByValue(String textValue, WebElement webElement) throws
-            NoSuchElementException {
+    public void selectFromDropdownByValue(String textValue, WebElement webElement) throws NoSuchElementException {
         try {
             Select dropdown = new Select(webElement);
             dropdown.selectByValue(textValue);
-        } catch (Exception e) {
-            logger.error(String.format("Couldn't select element: %s ", webElement));
+        } catch (NoSuchElementException e) {
+            logger.error(String.format("Couldn't select \"%S\" from element \"%S\" !", textValue, webElement));
         }
     }
 
@@ -133,7 +137,7 @@ public class BasePage extends FrameworkEnvironment {
     }
 
     public String errorValidator(WebElement webElement) {
-        waitForElementToBeVisible(TIMEOUT, webElement);
+        waitForElementToBeDisplayed(TIMEOUT, webElement);
         return webElement.getText();
     }
 

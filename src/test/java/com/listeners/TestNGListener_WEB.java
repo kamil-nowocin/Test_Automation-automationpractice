@@ -28,7 +28,7 @@ public class TestNGListener_WEB extends FrameworkEnvironment implements ITestLis
         deleteOldLogs();
         logger.info(StringUtils.repeat("#", 110));
         logger.info(StringUtils.repeat("=", 31)
-                + "STARTING TEST SUITE " + iTestContext.getStartDate() + StringUtils.repeat("=", 31));
+                + "STARTING TEST SUITE " + iTestContext.getStartDate() + StringUtils.repeat("=", 30));
         logger.info(StringUtils.repeat("#", 110));
     }
 
@@ -36,7 +36,7 @@ public class TestNGListener_WEB extends FrameworkEnvironment implements ITestLis
     public synchronized void onFinish(ITestContext iTestContext) {
         logger.info(StringUtils.repeat("#", 110));
         logger.info(StringUtils.repeat("=", 32)
-                + "END OF TEST SUITE " + iTestContext.getEndDate() + StringUtils.repeat("=", 32));
+                + "END OF TEST SUITE " + iTestContext.getEndDate() + StringUtils.repeat("=", 31));
         logger.info(StringUtils.repeat("#", 110));
         FrameworkEnvironment.allureWriteExecutors();
         FrameworkEnvironment.allureWriteProperties();

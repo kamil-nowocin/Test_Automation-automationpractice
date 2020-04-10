@@ -17,13 +17,13 @@ import org.testng.Assert;
 
 public class AuthenticationPageSteps extends FrameworkEnvironment {
 
-    private BasePage basePage = new BasePage();
-    private AuthenticationPage authenticationPage = new AuthenticationPage();
+    private final BasePage basePage = new BasePage();
+    private final AuthenticationPage authenticationPage = new AuthenticationPage();
 
     @Step("I can see login form")
     @Given("I can see login form")
     public void iCanSeeLoginForm() throws Throwable {
-        Assert.assertTrue(basePage.isDisplayed(5, authenticationPage.registeredPane),
+        Assert.assertTrue(basePage.waitForElementToBeDisplayed(5, authenticationPage.registeredPane),
                 String.format(VIEW_ERROR, "Login form"));
     }
 
@@ -32,7 +32,7 @@ public class AuthenticationPageSteps extends FrameworkEnvironment {
     public void iEnterLogin(String login) throws Throwable {
         //ACT//
         authenticationPage.registeredEmailInput.sendKeys(login);
-        logger.info(String.format("User login: %S", login));
+        logger.info(String.format("User login: \"%S\"", login));
 
         //ASSERT//
         Assert.assertEquals(authenticationPage.registeredEmailInput.getAttribute("value").toLowerCase(),
@@ -44,7 +44,7 @@ public class AuthenticationPageSteps extends FrameworkEnvironment {
     public void iEnterPassword(String password) throws Throwable {
         //ACT//
         authenticationPage.registeredPasswordInput.sendKeys(password);
-        logger.info(String.format("User password: %S", password));
+        logger.info(String.format("User password: \"%S\"", password));
 
         //ASSERT//
         Assert.assertEquals(authenticationPage.registeredPasswordInput.getAttribute("value").toLowerCase(),

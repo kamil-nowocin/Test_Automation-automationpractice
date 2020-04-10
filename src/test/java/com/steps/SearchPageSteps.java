@@ -23,16 +23,16 @@ import java.util.List;
 
 public class SearchPageSteps extends FrameworkEnvironment {
 
-    private BasePage basePage = new BasePage();
-    private MainPage mainPage = new MainPage();
-    private SearchPage searchPage = new SearchPage();
+    private final BasePage basePage = new BasePage();
+    private final MainPage mainPage = new MainPage();
+    private final SearchPage searchPage = new SearchPage();
 
     @Step("I search for phrase *{0}*")
     @When("I search for phrase {string}")
     public void iSearchForPhrase(String searchPhrase) throws Throwable {
         //ACT//
         mainPage.searchBoxInput.sendKeys(searchPhrase);
-        logger.info(String.format("User search for: %S", searchPhrase));
+        logger.info(String.format("User search for: \"%S\"", searchPhrase));
 
         //ASSERT//
         Assert.assertEquals(mainPage.searchBoxInput.getAttribute("value").toLowerCase(),
@@ -53,10 +53,10 @@ public class SearchPageSteps extends FrameworkEnvironment {
 
         //ACT//
         if (expectedCountOfResults.equals("0")) {
-            Assert.assertTrue(basePage.isDisplayed(5, searchPage.noResultsWereFoundHeader),
+            Assert.assertTrue(basePage.waitForElementToBeDisplayed(5, searchPage.noResultsWereFoundHeader),
                     String.format(VIEW_ERROR, "No results were found header"));
         }
-        logger.info(String.format("Found results: %S, expected: %S", actualCountOfResults, expectedCountOfResults));
+        logger.info(String.format("Found results: \"%S\", expected: \"%S\"", actualCountOfResults, expectedCountOfResults));
 
         //ASSERT//
         Assert.assertEquals(actualCountOfResults, expectedCountOfResults, String.format(RESULTS_ERROR,
@@ -78,9 +78,8 @@ public class SearchPageSteps extends FrameworkEnvironment {
                     Assert.assertTrue(productName.getText().toLowerCase().contains(singlePhrase.toLowerCase()), SEARCH_ERROR);
                 }
             }
-
         } else {
-            Assert.assertTrue(basePage.isDisplayed(5, searchPage.noResultsWereFoundHeader),
+            Assert.assertTrue(basePage.waitForElementToBeDisplayed(5, searchPage.noResultsWereFoundHeader),
                     String.format(VIEW_ERROR, "No result header"));
         }
     }
@@ -93,23 +92,19 @@ public class SearchPageSteps extends FrameworkEnvironment {
             case "price: lowest first":
                 basePage.selectFromDropdownByValue("price:asc", searchPage.sortByDropdown);
                 break;
-
             case "price: highest first":
                 basePage.selectFromDropdownByValue("price:desc", searchPage.sortByDropdown);
                 break;
-
             case "product name: a to z":
                 basePage.selectFromDropdownByValue("name:asc", searchPage.sortByDropdown);
                 break;
-
             case "product name: z to a":
                 basePage.selectFromDropdownByValue("name:desc", searchPage.sortByDropdown);
                 break;
-
             default:
                 throw new IllegalStateException(String.format(INPUT_ERROR, sortBy.toUpperCase()));
         }
-        logger.info(String.format("Chosen sort option: %S", sortBy));
+        logger.info(String.format("Chosen sort option: \"%S\"", sortBy));
 
         //ASSERT//
         Assert.assertEquals(searchPage.readSortByDropdown.getText().toLowerCase(), sortBy.toLowerCase(), VALUE_ERROR);
@@ -122,7 +117,7 @@ public class SearchPageSteps extends FrameworkEnvironment {
         List<String> arrayList = new ArrayList<>();
 
         //ACT//
-        logger.info(String.format("Actual sort option: %S", sortedBy));
+        logger.info(String.format("Actual sort option: \"%S\"", sortedBy));
         switch (sortedBy.toLowerCase()) {
             case "price: lowest first":
                 for (WebElement productPrices : searchPage.productPrices) {
