@@ -1,0 +1,24 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+15:19:54 DEBUG io.github.bonigarcia.wdm.Preferences - Preference chrome=81 (valid until 2020-04-20 15:17:59)
+15:19:54 DEBUG io.github.bonigarcia.wdm.Preferences - Preference chrome81=81.0.4044.69 (valid until 2020-04-20 15:17:59)
+15:19:54 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 81.0.4044.69 (since Google Chrome 81 is installed in your machine)
+15:19:54 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 81.0.4044.69 found in cache
+15:19:54 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.m2/repository/webdriver/chromedriver/linux64/81.0.4044.69/chromedriver
+15:19:54 INFO  com.steps.Hooks - Chosen executor: "CHROME"
+15:19:54 INFO  com.steps.Hooks - ================================================ TEST STARTED ================================================
+15:19:54 INFO  com.steps.Hooks - [34mTEST NAME: [US-444]/[1] I WOULD LIKE TO SEE REGISTRATION ERROR, WHEN I DON'T FILL FIRST NAME INPUT[0m
+15:19:56 INFO  com.steps.Hooks - Page ready: "TRUE"
+15:19:57 INFO  com.steps.Hooks - User valid email: "F91F7GIBBEDGALE@AOL.COM"
+15:20:29 INFO  com.steps.Hooks - [31mTEST RETRY (1/1): [US-444]/[1] I WOULD LIKE TO SEE REGISTRATION ERROR, WHEN I DON'T FILL FIRST NAME INPUT[0m
+15:20:29 DEBUG io.github.bonigarcia.wdm.Preferences - Preference chrome=81 (valid until 2020-04-20 15:17:59)
+15:20:29 DEBUG io.github.bonigarcia.wdm.Preferences - Preference chrome81=81.0.4044.69 (valid until 2020-04-20 15:17:59)
+15:20:29 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 81.0.4044.69 (since Google Chrome 81 is installed in your machine)
+15:20:29 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 81.0.4044.69 found in cache
+15:20:29 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.m2/repository/webdriver/chromedriver/linux64/81.0.4044.69/chromedriver
+15:20:29 INFO  com.steps.Hooks - Chosen executor: "CHROME"
+15:20:29 INFO  com.steps.Hooks - ================================================ TEST STARTED ================================================
+15:20:29 INFO  com.steps.Hooks - [34mTEST NAME: [US-444]/[1] I WOULD LIKE TO SEE REGISTRATION ERROR, WHEN I DON'T FILL FIRST NAME INPUT[0m
+15:20:31 INFO  com.steps.Hooks - Page ready: "TRUE"
+15:20:33 INFO  com.steps.Hooks - User valid email: "40462BAREFRANCIS@COMCAST.NET"
+15:21:04 INFO  com.steps.Hooks - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+15:21:05 ERROR com.steps.Hooks - org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //form[@id='create-account_form']' (tried for 5 second(s) with 500 milliseconds interval)
