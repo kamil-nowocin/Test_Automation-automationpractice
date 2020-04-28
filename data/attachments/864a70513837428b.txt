@@ -1,0 +1,34 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+15:28:39 DEBUG io.github.bonigarcia.wdm.Preferences - Preference chrome=81 (valid until 2020-04-29 15:24:29)
+15:28:39 DEBUG io.github.bonigarcia.wdm.Preferences - Preference chrome81=81.0.4044.69 (valid until 2020-04-29 15:24:29)
+15:28:39 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 81.0.4044.69 (since Google Chrome 81 is installed in your machine)
+15:28:39 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 81.0.4044.69 found in cache
+15:28:39 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.m2/repository/webdriver/chromedriver/linux64/81.0.4044.69/chromedriver
+15:28:39 INFO  com.steps.Hooks - Chosen executor: "CHROME"
+15:28:39 INFO  com.steps.Hooks - ================================================ TEST STARTED ================================================
+15:28:39 INFO  com.steps.Hooks - [34mTEST NAME: [US-555]/[8] I WOULD LIKE TO USE SEARCH BOX AND BE ABLE TO SEE RESULTS SORTED BY: "PRICE: LOWEST FIRST"[0m
+15:28:41 INFO  com.steps.Hooks - Page ready: "TRUE"
+15:28:41 INFO  com.steps.Hooks - User search for: "PRINTED DRESS"
+15:28:42 INFO  com.steps.Hooks - Found results: "5", expected: "5"
+15:28:43 INFO  com.steps.Hooks - Chosen sort option: "PRICE: LOWEST FIRST"
+15:28:43 INFO  com.steps.Hooks - Actual sort option: "PRICE: LOWEST FIRST"
+15:28:43 INFO  com.steps.Hooks - [31mTEST RETRY (1/1): [US-555]/[8] I WOULD LIKE TO USE SEARCH BOX AND BE ABLE TO SEE RESULTS SORTED BY: "PRICE: LOWEST FIRST"[0m
+15:28:43 DEBUG io.github.bonigarcia.wdm.Preferences - Preference chrome=81 (valid until 2020-04-29 15:24:29)
+15:28:43 DEBUG io.github.bonigarcia.wdm.Preferences - Preference chrome81=81.0.4044.69 (valid until 2020-04-29 15:24:29)
+15:28:43 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 81.0.4044.69 (since Google Chrome 81 is installed in your machine)
+15:28:43 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 81.0.4044.69 found in cache
+15:28:43 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.m2/repository/webdriver/chromedriver/linux64/81.0.4044.69/chromedriver
+15:28:44 INFO  com.steps.Hooks - Chosen executor: "CHROME"
+15:28:44 INFO  com.steps.Hooks - ================================================ TEST STARTED ================================================
+15:28:44 INFO  com.steps.Hooks - [34mTEST NAME: [US-555]/[8] I WOULD LIKE TO USE SEARCH BOX AND BE ABLE TO SEE RESULTS SORTED BY: "PRICE: LOWEST FIRST"[0m
+15:28:46 INFO  com.steps.Hooks - Page ready: "TRUE"
+15:28:46 INFO  com.steps.Hooks - User search for: "PRINTED DRESS"
+15:28:47 INFO  com.steps.Hooks - Found results: "5", expected: "5"
+15:29:02 INFO  com.steps.Hooks - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+15:29:03 ERROR com.steps.Hooks - org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 15.000
+  (Session info: chrome=81.0.4044.129)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'localhost', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.4.0-101-generic', java.version: '1.8.0_151'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.129, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: /tmp/.com.google.Chrome.nSQbCz}, goog:chromeOptions: {debuggerAddress: localhost:43384}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: cbf0a7f27e976b59466cff5c6c3095a8
