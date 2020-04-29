@@ -6,13 +6,13 @@
       "name" : "Results which have been found didn't match expected PRICE: HIGHEST FIRST sorting results!: Lists differ at element [1]: $30.50 != $28.98 expected [$30.50] but found [$28.98]",
       "children" : [ {
         "name" : "[US-555]/[7] I would like to use search box and be able to see results sorted by: \"Price: Highest first\"",
-        "uid" : "4912dbc190289963",
+        "uid" : "a8ed051203f7dc79",
         "parentUid" : "3f8c16955563a5b1b79fc6371c363fab",
         "status" : "failed",
         "time" : {
-          "start" : 1588087714647,
-          "stop" : 1588087719017,
-          "duration" : 4370
+          "start" : 1588174208100,
+          "stop" : 1588174212812,
+          "duration" : 4712
         },
         "flaky" : false,
         "newFailed" : false,
@@ -20,16 +20,33 @@
       } ],
       "uid" : "3f8c16955563a5b1b79fc6371c363fab"
     }, {
+      "name" : "Results which have been found didn't match expected PRICE: LOWEST FIRST sorting results!: Lists differ at element [2]: $28.98 != $30.50 expected [$28.98] but found [$30.50]",
+      "children" : [ {
+        "name" : "[US-555]/[8] I would like to use search box and be able to see results sorted by: \"Price: Lowest first\"",
+        "uid" : "445b8344774cd324",
+        "parentUid" : "f0b18b6dd90c4522e3ae3fe0e12c66f2",
+        "status" : "failed",
+        "time" : {
+          "start" : 1588174217531,
+          "stop" : 1588174222109,
+          "duration" : 4578
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "f0b18b6dd90c4522e3ae3fe0e12c66f2"
+    }, {
       "name" : "null",
       "children" : [ {
         "name" : "As a developer I'd like to see working POC with .xlsx file",
-        "uid" : "8eb81e1809128c87",
+        "uid" : "1b218bda8f040c17",
         "parentUid" : "666d1a31450af3ae8459f14f07f9a1b4",
         "status" : "failed",
         "time" : {
-          "start" : 1588087809162,
-          "stop" : 1588087809999,
-          "duration" : 837
+          "start" : 1588174285529,
+          "stop" : 1588174286496,
+          "duration" : 967
         },
         "flaky" : false,
         "newFailed" : false,
@@ -38,27 +55,6 @@
       "uid" : "666d1a31450af3ae8459f14f07f9a1b4"
     } ],
     "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
-  }, {
-    "name" : "Test defects",
-    "children" : [ {
-      "name" : "timeout: Timed out receiving message from renderer: 15.000\n  (Session info: chrome=81.0.4044.129)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'localhost', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.4.0-101-generic', java.version: '1.8.0_151'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.129, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: /tmp/.com.google.Chrome.nSQbCz}, goog:chromeOptions: {debuggerAddress: localhost:43384}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: cbf0a7f27e976b59466cff5c6c3095a8",
-      "children" : [ {
-        "name" : "[US-555]/[8] I would like to use search box and be able to see results sorted by: \"Price: Lowest first\"",
-        "uid" : "4fc050e7043d9422",
-        "parentUid" : "9a3933a112e5c2c8f7218449a25a10ae",
-        "status" : "broken",
-        "time" : {
-          "start" : 1588087724531,
-          "stop" : 1588087743340,
-          "duration" : 18809
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "9a3933a112e5c2c8f7218449a25a10ae"
-    } ],
-    "uid" : "bdbf199525818fae7a8651db9eafe741"
   } ],
   "name" : "categories"
 }
