@@ -1,0 +1,32 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+15:38:58 DEBUG io.github.bonigarcia.wdm.Preferences - Preference chrome=81 (valid until 2020-05-01 15:25:50)
+15:38:58 DEBUG io.github.bonigarcia.wdm.Preferences - Preference chrome81=81.0.4044.69 (valid until 2020-05-01 15:25:50)
+15:38:58 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 81.0.4044.69 (since Google Chrome 81 is installed in your machine)
+15:38:58 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 81.0.4044.69 found in cache
+15:38:58 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.m2/repository/webdriver/chromedriver/linux64/81.0.4044.69/chromedriver
+15:38:58 INFO  com.steps.Hooks - Chosen executor: "CHROME"
+15:38:58 INFO  com.steps.Hooks - ================================================ TEST STARTED ================================================
+15:38:58 INFO  com.steps.Hooks - [34mTEST NAME: [US-555]/[5] I WOULD LIKE TO USE SEARCH BOX AND BE ABLE TO SEE RESULTS SORTED BY: "PRODUCT NAME: Z TO A"[0m
+15:39:04 INFO  com.steps.Hooks - [31mTEST RETRY (1/1): [US-555]/[5] I WOULD LIKE TO USE SEARCH BOX AND BE ABLE TO SEE RESULTS SORTED BY: "PRODUCT NAME: Z TO A"[0m
+15:39:04 DEBUG io.github.bonigarcia.wdm.Preferences - Preference chrome=81 (valid until 2020-05-01 15:25:50)
+15:39:04 DEBUG io.github.bonigarcia.wdm.Preferences - Preference chrome81=81.0.4044.69 (valid until 2020-05-01 15:25:50)
+15:39:04 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 81.0.4044.69 (since Google Chrome 81 is installed in your machine)
+15:39:04 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 81.0.4044.69 found in cache
+15:39:04 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.m2/repository/webdriver/chromedriver/linux64/81.0.4044.69/chromedriver
+15:39:05 INFO  com.steps.Hooks - Chosen executor: "CHROME"
+15:39:05 INFO  com.steps.Hooks - ================================================ TEST STARTED ================================================
+15:39:05 INFO  com.steps.Hooks - [34mTEST NAME: [US-555]/[5] I WOULD LIKE TO USE SEARCH BOX AND BE ABLE TO SEE RESULTS SORTED BY: "PRODUCT NAME: Z TO A"[0m
+15:39:19 INFO  com.steps.Hooks - Page ready: "TRUE"
+15:39:19 INFO  com.steps.Hooks - User search for: "PRINTED DRESS"
+15:39:26 INFO  com.steps.Hooks - Found results: "5", expected: "5"
+15:39:31 INFO  com.steps.Hooks - Chosen sort option: "PRODUCT NAME: Z TO A"
+15:39:46 INFO  com.steps.Hooks - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+15:39:46 ERROR com.steps.Hooks - org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='uniform-selectProductSort']//span"}
+  (Session info: chrome=81.0.4044.129)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'localhost', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.4.0-101-generic', java.version: '1.8.0_151'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.129, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: /tmp/.com.google.Chrome.lbyuPm}, goog:chromeOptions: {debuggerAddress: localhost:35341}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 30dd0bd3b124576d896c8f7464520ccd
+*** Element info: {Using=xpath, value=//div[@id='uniform-selectProductSort']//span}
