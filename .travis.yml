@@ -1,37 +1,36 @@
 os: linux
 language: java
-sudo: required
+jdk:
+  - oraclejdk14
 env:
   matrix:
     - DISPLAY=:99.0
   global:
     secure: tF5T5rY7e3P3FPG6VZiZz6ljrSc2rxAM6EuTJh7mlmBuuCCY/oBdhds2hqr2MD8uuDoQOGkmIm+tEgiJuqkDQHHCLoqDC5Pft7wmVszObH9OEM9AGMDQ2bbXGGUeKux1iRs8GhjB2Umyc7mxpbNwidhb1kyXcPHahW3C/xykv3wTsvDes91AD4xbhhTL2jfBsGD5lgf6wG0lDN2Im6h/Lnndv0rka2lxnSjknwS7ckAPpjaCKlVcsMFu5qfrYUk2H5g2Xzdhi9sa9YDWLIPoeQQwOmBYlYRw0xBT2yNkqx/rDC50D+m9RHHE0vtMhNZE2hfiMHTcq258n+e6h6BrztosDfj007/N3HTrYN7b5SnPscHKGLuy43EQiJsXNORIhF7sKugA182/5kCoiAVYazBS3dRD+DreqaIEliYb6LI62pkAoZ/SJJfECIPNFt535xyC1xK9SAEQMXh9ZPYU14KUclvpjr6M1hSKXwAqJ7wBwI8BVYW4HlHjAqLH9BMG6j1jPate8LPAhgi3Co3oN81QTT09GiJ6zSyl4HXp8R6jQdLd6AQBv3+4nXbL8Vb4IwdVxzGj6/XlBWmZ7xZnw5DPaRLseFJIymDJRSdT6UZMNvexWRihElexrHRIK4HqJSgIGMqk37Ok4pJUUbKjyljcPBM9Mfq5GvJTlA6RdPw=
-dist: trusty
+# LINUX VERSION
+dist: bionic
+# GUI & VIRTUAL BROWSER
+services:
+  - xvfb
 notifications:
   email:
     on_success: never
-    on_cancel: never
-    on_error: always
-    on_start: never
     on_failure: always
 addons:
   chrome: stable
+# DOWNLOAD AND INSTALL ALL REQUIRED DRIVERS
 install:
-  #DOWNLOAD AND INSTALL ALL REQUIRED DRIVERS
-  - wget -N http://chromedriver.storage.googleapis.com/77.0.3865.40/chromedriver_linux64.zip -P ~/
+  - wget -N http://chromedriver.storage.googleapis.com/81.0.4044.138/chromedriver_linux64.zip -P ~/
   - unzip ~/chromedriver_linux64.zip -d ~/
   - rm ~/chromedriver_linux64.zip
   - npm install -g allure-commandline --save-dev
 before_script:
-  #GUI & VIRTUAL BROWSER
-  - sh -e /etc/init.d/xvfb start
-  #GIVE Xvfb TIME TO START
-  - sleep 3
+  # - sh -e /etc/init.d/xvfb start
   - echo ========================================================================
   - echo =========================BUILD EXECUTION STARTED========================
   - echo ========================================================================
+# RUN GRADLE
 script:
-  #RUN GRADLE
   - ./gradlew test -Dtravis.buildNumber=$TRAVIS_BUILD_NUMBER -Dtravis.buildURL=$TRAVIS_BUILD_WEB_URL -Dtravis.branch=$TRAVIS_BRANCH -Dtravis.osName=$TRAVIS_OS_NAME -Dtravis.jdkVersion=$TRAVIS_JDK_VERSION
   #THIS COMMAND WOULD RUN TESTS ON BROWSERSTACK
   #- ./gradlew test -Dselenium.host=browserstack -Dselenium.hostURL=https://$BROWSERSTACK_USER_NAME:$ACCESS_TOKEN@hub-cloud.browserstack.com/wd/hub -Dbrowser=chrome

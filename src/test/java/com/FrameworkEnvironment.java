@@ -95,7 +95,7 @@ public class FrameworkEnvironment {
     protected static final String OS_NAME = System.getProperty
             ("travis.osName", "Build was made on localhost");//DON'T KNOW HOW TO SET OS TYPE WHEN BUILD RUNS ON LOCAL MACHINE OR ONLINE
     protected static final String JAVA_VERSION = System.getProperty
-            ("travis.jdkVersion", "Build was made on localhost");//DOESN'T WORK, IDK WHY
+            ("travis.jdkVersion", "Build was made on localhost");
     protected static final String BROWSER = System.getProperty
             ("browser", "Chrome");
     protected static final String HOST = System.getProperty
