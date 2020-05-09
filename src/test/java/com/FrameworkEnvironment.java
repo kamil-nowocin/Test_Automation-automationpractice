@@ -61,27 +61,29 @@ public class FrameworkEnvironment {
     protected static final String HOME_URL = "http://automationpractice.com";
     protected static final String TODAY_DATE = new SimpleDateFormat("yyyy-MM-dd HH:ss").format(new Date());
 
-    //MESSAGES//
+    //EXPECTED HEADERS//
     protected static final String WELCOME_MESSAGE =
             "Welcome to your account. Here you can manage all of your personal information and orders.";
+
+    //ASSERTION MESSAGES//
     protected static final String PAGE_URL_DIDNT_CONTAIN =
-            "Following page URL didn't contain this web address %S.com!";
+            "Following page URL didn't contain expected URL %s.com!";
     protected static final String MESSAGE_DIDNT_CONTAIN =
-            "Warning message didn't contain %S!";
+            "Warning message didn't contain \"%S\"!";
     protected static final String PAGE_ERROR =
             "Page wasn't ready to execute tests!";
     protected static final String RESULTS_ERROR =
-            "Results which have been found %S, didn't match expected number of results %s!";
+            "Number of results which have been found didn't match expected number of results! \n Found: %S \n Expected: %S";
     protected static final String SEARCH_ERROR =
-            "Results which have been found didn't match expected item names!";
+            "Names of results which have been found didn't match expected names! ";
     protected static final String SORTING_ERROR =
-            "Results which have been found didn't match expected %S sorting results!";
+            "Results which have been found didn't match expected sorting result %S";
     protected static final String VIEW_ERROR =
-            "Element wasn't displayed %S!";
+            "Element \"%S\" wasn't displayed!";
     protected static final String INPUT_ERROR =
-            "Invalid input type! %S is not supported!";
+            "Invalid input type! \"%S\" is not supported!";
     protected static final String VALUE_ERROR =
-            "Value didn't match expected value!";
+            "Value which have been found didn't match expected value!";
     protected static final String _21VOID =
             "Upssss, something went really bad! Even Michael Scofield couldn't have predicted that error! :)";
 
@@ -170,7 +172,7 @@ public class FrameworkEnvironment {
 
     protected void localSaveScreenshotPNG(Scenario scenario) throws IOException {
         byte[] screenshot = ((TakesScreenshot) DriverFactory.getDriver()).getScreenshotAs(OutputType.BYTES);
-        scenario.embed(screenshot, "image/png", "SCREENSHOT");
+        scenario.attach(screenshot, "image/png", "SCREENSHOT");
         File scrFile = ((TakesScreenshot) DriverFactory.getDriver()).getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(scrFile, new File(getCurrentPath()
                 + File.separator
