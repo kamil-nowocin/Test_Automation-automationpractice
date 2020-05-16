@@ -6,13 +6,13 @@
       "name" : "Results which have been found didn't match expected sorting result PRICE: HIGHEST FIRST: Lists differ at element [1]: $30.50 != $28.98 expected [$30.50] but found [$28.98]",
       "children" : [ {
         "name" : "[US-555]/[7] I would like to use search box and be able to see results sorted by: \"Price: Highest first\"",
-        "uid" : "7f57aa5d71aaa0e9",
+        "uid" : "acf667aea61333f9",
         "parentUid" : "3246160de76fc0de742a06aad5432502",
         "status" : "failed",
         "time" : {
-          "start" : 1589557155434,
-          "stop" : 1589557160908,
-          "duration" : 5474
+          "start" : 1589643588111,
+          "stop" : 1589643592788,
+          "duration" : 4677
         },
         "flaky" : false,
         "newFailed" : false,
@@ -23,13 +23,13 @@
       "name" : "Results which have been found didn't match expected sorting result PRICE: LOWEST FIRST: Lists differ at element [2]: $28.98 != $30.50 expected [$28.98] but found [$30.50]",
       "children" : [ {
         "name" : "[US-555]/[8] I would like to use search box and be able to see results sorted by: \"Price: Lowest first\"",
-        "uid" : "7289cdf114ed2330",
+        "uid" : "aed7d13cd93d87c9",
         "parentUid" : "06135fb1e9171a4c5ee185041330339b",
         "status" : "failed",
         "time" : {
-          "start" : 1589557166176,
-          "stop" : 1589557170197,
-          "duration" : 4021
+          "start" : 1589643598507,
+          "stop" : 1589643602776,
+          "duration" : 4269
         },
         "flaky" : false,
         "newFailed" : false,
@@ -37,16 +37,33 @@
       } ],
       "uid" : "06135fb1e9171a4c5ee185041330339b"
     }, {
+      "name" : "Following page URL didn't contain expected URL TWITTER.com! expected [true] but found [false]",
+      "children" : [ {
+        "name" : "[US-777]/[2] I click on social media \"Twitter\" logo",
+        "uid" : "d14839a3fa6b917e",
+        "parentUid" : "2fd037f9b6c599fb1d3939736e9dd855",
+        "status" : "failed",
+        "time" : {
+          "start" : 1589643630860,
+          "stop" : 1589643633466,
+          "duration" : 2606
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "2fd037f9b6c599fb1d3939736e9dd855"
+    }, {
       "name" : "null",
       "children" : [ {
         "name" : "As a developer I'd like to see working POC with .xlsx file",
-        "uid" : "e6dfa88307716ffa",
+        "uid" : "ee31e7e8d04fefa1",
         "parentUid" : "666d1a31450af3ae8459f14f07f9a1b4",
         "status" : "failed",
         "time" : {
-          "start" : 1589557235202,
-          "stop" : 1589557236739,
-          "duration" : 1537
+          "start" : 1589643642240,
+          "stop" : 1589643644157,
+          "duration" : 1917
         },
         "flaky" : false,
         "newFailed" : false,
@@ -55,6 +72,44 @@
       "uid" : "666d1a31450af3ae8459f14f07f9a1b4"
     } ],
     "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  }, {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "unknown error: failed to close window in 20 seconds\n  (Session info: chrome=81.0.4044.138)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-6807203e-dcda-49e4-b1b7-93aacb65daeb', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.0.0-1031-gcp', java.version: '11.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.138, chrome: {chromedriverVersion: 81.0.4044.138 (8c6c7ba89cc9..., userDataDir: /tmp/.com.google.Chrome.z1NNpv}, goog:chromeOptions: {debuggerAddress: localhost:35149}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: d273b4ef4f7b857e2634b34f112f57bb",
+      "children" : [ {
+        "name" : "Teardown Test Class",
+        "uid" : "9990abaaccf113d4",
+        "parentUid" : "c67adba64d2f0b921cb5ae1c5ab3dd79",
+        "status" : "broken",
+        "time" : {
+          "start" : 1589643630848,
+          "stop" : 1589643630849,
+          "duration" : 1
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "c67adba64d2f0b921cb5ae1c5ab3dd79"
+    }, {
+      "name" : "Driver has already been initialized. Quit it before using this method!",
+      "children" : [ {
+        "name" : "Setting up Test Class",
+        "uid" : "4a6be643d94a7d68",
+        "parentUid" : "996bb0e21704b2fef70fea91b6179c03",
+        "status" : "broken",
+        "time" : {
+          "start" : 1589643633488,
+          "stop" : 1589643633503,
+          "duration" : 15
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "996bb0e21704b2fef70fea91b6179c03"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
   } ],
   "name" : "categories"
 }
