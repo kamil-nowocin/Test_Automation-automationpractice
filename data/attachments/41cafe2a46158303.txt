@@ -1,0 +1,24 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+15:45:08 DEBUG io.github.bonigarcia.wdm.Preferences - Preference chrome=83 (valid until 2020-05-22 15:38:28)
+15:45:08 DEBUG io.github.bonigarcia.wdm.Preferences - Preference chrome83=83.0.4103.39 (valid until 2020-05-22 15:38:28)
+15:45:08 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 83.0.4103.39 (since Google Chrome 83 is installed in your machine)
+15:45:08 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 83.0.4103.39 found in cache
+15:45:08 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.m2/repository/webdriver/chromedriver/linux64/83.0.4103.39/chromedriver
+15:45:09 INFO  com.steps.Hooks - Chosen executor: "CHROME"
+15:45:09 INFO  com.steps.Hooks - ================================================ TEST STARTED ================================================
+15:45:09 INFO  com.steps.Hooks - [34mTEST NAME: [US-444]/[6] I WOULD LIKE TO SEE REGISTRATION ERROR, WHEN I DON'T FILL CITY INPUT[0m
+15:45:10 INFO  com.steps.Hooks - Page ready: "TRUE"
+15:45:13 INFO  com.steps.Hooks - User valid email: "E2035NEXTDISGUISE@ATT.NET"
+15:45:45 INFO  com.steps.Hooks - [31mTEST RETRY (1/1): [US-444]/[6] I WOULD LIKE TO SEE REGISTRATION ERROR, WHEN I DON'T FILL CITY INPUT[0m
+15:45:45 DEBUG io.github.bonigarcia.wdm.Preferences - Preference chrome=83 (valid until 2020-05-22 15:38:28)
+15:45:45 DEBUG io.github.bonigarcia.wdm.Preferences - Preference chrome83=83.0.4103.39 (valid until 2020-05-22 15:38:28)
+15:45:45 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 83.0.4103.39 (since Google Chrome 83 is installed in your machine)
+15:45:45 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 83.0.4103.39 found in cache
+15:45:45 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.m2/repository/webdriver/chromedriver/linux64/83.0.4103.39/chromedriver
+15:45:46 INFO  com.steps.Hooks - Chosen executor: "CHROME"
+15:45:46 INFO  com.steps.Hooks - ================================================ TEST STARTED ================================================
+15:45:46 INFO  com.steps.Hooks - [34mTEST NAME: [US-444]/[6] I WOULD LIKE TO SEE REGISTRATION ERROR, WHEN I DON'T FILL CITY INPUT[0m
+15:45:49 INFO  com.steps.Hooks - Page ready: "TRUE"
+15:45:52 INFO  com.steps.Hooks - User valid email: "3FAE4TRITEWILLIEMAE@MAIL.COM"
+15:46:24 INFO  com.steps.Hooks - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+15:46:24 ERROR com.steps.Hooks - org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //form[@id='create-account_form']' (tried for 5 second(s) with 500 milliseconds interval)
