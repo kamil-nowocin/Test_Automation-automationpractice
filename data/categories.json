@@ -1,65 +1,18 @@
 {
   "uid" : "4b4757e66a1912dae1a509f688f20b0f",
   "children" : [ {
-    "name" : "Test defects",
-    "children" : [ {
-      "name" : "Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //form[@id='create-account_form']' (tried for 5 second(s) with 500 milliseconds interval)",
-      "children" : [ {
-        "name" : "[US-444]/[3] I would like to see registration error, when I don't fill email input",
-        "uid" : "8afb9b4a8984ef41",
-        "parentUid" : "2f37fc59bef6450c226eed581a909232",
-        "status" : "broken",
-        "time" : {
-          "start" : 1590075778225,
-          "stop" : 1590075817334,
-          "duration" : 39109
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "[US-444]/[4] I would like to see registration error, when I don't fill password input",
-        "uid" : "7cba19bc30162570",
-        "parentUid" : "2f37fc59bef6450c226eed581a909232",
-        "status" : "broken",
-        "time" : {
-          "start" : 1590075857321,
-          "stop" : 1590075896902,
-          "duration" : 39581
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "[US-444]/[6] I would like to see registration error, when I don't fill city input",
-        "uid" : "ab7e9545b6118d66",
-        "parentUid" : "2f37fc59bef6450c226eed581a909232",
-        "status" : "broken",
-        "time" : {
-          "start" : 1590075946349,
-          "stop" : 1590075984884,
-          "duration" : 38535
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "2f37fc59bef6450c226eed581a909232"
-    } ],
-    "uid" : "bdbf199525818fae7a8651db9eafe741"
-  }, {
     "name" : "Product defects",
     "children" : [ {
       "name" : "Results which have been found didn't match expected sorting result PRICE: HIGHEST FIRST: Lists differ at element [1]: $30.50 != $28.98 expected [$30.50] but found [$28.98]",
       "children" : [ {
         "name" : "[US-555]/[7] I would like to use search box and be able to see results sorted by: \"Price: Highest first\"",
-        "uid" : "e04f49b7113e0562",
+        "uid" : "27539cedc38c5199",
         "parentUid" : "3246160de76fc0de742a06aad5432502",
         "status" : "failed",
         "time" : {
-          "start" : 1590076100048,
-          "stop" : 1590076106296,
-          "duration" : 6248
+          "start" : 1590162256592,
+          "stop" : 1590162260913,
+          "duration" : 4321
         },
         "flaky" : false,
         "newFailed" : false,
@@ -70,19 +23,36 @@
       "name" : "Results which have been found didn't match expected sorting result PRICE: LOWEST FIRST: Lists differ at element [2]: $28.98 != $30.50 expected [$28.98] but found [$30.50]",
       "children" : [ {
         "name" : "[US-555]/[8] I would like to use search box and be able to see results sorted by: \"Price: Lowest first\"",
-        "uid" : "9dcac493d7e6eaf5",
+        "uid" : "e08844d820095112",
         "parentUid" : "06135fb1e9171a4c5ee185041330339b",
         "status" : "failed",
         "time" : {
-          "start" : 1590076111833,
-          "stop" : 1590076117698,
-          "duration" : 5865
+          "start" : 1590162265883,
+          "stop" : 1590162269905,
+          "duration" : 4022
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
       "uid" : "06135fb1e9171a4c5ee185041330339b"
+    }, {
+      "name" : "null",
+      "children" : [ {
+        "name" : "As a developer I'd like to see working POC with .xlsx file",
+        "uid" : "458edf2d654f432b",
+        "parentUid" : "666d1a31450af3ae8459f14f07f9a1b4",
+        "status" : "failed",
+        "time" : {
+          "start" : 1590162341892,
+          "stop" : 1590162343177,
+          "duration" : 1285
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "Test 1", "Test 2", "Test 3" ]
+      } ],
+      "uid" : "666d1a31450af3ae8459f14f07f9a1b4"
     } ],
     "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
   } ],
