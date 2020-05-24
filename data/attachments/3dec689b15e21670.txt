@@ -1,0 +1,36 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+15:44:15 DEBUG io.github.bonigarcia.wdm.Preferences - Preference chrome=83 (valid until 2020-05-25 15:40:17)
+15:44:15 DEBUG io.github.bonigarcia.wdm.Preferences - Preference chrome83=83.0.4103.39 (valid until 2020-05-25 15:40:17)
+15:44:15 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 83.0.4103.39 (since Google Chrome 83 is installed in your machine)
+15:44:15 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 83.0.4103.39 found in cache
+15:44:15 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.m2/repository/webdriver/chromedriver/linux64/83.0.4103.39/chromedriver
+15:44:16 INFO  com.steps.Hooks - Chosen executor: "CHROME"
+15:44:16 INFO  com.steps.Hooks - ================================================ TEST STARTED ================================================
+15:44:16 INFO  com.steps.Hooks - [34mTEST NAME: [US-555]/[7] I WOULD LIKE TO USE SEARCH BOX AND BE ABLE TO SEE RESULTS SORTED BY: "PRICE: HIGHEST FIRST"[0m
+15:44:18 INFO  com.steps.Hooks - Page ready: "TRUE"
+15:44:18 INFO  com.steps.Hooks - User search for: "PRINTED DRESS"
+15:44:19 INFO  com.steps.Hooks - Found results: "5", expected: "5"
+15:44:20 INFO  com.steps.Hooks - Chosen sort option: "PRICE: HIGHEST FIRST"
+15:44:20 INFO  com.steps.Hooks - Actual sort option: "PRICE: HIGHEST FIRST"
+15:44:20 INFO  com.steps.Hooks - [31mTEST RETRY (1/1): [US-555]/[7] I WOULD LIKE TO USE SEARCH BOX AND BE ABLE TO SEE RESULTS SORTED BY: "PRICE: HIGHEST FIRST"[0m
+15:44:20 DEBUG io.github.bonigarcia.wdm.Preferences - Preference chrome=83 (valid until 2020-05-25 15:40:17)
+15:44:20 DEBUG io.github.bonigarcia.wdm.Preferences - Preference chrome83=83.0.4103.39 (valid until 2020-05-25 15:40:17)
+15:44:20 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 83.0.4103.39 (since Google Chrome 83 is installed in your machine)
+15:44:20 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 83.0.4103.39 found in cache
+15:44:20 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.m2/repository/webdriver/chromedriver/linux64/83.0.4103.39/chromedriver
+15:44:21 INFO  com.steps.Hooks - Chosen executor: "CHROME"
+15:44:21 INFO  com.steps.Hooks - ================================================ TEST STARTED ================================================
+15:44:21 INFO  com.steps.Hooks - [34mTEST NAME: [US-555]/[7] I WOULD LIKE TO USE SEARCH BOX AND BE ABLE TO SEE RESULTS SORTED BY: "PRICE: HIGHEST FIRST"[0m
+15:44:22 INFO  com.steps.Hooks - Page ready: "TRUE"
+15:44:22 INFO  com.steps.Hooks - User search for: "PRINTED DRESS"
+15:44:23 INFO  com.steps.Hooks - Found results: "5", expected: "5"
+15:44:24 INFO  com.steps.Hooks - Chosen sort option: "PRICE: HIGHEST FIRST"
+15:44:24 INFO  com.steps.Hooks - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+15:44:25 ERROR com.steps.Hooks - org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=83.0.4103.61)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'travis-job-86f9823c-289c-4b65-90ad-731032211aad', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.0.0-1031-gcp', java.version: '14'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.61, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /tmp/.com.google.Chrome.PYhNa6}, goog:chromeOptions: {debuggerAddress: localhost:41227}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: d590b289d197efae0aff3a512500409c
