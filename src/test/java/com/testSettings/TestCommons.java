@@ -66,22 +66,16 @@ public class TestCommons extends TestEnvironment {
 
     public static void networkThrottling(boolean enableThrottling) throws IOException {
         Map<String, Object> map = new HashMap<>();
-        if (!enableThrottling) {
-            map.put("offline", false);
-            map.put("latency", 0);
-            map.put("download_throughput", 2000000);
-            map.put("upload_throughput", 2000000);
-        } else {
+        if (enableThrottling) {
             map.put("offline", true);
             map.put("latency", 10000);
             map.put("download_throughput", 0);
             map.put("upload_throughput", 0);
+            CommandExecutor executor = ((ChromeDriver) DriverFactory.getDriver()).getCommandExecutor();
+            executor.execute(new Command(((ChromeDriver) DriverFactory.getDriver()).getSessionId(), "setNetworkConditions",
+                    ImmutableMap.of("network_conditions", ImmutableMap.copyOf(map)))
+            );
         }
-
-        CommandExecutor executor = ((ChromeDriver) DriverFactory.getDriver()).getCommandExecutor();
-        executor.execute(new Command(((ChromeDriver) DriverFactory.getDriver()).getSessionId(), "setNetworkConditions",
-                ImmutableMap.of("network_conditions", ImmutableMap.copyOf(map)))
-        );
     }
 
     public void selectFromDropdownByIndex(int value, WebElement webElement) throws NoSuchElementException {
