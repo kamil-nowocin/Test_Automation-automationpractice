@@ -1,8 +1,10 @@
 package com.pages.base;
 
+import com.testSettings.DriverFactory;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.PageFactory;
 
 /**
  * Test_Automation-automationpractice
@@ -10,7 +12,12 @@ import org.openqa.selenium.support.How;
  * @author kamil.nowocin
  **/
 
-public class MainPage extends BasePage {
+public class MainPage {
+
+    public MainPage() {
+        //PageFactory.initElements(new AjaxElementLocatorFactory(DriverFactory.getDriver(), TIMEOUT), this);
+        PageFactory.initElements(DriverFactory.getDriver(), this);
+    }
 
     //VIEW//
     @FindBy(how = How.XPATH, using = "//a[@class='account']//span")

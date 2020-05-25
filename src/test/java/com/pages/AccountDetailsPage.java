@@ -1,6 +1,6 @@
 package com.pages;
 
-import com.pages.base.BasePage;
+import com.pages.base.MainPage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -11,7 +11,7 @@ import org.openqa.selenium.support.How;
  * @author kamil.nowocin
  **/
 
-public class AccountDetailsPage extends BasePage {
+public class AccountDetailsPage extends MainPage {
 
     //VIEW//
     @FindBy(how = How.XPATH, using = "//p[@class='info-account']")

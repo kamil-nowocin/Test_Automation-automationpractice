@@ -1,18 +1,20 @@
-package com.pages.base;
+package com.testSettings;
 
-import com.DriverFactory;
-import com.FrameworkEnvironment;
-import org.openqa.selenium.*;
-import org.openqa.selenium.support.PageFactory;
+import com.google.common.collect.ImmutableMap;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.NotFoundException;
+import org.openqa.selenium.WebDriverException;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.Command;
+import org.openqa.selenium.remote.CommandExecutor;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.io.IOException;
 import java.security.SecureRandom;
-import java.util.Arrays;
-import java.util.List;
-import java.util.NoSuchElementException;
-import java.util.Random;
+import java.util.*;
 
 /**
  * Test_Automation-automationpractice
@@ -20,13 +22,9 @@ import java.util.Random;
  * @author kamil.nowocin
  **/
 
-public class BasePage extends FrameworkEnvironment {
+public class TestCommons extends TestEnvironment {
 
-    public BasePage() {
-        //PageFactory.initElements(new AjaxElementLocatorFactory(DriverFactory.getDriver(), TIMEOUT), this);
-        PageFactory.initElements(DriverFactory.getDriver(), this);
-    }
-
+    //WAIT FOR//
     public void waitForElementToBeClickable(int timeInSeconds, WebElement webElement) throws
             NoSuchElementException, WebDriverException {
         try {
@@ -69,15 +67,7 @@ public class BasePage extends FrameworkEnvironment {
         }
     }
 
-    public boolean isElementDisplayed(By selector) throws NoSuchElementException {
-        try {
-            DriverFactory.getDriver().findElement(selector);
-            return true;
-        } catch (NoSuchElementException e) {
-            return false;
-        }
-    }
-
+    //SELECT FROM//
     public void selectFromDropdownByIndex(int value, WebElement webElement) throws NoSuchElementException {
         try {
             Select dropdown = new Select(webElement);
@@ -105,12 +95,13 @@ public class BasePage extends FrameworkEnvironment {
         }
     }
 
-    public int randomIntValue(int max, int min) {
+    //RANDOM VALUES//
+    public int getRandomIntValue(int max, int min) {
         Random random = new Random();
         return random.nextInt((max - min) + 1) + min;
     }
 
-    public String randomStringValue(int length) {
+    public String getRandomStringValue(int length) {
         String characters = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
         SecureRandom secureRandom = new SecureRandom();
         StringBuilder stringBuilder = new StringBuilder(length);
@@ -119,9 +110,16 @@ public class BasePage extends FrameworkEnvironment {
         return stringBuilder.toString();
     }
 
-    public void scrollWebsiteToElement(WebElement webElement) {
-        JavascriptExecutor js = (JavascriptExecutor) DriverFactory.getDriver();
-        js.executeScript("arguments[0].scrollIntoView(true);", webElement);
+    public String getRandomResourceBundleValue(String resourceBundle) {
+        List<String> resourceBundleData = Arrays.asList((resourceBundle.split("\\s*, ")));
+        Random random = new Random();
+        return resourceBundleData.get(random.nextInt(resourceBundleData.size()));
+    }
+
+    //GENERAL//
+    public String errorValidator(WebElement webElement) {
+        waitForElementToBeDisplayed(TIMEOUT, webElement);
+        return webElement.getText();
     }
 
     public boolean isPageReady() {
@@ -136,15 +134,23 @@ public class BasePage extends FrameworkEnvironment {
         return true;
     }
 
-    public String errorValidator(WebElement webElement) {
-        waitForElementToBeDisplayed(TIMEOUT, webElement);
-        return webElement.getText();
+    public static void networkThrottling(boolean enableThrottling) throws IOException {
+        Map<String, Object> map = new HashMap<>();
+        if (enableThrottling) {
+            map.put("offline", true);
+            map.put("latency", 10000);
+            map.put("download_throughput", 0);
+            map.put("upload_throughput", 0);
+            CommandExecutor executor = ((ChromeDriver) DriverFactory.getDriver()).getCommandExecutor();
+            executor.execute(new Command(((ChromeDriver) DriverFactory.getDriver()).getSessionId(), "setNetworkConditions",
+                    ImmutableMap.of("network_conditions", ImmutableMap.copyOf(map)))
+            );
+        }
     }
 
-    public String getRandomElementFromResourceBundleList(String resourceBundle) {
-        List<String> resourceBundleData = Arrays.asList((resourceBundle.split("\\s*, ")));
-        Random random = new Random();
-        return resourceBundleData.get(random.nextInt(resourceBundleData.size()));
+    public void scrollWebsiteToElement(WebElement webElement) {
+        JavascriptExecutor js = (JavascriptExecutor) DriverFactory.getDriver();
+        js.executeScript("arguments[0].scrollIntoView(true);", webElement);
     }
 
     //Just for testing purpose, it shouldn't be used in development environment

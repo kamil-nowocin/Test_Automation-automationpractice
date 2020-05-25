@@ -1,11 +1,11 @@
 package tests.WebAPP;
 
-import com.ContextInjection;
-import com.ExcelEnvironment;
-import com.listeners.TestNGListener_WEB;
 import com.steps.Hooks;
 import com.steps.MainPageSteps;
 import com.steps.RegistrationPageSteps;
+import com.testListeners.TestNGListener_WEB;
+import com.testSettings.ContextInjection;
+import com.testSettings.ExcelEnvironment;
 import io.cucumber.datatable.DataTable;
 import io.qameta.allure.*;
 import org.testng.annotations.Listeners;

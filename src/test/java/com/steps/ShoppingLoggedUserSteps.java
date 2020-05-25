@@ -1,12 +1,12 @@
 package com.steps;
 
-import com.ContextInjection;
-import com.DriverFactory;
 import com.google.inject.Inject;
 import com.pages.ProductDetailsPage;
 import com.pages.ShoppingCartSummaryPage;
-import com.pages.base.BasePage;
 import com.pages.base.MainPage;
+import com.testSettings.ContextInjection;
+import com.testSettings.DriverFactory;
+import com.testSettings.TestCommons;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
@@ -28,8 +28,8 @@ public class ShoppingLoggedUserSteps extends DriverFactory {
 
     private final ContextInjection contextInjection;
 
-    private final BasePage basePage = new BasePage();
-    private final MainPage mainPage = new MainPage();
+    private final TestCommons testCommons = new TestCommons();
+    private final MainPage mainPage2 = new MainPage();
     private final ProductDetailsPage productDetailsPage = new ProductDetailsPage();
     private final ShoppingCartSummaryPage shoppingCartSummaryPage = new ShoppingCartSummaryPage();
 
@@ -44,13 +44,13 @@ public class ShoppingLoggedUserSteps extends DriverFactory {
         //ACT//
         switch (subMenuCategory.toLowerCase()) {
             case "women":
-                mainPage.subMenuWomen.click();
+                mainPage2.subMenuWomen.click();
                 break;
             case "dress":
-                mainPage.subMenuDresses.click();
+                mainPage2.subMenuDresses.click();
                 break;
             case "t-shirts":
-                mainPage.subMenuTshirts.click();
+                mainPage2.subMenuTshirts.click();
                 break;
             default:
                 throw new IllegalStateException(String.format(INPUT_ERROR, subMenuCategory.toUpperCase()));
@@ -58,7 +58,7 @@ public class ShoppingLoggedUserSteps extends DriverFactory {
         logger.info(String.format("User clicked on: \"%S\" submenu category", subMenuCategory));
 
         //ASSERT//
-        Assert.assertEquals(mainPage.subMenuChosenCategory.getText().replaceAll
+        Assert.assertEquals(mainPage2.subMenuChosenCategory.getText().replaceAll
                 ("\\s+", "").toLowerCase(), subMenuCategory.toLowerCase(), VALUE_ERROR);
     }
 
@@ -89,7 +89,7 @@ public class ShoppingLoggedUserSteps extends DriverFactory {
 
         //ACT//
         productDetailsPage.quantityInput.sendKeys(productQuantity);
-        basePage.selectFromDropdownByText(productSize, productDetailsPage.sizeDropdown);
+        testCommons.selectFromDropdownByText(productSize, productDetailsPage.sizeDropdown);
         switch (productColor.toLowerCase()) {
             case "orange":
                 productDetailsPage.orangeColorButton.click();
@@ -131,7 +131,7 @@ public class ShoppingLoggedUserSteps extends DriverFactory {
         //ASSERT//
         Assert.assertEquals(productDetailsPage.readSizeDropdown.getText().toLowerCase(),
                 productSize.toLowerCase(), VALUE_ERROR);
-        basePage.sleep(1);//TODO
+        testCommons.sleep(1);//TODO
         Assert.assertEquals(productDetailsPage.readChosenColor.getAttribute("title").toLowerCase(),
                 productColor.toLowerCase(), VALUE_ERROR);
     }
@@ -150,9 +150,9 @@ public class ShoppingLoggedUserSteps extends DriverFactory {
         contextInjection.finalOrderTotalPrice = (contextInjection.productUnitPrice * contextInjection.productQuantity) + contextInjection.SHIPPING_PRICE;
 
         //ASSERT//
-        Assert.assertTrue(basePage.waitForElementToBeDisplayed(5, productDetailsPage.popupPaneProductDetails),
+        Assert.assertTrue(testCommons.waitForElementToBeDisplayed(5, productDetailsPage.popupPaneProductDetails),
                 String.format(VIEW_ERROR, "Product details popup"));
-        Assert.assertTrue(basePage.waitForElementToBeDisplayed(5, productDetailsPage.popupPaneAddedSuccessfully),
+        Assert.assertTrue(testCommons.waitForElementToBeDisplayed(5, productDetailsPage.popupPaneAddedSuccessfully),
                 String.format(VIEW_ERROR, "Product added successfully header"));
         Assert.assertEquals(productDetailsPage.popupPaneFinalProductTotalPrice.getText()
                         .replaceAll("[^$0-9.]", ""),
@@ -172,7 +172,7 @@ public class ShoppingLoggedUserSteps extends DriverFactory {
     @And("I can see Shopping-Cart {string} form with valid information")
     public void iCanSeeShoppingCartFormWithValidInformation(String shoppingSummaryTab) throws Throwable {
         //ARRANGE//
-        Assert.assertTrue(basePage.waitForElementToBeDisplayed(5, shoppingCartSummaryPage.navigationTopLabelHeader),
+        Assert.assertTrue(testCommons.waitForElementToBeDisplayed(5, shoppingCartSummaryPage.navigationTopLabelHeader),
                 String.format(VIEW_ERROR, "Navigation top label header"));
 
         final String navigationTopLabelHeaderText = shoppingCartSummaryPage.navigationTopLabelHeader.getText();
@@ -235,10 +235,10 @@ public class ShoppingLoggedUserSteps extends DriverFactory {
 
                 //GENERAL//
                 if (contextInjection.paymentType.toLowerCase().equals("pay by check")) {
-                    Assert.assertTrue(basePage.waitForElementToBeDisplayed(5, shoppingCartSummaryPage.paymentByCheckSuccessful),
+                    Assert.assertTrue(testCommons.waitForElementToBeDisplayed(5, shoppingCartSummaryPage.paymentByCheckSuccessful),
                             String.format(VIEW_ERROR, "Order confirmation header"));
                 } else if (contextInjection.paymentType.toLowerCase().equals("pay by bank wire")) {
-                    Assert.assertTrue(basePage.waitForElementToBeDisplayed(5, shoppingCartSummaryPage.paymentByBankWireSuccessful),
+                    Assert.assertTrue(testCommons.waitForElementToBeDisplayed(5, shoppingCartSummaryPage.paymentByBankWireSuccessful),
                             String.format(VIEW_ERROR, "Order confirmation header"));
                 } else {
                     Assert.fail(contextInjection.paymentType + ANSI_RED + "Something went wrong! Check your payment type." + ANSI_RESET);

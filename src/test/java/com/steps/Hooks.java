@@ -1,9 +1,10 @@
 package com.steps;
 
-import com.DriverFactory;
-import com.ExcelEnvironment;
-import com.listeners.TestNGListener_API;
-import com.listeners.TestNGListener_WEB;
+import com.testListeners.TestNGListener_API;
+import com.testListeners.TestNGListener_WEB;
+import com.testSettings.DriverFactory;
+import com.testSettings.ExcelEnvironment;
+import com.testSettings.TestCommons;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
@@ -33,10 +34,11 @@ public class Hooks extends DriverFactory implements ITestListener {
     }
 
     @BeforeMethod(description = "Setting up Test Class")
-    public void beforeTest(ITestResult iTestResult) {
+    public void beforeTest(ITestResult iTestResult) throws IOException {
         MDC.put("testid", TestNGListener_WEB.getTestName(iTestResult));
         MDC.put("testid", TestNGListener_API.getTestName(iTestResult));
         startBrowser();
+        TestCommons.networkThrottling(false);
     }
 
     @AfterMethod(description = "Teardown Test Class")
@@ -49,10 +51,11 @@ public class Hooks extends DriverFactory implements ITestListener {
      * For Cucumber -> Feature file
      **/
     @Before
-    public void beforeScenario(Scenario scenario) {
+    public void beforeScenario(Scenario scenario) throws IOException {
         MDC.put("testid", scenario.getName().toUpperCase());
         TestNGListener_WEB.onScenarioStart(scenario);
         startBrowser();
+        TestCommons.networkThrottling(false);
     }
 
     @After

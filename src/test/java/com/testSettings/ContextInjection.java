@@ -1,4 +1,4 @@
-package com;
+package com.testSettings;
 
 import io.cucumber.guice.ScenarioScoped;
 

@@ -1,6 +1,6 @@
-package com.listeners;
+package com.testListeners;
 
-import com.FrameworkEnvironment;
+import com.testSettings.TestEnvironment;
 import org.testng.IRetryAnalyzer;
 import org.testng.ITestResult;
 
@@ -10,7 +10,7 @@ import org.testng.ITestResult;
  * @author kamil.nowocin
  **/
 
-public class TestNGRetry extends FrameworkEnvironment implements IRetryAnalyzer {
+public class TestNGRetry extends TestEnvironment implements IRetryAnalyzer {
 
     private int retryStatus = 0;
 

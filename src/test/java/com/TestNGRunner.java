@@ -1,5 +1,6 @@
 package com;
 
+import com.testSettings.TestEnvironment;
 import io.cucumber.testng.*;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -55,7 +56,7 @@ public class TestNGRunner extends AbstractTestNGCucumberTests {
             return;
         }
         testNGCucumberRunner.finish();
-        FrameworkEnvironment.allureWriteProperties();
-        FrameworkEnvironment.allureWriteExecutors();
+        TestEnvironment.allureWriteProperties();
+        TestEnvironment.allureWriteExecutors();
     }
 }

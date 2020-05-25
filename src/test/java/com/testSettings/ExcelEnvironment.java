@@ -1,4 +1,4 @@
-package com;
+package com.testSettings;
 
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
@@ -15,7 +15,7 @@ import java.io.FileOutputStream;
  * @author kamil.nowocin
  **/
 
-public class ExcelEnvironment extends FrameworkEnvironment {
+public class ExcelEnvironment extends TestEnvironment {
 
     private static String testDataExcelPath = null;
 

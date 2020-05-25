@@ -1,11 +1,11 @@
 package tests.WebAPP;
 
-import com.ContextInjection;
-import com.ExcelEnvironment;
-import com.listeners.TestNGListener_WEB;
 import com.steps.CustomerServicePageSteps;
 import com.steps.Hooks;
 import com.steps.MainPageSteps;
+import com.testListeners.TestNGListener_WEB;
+import com.testSettings.ContextInjection;
+import com.testSettings.ExcelEnvironment;
 import io.qameta.allure.*;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -32,7 +32,6 @@ public class CustomerService_Tests extends Hooks {
     public void test_1() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(5);
-
 
         final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
         final CustomerServicePageSteps customerServicePageSteps = new CustomerServicePageSteps();

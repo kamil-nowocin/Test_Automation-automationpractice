@@ -1,10 +1,10 @@
 package com.steps;
 
-import com.FrameworkEnvironment;
 import com.google.common.collect.Ordering;
 import com.pages.SearchPage;
-import com.pages.base.BasePage;
 import com.pages.base.MainPage;
+import com.testSettings.TestCommons;
+import com.testSettings.TestEnvironment;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -21,9 +21,9 @@ import java.util.List;
  * @author kamil.nowocin
  **/
 
-public class SearchPageSteps extends FrameworkEnvironment {
+public class SearchPageSteps extends TestEnvironment {
 
-    private final BasePage basePage = new BasePage();
+    private final TestCommons testCommons = new TestCommons();
     private final MainPage mainPage = new MainPage();
     private final SearchPage searchPage = new SearchPage();
 
@@ -53,7 +53,7 @@ public class SearchPageSteps extends FrameworkEnvironment {
 
         //ACT//
         if (expectedCountOfResults.equals("0")) {
-            Assert.assertTrue(basePage.waitForElementToBeDisplayed(5, searchPage.noResultsWereFoundHeader),
+            Assert.assertTrue(testCommons.waitForElementToBeDisplayed(5, searchPage.noResultsWereFoundHeader),
                     String.format(VIEW_ERROR, "No results were found header"));
         }
         logger.info(String.format("Found results: \"%S\", expected: \"%S\"", actualCountOfResults, expectedCountOfResults));
@@ -79,7 +79,7 @@ public class SearchPageSteps extends FrameworkEnvironment {
                 }
             }
         } else {
-            Assert.assertTrue(basePage.waitForElementToBeDisplayed(5, searchPage.noResultsWereFoundHeader),
+            Assert.assertTrue(testCommons.waitForElementToBeDisplayed(5, searchPage.noResultsWereFoundHeader),
                     String.format(VIEW_ERROR, "No result header"));
         }
     }
@@ -90,16 +90,16 @@ public class SearchPageSteps extends FrameworkEnvironment {
         //ACT//
         switch (sortBy.toLowerCase()) {
             case "price: lowest first":
-                basePage.selectFromDropdownByValue("price:asc", searchPage.sortByDropdown);
+                testCommons.selectFromDropdownByValue("price:asc", searchPage.sortByDropdown);
                 break;
             case "price: highest first":
-                basePage.selectFromDropdownByValue("price:desc", searchPage.sortByDropdown);
+                testCommons.selectFromDropdownByValue("price:desc", searchPage.sortByDropdown);
                 break;
             case "product name: a to z":
-                basePage.selectFromDropdownByValue("name:asc", searchPage.sortByDropdown);
+                testCommons.selectFromDropdownByValue("name:asc", searchPage.sortByDropdown);
                 break;
             case "product name: z to a":
-                basePage.selectFromDropdownByValue("name:desc", searchPage.sortByDropdown);
+                testCommons.selectFromDropdownByValue("name:desc", searchPage.sortByDropdown);
                 break;
             default:
                 throw new IllegalStateException(String.format(INPUT_ERROR, sortBy.toUpperCase()));

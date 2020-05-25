@@ -1,8 +1,8 @@
 package com.steps;
 
-import com.DriverFactory;
 import com.pages.SocialMediaPage;
-import com.pages.base.BasePage;
+import com.testSettings.DriverFactory;
+import com.testSettings.TestCommons;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -19,7 +19,7 @@ import java.util.ArrayList;
 
 public class SocialMediaPageSteps extends DriverFactory {
 
-    private final BasePage basePage = new BasePage();
+    private final TestCommons testCommons = new TestCommons();
     private final SocialMediaPage socialMediaPage = new SocialMediaPage();
 
     @Step("I scroll the website until I can see *{0}* logo")
@@ -28,23 +28,23 @@ public class SocialMediaPageSteps extends DriverFactory {
         //ACT//
         switch (logoName.toLowerCase()) {
             case "facebook":
-                basePage.scrollWebsiteToElement(socialMediaPage.facebookButton);
-                Assert.assertTrue(basePage.waitForElementToBeDisplayed(5, socialMediaPage.facebookButton),
+                testCommons.scrollWebsiteToElement(socialMediaPage.facebookButton);
+                Assert.assertTrue(testCommons.waitForElementToBeDisplayed(5, socialMediaPage.facebookButton),
                         String.format(VIEW_ERROR, logoName.toUpperCase()));
                 break;
             case "twitter":
-                basePage.scrollWebsiteToElement(socialMediaPage.twitterButton);
-                Assert.assertTrue(basePage.waitForElementToBeDisplayed(5, socialMediaPage.twitterButton),
+                testCommons.scrollWebsiteToElement(socialMediaPage.twitterButton);
+                Assert.assertTrue(testCommons.waitForElementToBeDisplayed(5, socialMediaPage.twitterButton),
                         String.format(VIEW_ERROR, logoName.toUpperCase()));
                 break;
             case "youtube":
-                basePage.scrollWebsiteToElement(socialMediaPage.youtubeButton);
-                Assert.assertTrue(basePage.waitForElementToBeDisplayed(5, socialMediaPage.youtubeButton),
+                testCommons.scrollWebsiteToElement(socialMediaPage.youtubeButton);
+                Assert.assertTrue(testCommons.waitForElementToBeDisplayed(5, socialMediaPage.youtubeButton),
                         String.format(VIEW_ERROR, logoName.toUpperCase()));
                 break;
             case "google":
-                basePage.scrollWebsiteToElement(socialMediaPage.googleButton);
-                Assert.assertTrue(basePage.waitForElementToBeDisplayed(5, socialMediaPage.googleButton),
+                testCommons.scrollWebsiteToElement(socialMediaPage.googleButton);
+                Assert.assertTrue(testCommons.waitForElementToBeDisplayed(5, socialMediaPage.googleButton),
                         String.format(VIEW_ERROR, logoName.toUpperCase()));
                 break;
             default:

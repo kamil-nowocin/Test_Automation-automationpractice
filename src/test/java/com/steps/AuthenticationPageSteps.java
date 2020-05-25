@@ -1,8 +1,8 @@
 package com.steps;
 
-import com.FrameworkEnvironment;
 import com.pages.AuthenticationPage;
-import com.pages.base.BasePage;
+import com.testSettings.TestCommons;
+import com.testSettings.TestEnvironment;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -15,15 +15,15 @@ import org.testng.Assert;
  * @author kamil.nowocin
  **/
 
-public class AuthenticationPageSteps extends FrameworkEnvironment {
+public class AuthenticationPageSteps extends TestEnvironment {
 
-    private final BasePage basePage = new BasePage();
+    private final TestCommons testCommons = new TestCommons();
     private final AuthenticationPage authenticationPage = new AuthenticationPage();
 
     @Step("I can see login form")
     @Given("I can see login form")
     public void iCanSeeLoginForm() throws Throwable {
-        Assert.assertTrue(basePage.waitForElementToBeDisplayed(5, authenticationPage.registeredPane),
+        Assert.assertTrue(testCommons.waitForElementToBeDisplayed(5, authenticationPage.registeredPane),
                 String.format(VIEW_ERROR, "Login form"));
     }
 
@@ -61,7 +61,7 @@ public class AuthenticationPageSteps extends FrameworkEnvironment {
     @Step("I can see warning message with include *{0}*")
     @Then("I can see warning message with include {string}")
     public void iCanSeeWarningMessageWithInclude(String warningMessage) throws Throwable {
-        Assert.assertTrue(basePage.errorValidator(authenticationPage.registeredLoginError).toLowerCase().contains(warningMessage.toLowerCase()),
+        Assert.assertTrue(testCommons.errorValidator(authenticationPage.registeredLoginError).toLowerCase().contains(warningMessage.toLowerCase()),
                 String.format(MESSAGE_DIDNT_CONTAIN, warningMessage.toUpperCase()));
     }
 }
