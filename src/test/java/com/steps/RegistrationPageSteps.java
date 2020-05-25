@@ -66,7 +66,7 @@ public class RegistrationPageSteps extends TestEnvironment {
     @When("I write an invalid email address")
     public void iWriteAnInvalidEmailAddress() throws Throwable {
         //ARRANGE//
-        final String userInvalidEmailAddress = testCommons.getRandomElementFromResourceBundleList
+        final String userInvalidEmailAddress = testCommons.getRandomResourceBundleValue
                 (resourceBundleInvalidEmails.getString("invalidEmails"));
 
         //ACT//
@@ -180,7 +180,7 @@ public class RegistrationPageSteps extends TestEnvironment {
     @And("I choose gender")
     public void iChooseGender() throws Throwable {
         //ARRANGE//
-        final int randomNumber = testCommons.randomIntValue(2, 1);
+        final int randomNumber = testCommons.getRandomIntValue(2, 1);
 
         //ACT//
         if (randomNumber == 1) {
@@ -260,9 +260,9 @@ public class RegistrationPageSteps extends TestEnvironment {
     @And("I choose date of birth")
     public void iChooseDateOfBirth() throws Throwable {
         //ARRANGE//
-        final int day = testCommons.randomIntValue(28, 1);
-        final int month = testCommons.randomIntValue(12, 1);
-        final int year = testCommons.randomIntValue(2019, 1900);
+        final int day = testCommons.getRandomIntValue(28, 1);
+        final int month = testCommons.getRandomIntValue(12, 1);
+        final int year = testCommons.getRandomIntValue(2019, 1900);
 
         //ACT//
         testCommons.selectFromDropdownByValue(Integer.toString(day), registrationPage.dayOfBirth);
@@ -283,7 +283,7 @@ public class RegistrationPageSteps extends TestEnvironment {
     @And("I sign in to receive newsletter and special offers")
     public void iSignInToReceiveNewsletterAndSpecialOffers() throws Throwable {
         //ARRANGE//
-        int tempRandomValue = testCommons.randomIntValue(3, 3);
+        int tempRandomValue = testCommons.getRandomIntValue(3, 3);
 
         //ACT//
         if (tempRandomValue == 1) {

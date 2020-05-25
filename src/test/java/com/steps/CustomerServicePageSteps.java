@@ -76,7 +76,7 @@ public class CustomerServicePageSteps extends TestEnvironment {
     @And("I write an invalid email address in contact us page")
     public void iWriteAnInvalidEmailAddressInContactUsPage() throws Throwable {
         //ARRANGE//
-        final String userInvalidEmailAddress = testCommons.getRandomElementFromResourceBundleList
+        final String userInvalidEmailAddress = testCommons.getRandomResourceBundleValue
                 (resourceBundleInvalidEmails.getString("invalidEmails"));
 
         //ACT//
@@ -92,7 +92,7 @@ public class CustomerServicePageSteps extends TestEnvironment {
     @And("I write order reference")
     public void iWriteOrderReference() throws Throwable {
         //ARRANGE//
-        final String orderReference = testCommons.randomStringValue(10);
+        final String orderReference = testCommons.getRandomStringValue(10);
 
         //ACT//
         customerServicePage.orderReferenceInput.sendKeys(orderReference);
