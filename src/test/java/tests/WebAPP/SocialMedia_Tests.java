@@ -1,10 +1,9 @@
 package tests.WebAPP;
 
-
-import com.testListeners.TestNGListener_WEB;
 import com.steps.Hooks;
 import com.steps.MainPageSteps;
 import com.steps.SocialMediaPageSteps;
+import com.testListeners.TestNGListener_WEB;
 import com.testSettings.ContextInjection;
 import com.testSettings.ExcelEnvironment;
 import io.qameta.allure.*;

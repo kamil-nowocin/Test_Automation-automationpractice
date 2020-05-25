@@ -1,11 +1,10 @@
 package tests.WebAPP;
 
-
-import com.testListeners.TestNGListener_WEB;
 import com.steps.Hooks;
 import com.steps.MainPageSteps;
 import com.steps.RegistrationPageSteps;
 import com.steps.ShoppingLoggedUserSteps;
+import com.testListeners.TestNGListener_WEB;
 import com.testSettings.ContextInjection;
 import com.testSettings.ExcelEnvironment;
 import io.cucumber.datatable.DataTable;

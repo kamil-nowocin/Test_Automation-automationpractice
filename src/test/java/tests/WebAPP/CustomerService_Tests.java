@@ -1,6 +1,5 @@
 package tests.WebAPP;
 
-
 import com.steps.CustomerServicePageSteps;
 import com.steps.Hooks;
 import com.steps.MainPageSteps;
