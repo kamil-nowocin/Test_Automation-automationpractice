@@ -1,7 +1,6 @@
 package tests.POC;
 
-import com.ExcelEnvironment;
-import com.listeners.TestNGListener_WEB;
+import com.testListeners.TestNGListener_WEB;
 import com.steps.Hooks;
 import io.qameta.allure.*;
 import org.apache.poi.xssf.usermodel.XSSFRow;
@@ -9,6 +8,7 @@ import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+import com.testSettings.ExcelEnvironment;
 
 /**
  * Test_Automation-automationpractice

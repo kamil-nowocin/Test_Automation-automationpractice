@@ -1,18 +1,18 @@
-package com.pages.base;
+package com.testSettings;
 
-import com.DriverFactory;
-import com.FrameworkEnvironment;
+import com.google.common.collect.ImmutableMap;
 import org.openqa.selenium.*;
-import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.Command;
+import org.openqa.selenium.remote.CommandExecutor;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.io.IOException;
 import java.security.SecureRandom;
-import java.util.Arrays;
-import java.util.List;
 import java.util.NoSuchElementException;
-import java.util.Random;
+import java.util.*;
 
 /**
  * Test_Automation-automationpractice
@@ -20,12 +20,7 @@ import java.util.Random;
  * @author kamil.nowocin
  **/
 
-public class BasePage extends FrameworkEnvironment {
-
-    public BasePage() {
-        //PageFactory.initElements(new AjaxElementLocatorFactory(DriverFactory.getDriver(), TIMEOUT), this);
-        PageFactory.initElements(DriverFactory.getDriver(), this);
-    }
+public class TestCommons extends TestEnvironment {
 
     public void waitForElementToBeClickable(int timeInSeconds, WebElement webElement) throws
             NoSuchElementException, WebDriverException {
@@ -69,13 +64,24 @@ public class BasePage extends FrameworkEnvironment {
         }
     }
 
-    public boolean isElementDisplayed(By selector) throws NoSuchElementException {
-        try {
-            DriverFactory.getDriver().findElement(selector);
-            return true;
-        } catch (NoSuchElementException e) {
-            return false;
+    public static void networkThrottling(boolean enableThrottling) throws IOException {
+        Map<String, Object> map = new HashMap<>();
+        if (!enableThrottling) {
+            map.put("offline", false);
+            map.put("latency", 0);
+            map.put("download_throughput", 2000000);
+            map.put("upload_throughput", 2000000);
+        } else {
+            map.put("offline", true);
+            map.put("latency", 10000);
+            map.put("download_throughput", 0);
+            map.put("upload_throughput", 0);
         }
+
+        CommandExecutor executor = ((ChromeDriver) DriverFactory.getDriver()).getCommandExecutor();
+        executor.execute(new Command(((ChromeDriver) DriverFactory.getDriver()).getSessionId(), "setNetworkConditions",
+                ImmutableMap.of("network_conditions", ImmutableMap.copyOf(map)))
+        );
     }
 
     public void selectFromDropdownByIndex(int value, WebElement webElement) throws NoSuchElementException {
@@ -122,6 +128,15 @@ public class BasePage extends FrameworkEnvironment {
     public void scrollWebsiteToElement(WebElement webElement) {
         JavascriptExecutor js = (JavascriptExecutor) DriverFactory.getDriver();
         js.executeScript("arguments[0].scrollIntoView(true);", webElement);
+    }
+
+    public boolean isElementDisplayed(By selector) throws NoSuchElementException {
+        try {
+            DriverFactory.getDriver().findElement(selector);
+            return true;
+        } catch (NoSuchElementException e) {
+            return false;
+        }
     }
 
     public boolean isPageReady() {

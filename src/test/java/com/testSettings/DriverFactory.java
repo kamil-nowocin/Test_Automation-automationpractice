@@ -1,4 +1,4 @@
-package com;
+package com.testSettings;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
@@ -26,7 +26,7 @@ import java.util.concurrent.TimeUnit;
  * @author kamil.nowocin
  **/
 
-public class DriverFactory extends FrameworkEnvironment {
+public class DriverFactory extends TestEnvironment {
 
     private WebDriver driver;
     private static final ThreadLocal<WebDriver> drivers = new ThreadLocal<>();
@@ -94,7 +94,6 @@ public class DriverFactory extends FrameworkEnvironment {
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
                     ChromeOptions chromeOptions = new ChromeOptions();
-                    chromeOptions.addArguments();
                     DriverFactory.addDriver(driver = new ChromeDriver(chromeOptions));
                     break;
                 case "firefox":
@@ -104,7 +103,7 @@ public class DriverFactory extends FrameworkEnvironment {
                     DriverFactory.addDriver(driver = new FirefoxDriver(firefoxOptions));
                     break;
                 case "opera":
-                    WebDriverManager.operadriver().arch64().version("2.45").setup();
+                    WebDriverManager.operadriver().arch64().browserVersion("2.45").setup();
                     OperaOptions operaOptions = new OperaOptions();
                     operaOptions.addArguments("");
                     DriverFactory.addDriver(driver = new OperaDriver(operaOptions));
@@ -158,7 +157,7 @@ public class DriverFactory extends FrameworkEnvironment {
         }
     }
 
-    public void destroyDriver() {
+    protected void destroyDriver() {
         if (driver != null) {
             driver.quit();
             driver = null;

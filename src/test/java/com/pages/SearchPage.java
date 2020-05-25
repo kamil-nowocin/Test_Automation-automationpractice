@@ -1,6 +1,6 @@
 package com.pages;
 
-import com.pages.base.BasePage;
+import com.pages.base.MainPage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -13,7 +13,7 @@ import java.util.List;
  * @author kamil.nowocin
  **/
 
-public class SearchPage extends BasePage {
+public class SearchPage extends MainPage {
 
     //VIEW//
     @FindBy(how = How.XPATH, using = "//span[@class='heading-counter']")

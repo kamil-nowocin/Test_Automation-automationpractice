@@ -1,9 +1,9 @@
 package com.steps;
 
-import com.FrameworkEnvironment;
 import com.pages.CustomerServicePage;
-import com.pages.base.BasePage;
 import com.pages.base.MainPage;
+import com.testSettings.TestEnvironment;
+import com.testSettings.TestCommons;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -19,9 +19,9 @@ import java.io.File;
  * @author kamil.nowocin
  **/
 
-public class CustomerServicePageSteps extends FrameworkEnvironment {
+public class CustomerServicePageSteps extends TestEnvironment {
 
-    private final BasePage basePage = new BasePage();
+    private final TestCommons testCommons = new TestCommons();
     private final MainPage mainPage = new MainPage();
     private final CustomerServicePage customerServicePage = new CustomerServicePage();
 
@@ -34,14 +34,14 @@ public class CustomerServicePageSteps extends FrameworkEnvironment {
     @Step("I can see Contact Us form")
     @Then("I can see Contact Us form")
     public void iCanSeeContactUsForm() throws Throwable {
-        Assert.assertTrue(basePage.waitForElementToBeDisplayed(5, customerServicePage.contactUsPane),
+        Assert.assertTrue(testCommons.waitForElementToBeDisplayed(5, customerServicePage.contactUsPane),
                 String.format(VIEW_ERROR, "Contact Us form"));
     }
 
     @Step("I am on Customer Service Contact Us page form")
     @Given("I am on Customer Service Contact Us page form")
     public void iAmOnCustomerServiceContactUsPageForm() throws Throwable {
-        Assert.assertTrue(basePage.waitForElementToBeDisplayed(5, customerServicePage.contactUsHeader),
+        Assert.assertTrue(testCommons.waitForElementToBeDisplayed(5, customerServicePage.contactUsHeader),
                 String.format(VIEW_ERROR, "Customer Service Contact Us page form"));
     }
 
@@ -49,7 +49,7 @@ public class CustomerServicePageSteps extends FrameworkEnvironment {
     @When("I choose Subject Heading {string}")
     public void iChooseSubjectHeading(String subjectHeading) throws Throwable {
         //ACT//
-        basePage.selectFromDropdownByText(subjectHeading, customerServicePage.subjectHeadingDropdown);
+        testCommons.selectFromDropdownByText(subjectHeading, customerServicePage.subjectHeadingDropdown);
         logger.info(String.format("Chosen subject: \"%S\"", subjectHeading));
 
         //ASSERT//
@@ -76,7 +76,7 @@ public class CustomerServicePageSteps extends FrameworkEnvironment {
     @And("I write an invalid email address in contact us page")
     public void iWriteAnInvalidEmailAddressInContactUsPage() throws Throwable {
         //ARRANGE//
-        final String userInvalidEmailAddress = basePage.getRandomElementFromResourceBundleList
+        final String userInvalidEmailAddress = testCommons.getRandomElementFromResourceBundleList
                 (resourceBundleInvalidEmails.getString("invalidEmails"));
 
         //ACT//
@@ -92,7 +92,7 @@ public class CustomerServicePageSteps extends FrameworkEnvironment {
     @And("I write order reference")
     public void iWriteOrderReference() throws Throwable {
         //ARRANGE//
-        final String orderReference = basePage.randomStringValue(10);
+        final String orderReference = testCommons.randomStringValue(10);
 
         //ACT//
         customerServicePage.orderReferenceInput.sendKeys(orderReference);

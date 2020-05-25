@@ -1,8 +1,9 @@
 package tests.WebAPI;
 
-import com.ExcelEnvironment;
-import com.listeners.TestNGListener_API;
+
+import com.testListeners.TestNGListener_API;
 import com.steps.Hooks;
+import com.testSettings.ExcelEnvironment;
 import io.qameta.allure.*;
 import io.restassured.RestAssured;
 import org.testng.annotations.Listeners;

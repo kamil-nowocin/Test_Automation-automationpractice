@@ -1,8 +1,8 @@
-package com;
+package com.testSettings;
 
 import com.github.javafaker.Faker;
-import com.listeners.TestNGListener_WEB;
 import com.steps.Hooks;
+import com.testListeners.TestNGListener_WEB;
 import io.cucumber.java.Scenario;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.Attachment;
@@ -38,7 +38,7 @@ import java.util.stream.Stream;
  * @author kamil.nowocin
  **/
 
-public class FrameworkEnvironment {
+public class TestEnvironment {
 
     protected static Faker faker = new Faker(Locale.US);
     protected static MockNeat mockNeat = MockNeat.secure();
@@ -105,11 +105,11 @@ public class FrameworkEnvironment {
     protected static final String HOST_URL = System.getProperty
             ("selenium.hostURL", "https://localhost:3000");
 
-    public static String getCurrentPath() {
+    protected static String getCurrentPath() {
         return Paths.get(".").toAbsolutePath().normalize().toString();
     }
 
-    protected static void allureWriteProperties() {
+    public static void allureWriteProperties() {
         Properties properties = new Properties();
         properties.setProperty("All tests were executed on:", HOME_URL);
         properties.setProperty("Travis build URL:", TRAVIS_BUILD_WEB_URL);
@@ -125,7 +125,7 @@ public class FrameworkEnvironment {
         }
     }
 
-    protected static void allureWriteExecutors() {
+    public static void allureWriteExecutors() {
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("name", EXECUTOR);
         jsonObject.put("type", EXECUTOR);
@@ -197,13 +197,13 @@ public class FrameworkEnvironment {
         }
     }
 
-    public void printWebDriverManagerVersions(Boolean boolStatus) {
-        if (boolStatus) {
-            logger.info("ChromeDriver available versions: " + WebDriverManager.chromedriver().getVersions());
-            logger.info("GeckoDriver available versions: " + WebDriverManager.firefoxdriver().getVersions());
-            logger.info("OperaDriver available versions: " + WebDriverManager.operadriver().getVersions());
-            logger.info("EdgeDriver available versions: " + WebDriverManager.edgedriver().getVersions());
-            logger.info("IEDriver available versions: " + WebDriverManager.iedriver().getVersions());
+    protected void printWebDriverManagerVersions(Boolean printStatuses) {
+        if (printStatuses) {
+            logger.info("ChromeDriver available versions: " + WebDriverManager.chromedriver().getDriverVersions());
+            logger.info("GeckoDriver available versions: " + WebDriverManager.firefoxdriver().getDriverVersions());
+            logger.info("OperaDriver available versions: " + WebDriverManager.operadriver().getDriverVersions());
+            logger.info("EdgeDriver available versions: " + WebDriverManager.edgedriver().getDriverVersions());
+            logger.info("IEDriver available versions: " + WebDriverManager.iedriver().getDriverVersions());
         }
     }
 }

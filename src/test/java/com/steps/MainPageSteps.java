@@ -1,10 +1,10 @@
 package com.steps;
 
-import com.ContextInjection;
-import com.DriverFactory;
 import com.google.inject.Inject;
-import com.pages.base.BasePage;
 import com.pages.base.MainPage;
+import com.testSettings.ContextInjection;
+import com.testSettings.DriverFactory;
+import com.testSettings.TestCommons;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.qameta.allure.Step;
@@ -20,7 +20,7 @@ public class MainPageSteps extends DriverFactory {
 
     private final ContextInjection contextInjection;
 
-    private final BasePage basePage = new BasePage();
+    private final TestCommons testCommons = new TestCommons();
     private final MainPage mainPage = new MainPage();
     private final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps(new ContextInjection());
     private final AuthenticationPageSteps authenticationPageSteps = new AuthenticationPageSteps();
@@ -50,7 +50,7 @@ public class MainPageSteps extends DriverFactory {
         final boolean isPageReadyToExecuteTests;
 
         //ACT//
-        isPageReadyToExecuteTests = basePage.isPageReady();
+        isPageReadyToExecuteTests = testCommons.isPageReady();
         logger.info(String.format("Page ready: \"%S\"", isPageReadyToExecuteTests));
 
         //ASSERT//

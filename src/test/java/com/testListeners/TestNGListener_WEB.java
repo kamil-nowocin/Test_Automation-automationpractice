@@ -1,7 +1,7 @@
-package com.listeners;
+package com.testListeners;
 
-import com.ExcelEnvironment;
-import com.FrameworkEnvironment;
+import com.testSettings.ExcelEnvironment;
+import com.testSettings.TestEnvironment;
 import io.cucumber.java.Scenario;
 import org.apache.commons.lang3.StringUtils;
 import org.testng.ITestContext;
@@ -14,7 +14,7 @@ import org.testng.ITestResult;
  * @author kamil.nowocin
  **/
 
-public class TestNGListener_WEB extends FrameworkEnvironment implements ITestListener {
+public class TestNGListener_WEB extends TestEnvironment implements ITestListener {
 
     /**
      * For TestNG tests
@@ -38,8 +38,8 @@ public class TestNGListener_WEB extends FrameworkEnvironment implements ITestLis
         logger.info(StringUtils.repeat("=", 32)
                 + "END OF TEST SUITE " + iTestContext.getEndDate() + StringUtils.repeat("=", 31));
         logger.info(StringUtils.repeat("#", 110));
-        FrameworkEnvironment.allureWriteExecutors();
-        FrameworkEnvironment.allureWriteProperties();
+        TestEnvironment.allureWriteExecutors();
+        TestEnvironment.allureWriteProperties();
     }
 
     @Override

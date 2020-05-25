@@ -38,11 +38,11 @@ dependencies {
     compile group: 'org.apache.commons.io', name: 'commonsIO', version: '2.5.0'
     // https://github.com/bonigarcia/webdrivermanager/ - About WebDriverManager and how to use it
     // https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager
-    compile group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '3.8.1'
+    compile group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '4.0.0'
     // https://mvnrepository.com/artifact/io.qameta.allure/allure-testng
     compile group: 'io.qameta.allure', name: 'allure-testng', version: '2.13.3'
     // https://mvnrepository.com/artifact/org.json/json
-    compile group: 'org.json', name: 'json', version: '20190722'
+    compile group: 'org.json', name: 'json', version: '20200518'
     // https://mvnrepository.com/artifact/io.rest-assured/rest-assured
     testCompile group: 'io.rest-assured', name: 'rest-assured', version: '4.3.0'
     // https://mvnrepository.com/artifact/org.apache.poi/poi
@@ -61,7 +61,7 @@ dependencies {
     compile group: 'org.aspectj', name: 'aspectjweaver', version: '1.9.5'
 
     implementation("com.google.guava:guava:28.1-jre")
-    testImplementation 'io.cucumber:cucumber-java:4.3.1'
+    testImplementation 'io.cucumber:cucumber-java:5.6.0'
 }
 
 configurations {
@@ -108,6 +108,7 @@ task exper(type: JavaExec, dependsOn: 'classes') {
             project.sourceSets.test.compileClasspath,
             project.sourceSets.main.runtimeClasspath,
             project.sourceSets.test.runtimeClasspath)
-    args = ["./src/test/resources/xml_runners/TestNG-WebAPP.xml", "./src/test/resources/xml_runners/TestNG-WebAPI.xml",
+    args = ["./src/test/resources/xml_runners/TestNG-WebAPP.xml",
+            "./src/test/resources/xml_runners/TestNG-WebAPI.xml",
             "./src/test/resources/xml_runners/TestNG-POC.xml"]
 }
