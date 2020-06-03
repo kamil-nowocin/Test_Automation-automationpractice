@@ -45,6 +45,7 @@ You can add some environment settings, before you run tests with this command, e
 * After each CI/CD cycle run, tests results will be automatically uploaded to [kamil_nowocin.github.io/Test_Automation](https://kamil-nowocin.github.io/Test_Automation-automationpractice/) 
 * After each LOCAL cycle run, tests results will be stored in build/allure-report.  
 In terminal type `allure generate build/allure-report --clean` to generate local Allure Test Results
+![Imgur](https://i.imgur.com/nDpg1sX.gif)
 ## TEST LOGS
 There are two types of log information saved after each test run:  
 * Detailed logs in log directory. Warning! These logs will be deleted when you launch new test run.  
