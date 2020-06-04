@@ -46,8 +46,6 @@ You can add some environment settings, before you run tests with this command, e
 * After each LOCAL cycle run, tests results will be stored in build/allure-report.  
 In terminal type `allure generate build/allure-report --clean` to generate local Allure Test Results.   
 
-  
----
 ![Imgur](https://i.imgur.com/nDpg1sX.gif)
 ## TEST LOGS
 There are two types of log information saved after each test run:  
