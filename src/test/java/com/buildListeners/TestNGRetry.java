@@ -1,6 +1,6 @@
-package com.testListeners;
+package com.buildListeners;
 
-import com.testSettings.TestEnvironment;
+import com.buildSettings.TestEnvironment;
 import org.testng.IRetryAnalyzer;
 import org.testng.ITestResult;
 

@@ -1,4 +1,4 @@
-package com.testSettings;
+package com.buildSettings;
 
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
@@ -25,11 +25,11 @@ public class ExcelEnvironment extends TestEnvironment {
 
     public static int excelRowNumber;
 
-    public static final String testDataExcelFileName = "testdata.xlsx";
-    public static final String testDataExcelSheetName = "automationData";
+    public static final String TEST_DATA_EXCEL_FILE_NAME = "testdata.xlsx";
+    public static final String TEST_DATA_EXCEL_SHEET_NAME = "automationData";
 
-    public static void setExcelRowNumber(int _rowNumber) {
-        excelRowNumber = _rowNumber;
+    public static void setExcelRowNumber(int rowNumber) {
+        excelRowNumber = rowNumber;
     }
 
     public static int getExcelRowNumber() {
@@ -52,7 +52,7 @@ public class ExcelEnvironment extends TestEnvironment {
                 + "files"
                 + File.separator;
         try {
-            FileInputStream ExcelFile = new FileInputStream(testDataExcelPath + testDataExcelFileName);
+            FileInputStream ExcelFile = new FileInputStream(testDataExcelPath + TEST_DATA_EXCEL_FILE_NAME);
             excelWorkBook = new XSSFWorkbook(ExcelFile);
             excelSheet = excelWorkBook.getSheet(excelSheetName);
         } catch (Exception e) {
@@ -70,7 +70,7 @@ public class ExcelEnvironment extends TestEnvironment {
             excelRow = excelSheet.getRow(rowNumber);
             XSSFCell excelCell = excelRow.getCell(columnNumber);
             excelCell.setCellValue(stringValue);
-            FileOutputStream fileOut = new FileOutputStream(testDataExcelPath + testDataExcelFileName);
+            FileOutputStream fileOut = new FileOutputStream(testDataExcelPath + TEST_DATA_EXCEL_FILE_NAME);
             excelWorkBook.write(fileOut);
             fileOut.flush();
             fileOut.close();

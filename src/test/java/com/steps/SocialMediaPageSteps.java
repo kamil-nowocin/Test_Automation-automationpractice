@@ -1,8 +1,8 @@
 package com.steps;
 
+import com.buildSettings.DriverFactory;
+import com.buildSettings.TestCommons;
 import com.pages.SocialMediaPage;
-import com.testSettings.DriverFactory;
-import com.testSettings.TestCommons;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;

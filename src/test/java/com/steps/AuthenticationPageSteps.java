@@ -1,8 +1,8 @@
 package com.steps;
 
+import com.buildSettings.TestCommons;
+import com.buildSettings.TestEnvironment;
 import com.pages.AuthenticationPage;
-import com.testSettings.TestCommons;
-import com.testSettings.TestEnvironment;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;

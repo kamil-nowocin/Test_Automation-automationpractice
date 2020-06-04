@@ -1,13 +1,13 @@
 package com.steps;
 
+import com.buildSettings.ContextInjection;
+import com.buildSettings.TestCommons;
+import com.buildSettings.TestEnvironment;
 import com.google.inject.Inject;
 import com.pages.AccountDetailsPage;
 import com.pages.AuthenticationPage;
 import com.pages.RegistrationPage;
 import com.pages.base.MainPage;
-import com.testSettings.ContextInjection;
-import com.testSettings.TestCommons;
-import com.testSettings.TestEnvironment;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
@@ -28,13 +28,13 @@ import java.util.Locale;
 
 public class RegistrationPageSteps extends TestEnvironment {
 
-    private final ContextInjection contextInjection;
-
-    private final TestCommons testCommons = new TestCommons();
     private final MainPage mainPage = new MainPage();
+    private final TestCommons testCommons = new TestCommons();
     private final RegistrationPage registrationPage = new RegistrationPage();
     private final AuthenticationPage authenticationPage = new AuthenticationPage();
     private final AccountDetailsPage accountDetailsPage = new AccountDetailsPage();
+
+    private final ContextInjection contextInjection;
 
     @Inject
     public RegistrationPageSteps(ContextInjection contextInjection) {
@@ -67,7 +67,7 @@ public class RegistrationPageSteps extends TestEnvironment {
     public void iWriteAnInvalidEmailAddress() throws Throwable {
         //ARRANGE//
         final String userInvalidEmailAddress = testCommons.getRandomResourceBundleValue
-                (resourceBundleInvalidEmails.getString("invalidEmails"));
+                (RESOURCE_BUNDLE_INVALID_EMAILS.getString("invalidEmails"));
 
         //ACT//
         authenticationPage.createAnAccountEmailInput.sendKeys(userInvalidEmailAddress);
@@ -82,7 +82,7 @@ public class RegistrationPageSteps extends TestEnvironment {
     @When("I write an email address which is already in database")
     public void iWriteAnEmailAddressWhichIsAlreadyInDatabase() throws Throwable {
         //ARRANGE//
-        final String userRegisteredEmailAddress = contextInjection.defaultRegisteredEmailAddress;
+        final String userRegisteredEmailAddress = ContextInjection.DEFAULT_REGISTERED_EMAIL_ADDRESS;
 
         //ACT//
         authenticationPage.createAnAccountEmailInput.sendKeys(userRegisteredEmailAddress);
@@ -374,7 +374,7 @@ public class RegistrationPageSteps extends TestEnvironment {
     @And("I choose country {string}")
     public void iChooseCountry(String country) throws Throwable {
         //ARRANGE//
-        final String defaultCountry = contextInjection.defaultCustomerCountry;
+        final String defaultCountry = ContextInjection.DEFAULT_CUSTOMER_COUNTRY;
 
         //ACT//
         if (registrationPage.readCountryDropdown.getText().toLowerCase().equals(defaultCountry.toLowerCase()) &&
@@ -534,63 +534,51 @@ public class RegistrationPageSteps extends TestEnvironment {
         switch (stringName.toLowerCase()) {
             case "first name":
                 Assert.assertTrue(testCommons.errorValidator(registrationPage.registerError).toLowerCase().contains
-                                (resourceBundleErrorMessages.getString("error-FirstName").toLowerCase()),
-                        String.format(MESSAGE_DIDNT_CONTAIN, resourceBundleErrorMessages.getString("error-FirstName")));
+                        (RESOURCE_BUNDLE_ERROR_MESSAGES.getString("error-FirstName").toLowerCase()), String.format(MESSAGE_DIDNT_CONTAIN, RESOURCE_BUNDLE_ERROR_MESSAGES.getString("error-FirstName")));
                 break;
             case "last name":
                 Assert.assertTrue(testCommons.errorValidator(registrationPage.registerError).toLowerCase().contains
-                                (resourceBundleErrorMessages.getString("error-LastName").toLowerCase()),
-                        String.format(MESSAGE_DIDNT_CONTAIN, resourceBundleErrorMessages.getString("error-LastName")));
+                        (RESOURCE_BUNDLE_ERROR_MESSAGES.getString("error-LastName").toLowerCase()), String.format(MESSAGE_DIDNT_CONTAIN, RESOURCE_BUNDLE_ERROR_MESSAGES.getString("error-LastName")));
                 break;
             case "email address":
                 Assert.assertTrue(testCommons.errorValidator(registrationPage.registerError).toLowerCase().contains
-                                (resourceBundleErrorMessages.getString("error-Email").toLowerCase()),
-                        String.format(MESSAGE_DIDNT_CONTAIN, resourceBundleErrorMessages.getString("error-Email")));
+                        (RESOURCE_BUNDLE_ERROR_MESSAGES.getString("error-Email").toLowerCase()), String.format(MESSAGE_DIDNT_CONTAIN, RESOURCE_BUNDLE_ERROR_MESSAGES.getString("error-Email")));
                 break;
             case "password":
                 Assert.assertTrue(testCommons.errorValidator(registrationPage.registerError).toLowerCase().contains
-                                (resourceBundleErrorMessages.getString("error-Password").toLowerCase()),
-                        String.format(MESSAGE_DIDNT_CONTAIN, resourceBundleErrorMessages.getString("error-Password")));
+                        (RESOURCE_BUNDLE_ERROR_MESSAGES.getString("error-Password").toLowerCase()), String.format(MESSAGE_DIDNT_CONTAIN, RESOURCE_BUNDLE_ERROR_MESSAGES.getString("error-Password")));
                 break;
             case "address":
                 Assert.assertTrue(testCommons.errorValidator(registrationPage.registerError).toLowerCase().contains
-                                (resourceBundleErrorMessages.getString("error-Address").toLowerCase()),
-                        String.format(MESSAGE_DIDNT_CONTAIN, resourceBundleErrorMessages.getString("error-Address")));
+                        (RESOURCE_BUNDLE_ERROR_MESSAGES.getString("error-Address").toLowerCase()), String.format(MESSAGE_DIDNT_CONTAIN, RESOURCE_BUNDLE_ERROR_MESSAGES.getString("error-Address")));
                 break;
             case "city":
                 Assert.assertTrue(testCommons.errorValidator(registrationPage.registerError).toLowerCase().contains
-                                (resourceBundleErrorMessages.getString("error-City").toLowerCase()),
-                        String.format(MESSAGE_DIDNT_CONTAIN, resourceBundleErrorMessages.getString("error-City")));
+                        (RESOURCE_BUNDLE_ERROR_MESSAGES.getString("error-City").toLowerCase()), String.format(MESSAGE_DIDNT_CONTAIN, RESOURCE_BUNDLE_ERROR_MESSAGES.getString("error-City")));
                 break;
             case "state":
                 Assert.assertTrue(testCommons.errorValidator(registrationPage.registerError).toLowerCase().contains
-                                (resourceBundleErrorMessages.getString("error-State").toLowerCase()),
-                        String.format(MESSAGE_DIDNT_CONTAIN, resourceBundleErrorMessages.getString("error-State")));
+                        (RESOURCE_BUNDLE_ERROR_MESSAGES.getString("error-State").toLowerCase()), String.format(MESSAGE_DIDNT_CONTAIN, RESOURCE_BUNDLE_ERROR_MESSAGES.getString("error-State")));
                 break;
             case "postal code":
                 Assert.assertTrue(testCommons.errorValidator(registrationPage.registerError).toLowerCase().contains
-                                (resourceBundleErrorMessages.getString("error-PostalCode").toLowerCase()),
-                        String.format(MESSAGE_DIDNT_CONTAIN, resourceBundleErrorMessages.getString("error-PostalCode")));
+                        (RESOURCE_BUNDLE_ERROR_MESSAGES.getString("error-PostalCode").toLowerCase()), String.format(MESSAGE_DIDNT_CONTAIN, RESOURCE_BUNDLE_ERROR_MESSAGES.getString("error-PostalCode")));
                 break;
             case "country":
                 Assert.assertTrue(testCommons.errorValidator(registrationPage.registerError).toLowerCase().contains
-                                (resourceBundleErrorMessages.getString("error-Country").toLowerCase()),
-                        String.format(MESSAGE_DIDNT_CONTAIN, resourceBundleErrorMessages.getString("error-Country")));
+                        (RESOURCE_BUNDLE_ERROR_MESSAGES.getString("error-Country").toLowerCase()), String.format(MESSAGE_DIDNT_CONTAIN, RESOURCE_BUNDLE_ERROR_MESSAGES.getString("error-Country")));
                 break;
             case "mobile phone":
                 Assert.assertTrue(testCommons.errorValidator(registrationPage.registerError).toLowerCase().contains
-                                (resourceBundleErrorMessages.getString("error-MobilePhone").toLowerCase()),
-                        String.format(MESSAGE_DIDNT_CONTAIN, resourceBundleErrorMessages.getString("error-MobilePhone")));
+                        (RESOURCE_BUNDLE_ERROR_MESSAGES.getString("error-MobilePhone").toLowerCase()), String.format(MESSAGE_DIDNT_CONTAIN, RESOURCE_BUNDLE_ERROR_MESSAGES.getString("error-MobilePhone")));
                 break;
             case "email address alias":
                 Assert.assertTrue(testCommons.errorValidator(registrationPage.registerError).toLowerCase().contains
-                                (resourceBundleErrorMessages.getString("error-EmailAlias").toLowerCase()),
-                        String.format(MESSAGE_DIDNT_CONTAIN, resourceBundleErrorMessages.getString("error-EmailAlias")));
+                        (RESOURCE_BUNDLE_ERROR_MESSAGES.getString("error-EmailAlias").toLowerCase()), String.format(MESSAGE_DIDNT_CONTAIN, RESOURCE_BUNDLE_ERROR_MESSAGES.getString("error-EmailAlias")));
                 break;
             case "one element":
                 Assert.assertTrue(testCommons.errorValidator(registrationPage.registerError).toLowerCase().contains
-                                (resourceBundleErrorMessages.getString("error-oneError").toLowerCase()),
-                        String.format(MESSAGE_DIDNT_CONTAIN, resourceBundleErrorMessages.getString("error-oneError")));
+                        (RESOURCE_BUNDLE_ERROR_MESSAGES.getString("error-oneError").toLowerCase()), String.format(MESSAGE_DIDNT_CONTAIN, RESOURCE_BUNDLE_ERROR_MESSAGES.getString("error-oneError")));
                 break;
             default:
                 throw new IllegalStateException(String.format(INPUT_ERROR, stringName.toUpperCase()));

@@ -1,10 +1,10 @@
 package com.steps;
 
-import com.testListeners.TestNGListener_API;
-import com.testListeners.TestNGListener_WEB;
-import com.testSettings.DriverFactory;
-import com.testSettings.ExcelEnvironment;
-import com.testSettings.TestCommons;
+import com.buildListeners.TestNGListener_API;
+import com.buildListeners.TestNGListener_WEB;
+import com.buildSettings.DriverFactory;
+import com.buildSettings.ExcelEnvironment;
+import com.buildSettings.TestCommons;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
@@ -30,7 +30,7 @@ public class Hooks extends DriverFactory implements ITestListener {
      **/
     @BeforeTest(description = "Setting up Excel File")
     public void dataSetup() {
-        ExcelEnvironment.setExcelSheet(ExcelEnvironment.testDataExcelSheetName);
+        ExcelEnvironment.setExcelSheet(ExcelEnvironment.TEST_DATA_EXCEL_SHEET_NAME);
     }
 
     @BeforeMethod(description = "Setting up Test Class")

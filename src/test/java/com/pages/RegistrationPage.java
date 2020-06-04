@@ -17,6 +17,10 @@ public class RegistrationPage extends MainPage {
     @FindBy(how = How.XPATH, using = "//form[@id='account-creation_form']")
     public WebElement accountCreationPane;
 
+    //MESSAGES//
+    @FindBy(how = How.XPATH, using = "//div[@class='alert alert-danger']")
+    public WebElement registerError;
+
     //BUTTONS & INPUTS & DROPDOWN//
     @FindBy(how = How.XPATH, using = "//input[@id='id_gender1']")
     public WebElement mrButton;
@@ -107,8 +111,4 @@ public class RegistrationPage extends MainPage {
 
     @FindBy(how = How.XPATH, using = "//button[@id='submitAccount']")
     public WebElement registerButton;
-
-    //MESSAGES//
-    @FindBy(how = How.XPATH, using = "//div[@class='alert alert-danger']")
-    public WebElement registerError;
 }

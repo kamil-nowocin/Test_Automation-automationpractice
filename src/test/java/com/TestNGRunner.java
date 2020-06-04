@@ -1,6 +1,6 @@
 package com;
 
-import com.testSettings.TestEnvironment;
+import com.buildSettings.TestEnvironment;
 import io.cucumber.testng.*;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;

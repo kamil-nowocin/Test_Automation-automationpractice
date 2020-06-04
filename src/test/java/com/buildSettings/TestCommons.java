@@ -1,4 +1,4 @@
-package com.testSettings;
+package com.buildSettings;
 
 import com.google.common.collect.ImmutableMap;
 import org.openqa.selenium.JavascriptExecutor;
@@ -24,7 +24,9 @@ import java.util.*;
 
 public class TestCommons extends TestEnvironment {
 
-    //WAIT FOR//
+    /**
+     * WAIT METHODS
+     **/
     public void waitForElementToBeClickable(int timeInSeconds, WebElement webElement) throws
             NoSuchElementException, WebDriverException {
         try {
@@ -67,7 +69,9 @@ public class TestCommons extends TestEnvironment {
         }
     }
 
-    //SELECT FROM//
+    /**
+     * SELECT METHODS
+     **/
     public void selectFromDropdownByIndex(int value, WebElement webElement) throws NoSuchElementException {
         try {
             Select dropdown = new Select(webElement);
@@ -95,7 +99,9 @@ public class TestCommons extends TestEnvironment {
         }
     }
 
-    //RANDOM VALUES//
+    /**
+     * RANDOM METHODS
+     **/
     public int getRandomIntValue(int max, int min) {
         Random random = new Random();
         return random.nextInt((max - min) + 1) + min;
@@ -116,7 +122,9 @@ public class TestCommons extends TestEnvironment {
         return resourceBundleData.get(random.nextInt(resourceBundleData.size()));
     }
 
-    //GENERAL//
+    /**
+     * GENERAL METHODS
+     **/
     public String errorValidator(WebElement webElement) {
         waitForElementToBeDisplayed(TIMEOUT, webElement);
         return webElement.getText();

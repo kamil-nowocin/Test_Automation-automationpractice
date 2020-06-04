@@ -1,11 +1,10 @@
 package tests.WebAPP;
 
+import com.buildListeners.TestNGListener_WEB;
+import com.buildSettings.ExcelEnvironment;
 import com.steps.Hooks;
 import com.steps.MainPageSteps;
 import com.steps.SocialMediaPageSteps;
-import com.testListeners.TestNGListener_WEB;
-import com.testSettings.ContextInjection;
-import com.testSettings.ExcelEnvironment;
 import io.qameta.allure.*;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -33,7 +32,7 @@ public class SocialMedia_Tests extends Hooks {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(41);
 
-        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
+        final MainPageSteps mainPageSteps = new MainPageSteps();
         final SocialMediaPageSteps mediaPageSteps = new SocialMediaPageSteps();
 
         //ACT//
@@ -58,7 +57,7 @@ public class SocialMedia_Tests extends Hooks {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(42);
 
-        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
+        final MainPageSteps mainPageSteps = new MainPageSteps();
         final SocialMediaPageSteps mediaPageSteps = new SocialMediaPageSteps();
 
         //ACT//
@@ -83,7 +82,7 @@ public class SocialMedia_Tests extends Hooks {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(43);
 
-        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
+        final MainPageSteps mainPageSteps = new MainPageSteps();
         final SocialMediaPageSteps mediaPageSteps = new SocialMediaPageSteps();
 
         //ACT//
@@ -108,7 +107,7 @@ public class SocialMedia_Tests extends Hooks {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(44);
 
-        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
+        final MainPageSteps mainPageSteps = new MainPageSteps();
         final SocialMediaPageSteps mediaPageSteps = new SocialMediaPageSteps();
 
         //ACT//

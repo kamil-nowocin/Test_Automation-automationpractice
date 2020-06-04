@@ -1,8 +1,8 @@
-package com.testSettings;
+package com.buildSettings;
 
+import com.buildListeners.TestNGListener_WEB;
 import com.github.javafaker.Faker;
 import com.steps.Hooks;
-import com.testListeners.TestNGListener_WEB;
 import io.cucumber.java.Scenario;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.Attachment;
@@ -46,8 +46,8 @@ public class TestEnvironment {
     protected static DecimalFormat $decimalFormat = new DecimalFormat("$#0.00", new DecimalFormatSymbols(Locale.US));
 
     //BUNDLES//
-    protected static final ResourceBundle resourceBundleInvalidEmails = ResourceBundle.getBundle("invalidEmails");
-    protected static final ResourceBundle resourceBundleErrorMessages = ResourceBundle.getBundle("errorValidators");
+    protected static final ResourceBundle RESOURCE_BUNDLE_INVALID_EMAILS = ResourceBundle.getBundle("invalidEmails");
+    protected static final ResourceBundle RESOURCE_BUNDLE_ERROR_MESSAGES = ResourceBundle.getBundle("errorValidators");
 
     //DATA//
     protected static final int TIMEOUT = 15;

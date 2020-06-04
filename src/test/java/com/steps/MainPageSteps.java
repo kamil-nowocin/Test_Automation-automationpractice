@@ -1,10 +1,9 @@
 package com.steps;
 
-import com.google.inject.Inject;
+import com.buildSettings.ContextInjection;
+import com.buildSettings.DriverFactory;
+import com.buildSettings.TestCommons;
 import com.pages.base.MainPage;
-import com.testSettings.ContextInjection;
-import com.testSettings.DriverFactory;
-import com.testSettings.TestCommons;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.qameta.allure.Step;
@@ -18,17 +17,10 @@ import org.testng.Assert;
 
 public class MainPageSteps extends DriverFactory {
 
-    private final ContextInjection contextInjection;
-
-    private final TestCommons testCommons = new TestCommons();
     private final MainPage mainPage = new MainPage();
+    private final TestCommons testCommons = new TestCommons();
     private final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps(new ContextInjection());
     private final AuthenticationPageSteps authenticationPageSteps = new AuthenticationPageSteps();
-
-    @Inject
-    public MainPageSteps(ContextInjection contextInjection) {
-        this.contextInjection = contextInjection;
-    }
 
     @Step("I open home page")
     @Given("I open home page")
@@ -61,7 +53,7 @@ public class MainPageSteps extends DriverFactory {
     @When("I am logged as customer {string} using {string} password")
     public void iAmLoggedAsCustomerUsingPassword(String email, String password) throws Throwable {
         //ARRANGE//
-        final String defaultUserName = contextInjection.defaultCustomerUserName;
+        final String defaultUserName = ContextInjection.DEFAULT_CUSTOMER_USER_NAME;
 
         //ACT//
         registrationPageSteps.iClickOnSignInButton();
