@@ -20,6 +20,13 @@ public class CustomerServicePage extends MainPage {
     @FindBy(how = How.XPATH, using = "//form[@class='contact-form-box']")
     public WebElement contactUsPane;
 
+    //MESSAGES//
+    @FindBy(how = How.XPATH, using = "//div[@class='alert alert-danger']//li")
+    public WebElement contactUsErrorMessage;
+
+    @FindBy(how = How.XPATH, using = "//p[@class='alert alert-success']")
+    public WebElement contactUsSuccessMessage;
+
     //BUTTONS & INPUTS & DROPDOWN//
     @FindBy(how = How.XPATH, using = "//div[@class='col-xs-12 col-md-3']//select[@id='id_contact']")
     public WebElement subjectHeadingDropdown;
@@ -47,11 +54,4 @@ public class CustomerServicePage extends MainPage {
 
     @FindBy(how = How.XPATH, using = "//div[@class='submit']//button")
     public WebElement sendButton;
-
-    //MESSAGES//
-    @FindBy(how = How.XPATH, using = "//div[@class='alert alert-danger']//li")
-    public WebElement contactUsErrorMessage;
-
-    @FindBy(how = How.XPATH, using = "//p[@class='alert alert-success']")
-    public WebElement contactUsSuccessMessage;
 }

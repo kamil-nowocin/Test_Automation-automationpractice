@@ -1,12 +1,12 @@
 package tests.WebAPP;
 
+import com.buildListeners.TestNGListener_WEB;
+import com.buildSettings.ContextInjection;
+import com.buildSettings.ExcelEnvironment;
 import com.steps.Hooks;
 import com.steps.MainPageSteps;
 import com.steps.RegistrationPageSteps;
 import com.steps.ShoppingLoggedUserSteps;
-import com.testListeners.TestNGListener_WEB;
-import com.testSettings.ContextInjection;
-import com.testSettings.ExcelEnvironment;
 import io.cucumber.datatable.DataTable;
 import io.qameta.allure.*;
 import org.testng.annotations.Listeners;
@@ -40,7 +40,7 @@ public class ShoppingLoggedUser_Tests extends Hooks {
         ExcelEnvironment.saveTestResultsXLSX(39);
         List<List<String>> orderDetails = Arrays.asList
                 (
-                        Arrays.asList("Quantity", " Size", "Colour"),
+                        Arrays.asList("Quantity", "Size", "Colour"),
                         Arrays.asList("5", "M", "Blue")
                 );
         DataTable orderDetailsDataTable = DataTable.create(orderDetails);
@@ -52,7 +52,7 @@ public class ShoppingLoggedUser_Tests extends Hooks {
                 );
         DataTable paymentDetailsDataTable = DataTable.create(paymentDetails);
 
-        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
+        final MainPageSteps mainPageSteps = new MainPageSteps();
         final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps(new ContextInjection());
         final ShoppingLoggedUserSteps shoppingLoggedUserSteps = new ShoppingLoggedUserSteps(new ContextInjection());
 
@@ -98,7 +98,7 @@ public class ShoppingLoggedUser_Tests extends Hooks {
         ExcelEnvironment.saveTestResultsXLSX(40);
         List<List<String>> orderDetails = Arrays.asList
                 (
-                        Arrays.asList("Quantity", " Size", "Colour"),
+                        Arrays.asList("Quantity", "Size", "Colour"),
                         Arrays.asList("2", "S", "Black")
                 );
         DataTable orderDetailsDataTable = DataTable.create(orderDetails);
@@ -110,7 +110,7 @@ public class ShoppingLoggedUser_Tests extends Hooks {
                 );
         DataTable paymentDetailsDataTable = DataTable.create(paymentDetails);
 
-        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
+        final MainPageSteps mainPageSteps = new MainPageSteps();
         final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps(new ContextInjection());
         final ShoppingLoggedUserSteps shoppingLoggedUserSteps = new ShoppingLoggedUserSteps(new ContextInjection());
 

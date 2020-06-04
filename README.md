@@ -44,7 +44,10 @@ You can add some environment settings, before you run tests with this command, e
 ## TEST RESULTS (Allure Report)
 * After each CI/CD cycle run, tests results will be automatically uploaded to [kamil_nowocin.github.io/Test_Automation](https://kamil-nowocin.github.io/Test_Automation-automationpractice/) 
 * After each LOCAL cycle run, tests results will be stored in build/allure-report.  
-In terminal type `allure generate build/allure-report --clean` to generate local Allure Test Results
+In terminal type `allure generate build/allure-report --clean` to generate local Allure Test Results.   
+
+  
+---
 ![Imgur](https://i.imgur.com/nDpg1sX.gif)
 ## TEST LOGS
 There are two types of log information saved after each test run:  
@@ -53,4 +56,4 @@ There are two types of log information saved after each test run:
 ## AUTHORS
 - **Kamil Nowocin** - *Initial work* - [Kamil Nowocin](https://github.com/kamil-nowocin)
 ## LICENSE
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.

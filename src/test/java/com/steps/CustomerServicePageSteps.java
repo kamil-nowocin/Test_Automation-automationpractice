@@ -1,9 +1,9 @@
 package com.steps;
 
+import com.buildSettings.TestCommons;
+import com.buildSettings.TestEnvironment;
 import com.pages.CustomerServicePage;
 import com.pages.base.MainPage;
-import com.testSettings.TestCommons;
-import com.testSettings.TestEnvironment;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -21,8 +21,8 @@ import java.io.File;
 
 public class CustomerServicePageSteps extends TestEnvironment {
 
-    private final TestCommons testCommons = new TestCommons();
     private final MainPage mainPage = new MainPage();
+    private final TestCommons testCommons = new TestCommons();
     private final CustomerServicePage customerServicePage = new CustomerServicePage();
 
     @Step("I click on Contact Us button")
@@ -77,7 +77,7 @@ public class CustomerServicePageSteps extends TestEnvironment {
     public void iWriteAnInvalidEmailAddressInContactUsPage() throws Throwable {
         //ARRANGE//
         final String userInvalidEmailAddress = testCommons.getRandomResourceBundleValue
-                (resourceBundleInvalidEmails.getString("invalidEmails"));
+                (RESOURCE_BUNDLE_INVALID_EMAILS.getString("invalidEmails"));
 
         //ACT//
         customerServicePage.emailAddressInput.sendKeys(userInvalidEmailAddress);

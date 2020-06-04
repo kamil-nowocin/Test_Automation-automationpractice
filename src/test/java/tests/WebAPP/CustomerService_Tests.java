@@ -1,11 +1,10 @@
 package tests.WebAPP;
 
+import com.buildListeners.TestNGListener_WEB;
+import com.buildSettings.ExcelEnvironment;
 import com.steps.CustomerServicePageSteps;
 import com.steps.Hooks;
 import com.steps.MainPageSteps;
-import com.testListeners.TestNGListener_WEB;
-import com.testSettings.ContextInjection;
-import com.testSettings.ExcelEnvironment;
 import io.qameta.allure.*;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -33,7 +32,7 @@ public class CustomerService_Tests extends Hooks {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(5);
 
-        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
+        final MainPageSteps mainPageSteps = new MainPageSteps();
         final CustomerServicePageSteps customerServicePageSteps = new CustomerServicePageSteps();
 
         //ACT//
@@ -64,7 +63,7 @@ public class CustomerService_Tests extends Hooks {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(6);
 
-        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
+        final MainPageSteps mainPageSteps = new MainPageSteps();
         final CustomerServicePageSteps customerServicePageSteps = new CustomerServicePageSteps();
 
         //ACT//
@@ -94,7 +93,7 @@ public class CustomerService_Tests extends Hooks {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(7);
 
-        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
+        final MainPageSteps mainPageSteps = new MainPageSteps();
         final CustomerServicePageSteps customerServicePageSteps = new CustomerServicePageSteps();
 
         //ACT//
@@ -126,7 +125,7 @@ public class CustomerService_Tests extends Hooks {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(8);
 
-        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
+        final MainPageSteps mainPageSteps = new MainPageSteps();
         final CustomerServicePageSteps customerServicePageSteps = new CustomerServicePageSteps();
 
         //ACT//
@@ -158,7 +157,7 @@ public class CustomerService_Tests extends Hooks {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(9);
 
-        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
+        final MainPageSteps mainPageSteps = new MainPageSteps();
         final CustomerServicePageSteps customerServicePageSteps = new CustomerServicePageSteps();
 
         //ACT//
@@ -190,7 +189,7 @@ public class CustomerService_Tests extends Hooks {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(10);
 
-        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
+        final MainPageSteps mainPageSteps = new MainPageSteps();
         final CustomerServicePageSteps customerServicePageSteps = new CustomerServicePageSteps();
 
         //ACT//
@@ -222,7 +221,7 @@ public class CustomerService_Tests extends Hooks {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(11);
 
-        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
+        final MainPageSteps mainPageSteps = new MainPageSteps();
         final CustomerServicePageSteps customerServicePageSteps = new CustomerServicePageSteps();
 
         //ACT//
@@ -254,7 +253,7 @@ public class CustomerService_Tests extends Hooks {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(12);
 
-        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
+        final MainPageSteps mainPageSteps = new MainPageSteps();
         final CustomerServicePageSteps customerServicePageSteps = new CustomerServicePageSteps();
 
         //ACT//

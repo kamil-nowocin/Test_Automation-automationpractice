@@ -1,12 +1,12 @@
 package tests.WebAPP;
 
+import com.buildListeners.TestNGListener_WEB;
+import com.buildSettings.ContextInjection;
+import com.buildSettings.ExcelEnvironment;
 import com.steps.AuthenticationPageSteps;
 import com.steps.Hooks;
 import com.steps.MainPageSteps;
 import com.steps.RegistrationPageSteps;
-import com.testListeners.TestNGListener_WEB;
-import com.testSettings.ContextInjection;
-import com.testSettings.ExcelEnvironment;
 import io.qameta.allure.*;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -34,7 +34,7 @@ public class Authentication_Tests extends Hooks {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(1);
 
-        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
+        final MainPageSteps mainPageSteps = new MainPageSteps();
         final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps(new ContextInjection());
         final AuthenticationPageSteps authenticationPageSteps = new AuthenticationPageSteps();
 
@@ -63,7 +63,7 @@ public class Authentication_Tests extends Hooks {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(2);
 
-        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
+        final MainPageSteps mainPageSteps = new MainPageSteps();
         final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps(new ContextInjection());
         final AuthenticationPageSteps authenticationPageSteps = new AuthenticationPageSteps();
 
@@ -92,7 +92,7 @@ public class Authentication_Tests extends Hooks {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(3);
 
-        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
+        final MainPageSteps mainPageSteps = new MainPageSteps();
         final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps(new ContextInjection());
         final AuthenticationPageSteps authenticationPageSteps = new AuthenticationPageSteps();
 
@@ -121,7 +121,7 @@ public class Authentication_Tests extends Hooks {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(4);
 
-        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
+        final MainPageSteps mainPageSteps = new MainPageSteps();
         final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps(new ContextInjection());
         final AuthenticationPageSteps authenticationPageSteps = new AuthenticationPageSteps();
 

@@ -24,17 +24,35 @@ public class ProductDetailsPage extends MainPage {
     @FindBy(how = How.XPATH, using = "//div[@id='layer_cart']//div[@class='clearfix']")
     public WebElement popupPaneProductDetails;
 
+    //POPUP LEFT SIDE//
     @FindBy(how = How.XPATH, using = "//div[@id='layer_cart']//div[@class='clearfix']//i[@class='icon-ok']//parent::h2")
     public WebElement popupPaneAddedSuccessfully;
 
+    @FindBy(how = How.XPATH, using = "//span[@id='layer_cart_product_title']")
+    public WebElement popupPaneCartProductName;
+
     @FindBy(how = How.XPATH, using = "//span[@id='layer_cart_product_quantity']")
-    public WebElement popupPaneQuantity;
+    public WebElement popupPaneCartProductQuantity;
 
     @FindBy(how = How.XPATH, using = "//span[@id='layer_cart_product_price']")
-    public WebElement popupPaneFinalProductTotalPrice;
+    public WebElement popupPaneCartProductPrice;
+
+    //POPUP RIGHT SIDE//
+    @FindBy(how = How.XPATH, using = "//span[@class='ajax_block_products_total']")
+    public WebElement popupPaneCartTotalProductsPrice;
+
+    @FindBy(how = How.XPATH, using = "//span[@class='ajax_cart_shipping_cost']")
+    public WebElement popupPaneCartTotalShippingPrice;
 
     @FindBy(how = How.XPATH, using = "//span[@class='ajax_block_cart_total']")
-    public WebElement popupPaneFinalOrderTotalPrice;
+    public WebElement popupPaneCartTotalPrice;
+
+    //POPUP BUTTONS//
+    @FindBy(how = How.XPATH, using = "//span[@class='continue btn btn-default button exclusive-medium']//span")
+    public WebElement continueShoppingButton;
+
+    @FindBy(how = How.XPATH, using = "//a[@class='btn btn-default button button-medium']")
+    public WebElement proceedToCheckoutButton;
 
     //BUTTONS & INPUTS & DROPDOWN//
     @FindBy(how = How.XPATH, using = "//input[@id='quantity_wanted']")
@@ -75,7 +93,4 @@ public class ProductDetailsPage extends MainPage {
 
     @FindBy(how = How.XPATH, using = "//p[@id='add_to_cart']//span[text()='Add to cart']")
     public WebElement addToCartButton;
-
-    @FindBy(how = How.XPATH, using = "//a[@class='btn btn-default button button-medium']")
-    public WebElement proceedToCheckoutButton;
 }

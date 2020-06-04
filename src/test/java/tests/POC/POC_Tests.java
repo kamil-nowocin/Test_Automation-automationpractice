@@ -1,8 +1,8 @@
 package tests.POC;
 
+import com.buildListeners.TestNGListener_WEB;
+import com.buildSettings.ExcelEnvironment;
 import com.steps.Hooks;
-import com.testListeners.TestNGListener_WEB;
-import com.testSettings.ExcelEnvironment;
 import io.qameta.allure.*;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.testng.Assert;

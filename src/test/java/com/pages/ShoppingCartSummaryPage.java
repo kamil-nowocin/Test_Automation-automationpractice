@@ -43,8 +43,20 @@ public class ShoppingCartSummaryPage extends MainPage {
     @FindBy(how = How.XPATH, using = "//td[@class='cart_total']//span[@class='price']")
     public WebElement productTotalPrice;
 
+    @FindBy(how = How.XPATH, using = "//td[@id='total_product']")
+    public WebElement totalProductsPrice;
+
+    @FindBy(how = How.XPATH, using = "//td[@id='total_shipping']")
+    public WebElement totalOrderShipping;
+
+    @FindBy(how = How.XPATH, using = "//td[@id='total_price_without_tax']")
+    public WebElement totalOrderPriceWithoutTax;
+
+    @FindBy(how = How.XPATH, using = "//td[@id='total_tax']")
+    public WebElement totalOrderTax;
+
     @FindBy(how = How.XPATH, using = "//span[@id='total_price']")
-    public WebElement productTotalOrderPriceTAX;
+    public WebElement totalOrderPriceWithTax;
 
     /**
      * ADDRESSES

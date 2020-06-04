@@ -1,6 +1,6 @@
 package com.pages.base;
 
-import com.testSettings.DriverFactory;
+import com.buildSettings.DriverFactory;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;

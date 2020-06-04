@@ -1,8 +1,7 @@
-package com.testListeners;
+package com.buildListeners;
 
-import com.testSettings.ExcelEnvironment;
-import com.testSettings.TestEnvironment;
-import io.cucumber.java.Scenario;
+import com.buildSettings.ExcelEnvironment;
+import com.buildSettings.TestEnvironment;
 import org.apache.commons.lang3.StringUtils;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
@@ -14,7 +13,7 @@ import org.testng.ITestResult;
  * @author kamil.nowocin
  **/
 
-public class TestNGListener_WEB extends TestEnvironment implements ITestListener {
+public class TestNGListener_API extends TestEnvironment implements ITestListener {
 
     /**
      * For TestNG tests
@@ -25,10 +24,9 @@ public class TestNGListener_WEB extends TestEnvironment implements ITestListener
 
     @Override
     public synchronized void onStart(ITestContext iTestContext) {
-        deleteOldLogs();
         logger.info(StringUtils.repeat("#", 110));
-        logger.info(StringUtils.repeat("=", 31)
-                + "STARTING TEST SUITE " + iTestContext.getStartDate() + StringUtils.repeat("=", 30));
+        logger.info(StringUtils.repeat("=", 29)
+                + "STARTING API TEST SUITE " + iTestContext.getStartDate() + StringUtils.repeat("=", 28));
         logger.info(StringUtils.repeat("#", 110));
     }
 
@@ -47,6 +45,7 @@ public class TestNGListener_WEB extends TestEnvironment implements ITestListener
         logger.info(StringUtils.repeat("=", 48) + " TEST STARTED "
                 + StringUtils.repeat("=", 48));
         logger.info(ANSI_BLUE + "TEST NAME: " + getTestName(iTestResult) + ANSI_RESET);
+        logger.info("Doing some magic behind the application... Wish you could see it ;)");
     }
 
     @Override
@@ -63,29 +62,6 @@ public class TestNGListener_WEB extends TestEnvironment implements ITestListener
                 + ANSI_RED + "FAILED STATUS " + ANSI_RESET + StringUtils.repeat("=", 38));
         ExcelEnvironment.setCellData(ExcelEnvironment.getExcelRowNumber(), "FAILED", EXCEL_TC_RESULT_COLUMN);
         ExcelEnvironment.setCellData(ExcelEnvironment.getExcelRowNumber(), getTestName(iTestResult), EXCEL_TC_NAME_COLUMN);
-        logger.error(String.valueOf(iTestResult.getThrowable()));
-        allureSaveScreenshotPNG();
         allureSaveTextLog(iTestResult);
-    }
-
-    /**
-     * For Cucumber tests
-     **/
-    public static void onScenarioStart(Scenario scenario) {
-        logger.info(StringUtils.repeat("#", 110));
-        logger.info(StringUtils.repeat("=", 46)
-                + " BEFORE SCENARIO " + StringUtils.repeat("=", 47));
-        logger.info(StringUtils.repeat("#", 110));
-        logger.info(ANSI_BLUE + "SCENARIO NAME: " + scenario.getName().toUpperCase() + ANSI_RESET);
-        System.out.println();
-    }
-
-    public static void onScenarioFinish(Scenario scenario) {
-        System.out.println();
-        String status = (scenario.isFailed() ? ANSI_RED + "FAILED STATUS " + ANSI_RESET : ANSI_GREEN + "SUCCESS STATUS " + ANSI_RESET);
-        logger.info(StringUtils.repeat("#", 110));
-        logger.info(StringUtils.repeat("=", 36)
-                + " SCENARIO FINISHED WITH " + status + StringUtils.repeat("=", 35));
-        logger.info(StringUtils.repeat("#", 110));
     }
 }

@@ -1,10 +1,10 @@
 package com.steps;
 
+import com.buildSettings.TestCommons;
+import com.buildSettings.TestEnvironment;
 import com.google.common.collect.Ordering;
 import com.pages.SearchPage;
 import com.pages.base.MainPage;
-import com.testSettings.TestCommons;
-import com.testSettings.TestEnvironment;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -23,8 +23,8 @@ import java.util.List;
 
 public class SearchPageSteps extends TestEnvironment {
 
-    private final TestCommons testCommons = new TestCommons();
     private final MainPage mainPage = new MainPage();
+    private final TestCommons testCommons = new TestCommons();
     private final SearchPage searchPage = new SearchPage();
 
     @Step("I search for phrase *{0}*")
@@ -126,7 +126,6 @@ public class SearchPageSteps extends TestEnvironment {
                 List<String> lowestPriceList = Ordering.natural().sortedCopy(arrayList);
                 Assert.assertEquals(arrayList, lowestPriceList, String.format(SORTING_ERROR, sortedBy));
                 break;
-
             case "price: highest first":
                 for (WebElement productPrices : searchPage.productPrices) {
                     arrayList.add(productPrices.getText().replaceAll("[^$0-9.]", ""));
@@ -134,7 +133,6 @@ public class SearchPageSteps extends TestEnvironment {
                 List<String> highestPriceList = Ordering.natural().reverse().sortedCopy(arrayList);
                 Assert.assertEquals(arrayList, highestPriceList, String.format(SORTING_ERROR, sortedBy));
                 break;
-
             case "product name: a to z":
                 for (WebElement productName : searchPage.productNames) {
                     arrayList.add(productName.getText());
@@ -142,7 +140,6 @@ public class SearchPageSteps extends TestEnvironment {
                 List<String> sortedNames = Ordering.natural().sortedCopy(arrayList);
                 Assert.assertEquals(arrayList, sortedNames, String.format(SORTING_ERROR, sortedBy));
                 break;
-
             case "product name: z to a":
                 for (WebElement productName : searchPage.productNames) {
                     arrayList.add(productName.getText());
@@ -150,7 +147,6 @@ public class SearchPageSteps extends TestEnvironment {
                 List<String> reverseSortedNames = Ordering.natural().reverse().sortedCopy(arrayList);
                 Assert.assertEquals(arrayList, reverseSortedNames, String.format(SORTING_ERROR, sortedBy));
                 break;
-
             default:
                 throw new IllegalStateException(String.format(INPUT_ERROR, sortedBy.toUpperCase()));
         }

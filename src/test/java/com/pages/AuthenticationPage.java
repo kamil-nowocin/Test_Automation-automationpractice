@@ -38,6 +38,10 @@ public class AuthenticationPage extends MainPage {
     @FindBy(how = How.XPATH, using = "//form[@id='login_form']")
     public WebElement registeredPane;
 
+    //MESSAGES//
+    @FindBy(how = How.XPATH, using = "//div[@class='alert alert-danger']")
+    public WebElement registeredLoginError;
+
     //BUTTONS & INPUTS & DROPDOWN//
     @FindBy(how = How.XPATH, using = "//input[@id='email']")
     public WebElement registeredEmailInput;
@@ -47,8 +51,4 @@ public class AuthenticationPage extends MainPage {
 
     @FindBy(how = How.XPATH, using = "//button[@id='SubmitLogin']")
     public WebElement registeredSignInButton;
-
-    //MESSAGES//
-    @FindBy(how = How.XPATH, using = "//div[@class='alert alert-danger']")
-    public WebElement registeredLoginError;
 }

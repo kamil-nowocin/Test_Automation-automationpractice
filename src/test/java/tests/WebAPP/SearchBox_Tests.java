@@ -1,11 +1,10 @@
 package tests.WebAPP;
 
+import com.buildListeners.TestNGListener_WEB;
+import com.buildSettings.ExcelEnvironment;
 import com.steps.Hooks;
 import com.steps.MainPageSteps;
 import com.steps.SearchPageSteps;
-import com.testListeners.TestNGListener_WEB;
-import com.testSettings.ContextInjection;
-import com.testSettings.ExcelEnvironment;
 import io.qameta.allure.*;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -33,7 +32,7 @@ public class SearchBox_Tests extends Hooks {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(31);
 
-        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
+        final MainPageSteps mainPageSteps = new MainPageSteps();
         final SearchPageSteps searchPageSteps = new SearchPageSteps();
 
         //ACT//
@@ -59,7 +58,7 @@ public class SearchBox_Tests extends Hooks {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(32);
 
-        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
+        final MainPageSteps mainPageSteps = new MainPageSteps();
         final SearchPageSteps searchPageSteps = new SearchPageSteps();
 
         //ACT//
@@ -85,7 +84,7 @@ public class SearchBox_Tests extends Hooks {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(33);
 
-        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
+        final MainPageSteps mainPageSteps = new MainPageSteps();
         final SearchPageSteps searchPageSteps = new SearchPageSteps();
 
         //ACT//
@@ -111,7 +110,7 @@ public class SearchBox_Tests extends Hooks {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(34);
 
-        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
+        final MainPageSteps mainPageSteps = new MainPageSteps();
         final SearchPageSteps searchPageSteps = new SearchPageSteps();
 
         //ACT//
@@ -137,7 +136,7 @@ public class SearchBox_Tests extends Hooks {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(35);
 
-        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
+        final MainPageSteps mainPageSteps = new MainPageSteps();
         final SearchPageSteps searchPageSteps = new SearchPageSteps();
 
         //ACT//
@@ -165,7 +164,7 @@ public class SearchBox_Tests extends Hooks {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(36);
 
-        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
+        final MainPageSteps mainPageSteps = new MainPageSteps();
         final SearchPageSteps searchPageSteps = new SearchPageSteps();
 
         //ACT//
@@ -194,7 +193,7 @@ public class SearchBox_Tests extends Hooks {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(37);
 
-        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
+        final MainPageSteps mainPageSteps = new MainPageSteps();
         final SearchPageSteps searchPageSteps = new SearchPageSteps();
 
         //ACT//
@@ -223,7 +222,7 @@ public class SearchBox_Tests extends Hooks {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(38);
 
-        final MainPageSteps mainPageSteps = new MainPageSteps(new ContextInjection());
+        final MainPageSteps mainPageSteps = new MainPageSteps();
         final SearchPageSteps searchPageSteps = new SearchPageSteps();
 
         //ACT//
