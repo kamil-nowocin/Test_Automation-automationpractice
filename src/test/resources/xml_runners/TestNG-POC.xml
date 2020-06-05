@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Automationpractice.com POC - Kamil Nowocin">
+<suite name="Automationpractice.com POC - Kamil Nowocin" thread-count="1" parallel="classes">
     <listeners>
         <listener class-name="com.buildListeners.TestNGAnnotationTransformer"/>
     </listeners>
     <parameter name="Parameter 1" value="Test 1"/>
     <parameter name="Parameter 2" value="Test 2"/>
     <parameter name="Parameter 3" value="Test 3"/>
-    <test name="Automated tests for new POC features" group-by-instances="true">
+    <!--Parallel testing -> thread-count="2" group-by-instances="false"-->
+    <test name="Automated tests for new POC features" group-by-instances="true" preserve-order="false" enabled="true">
         <classes>
             <class name="tests.POC.POC_Tests"/>
         </classes>

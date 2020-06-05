@@ -191,6 +191,19 @@ public class ShoppingLoggedUserSteps extends DriverFactory {
                 Assert.assertEquals(navigationTopLabelHeaderText.toLowerCase(),
                         ContextInjection.LABEL_YOUR_SHOPPING_CART.toLowerCase(), VALUE_ERROR);
 
+//                TODO - clean assertions(proper refactor)
+//                //ASSERT - PRODUCTS IN CART//
+//                Assert.assertEquals(shoppingCartSummaryPage.productName.getText().toLowerCase(),
+//                        contextInjection.cartProductName.toLowerCase(), VALUE_ERROR);
+//                Assert.assertEquals(Double.parseDouble(shoppingCartSummaryPage.productUnitPrice.getText()
+//                        .replaceAll("[^0-9.]", "")), contextInjection.productUnitPrice, VALUE_ERROR);
+//                Assert.assertEquals(Double.parseDouble(shoppingCartSummaryPage.productQuantity.getAttribute
+//                        ("value").toLowerCase()), contextInjection.cartProductQuantity, VALUE_ERROR);
+//                Assert.assertEquals(shoppingCartSummaryPage.productTotalPrice.getText()
+//                                .replaceAll("[^$0-9.]", ""),
+//                        $decimalFormat.format(contextInjection.cartProductPrice), VALUE_ERROR);
+
+                //ASSERT - CART SUMMARY//
                 Assert.assertEquals(shoppingCartSummaryPage.totalProductsPrice.getText().replaceAll("[^$0-9.]", ""),
                         $decimalFormat.format(contextInjection.cartTotalProductsPrice), VALUE_ERROR);
                 Assert.assertEquals(shoppingCartSummaryPage.totalOrderShipping.getText().replaceAll("[^$0-9.]", ""),
@@ -201,16 +214,6 @@ public class ShoppingLoggedUserSteps extends DriverFactory {
                         $decimalFormat.format(contextInjection.totalOrderTax), VALUE_ERROR);
                 Assert.assertEquals(shoppingCartSummaryPage.totalOrderPriceWithTax.getText().replaceAll("[^$0-9.]", ""),
                         $decimalFormat.format(contextInjection.totalOrderPriceWithTax), VALUE_ERROR);
-
-//                Assert.assertEquals(shoppingCartSummaryPage.productName.getText().toLowerCase(),
-//                        contextInjection.cartProductName.toLowerCase(), VALUE_ERROR);
-//                Assert.assertEquals(Double.parseDouble(shoppingCartSummaryPage.productUnitPrice.getText()
-//                        .replaceAll("[^0-9.]", "")), contextInjection.productUnitPrice, VALUE_ERROR);
-//                Assert.assertEquals(Double.parseDouble(shoppingCartSummaryPage.productQuantity.getAttribute
-//                        ("value").toLowerCase()), contextInjection.cartProductQuantity, VALUE_ERROR);
-//                Assert.assertEquals(shoppingCartSummaryPage.productTotalPrice.getText()
-//                                .replaceAll("[^$0-9.]", ""),
-//                        $decimalFormat.format(contextInjection.cartProductPrice), VALUE_ERROR);
                 break;
             case "addresses":
                 //ASSERT//
@@ -349,12 +352,12 @@ public class ShoppingLoggedUserSteps extends DriverFactory {
         shoppingCartSummaryPage.iConfirmMyOrderButton.click();
     }
 
-    public void orderCalculations() {
+    private void orderCalculations() {
         //GENERAL//
         contextInjection.cartProductPrice = (contextInjection.productUnitPrice * contextInjection.productQuantity);
         contextInjection.cartTotalProductsPrice = contextInjection.cartTotalProductsPrice + contextInjection.cartProductPrice;
 
-        //FOR MODAL//
+        //FOR POPUP//
         contextInjection.cartTotalPrice = contextInjection.cartTotalProductsPrice + ContextInjection.SHIPPING_PRICE;
 
         //FOR SUMMARY PAGE//

@@ -28,33 +28,20 @@ import java.util.concurrent.TimeUnit;
 
 public class DriverFactory extends TestEnvironment {
 
-    private WebDriver driver;
-    private static final ThreadLocal<WebDriver> drivers = new ThreadLocal<>();
+    protected WebDriver driver;
     private static final List<WebDriver> storedDrivers = new ArrayList<>();
-
-    static {
-        Runtime.getRuntime().addShutdownHook(new Thread(() -> {
-            storedDrivers.forEach(WebDriver::close);
-            storedDrivers.forEach(WebDriver::quit);
-        }));
-    }
+    private static final ThreadLocal<WebDriver> drivers = new ThreadLocal<>();
 
     public static WebDriver getDriver() {
         return drivers.get();
     }
 
-    public static void addDriver(WebDriver driver) {
+    private void addDriver(WebDriver driver) {
         storedDrivers.add(driver);
         drivers.set(driver);
     }
 
-    public static void removeDriver() {
-        getDriver().close();
-        storedDrivers.remove(drivers.get());
-        drivers.remove();
-    }
-
-    private String getBrowserName() {
+    private String getRemoteBrowserName() {
         String getBrowser = System.getProperty("browser");
         if (getBrowser == null) {
             getBrowser = System.getenv("browser");
@@ -65,7 +52,7 @@ public class DriverFactory extends TestEnvironment {
         return getBrowser;
     }
 
-    private String getHost() {
+    public static String getHost() {
         String getHost = System.getProperty("selenium.host");
         if (getHost == null) {
             getHost = System.getenv("selenium.host");
@@ -76,7 +63,7 @@ public class DriverFactory extends TestEnvironment {
         return getHost;
     }
 
-    protected RemoteWebDriver remoteWebDriver(DesiredCapabilities desiredCapabilities, String remoteWebDriverURL) {
+    private RemoteWebDriver remoteWebDriver(DesiredCapabilities desiredCapabilities, String remoteWebDriverURL) {
         RemoteWebDriver remoteDriver = null;
         try {
             remoteDriver = new RemoteWebDriver(new URL(remoteWebDriverURL), desiredCapabilities);
@@ -89,78 +76,72 @@ public class DriverFactory extends TestEnvironment {
     protected void startBrowser() {
         printWebDriverManagerVersions(false);
         DesiredCapabilities desiredCapabilities;
-        if (DriverFactory.getDriver() == null) {
-            switch (getHost().toLowerCase()) {
-                case "chrome":
-                    WebDriverManager.chromedriver().setup();
-                    ChromeOptions chromeOptions = new ChromeOptions();
-                    DriverFactory.addDriver(driver = new ChromeDriver(chromeOptions));
-                    break;
-                case "firefox":
-                    WebDriverManager.firefoxdriver().setup();
-                    FirefoxOptions firefoxOptions = new FirefoxOptions();
-                    firefoxOptions.addArguments("");
-                    DriverFactory.addDriver(driver = new FirefoxDriver(firefoxOptions));
-                    break;
-                case "opera":
-                    WebDriverManager.operadriver().arch64().browserVersion("2.45").setup();
-                    OperaOptions operaOptions = new OperaOptions();
-                    operaOptions.addArguments("");
-                    DriverFactory.addDriver(driver = new OperaDriver(operaOptions));
-                    break;
-                case "edge":
-                    WebDriverManager.edgedriver().setup();
-                    DriverFactory.addDriver(driver = new EdgeDriver());
-                    break;
-                case "ie":
-                    WebDriverManager.iedriver().setup();
-                    DriverFactory.addDriver(driver = new InternetExplorerDriver());
-                    break;
-                case "safari":
-                    DriverFactory.addDriver(driver = new SafariDriver());
-                    break;
-                case "browserstack":
-                    desiredCapabilities = new DesiredCapabilities();
-                    desiredCapabilities.setCapability("os", "Windows");
-                    desiredCapabilities.setCapability("os_version", "10");
-                    desiredCapabilities.setCapability("resolution", "1920x1080");
-                    desiredCapabilities.setCapability("build", "Automationpractice.com");
-                    desiredCapabilities.setCapability("project", "Automationpractice.com");
-                    desiredCapabilities.setCapability("browserstack.timezone", "Europe/Warsaw");
-                    if (getBrowserName().toLowerCase().equals("ie")) {
-                        desiredCapabilities.setCapability("browser", "IE");
-                        desiredCapabilities.setCapability("browser_version", "11.0");
-                    }
-                    if (getBrowserName().toLowerCase().equals("firefox")) {
-                        desiredCapabilities.setCapability("browser", "Firefox");
-                        desiredCapabilities.setCapability("browser_version", "70.0");
-                    } else {
-                        desiredCapabilities.setCapability("browser", "Chrome");
-                        desiredCapabilities.setCapability("browser_version", "78.0");
-                    }
-                    //https://automate.browserstack.com/dashboard/v2 <- GET USER_NAME AND ACCESS_TOKEN FROM
-                    //https://www.browserstack.com/automate/capabilities <- GENERATE YOUR OWN CAPABILITIES
-                    //https://USER_NAME:ACCESS_TOKEN@hub-cloud.browserstack.com/wd/hub <- HOST_URL (.travis.yml for more information)
-                    DriverFactory.addDriver(driver = remoteWebDriver(desiredCapabilities, HOST_URL));
-                    break;
-                default:
-                    throw new IllegalStateException("This browser isn't supported yet! Sorry...");
-            }
-            logger.info(String.format("Chosen executor: \"%S\"", getHost()));
-            getDriver().manage().timeouts().implicitlyWait(TIMEOUT, TimeUnit.SECONDS);
-            getDriver().manage().timeouts().pageLoadTimeout(TIMEOUT, TimeUnit.SECONDS);
-            getDriver().manage().timeouts().setScriptTimeout(TIMEOUT, TimeUnit.SECONDS);
-            getDriver().manage().deleteAllCookies();
-            getDriver().manage().window().maximize();
-        } else {
-            throw new IllegalStateException("Driver has already been initialized. Quit it before using this method!");
+        switch (getHost().toLowerCase()) {
+            case "chrome":
+                WebDriverManager.chromedriver().setup();
+                ChromeOptions chromeOptions = new ChromeOptions();
+                addDriver(driver = new ChromeDriver(chromeOptions));
+                break;
+            case "firefox":
+                WebDriverManager.firefoxdriver().setup();
+                FirefoxOptions firefoxOptions = new FirefoxOptions();
+                firefoxOptions.addArguments("");
+                addDriver(driver = new FirefoxDriver(firefoxOptions));
+                break;
+            case "opera":
+                WebDriverManager.operadriver().arch64().browserVersion("2.45").setup();
+                OperaOptions operaOptions = new OperaOptions();
+                operaOptions.addArguments("");
+                addDriver(driver = new OperaDriver(operaOptions));
+                break;
+            case "edge":
+                WebDriverManager.edgedriver().setup();
+                addDriver(driver = new EdgeDriver());
+                break;
+            case "ie":
+                WebDriverManager.iedriver().setup();
+                addDriver(driver = new InternetExplorerDriver());
+                break;
+            case "safari":
+                addDriver(driver = new SafariDriver());
+                break;
+            case "browserstack":
+                desiredCapabilities = new DesiredCapabilities();
+                desiredCapabilities.setCapability("os", "Windows");
+                desiredCapabilities.setCapability("os_version", "10");
+                desiredCapabilities.setCapability("resolution", "1920x1080");
+                desiredCapabilities.setCapability("build", "Automationpractice.com");
+                desiredCapabilities.setCapability("project", "Automationpractice.com");
+                desiredCapabilities.setCapability("browserstack.timezone", "Europe/Warsaw");
+                if (getRemoteBrowserName().toLowerCase().equals("ie")) {
+                    desiredCapabilities.setCapability("browser", "IE");
+                    desiredCapabilities.setCapability("browser_version", "11.0");
+                }
+                if (getRemoteBrowserName().toLowerCase().equals("firefox")) {
+                    desiredCapabilities.setCapability("browser", "Firefox");
+                    desiredCapabilities.setCapability("browser_version", "70.0");
+                } else {
+                    desiredCapabilities.setCapability("browser", "Chrome");
+                    desiredCapabilities.setCapability("browser_version", "78.0");
+                }
+                //https://automate.browserstack.com/dashboard/v2 <- GET USER_NAME AND ACCESS_TOKEN FROM
+                //https://www.browserstack.com/automate/capabilities <- GENERATE YOUR OWN CAPABILITIES
+                //https://USER_NAME:ACCESS_TOKEN@hub-cloud.browserstack.com/wd/hub <- HOST_URL (.travis.yml for more information)
+                addDriver(driver = remoteWebDriver(desiredCapabilities, HOST_URL));
+                break;
+            default:
+                throw new IllegalStateException("This browser isn't supported yet! Sorry...");
         }
+        getDriver().manage().timeouts().implicitlyWait(TIMEOUT, TimeUnit.SECONDS);
+        getDriver().manage().timeouts().pageLoadTimeout(TIMEOUT, TimeUnit.SECONDS);
+        getDriver().manage().timeouts().setScriptTimeout(TIMEOUT, TimeUnit.SECONDS);
+        getDriver().manage().deleteAllCookies();
+        getDriver().manage().window().maximize();
     }
 
     protected void destroyDriver() {
-        if (driver != null) {
+        for (WebDriver driver : storedDrivers) {
             driver.quit();
-            driver = null;
         }
     }
 }

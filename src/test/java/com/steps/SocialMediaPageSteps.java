@@ -83,7 +83,7 @@ public class SocialMediaPageSteps extends DriverFactory {
 
         //ACT//
         DriverFactory.getDriver().switchTo().window(browserTabs.get(1));
-        logger.info(String.format("URL was: \"%S\"\n URL expected: \"%S\"", DriverFactory.getDriver().getCurrentUrl(), logoName + ".com"));
+        logger.info(String.format("URL was: \"%S\" URL expected: \"%S\"", DriverFactory.getDriver().getCurrentUrl(), logoName + ".com"));
 
         //ASSERT//
         Assert.assertTrue(DriverFactory.getDriver().getCurrentUrl().contains(logoName.toLowerCase() + ".com"),

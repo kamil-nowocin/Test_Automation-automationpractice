@@ -1,5 +1,6 @@
 package com.buildListeners;
 
+import com.buildSettings.DriverFactory;
 import com.buildSettings.ExcelEnvironment;
 import com.buildSettings.TestEnvironment;
 import io.cucumber.java.Scenario;
@@ -47,6 +48,7 @@ public class TestNGListener_WEB extends TestEnvironment implements ITestListener
         logger.info(StringUtils.repeat("=", 48) + " TEST STARTED "
                 + StringUtils.repeat("=", 48));
         logger.info(ANSI_BLUE + "TEST NAME: " + getTestName(iTestResult) + ANSI_RESET);
+        logger.info(String.format("Chosen executor: \"%S\"", DriverFactory.getHost()));
     }
 
     @Override
@@ -77,15 +79,15 @@ public class TestNGListener_WEB extends TestEnvironment implements ITestListener
                 + " BEFORE SCENARIO " + StringUtils.repeat("=", 47));
         logger.info(StringUtils.repeat("#", 110));
         logger.info(ANSI_BLUE + "SCENARIO NAME: " + scenario.getName().toUpperCase() + ANSI_RESET);
-        System.out.println();
+        logger.info(String.format("Chosen executor: \"%S\"", DriverFactory.getHost()));
     }
 
     public static void onScenarioFinish(Scenario scenario) {
-        System.out.println();
         String status = (scenario.isFailed() ? ANSI_RED + "FAILED STATUS " + ANSI_RESET : ANSI_GREEN + "SUCCESS STATUS " + ANSI_RESET);
         logger.info(StringUtils.repeat("#", 110));
         logger.info(StringUtils.repeat("=", 36)
                 + " SCENARIO FINISHED WITH " + status + StringUtils.repeat("=", 35));
         logger.info(StringUtils.repeat("#", 110));
+        System.out.println();
     }
 }
