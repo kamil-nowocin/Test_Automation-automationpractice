@@ -1,10 +1,6 @@
 #!/bin/sh
 
-#mkdir target
-## shellcheck disable=SC2164
-#cd target
-#mkdir github-pages
-git clone --single-branch --branch gh-pages https://kamil-nowocin:$GITHUBTOKEN@github.com/kamil-nowocin/Test_Automation-automationpractice target/github-pages
+git clone --single-branch --branch gh-pages https://kamil-nowocin:$GITHUB_TOKEN@github.com/kamil-nowocin/Test_Automation-automationpractice target/github-pages
 sleep 5
 cp -R target/github-pages/history build/allure-results
 # shellcheck disable=SC2164
