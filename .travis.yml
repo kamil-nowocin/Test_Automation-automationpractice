@@ -13,11 +13,18 @@ dist: bionic
 services:
   - xvfb
 notifications:
+  slack:
+    rooms:
+      - secure: E+UlNohgriwhUd5FlWkdH04YqNMdK2R3f2gjqLO9diKpgJr5i3ITIhm18i4jJC4dcE95mvNGYroznb1G/sLBiEAPOe2JT4lToKjWEB+Iup+juqskDnn7E0RVbc73WrYhgFSnMMxAXmzHWJCpH4otW28gTC431m3yswwQeb30A+u1dmmsuHm8jK4vwjYs+aBb55OJj48ReChvpoM6mrF81u+kB+/KFKdRJ+6iMC9oGv1ogE3ejrCLcf3CoqEW2eDGKRG+luwiGgA1+UwPKuBvtg2gHyuXsZ0Ew4IMU7YIElc3tAAbrPSbH60im3GB8YhHAinl2aJXsmBrEWTDRG3tzu42RhkJ3dNSaxsYweL9/deX76YXo9OgdRf2a2L9SV00T5m1PbaxvDxmPfh7qa3JYTjYTUMQOoVTdwKyXOHCQaXxw2oWooTaUxkBeQY4eME+eCefOzkfBiLde8HFgUYoAzZDg0GiRHFx525qfeS9UgAHKIq2aHLzxwbL1P+d/rzcpSAfDFGl+vD+veGCgFW4Jtqn66a1BFQgzTwpzgpxV9+LTsAIkZ6Xzq+XSxwJprZdkolfug2cNM8dLlbvzGz+I4Ptt78wMVaGMxkWi/E7EshpbLCE0gSxXUDOAVT5yF340sfJVcGFqnAD12NekW19KL4IrgelxruS4i5inuuIm5Q=
+    on_success: always
+    on_failure: always
+    template:
+      - "Repository `%{repository_slug}` *%{result}* build (<%{build_url}|#%{build_number}>) for commit (<%{compare_url}|%{commit}>) on branch `%{branch}`."
+      - "Author *%{author}* with execution time: *%{duration}* "
+      - "Output message: %{message}"
   email:
     on_success: never
     on_failure: always
-  slack:
-    secure: E+UlNohgriwhUd5FlWkdH04YqNMdK2R3f2gjqLO9diKpgJr5i3ITIhm18i4jJC4dcE95mvNGYroznb1G/sLBiEAPOe2JT4lToKjWEB+Iup+juqskDnn7E0RVbc73WrYhgFSnMMxAXmzHWJCpH4otW28gTC431m3yswwQeb30A+u1dmmsuHm8jK4vwjYs+aBb55OJj48ReChvpoM6mrF81u+kB+/KFKdRJ+6iMC9oGv1ogE3ejrCLcf3CoqEW2eDGKRG+luwiGgA1+UwPKuBvtg2gHyuXsZ0Ew4IMU7YIElc3tAAbrPSbH60im3GB8YhHAinl2aJXsmBrEWTDRG3tzu42RhkJ3dNSaxsYweL9/deX76YXo9OgdRf2a2L9SV00T5m1PbaxvDxmPfh7qa3JYTjYTUMQOoVTdwKyXOHCQaXxw2oWooTaUxkBeQY4eME+eCefOzkfBiLde8HFgUYoAzZDg0GiRHFx525qfeS9UgAHKIq2aHLzxwbL1P+d/rzcpSAfDFGl+vD+veGCgFW4Jtqn66a1BFQgzTwpzgpxV9+LTsAIkZ6Xzq+XSxwJprZdkolfug2cNM8dLlbvzGz+I4Ptt78wMVaGMxkWi/E7EshpbLCE0gSxXUDOAVT5yF340sfJVcGFqnAD12NekW19KL4IrgelxruS4i5inuuIm5Q=
 addons:
   chrome: stable
 install:
