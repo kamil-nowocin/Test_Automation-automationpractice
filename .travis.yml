@@ -5,8 +5,8 @@ jdk:
 env:
   matrix:
     - DISPLAY=:99.0
-  global:
-    secure: tF5T5rY7e3P3FPG6VZiZz6ljrSc2rxAM6EuTJh7mlmBuuCCY/oBdhds2hqr2MD8uuDoQOGkmIm+tEgiJuqkDQHHCLoqDC5Pft7wmVszObH9OEM9AGMDQ2bbXGGUeKux1iRs8GhjB2Umyc7mxpbNwidhb1kyXcPHahW3C/xykv3wTsvDes91AD4xbhhTL2jfBsGD5lgf6wG0lDN2Im6h/Lnndv0rka2lxnSjknwS7ckAPpjaCKlVcsMFu5qfrYUk2H5g2Xzdhi9sa9YDWLIPoeQQwOmBYlYRw0xBT2yNkqx/rDC50D+m9RHHE0vtMhNZE2hfiMHTcq258n+e6h6BrztosDfj007/N3HTrYN7b5SnPscHKGLuy43EQiJsXNORIhF7sKugA182/5kCoiAVYazBS3dRD+DreqaIEliYb6LI62pkAoZ/SJJfECIPNFt535xyC1xK9SAEQMXh9ZPYU14KUclvpjr6M1hSKXwAqJ7wBwI8BVYW4HlHjAqLH9BMG6j1jPate8LPAhgi3Co3oN81QTT09GiJ6zSyl4HXp8R6jQdLd6AQBv3+4nXbL8Vb4IwdVxzGj6/XlBWmZ7xZnw5DPaRLseFJIymDJRSdT6UZMNvexWRihElexrHRIK4HqJSgIGMqk37Ok4pJUUbKjyljcPBM9Mfq5GvJTlA6RdPw=
+#  global:
+#    secure: tF5T5rY7e3P3FPG6VZiZz6ljrSc2rxAM6EuTJh7mlmBuuCCY/oBdhds2hqr2MD8uuDoQOGkmIm+tEgiJuqkDQHHCLoqDC5Pft7wmVszObH9OEM9AGMDQ2bbXGGUeKux1iRs8GhjB2Umyc7mxpbNwidhb1kyXcPHahW3C/xykv3wTsvDes91AD4xbhhTL2jfBsGD5lgf6wG0lDN2Im6h/Lnndv0rka2lxnSjknwS7ckAPpjaCKlVcsMFu5qfrYUk2H5g2Xzdhi9sa9YDWLIPoeQQwOmBYlYRw0xBT2yNkqx/rDC50D+m9RHHE0vtMhNZE2hfiMHTcq258n+e6h6BrztosDfj007/N3HTrYN7b5SnPscHKGLuy43EQiJsXNORIhF7sKugA182/5kCoiAVYazBS3dRD+DreqaIEliYb6LI62pkAoZ/SJJfECIPNFt535xyC1xK9SAEQMXh9ZPYU14KUclvpjr6M1hSKXwAqJ7wBwI8BVYW4HlHjAqLH9BMG6j1jPate8LPAhgi3Co3oN81QTT09GiJ6zSyl4HXp8R6jQdLd6AQBv3+4nXbL8Vb4IwdVxzGj6/XlBWmZ7xZnw5DPaRLseFJIymDJRSdT6UZMNvexWRihElexrHRIK4HqJSgIGMqk37Ok4pJUUbKjyljcPBM9Mfq5GvJTlA6RdPw=
 # LINUX VERSION
 dist: bionic
 # GUI & VIRTUAL BROWSER
@@ -16,20 +16,19 @@ notifications:
   email:
     on_success: never
     on_failure: always
+  slack:
+    secure: o0Jdioce3WYxogZqE3vqlvPUTHZzCFZ1CxRdgM9wMEqdwanIiD1Z7kzBerUsUHh7nu0cNcRJ96HyRCU7uE61O/+ZzyapFkYsBjIX2SeDmPVJDSz8L52kfVoMdL9WgUpHzIyxb7mtJAXFzX6k8ADnIZOHxbBHtWmZLCLN39EQ6itogh13mfQ0rRD5Ems1fuxJXN8eJJgpsONOazDqjrpISDxkhQL3SXL2G/M97OvnGIR84zlq7CTyxG9Uoh49WF0nxVLKcMTig9VlBc86Z5PemAcfOLKUfDFqjOAKJImD3/ZTWV9ZY7iT7+DMCx5uTHz9BiT5QvcX1xMyHcH0rt/Q3qg+B7S8r5P2oC+4W/p4Q1GmUPneGziMfBTaPYnNg9tZ1jc3r918dO8qmobsPEK7MJFPMdQiLntHD9l8tpiInrvEkhxuy0vIOuz2l92MQXg9MWSovBkAGmTXegMa8zFAe6oPGQX4jQVGiUQOC9wsSxLw8U+TTCW9HBNCNwrL6Puk5o67JTa9zK4UyhukHjrtEwrNAOuZg+jnE5chAhz/qcXUfmMyGAxeq7r/eTwesIy/6PXjV200c0835sD/frwvIDB6tFKortNPwwkENtAjVEBpRE4h2t0X4v6jCAszqeUVG9w+cvz1jfIX8pP6lg5rjtQcU2cCCZXWD51Q+Dua7L8=
 addons:
   chrome: stable
-# DOWNLOAD AND INSTALL ALL REQUIRED DRIVERS
 install:
   - wget -N http://chromedriver.storage.googleapis.com/81.0.4044.138/chromedriver_linux64.zip -P ~/
   - unzip ~/chromedriver_linux64.zip -d ~/
   - rm ~/chromedriver_linux64.zip
   - npm install -g allure-commandline --save-dev
 before_script:
-  # - sh -e /etc/init.d/xvfb start
   - echo ========================================================================
   - echo =========================BUILD EXECUTION STARTED========================
   - echo ========================================================================
-# RUN GRADLE
 script:
   - ./gradlew test -Dtravis.buildNumber=$TRAVIS_BUILD_NUMBER -Dtravis.buildURL=$TRAVIS_BUILD_WEB_URL -Dtravis.branch=$TRAVIS_BRANCH -Dtravis.osName=$TRAVIS_OS_NAME -Dtravis.jdkVersion=$TRAVIS_JDK_VERSION
   #THIS COMMAND WOULD RUN TESTS ON BROWSERSTACK
