@@ -1,0 +1,28 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+16:04:09 INFO  i.g.bonigarcia.wdm.WebDriverManager - Please answer the following questionnaire based on your experience with WebDriverManager. Thanks a lot!
+16:04:09 INFO  i.g.bonigarcia.wdm.WebDriverManager - ====> http://tiny.cc/wdm-survey <====
+16:04:09 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=83 in cache (valid until 16:01:02 07/06/2020 UTC)
+16:04:09 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 83.0.4103.39 (since Chrome 83 is installed in your machine)
+16:04:09 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 83.0.4103.39 found in cache
+16:04:09 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.m2/repository/webdriver/chromedriver/linux64/83.0.4103.39/chromedriver
+16:04:10 INFO  com.steps.Hooks - ================================================ TEST STARTED ================================================
+16:04:10 INFO  com.steps.Hooks - [34mTEST NAME: [US-444]/[5] I WOULD LIKE TO SEE REGISTRATION ERROR, WHEN I DON'T FILL ADDRESS INPUT[0m
+16:04:10 INFO  com.steps.Hooks - Chosen executor: "CHROME"
+16:04:25 INFO  com.steps.Hooks - [31mTEST RETRY (1/1): [US-444]/[5] I WOULD LIKE TO SEE REGISTRATION ERROR, WHEN I DON'T FILL ADDRESS INPUT[0m
+16:04:25 INFO  i.g.bonigarcia.wdm.WebDriverManager - Please answer the following questionnaire based on your experience with WebDriverManager. Thanks a lot!
+16:04:25 INFO  i.g.bonigarcia.wdm.WebDriverManager - ====> http://tiny.cc/wdm-survey <====
+16:04:25 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=83 in cache (valid until 16:01:02 07/06/2020 UTC)
+16:04:25 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 83.0.4103.39 (since Chrome 83 is installed in your machine)
+16:04:25 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 83.0.4103.39 found in cache
+16:04:25 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.m2/repository/webdriver/chromedriver/linux64/83.0.4103.39/chromedriver
+16:04:25 INFO  com.steps.Hooks - ================================================ TEST STARTED ================================================
+16:04:25 INFO  com.steps.Hooks - [34mTEST NAME: [US-444]/[5] I WOULD LIKE TO SEE REGISTRATION ERROR, WHEN I DON'T FILL ADDRESS INPUT[0m
+16:04:25 INFO  com.steps.Hooks - Chosen executor: "CHROME"
+16:04:40 INFO  com.steps.Hooks - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+16:04:41 ERROR com.steps.Hooks - org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 0.913
+  (Session info: chrome=83.0.4103.97)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'travis-job-b8e8384f-8b1f-4752-b45a-8c76077aa547', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.0.0-1031-gcp', java.version: '14.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.97, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /tmp/.com.google.Chrome.LolcAU}, goog:chromeOptions: {debuggerAddress: localhost:37491}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 35a8bb93b30a59d24f965af9b46293a9
