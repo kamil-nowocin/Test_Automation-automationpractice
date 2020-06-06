@@ -6,8 +6,11 @@ env:
   matrix:
     - DISPLAY=:99.0
   global:
-    secure: V55nT7CxuJRea6VTTn8WBZri4CpdY2zaB9cSvoIQMXwA/gUWd1usV0rHW1GhFgBDLgpmFvZVxCLM8YMY5d3kL+acJvUTAT4g+HeizXp4Xrx//3XN+AuL/l2p0iDy2cTHkIX7iKe4wwf5R8sdqinMUmZbbxMYzRF6p0p55xQmsIYQVdhvQG7SWva44iq1dpqjOZffPWzrZ3wN7hY21FsJ2Vgh7x+3irT0sgdEq4riykkqBqS9bRFYsROz5/wjcoUDkQIjvBeLXtcXVcdqhfjfe1ePqfonf7+iQbYN9wlJns8gDnrJrBcFiIJC7DvaZ+iNU5imIqnaIshwcMN4LBe+Uc8RXb3eCeqpnV5pSyBJmS/B0miShydC7EwYMXqvFhCxAUAdOOpKgpR+J5n2vjxxhNfSXLlKxYIeI9jcq9dbp+RlU7tfvi4m8wtpvTyPCB/2HrtiFb0uEAL1FwgyHU4Nk0wTfjna0xbAbSLlU+SrbtyWYxevEbLXqsjBKK3JSUtbaBPItKe7nodQ7mDXeMUCNTy3zx/i0f2inH3sYomrRR/BPuH85fkG90G//o3gZSqOHfGSx9RKESH2nAXHAusdIazLNXxyS4rhowUqpolFH3kreqjSd9f+jkUrq3OgbvqVkv7U9ZUVgCVC4sCRRBA6HvIaz7GPRHYChGCYRxRucB0=
+    #GITHUB:TOKEN
+    - secure: FInUWB4nX0Za1pujizJOq5PBDUY8EnWwsFRxlt6htRRQLob2QCJyWJq2ENYbhkKQTYfOnGJxwRDzx2iaXyjKNE31Rr0cAYsjDOYgDX8LDMZ9R87sfT0GOmg1oAk02V7xlv84h6VWbFuX5sS0G4eZ4/Wm8kivyRkylU540kbRa1wDHQmvHR8pT9itkFrap36BlOrt5Hy7SmZ7mgzCoF1WPb97cD3yTm1AExBRgw+aDHiGO9e16j1lnuDSfHon4JefrQ9+//cthdSu+yQf/TtsnIv7gM1PQwxL78jAwjkrgbMg5hPY1DN6a5CsQAT06/IptnhvPDcf5BhE4PvUKjW0OuAvjskB/M3Em9npdyEZw6UGsHo6WIAS2tpkJNcGxdFhDgFS0rDzqDNlx21PETnr7r/IF75Ovh4iJGxn62ETh8qkPjXMODPny39KxDqMa++jUy1SonSwRfGvdeHmTXgI2tsOTxu1Vn4sqpvhoN0YPvVGsTvLEJ0CNAPaBNFdTcCo/HShRUazLKEo6XG8mx3WQPpLPel1bxSRFDVsU72z05fZH9KGlU5DmZmBztX70wBGKp8AmQqwKStheP6F+NV4vMZgrqTXaADwtiEk03RQjtCMb4bho5bR0cNTLpw1P4oXUaTr8SYaysS7LZr59wTQzPnuED94PpQNzeAC2hmZ/94=
+#LINUX VERSION
 dist: bionic
+#GUI & VIRTUAL BROWSER
 services:
   - xvfb
 notifications:
@@ -26,6 +29,7 @@ notifications:
     on_failure: always
 addons:
   chrome: stable
+#DOWNLOAD AND INSTALL ALL REQUIRED DRIVERS
 install:
   - wget -N http://chromedriver.storage.googleapis.com/81.0.4044.138/chromedriver_linux64.zip -P ~/
   - unzip ~/chromedriver_linux64.zip -d ~/
@@ -35,6 +39,7 @@ before_script:
   - echo ========================================================================
   - echo =========================BUILD EXECUTION STARTED========================
   - echo ========================================================================
+#RUN GRADLE
 script:
   - ./gradlew test -Dtravis.buildNumber=$TRAVIS_BUILD_NUMBER -Dtravis.buildURL=$TRAVIS_BUILD_WEB_URL -Dtravis.branch=$TRAVIS_BRANCH -Dtravis.osName=$TRAVIS_OS_NAME -Dtravis.jdkVersion=$TRAVIS_JDK_VERSION
   #THIS COMMAND WOULD RUN TESTS ON BROWSERSTACK
