@@ -6,8 +6,7 @@ env:
   matrix:
     - DISPLAY=:99.0
   global:
-    #GITHUB:TOKEN
-    - secure: FInUWB4nX0Za1pujizJOq5PBDUY8EnWwsFRxlt6htRRQLob2QCJyWJq2ENYbhkKQTYfOnGJxwRDzx2iaXyjKNE31Rr0cAYsjDOYgDX8LDMZ9R87sfT0GOmg1oAk02V7xlv84h6VWbFuX5sS0G4eZ4/Wm8kivyRkylU540kbRa1wDHQmvHR8pT9itkFrap36BlOrt5Hy7SmZ7mgzCoF1WPb97cD3yTm1AExBRgw+aDHiGO9e16j1lnuDSfHon4JefrQ9+//cthdSu+yQf/TtsnIv7gM1PQwxL78jAwjkrgbMg5hPY1DN6a5CsQAT06/IptnhvPDcf5BhE4PvUKjW0OuAvjskB/M3Em9npdyEZw6UGsHo6WIAS2tpkJNcGxdFhDgFS0rDzqDNlx21PETnr7r/IF75Ovh4iJGxn62ETh8qkPjXMODPny39KxDqMa++jUy1SonSwRfGvdeHmTXgI2tsOTxu1Vn4sqpvhoN0YPvVGsTvLEJ0CNAPaBNFdTcCo/HShRUazLKEo6XG8mx3WQPpLPel1bxSRFDVsU72z05fZH9KGlU5DmZmBztX70wBGKp8AmQqwKStheP6F+NV4vMZgrqTXaADwtiEk03RQjtCMb4bho5bR0cNTLpw1P4oXUaTr8SYaysS7LZr59wTQzPnuED94PpQNzeAC2hmZ/94=
+    - secure: oW9uLq5/+vmZkC3O9iOJ5lXvBks5YD2a73enlr46skBxF+EvY5k5vDhWUn4Uf1fjp9uLNuJMFdGi6jCReQ545BTN3yN4S0HSogIzeJtxrrdYdXjpF5eHIVQSvIzUzKtZ35Wx1/IcVJLkB7sJTf91m+mxkicAwmY5Ojp/YzX0R7pscrdwGEZf0WsojC0omGPen9jojgDsbjkK6FjOI7VPU1dJ5BWlYGgOKa5VpgSwd0OZpmhDovuVih8eDYZ6XRkJENBp6aNXPt6ZVeb6Y4W67tL9ABf9rtjvDmmJQV+r7FpjylYWSaTXAh5MNJeqyuwmEgi50iRit+N0c8ObqoSDVnDYnzjR3xLAtZqLyZyWTwLO50d8KnvckA9JLOaYnW5FMhDAXZ5QUMM1VcWyC3RUj4FloOnKHYaO8QWq47Anea8Hv1lwbCAIRtrcKdcLX3a0pJrHnRVpswCAQMnr8hn3+ugRlMop1S3IZp5oSjzUlP3Yi80s25qWCEUpL3QC8OseLhXrWDHQoJ7da34ShOByxIHr+3VdorQN5L4PrAAWp0LfTb62pWl0ReKJj7CehYHR/CbErCNc+68VrSdktPPv8Iy5AojbHx159xFAJuG06L7Z1fcTTg7zGj5MqvOcCPgyIxCIQ6cwLL4UQKq6Gh0TgU4Z05AZ2OZSe8QL/hOwmUg=
 #LINUX VERSION
 dist: bionic
 #GUI & VIRTUAL BROWSER
@@ -39,7 +38,6 @@ before_script:
   - echo ========================================================================
   - echo =========================BUILD EXECUTION STARTED========================
   - echo ========================================================================
-#RUN GRADLE
 script:
   - ./gradlew test -Dtravis.buildNumber=$TRAVIS_BUILD_NUMBER -Dtravis.buildURL=$TRAVIS_BUILD_WEB_URL -Dtravis.branch=$TRAVIS_BRANCH -Dtravis.osName=$TRAVIS_OS_NAME -Dtravis.jdkVersion=$TRAVIS_JDK_VERSION
   #THIS COMMAND WOULD RUN TESTS ON BROWSERSTACK
