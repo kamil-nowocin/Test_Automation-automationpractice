@@ -25,8 +25,9 @@ notifications:
     on_failure: always
     template:
       - "Repository `%{repository_slug}`"
-      - "Deploy status *%{result}*, build number (<%{build_url}|#%{build_number}>)."
-      - "Author: *%{author}*, for commit (<%{compare_url}|%{commit}>) on branch `%{branch}` with message `%{commit_message}`."
+      - "Deploy status *%{result}*, build number (<%{build_url}|#%{build_number}>)"
+      - "Author: *%{author}*, for commit (<%{compare_url}|%{commit}>) on branch `%{branch}`"
+      - "Commit message `%{commit_message}`"
       - "Execution time: *%{duration}*."
       - "Output message: *%{message}*"
   email:
