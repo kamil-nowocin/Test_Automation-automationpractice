@@ -24,12 +24,11 @@ notifications:
     on_success: always
     on_failure: always
     template:
-      - "Repository `%{repository_slug}`"
-      - "Deploy status *%{result}*, build number (<%{build_url}|#%{build_number}>)"
+      - "Repository: `%{repository_slug}`"
+      - "Deploy status: *%{result}*, build number (<%{build_url}|#%{build_number}>)"
       - "Author: *%{author}*, for commit (<%{compare_url}|%{commit}>) on branch `%{branch}`"
-      - "Commit message `%{commit_message}`"
-      - "Execution time: *%{duration}*."
-      - "Output message: *%{message}*"
+      - "Commit message: `%{commit_message}`"
+      - "Output message: *%{message}* execution time: *%{duration}*."
   email:
     on_success: never
     on_failure: always
