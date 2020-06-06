@@ -28,7 +28,7 @@ notifications:
       - "Deploy status: *%{result}*, build number (<%{build_url}|#%{build_number}>)"
       - "Author: *%{author}*, for commit (<%{compare_url}|%{commit}>) on branch `%{branch}`"
       - "Commit message: `%{commit_message}`"
-      - "Output message: *%{message}* execution time: *%{duration}*."
+      - "Output message: *%{message}* Execution time: *%{duration}*."
   email:
     on_success: never
     on_failure: always
