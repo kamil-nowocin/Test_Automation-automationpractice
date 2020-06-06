@@ -6,13 +6,13 @@
       "name" : "Results which have been found didn't match expected sorting result PRICE: HIGHEST FIRST: Lists differ at element [1]: $30.50 != $28.98 expected [$30.50] but found [$28.98]",
       "children" : [ {
         "name" : "[US-555]/[7] I would like to use search box and be able to see results sorted by: \"Price: Highest first\"",
-        "uid" : "dab24501e6075229",
+        "uid" : "46239a1d9b8ae07a",
         "parentUid" : "3246160de76fc0de742a06aad5432502",
         "status" : "failed",
         "time" : {
-          "start" : 1591457001075,
-          "stop" : 1591457014389,
-          "duration" : 13314
+          "start" : 1591457812089,
+          "stop" : 1591457823718,
+          "duration" : 11629
         },
         "flaky" : false,
         "newFailed" : false,
@@ -23,13 +23,13 @@
       "name" : "Results which have been found didn't match expected sorting result PRICE: LOWEST FIRST: Lists differ at element [2]: $28.98 != $30.50 expected [$28.98] but found [$30.50]",
       "children" : [ {
         "name" : "[US-555]/[8] I would like to use search box and be able to see results sorted by: \"Price: Lowest first\"",
-        "uid" : "4e89ef4c0ccf96b2",
+        "uid" : "fbe519f78f2c81be",
         "parentUid" : "06135fb1e9171a4c5ee185041330339b",
         "status" : "failed",
         "time" : {
-          "start" : 1591457031440,
-          "stop" : 1591457046808,
-          "duration" : 15368
+          "start" : 1591457840832,
+          "stop" : 1591457851378,
+          "duration" : 10546
         },
         "flaky" : false,
         "newFailed" : false,
@@ -37,16 +37,33 @@
       } ],
       "uid" : "06135fb1e9171a4c5ee185041330339b"
     }, {
+      "name" : "Upssss, something went really bad! Even Michael Scofield couldn't have predicted that error! :) expected [http://automationpractice.com/index.php] but found [http://automationpractice.com/]",
+      "children" : [ {
+        "name" : "[US-333]/[7] I can't create an account, when email has wrong format",
+        "uid" : "52c4b7efb0460805",
+        "parentUid" : "65840e5eeda018943c4b1fa1c454a179",
+        "status" : "failed",
+        "time" : {
+          "start" : 1591458019577,
+          "stop" : 1591458022068,
+          "duration" : 2491
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "65840e5eeda018943c4b1fa1c454a179"
+    }, {
       "name" : "null",
       "children" : [ {
         "name" : "As a developer I'd like to see working POC with .xlsx file",
-        "uid" : "5356e96803926bfa",
+        "uid" : "32387ed6def4e415",
         "parentUid" : "666d1a31450af3ae8459f14f07f9a1b4",
         "status" : "failed",
         "time" : {
-          "start" : 1591457190155,
-          "stop" : 1591457191449,
-          "duration" : 1294
+          "start" : 1591458086996,
+          "stop" : 1591458088147,
+          "duration" : 1151
         },
         "flaky" : false,
         "newFailed" : false,
@@ -55,6 +72,44 @@
       "uid" : "666d1a31450af3ae8459f14f07f9a1b4"
     } ],
     "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  }, {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "timeout: Timed out receiving message from renderer: -0.000\n  (Session info: chrome=83.0.4103.97)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-f648f5e9-f454-45d9-b5b8-332a0172a730', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.0.0-1031-gcp', java.version: '14.0.1'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.97, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /tmp/.com.google.Chrome.CJpbkR}, goog:chromeOptions: {debuggerAddress: localhost:34181}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: eb70b313eb1015ead9b985c1c2e58bfc",
+      "children" : [ {
+        "name" : "[US-333]/[5] I can't create an account, when one of required fields is missing",
+        "uid" : "7fb37756d436f4e8",
+        "parentUid" : "74609e3932ca3d26ac67bf2562fb556a",
+        "status" : "broken",
+        "time" : {
+          "start" : 1591457965464,
+          "stop" : 1591457981119,
+          "duration" : 15655
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "74609e3932ca3d26ac67bf2562fb556a"
+    }, {
+      "name" : "timeout: Timed out receiving message from renderer: -0.000\n  (Session info: chrome=83.0.4103.97)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-f648f5e9-f454-45d9-b5b8-332a0172a730', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.0.0-1031-gcp', java.version: '14.0.1'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.97, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /tmp/.com.google.Chrome.1r2NGw}, goog:chromeOptions: {debuggerAddress: localhost:35195}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 8691295f492eb72de312bff2cbb9a80b",
+      "children" : [ {
+        "name" : "[US-333]/[6] I can't create an account, when email is already in database",
+        "uid" : "29c5524a376cd4aa",
+        "parentUid" : "503b870df6e51075a693a62131e25a88",
+        "status" : "broken",
+        "time" : {
+          "start" : 1591457997481,
+          "stop" : 1591458013467,
+          "duration" : 15986
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "503b870df6e51075a693a62131e25a88"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
   } ],
   "name" : "categories"
 }
