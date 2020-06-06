@@ -5,11 +5,9 @@ jdk:
 env:
   matrix:
     - DISPLAY=:99.0
-#  global:
-#    secure: tF5T5rY7e3P3FPG6VZiZz6ljrSc2rxAM6EuTJh7mlmBuuCCY/oBdhds2hqr2MD8uuDoQOGkmIm+tEgiJuqkDQHHCLoqDC5Pft7wmVszObH9OEM9AGMDQ2bbXGGUeKux1iRs8GhjB2Umyc7mxpbNwidhb1kyXcPHahW3C/xykv3wTsvDes91AD4xbhhTL2jfBsGD5lgf6wG0lDN2Im6h/Lnndv0rka2lxnSjknwS7ckAPpjaCKlVcsMFu5qfrYUk2H5g2Xzdhi9sa9YDWLIPoeQQwOmBYlYRw0xBT2yNkqx/rDC50D+m9RHHE0vtMhNZE2hfiMHTcq258n+e6h6BrztosDfj007/N3HTrYN7b5SnPscHKGLuy43EQiJsXNORIhF7sKugA182/5kCoiAVYazBS3dRD+DreqaIEliYb6LI62pkAoZ/SJJfECIPNFt535xyC1xK9SAEQMXh9ZPYU14KUclvpjr6M1hSKXwAqJ7wBwI8BVYW4HlHjAqLH9BMG6j1jPate8LPAhgi3Co3oN81QTT09GiJ6zSyl4HXp8R6jQdLd6AQBv3+4nXbL8Vb4IwdVxzGj6/XlBWmZ7xZnw5DPaRLseFJIymDJRSdT6UZMNvexWRihElexrHRIK4HqJSgIGMqk37Ok4pJUUbKjyljcPBM9Mfq5GvJTlA6RdPw=
-# LINUX VERSION
+  global:
+    secure: V55nT7CxuJRea6VTTn8WBZri4CpdY2zaB9cSvoIQMXwA/gUWd1usV0rHW1GhFgBDLgpmFvZVxCLM8YMY5d3kL+acJvUTAT4g+HeizXp4Xrx//3XN+AuL/l2p0iDy2cTHkIX7iKe4wwf5R8sdqinMUmZbbxMYzRF6p0p55xQmsIYQVdhvQG7SWva44iq1dpqjOZffPWzrZ3wN7hY21FsJ2Vgh7x+3irT0sgdEq4riykkqBqS9bRFYsROz5/wjcoUDkQIjvBeLXtcXVcdqhfjfe1ePqfonf7+iQbYN9wlJns8gDnrJrBcFiIJC7DvaZ+iNU5imIqnaIshwcMN4LBe+Uc8RXb3eCeqpnV5pSyBJmS/B0miShydC7EwYMXqvFhCxAUAdOOpKgpR+J5n2vjxxhNfSXLlKxYIeI9jcq9dbp+RlU7tfvi4m8wtpvTyPCB/2HrtiFb0uEAL1FwgyHU4Nk0wTfjna0xbAbSLlU+SrbtyWYxevEbLXqsjBKK3JSUtbaBPItKe7nodQ7mDXeMUCNTy3zx/i0f2inH3sYomrRR/BPuH85fkG90G//o3gZSqOHfGSx9RKESH2nAXHAusdIazLNXxyS4rhowUqpolFH3kreqjSd9f+jkUrq3OgbvqVkv7U9ZUVgCVC4sCRRBA6HvIaz7GPRHYChGCYRxRucB0=
 dist: bionic
-# GUI & VIRTUAL BROWSER
 services:
   - xvfb
 notifications:
@@ -19,9 +17,10 @@ notifications:
     on_success: always
     on_failure: always
     template:
-      - "Repository `%{repository_slug}` *%{result}* build (<%{build_url}|#%{build_number}>) for commit (<%{compare_url}|%{commit}>) on branch `%{branch}`."
-      - "Author *%{author}* with execution time: *%{duration}* "
-      - "Output message: %{message}"
+      - "Repository `%{repository_slug}` deploy has *%{result}* - build number (<%{build_url}|#%{build_number}>)."
+      - 'Author: *%{author}*, for commit (<%{compare_url}|%{commit}>) on branch `%{branch}` with message `%{commit_message}`.'
+      - 'Execution time: *%{duration}*.'
+      - 'Output message: *%{message}*'
   email:
     on_success: never
     on_failure: always
