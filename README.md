@@ -28,7 +28,8 @@ Supported browsers aka hosts:
 * Support for .xlsx files
 * Support for Fake & Mock data
 * Support for BrowserStack
-* Support for Parallel Testing 
+* Support for Parallel Testing
+* Support for custom Slack Logger
 ## HOW TO RUN TESTS
 There are multiple ways to run tests from this build. It all depends on what you want to do:
 1. Right click on `.feature` file, and Run -> This will run `.feature` file on default settings.
@@ -47,6 +48,8 @@ You can add some environment settings, before you run tests with this command, e
 In terminal type `allure generate build/allure-report --clean` to generate local Allure Test Results.   
 
 ![Imgur](https://raw.githubusercontent.com/kamil-nowocin/Test_Automation-automationpractice/master/src/test/resources/files/images/allure_gif.gif)
+## SLACK LOGGER
+Write about slack logger
 ## TEST LOGS
 There are two types of log information saved after each test run:  
 * Detailed logs in log directory. Warning! These logs will be deleted when you launch new test run.  
