@@ -1,4 +1,4 @@
-![Imgur](https://imgur.com/SeGMpNV.png)
+![Imgur](https://raw.githubusercontent.com/kamil-nowocin/Test_Automation-automationpractice/slack/src/test/resources/files/images/readme_banner.jpeg)
 ![JAVA](https://img.shields.io/badge/language-java-critical?style=flat-square)
 ![ALLURE](https://img.shields.io/badge/Allure%20Report-2.8.1-orange.svg?style=flat-square)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)

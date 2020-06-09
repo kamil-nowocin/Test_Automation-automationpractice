@@ -37,9 +37,11 @@ public class SlackLogger extends TestEnvironment implements ITestListener {
     private static String color;
     private static String testAttachmentImage;
     private static final String URL_LINKEDIN = "https://www.linkedin.com/in/kamil-nowocin";
-    private static final String URL_REPOSITORY = "https://github.com/kamil-nowocin/Test_Automation-automationpractice";
     //https://hooks.slack.com/services/YOUR_SLACK_TOKEN <- CORRECT SLACK WEB HOOK
     private static final String URL_SLACK_WEB_HOOK = "https://hooks.slack.com/services/";
+    private static final String URL_REPOSITORY = "https://github.com/kamil-nowocin/Test_Automation-automationpractice";
+    private static final String URL_REPOSITORY_IMAGES = "https://raw.githubusercontent.com/kamil-nowocin/Test_Automation-automationpractice";
+
 
     public static String slackResultDetailsBuilder() {
         List<String> testCaseNames = new ArrayList<>();
@@ -63,10 +65,10 @@ public class SlackLogger extends TestEnvironment implements ITestListener {
         if (ContextInjection.failedTestsAmount == 0) {
             color = "#32CD32"; //GREEN
             //TODO - image links change
-            testAttachmentImage = "https://raw.githubusercontent.com/kamil-nowocin/Test_Automation-automationpractice/master/src/test/resources/files/testPhoto.jpg";
+            testAttachmentImage = String.format("%s/slack/src/test/resources/files/images/green_icon.png", URL_REPOSITORY_IMAGES);
         } else {
             color = "#FF4500"; //RED
-            testAttachmentImage = "https://www.pngitem.com/pimgs/m/26-269883_business-performance-indicator-marketing-management-fail-logo-png.png";
+            testAttachmentImage = String.format("%s/slack/src/test/resources/files/images/red_icon.png", URL_REPOSITORY_IMAGES);
         }
     }
 
@@ -128,7 +130,7 @@ public class SlackLogger extends TestEnvironment implements ITestListener {
                                                                             .text("Travis-CI")
                                                                             .emoji(true)
                                                                             .build())
-                                                                    .url("https://www.asdsda.pl")
+                                                                    .url(TRAVIS_BUILD_WEB_URL)
                                                                     .style("danger")
                                                                     .build())
                                                     .build(),
@@ -139,7 +141,7 @@ public class SlackLogger extends TestEnvironment implements ITestListener {
                                                                             .text("Another button")
                                                                             .emoji(true)
                                                                             .build())
-                                                                    .url(TRAVIS_BUILD_WEB_URL)
+                                                                    .url("www.fakeurl.pl")
                                                                     .style("danger")
                                                                     .build()))
                                                     .build(),
