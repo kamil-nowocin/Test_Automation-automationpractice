@@ -7,7 +7,7 @@
 @registration
 Feature: As a user I would like to register into automationpractice.com
 #--------------------------------------------------------------------------------#
-# [US] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-333              #
+# [UserStory] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-333       #
 #--------------------------------------------------------------------------------#
 
   Background: Navigate to Sign Up page

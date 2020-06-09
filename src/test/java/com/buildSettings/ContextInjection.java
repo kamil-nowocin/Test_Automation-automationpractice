@@ -14,6 +14,10 @@ public class ContextInjection {
     /**
      * DATA
      **/
+    //TEST CASE RESULTS//
+    public static int passedTestsAmount;
+    public static int failedTestsAmount;
+
     //GENERAL DATA//
     public String paymentType;
     public String generatedEmail;

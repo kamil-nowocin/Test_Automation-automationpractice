@@ -1,10 +1,10 @@
 package com.steps;
 
-import com.buildListeners.TestNGListener_API;
-import com.buildListeners.TestNGListener_WEB;
-import com.buildSettings.DriverFactory;
+import com.DriverFactory;
+import com.buildListeners.TestNGListener;
 import com.buildSettings.ExcelEnvironment;
 import com.buildSettings.TestCommons;
+import com.buildSettings.buildPrettyMessage.PrettyMessageBuilder;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
@@ -36,8 +36,7 @@ public class Hooks extends DriverFactory implements ITestListener {
 
     @BeforeMethod(description = "Setting up Test Class")
     public void beforeTest(ITestResult iTestResult) throws IOException {
-        MDC.put("testid", TestNGListener_WEB.getTestName(iTestResult));
-        MDC.put("testid", TestNGListener_API.getTestName(iTestResult));
+        MDC.put("testid", PrettyMessageBuilder.getTestDescription(iTestResult));
         startBrowser();
         TestCommons.networkThrottling(false);
     }
@@ -59,14 +58,14 @@ public class Hooks extends DriverFactory implements ITestListener {
     @Before
     public void beforeScenario(Scenario scenario) throws IOException {
         MDC.put("testid", scenario.getName().toUpperCase());
-        TestNGListener_WEB.onScenarioStart(scenario);
+        TestNGListener.onScenarioStart(scenario);
         startBrowser();
         TestCommons.networkThrottling(false);
     }
 
     @After
     public void afterScenario(Scenario scenario) throws IOException {
-        TestNGListener_WEB.onScenarioFinish(scenario);
+        TestNGListener.onScenarioFinish(scenario);
         if (scenario.isFailed()) {
             localSaveScreenshotPNG(scenario);
             allureSaveScreenshotPNG();

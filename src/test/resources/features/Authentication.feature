@@ -7,7 +7,7 @@
 @authentication
 Feature: As a user I would like to log in automationpractice.com
 #--------------------------------------------------------------------------------#
-# [US] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-111              #
+# [UserStory] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-111       #
 #--------------------------------------------------------------------------------#
 
   Background: Navigate to Login page

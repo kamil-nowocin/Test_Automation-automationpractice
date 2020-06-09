@@ -1,6 +1,6 @@
 package tests.WebAPP;
 
-import com.buildListeners.TestNGListener_WEB;
+import com.buildListeners.TestNGListener;
 import com.buildSettings.ContextInjection;
 import com.buildSettings.ExcelEnvironment;
 import com.steps.Hooks;
@@ -22,7 +22,7 @@ import java.util.List;
 
 @Epic("Web App Tests")
 @Feature("REGISTRATION TESTS")
-@Listeners({TestNGListener_WEB.class})
+@Listeners({TestNGListener.class})
 public class Registration_Tests extends Hooks {
 
     @Issue("TAP-0013")

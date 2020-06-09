@@ -7,7 +7,7 @@
 @socialMedia
 Feature: As a user I would like to be redirected to social media pages from automationpractice.com
 #--------------------------------------------------------------------------------#
-# [US] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-777              #
+# [UserStory] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-777       #
 #--------------------------------------------------------------------------------#
 
   Background: Navigate to automationpractice.com website

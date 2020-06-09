@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Automationpractice.com WEB - Kamil Nowocin" thread-count="4" parallel="classes">
+<suite name="Automationpractice.com WEB - Kamil Nowocin" thread-count="2" parallel="classes">
     <listeners>
         <listener class-name="com.buildListeners.TestNGAnnotationTransformer"/>
     </listeners>
     <!--Parallel testing -> thread-count="2" group-by-instances="false"-->
     <test name="Automated tests for WEB client" group-by-instances="false" preserve-order="false" enabled="true">
         <classes>
-            <class name="tests.WebAPP.CustomerService_Tests"/>
+            <!--            <class name="tests.WebAPP.CustomerService_Tests"/>-->
             <class name="tests.WebAPP.Authentication_Tests"/>
-            <class name="tests.WebAPP.Registration_Tests"/>
-            <class name="tests.WebAPP.RegistrationValidators_Tests"/>
-            <class name="tests.WebAPP.SearchBox_Tests"/>
-            <class name="tests.WebAPP.SocialMedia_Tests"/>
-            <class name="tests.WebAPP.ShoppingLoggedUser_Tests"/>
+            <!--            <class name="tests.WebAPP.Registration_Tests"/>-->
+            <!--            <class name="tests.WebAPP.RegistrationValidators_Tests"/>-->
+            <!--            <class name="tests.WebAPP.SearchBox_Tests"/>-->
+            <!--            <class name="tests.WebAPP.SocialMedia_Tests"/>-->
+            <!--            <class name="tests.WebAPP.ShoppingLoggedUser_Tests"/>-->
         </classes>
     </test>
 </suite>

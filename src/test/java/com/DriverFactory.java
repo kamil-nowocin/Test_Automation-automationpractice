@@ -1,5 +1,6 @@
-package com.buildSettings;
+package com;
 
+import com.buildSettings.TestEnvironment;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -74,7 +75,7 @@ public class DriverFactory extends TestEnvironment {
     }
 
     protected void startBrowser() {
-        printWebDriverManagerVersions(false);
+        displayWebDriverManagerBrowsersVersions(false);
         DesiredCapabilities desiredCapabilities;
         switch (getHost().toLowerCase()) {
             case "chrome":

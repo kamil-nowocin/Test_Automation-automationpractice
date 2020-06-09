@@ -1,6 +1,6 @@
 package tests.WebAPP;
 
-import com.buildListeners.TestNGListener_WEB;
+import com.buildListeners.TestNGListener;
 import com.buildSettings.ExcelEnvironment;
 import com.steps.Hooks;
 import com.steps.MainPageSteps;
@@ -17,7 +17,7 @@ import org.testng.annotations.Test;
 
 @Epic("Web App Tests")
 @Feature("SOCIAL MEDIA TESTS")
-@Listeners({TestNGListener_WEB.class})
+@Listeners({TestNGListener.class})
 public class SocialMedia_Tests extends Hooks {
 
     @Issue("TAP-0041")

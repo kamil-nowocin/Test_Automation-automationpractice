@@ -7,7 +7,7 @@
 @customerService
 Feature: As a user I would like to contact with customer service support
 #--------------------------------------------------------------------------------#
-# [US] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-222              #
+# [UserStory] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-222       #
 #--------------------------------------------------------------------------------#
 
   Background: Navigate to Contact Us page

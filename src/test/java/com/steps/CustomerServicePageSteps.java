@@ -132,6 +132,8 @@ public class CustomerServicePageSteps extends TestEnvironment {
                 + "resources"
                 + File.separator
                 + "files"
+                + File.separator
+                + "images"
                 + File.separator;
         path += fileName;
 

@@ -4,7 +4,6 @@
     <listeners>
         <listener class-name="com.buildListeners.TestNGAnnotationTransformer"/>
     </listeners>
-    <!--Parallel testing -> thread-count="2" group-by-instances="false"-->
     <test name="Automated tests for API client" group-by-instances="true" preserve-order="false" enabled="true">
         <classes>
             <class name="tests.WebAPI.API_Tests"/>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="TestNG Driver Suite">
+    <listeners>
+        <listener class-name="com.buildListeners.TestNGAnnotationTransformer"/>
+    </listeners>
+    <suite-files>
+        <suite-file path="../TestNG-POC.xml" />
+        <suite-file path="../TestNG-WebAPI.xml"/>
+        <suite-file path="../TestNG-WebAPP.xml"/>
+    </suite-files>
+</suite>
