@@ -1,5 +1,6 @@
-package com.buildSettings;
+package com;
 
+import com.buildSettings.TestEnvironment;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -74,7 +75,7 @@ public class DriverFactory extends TestEnvironment {
     }
 
     protected void startBrowser() {
-        printWebDriverManagerVersions(false);
+        displayWebDriverManagerBrowsersVersions(false);
         DesiredCapabilities desiredCapabilities;
         switch (getHost().toLowerCase()) {
             case "chrome":
@@ -124,9 +125,9 @@ public class DriverFactory extends TestEnvironment {
                     desiredCapabilities.setCapability("browser", "Chrome");
                     desiredCapabilities.setCapability("browser_version", "78.0");
                 }
-                //https://automate.browserstack.com/dashboard/v2 <- GET USER_NAME AND ACCESS_TOKEN FROM
+                //https://automate.browserstack.com/dashboard/v2 <- USER_NAME AND ACCESS_KEY
+                //https://$USERNAME:$ACCESS_KEY@hub-cloud.browserstack.com/wd/hub <- HOST_URL
                 //https://www.browserstack.com/automate/capabilities <- GENERATE YOUR OWN CAPABILITIES
-                //https://USER_NAME:ACCESS_TOKEN@hub-cloud.browserstack.com/wd/hub <- HOST_URL (.travis.yml for more information)
                 addDriver(driver = remoteWebDriver(desiredCapabilities, HOST_URL));
                 break;
             default:

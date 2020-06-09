@@ -7,7 +7,7 @@
 @shopping
 Feature: As a user I would like to buy new clothes from automationpractice.com - User is already successfully logged
 #--------------------------------------------------------------------------------#
-# [US] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-666              #
+# [UserStory] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-666       #
 #--------------------------------------------------------------------------------#
 
   Background: Navigate to automationpractice.com website

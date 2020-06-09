@@ -1,6 +1,6 @@
 package tests.POC;
 
-import com.buildListeners.TestNGListener_WEB;
+import com.buildListeners.TestNGListener;
 import com.buildSettings.ExcelEnvironment;
 import com.steps.Hooks;
 import io.qameta.allure.*;
@@ -18,7 +18,7 @@ import org.testng.annotations.Test;
 
 @Epic("POC Tests")
 @Feature("POC Tests")
-@Listeners({TestNGListener_WEB.class})
+@Listeners({TestNGListener.class})
 public class POC_Tests extends Hooks {
 
     @Step("Some POC step")
@@ -36,7 +36,7 @@ public class POC_Tests extends Hooks {
     @Test(description = "As a developer I'd like to see working POC with .xlsx file",
             priority = 0)
     @Parameters({"Parameter 1", "Parameter 2", "Parameter 3"})
-    public void excelTest(String Parameter1, String Parameter2, String Parameter3) throws Throwable {
+    public void excelTest() throws Throwable {
         //ARRANGE//
         ExcelEnvironment.saveTestResultsXLSX(50);
 

@@ -1,6 +1,6 @@
 package tests.WebAPI;
 
-import com.buildListeners.TestNGListener_API;
+import com.buildListeners.TestNGListener;
 import com.buildSettings.ExcelEnvironment;
 import com.steps.Hooks;
 import io.qameta.allure.*;
@@ -18,7 +18,7 @@ import static io.restassured.RestAssured.given;
 
 @Epic("API Tests")
 @Feature("HTTP Statuses")
-@Listeners({TestNGListener_API.class})
+@Listeners({TestNGListener.class})
 public class API_Tests extends Hooks {
 
     private String restHomeURL() {

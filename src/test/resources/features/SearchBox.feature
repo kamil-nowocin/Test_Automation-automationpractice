@@ -7,7 +7,7 @@
 @searchBox
 Feature: A a user I would like to see results of searching phrase
 #--------------------------------------------------------------------------------#
-# [US] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-555              #
+# [UserStory] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-555       #
 #--------------------------------------------------------------------------------#
 
   Background: Navigate to automationpractice.com website

@@ -1,6 +1,8 @@
 package com.buildSettings;
 
-import com.buildListeners.TestNGListener_WEB;
+import com.DriverFactory;
+import com.buildListeners.TestNGListener;
+import com.buildSettings.buildPrettyMessage.PrettyMessageBuilder;
 import com.github.javafaker.Faker;
 import com.steps.Hooks;
 import io.cucumber.java.Scenario;
@@ -26,6 +28,7 @@ import java.nio.file.Paths;
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.text.SimpleDateFormat;
+import java.time.Instant;
 import java.util.Date;
 import java.util.Locale;
 import java.util.Properties;
@@ -44,6 +47,7 @@ public class TestEnvironment {
     protected static MockNeat mockNeat = MockNeat.secure();
     protected static Logger logger = LoggerFactory.getLogger(Hooks.class);
     protected static DecimalFormat $decimalFormat = new DecimalFormat("$#0.00", new DecimalFormatSymbols(Locale.US));
+    protected static final long unixTime = Instant.now().getEpochSecond();
 
     //BUNDLES//
     protected static final ResourceBundle RESOURCE_BUNDLE_INVALID_EMAILS = ResourceBundle.getBundle("invalidEmails");
@@ -91,13 +95,15 @@ public class TestEnvironment {
     protected static final String TRAVIS_BUILD_NUMBER = System.getProperty
             ("travis.buildNumber", "Build was made on localhost");
     protected static final String TRAVIS_BUILD_WEB_URL = System.getProperty
-            ("travis.buildURL", "Build was made on localhost");
+            ("travis.buildURL", "https://localhost:3000");
     protected static final String TRAVIS_BRANCH = System.getProperty
             ("travis.branch", "Build was made on localhost");
     protected static final String OS_NAME = System.getProperty
             ("travis.osName", "Build was made on localhost");//DON'T KNOW HOW TO SET OS TYPE WHEN BUILD RUNS ON LOCAL MACHINE OR ONLINE
     protected static final String JAVA_VERSION = System.getProperty
             ("travis.jdkVersion", "Build was made on localhost");
+    protected static final String SLACK_TOKEN = System.getProperty
+            ("travis.slack", "");
     protected static final String BROWSER = System.getProperty
             ("browser", "Chrome");
     protected static final String HOST = System.getProperty
@@ -105,7 +111,7 @@ public class TestEnvironment {
     protected static final String HOST_URL = System.getProperty
             ("selenium.hostURL", "https://localhost:3000");
 
-    protected static String getCurrentPath() {
+    public static String getCurrentPath() {
         return Paths.get(".").toAbsolutePath().normalize().toString();
     }
 
@@ -142,7 +148,7 @@ public class TestEnvironment {
 
     @Attachment(value = "TestNG test FAIL logs", type = "text/plain")
     protected String allureSaveTextLog(ITestResult iTestResult) {
-        return logBuilder(TestNGListener_WEB.getTestName(iTestResult));
+        return logBuilder(PrettyMessageBuilder.getTestDescription(iTestResult));
     }
 
     @Attachment(value = "Cucumber scenario FAIL logs", type = "text/plain")
@@ -153,6 +159,20 @@ public class TestEnvironment {
     @Attachment(value = "Scenario FAIL screenshot", type = "image/png")
     protected byte[] allureSaveScreenshotPNG() {
         return ((TakesScreenshot) DriverFactory.getDriver()).getScreenshotAs(OutputType.BYTES);
+    }
+
+    protected void localSaveScreenshotPNG(Scenario scenario) throws IOException {
+        byte[] screenshot = ((TakesScreenshot) DriverFactory.getDriver()).getScreenshotAs(OutputType.BYTES);
+        scenario.attach(screenshot, "image/png", "SCREENSHOT");
+        File scrFile = ((TakesScreenshot) DriverFactory.getDriver()).getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(scrFile, new File(getCurrentPath()
+                + File.separator
+                + "screenshots"
+                + File.separator
+                + scenario.getName()
+                + "-"
+                + TODAY_DATE
+                + ".png"));
     }
 
     protected String logBuilder(String fileName) {
@@ -170,20 +190,6 @@ public class TestEnvironment {
         return contentBuilder.toString();
     }
 
-    protected void localSaveScreenshotPNG(Scenario scenario) throws IOException {
-        byte[] screenshot = ((TakesScreenshot) DriverFactory.getDriver()).getScreenshotAs(OutputType.BYTES);
-        scenario.attach(screenshot, "image/png", "SCREENSHOT");
-        File scrFile = ((TakesScreenshot) DriverFactory.getDriver()).getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(scrFile, new File(getCurrentPath()
-                + File.separator
-                + "screenshots"
-                + File.separator
-                + scenario.getName()
-                + "-"
-                + TODAY_DATE
-                + ".png"));
-    }
-
     protected void deleteOldLogs() {
         try {
             Files.walk(Paths.get(getCurrentPath()
@@ -197,7 +203,14 @@ public class TestEnvironment {
         }
     }
 
-    protected void printWebDriverManagerVersions(Boolean printStatuses) {
+    protected void suiteResultsCleaner() {
+        ContextInjection.passedTestsAmount = 0;
+        ContextInjection.failedTestsAmount = 0;
+        TestNGListener.passedTests.clear();
+        TestNGListener.failedTests.clear();
+    }
+
+    protected void displayWebDriverManagerBrowsersVersions(Boolean printStatuses) {
         if (printStatuses) {
             logger.info("ChromeDriver available versions: " + WebDriverManager.chromedriver().getDriverVersions());
             logger.info("GeckoDriver available versions: " + WebDriverManager.firefoxdriver().getDriverVersions());

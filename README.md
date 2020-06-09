@@ -1,4 +1,4 @@
-![Imgur](https://imgur.com/SeGMpNV.png)
+![Imgur](https://raw.githubusercontent.com/kamil-nowocin/Test_Automation-automationpractice/slack/src/test/resources/files/images/readme_banner.jpeg)
 ![JAVA](https://img.shields.io/badge/language-java-critical?style=flat-square)
 ![ALLURE](https://img.shields.io/badge/Allure%20Report-2.8.1-orange.svg?style=flat-square)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
@@ -33,7 +33,7 @@ Supported browsers aka hosts:
 There are multiple ways to run tests from this build. It all depends on what you want to do:
 1. Right click on `.feature` file, and Run -> This will run `.feature` file on default settings.
 2. Right click on `TestNGRunner` file, and Run -> This will run all `.feature` files on default settings.
-   - <sub><sup>***This is highly unrecommended option since it's experimental file and doesn't work well, check build.gradle for more information.***</sup></sub>
+   - <sub><sup>***This is highly unrecommended option since it's an experimental file and doesn't work well, check build.gradle for more information.***</sup></sub>
 3. Right click on `TestNG.xml` file, and Run ->  This will run all test attached to specific runner.
 4. In terminal type `./gradlew runTests` -> This will run all `.feature` files.
 5. In terminal type `./gradlew runTests {run with tags TBA}` -> This will run all `.feature` files which provided tag.
@@ -46,7 +46,7 @@ You can add some environment settings, before you run tests with this command, e
 * After each LOCAL cycle run, tests results will be stored in build/allure-report.  
 In terminal type `allure generate build/allure-report --clean` to generate local Allure Test Results.   
 
-![Imgur](https://i.imgur.com/nDpg1sX.gif)
+![Imgur](https://raw.githubusercontent.com/kamil-nowocin/Test_Automation-automationpractice/master/src/test/resources/files/images/allure_gif.gif)
 ## TEST LOGS
 There are two types of log information saved after each test run:  
 * Detailed logs in log directory. Warning! These logs will be deleted when you launch new test run.  

@@ -1,6 +1,6 @@
 package tests.WebAPP;
 
-import com.buildListeners.TestNGListener_WEB;
+import com.buildListeners.TestNGListener;
 import com.buildSettings.ContextInjection;
 import com.buildSettings.ExcelEnvironment;
 import com.steps.Hooks;
@@ -18,7 +18,7 @@ import org.testng.annotations.Test;
 
 @Epic("Web App Tests")
 @Feature("REGISTRATION VALIDATORS TESTS")
-@Listeners({TestNGListener_WEB.class})
+@Listeners({TestNGListener.class})
 public class RegistrationValidators_Tests extends Hooks {
 
     @Issue("TAP-0020")

@@ -1,7 +1,7 @@
 package com.steps;
 
+import com.DriverFactory;
 import com.buildSettings.ContextInjection;
-import com.buildSettings.DriverFactory;
 import com.buildSettings.TestCommons;
 import com.google.inject.Inject;
 import com.pages.ProductDetailsPage;

@@ -1,6 +1,6 @@
 package com.steps;
 
-import com.buildSettings.DriverFactory;
+import com.DriverFactory;
 import com.buildSettings.TestCommons;
 import com.pages.SocialMediaPage;
 import io.cucumber.java.en.And;

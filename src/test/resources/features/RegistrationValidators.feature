@@ -7,7 +7,7 @@
 @registrationValidators
 Feature: As a user I would like to see the error message where I made a mistake in the registration page form
 #--------------------------------------------------------------------------------#
-# [US] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-444              #
+# [UserStory] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-444       #
 #--------------------------------------------------------------------------------#
 
   Background: Navigate to registration page

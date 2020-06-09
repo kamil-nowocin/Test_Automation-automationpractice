@@ -59,6 +59,9 @@ dependencies {
     compile group: 'com.google.inject', name: 'guice', version: '4.2.3'
     // https://mvnrepository.com/artifact/org.aspectj/aspectjweaver
     compile group: 'org.aspectj', name: 'aspectjweaver', version: '1.9.5'
+    // https://mvnrepository.com/artifact/com.slack.api/slack-api-client
+    compile group: 'com.slack.api', name: 'slack-api-client', version: '1.0.8'
+
 
     implementation("com.google.guava:guava:28.1-jre")
     testImplementation 'io.cucumber:cucumber-java:5.6.0'
@@ -93,9 +96,7 @@ test {
     ignoreFailures = true
     useTestNG()
             {
-                suites "src/test/resources/xml_runners/TestNG-WebAPP.xml"
-                suites "src/test/resources/xml_runners/TestNG-WebAPI.xml"
-                suites "src/test/resources/xml_runners/TestNG-POC.xml"
+                suites "src/test/resources/xml_runners/main_runner/TestNG-Runner.xml"
             }
     systemProperties System.properties
 }
