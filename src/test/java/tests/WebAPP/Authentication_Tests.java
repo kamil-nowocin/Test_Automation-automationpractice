@@ -8,7 +8,6 @@ import com.steps.Hooks;
 import com.steps.MainPageSteps;
 import com.steps.RegistrationPageSteps;
 import io.qameta.allure.*;
-import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
@@ -79,20 +78,6 @@ public class Authentication_Tests extends Hooks {
 
         //ASSERT//
         authenticationPageSteps.iCanSeeWarningMessageWithInclude("Authentication failed");
-    }
-
-    //TODO - remove
-    @Description("[US-111]/[1] As a user I can log into automationpractice.com using registered email \"thor.odinson@example.com\" & password \"12345\"")
-    @Test(description = "AUTH FAIL NO1")
-    public void test3() throws Throwable {
-        //ASSERT//
-        Assert.fail();
-    }
-
-    @Test(description = "AUTH FAIL NO2")
-    public void test4() throws Throwable {
-        //ASSERT//
-        Assert.fail();
     }
 
     @Issue("TAP-0003")
