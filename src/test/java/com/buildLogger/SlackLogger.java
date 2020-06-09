@@ -40,7 +40,7 @@ public class SlackLogger extends TestEnvironment implements ITestListener {
     //https://hooks.slack.com/services/YOUR_SLACK_TOKEN <- CORRECT SLACK WEB HOOK
     private static final String URL_SLACK_WEB_HOOK = "https://hooks.slack.com/services/";
     private static final String URL_REPOSITORY = "https://github.com/kamil-nowocin/Test_Automation-automationpractice";
-    private static final String URL_REPOSITORY_IMAGES = "https://raw.githubusercontent.com/kamil-nowocin/Test_Automation-automationpractice/slack/src/test/resources/files/images";
+    private static final String URL_REPOSITORY_IMAGES = "https://raw.githubusercontent.com/kamil-nowocin/Test_Automation-automationpractice/master/src/test/resources/files/images";
 
 
     public static String slackResultDetailsBuilder() {

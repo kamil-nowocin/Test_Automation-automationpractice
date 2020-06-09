@@ -33,7 +33,7 @@ Supported browsers aka hosts:
 There are multiple ways to run tests from this build. It all depends on what you want to do:
 1. Right click on `.feature` file, and Run -> This will run `.feature` file on default settings.
 2. Right click on `TestNGRunner` file, and Run -> This will run all `.feature` files on default settings.
-   - <sub><sup>***This is highly unrecommended option since it's experimental file and doesn't work well, check build.gradle for more information.***</sup></sub>
+   - <sub><sup>***This is highly unrecommended option since it's an experimental file and doesn't work well, check build.gradle for more information.***</sup></sub>
 3. Right click on `TestNG.xml` file, and Run ->  This will run all test attached to specific runner.
 4. In terminal type `./gradlew runTests` -> This will run all `.feature` files.
 5. In terminal type `./gradlew runTests {run with tags TBA}` -> This will run all `.feature` files which provided tag.
