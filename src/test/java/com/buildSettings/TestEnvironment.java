@@ -95,7 +95,7 @@ public class TestEnvironment {
     protected static final String TRAVIS_BUILD_NUMBER = System.getProperty
             ("travis.buildNumber", "Build was made on localhost");
     protected static final String TRAVIS_BUILD_WEB_URL = System.getProperty
-            ("travis.buildURL", "Build was made on localhost");
+            ("travis.buildURL", "https://localhost:3000");
     protected static final String TRAVIS_BRANCH = System.getProperty
             ("travis.branch", "Build was made on localhost");
     protected static final String OS_NAME = System.getProperty

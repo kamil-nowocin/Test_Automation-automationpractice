@@ -38,7 +38,7 @@ public class POC_Tests extends Hooks {
     @Parameters({"Parameter 1", "Parameter 2", "Parameter 3"})
     public void excelTest() throws Throwable {
         //ARRANGE//
-        //ExcelEnvironment.saveTestResultsXLSX(50);
+        ExcelEnvironment.saveTestResultsXLSX(50);
 
         //ACT//
         testSteps(ExcelEnvironment.getRowData(1));

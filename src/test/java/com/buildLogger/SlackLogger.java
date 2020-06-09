@@ -40,7 +40,7 @@ public class SlackLogger extends TestEnvironment implements ITestListener {
     //https://hooks.slack.com/services/YOUR_SLACK_TOKEN <- CORRECT SLACK WEB HOOK
     private static final String URL_SLACK_WEB_HOOK = "https://hooks.slack.com/services/";
     private static final String URL_REPOSITORY = "https://github.com/kamil-nowocin/Test_Automation-automationpractice";
-    private static final String URL_REPOSITORY_IMAGES = "https://raw.githubusercontent.com/kamil-nowocin/Test_Automation-automationpractice";
+    private static final String URL_REPOSITORY_IMAGES = "https://raw.githubusercontent.com/kamil-nowocin/Test_Automation-automationpractice/slack/src/test/resources/files/images";
 
 
     public static String slackResultDetailsBuilder() {
@@ -65,10 +65,10 @@ public class SlackLogger extends TestEnvironment implements ITestListener {
         if (ContextInjection.failedTestsAmount == 0) {
             color = "#32CD32"; //GREEN
             //TODO - image links change
-            testAttachmentImage = String.format("%s/slack/src/test/resources/files/images/green_icon.png", URL_REPOSITORY_IMAGES);
+            testAttachmentImage = (String.format("%s/green_icon.png", URL_REPOSITORY_IMAGES));
         } else {
             color = "#FF4500"; //RED
-            testAttachmentImage = String.format("%s/slack/src/test/resources/files/images/red_icon.png", URL_REPOSITORY_IMAGES);
+            testAttachmentImage = (String.format("%s/red_icon.png", URL_REPOSITORY_IMAGES));
         }
     }
 
@@ -84,7 +84,7 @@ public class SlackLogger extends TestEnvironment implements ITestListener {
                                                     .text("Author: _*Kamil Nowocin*_")
                                                     .build(),
                                             ImageElement.builder()
-                                                    .imageUrl("https://i1.wp.com/www.vectorico.com/wp-content/uploads/2018/02/LinkedIn-Icon-Square.png?fit=600%2C600")
+                                                    .imageUrl((String.format("%s/linkedin_icon.png", URL_REPOSITORY_IMAGES)))
                                                     .altText("test")
                                                     .build(),
                                             MarkdownTextObject.builder()
@@ -141,7 +141,7 @@ public class SlackLogger extends TestEnvironment implements ITestListener {
                                                                             .text("Another button")
                                                                             .emoji(true)
                                                                             .build())
-                                                                    .url("www.fakeurl.pl")
+                                                                    .url("https://www.fakeurl.pl")
                                                                     .style("danger")
                                                                     .build()))
                                                     .build(),
@@ -155,9 +155,13 @@ public class SlackLogger extends TestEnvironment implements ITestListener {
                     ))
                     .build();
             WebhookResponse webhookResponse = Slack.getInstance().send(String.format("%s/%s", URL_SLACK_WEB_HOOK, SLACK_TOKEN), slackLoggerPayload);
-            webhookResponse.getMessage();
+            logger.info(slackLoggerResponse(webhookResponse));
         } catch (IOException e) {
             System.out.println("Unexpected Error !WebHook:" + URL_SLACK_WEB_HOOK);
         }
+    }
+
+    public static String slackLoggerResponse(WebhookResponse webhookResponse) {
+        return String.format("Slack response: %d and additional information %s", webhookResponse.getCode(), webhookResponse.getBody());
     }
 }
