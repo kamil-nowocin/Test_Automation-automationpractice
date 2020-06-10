@@ -1,4 +1,4 @@
-![](https://raw.githubusercontent.com/kamil-nowocin/Test_Automation-automationpractice/master/src/test/resources/files/images/readme_banner.jpg)
+![IMG](https://raw.githubusercontent.com/kamil-nowocin/Test_Automation-automationpractice/master/src/test/resources/files/images/readme_banner.jpg)
 ![JAVA](https://img.shields.io/badge/language-java-critical?style=flat-square)
 ![ALLURE](https://img.shields.io/badge/Allure%20Report-2.8.1-orange.svg?style=flat-square)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
@@ -10,7 +10,7 @@
 # Test automation - http://www.automationpractice.com
 **Design Pattern:** Page Object Model & AAA  
 **Following tools were used in this framework:**  
-Java, TestNG, REST Assured, Selenium, Gradle, Cucumber, WebDriverManager, Faker & MockNeat, Travis CI, BrowserStack, Allure Reports, GitHub Pages
+Java, Selenium, TestNG, Cucumber, REST Assured, Gradle, Travis CI, Allure Reports, Slack API, WebDriverManager, Faker & MockNeat, BrowserStack, GitHub Pages
 ## ABOUT PROJECT
 Project made in my spare time to develop my skills in automation testing.  
 You don't have to download any WebDrivers - I'm using WebDriverManager, drivers will be downloaded by gradle.  
@@ -29,7 +29,7 @@ Supported browsers aka hosts:
 * Support for Fake & Mock data
 * Support for BrowserStack
 * Support for Parallel Testing
-* Support for custom Slack Logger
+* Support for custom Slack Bot
 ## HOW TO RUN TESTS
 There are multiple ways to run tests from this build. It all depends on what you want to do:
 1. Right click on `.feature` file, and Run -> This will run `.feature` file on default settings.
@@ -43,17 +43,21 @@ You can add some environment settings, before you run tests with this command, e
    - `-Dselenium.host="YOUR_HOST_NAME"` -> available hosts: Chrome, Firefox, Opera, Safari, Edge, IE, Safari, BrowserStack
 7. Create your own runner :hammer_and_wrench:
 ## TEST RESULTS (Allure Report)
-* After each CI/CD cycle run, tests results will be automatically uploaded to [kamil_nowocin.github.io/Test_Automation](https://kamil-nowocin.github.io/Test_Automation-automationpractice/) 
-* After each LOCAL cycle run, tests results will be stored in build/allure-report.  
+After each CI/CD cycle run, tests results will be automatically uploaded to [kamil_nowocin.github.io/Test_Automation](https://kamil-nowocin.github.io/Test_Automation-automationpractice/)  
+After each LOCAL cycle run, tests results will be stored in build/allure-report.  
 In terminal type `allure generate build/allure-report --clean` to generate local Allure Test Results.   
 
 ![Imgur](https://raw.githubusercontent.com/kamil-nowocin/Test_Automation-automationpractice/master/src/test/resources/files/images/allure_gif.gif)
-## SLACK LOGGER
-Write about slack logger
+## SLACK BOT (Logger)
+During CI/CD cycle run, you can see real time test results of TestNG suite execution on Slack workspace. 
+
+| FAIL MESSAGE  | PASS MESSAGE  |
+| ------------- | ------------- |
+| ![IMG](https://raw.githubusercontent.com/kamil-nowocin/Test_Automation-automationpractice/master/src/test/resources/files/images/slack_bot_fail.png)  | ![IMG](https://raw.githubusercontent.com/kamil-nowocin/Test_Automation-automationpractice/master/src/test/resources/files/images/slack_bot_pass.png)  |
 ## TEST LOGS
 There are two types of log information saved after each test run:  
-* Detailed logs in log directory. Warning! These logs will be deleted when you launch new test run.  
-* Colorful logs in testdata.xls file. Warning! These logs will be overwritten when you launch new test run. <sub><sup>(Only for TestNG runners)</sup></sub>
+Detailed logs in log directory. Warning! These logs will be deleted when you launch new test run.  
+Colorful logs in testdata.xls file. Warning! These logs will be overwritten when you launch new test run. <sub><sup>(Only for TestNG runners)</sup></sub>
 ## AUTHORS
 - **Kamil Nowocin** - *Initial work* - [Kamil Nowocin](https://github.com/kamil-nowocin)
 ## LICENSE
