@@ -83,6 +83,22 @@ public class TestEnvironment {
             ("selenium.hostURL", "https://localhost:3000");
 
     //METHODS//
+    protected enum Timeouts {
+        TIMEOUT(30),
+        SCRIPT_TIMEOUT(15),
+        PAGE_LOAD_TIMEOUT(30),
+        FIND_ELEMENT_TIMEOUT(25),
+        CLICK_TIMEOUT(20),
+        ATTRIBUTE_TIMEOUT(20),
+        VISIBLE_TIMEOUT(20);
+
+        public final int value;
+
+        Timeouts(int value) {
+            this.value = value;
+        }
+    }
+
     public static String getCurrentPath() {
         return Paths.get(".").toAbsolutePath().normalize().toString();
     }
@@ -119,22 +135,6 @@ public class TestEnvironment {
             fileWriter.flush();
         } catch (IOException e) {
             logger.error("Failed to create json object!", e);
-        }
-    }
-
-    protected enum Timeouts {
-        TIMEOUT(20),
-        SCRIPT_TIMEOUT(15),
-        PAGE_LOAD_TIMEOUT(20),
-        FIND_ELEMENT_TIMEOUT(15),
-        CLICK_TIMEOUT(15),
-        ATTRIBUTE_TIMEOUT(15),
-        VISIBLE_TIMEOUT(15);
-
-        public final int value;
-
-        Timeouts(int value) {
-            this.value = value;
         }
     }
 

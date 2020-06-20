@@ -65,7 +65,7 @@ public class TestCommons extends TestEnvironment {
      **/
     public void selectFromDropdownByIndex(int value, WebElement webElement) throws NoSuchElementException {
         try {
-            waitForElementToBeClickable(webElement);
+            waitForElementToBeVisible(webElement);
             Select dropdown = new Select(webElement);
             dropdown.selectByIndex(value);
         } catch (NoSuchElementException e) {
@@ -75,7 +75,7 @@ public class TestCommons extends TestEnvironment {
 
     public void selectFromDropdownByText(String textValue, WebElement webElement) throws NoSuchElementException {
         try {
-            waitForElementToBeClickable(webElement);
+            waitForElementToBeVisible(webElement);
             Select dropdown = new Select(webElement);
             dropdown.selectByVisibleText(textValue);
         } catch (NoSuchElementException e) {
@@ -85,7 +85,7 @@ public class TestCommons extends TestEnvironment {
 
     public void selectFromDropdownByValue(String textValue, WebElement webElement) throws NoSuchElementException {
         try {
-            waitForElementToBeClickable(webElement);
+            waitForElementToBeVisible(webElement);
             Select dropdown = new Select(webElement);
             dropdown.selectByValue(textValue);
         } catch (NoSuchElementException e) {
@@ -137,7 +137,7 @@ public class TestCommons extends TestEnvironment {
     }
 
     public void customSendKeys(WebElement webElement, String whatToSend) {
-        waitForElementToBeClickable(webElement);
+        waitForElementToBeVisible(webElement);
         webElement.sendKeys(whatToSend);
     }
 
@@ -156,7 +156,7 @@ public class TestCommons extends TestEnvironment {
     }
 
     public void scrollWebsiteToElement(WebElement webElement) {
-        waitForElementToBeClickable(webElement);
+        waitForElementToBeVisible(webElement);
         JavascriptExecutor js = (JavascriptExecutor) DriverFactory.getDriver();
         js.executeScript("arguments[0].scrollIntoView(true);", webElement);
     }
