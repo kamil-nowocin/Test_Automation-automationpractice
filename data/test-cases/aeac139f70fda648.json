@@ -1,0 +1,343 @@
+{
+  "uid" : "aeac139f70fda648",
+  "name" : "[US-222]/[2] I am able to send request via contact us form, all required inputs are filled up",
+  "fullName" : "tests.WebAPP.CustomerService_Tests.test_2",
+  "historyId" : "d182b5cf58bbff8db7375a15519aa5c6",
+  "time" : {
+    "start" : 1592687706554,
+    "stop" : 1592687717669,
+    "duration" : 11115
+  },
+  "description" : "[US-222]/[2] As a user I am able to send request via contact us form, all required inputs are filled up",
+  "descriptionHtml" : "<p>[US-222]/[2] As a user I am able to send request via contact us form, all required inputs are filled up</p>\n",
+  "status" : "broken",
+  "statusMessage" : "Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on LINUX (6407f7bb29e28352028624ab593a80bc)] -> xpath: //div[@class='col-xs-12 col-md-3']//select[@id='id_contact']] (tried for 5 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-9fbfe21e-f35f-442b-8fde-917cbb8d98e8', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.0.0-1031-gcp', java.version: '14.0.1'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /tmp/.com.google.Chrome.02hcDk}, goog:chromeOptions: {debuggerAddress: localhost:40895}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 6407f7bb29e28352028624ab593a80bc",
+  "statusTrace" : "org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on LINUX (6407f7bb29e28352028624ab593a80bc)] -> xpath: //div[@class='col-xs-12 col-md-3']//select[@id='id_contact']] (tried for 5 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-9fbfe21e-f35f-442b-8fde-917cbb8d98e8', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.0.0-1031-gcp', java.version: '14.0.1'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /tmp/.com.google.Chrome.02hcDk}, goog:chromeOptions: {debuggerAddress: localhost:40895}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 6407f7bb29e28352028624ab593a80bc\n\tat org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)\n\tat com.buildSettings.TestCommons.waitForElementToBeClickable(TestCommons.java:35)\n\tat com.buildSettings.TestCommons.selectFromDropdownByText(TestCommons.java:78)\n\tat com.steps.CustomerServicePageSteps.iChooseSubjectHeading(CustomerServicePageSteps.java:53)\n\tat tests.WebAPP.CustomerService_Tests.test_2(CustomerService_Tests.java:75)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:564)\n\tat org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)\n\tat org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)\n\tat org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)\n\tat org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)\n\tat org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)\n\tat org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)\n\tat org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)\n\tat org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)\n\tat java.base/java.lang.Thread.run(Thread.java:832)\n",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "Setting up Excel File",
+    "time" : {
+      "start" : 1592687592306,
+      "stop" : 1592687592352,
+      "duration" : 46
+    },
+    "description" : "Setting up Excel File",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "Setting up Test Class",
+    "time" : {
+      "start" : 1592687705378,
+      "stop" : 1592687706408,
+      "duration" : 1030
+    },
+    "description" : "Setting up Test Class",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "[US-222]/[2] As a user I am able to send request via contact us form, all required inputs are filled up",
+    "status" : "broken",
+    "statusMessage" : "Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on LINUX (6407f7bb29e28352028624ab593a80bc)] -> xpath: //div[@class='col-xs-12 col-md-3']//select[@id='id_contact']] (tried for 5 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-9fbfe21e-f35f-442b-8fde-917cbb8d98e8', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.0.0-1031-gcp', java.version: '14.0.1'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /tmp/.com.google.Chrome.02hcDk}, goog:chromeOptions: {debuggerAddress: localhost:40895}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 6407f7bb29e28352028624ab593a80bc",
+    "statusTrace" : "org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on LINUX (6407f7bb29e28352028624ab593a80bc)] -> xpath: //div[@class='col-xs-12 col-md-3']//select[@id='id_contact']] (tried for 5 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-9fbfe21e-f35f-442b-8fde-917cbb8d98e8', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.0.0-1031-gcp', java.version: '14.0.1'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /tmp/.com.google.Chrome.02hcDk}, goog:chromeOptions: {debuggerAddress: localhost:40895}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 6407f7bb29e28352028624ab593a80bc\n\tat org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)\n\tat com.buildSettings.TestCommons.waitForElementToBeClickable(TestCommons.java:35)\n\tat com.buildSettings.TestCommons.selectFromDropdownByText(TestCommons.java:78)\n\tat com.steps.CustomerServicePageSteps.iChooseSubjectHeading(CustomerServicePageSteps.java:53)\n\tat tests.WebAPP.CustomerService_Tests.test_2(CustomerService_Tests.java:75)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:564)\n\tat org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)\n\tat org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)\n\tat org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)\n\tat org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)\n\tat org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)\n\tat org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)\n\tat org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)\n\tat org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)\n\tat java.base/java.lang.Thread.run(Thread.java:832)\n",
+    "steps" : [ {
+      "name" : "I open home page",
+      "time" : {
+        "start" : 1592687706567,
+        "stop" : 1592687710284,
+        "duration" : 3717
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I can see automationpractice.com website",
+      "time" : {
+        "start" : 1592687710284,
+        "stop" : 1592687710347,
+        "duration" : 63
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I click on Contact Us button",
+      "time" : {
+        "start" : 1592687710347,
+        "stop" : 1592687711875,
+        "duration" : 1528
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I can see Contact Us form",
+      "time" : {
+        "start" : 1592687711875,
+        "stop" : 1592687712002,
+        "duration" : 127
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I am on Customer Service Contact Us page form",
+      "time" : {
+        "start" : 1592687712002,
+        "stop" : 1592687712109,
+        "duration" : 107
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I choose Subject Heading *Customer service*",
+      "time" : {
+        "start" : 1592687712110,
+        "stop" : 1592687717384,
+        "duration" : 5274
+      },
+      "status" : "broken",
+      "statusMessage" : "Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on LINUX (6407f7bb29e28352028624ab593a80bc)] -> xpath: //div[@class='col-xs-12 col-md-3']//select[@id='id_contact']] (tried for 5 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-9fbfe21e-f35f-442b-8fde-917cbb8d98e8', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.0.0-1031-gcp', java.version: '14.0.1'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /tmp/.com.google.Chrome.02hcDk}, goog:chromeOptions: {debuggerAddress: localhost:40895}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 6407f7bb29e28352028624ab593a80bc",
+      "statusTrace" : "org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on LINUX (6407f7bb29e28352028624ab593a80bc)] -> xpath: //div[@class='col-xs-12 col-md-3']//select[@id='id_contact']] (tried for 5 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-9fbfe21e-f35f-442b-8fde-917cbb8d98e8', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.0.0-1031-gcp', java.version: '14.0.1'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /tmp/.com.google.Chrome.02hcDk}, goog:chromeOptions: {debuggerAddress: localhost:40895}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 6407f7bb29e28352028624ab593a80bc\n\tat org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)\n\tat com.buildSettings.TestCommons.waitForElementToBeClickable(TestCommons.java:35)\n\tat com.buildSettings.TestCommons.selectFromDropdownByText(TestCommons.java:78)\n\tat com.steps.CustomerServicePageSteps.iChooseSubjectHeading(CustomerServicePageSteps.java:53)\n\tat tests.WebAPP.CustomerService_Tests.test_2(CustomerService_Tests.java:75)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:564)\n\tat org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)\n\tat org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)\n\tat org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)\n\tat org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)\n\tat org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)\n\tat org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)\n\tat org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)\n\tat org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)\n\tat java.base/java.lang.Thread.run(Thread.java:832)\n",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "subjectHeading",
+        "value" : "Customer service"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "84215df5abf9880a",
+      "name" : "Scenario FAIL screenshot",
+      "source" : "84215df5abf9880a.png",
+      "type" : "image/png",
+      "size" : 88920
+    }, {
+      "uid" : "972c7236e891f56e",
+      "name" : "TestNG test FAIL logs",
+      "source" : "972c7236e891f56e.txt",
+      "type" : "text/plain",
+      "size" : 4007
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 6,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "Teardown Test Class",
+    "time" : {
+      "start" : 1592687717670,
+      "stop" : 1592687717754,
+      "duration" : 84
+    },
+    "description" : "Teardown Test Class",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "Teardown Test Suite",
+    "time" : {
+      "start" : 1592688015203,
+      "stop" : 1592688016459,
+      "duration" : 1256
+    },
+    "description" : "Teardown Test Suite",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "tests.WebAPP.CustomerService_Tests"
+  }, {
+    "name" : "testClass",
+    "value" : "tests.WebAPP.CustomerService_Tests"
+  }, {
+    "name" : "testMethod",
+    "value" : "test_2"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Automationpractice.com WEB - Kamil Nowocin"
+  }, {
+    "name" : "suite",
+    "value" : "Automated tests for WEB client"
+  }, {
+    "name" : "subSuite",
+    "value" : "tests.WebAPP.CustomerService_Tests"
+  }, {
+    "name" : "host",
+    "value" : "travis-job-9fbfe21e-f35f-442b-8fde-917cbb8d98e8"
+  }, {
+    "name" : "thread",
+    "value" : "6385@travis-job-9fbfe21e-f35f-442b-8fde-917cbb8d98e8.TestNG-test=Automated tests for WEB client-4(40)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "story",
+    "value" : "POSITIVE FLOW"
+  }, {
+    "name" : "owner",
+    "value" : "Kamil Nowocin"
+  }, {
+    "name" : "feature",
+    "value" : "CUSTOMER SERVICE TESTS"
+  }, {
+    "name" : "epic",
+    "value" : "Web App Tests"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ {
+    "name" : "TAP-0006",
+    "url" : "https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE/issue/TAP-0006",
+    "type" : "issue"
+  }, {
+    "name" : "STORY-222",
+    "url" : "https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE/STORY-222",
+    "type" : "tms"
+  } ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "owner" : "Kamil Nowocin",
+    "retries" : [ {
+      "uid" : "c11cddd854705f6b",
+      "status" : "skipped",
+      "statusDetails" : "Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on LINUX (b7cd4ae71ac9a4d7be1fecf0e5878610)] -> xpath: //div[@class='col-xs-12 col-md-3']//select[@id='id_contact']] (tried for 5 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-9fbfe21e-f35f-442b-8fde-917cbb8d98e8', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.0.0-1031-gcp', java.version: '14.0.1'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /tmp/.com.google.Chrome.7x5CQp}, goog:chromeOptions: {debuggerAddress: localhost:42373}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: b7cd4ae71ac9a4d7be1fecf0e5878610",
+      "time" : {
+        "start" : 1592687695656,
+        "stop" : 1592687705262,
+        "duration" : 9606
+      }
+    } ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 4,
+        "skipped" : 14,
+        "passed" : 128,
+        "unknown" : 0,
+        "total" : 146
+      },
+      "items" : [ {
+        "uid" : "fcc55c65bc827c9c",
+        "reportUrl" : "https://travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/172327372/#testresult/fcc55c65bc827c9c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592668649050,
+          "stop" : 1592668654955,
+          "duration" : 5905
+        }
+      }, {
+        "uid" : "6035f5fbe6f17fa9",
+        "reportUrl" : "https://travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/172234351/#testresult/6035f5fbe6f17fa9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592582224227,
+          "stop" : 1592582231004,
+          "duration" : 6777
+        }
+      }, {
+        "uid" : "92919925268da29d",
+        "reportUrl" : "https://travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/172068674/#testresult/92919925268da29d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592495827119,
+          "stop" : 1592495834053,
+          "duration" : 6934
+        }
+      }, {
+        "uid" : "b8176c66761b7f5",
+        "reportUrl" : "https://travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/171875054/#testresult/b8176c66761b7f5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592409334396,
+          "stop" : 1592409341052,
+          "duration" : 6656
+        }
+      }, {
+        "uid" : "99209df1677bbd7a",
+        "reportUrl" : "https://travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/171651962/#testresult/99209df1677bbd7a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592322916411,
+          "stop" : 1592322921960,
+          "duration" : 5549
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "aeac139f70fda648.json",
+  "parameterValues" : [ ]
+}

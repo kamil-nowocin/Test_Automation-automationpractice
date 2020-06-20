@@ -1,0 +1,466 @@
+{
+  "uid" : "44c1845adafc6816",
+  "name" : "[US-666]/[2] I would like to buy new \"Blouse\"",
+  "fullName" : "tests.WebAPP.ShoppingLoggedUser_Tests.test_2",
+  "historyId" : "f3bf5e62609bc46efb22470c7da68b9",
+  "time" : {
+    "start" : 1592687650817,
+    "stop" : 1592687669566,
+    "duration" : 18749
+  },
+  "description" : "[US-666]/[2] As a user I would like to buy new \"Blouse\"",
+  "descriptionHtml" : "<p>[US-666]/[2] As a user I would like to buy new &quot;Blouse&quot;</p>\n",
+  "status" : "broken",
+  "statusMessage" : "Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on LINUX (b898e5592cdee3fd96cda83f6c81cef3)] -> xpath: //div[@id='uniform-group_1']//select] (tried for 5 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-9fbfe21e-f35f-442b-8fde-917cbb8d98e8', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.0.0-1031-gcp', java.version: '14.0.1'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /tmp/.com.google.Chrome.O9MB4o}, goog:chromeOptions: {debuggerAddress: localhost:44143}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: b898e5592cdee3fd96cda83f6c81cef3",
+  "statusTrace" : "org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on LINUX (b898e5592cdee3fd96cda83f6c81cef3)] -> xpath: //div[@id='uniform-group_1']//select] (tried for 5 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-9fbfe21e-f35f-442b-8fde-917cbb8d98e8', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.0.0-1031-gcp', java.version: '14.0.1'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /tmp/.com.google.Chrome.O9MB4o}, goog:chromeOptions: {debuggerAddress: localhost:44143}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: b898e5592cdee3fd96cda83f6c81cef3\n\tat org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)\n\tat com.buildSettings.TestCommons.waitForElementToBeClickable(TestCommons.java:35)\n\tat com.buildSettings.TestCommons.selectFromDropdownByText(TestCommons.java:78)\n\tat com.steps.ShoppingLoggedUserSteps.iChooseFollowingDetailsOfMyOrder(ShoppingLoggedUserSteps.java:94)\n\tat tests.WebAPP.ShoppingLoggedUser_Tests.test_2(ShoppingLoggedUser_Tests.java:125)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:564)\n\tat org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)\n\tat org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)\n\tat org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)\n\tat org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)\n\tat org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)\n\tat org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)\n\tat org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)\n\tat org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)\n\tat java.base/java.lang.Thread.run(Thread.java:832)\n",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "Setting up Excel File",
+    "time" : {
+      "start" : 1592687592306,
+      "stop" : 1592687592352,
+      "duration" : 46
+    },
+    "description" : "Setting up Excel File",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "Setting up Test Class",
+    "time" : {
+      "start" : 1592687649212,
+      "stop" : 1592687650803,
+      "duration" : 1591
+    },
+    "description" : "Setting up Test Class",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "[US-666]/[2] As a user I would like to buy new \"Blouse\"",
+    "status" : "broken",
+    "statusMessage" : "Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on LINUX (b898e5592cdee3fd96cda83f6c81cef3)] -> xpath: //div[@id='uniform-group_1']//select] (tried for 5 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-9fbfe21e-f35f-442b-8fde-917cbb8d98e8', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.0.0-1031-gcp', java.version: '14.0.1'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /tmp/.com.google.Chrome.O9MB4o}, goog:chromeOptions: {debuggerAddress: localhost:44143}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: b898e5592cdee3fd96cda83f6c81cef3",
+    "statusTrace" : "org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on LINUX (b898e5592cdee3fd96cda83f6c81cef3)] -> xpath: //div[@id='uniform-group_1']//select] (tried for 5 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-9fbfe21e-f35f-442b-8fde-917cbb8d98e8', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.0.0-1031-gcp', java.version: '14.0.1'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /tmp/.com.google.Chrome.O9MB4o}, goog:chromeOptions: {debuggerAddress: localhost:44143}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: b898e5592cdee3fd96cda83f6c81cef3\n\tat org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)\n\tat com.buildSettings.TestCommons.waitForElementToBeClickable(TestCommons.java:35)\n\tat com.buildSettings.TestCommons.selectFromDropdownByText(TestCommons.java:78)\n\tat com.steps.ShoppingLoggedUserSteps.iChooseFollowingDetailsOfMyOrder(ShoppingLoggedUserSteps.java:94)\n\tat tests.WebAPP.ShoppingLoggedUser_Tests.test_2(ShoppingLoggedUser_Tests.java:125)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:564)\n\tat org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)\n\tat org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)\n\tat org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)\n\tat org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)\n\tat org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)\n\tat org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)\n\tat org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)\n\tat org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)\n\tat java.base/java.lang.Thread.run(Thread.java:832)\n",
+    "steps" : [ {
+      "name" : "I open home page",
+      "time" : {
+        "start" : 1592687650822,
+        "stop" : 1592687653904,
+        "duration" : 3082
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I can see automationpractice.com website",
+      "time" : {
+        "start" : 1592687653905,
+        "stop" : 1592687654005,
+        "duration" : 100
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I am logged as customer *thor.odinson@example.com* using *12345* password",
+      "time" : {
+        "start" : 1592687654006,
+        "stop" : 1592687659366,
+        "duration" : 5360
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "I click on Sign in button",
+        "time" : {
+          "start" : 1592687654006,
+          "stop" : 1592687656461,
+          "duration" : 2455
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "I enter login *thor.odinson@example.com*",
+        "time" : {
+          "start" : 1592687656461,
+          "stop" : 1592687657576,
+          "duration" : 1115
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "login",
+          "value" : "thor.odinson@example.com"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "I enter password *12345*",
+        "time" : {
+          "start" : 1592687657577,
+          "stop" : 1592687658002,
+          "duration" : 425
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "password",
+          "value" : "12345"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "I click on Submit button",
+        "time" : {
+          "start" : 1592687658003,
+          "stop" : 1592687659284,
+          "duration" : 1281
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "email",
+        "value" : "thor.odinson@example.com"
+      }, {
+        "name" : "password",
+        "value" : "12345"
+      } ],
+      "stepsCount" : 4,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "I can see welcome message",
+      "time" : {
+        "start" : 1592687659366,
+        "stop" : 1592687659513,
+        "duration" : 147
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I am on MyAccount details page",
+      "time" : {
+        "start" : 1592687659513,
+        "stop" : 1592687659637,
+        "duration" : 124
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "I can see welcome message",
+        "time" : {
+          "start" : 1592687659513,
+          "stop" : 1592687659637,
+          "duration" : 124
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 1,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "I click on *Women* button from sub menu",
+      "time" : {
+        "start" : 1592687659637,
+        "stop" : 1592687661345,
+        "duration" : 1708
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "subMenuCategory",
+        "value" : "Women"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "I click on following product *Blouse*",
+      "time" : {
+        "start" : 1592687661345,
+        "stop" : 1592687662648,
+        "duration" : 1303
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "productName",
+        "value" : "Blouse"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "I choose following details of my order",
+      "time" : {
+        "start" : 1592687662648,
+        "stop" : 1592687668258,
+        "duration" : 5610
+      },
+      "status" : "broken",
+      "statusMessage" : "Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on LINUX (b898e5592cdee3fd96cda83f6c81cef3)] -> xpath: //div[@id='uniform-group_1']//select] (tried for 5 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-9fbfe21e-f35f-442b-8fde-917cbb8d98e8', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.0.0-1031-gcp', java.version: '14.0.1'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /tmp/.com.google.Chrome.O9MB4o}, goog:chromeOptions: {debuggerAddress: localhost:44143}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: b898e5592cdee3fd96cda83f6c81cef3",
+      "statusTrace" : "org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on LINUX (b898e5592cdee3fd96cda83f6c81cef3)] -> xpath: //div[@id='uniform-group_1']//select] (tried for 5 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-9fbfe21e-f35f-442b-8fde-917cbb8d98e8', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.0.0-1031-gcp', java.version: '14.0.1'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /tmp/.com.google.Chrome.O9MB4o}, goog:chromeOptions: {debuggerAddress: localhost:44143}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: b898e5592cdee3fd96cda83f6c81cef3\n\tat org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)\n\tat com.buildSettings.TestCommons.waitForElementToBeClickable(TestCommons.java:35)\n\tat com.buildSettings.TestCommons.selectFromDropdownByText(TestCommons.java:78)\n\tat com.steps.ShoppingLoggedUserSteps.iChooseFollowingDetailsOfMyOrder(ShoppingLoggedUserSteps.java:94)\n\tat tests.WebAPP.ShoppingLoggedUser_Tests.test_2(ShoppingLoggedUser_Tests.java:125)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:564)\n\tat org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)\n\tat org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)\n\tat org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)\n\tat org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)\n\tat org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)\n\tat org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)\n\tat org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)\n\tat org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)\n\tat java.base/java.lang.Thread.run(Thread.java:832)\n",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "dataTable",
+        "value" : "      | Quantity | Size | Colour |\n      | 2        | S    | Black  |\n"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "620330708c3156ad",
+      "name" : "Scenario FAIL screenshot",
+      "source" : "620330708c3156ad.png",
+      "type" : "image/png",
+      "size" : 151218
+    }, {
+      "uid" : "c6e0b7d238a8164d",
+      "name" : "TestNG test FAIL logs",
+      "source" : "c6e0b7d238a8164d.txt",
+      "type" : "text/plain",
+      "size" : 4379
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 13,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "Teardown Test Class",
+    "time" : {
+      "start" : 1592687669593,
+      "stop" : 1592687669718,
+      "duration" : 125
+    },
+    "description" : "Teardown Test Class",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "Teardown Test Suite",
+    "time" : {
+      "start" : 1592688015203,
+      "stop" : 1592688016459,
+      "duration" : 1256
+    },
+    "description" : "Teardown Test Suite",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "tests.WebAPP.ShoppingLoggedUser_Tests"
+  }, {
+    "name" : "testClass",
+    "value" : "tests.WebAPP.ShoppingLoggedUser_Tests"
+  }, {
+    "name" : "testMethod",
+    "value" : "test_2"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Automationpractice.com WEB - Kamil Nowocin"
+  }, {
+    "name" : "suite",
+    "value" : "Automated tests for WEB client"
+  }, {
+    "name" : "subSuite",
+    "value" : "tests.WebAPP.ShoppingLoggedUser_Tests"
+  }, {
+    "name" : "host",
+    "value" : "travis-job-9fbfe21e-f35f-442b-8fde-917cbb8d98e8"
+  }, {
+    "name" : "thread",
+    "value" : "6385@travis-job-9fbfe21e-f35f-442b-8fde-917cbb8d98e8.TestNG-test=Automated tests for WEB client-4(40)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "story",
+    "value" : "POSITIVE FLOW"
+  }, {
+    "name" : "owner",
+    "value" : "Kamil Nowocin"
+  }, {
+    "name" : "epic",
+    "value" : "Web App Tests"
+  }, {
+    "name" : "feature",
+    "value" : "SHOPPING TESTS"
+  }, {
+    "name" : "severity",
+    "value" : "critical"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ {
+    "name" : "TAP-0040",
+    "url" : "https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE/issue/TAP-0040",
+    "type" : "issue"
+  }, {
+    "name" : "STORY-666",
+    "url" : "https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE/STORY-666",
+    "type" : "tms"
+  } ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "critical",
+    "owner" : "Kamil Nowocin",
+    "retries" : [ {
+      "uid" : "65aa9a080683cdad",
+      "status" : "skipped",
+      "statusDetails" : "Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on LINUX (92be67eaa79fa6852474aaf14c8c883f)] -> xpath: //div[@id='uniform-group_1']//select] (tried for 5 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-9fbfe21e-f35f-442b-8fde-917cbb8d98e8', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.0.0-1031-gcp', java.version: '14.0.1'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /tmp/.com.google.Chrome.8Kcz2D}, goog:chromeOptions: {debuggerAddress: localhost:46717}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 92be67eaa79fa6852474aaf14c8c883f",
+      "time" : {
+        "start" : 1592687631659,
+        "stop" : 1592687649089,
+        "duration" : 17430
+      }
+    } ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 4,
+        "skipped" : 15,
+        "passed" : 127,
+        "unknown" : 0,
+        "total" : 146
+      },
+      "items" : [ {
+        "uid" : "7e6d84f8130986bb",
+        "reportUrl" : "https://travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/172327372/#testresult/7e6d84f8130986bb",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592668623677,
+          "stop" : 1592668643450,
+          "duration" : 19773
+        }
+      }, {
+        "uid" : "d9bd2f26d8f1d79b",
+        "reportUrl" : "https://travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/172234351/#testresult/d9bd2f26d8f1d79b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592582197095,
+          "stop" : 1592582216670,
+          "duration" : 19575
+        }
+      }, {
+        "uid" : "1d72873e037718b7",
+        "reportUrl" : "https://travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/172068674/#testresult/1d72873e037718b7",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592495786110,
+          "stop" : 1592495812819,
+          "duration" : 26709
+        }
+      }, {
+        "uid" : "5c86793732dca4e6",
+        "reportUrl" : "https://travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/171875054/#testresult/5c86793732dca4e6",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592409307266,
+          "stop" : 1592409325108,
+          "duration" : 17842
+        }
+      }, {
+        "uid" : "a0ef8084eac6ef05",
+        "reportUrl" : "https://travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/171651962/#testresult/a0ef8084eac6ef05",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592322893834,
+          "stop" : 1592322909867,
+          "duration" : 16033
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "44c1845adafc6816.json",
+  "parameterValues" : [ ]
+}

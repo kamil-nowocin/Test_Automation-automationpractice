@@ -1,0 +1,39 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+21:14:23 INFO  i.g.bonigarcia.wdm.WebDriverManager - Please answer the following questionnaire based on your experience with WebDriverManager. Thanks a lot!
+21:14:23 INFO  i.g.bonigarcia.wdm.WebDriverManager - ====> http://tiny.cc/wdm-survey <====
+21:14:23 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=83 in cache (valid until 21:13:02 21/06/2020 UTC)
+21:14:23 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 83.0.4103.39 (since Chrome 83 is installed in your machine)
+21:14:23 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 83.0.4103.39 found in cache
+21:14:23 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.m2/repository/webdriver/chromedriver/linux64/83.0.4103.39/chromedriver
+21:14:24 INFO  com.steps.Hooks - ================================================ TEST STARTED ================================================
+21:14:24 INFO  com.steps.Hooks - [34mTEST NAME: [US-444]/[11] I WOULD LIKE TO SEE REGISTRATION ERROR, WHEN I DON'T FILL EMAIL ALIAS INPUT[0m
+21:14:24 INFO  com.steps.Hooks - Chosen executor: "CHROME"
+21:14:27 INFO  com.steps.Hooks - Page ready: "TRUE"
+21:14:30 INFO  com.steps.Hooks - User valid email: "90213TONYEAN@LIVE.COM"
+21:14:32 INFO  com.steps.Hooks - User gender: "Female"
+21:14:32 INFO  com.steps.Hooks - User first name: "GLADY"
+21:14:32 INFO  com.steps.Hooks - User last name: "GUIRAND"
+21:14:33 INFO  com.steps.Hooks - User password: "HY;GROSTAT"
+21:14:38 INFO  com.steps.Hooks - [31mTEST RETRY (1/1): [US-444]/[11] I WOULD LIKE TO SEE REGISTRATION ERROR, WHEN I DON'T FILL EMAIL ALIAS INPUT[0m
+21:14:38 INFO  i.g.bonigarcia.wdm.WebDriverManager - Please answer the following questionnaire based on your experience with WebDriverManager. Thanks a lot!
+21:14:38 INFO  i.g.bonigarcia.wdm.WebDriverManager - ====> http://tiny.cc/wdm-survey <====
+21:14:38 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=83 in cache (valid until 21:13:02 21/06/2020 UTC)
+21:14:38 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 83.0.4103.39 (since Chrome 83 is installed in your machine)
+21:14:38 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 83.0.4103.39 found in cache
+21:14:38 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.m2/repository/webdriver/chromedriver/linux64/83.0.4103.39/chromedriver
+21:14:39 INFO  com.steps.Hooks - ================================================ TEST STARTED ================================================
+21:14:39 INFO  com.steps.Hooks - [34mTEST NAME: [US-444]/[11] I WOULD LIKE TO SEE REGISTRATION ERROR, WHEN I DON'T FILL EMAIL ALIAS INPUT[0m
+21:14:39 INFO  com.steps.Hooks - Chosen executor: "CHROME"
+21:14:42 INFO  com.steps.Hooks - Page ready: "TRUE"
+21:14:43 INFO  com.steps.Hooks - User valid email: "3D600INTERSHAWN@ATT.NET"
+21:14:46 INFO  com.steps.Hooks - User gender: "Male"
+21:14:46 INFO  com.steps.Hooks - User first name: "ADOLPH"
+21:14:47 INFO  com.steps.Hooks - User last name: "SAMBOR"
+21:14:47 INFO  com.steps.Hooks - User password: "KAF~FIYEH"
+21:14:52 INFO  com.steps.Hooks - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+21:14:52 ERROR com.steps.Hooks - org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on LINUX (d3d6fc8f6c8cec091292e0359202029b)] -> xpath: //select[@id='days']] (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'travis-job-9fbfe21e-f35f-442b-8fde-917cbb8d98e8', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.0.0-1031-gcp', java.version: '14.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /tmp/.com.google.Chrome.7bBsXx}, goog:chromeOptions: {debuggerAddress: localhost:43725}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: d3d6fc8f6c8cec091292e0359202029b
