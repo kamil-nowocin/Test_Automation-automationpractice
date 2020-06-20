@@ -1,0 +1,39 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+21:28:16 INFO  i.g.bonigarcia.wdm.WebDriverManager - Please answer the following questionnaire based on your experience with WebDriverManager. Thanks a lot!
+21:28:16 INFO  i.g.bonigarcia.wdm.WebDriverManager - ====> http://tiny.cc/wdm-survey <====
+21:28:16 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=83 in cache (valid until 21:25:04 21/06/2020 UTC)
+21:28:16 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 83.0.4103.39 (since Chrome 83 is installed in your machine)
+21:28:16 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 83.0.4103.39 found in cache
+21:28:16 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.m2/repository/webdriver/chromedriver/linux64/83.0.4103.39/chromedriver
+21:28:17 INFO  com.steps.Hooks - ================================================ TEST STARTED ================================================
+21:28:17 INFO  com.steps.Hooks - [34mTEST NAME: [US-333]/[2] I CAN CREATE AN ACCOUNT BY FILLING UP ALL FIELDS[0m
+21:28:17 INFO  com.steps.Hooks - Chosen executor: "CHROME"
+21:28:19 INFO  com.steps.Hooks - Page ready: "TRUE"
+21:28:21 INFO  com.steps.Hooks - User valid email: "0D89EWORSEHYE@GMX.COM"
+21:28:23 INFO  com.steps.Hooks - User gender: "Female"
+21:28:24 INFO  com.steps.Hooks - User first name: "JULIANE"
+21:28:24 INFO  com.steps.Hooks - User last name: "BOSHARD"
+21:28:24 INFO  com.steps.Hooks - User password: "BEHEAD^ALS"
+21:28:40 INFO  com.steps.Hooks - [31mTEST RETRY (1/1): [US-333]/[2] I CAN CREATE AN ACCOUNT BY FILLING UP ALL FIELDS[0m
+21:28:40 INFO  i.g.bonigarcia.wdm.WebDriverManager - Please answer the following questionnaire based on your experience with WebDriverManager. Thanks a lot!
+21:28:40 INFO  i.g.bonigarcia.wdm.WebDriverManager - ====> http://tiny.cc/wdm-survey <====
+21:28:40 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=83 in cache (valid until 21:25:04 21/06/2020 UTC)
+21:28:40 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 83.0.4103.39 (since Chrome 83 is installed in your machine)
+21:28:40 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 83.0.4103.39 found in cache
+21:28:40 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.m2/repository/webdriver/chromedriver/linux64/83.0.4103.39/chromedriver
+21:28:42 INFO  com.steps.Hooks - ================================================ TEST STARTED ================================================
+21:28:42 INFO  com.steps.Hooks - [34mTEST NAME: [US-333]/[2] I CAN CREATE AN ACCOUNT BY FILLING UP ALL FIELDS[0m
+21:28:42 INFO  com.steps.Hooks - Chosen executor: "CHROME"
+21:28:43 INFO  com.steps.Hooks - Page ready: "TRUE"
+21:28:45 INFO  com.steps.Hooks - User valid email: "1F9E6WIDEMISKNOWN@VERIZON.NET"
+21:28:47 INFO  com.steps.Hooks - User gender: "Female"
+21:28:48 INFO  com.steps.Hooks - User first name: "TRAVIS"
+21:28:48 INFO  com.steps.Hooks - User last name: "CROOM"
+21:28:49 INFO  com.steps.Hooks - User password: "PURLOI`NER"
+21:29:04 INFO  com.steps.Hooks - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+21:29:04 ERROR com.steps.Hooks - org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on LINUX (24e1ff13c6642680ffa30b0711b3ccbc)] -> xpath: //select[@id='days']] (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'travis-job-4c1e0e6a-9003-45ed-962a-c7395d5d90e7', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.0.0-1031-gcp', java.version: '14.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /tmp/.com.google.Chrome.NEgG3E}, goog:chromeOptions: {debuggerAddress: localhost:41941}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 24e1ff13c6642680ffa30b0711b3ccbc
