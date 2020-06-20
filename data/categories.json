@@ -6,482 +6,176 @@
       "name" : "null",
       "children" : [ {
         "name" : "As a developer I'd like to see working POC with .xlsx file",
-        "uid" : "e3df71d3c50d0eb6",
+        "uid" : "13dc172205305342",
         "parentUid" : "666d1a31450af3ae8459f14f07f9a1b4",
         "status" : "failed",
         "time" : {
-          "start" : 1592689138668,
-          "stop" : 1592689139156,
-          "duration" : 488
+          "start" : 1592689943444,
+          "stop" : 1592689944033,
+          "duration" : 589
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ "Test 1", "Test 2", "Test 3" ]
       } ],
       "uid" : "666d1a31450af3ae8459f14f07f9a1b4"
+    }, {
+      "name" : "Results which have been found didn't match expected sorting result PRICE: HIGHEST FIRST: Lists differ at element [1]: $30.50 != $28.98 expected [$30.50] but found [$28.98]",
+      "children" : [ {
+        "name" : "[US-555]/[7] I would like to use search box and be able to see results sorted by: \"Price: Highest first\"",
+        "uid" : "132e8a09791b5cca",
+        "parentUid" : "3246160de76fc0de742a06aad5432502",
+        "status" : "failed",
+        "time" : {
+          "start" : 1592690017307,
+          "stop" : 1592690079208,
+          "duration" : 61901
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "3246160de76fc0de742a06aad5432502"
+    }, {
+      "name" : "Results which have been found didn't match expected sorting result PRICE: LOWEST FIRST: Lists differ at element [2]: $28.98 != $30.50 expected [$28.98] but found [$30.50]",
+      "children" : [ {
+        "name" : "[US-555]/[8] I would like to use search box and be able to see results sorted by: \"Price: Lowest first\"",
+        "uid" : "5261001f51915a0",
+        "parentUid" : "06135fb1e9171a4c5ee185041330339b",
+        "status" : "failed",
+        "time" : {
+          "start" : 1592690153931,
+          "stop" : 1592690174164,
+          "duration" : 20233
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "06135fb1e9171a4c5ee185041330339b"
     } ],
     "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
   }, {
     "name" : "Test defects",
     "children" : [ {
-      "name" : "Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on LINUX (029fbb3978e46c150255287f01c31ab5)] -> xpath: //select[@id='days']] (tried for 20 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-6c882010-1e1d-4a5a-8d3b-68beababbba6', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.0.0-1031-gcp', java.version: '14.0.1'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /tmp/.com.google.Chrome.To83NH}, goog:chromeOptions: {debuggerAddress: localhost:37651}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 029fbb3978e46c150255287f01c31ab5",
-      "children" : [ {
-        "name" : "[US-444]/[1] I would like to see registration error, when I don't fill first name input",
-        "uid" : "495079685f0c69bd",
-        "parentUid" : "7332bd26d6e687324090866d1ea13fec",
-        "status" : "broken",
-        "time" : {
-          "start" : 1592689178387,
-          "stop" : 1592689204390,
-          "duration" : 26003
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "7332bd26d6e687324090866d1ea13fec"
-    }, {
-      "name" : "Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on LINUX (e755a3638752a6f1e24ca830297be6de)] -> xpath: //div[@id='uniform-group_1']//select] (tried for 20 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-6c882010-1e1d-4a5a-8d3b-68beababbba6', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.0.0-1031-gcp', java.version: '14.0.1'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /tmp/.com.google.Chrome.pxvNV3}, goog:chromeOptions: {debuggerAddress: localhost:38047}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: e755a3638752a6f1e24ca830297be6de",
-      "children" : [ {
-        "name" : "[US-666]/[1] I would like to buy new \"Faded Short Sleeve T-shirts\"",
-        "uid" : "b091d7571b8f4db1",
-        "parentUid" : "fea44ba4e634d39df75e2579ac2e2864",
-        "status" : "broken",
-        "time" : {
-          "start" : 1592689187408,
-          "stop" : 1592689215817,
-          "duration" : 28409
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "fea44ba4e634d39df75e2579ac2e2864"
-    }, {
-      "name" : "Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on LINUX (9ffdc2463a1baee2de5568ee28e48fb6)] -> xpath: //select[@id='selectProductSort']] (tried for 20 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-6c882010-1e1d-4a5a-8d3b-68beababbba6', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.0.0-1031-gcp', java.version: '14.0.1'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /tmp/.com.google.Chrome.Au1ANt}, goog:chromeOptions: {debuggerAddress: localhost:39803}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 9ffdc2463a1baee2de5568ee28e48fb6",
-      "children" : [ {
-        "name" : "[US-555]/[5] I would like to use search box and be able to see results sorted by: \"Product Name: Z to A\"",
-        "uid" : "5d9a74f5ed0f870a",
-        "parentUid" : "4babc30c167a65f68e41fe2d05bcd22b",
-        "status" : "broken",
-        "time" : {
-          "start" : 1592689193675,
-          "stop" : 1592689217770,
-          "duration" : 24095
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "4babc30c167a65f68e41fe2d05bcd22b"
-    }, {
-      "name" : "Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on LINUX (511e33a31927074d375a56fd947b41ec)] -> xpath: //select[@id='days']] (tried for 20 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-6c882010-1e1d-4a5a-8d3b-68beababbba6', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.0.0-1031-gcp', java.version: '14.0.1'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /tmp/.com.google.Chrome.sk6v6e}, goog:chromeOptions: {debuggerAddress: localhost:43083}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 511e33a31927074d375a56fd947b41ec",
-      "children" : [ {
-        "name" : "[US-444]/[10] I would like to see registration error, when I don't fill mobile phone input",
-        "uid" : "fb876ad5172ab66a",
-        "parentUid" : "4c4a4361e6e31ae68bbd6bf8a8af8c81",
-        "status" : "broken",
-        "time" : {
-          "start" : 1592689231324,
-          "stop" : 1592689256413,
-          "duration" : 25089
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "4c4a4361e6e31ae68bbd6bf8a8af8c81"
-    }, {
-      "name" : "Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on LINUX (3620d23619f863e6ab21f9868573cb13)] -> xpath: //select[@id='selectProductSort']] (tried for 20 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-6c882010-1e1d-4a5a-8d3b-68beababbba6', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.0.0-1031-gcp', java.version: '14.0.1'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /tmp/.com.google.Chrome.I5jL6j}, goog:chromeOptions: {debuggerAddress: localhost:35821}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 3620d23619f863e6ab21f9868573cb13",
-      "children" : [ {
-        "name" : "[US-555]/[6] I would like to use search box and be able to see results sorted by: \"Product Name: A to Z\"",
-        "uid" : "3d2d798275fda1e3",
-        "parentUid" : "1e13e50a8b2abd31f7e17d66b04d4541",
-        "status" : "broken",
-        "time" : {
-          "start" : 1592689244877,
-          "stop" : 1592689269590,
-          "duration" : 24713
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "1e13e50a8b2abd31f7e17d66b04d4541"
-    }, {
-      "name" : "Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on LINUX (2dfa891b7352a7502085e69a74840d88)] -> xpath: //div[@id='uniform-group_1']//select] (tried for 20 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-6c882010-1e1d-4a5a-8d3b-68beababbba6', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.0.0-1031-gcp', java.version: '14.0.1'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /tmp/.com.google.Chrome.2EDAql}, goog:chromeOptions: {debuggerAddress: localhost:42017}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 2dfa891b7352a7502085e69a74840d88",
-      "children" : [ {
-        "name" : "[US-666]/[2] I would like to buy new \"Blouse\"",
-        "uid" : "878bc1ce1df4e846",
-        "parentUid" : "db01a910dc46fef489729ec840830da1",
-        "status" : "broken",
-        "time" : {
-          "start" : 1592689247135,
-          "stop" : 1592689274362,
-          "duration" : 27227
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "db01a910dc46fef489729ec840830da1"
-    }, {
-      "name" : "Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on LINUX (b5287f6259eb8da07744f3f756568030)] -> xpath: //select[@id='days']] (tried for 20 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-6c882010-1e1d-4a5a-8d3b-68beababbba6', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.0.0-1031-gcp', java.version: '14.0.1'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /tmp/.com.google.Chrome.jDYX8l}, goog:chromeOptions: {debuggerAddress: localhost:33165}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: b5287f6259eb8da07744f3f756568030",
-      "children" : [ {
-        "name" : "[US-444]/[11] I would like to see registration error, when I don't fill email alias input",
-        "uid" : "1123728102f31eaa",
-        "parentUid" : "7a9cee8723985eefb98d3dfb59f4bb4a",
-        "status" : "broken",
-        "time" : {
-          "start" : 1592689283506,
-          "stop" : 1592689312802,
-          "duration" : 29296
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "7a9cee8723985eefb98d3dfb59f4bb4a"
-    }, {
-      "name" : "Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on LINUX (525ef589ecb547b0833d4f414c760937)] -> xpath: //select[@id='selectProductSort']] (tried for 20 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-6c882010-1e1d-4a5a-8d3b-68beababbba6', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.0.0-1031-gcp', java.version: '14.0.1'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /tmp/.com.google.Chrome.fVqxix}, goog:chromeOptions: {debuggerAddress: localhost:43801}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 525ef589ecb547b0833d4f414c760937",
-      "children" : [ {
-        "name" : "[US-555]/[7] I would like to use search box and be able to see results sorted by: \"Price: Highest first\"",
-        "uid" : "a56c4918eb9e07fd",
-        "parentUid" : "bcd73d5c5bff3c6af97296626dc9dfcd",
-        "status" : "broken",
-        "time" : {
-          "start" : 1592689294649,
-          "stop" : 1592689319900,
-          "duration" : 25251
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "bcd73d5c5bff3c6af97296626dc9dfcd"
-    }, {
-      "name" : "Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on LINUX (9d9e706a0c30ee2d0cbb1706515dc403)] -> xpath: //div[@class='col-xs-12 col-md-3']//select[@id='id_contact']] (tried for 20 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-6c882010-1e1d-4a5a-8d3b-68beababbba6', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.0.0-1031-gcp', java.version: '14.0.1'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /tmp/.com.google.Chrome.Lf6aZe}, goog:chromeOptions: {debuggerAddress: localhost:42091}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 9d9e706a0c30ee2d0cbb1706515dc403",
-      "children" : [ {
-        "name" : "[US-222]/[1] I am able to send request via contact us form, all inputs are filled up",
-        "uid" : "7da1d59e410766af",
-        "parentUid" : "dbacb45eec80fcaef6eec6bed90b4679",
-        "status" : "broken",
-        "time" : {
-          "start" : 1592689323461,
-          "stop" : 1592689347181,
-          "duration" : 23720
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "dbacb45eec80fcaef6eec6bed90b4679"
-    }, {
-      "name" : "Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on LINUX (a5b95ae983c2c768b35721aecf17fb6d)] -> xpath: //select[@id='days']] (tried for 20 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-6c882010-1e1d-4a5a-8d3b-68beababbba6', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.0.0-1031-gcp', java.version: '14.0.1'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /tmp/.com.google.Chrome.RFkaLH}, goog:chromeOptions: {debuggerAddress: localhost:36777}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: a5b95ae983c2c768b35721aecf17fb6d",
-      "children" : [ {
-        "name" : "[US-444]/[2] I would like to see registration error, when I don't fill last name input",
-        "uid" : "eb5457c075c1cc79",
-        "parentUid" : "1728f6d88d3980472590a842080a0555",
-        "status" : "broken",
-        "time" : {
-          "start" : 1592689339521,
-          "stop" : 1592689365451,
-          "duration" : 25930
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "1728f6d88d3980472590a842080a0555"
-    }, {
-      "name" : "Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on LINUX (266cc5cba4b080ed8ce2fe51814e5873)] -> xpath: //select[@id='selectProductSort']] (tried for 20 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-6c882010-1e1d-4a5a-8d3b-68beababbba6', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.0.0-1031-gcp', java.version: '14.0.1'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /tmp/.com.google.Chrome.mMu88N}, goog:chromeOptions: {debuggerAddress: localhost:41775}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 266cc5cba4b080ed8ce2fe51814e5873",
-      "children" : [ {
-        "name" : "[US-555]/[8] I would like to use search box and be able to see results sorted by: \"Price: Lowest first\"",
-        "uid" : "f633ba01984b07c7",
-        "parentUid" : "120f4bbec9fa51e6d6fb758f028d7272",
-        "status" : "broken",
-        "time" : {
-          "start" : 1592689345639,
-          "stop" : 1592689370540,
-          "duration" : 24901
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "120f4bbec9fa51e6d6fb758f028d7272"
-    }, {
-      "name" : "Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on LINUX (63b43f39fb7853418ac8beb99153564a)] -> xpath: //div[@class='col-xs-12 col-md-3']//select[@id='id_contact']] (tried for 20 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-6c882010-1e1d-4a5a-8d3b-68beababbba6', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.0.0-1031-gcp', java.version: '14.0.1'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /tmp/.com.google.Chrome.qtR7jr}, goog:chromeOptions: {debuggerAddress: localhost:40533}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 63b43f39fb7853418ac8beb99153564a",
-      "children" : [ {
-        "name" : "[US-222]/[2] I am able to send request via contact us form, all required inputs are filled up",
-        "uid" : "99315f909d79e750",
-        "parentUid" : "365d7375d1273d248ffeef5502934db0",
-        "status" : "broken",
-        "time" : {
-          "start" : 1592689373171,
-          "stop" : 1592689396638,
-          "duration" : 23467
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "365d7375d1273d248ffeef5502934db0"
-    }, {
-      "name" : "Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on LINUX (46c5d05a06484b07f0a69c95cb3d282b)] -> xpath: //select[@id='days']] (tried for 20 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-6c882010-1e1d-4a5a-8d3b-68beababbba6', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.0.0-1031-gcp', java.version: '14.0.1'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /tmp/.com.google.Chrome.YVH5rX}, goog:chromeOptions: {debuggerAddress: localhost:35205}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 46c5d05a06484b07f0a69c95cb3d282b",
-      "children" : [ {
-        "name" : "[US-444]/[3] I would like to see registration error, when I don't fill email input",
-        "uid" : "cc13e32fc865c764",
-        "parentUid" : "fb1303224b7a2b445f91991309055563",
-        "status" : "broken",
-        "time" : {
-          "start" : 1592689394369,
-          "stop" : 1592689423795,
-          "duration" : 29426
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "fb1303224b7a2b445f91991309055563"
-    }, {
-      "name" : "Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on LINUX (1bec76bfd1534b1c3ce2c89c9a6361de)] -> xpath: //div[@class='col-xs-12 col-md-3']//select[@id='id_contact']] (tried for 20 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-6c882010-1e1d-4a5a-8d3b-68beababbba6', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.0.0-1031-gcp', java.version: '14.0.1'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /tmp/.com.google.Chrome.J6XIye}, goog:chromeOptions: {debuggerAddress: localhost:44979}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 1bec76bfd1534b1c3ce2c89c9a6361de",
+      "name" : "Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on LINUX (311f233daff27cf601708bb989c104ae)] -> xpath: //div[@class='col-xs-12 col-md-3']//input[@type='file']] (tried for 20 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-530f07da-0f56-4f3d-88d0-8b287f876fad', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.0.0-1031-gcp', java.version: '14.0.1'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /tmp/.com.google.Chrome.0xHBFR}, goog:chromeOptions: {debuggerAddress: localhost:42907}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 311f233daff27cf601708bb989c104ae",
       "children" : [ {
         "name" : "[US-222]/[3] I am able to send request via contact us form witch attached file",
-        "uid" : "b564ba9971daade0",
-        "parentUid" : "90e826e35ceecb35673b4477e0438d80",
+        "uid" : "dc09e97aeb338457",
+        "parentUid" : "c36826f352821885be2b44c6ff4a7da2",
         "status" : "broken",
         "time" : {
-          "start" : 1592689422935,
-          "stop" : 1592689446547,
-          "duration" : 23612
+          "start" : 1592690204946,
+          "stop" : 1592690231294,
+          "duration" : 26348
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "90e826e35ceecb35673b4477e0438d80"
+      "uid" : "c36826f352821885be2b44c6ff4a7da2"
     }, {
-      "name" : "Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on LINUX (e4d8a390ee9b59ac2c31001d7a2703a3)] -> xpath: //select[@id='days']] (tried for 20 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-6c882010-1e1d-4a5a-8d3b-68beababbba6', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.0.0-1031-gcp', java.version: '14.0.1'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /tmp/.com.google.Chrome.JpuQwy}, goog:chromeOptions: {debuggerAddress: localhost:33487}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: e4d8a390ee9b59ac2c31001d7a2703a3",
+      "name" : "Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on LINUX (cf5d339df451749fc6203b343480dd49)] -> xpath: //input[@id='newsletter']] (tried for 20 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-530f07da-0f56-4f3d-88d0-8b287f876fad', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.0.0-1031-gcp', java.version: '14.0.1'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /tmp/.com.google.Chrome.hjajLw}, goog:chromeOptions: {debuggerAddress: localhost:40975}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: cf5d339df451749fc6203b343480dd49",
       "children" : [ {
         "name" : "[US-333]/[2] I can create an account by filling up all fields",
-        "uid" : "87c793508aebba5e",
-        "parentUid" : "f4915393ea44ec64cd3d7894062b9267",
+        "uid" : "83bd15cba6a75a03",
+        "parentUid" : "0e3896ed57c089ffab91e24624a21e5c",
         "status" : "broken",
         "time" : {
-          "start" : 1592689430243,
-          "stop" : 1592689456733,
-          "duration" : 26490
+          "start" : 1592690206511,
+          "stop" : 1592690236317,
+          "duration" : 29806
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "f4915393ea44ec64cd3d7894062b9267"
+      "uid" : "0e3896ed57c089ffab91e24624a21e5c"
     }, {
-      "name" : "Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on LINUX (87733bc7ef38fc73be5dda92682d591e)] -> xpath: //select[@id='days']] (tried for 20 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-6c882010-1e1d-4a5a-8d3b-68beababbba6', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.0.0-1031-gcp', java.version: '14.0.1'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /tmp/.com.google.Chrome.5hbVl8}, goog:chromeOptions: {debuggerAddress: localhost:43883}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 87733bc7ef38fc73be5dda92682d591e",
-      "children" : [ {
-        "name" : "[US-444]/[4] I would like to see registration error, when I don't fill password input",
-        "uid" : "dc5fd6f517a42b06",
-        "parentUid" : "34101f43a3aa7dcd1692c5f7376f52ef",
-        "status" : "broken",
-        "time" : {
-          "start" : 1592689451399,
-          "stop" : 1592689477697,
-          "duration" : 26298
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "34101f43a3aa7dcd1692c5f7376f52ef"
-    }, {
-      "name" : "Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on LINUX (c05d8d80545c2fe577ad3e6e68cf45ae)] -> xpath: //div[@class='col-xs-12 col-md-3']//select[@id='id_contact']] (tried for 20 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-6c882010-1e1d-4a5a-8d3b-68beababbba6', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.0.0-1031-gcp', java.version: '14.0.1'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /tmp/.com.google.Chrome.fQoJCf}, goog:chromeOptions: {debuggerAddress: localhost:39213}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: c05d8d80545c2fe577ad3e6e68cf45ae",
+      "name" : "Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on LINUX (905e671dbb0095515ace2db7b90a36e9)] -> xpath: //div[@class='col-xs-12 col-md-3']//input[@type='file']] (tried for 20 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-530f07da-0f56-4f3d-88d0-8b287f876fad', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.0.0-1031-gcp', java.version: '14.0.1'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /tmp/.com.google.Chrome.fw1ulT}, goog:chromeOptions: {debuggerAddress: localhost:37787}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 905e671dbb0095515ace2db7b90a36e9",
       "children" : [ {
         "name" : "[US-222]/[4] I am not able to send request via contact us form, email input is invalid",
-        "uid" : "e6f769db29dbef37",
-        "parentUid" : "91a18e466d17395b9c1746ae08d35d93",
+        "uid" : "21808e72836a5cda",
+        "parentUid" : "4c60cb90239f75ec80ac4433456a1b22",
         "status" : "broken",
         "time" : {
-          "start" : 1592689471616,
-          "stop" : 1592689494716,
-          "duration" : 23100
+          "start" : 1592690258549,
+          "stop" : 1592690285834,
+          "duration" : 27285
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "91a18e466d17395b9c1746ae08d35d93"
+      "uid" : "4c60cb90239f75ec80ac4433456a1b22"
     }, {
-      "name" : "Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on LINUX (61ee52afcd2d1c25ea08771e7cddc582)] -> xpath: //select[@id='id_state']] (tried for 20 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-6c882010-1e1d-4a5a-8d3b-68beababbba6', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.0.0-1031-gcp', java.version: '14.0.1'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /tmp/.com.google.Chrome.TCX8po}, goog:chromeOptions: {debuggerAddress: localhost:45557}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 61ee52afcd2d1c25ea08771e7cddc582",
-      "children" : [ {
-        "name" : "[US-333]/[3] I can create an account by filling up only required fields",
-        "uid" : "ec91303efbcfd01d",
-        "parentUid" : "23437ddfc59466b9b2d5c866b3772af8",
-        "status" : "broken",
-        "time" : {
-          "start" : 1592689488047,
-          "stop" : 1592689514514,
-          "duration" : 26467
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "23437ddfc59466b9b2d5c866b3772af8"
-    }, {
-      "name" : "Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on LINUX (bc8e4e1ac78fba731307dbb71eed368a)] -> xpath: //select[@id='days']] (tried for 20 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-6c882010-1e1d-4a5a-8d3b-68beababbba6', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.0.0-1031-gcp', java.version: '14.0.1'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /tmp/.com.google.Chrome.7xInsW}, goog:chromeOptions: {debuggerAddress: localhost:33623}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: bc8e4e1ac78fba731307dbb71eed368a",
-      "children" : [ {
-        "name" : "[US-444]/[5] I would like to see registration error, when I don't fill address input",
-        "uid" : "2459368ecf3a16ce",
-        "parentUid" : "7d1c841247ccbc18f651ee42a6683862",
-        "status" : "broken",
-        "time" : {
-          "start" : 1592689504697,
-          "stop" : 1592689530787,
-          "duration" : 26090
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "7d1c841247ccbc18f651ee42a6683862"
-    }, {
-      "name" : "Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on LINUX (f8fcbf674211be22a36a89b9826660d6)] -> xpath: //div[@class='col-xs-12 col-md-3']//input[@type='file']] (tried for 20 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-6c882010-1e1d-4a5a-8d3b-68beababbba6', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.0.0-1031-gcp', java.version: '14.0.1'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /tmp/.com.google.Chrome.S2RLFL}, goog:chromeOptions: {debuggerAddress: localhost:41667}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: f8fcbf674211be22a36a89b9826660d6",
-      "children" : [ {
-        "name" : "[US-222]/[5] I am not able to send request via contact us form, subject is missing",
-        "uid" : "ec78c0ec8953f4b1",
-        "parentUid" : "3d22e63918cb7d4a1fccdaa7f60847d4",
-        "status" : "broken",
-        "time" : {
-          "start" : 1592689519874,
-          "stop" : 1592689546150,
-          "duration" : 26276
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "3d22e63918cb7d4a1fccdaa7f60847d4"
-    }, {
-      "name" : "Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on LINUX (399c39402268870cbfac12aebd55f00e)] -> xpath: //select[@id='id_state']] (tried for 20 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-6c882010-1e1d-4a5a-8d3b-68beababbba6', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.0.0-1031-gcp', java.version: '14.0.1'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /tmp/.com.google.Chrome.AdiKdA}, goog:chromeOptions: {debuggerAddress: localhost:34339}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 399c39402268870cbfac12aebd55f00e",
+      "name" : "Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on LINUX (5dc85af44b389279a73fc2ca256fd4d4)] -> xpath: //select[@id='id_state']] (tried for 20 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-530f07da-0f56-4f3d-88d0-8b287f876fad', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.0.0-1031-gcp', java.version: '14.0.1'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /tmp/.com.google.Chrome.y1Km6h}, goog:chromeOptions: {debuggerAddress: localhost:37653}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 5dc85af44b389279a73fc2ca256fd4d4",
       "children" : [ {
         "name" : "[US-333]/[5] I can't create an account, when one of required fields is missing",
-        "uid" : "efec160b063eec8e",
-        "parentUid" : "ce459d036bbad0b058b6f9def70825a3",
+        "uid" : "51d67c4abf79a870",
+        "parentUid" : "19fc670a39c835aa456bdf1a161cf4e8",
         "status" : "broken",
         "time" : {
-          "start" : 1592689551945,
-          "stop" : 1592689578538,
-          "duration" : 26593
+          "start" : 1592690287219,
+          "stop" : 1592690313502,
+          "duration" : 26283
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "ce459d036bbad0b058b6f9def70825a3"
+      "uid" : "19fc670a39c835aa456bdf1a161cf4e8"
     }, {
-      "name" : "Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on LINUX (e8eb3add1eeeaccce5fa6c164a3bf90b)] -> xpath: //select[@id='days']] (tried for 20 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-6c882010-1e1d-4a5a-8d3b-68beababbba6', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.0.0-1031-gcp', java.version: '14.0.1'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /tmp/.com.google.Chrome.sZZR3Q}, goog:chromeOptions: {debuggerAddress: localhost:41063}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: e8eb3add1eeeaccce5fa6c164a3bf90b",
+      "name" : "Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on LINUX (630cafeebf8536648d8ac72d8c4c51b9)] -> xpath: //div[@class='col-xs-12 col-md-3']//input[@type='file']] (tried for 20 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-530f07da-0f56-4f3d-88d0-8b287f876fad', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.0.0-1031-gcp', java.version: '14.0.1'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /tmp/.com.google.Chrome.JSK8EF}, goog:chromeOptions: {debuggerAddress: localhost:46783}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 630cafeebf8536648d8ac72d8c4c51b9",
       "children" : [ {
-        "name" : "[US-444]/[6] I would like to see registration error, when I don't fill city input",
-        "uid" : "4616f6117ec8cb0a",
-        "parentUid" : "04bb8ec3649d2ecef3761ff061dce695",
+        "name" : "[US-222]/[5] I am not able to send request via contact us form, subject is missing",
+        "uid" : "b0bbd3568502613",
+        "parentUid" : "f630b6b465162a2f2ac03f3516870554",
         "status" : "broken",
         "time" : {
-          "start" : 1592689558234,
-          "stop" : 1592689586302,
-          "duration" : 28068
+          "start" : 1592690311266,
+          "stop" : 1592690335161,
+          "duration" : 23895
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "04bb8ec3649d2ecef3761ff061dce695"
+      "uid" : "f630b6b465162a2f2ac03f3516870554"
     }, {
-      "name" : "Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on LINUX (2c2916f473de08806c8c7d698a9b5055)] -> xpath: //div[@class='col-xs-12 col-md-3']//select[@id='id_contact']] (tried for 20 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-6c882010-1e1d-4a5a-8d3b-68beababbba6', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.0.0-1031-gcp', java.version: '14.0.1'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /tmp/.com.google.Chrome.ThXnx5}, goog:chromeOptions: {debuggerAddress: localhost:36163}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 2c2916f473de08806c8c7d698a9b5055",
+      "name" : "Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on LINUX (c479bb0d176e8c4cf7f3e1658662b5f5)] -> xpath: //div[@class='col-xs-12 col-md-3']//input[@type='file']] (tried for 20 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-530f07da-0f56-4f3d-88d0-8b287f876fad', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.0.0-1031-gcp', java.version: '14.0.1'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /tmp/.com.google.Chrome.2adGlo}, goog:chromeOptions: {debuggerAddress: localhost:37035}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: c479bb0d176e8c4cf7f3e1658662b5f5",
       "children" : [ {
         "name" : "[US-222]/[6] I am not able to send request via contact us form, email address is missing",
-        "uid" : "737663ecd6212cc1",
-        "parentUid" : "8924a30cef3f4dbdb6f4cbe36f940d5b",
+        "uid" : "a11417a5f5e12ea",
+        "parentUid" : "a541e33707bd6d9b14e00167b2b34b8a",
         "status" : "broken",
         "time" : {
-          "start" : 1592689570608,
-          "stop" : 1592689594677,
-          "duration" : 24069
+          "start" : 1592690360422,
+          "stop" : 1592690383647,
+          "duration" : 23225
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "8924a30cef3f4dbdb6f4cbe36f940d5b"
+      "uid" : "a541e33707bd6d9b14e00167b2b34b8a"
     }, {
-      "name" : "Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on LINUX (7ea696eee747e7b39ea67328032077e3)] -> xpath: //select[@id='days']] (tried for 20 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-6c882010-1e1d-4a5a-8d3b-68beababbba6', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.0.0-1031-gcp', java.version: '14.0.1'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /tmp/.com.google.Chrome.K7keeg}, goog:chromeOptions: {debuggerAddress: localhost:35897}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 7ea696eee747e7b39ea67328032077e3",
-      "children" : [ {
-        "name" : "[US-444]/[7] I would like to see registration error, when I don't fill state input",
-        "uid" : "c68d84e954cc36c1",
-        "parentUid" : "e6d4648e6db393dfb7ff5decb3363738",
-        "status" : "broken",
-        "time" : {
-          "start" : 1592689613496,
-          "stop" : 1592689639394,
-          "duration" : 25898
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "e6d4648e6db393dfb7ff5decb3363738"
-    }, {
-      "name" : "Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on LINUX (a030b115b27fc197f592349c4b3528fd)] -> xpath: //div[@class='col-xs-12 col-md-3']//select[@id='id_contact']] (tried for 20 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-6c882010-1e1d-4a5a-8d3b-68beababbba6', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.0.0-1031-gcp', java.version: '14.0.1'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /tmp/.com.google.Chrome.9QyYhz}, goog:chromeOptions: {debuggerAddress: localhost:44969}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: a030b115b27fc197f592349c4b3528fd",
+      "name" : "Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on LINUX (191a0a77fa61fa842f4e1e993b78c620)] -> xpath: //div[@class='col-xs-12 col-md-3']//input[@type='file']] (tried for 20 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-530f07da-0f56-4f3d-88d0-8b287f876fad', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.0.0-1031-gcp', java.version: '14.0.1'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /tmp/.com.google.Chrome.YgKNAS}, goog:chromeOptions: {debuggerAddress: localhost:39485}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 191a0a77fa61fa842f4e1e993b78c620",
       "children" : [ {
         "name" : "[US-222]/[7] I am not able to send request via contact us form, message input is missing",
-        "uid" : "62ade6832063816f",
-        "parentUid" : "331f1a7cd8edd6527ac4ae9f6ec9069a",
+        "uid" : "7b1647572da9dce6",
+        "parentUid" : "e5864a28c1a2e984742d1ebd10b0512e",
         "status" : "broken",
         "time" : {
-          "start" : 1592689619576,
-          "stop" : 1592689642669,
-          "duration" : 23093
+          "start" : 1592690408537,
+          "stop" : 1592690431975,
+          "duration" : 23438
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "331f1a7cd8edd6527ac4ae9f6ec9069a"
-    }, {
-      "name" : "Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on LINUX (abd138c70209d18f9d3d6babc944a84b)] -> xpath: //select[@id='days']] (tried for 20 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-6c882010-1e1d-4a5a-8d3b-68beababbba6', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.0.0-1031-gcp', java.version: '14.0.1'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /tmp/.com.google.Chrome.v32AvA}, goog:chromeOptions: {debuggerAddress: localhost:44047}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: abd138c70209d18f9d3d6babc944a84b",
-      "children" : [ {
-        "name" : "[US-444]/[8] I would like to see registration error, when I don't fill postal code input",
-        "uid" : "5e8e65d42254c974",
-        "parentUid" : "db9f1ebc23c57dc36ad017574431d481",
-        "status" : "broken",
-        "time" : {
-          "start" : 1592689668227,
-          "stop" : 1592689693699,
-          "duration" : 25472
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "db9f1ebc23c57dc36ad017574431d481"
-    }, {
-      "name" : "Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on LINUX (7cc62717e62a9c13141e4999afc88093)] -> xpath: //select[@id='days']] (tried for 20 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-6c882010-1e1d-4a5a-8d3b-68beababbba6', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.0.0-1031-gcp', java.version: '14.0.1'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /tmp/.com.google.Chrome.BguZRw}, goog:chromeOptions: {debuggerAddress: localhost:45665}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 7cc62717e62a9c13141e4999afc88093",
-      "children" : [ {
-        "name" : "[US-444]/[9] I would like to see registration error, when I don't fill country input",
-        "uid" : "1bb8e35ddaa5d01e",
-        "parentUid" : "24e9c41293596cfedf16d34d9ff3540d",
-        "status" : "broken",
-        "time" : {
-          "start" : 1592689720637,
-          "stop" : 1592689746050,
-          "duration" : 25413
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "24e9c41293596cfedf16d34d9ff3540d"
+      "uid" : "e5864a28c1a2e984742d1ebd10b0512e"
     } ],
     "uid" : "bdbf199525818fae7a8651db9eafe741"
   } ],
