@@ -48,7 +48,7 @@ In terminal type `allure generate build/allure-report --clean` to generate local
 
 ![Imgur](https://raw.githubusercontent.com/kamil-nowocin/Test_Automation-automationpractice/master/src/test/resources/files/images/allure_gif.gif)
 ## SLACK BOT (Logger)
-During CI/CD cycle run, you can see real time test results of TestNG suite execution on Slack workspace [Slack workspace](https://testautomation-travis.slack.com). 
+During CI/CD cycle run, you can see real time test results of TestNG suite execution on [Slack workspace](https://testautomation-travis.slack.com). 
 
 | FAIL MESSAGE  | PASS MESSAGE  |
 | ------------- | ------------- |
