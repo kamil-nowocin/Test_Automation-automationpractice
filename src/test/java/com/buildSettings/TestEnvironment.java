@@ -87,10 +87,10 @@ public class TestEnvironment {
         TIMEOUT(30),
         SCRIPT_TIMEOUT(15),
         PAGE_LOAD_TIMEOUT(30),
-        FIND_ELEMENT_TIMEOUT(25),
-        CLICK_TIMEOUT(20),
-        ATTRIBUTE_TIMEOUT(20),
-        VISIBLE_TIMEOUT(20);
+        FIND_ELEMENT_TIMEOUT(15),
+        CLICK_TIMEOUT(15),
+        ATTRIBUTE_TIMEOUT(15),
+        VISIBLE_TIMEOUT(15);
 
         public final int value;
 

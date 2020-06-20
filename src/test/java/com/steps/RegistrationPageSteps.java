@@ -288,14 +288,14 @@ public class RegistrationPageSteps extends TestEnvironment {
         //ACT//
         if (tempRandomValue == 1) {
             if (!registrationPage.newsletterCheckbox.isSelected()) {
-                testCommons.customClick(registrationPage.newsletterCheckbox);
+                registrationPage.newsletterCheckbox.click();
                 logger.info("User signed to receive newsletter");
             }
             //ASSERT//
             Assert.assertTrue(registrationPage.newsletterCheckbox.isSelected());
         } else if (tempRandomValue == 2) {
             if (!registrationPage.specialOffersCheckbox.isSelected()) {
-                testCommons.customClick(registrationPage.specialOffersCheckbox);
+                registrationPage.specialOffersCheckbox.click();
                 logger.info("User signed to receive special offers");
             }
             //ASSERT//

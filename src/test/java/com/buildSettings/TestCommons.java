@@ -65,7 +65,6 @@ public class TestCommons extends TestEnvironment {
      **/
     public void selectFromDropdownByIndex(int value, WebElement webElement) throws NoSuchElementException {
         try {
-            //waitForElementToBeVisible(webElement);
             Select dropdown = new Select(webElement);
             dropdown.selectByIndex(value);
         } catch (NoSuchElementException e) {

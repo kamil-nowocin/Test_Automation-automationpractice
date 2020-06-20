@@ -139,7 +139,7 @@ public class CustomerServicePageSteps extends TestEnvironment {
         path += fileName;
 
         //ACT//
-        testCommons.customSendKeys(customerServicePage.attachFileInput, path);
+        customerServicePage.attachFileInput.sendKeys(path);
         logger.info(String.format("Uploaded file name: \"%S\"", fileName));
 
         //ASSERT//
