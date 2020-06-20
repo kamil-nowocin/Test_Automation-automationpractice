@@ -1,0 +1,49 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+22:08:33 INFO  i.g.bonigarcia.wdm.WebDriverManager - Please answer the following questionnaire based on your experience with WebDriverManager. Thanks a lot!
+22:08:33 INFO  i.g.bonigarcia.wdm.WebDriverManager - ====> http://tiny.cc/wdm-survey <====
+22:08:33 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=83 in cache (valid until 22:06:49 21/06/2020 UTC)
+22:08:33 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 83.0.4103.39 (since Chrome 83 is installed in your machine)
+22:08:33 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 83.0.4103.39 found in cache
+22:08:33 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.m2/repository/webdriver/chromedriver/linux64/83.0.4103.39/chromedriver
+22:08:35 INFO  com.steps.Hooks - ================================================ TEST STARTED ================================================
+22:08:35 INFO  com.steps.Hooks - [34mTEST NAME: [US-666]/[2] I WOULD LIKE TO BUY NEW "BLOUSE"[0m
+22:08:35 INFO  com.steps.Hooks - Chosen executor: "CHROME"
+22:08:38 INFO  com.steps.Hooks - Page ready: "TRUE"
+22:08:40 INFO  com.steps.Hooks - User login: "THOR.ODINSON@EXAMPLE.COM"
+22:08:41 INFO  com.steps.Hooks - User password: "12345"
+22:08:46 INFO  com.steps.Hooks - User clicked on: "WOMEN" submenu category
+22:08:49 INFO  com.steps.Hooks - User clicked on product: "BLOUSE"
+22:08:50 INFO  com.steps.Hooks - Chosen product details:
+ > Quantity: "2"
+ > Size: "S"
+ > Color: "BLACK"
+22:08:57 INFO  com.steps.Hooks - User order comment: "WHAT ARE YOU LOOKING AT, BUTTHEAD?"
+22:08:58 INFO  com.steps.Hooks - User chosen shipping method: "MY CARRIER"
+22:09:14 INFO  com.steps.Hooks - [31mTEST RETRY (1/1): [US-666]/[2] I WOULD LIKE TO BUY NEW "BLOUSE"[0m
+22:09:14 INFO  i.g.bonigarcia.wdm.WebDriverManager - Please answer the following questionnaire based on your experience with WebDriverManager. Thanks a lot!
+22:09:14 INFO  i.g.bonigarcia.wdm.WebDriverManager - ====> http://tiny.cc/wdm-survey <====
+22:09:14 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=83 in cache (valid until 22:06:49 21/06/2020 UTC)
+22:09:14 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 83.0.4103.39 (since Chrome 83 is installed in your machine)
+22:09:14 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 83.0.4103.39 found in cache
+22:09:14 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.m2/repository/webdriver/chromedriver/linux64/83.0.4103.39/chromedriver
+22:09:15 INFO  com.steps.Hooks - ================================================ TEST STARTED ================================================
+22:09:15 INFO  com.steps.Hooks - [34mTEST NAME: [US-666]/[2] I WOULD LIKE TO BUY NEW "BLOUSE"[0m
+22:09:15 INFO  com.steps.Hooks - Chosen executor: "CHROME"
+22:09:18 INFO  com.steps.Hooks - Page ready: "TRUE"
+22:09:20 INFO  com.steps.Hooks - User login: "THOR.ODINSON@EXAMPLE.COM"
+22:09:20 INFO  com.steps.Hooks - User password: "12345"
+22:09:24 INFO  com.steps.Hooks - User clicked on: "WOMEN" submenu category
+22:09:25 INFO  com.steps.Hooks - User clicked on product: "BLOUSE"
+22:09:26 INFO  com.steps.Hooks - Chosen product details:
+ > Quantity: "2"
+ > Size: "S"
+ > Color: "BLACK"
+22:09:33 INFO  com.steps.Hooks - User order comment: "I'VE HAD ENOUGH PRACTICAL JOKES FOR ONE EVENING. GOOD NIGHT, FUTURE BOY!"
+22:09:34 INFO  com.steps.Hooks - User chosen shipping method: "MY CARRIER"
+22:09:50 INFO  com.steps.Hooks - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+22:09:50 ERROR com.steps.Hooks - org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on LINUX (d48970f640c9b2b9855f2b84c97ad294)] -> xpath: //input[@name='cgv']] (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'travis-job-e8be76e1-a2fd-4d19-b36e-d5134b629dce', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.0.0-1031-gcp', java.version: '14.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /tmp/.com.google.Chrome.CoHjhN}, goog:chromeOptions: {debuggerAddress: localhost:40695}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: d48970f640c9b2b9855f2b84c97ad294
