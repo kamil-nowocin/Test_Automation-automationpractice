@@ -155,7 +155,7 @@ public class RegistrationPageSteps extends TestEnvironment {
         Assert.assertEquals(registrationPage.cityInput.getAttribute("value").toLowerCase(),
                 userCity.toLowerCase(), ContextInjection.VALUE_ERROR);
 
-        testCommons.customSendKeys(registrationPage.stateDropDown, userState);
+        testCommons.selectFromDropdownByText(userState, registrationPage.stateDropDown);
         logger.info(String.format("User state: \"%S\"", userState));
         Assert.assertEquals(registrationPage.readStateDropdown.getText().toLowerCase(),
                 userState.toLowerCase(), ContextInjection.VALUE_ERROR);
@@ -165,7 +165,7 @@ public class RegistrationPageSteps extends TestEnvironment {
         Assert.assertEquals(registrationPage.postalCodeInput.getAttribute("value").toLowerCase(),
                 userPostalCode.toLowerCase(), ContextInjection.VALUE_ERROR);
 
-        testCommons.customSendKeys(registrationPage.countryDropDown, userCountry);
+        testCommons.selectFromDropdownByText(userCountry, registrationPage.countryDropDown);
         logger.info(String.format("User country: \"%S\"", userCountry));
         Assert.assertEquals(registrationPage.readCountryDropdown.getText().toLowerCase(),
                 userCountry.toLowerCase(), ContextInjection.VALUE_ERROR);
@@ -302,8 +302,8 @@ public class RegistrationPageSteps extends TestEnvironment {
             Assert.assertTrue(registrationPage.specialOffersCheckbox.isSelected());
         } else {
             if (!registrationPage.newsletterCheckbox.isSelected() && !registrationPage.specialOffersCheckbox.isSelected()) {
-                testCommons.customClick(registrationPage.newsletterCheckbox);
-                testCommons.customClick(registrationPage.specialOffersCheckbox);
+                registrationPage.newsletterCheckbox.click();
+                registrationPage.specialOffersCheckbox.click();
                 logger.info("User signed to receive newsletter & special offers");
             }
             //ASSERT//

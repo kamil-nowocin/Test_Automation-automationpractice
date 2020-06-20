@@ -316,7 +316,7 @@ public class ShoppingLoggedUserSteps extends TestEnvironment {
     public void iClickOnTermsOfServiceCheckbox() throws Throwable {
         //ACT//
         if (!shoppingCartSummaryPage.tosCheckbox.isSelected()) {
-            testCommons.customClick(shoppingCartSummaryPage.tosCheckbox);
+            shoppingCartSummaryPage.tosCheckbox.click();
             logger.info("User selected Terms of Service checkbox");
         } else {
             logger.info("User didn't select Terms of Service checkbox(pre-selected)");
