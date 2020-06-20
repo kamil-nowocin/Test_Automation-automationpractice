@@ -123,15 +123,13 @@ public class TestEnvironment {
     }
 
     protected enum Timeouts {
-        LONG_TIMEOUT(20),
-        MEDIUM_TIMEOUT(10),
-        SHORT_TIMEOUT(5),
+        TIMEOUT(20),
         SCRIPT_TIMEOUT(15),
         PAGE_LOAD_TIMEOUT(20),
-        FIND_ELEMENT_TIMEOUT(5),
-        CLICK_TIMEOUT(5),
-        ATTRIBUTE_TIMEOUT(5),
-        VISIBLE_TIMEOUT(5);
+        FIND_ELEMENT_TIMEOUT(15),
+        CLICK_TIMEOUT(15),
+        ATTRIBUTE_TIMEOUT(15),
+        VISIBLE_TIMEOUT(15);
 
         public final int value;
 

@@ -121,7 +121,7 @@ public class TestCommons extends TestEnvironment {
      **/
     public boolean isPageReady() {
         try {
-            WebDriverWait wait = new WebDriverWait(DriverFactory.getDriver(), Timeouts.LONG_TIMEOUT.value);
+            WebDriverWait wait = new WebDriverWait(DriverFactory.getDriver(), Timeouts.TIMEOUT.value);
             wait.until(webDriver ->
                     ((JavascriptExecutor) webDriver).executeScript("return document.readyState").equals("complete"));
         } catch (WebDriverException e) {
