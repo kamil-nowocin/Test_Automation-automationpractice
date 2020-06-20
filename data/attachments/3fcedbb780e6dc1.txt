@@ -1,0 +1,29 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+21:43:16 INFO  i.g.bonigarcia.wdm.WebDriverManager - Please answer the following questionnaire based on your experience with WebDriverManager. Thanks a lot!
+21:43:16 INFO  i.g.bonigarcia.wdm.WebDriverManager - ====> http://tiny.cc/wdm-survey <====
+21:43:16 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=83 in cache (valid until 21:38:54 21/06/2020 UTC)
+21:43:16 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 83.0.4103.39 (since Chrome 83 is installed in your machine)
+21:43:16 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 83.0.4103.39 found in cache
+21:43:16 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.m2/repository/webdriver/chromedriver/linux64/83.0.4103.39/chromedriver
+21:43:18 INFO  com.steps.Hooks - ================================================ TEST STARTED ================================================
+21:43:18 INFO  com.steps.Hooks - [34mTEST NAME: [US-222]/[3] I AM ABLE TO SEND REQUEST VIA CONTACT US FORM WITCH ATTACHED FILE[0m
+21:43:18 INFO  com.steps.Hooks - Chosen executor: "CHROME"
+21:43:20 INFO  com.steps.Hooks - Page ready: "TRUE"
+21:43:42 INFO  com.steps.Hooks - [31mTEST RETRY (1/1): [US-222]/[3] I AM ABLE TO SEND REQUEST VIA CONTACT US FORM WITCH ATTACHED FILE[0m
+21:43:42 INFO  i.g.bonigarcia.wdm.WebDriverManager - Please answer the following questionnaire based on your experience with WebDriverManager. Thanks a lot!
+21:43:42 INFO  i.g.bonigarcia.wdm.WebDriverManager - ====> http://tiny.cc/wdm-survey <====
+21:43:42 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=83 in cache (valid until 21:38:54 21/06/2020 UTC)
+21:43:42 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 83.0.4103.39 (since Chrome 83 is installed in your machine)
+21:43:42 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 83.0.4103.39 found in cache
+21:43:42 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.m2/repository/webdriver/chromedriver/linux64/83.0.4103.39/chromedriver
+21:43:42 INFO  com.steps.Hooks - ================================================ TEST STARTED ================================================
+21:43:42 INFO  com.steps.Hooks - [34mTEST NAME: [US-222]/[3] I AM ABLE TO SEND REQUEST VIA CONTACT US FORM WITCH ATTACHED FILE[0m
+21:43:42 INFO  com.steps.Hooks - Chosen executor: "CHROME"
+21:43:44 INFO  com.steps.Hooks - Page ready: "TRUE"
+21:44:06 INFO  com.steps.Hooks - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+21:44:06 ERROR com.steps.Hooks - org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on LINUX (1bec76bfd1534b1c3ce2c89c9a6361de)] -> xpath: //div[@class='col-xs-12 col-md-3']//select[@id='id_contact']] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'travis-job-6c882010-1e1d-4a5a-8d3b-68beababbba6', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.0.0-1031-gcp', java.version: '14.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /tmp/.com.google.Chrome.J6XIye}, goog:chromeOptions: {debuggerAddress: localhost:44979}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 1bec76bfd1534b1c3ce2c89c9a6361de
