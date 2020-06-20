@@ -2,8 +2,8 @@ package com.buildLogger;
 
 import com.buildListeners.TestNGListener;
 import com.buildSettings.ContextInjection;
+import com.buildSettings.MessageBuilder;
 import com.buildSettings.TestEnvironment;
-import com.buildSettings.buildPrettyMessage.PrettyMessageBuilder;
 import com.slack.api.Slack;
 import com.slack.api.model.Attachment;
 import com.slack.api.model.block.ActionsBlock;
@@ -42,7 +42,6 @@ public class SlackLogger extends TestEnvironment implements ITestListener {
     private static final String URL_REPOSITORY = "https://github.com/kamil-nowocin/Test_Automation-automationpractice";
     private static final String URL_REPOSITORY_IMAGES = "https://raw.githubusercontent.com/kamil-nowocin/Test_Automation-automationpractice/master/src/test/resources/files/images";
 
-
     public static String slackResultDetailsBuilder() {
         List<String> testCaseNames = new ArrayList<>();
         int i = 1;
@@ -64,7 +63,6 @@ public class SlackLogger extends TestEnvironment implements ITestListener {
     public static void whichColor() {
         if (ContextInjection.failedTestsAmount == 0) {
             color = "#32CD32"; //GREEN
-            //TODO - image links change
             testAttachmentImage = (String.format("%s/green_icon.png", URL_REPOSITORY_IMAGES));
         } else {
             color = "#FF4500"; //RED
@@ -94,15 +92,18 @@ public class SlackLogger extends TestEnvironment implements ITestListener {
                             DividerBlock.builder().build(),
                             SectionBlock.builder().text
                                     (MarkdownTextObject.builder()
-                                            .text((String.format("<!here>\nNumber of tests executed: *%d*\nRepository: *<%s| Test_Automation-automationpractice>* ", TOTAL_TEST_CASES, URL_REPOSITORY)))
+                                            .text((String.format("<!here>\nNumber of tests executed: *%d*\nRepository:" +
+                                                    " *<%s| Test_Automation-automationpractice>* ", TOTAL_TEST_CASES, URL_REPOSITORY)))
                                             .build())
                                     .build(),
                             SectionBlock.builder().fields(Arrays.asList(
                                     MarkdownTextObject.builder()
-                                            .text(String.format(":large_green_square:*PASSED TESTS*\n(%d/%d)", ContextInjection.passedTestsAmount, TOTAL_TEST_CASES))
+                                            .text(String.format(":large_green_square:*PASSED TESTS*\n(%d/%d)",
+                                                    ContextInjection.passedTestsAmount, TOTAL_TEST_CASES))
                                             .build(),
                                     MarkdownTextObject.builder()
-                                            .text(String.format(":large_red_square:*FAILED TESTS*\n(%d/%d)", ContextInjection.failedTestsAmount, TOTAL_TEST_CASES))
+                                            .text(String.format(":large_red_square:*FAILED TESTS*\n(%d/%d)",
+                                                    ContextInjection.failedTestsAmount, TOTAL_TEST_CASES))
                                             .build()))
                                     .build(),
                             DividerBlock.builder().build()))
@@ -112,7 +113,11 @@ public class SlackLogger extends TestEnvironment implements ITestListener {
                                     .blocks(Arrays.asList(
                                             SectionBlock.builder().text
                                                     (MarkdownTextObject.builder()
-                                                            .text((String.format("Execution date: <!date^%d^{date}, {time} CET|sa>\n\n*XML SUITE NAME:* %s\n*XML TESTS:* %s\n*====================FAILURE DETAILS====================*\n\n%s", unixTime, PrettyMessageBuilder.getXmlSuiteName(iTestContext), PrettyMessageBuilder.getXmlTestName(iTestContext), slackResultDetailsBuilder())))
+                                                            .text((String.format("Execution date: <!date^%d^{date}, {time} CET|sa>\n\n" +
+                                                                            "*XML SUITE NAME:* %s\n*XML TESTS:* %s\n" +
+                                                                            "*====================FAILURE DETAILS====================*\n\n%s",
+                                                                    getUnixTime(), MessageBuilder.getXmlSuiteName(iTestContext),
+                                                                    MessageBuilder.getXmlTestName(iTestContext), slackResultDetailsBuilder())))
                                                             .build())
                                                     .accessory
                                                             (ImageElement.builder()
@@ -148,7 +153,8 @@ public class SlackLogger extends TestEnvironment implements ITestListener {
                                             DividerBlock.builder().build(),
                                             SectionBlock.builder().text
                                                     (MarkdownTextObject.builder()
-                                                            .text((String.format("End of test execution for: *%s* :ghost:", PrettyMessageBuilder.getXmlTestName(iTestContext))))
+                                                            .text((String.format("End of test execution for: *%s* :ghost:",
+                                                                    MessageBuilder.getXmlTestName(iTestContext))))
                                                             .build())
                                                     .build()
                                     )).build()
@@ -157,11 +163,11 @@ public class SlackLogger extends TestEnvironment implements ITestListener {
             WebhookResponse webhookResponse = Slack.getInstance().send(String.format("%s/%s", URL_SLACK_WEB_HOOK, SLACK_TOKEN), slackLoggerPayload);
             logger.info(slackLoggerResponse(webhookResponse));
         } catch (IOException e) {
-            System.out.println("Unexpected Error !WebHook:" + URL_SLACK_WEB_HOOK);
+            logger.error("Unexpected Error! WebHook: " + URL_SLACK_WEB_HOOK);
         }
     }
 
     public static String slackLoggerResponse(WebhookResponse webhookResponse) {
-        return String.format("Slack response: %d and additional information %s", webhookResponse.getCode(), webhookResponse.getBody());
+        return String.format("Slack response: %d, Additional information: %s", webhookResponse.getCode(), webhookResponse.getBody());
     }
 }

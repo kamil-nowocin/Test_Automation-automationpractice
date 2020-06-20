@@ -42,11 +42,11 @@ Feature: As a user I would like to buy new clothes from automationpractice.com -
     And I can see Shopping-Cart "Your payment method" form with valid information
     Then I choose payment method
       | Payment Method   |
-      | <payment Method> |
+      | <payment method> |
     And I click on I Confirm My Order button
     And I can see Shopping-Cart "Order confirmation" form with valid information
 
     Examples: SCENARIO OUTLINE DATA
-      | dress name                  | quantity | size | colour | payment Method   |
+      | dress name                  | quantity | size | colour | payment method   |
       | Faded Short Sleeve T-shirts | 5        | M    | Blue   | Pay by check     |
       | Blouse                      | 2        | S    | Black  | Pay by bank wire |

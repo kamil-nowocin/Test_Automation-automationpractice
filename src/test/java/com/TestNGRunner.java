@@ -15,7 +15,6 @@ import org.testng.annotations.Test;
 
 @CucumberOptions(
         tags = "not @ignore",
-        strict = true,
         features = {
                 "src/test/resources/features"
         },
@@ -38,7 +37,7 @@ public class TestNGRunner extends AbstractTestNGCucumberTests {
     }
 
     @Test(groups = "Cucumber", description = "Runs Cucumber Scenarios", dataProvider = "scenarios")
-    public void runScenario(PickleWrapper pickleWrapper, FeatureWrapper featureWrapper) throws Throwable {
+    public void runScenario(PickleWrapper pickleWrapper, FeatureWrapper featureWrapper) {
         testNGCucumberRunner.runScenario(pickleWrapper.getPickle());
     }
 

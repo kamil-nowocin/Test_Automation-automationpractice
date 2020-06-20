@@ -15,21 +15,20 @@ Java, Selenium, TestNG, Cucumber, REST Assured, Gradle, Travis CI, Allure Report
 Project made in my spare time to develop my skills in automation testing.  
 You don't have to download any WebDrivers - I'm using WebDriverManager, drivers will be downloaded by gradle.  
 Supported browsers aka hosts:
-* *Chrome*
-* *Firefox*
-* *Opera*
-* *Edge*
-* *Internet Explorer*
-* *Safari*
-* *BrowserStack*
+- *Chrome*
+- *Firefox*
+- *Opera*
+- *Internet Explorer*
+- *Safari*
+- *BrowserStack*
 ## FEATURES
-* Support for WebDriverManager
-* Support for Allure Report
-* Support for .xlsx files
-* Support for Fake & Mock data
-* Support for BrowserStack
-* Support for Parallel Testing
-* Support for custom Slack Bot
+- Support for WebDriverManager
+- Support for Allure Report
+- Support for .xlsx files
+- Support for Fake & Mock data
+- Support for BrowserStack
+- Support for Parallel Testing
+- Support for custom Slack Bot
 ## HOW TO RUN TESTS
 There are multiple ways to run tests from this build. It all depends on what you want to do:
 1. Right click on `.feature` file, and Run -> This will run `.feature` file on default settings.
@@ -49,15 +48,15 @@ In terminal type `allure generate build/allure-report --clean` to generate local
 
 ![Imgur](https://raw.githubusercontent.com/kamil-nowocin/Test_Automation-automationpractice/master/src/test/resources/files/images/allure_gif.gif)
 ## SLACK BOT (Logger)
-During CI/CD cycle run, you can see real time test results of TestNG suite execution on Slack workspace. 
+During CI/CD cycle run, you can see real time test results of TestNG suite execution on Slack workspace [Slack workspace](https://testautomation-travis.slack.com). 
 
 | FAIL MESSAGE  | PASS MESSAGE  |
 | ------------- | ------------- |
 | ![IMG](https://raw.githubusercontent.com/kamil-nowocin/Test_Automation-automationpractice/master/src/test/resources/files/images/slack_bot_fail.png)  | ![IMG](https://raw.githubusercontent.com/kamil-nowocin/Test_Automation-automationpractice/master/src/test/resources/files/images/slack_bot_pass.png)  |
 ## TEST LOGS
 There are two types of log information saved after each test run:  
-Detailed logs in log directory. Warning! These logs will be deleted when you launch new test run.  
-Colorful logs in testdata.xls file. Warning! These logs will be overwritten when you launch new test run. <sub><sup>(Only for TestNG runners)</sup></sub>
+- Detailed logs in log directory. Warning! These logs will be deleted when you launch new test run.  
+- Colorful logs in testdata.xls file. Warning! These logs will be overwritten when you launch new test run. <sub><sup>(Only for TestNG runners)</sup></sub>
 ## AUTHORS
 - **Kamil Nowocin** - *Initial work* - [Kamil Nowocin](https://github.com/kamil-nowocin)
 ## LICENSE

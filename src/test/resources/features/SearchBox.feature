@@ -23,15 +23,15 @@ Feature: A a user I would like to see results of searching phrase
     Given I can see automationpractice.com website
     When I search for phrase "<search phrase>"
     And I click on search icon
-    Then I can see numbers of results equals to "<results>"
+    Then I can see numbers of results equals to "<expected results>"
     And I can see that every results which have been found contains phrase "<search phrase>"
 
     Examples: SCENARIO OUTLINE DATA
-      | search phrase | results |
-      | T-shirts      | 1       |
-      | Blouse        | 1       |
-      | Printed Dress | 5       |
-      | !@#$%^        | 0       |
+      | search phrase | expected results |
+      | T-shirts      | 1                |
+      | Blouse        | 1                |
+      | Printed Dress | 5                |
+      | !@#$%^        | 0                |
 
 #--------------------------------------------------------------------------------#
 # [ZEPHYR] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-0035

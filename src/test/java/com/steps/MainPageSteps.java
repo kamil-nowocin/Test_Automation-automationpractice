@@ -3,6 +3,7 @@ package com.steps;
 import com.DriverFactory;
 import com.buildSettings.ContextInjection;
 import com.buildSettings.TestCommons;
+import com.buildSettings.TestEnvironment;
 import com.pages.base.MainPage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
@@ -15,12 +16,12 @@ import org.testng.Assert;
  * @author kamil.nowocin
  **/
 
-public class MainPageSteps extends DriverFactory {
+public class MainPageSteps extends TestEnvironment {
 
     private final MainPage mainPage = new MainPage();
     private final TestCommons testCommons = new TestCommons();
-    private final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps(new ContextInjection());
     private final AuthenticationPageSteps authenticationPageSteps = new AuthenticationPageSteps();
+    private final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps(new ContextInjection());
 
     @Step("I open home page")
     @Given("I open home page")
@@ -32,7 +33,7 @@ public class MainPageSteps extends DriverFactory {
         DriverFactory.getDriver().get(HOME_URL);
 
         //ASSERT//
-        Assert.assertEquals(DriverFactory.getDriver().getCurrentUrl(), expectedPageURL, _21VOID);
+        Assert.assertEquals(DriverFactory.getDriver().getCurrentUrl(), expectedPageURL, ContextInjection._21VOID);
     }
 
     @Step("I can see automationpractice.com website")
@@ -46,7 +47,7 @@ public class MainPageSteps extends DriverFactory {
         logger.info(String.format("Page ready: \"%S\"", isPageReadyToExecuteTests));
 
         //ASSERT//
-        Assert.assertTrue(isPageReadyToExecuteTests, PAGE_ERROR);
+        Assert.assertTrue(isPageReadyToExecuteTests, ContextInjection.PAGE_ERROR);
     }
 
     @Step("I am logged as customer *{0}* using *{1}* password")
@@ -62,7 +63,7 @@ public class MainPageSteps extends DriverFactory {
         authenticationPageSteps.iClickOnSubmitButton();
 
         //ASSERT//
-        Assert.assertEquals(mainPage.currentLoggedUserName.getText().toLowerCase(), defaultUserName.toLowerCase(), VALUE_ERROR);
+        Assert.assertEquals(mainPage.currentLoggedUserName.getText().toLowerCase(), defaultUserName.toLowerCase(), ContextInjection.VALUE_ERROR);
     }
 
     @Step("I am on MyAccount details page")

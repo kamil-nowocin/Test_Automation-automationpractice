@@ -3,8 +3,8 @@ package com.steps;
 import com.DriverFactory;
 import com.buildListeners.TestNGListener;
 import com.buildSettings.ExcelEnvironment;
+import com.buildSettings.MessageBuilder;
 import com.buildSettings.TestCommons;
-import com.buildSettings.buildPrettyMessage.PrettyMessageBuilder;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
@@ -36,7 +36,7 @@ public class Hooks extends DriverFactory implements ITestListener {
 
     @BeforeMethod(description = "Setting up Test Class")
     public void beforeTest(ITestResult iTestResult) throws IOException {
-        MDC.put("testid", PrettyMessageBuilder.getTestDescription(iTestResult));
+        MDC.put("testid", MessageBuilder.getTestDescription(iTestResult));
         startBrowser();
         TestCommons.networkThrottling(false);
     }
