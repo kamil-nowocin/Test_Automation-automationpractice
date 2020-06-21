@@ -74,7 +74,6 @@ public class TestCommons extends TestEnvironment {
 
     public void selectFromDropdownByText(String textValue, WebElement webElement) throws NoSuchElementException {
         try {
-            //waitForElementToBeVisible(webElement);
             Select dropdown = new Select(webElement);
             dropdown.selectByVisibleText(textValue);
         } catch (NoSuchElementException e) {
@@ -84,7 +83,6 @@ public class TestCommons extends TestEnvironment {
 
     public void selectFromDropdownByValue(String textValue, WebElement webElement) throws NoSuchElementException {
         try {
-            //waitForElementToBeVisible(webElement);
             Select dropdown = new Select(webElement);
             dropdown.selectByValue(textValue);
         } catch (NoSuchElementException e) {
@@ -120,7 +118,7 @@ public class TestCommons extends TestEnvironment {
      **/
     public boolean isPageReady() {
         try {
-            WebDriverWait wait = new WebDriverWait(DriverFactory.getDriver(), Timeouts.TIMEOUT.value);
+            WebDriverWait wait = new WebDriverWait(DriverFactory.getDriver(), Timeouts.PAGE_LOAD_TIMEOUT.value);
             wait.until(webDriver ->
                     ((JavascriptExecutor) webDriver).executeScript("return document.readyState").equals("complete"));
         } catch (WebDriverException e) {

@@ -83,22 +83,6 @@ public class TestEnvironment {
             ("selenium.hostURL", "https://localhost:3000");
 
     //METHODS//
-    protected enum Timeouts {
-        TIMEOUT(30),
-        SCRIPT_TIMEOUT(15),
-        PAGE_LOAD_TIMEOUT(30),
-        FIND_ELEMENT_TIMEOUT(15),
-        CLICK_TIMEOUT(15),
-        ATTRIBUTE_TIMEOUT(15),
-        VISIBLE_TIMEOUT(15);
-
-        public final int value;
-
-        Timeouts(int value) {
-            this.value = value;
-        }
-    }
-
     public static String getCurrentPath() {
         return Paths.get(".").toAbsolutePath().normalize().toString();
     }
@@ -200,6 +184,21 @@ public class TestEnvironment {
         ContextInjection.failedTestsAmount = 0;
         TestNGListener.passedTests.clear();
         TestNGListener.failedTests.clear();
+    }
+
+    protected enum Timeouts {
+        SCRIPT_TIMEOUT(15),
+        PAGE_LOAD_TIMEOUT(30),
+        FIND_ELEMENT_TIMEOUT(15),
+        CLICK_TIMEOUT(15),
+        ATTRIBUTE_TIMEOUT(15),
+        VISIBLE_TIMEOUT(15);
+
+        public final int value;
+
+        Timeouts(int value) {
+            this.value = value;
+        }
     }
 
     protected void displayWebDriverManagerBrowsersVersions(Boolean printStatuses) {
