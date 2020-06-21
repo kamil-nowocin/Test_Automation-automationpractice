@@ -1,7 +1,9 @@
 package com.steps;
 
 import com.DriverFactory;
+import com.buildSettings.ContextInjection;
 import com.buildSettings.TestCommons;
+import com.buildSettings.TestEnvironment;
 import com.pages.SocialMediaPage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
@@ -17,7 +19,7 @@ import java.util.ArrayList;
  * @author kamil.nowocin
  **/
 
-public class SocialMediaPageSteps extends DriverFactory {
+public class SocialMediaPageSteps extends TestEnvironment {
 
     private final TestCommons testCommons = new TestCommons();
     private final SocialMediaPage socialMediaPage = new SocialMediaPage();
@@ -29,26 +31,26 @@ public class SocialMediaPageSteps extends DriverFactory {
         switch (logoName.toLowerCase()) {
             case "facebook":
                 testCommons.scrollWebsiteToElement(socialMediaPage.facebookButton);
-                Assert.assertTrue(testCommons.waitForElementToBeDisplayed(5, socialMediaPage.facebookButton),
-                        String.format(VIEW_ERROR, logoName.toUpperCase()));
+                Assert.assertTrue(testCommons.waitForElementToBeVisible(socialMediaPage.facebookButton),
+                        String.format(ContextInjection.VIEW_ERROR, logoName.toUpperCase()));
                 break;
             case "twitter":
                 testCommons.scrollWebsiteToElement(socialMediaPage.twitterButton);
-                Assert.assertTrue(testCommons.waitForElementToBeDisplayed(5, socialMediaPage.twitterButton),
-                        String.format(VIEW_ERROR, logoName.toUpperCase()));
+                Assert.assertTrue(testCommons.waitForElementToBeVisible(socialMediaPage.twitterButton),
+                        String.format(ContextInjection.VIEW_ERROR, logoName.toUpperCase()));
                 break;
             case "youtube":
                 testCommons.scrollWebsiteToElement(socialMediaPage.youtubeButton);
-                Assert.assertTrue(testCommons.waitForElementToBeDisplayed(5, socialMediaPage.youtubeButton),
-                        String.format(VIEW_ERROR, logoName.toUpperCase()));
+                Assert.assertTrue(testCommons.waitForElementToBeVisible(socialMediaPage.youtubeButton),
+                        String.format(ContextInjection.VIEW_ERROR, logoName.toUpperCase()));
                 break;
             case "google":
                 testCommons.scrollWebsiteToElement(socialMediaPage.googleButton);
-                Assert.assertTrue(testCommons.waitForElementToBeDisplayed(5, socialMediaPage.googleButton),
-                        String.format(VIEW_ERROR, logoName.toUpperCase()));
+                Assert.assertTrue(testCommons.waitForElementToBeVisible(socialMediaPage.googleButton),
+                        String.format(ContextInjection.VIEW_ERROR, logoName.toUpperCase()));
                 break;
             default:
-                throw new IllegalStateException(String.format(INPUT_ERROR, logoName.toUpperCase()));
+                throw new IllegalStateException(String.format(ContextInjection.INPUT_ERROR, logoName.toUpperCase()));
         }
     }
 
@@ -58,19 +60,19 @@ public class SocialMediaPageSteps extends DriverFactory {
         //ACT//
         switch (logoName.toLowerCase()) {
             case "facebook":
-                socialMediaPage.facebookButton.click();
+                testCommons.customClick(socialMediaPage.facebookButton);
                 break;
             case "twitter":
-                socialMediaPage.twitterButton.click();
+                testCommons.customClick(socialMediaPage.twitterButton);
                 break;
             case "youtube":
-                socialMediaPage.youtubeButton.click();
+                testCommons.customClick(socialMediaPage.youtubeButton);
                 break;
             case "google":
-                socialMediaPage.googleButton.click();
+                testCommons.customClick(socialMediaPage.googleButton);
                 break;
             default:
-                throw new IllegalStateException(String.format(INPUT_ERROR, logoName.toUpperCase()));
+                throw new IllegalStateException(String.format(ContextInjection.INPUT_ERROR, logoName.toUpperCase()));
         }
         logger.info(String.format("Chosen social media platform: \"%S\"", logoName));
     }
@@ -87,6 +89,6 @@ public class SocialMediaPageSteps extends DriverFactory {
 
         //ASSERT//
         Assert.assertTrue(DriverFactory.getDriver().getCurrentUrl().contains(logoName.toLowerCase() + ".com"),
-                String.format(PAGE_URL_DIDNT_CONTAIN, logoName.toUpperCase()));
+                String.format(ContextInjection.PAGE_URL_DIDNT_CONTAIN, logoName.toUpperCase()));
     }
 }

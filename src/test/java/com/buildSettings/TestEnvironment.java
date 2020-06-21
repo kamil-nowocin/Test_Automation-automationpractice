@@ -2,7 +2,6 @@ package com.buildSettings;
 
 import com.DriverFactory;
 import com.buildListeners.TestNGListener;
-import com.buildSettings.buildPrettyMessage.PrettyMessageBuilder;
 import com.github.javafaker.Faker;
 import com.steps.Hooks;
 import io.cucumber.java.Scenario;
@@ -46,15 +45,14 @@ public class TestEnvironment {
     protected static Faker faker = new Faker(Locale.US);
     protected static MockNeat mockNeat = MockNeat.secure();
     protected static Logger logger = LoggerFactory.getLogger(Hooks.class);
-    protected static DecimalFormat $decimalFormat = new DecimalFormat("$#0.00", new DecimalFormatSymbols(Locale.US));
-    protected static final long unixTime = Instant.now().getEpochSecond();
+    protected static final String TODAY_DATE = new SimpleDateFormat("yyyy-MM-dd HH:ss").format(new Date());
+    protected static final DecimalFormat DOLLAR_DECIMAL_FORMAT = new DecimalFormat("$#0.00", new DecimalFormatSymbols(Locale.US));
 
     //BUNDLES//
     protected static final ResourceBundle RESOURCE_BUNDLE_INVALID_EMAILS = ResourceBundle.getBundle("invalidEmails");
     protected static final ResourceBundle RESOURCE_BUNDLE_ERROR_MESSAGES = ResourceBundle.getBundle("errorValidators");
 
     //DATA//
-    protected static final int TIMEOUT = 15;
     protected static final int EXCEL_TC_NAME_COLUMN = 0;
     protected static final int EXCEL_TC_RESULT_COLUMN = 4;
     protected static final String ANSI_RED = "\u001B[31m";
@@ -63,33 +61,6 @@ public class TestEnvironment {
     protected static final String ANSI_GREEN = "\u001B[32m";
     protected static final String EXECUTOR = "GRADLE";
     protected static final String HOME_URL = "http://automationpractice.com";
-    protected static final String TODAY_DATE = new SimpleDateFormat("yyyy-MM-dd HH:ss").format(new Date());
-
-    //EXPECTED HEADERS//
-    protected static final String WELCOME_MESSAGE =
-            "Welcome to your account. Here you can manage all of your personal information and orders.";
-
-    //ASSERTION MESSAGES//
-    protected static final String PAGE_URL_DIDNT_CONTAIN =
-            "Following page URL didn't contain expected URL %s.com!";
-    protected static final String MESSAGE_DIDNT_CONTAIN =
-            "Warning message didn't contain \"%S\"!";
-    protected static final String PAGE_ERROR =
-            "Page wasn't ready to execute tests!";
-    protected static final String RESULTS_ERROR =
-            "Number of results which have been found didn't match expected number of results! \n Found: %S \n Expected: %S";
-    protected static final String SEARCH_ERROR =
-            "Names of results which have been found didn't match expected names! ";
-    protected static final String SORTING_ERROR =
-            "Results which have been found didn't match expected sorting result %S";
-    protected static final String VIEW_ERROR =
-            "Element \"%S\" wasn't displayed!";
-    protected static final String INPUT_ERROR =
-            "Invalid input type! \"%S\" is not supported!";
-    protected static final String VALUE_ERROR =
-            "Value which have been found didn't match expected value!";
-    protected static final String _21VOID =
-            "Upssss, something went really bad! Even Michael Scofield couldn't have predicted that error! :)";
 
     //ENVIRONMENT PROPERTIES//
     protected static final String TRAVIS_BUILD_NUMBER = System.getProperty
@@ -111,8 +82,13 @@ public class TestEnvironment {
     protected static final String HOST_URL = System.getProperty
             ("selenium.hostURL", "https://localhost:3000");
 
+    //METHODS//
     public static String getCurrentPath() {
         return Paths.get(".").toAbsolutePath().normalize().toString();
+    }
+
+    protected static long getUnixTime() {
+        return Instant.now().getEpochSecond();
     }
 
     public static void allureWriteProperties() {
@@ -148,7 +124,7 @@ public class TestEnvironment {
 
     @Attachment(value = "TestNG test FAIL logs", type = "text/plain")
     protected String allureSaveTextLog(ITestResult iTestResult) {
-        return logBuilder(PrettyMessageBuilder.getTestDescription(iTestResult));
+        return logBuilder(MessageBuilder.getTestDescription(iTestResult));
     }
 
     @Attachment(value = "Cucumber scenario FAIL logs", type = "text/plain")
@@ -208,6 +184,21 @@ public class TestEnvironment {
         ContextInjection.failedTestsAmount = 0;
         TestNGListener.passedTests.clear();
         TestNGListener.failedTests.clear();
+    }
+
+    protected enum Timeouts {
+        SCRIPT_TIMEOUT(15),
+        PAGE_LOAD_TIMEOUT(30),
+        FIND_ELEMENT_TIMEOUT(15),
+        CLICK_TIMEOUT(15),
+        ATTRIBUTE_TIMEOUT(15),
+        VISIBLE_TIMEOUT(15);
+
+        public final int value;
+
+        Timeouts(int value) {
+            this.value = value;
+        }
     }
 
     protected void displayWebDriverManagerBrowsersVersions(Boolean printStatuses) {

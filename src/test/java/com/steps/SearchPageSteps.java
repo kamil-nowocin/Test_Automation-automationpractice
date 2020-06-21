@@ -1,5 +1,6 @@
 package com.steps;
 
+import com.buildSettings.ContextInjection;
 import com.buildSettings.TestCommons;
 import com.buildSettings.TestEnvironment;
 import com.google.common.collect.Ordering;
@@ -31,18 +32,18 @@ public class SearchPageSteps extends TestEnvironment {
     @When("I search for phrase {string}")
     public void iSearchForPhrase(String searchPhrase) throws Throwable {
         //ACT//
-        mainPage.searchBoxInput.sendKeys(searchPhrase);
+        testCommons.customSendKeys(mainPage.searchBoxInput, searchPhrase);
         logger.info(String.format("User search for: \"%S\"", searchPhrase));
 
         //ASSERT//
         Assert.assertEquals(mainPage.searchBoxInput.getAttribute("value").toLowerCase(),
-                searchPhrase.toLowerCase(), VALUE_ERROR);
+                searchPhrase.toLowerCase(), ContextInjection.VALUE_ERROR);
     }
 
     @Step("I click on search icon")
     @And("I click on search icon")
     public void iClickOnSearchIcon() throws Throwable {
-        mainPage.searchBoxSubmit.click();
+        testCommons.customClick(mainPage.searchBoxSubmit);
     }
 
     @Step("I can see numbers of results equals to *{0}*")
@@ -53,13 +54,13 @@ public class SearchPageSteps extends TestEnvironment {
 
         //ACT//
         if (expectedCountOfResults.equals("0")) {
-            Assert.assertTrue(testCommons.waitForElementToBeDisplayed(5, searchPage.noResultsWereFoundHeader),
-                    String.format(VIEW_ERROR, "No results were found header"));
+            Assert.assertTrue(testCommons.waitForElementToBeVisible(searchPage.noResultsWereFoundHeader),
+                    String.format(ContextInjection.VIEW_ERROR, "No results were found header"));
         }
         logger.info(String.format("Found results: \"%S\", expected: \"%S\"", actualCountOfResults, expectedCountOfResults));
 
         //ASSERT//
-        Assert.assertEquals(actualCountOfResults, expectedCountOfResults, String.format(RESULTS_ERROR,
+        Assert.assertEquals(actualCountOfResults, expectedCountOfResults, String.format(ContextInjection.RESULTS_ERROR,
                 actualCountOfResults, expectedCountOfResults));
     }
 
@@ -75,12 +76,12 @@ public class SearchPageSteps extends TestEnvironment {
                 for (String singlePhrase : listOfSearchedPhrases) {
 
                     //ASSERT//
-                    Assert.assertTrue(productName.getText().toLowerCase().contains(singlePhrase.toLowerCase()), SEARCH_ERROR);
+                    Assert.assertTrue(productName.getText().toLowerCase().contains(singlePhrase.toLowerCase()), ContextInjection.SEARCH_ERROR);
                 }
             }
         } else {
-            Assert.assertTrue(testCommons.waitForElementToBeDisplayed(5, searchPage.noResultsWereFoundHeader),
-                    String.format(VIEW_ERROR, "No result header"));
+            Assert.assertTrue(testCommons.waitForElementToBeVisible(searchPage.noResultsWereFoundHeader),
+                    String.format(ContextInjection.VIEW_ERROR, "No result header"));
         }
     }
 
@@ -102,12 +103,12 @@ public class SearchPageSteps extends TestEnvironment {
                 testCommons.selectFromDropdownByValue("name:desc", searchPage.sortByDropdown);
                 break;
             default:
-                throw new IllegalStateException(String.format(INPUT_ERROR, sortBy.toUpperCase()));
+                throw new IllegalStateException(String.format(ContextInjection.INPUT_ERROR, sortBy.toUpperCase()));
         }
         logger.info(String.format("Chosen sort option: \"%S\"", sortBy));
 
         //ASSERT//
-        Assert.assertEquals(searchPage.readSortByDropdown.getText().toLowerCase(), sortBy.toLowerCase(), VALUE_ERROR);
+        Assert.assertEquals(searchPage.readSortByDropdown.getText().toLowerCase(), sortBy.toLowerCase(), ContextInjection.VALUE_ERROR);
     }
 
     @Step("I can see that results are correctly sorted by *{0}*")
@@ -124,31 +125,31 @@ public class SearchPageSteps extends TestEnvironment {
                     arrayList.add(productPrices.getText().replaceAll("[^$0-9.]", ""));
                 }
                 List<String> lowestPriceList = Ordering.natural().sortedCopy(arrayList);
-                Assert.assertEquals(arrayList, lowestPriceList, String.format(SORTING_ERROR, sortedBy));
+                Assert.assertEquals(arrayList, lowestPriceList, String.format(ContextInjection.SORTING_ERROR, sortedBy));
                 break;
             case "price: highest first":
                 for (WebElement productPrices : searchPage.productPrices) {
                     arrayList.add(productPrices.getText().replaceAll("[^$0-9.]", ""));
                 }
                 List<String> highestPriceList = Ordering.natural().reverse().sortedCopy(arrayList);
-                Assert.assertEquals(arrayList, highestPriceList, String.format(SORTING_ERROR, sortedBy));
+                Assert.assertEquals(arrayList, highestPriceList, String.format(ContextInjection.SORTING_ERROR, sortedBy));
                 break;
             case "product name: a to z":
                 for (WebElement productName : searchPage.productNames) {
                     arrayList.add(productName.getText());
                 }
                 List<String> sortedNames = Ordering.natural().sortedCopy(arrayList);
-                Assert.assertEquals(arrayList, sortedNames, String.format(SORTING_ERROR, sortedBy));
+                Assert.assertEquals(arrayList, sortedNames, String.format(ContextInjection.SORTING_ERROR, sortedBy));
                 break;
             case "product name: z to a":
                 for (WebElement productName : searchPage.productNames) {
                     arrayList.add(productName.getText());
                 }
                 List<String> reverseSortedNames = Ordering.natural().reverse().sortedCopy(arrayList);
-                Assert.assertEquals(arrayList, reverseSortedNames, String.format(SORTING_ERROR, sortedBy));
+                Assert.assertEquals(arrayList, reverseSortedNames, String.format(ContextInjection.SORTING_ERROR, sortedBy));
                 break;
             default:
-                throw new IllegalStateException(String.format(INPUT_ERROR, sortedBy.toUpperCase()));
+                throw new IllegalStateException(String.format(ContextInjection.INPUT_ERROR, sortedBy.toUpperCase()));
         }
     }
 }

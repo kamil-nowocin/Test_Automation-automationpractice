@@ -3,6 +3,7 @@ package com.steps;
 import com.DriverFactory;
 import com.buildSettings.ContextInjection;
 import com.buildSettings.TestCommons;
+import com.buildSettings.TestEnvironment;
 import com.google.inject.Inject;
 import com.pages.ProductDetailsPage;
 import com.pages.ShoppingCartSummaryPage;
@@ -24,7 +25,7 @@ import java.util.List;
  * @author kamil.nowocin
  **/
 
-public class ShoppingLoggedUserSteps extends DriverFactory {
+public class ShoppingLoggedUserSteps extends TestEnvironment {
 
     private final MainPage mainPage = new MainPage();
     private final TestCommons testCommons = new TestCommons();
@@ -44,22 +45,22 @@ public class ShoppingLoggedUserSteps extends DriverFactory {
         //ACT//
         switch (subMenuCategory.toLowerCase()) {
             case "women":
-                mainPage.subMenuWomen.click();
+                testCommons.customClick(mainPage.subMenuWomen);
                 break;
             case "dress":
-                mainPage.subMenuDresses.click();
+                testCommons.customClick(mainPage.subMenuDresses);
                 break;
             case "t-shirts":
-                mainPage.subMenuTshirts.click();
+                testCommons.customClick(mainPage.subMenuTshirts);
                 break;
             default:
-                throw new IllegalStateException(String.format(INPUT_ERROR, subMenuCategory.toUpperCase()));
+                throw new IllegalStateException(String.format(ContextInjection.INPUT_ERROR, subMenuCategory.toUpperCase()));
         }
         logger.info(String.format("User clicked on: \"%S\" submenu category", subMenuCategory));
 
         //ASSERT//
         Assert.assertEquals(mainPage.subMenuChosenCategory.getText().replaceAll
-                ("\\s+", "").toLowerCase(), subMenuCategory.toLowerCase(), VALUE_ERROR);
+                ("\\s+", "").toLowerCase(), subMenuCategory.toLowerCase(), ContextInjection.VALUE_ERROR);
     }
 
     @Step("I click on following product *{0}*")
@@ -71,11 +72,11 @@ public class ShoppingLoggedUserSteps extends DriverFactory {
                 ("//div[@id='center_column']//a[@class='product-name' and contains(text(),'" + productName + "')]"));
 
         //ACT//
-        whichProductToClick.click();
+        testCommons.customClick(whichProductToClick);
         logger.info(String.format("User clicked on product: \"%S\"", productName));
 
         //ASSERT//
-        Assert.assertEquals(productDetailsPage.productName.getText().toLowerCase(), productName.toLowerCase(), VALUE_ERROR);
+        Assert.assertEquals(productDetailsPage.productName.getText().toLowerCase(), productName.toLowerCase(), ContextInjection.VALUE_ERROR);
     }
 
     @Step("I choose following details of my order")
@@ -89,35 +90,35 @@ public class ShoppingLoggedUserSteps extends DriverFactory {
         productDetailsPage.quantityInput.clear();
 
         //ACT//
-        productDetailsPage.quantityInput.sendKeys(productQuantity);
+        testCommons.customSendKeys(productDetailsPage.quantityInput, productQuantity);
         testCommons.selectFromDropdownByText(productSize, productDetailsPage.sizeDropdown);
         switch (productColor.toLowerCase()) {
             case "orange":
-                productDetailsPage.orangeColorButton.click();
+                testCommons.customClick(productDetailsPage.orangeColorButton);
                 break;
             case "blue":
-                productDetailsPage.blueColorButton.click();
+                testCommons.customClick(productDetailsPage.blueColorButton);
                 break;
             case "white":
-                productDetailsPage.whiteColorButton.click();
+                testCommons.customClick(productDetailsPage.whiteColorButton);
                 break;
             case "black":
-                productDetailsPage.blackColorButton.click();
+                testCommons.customClick(productDetailsPage.blackColorButton);
                 break;
             case "beige":
-                productDetailsPage.beigeColorButton.click();
+                testCommons.customClick(productDetailsPage.beigeColorButton);
                 break;
             case "pink":
-                productDetailsPage.pinkColorButton.click();
+                testCommons.customClick(productDetailsPage.pinkColorButton);
                 break;
             case "green":
-                productDetailsPage.greenColorButton.click();
+                testCommons.customClick(productDetailsPage.greenColorButton);
                 break;
             case "yellow":
-                productDetailsPage.yellowColorButton.click();
+                testCommons.customClick(productDetailsPage.yellowColorButton);
                 break;
             default:
-                throw new IllegalStateException(String.format(INPUT_ERROR, productColor.toUpperCase()));
+                throw new IllegalStateException(String.format(ContextInjection.INPUT_ERROR, productColor.toUpperCase()));
         }
         logger.info(String.format("Chosen product details:\n > Quantity: \"%S\"\n > Size: \"%S\"\n > Color: \"%S\"",
                 productQuantity, productSize, productColor));
@@ -130,16 +131,16 @@ public class ShoppingLoggedUserSteps extends DriverFactory {
 
         //ASSERT//
         Assert.assertEquals(productDetailsPage.readSizeDropdown.getText().toLowerCase(),
-                productSize.toLowerCase(), VALUE_ERROR);
+                productSize.toLowerCase(), ContextInjection.VALUE_ERROR);
         testCommons.sleep(1);//TODO
         Assert.assertEquals(productDetailsPage.readChosenColor.getAttribute("title").toLowerCase(),
-                productColor.toLowerCase(), VALUE_ERROR);
+                productColor.toLowerCase(), ContextInjection.VALUE_ERROR);
     }
 
     @Step("I click on Add To Cart button")
     @When("I click on Add To Cart button")
     public void iClickOnAddToCartButton() throws Throwable {
-        productDetailsPage.addToCartButton.click();
+        testCommons.customClick(productDetailsPage.addToCartButton);
     }
 
     @Step("I can see modal where I am able to see detailed data about my purchase")
@@ -149,39 +150,39 @@ public class ShoppingLoggedUserSteps extends DriverFactory {
         orderCalculations();
 
         //ASSERT//
-        Assert.assertTrue(testCommons.waitForElementToBeDisplayed(5, productDetailsPage.popupPaneProductDetails),
-                String.format(VIEW_ERROR, "Product details popup"));
-        Assert.assertTrue(testCommons.waitForElementToBeDisplayed(5, productDetailsPage.popupPaneAddedSuccessfully),
-                String.format(VIEW_ERROR, "Product added successfully header"));
+        Assert.assertTrue(testCommons.waitForElementToBeVisible(productDetailsPage.popupPaneProductDetails),
+                String.format(ContextInjection.VIEW_ERROR, "Product details popup"));
+        Assert.assertTrue(testCommons.waitForElementToBeVisible(productDetailsPage.popupPaneAddedSuccessfully),
+                String.format(ContextInjection.VIEW_ERROR, "Product added successfully header"));
 
         //ASSERT - POPUP LEFT SIDE//
         Assert.assertEquals(productDetailsPage.popupPaneCartProductName.getText().toLowerCase(),
-                contextInjection.cartProductName.toLowerCase(), VALUE_ERROR);
+                contextInjection.cartProductName.toLowerCase(), ContextInjection.VALUE_ERROR);
         Assert.assertEquals(Double.parseDouble(productDetailsPage.popupPaneCartProductQuantity.getText()),
-                contextInjection.productQuantity, VALUE_ERROR);
+                contextInjection.productQuantity, ContextInjection.VALUE_ERROR);
         Assert.assertEquals(productDetailsPage.popupPaneCartProductPrice.getText().replaceAll("[^$0-9.]", ""),
-                $decimalFormat.format(contextInjection.cartProductPrice), VALUE_ERROR);
+                DOLLAR_DECIMAL_FORMAT.format(contextInjection.cartProductPrice), ContextInjection.VALUE_ERROR);
 
         //ASSERT - POPUP RIGHT SIDE//
         Assert.assertEquals(productDetailsPage.popupPaneCartTotalProductsPrice.getText().replaceAll("[^$0-9.]", ""),
-                $decimalFormat.format(contextInjection.cartTotalProductsPrice), VALUE_ERROR);
+                DOLLAR_DECIMAL_FORMAT.format(contextInjection.cartTotalProductsPrice), ContextInjection.VALUE_ERROR);
         Assert.assertEquals(productDetailsPage.popupPaneCartTotalShippingPrice.getText().replaceAll("[^$0-9.]", ""),
-                $decimalFormat.format(ContextInjection.SHIPPING_PRICE), VALUE_ERROR);
+                DOLLAR_DECIMAL_FORMAT.format(ContextInjection.SHIPPING_PRICE), ContextInjection.VALUE_ERROR);
         Assert.assertEquals(productDetailsPage.popupPaneCartTotalPrice.getText().replaceAll("[^$0-9.]", ""),
-                $decimalFormat.format(contextInjection.cartTotalPrice), VALUE_ERROR);
+                DOLLAR_DECIMAL_FORMAT.format(contextInjection.cartTotalPrice), ContextInjection.VALUE_ERROR);
     }
 
     @Step("I click on Proceed To Checkout button (from modal)")
     @And("I click on Proceed To Checkout button \\(from modal)")
     public void iClickOnProceedToCheckoutButtonFromModal() throws Throwable {
-        productDetailsPage.proceedToCheckoutButton.click();
+        testCommons.customClick(productDetailsPage.proceedToCheckoutButton);
     }
 
     @Step("I can see Shopping-Cart *{0}* form with valid information")
     @And("I can see Shopping-Cart {string} form with valid information")
     public void iCanSeeShoppingCartFormWithValidInformation(String shoppingSummaryTab) throws Throwable {
         //ARRANGE//
-        testCommons.waitForElementToBeVisible(5, shoppingCartSummaryPage.navigationTopLabelHeader);
+        testCommons.waitForElementToBeVisible(shoppingCartSummaryPage.navigationTopLabelHeader);
         final String navigationTopLabelHeaderText = shoppingCartSummaryPage.navigationTopLabelHeader.getText();
 
         //ACT//
@@ -189,7 +190,7 @@ public class ShoppingLoggedUserSteps extends DriverFactory {
             case "your shopping cart":
                 //ASSERT//
                 Assert.assertEquals(navigationTopLabelHeaderText.toLowerCase(),
-                        ContextInjection.LABEL_YOUR_SHOPPING_CART.toLowerCase(), VALUE_ERROR);
+                        ContextInjection.LABEL_YOUR_SHOPPING_CART.toLowerCase(), ContextInjection.VALUE_ERROR);
 
 //                TODO - clean assertions(proper refactor)
 //                //ASSERT - PRODUCTS IN CART//
@@ -205,69 +206,69 @@ public class ShoppingLoggedUserSteps extends DriverFactory {
 
                 //ASSERT - CART SUMMARY//
                 Assert.assertEquals(shoppingCartSummaryPage.totalProductsPrice.getText().replaceAll("[^$0-9.]", ""),
-                        $decimalFormat.format(contextInjection.cartTotalProductsPrice), VALUE_ERROR);
+                        DOLLAR_DECIMAL_FORMAT.format(contextInjection.cartTotalProductsPrice), ContextInjection.VALUE_ERROR);
                 Assert.assertEquals(shoppingCartSummaryPage.totalOrderShipping.getText().replaceAll("[^$0-9.]", ""),
-                        $decimalFormat.format(ContextInjection.SHIPPING_PRICE), VALUE_ERROR);
+                        DOLLAR_DECIMAL_FORMAT.format(ContextInjection.SHIPPING_PRICE), ContextInjection.VALUE_ERROR);
                 Assert.assertEquals(shoppingCartSummaryPage.totalOrderPriceWithoutTax.getText().replaceAll("[^$0-9.]", ""),
-                        $decimalFormat.format(contextInjection.totalOrderPriceWithoutTax), VALUE_ERROR);
+                        DOLLAR_DECIMAL_FORMAT.format(contextInjection.totalOrderPriceWithoutTax), ContextInjection.VALUE_ERROR);
                 Assert.assertEquals(shoppingCartSummaryPage.totalOrderTax.getText().replaceAll("[^$0-9.]", ""),
-                        $decimalFormat.format(contextInjection.totalOrderTax), VALUE_ERROR);
+                        DOLLAR_DECIMAL_FORMAT.format(contextInjection.totalOrderTax), ContextInjection.VALUE_ERROR);
                 Assert.assertEquals(shoppingCartSummaryPage.totalOrderPriceWithTax.getText().replaceAll("[^$0-9.]", ""),
-                        $decimalFormat.format(contextInjection.totalOrderPriceWithTax), VALUE_ERROR);
+                        DOLLAR_DECIMAL_FORMAT.format(contextInjection.totalOrderPriceWithTax), ContextInjection.VALUE_ERROR);
                 break;
             case "addresses":
                 //ASSERT//
                 Assert.assertEquals(navigationTopLabelHeaderText.toLowerCase(),
-                        ContextInjection.LABEL_ADDRESSES.toLowerCase(), VALUE_ERROR);
+                        ContextInjection.LABEL_ADDRESSES.toLowerCase(), ContextInjection.VALUE_ERROR);
 
                 Assert.assertEquals(shoppingCartSummaryPage.readCustomerFirstLastName.getText().toLowerCase(),
-                        ContextInjection.DEFAULT_CUSTOMER_FIRST_LAST_NAME.toLowerCase(), VALUE_ERROR);
+                        ContextInjection.DEFAULT_CUSTOMER_FIRST_LAST_NAME.toLowerCase(), ContextInjection.VALUE_ERROR);
                 Assert.assertEquals(shoppingCartSummaryPage.readCustomerCompanyName.getText().toLowerCase(),
-                        ContextInjection.DEFAULT_CUSTOMER_COMPANY_NAME.toLowerCase(), VALUE_ERROR);
+                        ContextInjection.DEFAULT_CUSTOMER_COMPANY_NAME.toLowerCase(), ContextInjection.VALUE_ERROR);
                 Assert.assertEquals(shoppingCartSummaryPage.readCustomerAddress.getText().toLowerCase(),
-                        ContextInjection.DEFAULT_CUSTOMER_ADDRESS.toLowerCase(), VALUE_ERROR);
+                        ContextInjection.DEFAULT_CUSTOMER_ADDRESS.toLowerCase(), ContextInjection.VALUE_ERROR);
                 Assert.assertEquals(shoppingCartSummaryPage.readCustomerCountry.getText().toLowerCase(),
-                        ContextInjection.DEFAULT_CUSTOMER_COUNTRY.toLowerCase(), VALUE_ERROR);
+                        ContextInjection.DEFAULT_CUSTOMER_COUNTRY.toLowerCase(), ContextInjection.VALUE_ERROR);
                 Assert.assertEquals(shoppingCartSummaryPage.readCustomerMobilePhone.getText().toLowerCase(),
-                        ContextInjection.DEFAULT_CUSTOMER_MOBILE_PHONE.toLowerCase(), VALUE_ERROR);
+                        ContextInjection.DEFAULT_CUSTOMER_MOBILE_PHONE.toLowerCase(), ContextInjection.VALUE_ERROR);
                 break;
             case "shipping":
                 //ASSERT//
                 Assert.assertEquals(navigationTopLabelHeaderText.toLowerCase(),
-                        ContextInjection.LABEL_SHIPPING.toLowerCase(), VALUE_ERROR);
+                        ContextInjection.LABEL_SHIPPING.toLowerCase(), ContextInjection.VALUE_ERROR);
                 break;
             case "your payment method":
                 //ASSERT//
                 Assert.assertEquals(navigationTopLabelHeaderText.toLowerCase(),
-                        ContextInjection.LABEL_YOUR_PAYMENT_METHOD.toLowerCase(), VALUE_ERROR);
+                        ContextInjection.LABEL_YOUR_PAYMENT_METHOD.toLowerCase(), ContextInjection.VALUE_ERROR);
 
                 Assert.assertEquals(shoppingCartSummaryPage.totalOrderPriceWithTax.getText().replaceAll("[^$0-9.]", ""),
-                        $decimalFormat.format(contextInjection.totalOrderPriceWithTax), VALUE_ERROR);
+                        DOLLAR_DECIMAL_FORMAT.format(contextInjection.totalOrderPriceWithTax), ContextInjection.VALUE_ERROR);
                 break;
             case "order confirmation":
                 //ASSERT//
                 Assert.assertEquals(navigationTopLabelHeaderText.toLowerCase(),
-                        ContextInjection.LABEL_ORDER_CONFIRMATION.toLowerCase(), VALUE_ERROR);
+                        ContextInjection.LABEL_ORDER_CONFIRMATION.toLowerCase(), ContextInjection.VALUE_ERROR);
 
                 if (contextInjection.paymentType.toLowerCase().equals("pay by check")) {
-                    Assert.assertTrue(testCommons.waitForElementToBeDisplayed(5, shoppingCartSummaryPage.paymentByCheckSuccessful),
-                            String.format(VIEW_ERROR, "Order confirmation header"));
+                    Assert.assertTrue(testCommons.waitForElementToBeVisible(shoppingCartSummaryPage.paymentByCheckSuccessful),
+                            String.format(ContextInjection.VIEW_ERROR, "Order confirmation header"));
                 } else if (contextInjection.paymentType.toLowerCase().equals("pay by bank wire")) {
-                    Assert.assertTrue(testCommons.waitForElementToBeDisplayed(5, shoppingCartSummaryPage.paymentByBankWireSuccessful),
-                            String.format(VIEW_ERROR, "Order confirmation header"));
+                    Assert.assertTrue(testCommons.waitForElementToBeVisible(shoppingCartSummaryPage.paymentByBankWireSuccessful),
+                            String.format(ContextInjection.VIEW_ERROR, "Order confirmation header"));
                 } else {
                     Assert.fail(contextInjection.paymentType + ANSI_RED + "Something went wrong! Check your payment type." + ANSI_RESET);
                 }
                 break;
             default:
-                throw new IllegalStateException(String.format(INPUT_ERROR, shoppingSummaryTab.toUpperCase()));
+                throw new IllegalStateException(String.format(ContextInjection.INPUT_ERROR, shoppingSummaryTab.toUpperCase()));
         }
     }
 
     @Step("I click on Proceed To Checkout button (from shopping-cart)")
     @And("I click on Proceed To Checkout button \\(from shopping-cart)")
     public void iClickOnProceedToCheckoutButtonFromShoppingCart() throws Throwable {
-        shoppingCartSummaryPage.proceedToCheckoutButton.click();
+        testCommons.customClick(shoppingCartSummaryPage.proceedToCheckoutButton);
     }
 
     @Step("I write comment about my order")
@@ -277,12 +278,12 @@ public class ShoppingLoggedUserSteps extends DriverFactory {
         final String orderComment = faker.backToTheFuture().quote();
 
         //ACT//
-        shoppingCartSummaryPage.orderCommentInput.sendKeys(orderComment);
+        testCommons.customSendKeys(shoppingCartSummaryPage.orderCommentInput, orderComment);
         logger.info(String.format("User order comment: \"%S\"", orderComment.toUpperCase()));
 
         //ASSERT//
         Assert.assertEquals(shoppingCartSummaryPage.orderCommentInput.getAttribute("value").toLowerCase(),
-                orderComment.toLowerCase(), VALUE_ERROR);
+                orderComment.toLowerCase(), ContextInjection.VALUE_ERROR);
     }
 
     @Step("I choose shipping option *{0}*")
@@ -292,7 +293,7 @@ public class ShoppingLoggedUserSteps extends DriverFactory {
         switch (shippingOption.toLowerCase()) {
             case "my carrier":
                 if (!shoppingCartSummaryPage.myCarrierRadioButton.isSelected()) {
-                    shoppingCartSummaryPage.myCarrierRadioButton.click();
+                    testCommons.customClick(shoppingCartSummaryPage.myCarrierRadioButton);
                 }
 
                 //ASSERT//
@@ -301,13 +302,13 @@ public class ShoppingLoggedUserSteps extends DriverFactory {
             case "":
                 break;
             default:
-                throw new IllegalStateException(String.format(INPUT_ERROR, shippingOption.toUpperCase()));
+                throw new IllegalStateException(String.format(ContextInjection.INPUT_ERROR, shippingOption.toUpperCase()));
         }
         logger.info(String.format("User chosen shipping method: \"%S\"", shippingOption.toUpperCase()));
 
         //ASSERT//
         Assert.assertEquals(Double.parseDouble(shoppingCartSummaryPage.readMyCarrierPrice.getText()
-                .replaceAll("[^0-9.]", "")), ContextInjection.SHIPPING_PRICE, VALUE_ERROR);
+                .replaceAll("[^0-9.]", "")), ContextInjection.SHIPPING_PRICE, ContextInjection.VALUE_ERROR);
     }
 
     @Step("I click on Terms of Service checkbox")
@@ -335,13 +336,13 @@ public class ShoppingLoggedUserSteps extends DriverFactory {
         //ACT//
         switch (contextInjection.paymentType.toLowerCase()) {
             case "pay by check":
-                shoppingCartSummaryPage.chequePaymentBox.click();
+                testCommons.customClick(shoppingCartSummaryPage.chequePaymentBox);
                 break;
             case "pay by bank wire":
-                shoppingCartSummaryPage.bankWirePaymentBox.click();
+                testCommons.customClick(shoppingCartSummaryPage.bankWirePaymentBox);
                 break;
             default:
-                throw new IllegalStateException(String.format(INPUT_ERROR, contextInjection.paymentType.toUpperCase()));
+                throw new IllegalStateException(String.format(ContextInjection.INPUT_ERROR, contextInjection.paymentType.toUpperCase()));
         }
         logger.info(String.format("User chosen payment method: \"%S\"", contextInjection.paymentType));
     }
@@ -349,7 +350,7 @@ public class ShoppingLoggedUserSteps extends DriverFactory {
     @Step("I click on I Confirm My Order button")
     @And("I click on I Confirm My Order button")
     public void iClickOnIConfirmMyOrderButton() throws Throwable {
-        shoppingCartSummaryPage.iConfirmMyOrderButton.click();
+        testCommons.customClick(shoppingCartSummaryPage.iConfirmMyOrderButton);
     }
 
     private void orderCalculations() {

@@ -19,14 +19,15 @@ Feature: As a user I would like to be redirected to social media pages from auto
 # [ZEPHYR] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-0043
 # [ZEPHYR] https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE-0044
   @non-smoke @minor @regression
-  Scenario Outline:[US-777]/[1] I click on social media "<logo name>" logo
+  Scenario Outline:[US-777]/[1] I click on social media "<platform>" logo
     Given I can see automationpractice.com website
-    When I scroll the website until I can see "<logo name>" logo
-    And I click on "<logo name>" logo button
-    Then I am redirected to Selenium "<logo name>" profile
+    When I scroll the website until I can see "<platform>" logo
+    And I click on "<platform>" logo button
+    Then I am redirected to Selenium "<platform>" profile
+
     Examples: SCENARIO OUTLINE DATA
-      | logo name |
-      | Facebook  |
-      | Twitter   |
-      | YouTube   |
-      | Google    |
+      | platform |
+      | Facebook |
+      | Twitter  |
+      | YouTube  |
+      | Google   |

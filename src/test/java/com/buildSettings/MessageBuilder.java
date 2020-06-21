@@ -1,7 +1,6 @@
-package com.buildSettings.buildPrettyMessage;
+package com.buildSettings;
 
 import com.DriverFactory;
-import com.buildSettings.TestEnvironment;
 import io.cucumber.java.Scenario;
 import org.apache.commons.lang3.StringUtils;
 import org.testng.ITestContext;
@@ -13,7 +12,7 @@ import org.testng.ITestResult;
  * @author kamil.nowocin
  **/
 
-public class PrettyMessageBuilder extends TestEnvironment {
+public class MessageBuilder extends TestEnvironment {
 
     public static String getXmlSuiteName(ITestContext iTestContext) {
         return iTestContext.getCurrentXmlTest().getSuite().getName();

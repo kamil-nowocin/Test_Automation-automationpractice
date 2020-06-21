@@ -133,9 +133,10 @@ public class DriverFactory extends TestEnvironment {
             default:
                 throw new IllegalStateException("This browser isn't supported yet! Sorry...");
         }
-        getDriver().manage().timeouts().implicitlyWait(TIMEOUT, TimeUnit.SECONDS);
-        getDriver().manage().timeouts().pageLoadTimeout(TIMEOUT, TimeUnit.SECONDS);
-        getDriver().manage().timeouts().setScriptTimeout(TIMEOUT, TimeUnit.SECONDS);
+        //NOT THE BEST PRACTICE TO MIX IMPLICITLY WITH EXPLICITLY WAIT
+        //getDriver().manage().timeouts().implicitlyWait(Timeouts.FIND_ELEMENT_TIMEOUT.value, TimeUnit.SECONDS);
+        getDriver().manage().timeouts().pageLoadTimeout(Timeouts.PAGE_LOAD_TIMEOUT.value, TimeUnit.SECONDS);
+        getDriver().manage().timeouts().setScriptTimeout(Timeouts.SCRIPT_TIMEOUT.value, TimeUnit.SECONDS);
         getDriver().manage().deleteAllCookies();
         getDriver().manage().window().maximize();
     }

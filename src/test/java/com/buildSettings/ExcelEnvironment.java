@@ -17,13 +17,11 @@ import java.io.FileOutputStream;
 
 public class ExcelEnvironment extends TestEnvironment {
 
-    private static String testDataExcelPath = null;
-
     private static XSSFRow excelRow;
+    public static int excelRowNumber;
     private static XSSFSheet excelSheet;
     private static XSSFWorkbook excelWorkBook;
-
-    public static int excelRowNumber;
+    private static String testDataExcelPath = null;
 
     public static final String TEST_DATA_EXCEL_FILE_NAME = "testdata.xlsx";
     public static final String TEST_DATA_EXCEL_SHEET_NAME = "automationData";

@@ -28,40 +28,30 @@ public class TestCommons extends TestEnvironment {
     /**
      * WAIT METHODS
      **/
-    public void waitForElementToBeClickable(int timeInSeconds, WebElement webElement) throws
+    public void waitForElementToBeClickable(WebElement webElement) throws
             NoSuchElementException, WebDriverException {
         try {
-            WebDriverWait wait = new WebDriverWait(DriverFactory.getDriver(), timeInSeconds);
+            WebDriverWait wait = new WebDriverWait(DriverFactory.getDriver(), Timeouts.CLICK_TIMEOUT.value);
             wait.until(ExpectedConditions.elementToBeClickable(webElement));
         } catch (NoSuchElementException e) {
             logger.error(String.format("Couldn't click on element \"%S\" !", webElement));
         }
     }
 
-    public void waitForElementToBeVisible(int timeInSeconds, WebElement webElement) throws
+    public void waitForElementToHaveAttribute(WebElement webElement, String attribute, String value) throws
             NoSuchElementException, WebDriverException {
         try {
-            WebDriverWait wait = new WebDriverWait(DriverFactory.getDriver(), timeInSeconds);
-            wait.until(ExpectedConditions.visibilityOf(webElement));
-        } catch (NoSuchElementException e) {
-            logger.error(String.format("Element wasn't visible \"%S\" !", webElement));
-        }
-    }
-
-    public void waitForElementToHaveAttribute(int timeInSeconds, WebElement webElement, String attribute, String value) throws
-            NoSuchElementException, WebDriverException {
-        try {
-            WebDriverWait wait = new WebDriverWait(DriverFactory.getDriver(), timeInSeconds);
+            WebDriverWait wait = new WebDriverWait(DriverFactory.getDriver(), Timeouts.ATTRIBUTE_TIMEOUT.value);
             wait.until(ExpectedConditions.attributeContains(webElement, attribute, value));
         } catch (NotFoundException e) {
             logger.error(String.format("Could't find attribute \"%S\" on element \"%S\" !", attribute, webElement));
         }
     }
 
-    public boolean waitForElementToBeDisplayed(int timeInSeconds, WebElement webElement) throws
+    public boolean waitForElementToBeVisible(WebElement webElement) throws
             NoSuchElementException, WebDriverException {
         try {
-            WebDriverWait wait = new WebDriverWait(DriverFactory.getDriver(), timeInSeconds);
+            WebDriverWait wait = new WebDriverWait(DriverFactory.getDriver(), Timeouts.VISIBLE_TIMEOUT.value);
             wait.until(ExpectedConditions.visibilityOf(webElement));
             return true;
         } catch (NoSuchElementException e) {
@@ -126,14 +116,9 @@ public class TestCommons extends TestEnvironment {
     /**
      * GENERAL METHODS
      **/
-    public String errorValidator(WebElement webElement) {
-        waitForElementToBeDisplayed(TIMEOUT, webElement);
-        return webElement.getText();
-    }
-
     public boolean isPageReady() {
         try {
-            WebDriverWait wait = new WebDriverWait(DriverFactory.getDriver(), TIMEOUT);
+            WebDriverWait wait = new WebDriverWait(DriverFactory.getDriver(), Timeouts.PAGE_LOAD_TIMEOUT.value);
             wait.until(webDriver ->
                     ((JavascriptExecutor) webDriver).executeScript("return document.readyState").equals("complete"));
         } catch (WebDriverException e) {
@@ -141,6 +126,16 @@ public class TestCommons extends TestEnvironment {
             return false;
         }
         return true;
+    }
+
+    public void customClick(WebElement webElement) {
+        waitForElementToBeClickable(webElement);
+        webElement.click();
+    }
+
+    public void customSendKeys(WebElement webElement, String whatToSend) {
+        waitForElementToBeVisible(webElement);
+        webElement.sendKeys(whatToSend);
     }
 
     public static void networkThrottling(boolean enableThrottling) throws IOException {
@@ -158,6 +153,7 @@ public class TestCommons extends TestEnvironment {
     }
 
     public void scrollWebsiteToElement(WebElement webElement) {
+        waitForElementToBeVisible(webElement);
         JavascriptExecutor js = (JavascriptExecutor) DriverFactory.getDriver();
         js.executeScript("arguments[0].scrollIntoView(true);", webElement);
     }
