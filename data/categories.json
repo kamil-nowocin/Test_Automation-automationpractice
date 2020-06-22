@@ -6,13 +6,13 @@
       "name" : "null",
       "children" : [ {
         "name" : "As a developer I'd like to see working POC with .xlsx file",
-        "uid" : "e56e1a97cd81982c",
+        "uid" : "12b13cfc61698e83",
         "parentUid" : "666d1a31450af3ae8459f14f07f9a1b4",
         "status" : "failed",
         "time" : {
-          "start" : 1592754943163,
-          "stop" : 1592754943727,
-          "duration" : 564
+          "start" : 1592841353680,
+          "stop" : 1592841354123,
+          "duration" : 443
         },
         "flaky" : false,
         "newFailed" : false,
@@ -20,41 +20,143 @@
       } ],
       "uid" : "666d1a31450af3ae8459f14f07f9a1b4"
     }, {
-      "name" : "Results which have been found didn't match expected sorting result PRICE: HIGHEST FIRST: Lists differ at element [1]: $30.50 != $28.98 expected [$30.50] but found [$28.98]",
+      "name" : "Upssss, something went really bad! Even Michael Scofield couldn't have predicted that error! :) expected [http://automationpractice.com/index.php] but found [http://automationpractice.com/]",
       "children" : [ {
         "name" : "[US-555]/[7] I would like to use search box and be able to see results sorted by: \"Price: Highest first\"",
-        "uid" : "d05c96a9535c07e6",
-        "parentUid" : "3246160de76fc0de742a06aad5432502",
+        "uid" : "fb0061df48dec1bf",
+        "parentUid" : "65840e5eeda018943c4b1fa1c454a179",
         "status" : "failed",
         "time" : {
-          "start" : 1592755041495,
-          "stop" : 1592755064764,
-          "duration" : 23269
+          "start" : 1592841450756,
+          "stop" : 1592841454946,
+          "duration" : 4190
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
-      } ],
-      "uid" : "3246160de76fc0de742a06aad5432502"
-    }, {
-      "name" : "Results which have been found didn't match expected sorting result PRICE: LOWEST FIRST: Lists differ at element [2]: $28.98 != $30.50 expected [$28.98] but found [$30.50]",
-      "children" : [ {
-        "name" : "[US-555]/[8] I would like to use search box and be able to see results sorted by: \"Price: Lowest first\"",
-        "uid" : "fbde54a570b9fbb2",
-        "parentUid" : "06135fb1e9171a4c5ee185041330339b",
+      }, {
+        "name" : "[US-444]/[3] I would like to see registration error, when I don't fill email input",
+        "uid" : "4ce9fcde9e7f3ca2",
+        "parentUid" : "65840e5eeda018943c4b1fa1c454a179",
         "status" : "failed",
         "time" : {
-          "start" : 1592755085399,
-          "stop" : 1592755098764,
-          "duration" : 13365
+          "start" : 1592841553045,
+          "stop" : 1592841556088,
+          "duration" : 3043
         },
         "flaky" : false,
-        "newFailed" : false,
+        "newFailed" : true,
         "parameters" : [ ]
       } ],
-      "uid" : "06135fb1e9171a4c5ee185041330339b"
+      "uid" : "65840e5eeda018943c4b1fa1c454a179"
     } ],
     "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  }, {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //form[@id='login_form']' (tried for 15 second(s) with 500 milliseconds interval)",
+      "children" : [ {
+        "name" : "[US-111]/[1] I can log into automationpractice.com using registered email \"thor.odinson@example.com\" & password \"12345\"",
+        "uid" : "a85038c3b6f02107",
+        "parentUid" : "8980164a2496cf7fd08f01d389068844",
+        "status" : "broken",
+        "time" : {
+          "start" : 1592841445966,
+          "stop" : 1592841494098,
+          "duration" : 48132
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "8980164a2496cf7fd08f01d389068844"
+    }, {
+      "name" : "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//a[@class='account']//span\"}\n  (Session info: chrome=83.0.4103.106)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-89063f09-7069-46dc-9628-18228b6cbca2', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.0.0-1031-gcp', java.version: '14.0.1'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /tmp/.com.google.Chrome.y07jo8}, goog:chromeOptions: {debuggerAddress: localhost:45317}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: cfaafcd1faa0c80d58912bd6b7b3d2c5\n*** Element info: {Using=xpath, value=//a[@class='account']//span}",
+      "children" : [ {
+        "name" : "[US-666]/[2] I would like to buy new \"Blouse\"",
+        "uid" : "ebe3a10228f9e716",
+        "parentUid" : "19ccfc0119199c0fbf33eada33f7dfa2",
+        "status" : "broken",
+        "time" : {
+          "start" : 1592841446051,
+          "stop" : 1592841493468,
+          "duration" : 47417
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "19ccfc0119199c0fbf33eada33f7dfa2"
+    }, {
+      "name" : "Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //input[@id='email_create']' (tried for 15 second(s) with 500 milliseconds interval)",
+      "children" : [ {
+        "name" : "[US-444]/[2] I would like to see registration error, when I don't fill last name input",
+        "uid" : "1227226e0659634",
+        "parentUid" : "aba9e5c9999c7d21677ec8655b3fba9d",
+        "status" : "broken",
+        "time" : {
+          "start" : 1592841460931,
+          "stop" : 1592841512278,
+          "duration" : 51347
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "aba9e5c9999c7d21677ec8655b3fba9d"
+    }, {
+      "name" : "timeout: Timed out receiving message from renderer: 1.735\n  (Session info: chrome=83.0.4103.106)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-89063f09-7069-46dc-9628-18228b6cbca2', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.0.0-1031-gcp', java.version: '14.0.1'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /tmp/.com.google.Chrome.NN1HqI}, goog:chromeOptions: {debuggerAddress: localhost:41985}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 9da3999fe75273df367cd4607b397624",
+      "children" : [ {
+        "name" : "[US-555]/[8] I would like to use search box and be able to see results sorted by: \"Price: Lowest first\"",
+        "uid" : "aa108a7a290d8aff",
+        "parentUid" : "b7ed93c12eb473b0346dfc352a7cb3d6",
+        "status" : "broken",
+        "time" : {
+          "start" : 1592841480300,
+          "stop" : 1592841510739,
+          "duration" : 30439
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "b7ed93c12eb473b0346dfc352a7cb3d6"
+    }, {
+      "name" : "Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //form[@class='contact-form-box']' (tried for 15 second(s) with 500 milliseconds interval)",
+      "children" : [ {
+        "name" : "[US-222]/[1] I am able to send request via contact us form, all inputs are filled up",
+        "uid" : "4b31ec4a89b39844",
+        "parentUid" : "66b8be037b50792b43a09e9f30462d7b",
+        "status" : "broken",
+        "time" : {
+          "start" : 1592841504468,
+          "stop" : 1592841547926,
+          "duration" : 43458
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "66b8be037b50792b43a09e9f30462d7b"
+    }, {
+      "name" : "Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //a[@class='login']' (tried for 15 second(s) with 500 milliseconds interval)",
+      "children" : [ {
+        "name" : "[US-333]/[2] I can create an account by filling up all fields",
+        "uid" : "f0979b999c8a1159",
+        "parentUid" : "c6975f708c5cb2f305e1e5054c64a5d0",
+        "status" : "broken",
+        "time" : {
+          "start" : 1592841539897,
+          "stop" : 1592841564547,
+          "duration" : 24650
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "c6975f708c5cb2f305e1e5054c64a5d0"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
   } ],
   "name" : "categories"
 }
