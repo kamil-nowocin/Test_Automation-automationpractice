@@ -1,0 +1,31 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+15:57:53 DEBUG i.g.b.wdm.cache.ResolutionCache - Created new resolution cache file at /home/travis/.m2/repository/webdriver/resolution.properties
+15:57:53 INFO  i.g.bonigarcia.wdm.WebDriverManager - Please answer the following questionnaire based on your experience with WebDriverManager. Thanks a lot!
+15:57:53 INFO  i.g.bonigarcia.wdm.WebDriverManager - ====> http://tiny.cc/wdm-survey <====
+15:57:53 DEBUG i.g.bonigarcia.wdm.versions.Shell - Running command on the shell: [google-chrome, --version]
+15:57:54 DEBUG i.g.bonigarcia.wdm.versions.Shell - Result: Google Chrome 83.0.4103.116
+15:57:54 DEBUG i.g.b.wdm.versions.VersionDetector - Latest version of chromedriver according to https://chromedriver.storage.googleapis.com/LATEST_RELEASE_83 is 83.0.4103.39
+15:57:54 DEBUG i.g.b.wdm.versions.VersionDetector - Getting driver version for chrome83 from online versions.properties
+15:57:54 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 83.0.4103.39 (since Chrome 83 is installed in your machine)
+15:57:54 DEBUG i.g.b.wdm.cache.ResolutionCache - Storing resolution chrome=83 in cache (valid until 15:57:54 26/06/2020 UTC)
+15:57:54 DEBUG i.g.b.wdm.cache.ResolutionCache - Storing resolution chrome83=83.0.4103.39 in cache (valid until 15:57:54 26/06/2020 UTC)
+15:57:54 INFO  i.g.bonigarcia.wdm.WebDriverManager - Reading https://chromedriver.storage.googleapis.com/ to seek chromedriver
+15:57:54 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver to be downloaded chromedriver 83.0.4103.39
+15:57:54 INFO  i.g.bonigarcia.wdm.online.Downloader - Downloading https://chromedriver.storage.googleapis.com/83.0.4103.39/chromedriver_linux64.zip
+15:57:55 INFO  i.g.bonigarcia.wdm.online.Downloader - Extracting binary from compressed file chromedriver_linux64.zip
+15:57:55 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.m2/repository/webdriver/chromedriver/linux64/83.0.4103.39/chromedriver
+15:57:57 INFO  com.steps.Hooks - ================================================ TEST STARTED ================================================
+15:57:57 INFO  com.steps.Hooks - [34mTEST NAME: AS A DEVELOPER I'D LIKE TO SEE WORKING POC WITH .XLSX FILE[0m
+15:57:57 INFO  com.steps.Hooks - Chosen executor: "CHROME"
+15:57:57 INFO  com.steps.Hooks - [31mTEST RETRY (1/1): AS A DEVELOPER I'D LIKE TO SEE WORKING POC WITH .XLSX FILE[0m
+15:57:57 INFO  i.g.bonigarcia.wdm.WebDriverManager - Please answer the following questionnaire based on your experience with WebDriverManager. Thanks a lot!
+15:57:57 INFO  i.g.bonigarcia.wdm.WebDriverManager - ====> http://tiny.cc/wdm-survey <====
+15:57:57 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=83 in cache (valid until 15:57:54 26/06/2020 UTC)
+15:57:57 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 83.0.4103.39 (since Chrome 83 is installed in your machine)
+15:57:57 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 83.0.4103.39 found in cache
+15:57:57 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.m2/repository/webdriver/chromedriver/linux64/83.0.4103.39/chromedriver
+15:57:58 INFO  com.steps.Hooks - ================================================ TEST STARTED ================================================
+15:57:58 INFO  com.steps.Hooks - [34mTEST NAME: AS A DEVELOPER I'D LIKE TO SEE WORKING POC WITH .XLSX FILE[0m
+15:57:58 INFO  com.steps.Hooks - Chosen executor: "CHROME"
+15:57:58 INFO  com.steps.Hooks - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+15:57:58 ERROR com.steps.Hooks - java.lang.AssertionError: null
