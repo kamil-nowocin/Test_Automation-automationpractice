@@ -1,6 +1,6 @@
 package com.pages;
 
-import com.pages.base.MainPage;
+import com.pages.base.BasePage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -13,7 +13,7 @@ import java.util.List;
  * @author kamil.nowocin
  **/
 
-public class SearchPage extends MainPage {
+public class SearchPage extends BasePage<SearchPage> {
 
     //VIEW//
     @FindBy(how = How.XPATH, using = "//span[@class='heading-counter']")
@@ -34,4 +34,8 @@ public class SearchPage extends MainPage {
 
     @FindBy(how = How.XPATH, using = "//div[@class='right-block']//div[@class='content_price']//span[@class='price product-price']")
     public List<WebElement> productPrices;
+
+    public SearchPage() {
+        super("/index.php");
+    }
 }

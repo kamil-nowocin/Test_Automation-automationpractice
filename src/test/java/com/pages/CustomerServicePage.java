@@ -1,6 +1,6 @@
 package com.pages;
 
-import com.pages.base.MainPage;
+import com.pages.base.BasePage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -11,7 +11,7 @@ import org.openqa.selenium.support.How;
  * @author kamil.nowocin
  **/
 
-public class CustomerServicePage extends MainPage {
+public class CustomerServicePage extends BasePage<CustomerServicePage> {
 
     //VIEW//
     @FindBy(how = How.XPATH, using = "//h1[@class='page-heading bottom-indent']")
@@ -54,4 +54,8 @@ public class CustomerServicePage extends MainPage {
 
     @FindBy(how = How.XPATH, using = "//div[@class='submit']//button")
     public WebElement sendButton;
+
+    public CustomerServicePage() {
+        super("/index.php");
+    }
 }

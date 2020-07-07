@@ -22,7 +22,7 @@ import java.util.ArrayList;
 public class SocialMediaPageSteps extends TestEnvironment {
 
     private final TestCommons testCommons = new TestCommons();
-    private final SocialMediaPage socialMediaPage = new SocialMediaPage();
+    private final SocialMediaPage socialMediaPage = new SocialMediaPage().get();
 
     @Step("I scroll the website until I can see *{0}* logo")
     @When("I scroll the website until I can see {string} logo")

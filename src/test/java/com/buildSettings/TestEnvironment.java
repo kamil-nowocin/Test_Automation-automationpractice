@@ -44,7 +44,7 @@ public class TestEnvironment {
 
     protected static Faker faker = new Faker(Locale.US);
     protected static MockNeat mockNeat = MockNeat.secure();
-    protected static Logger logger = LoggerFactory.getLogger(Hooks.class);
+    public static Logger logger = LoggerFactory.getLogger(Hooks.class);
     protected static final String TODAY_DATE = new SimpleDateFormat("yyyy-MM-dd HH:ss").format(new Date());
     protected static final DecimalFormat DOLLAR_DECIMAL_FORMAT = new DecimalFormat("$#0.00", new DecimalFormatSymbols(Locale.US));
 
@@ -60,7 +60,7 @@ public class TestEnvironment {
     protected static final String ANSI_BLUE = "\u001b[34m";
     protected static final String ANSI_GREEN = "\u001B[32m";
     protected static final String EXECUTOR = "GRADLE";
-    protected static final String HOME_URL = "http://automationpractice.com";
+    public static final String HOME_URL = "http://automationpractice.com/";
 
     //ENVIRONMENT PROPERTIES//
     protected static final String TRAVIS_BUILD_NUMBER = System.getProperty
@@ -203,11 +203,11 @@ public class TestEnvironment {
 
     protected void displayWebDriverManagerBrowsersVersions(Boolean printStatuses) {
         if (printStatuses) {
-            logger.info("ChromeDriver available versions: " + WebDriverManager.chromedriver().getDriverVersions());
-            logger.info("GeckoDriver available versions: " + WebDriverManager.firefoxdriver().getDriverVersions());
-            logger.info("OperaDriver available versions: " + WebDriverManager.operadriver().getDriverVersions());
-            logger.info("EdgeDriver available versions: " + WebDriverManager.edgedriver().getDriverVersions());
-            logger.info("IEDriver available versions: " + WebDriverManager.iedriver().getDriverVersions());
+            logger.info(String.format("ChromeDriver available versions: %s", WebDriverManager.chromedriver().getDriverVersions()));
+            logger.info(String.format("GeckoDriver available versions: %s", WebDriverManager.firefoxdriver().getDriverVersions()));
+            logger.info(String.format("OperaDriver available versions: %s ", WebDriverManager.operadriver().getDriverVersions()));
+            logger.info(String.format("EdgeDriver available versions: %s", WebDriverManager.edgedriver().getDriverVersions()));
+            logger.info(String.format("IEDriver available versions: %s", WebDriverManager.iedriver().getDriverVersions()));
         }
     }
 }

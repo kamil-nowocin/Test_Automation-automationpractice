@@ -4,7 +4,7 @@ import com.buildSettings.ContextInjection;
 import com.buildSettings.TestCommons;
 import com.buildSettings.TestEnvironment;
 import com.pages.CustomerServicePage;
-import com.pages.base.MainPage;
+import com.pages.MainPage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -22,9 +22,9 @@ import java.io.File;
 
 public class CustomerServicePageSteps extends TestEnvironment {
 
-    private final MainPage mainPage = new MainPage();
+    private final MainPage mainPage = new MainPage().get();
     private final TestCommons testCommons = new TestCommons();
-    private final CustomerServicePage customerServicePage = new CustomerServicePage();
+    private final CustomerServicePage customerServicePage = new CustomerServicePage().get();
 
     @Step("I click on Contact Us button")
     @When("I click on Contact Us button")

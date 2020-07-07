@@ -1,6 +1,6 @@
 package com.pages;
 
-import com.pages.base.MainPage;
+import com.pages.base.BasePage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -11,7 +11,7 @@ import org.openqa.selenium.support.How;
  * @author kamil.nowocin
  **/
 
-public class RegistrationPage extends MainPage {
+public class RegistrationPage extends BasePage<RegistrationPage> {
 
     //VIEW//
     @FindBy(how = How.XPATH, using = "//form[@id='account-creation_form']")
@@ -111,4 +111,8 @@ public class RegistrationPage extends MainPage {
 
     @FindBy(how = How.XPATH, using = "//button[@id='submitAccount']")
     public WebElement registerButton;
+
+    public RegistrationPage() {
+        super("/index.php");
+    }
 }

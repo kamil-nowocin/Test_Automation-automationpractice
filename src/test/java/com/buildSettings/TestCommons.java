@@ -116,7 +116,7 @@ public class TestCommons extends TestEnvironment {
     /**
      * GENERAL METHODS
      **/
-    public boolean isPageReady() {
+    public static boolean isPageReady() {
         try {
             WebDriverWait wait = new WebDriverWait(DriverFactory.getDriver(), Timeouts.PAGE_LOAD_TIMEOUT.value);
             wait.until(webDriver ->

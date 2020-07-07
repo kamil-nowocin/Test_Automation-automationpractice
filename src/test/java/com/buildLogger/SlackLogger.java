@@ -46,10 +46,10 @@ public class SlackLogger extends TestEnvironment implements ITestListener {
         List<String> testCaseNames = new ArrayList<>();
         int i = 1;
         if (TestNGListener.failedTests.size() == 0) {
-            testCaseNames.add("\n*Congratulations, all tests passed successfully*:trophy: ");
+            testCaseNames.add("\n*Congratulations, all tests passed successfully*:trophy:");
         } else {
             for (String failedTest : TestNGListener.failedTests) {
-                testCaseNames.add(String.format("*%d) FAILED TEST CASE NAME:* \n ", i));
+                testCaseNames.add(String.format("*%d) FAILED TEST CASE NAME:*\n", i));
                 testCaseNames.add("`");
                 testCaseNames.add(failedTest);
                 testCaseNames.add("`");

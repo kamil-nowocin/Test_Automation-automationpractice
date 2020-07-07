@@ -1,10 +1,10 @@
-package com.pages.base;
+package com.pages;
 
-import com.DriverFactory;
+import com.buildSettings.TestEnvironment;
+import com.pages.base.BasePage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
 
 /**
  * Test_Automation-automationpractice
@@ -12,12 +12,7 @@ import org.openqa.selenium.support.PageFactory;
  * @author kamil.nowocin
  **/
 
-public class MainPage {
-
-    public MainPage() {
-        //PageFactory.initElements(new AjaxElementLocatorFactory(DriverFactory.getDriver(), TIMEOUT), this);
-        PageFactory.initElements(DriverFactory.getDriver(), this);
-    }
+public class MainPage extends BasePage<MainPage> {
 
     //VIEW//
     @FindBy(how = How.XPATH, using = "//a[@class='account']//span")
@@ -48,4 +43,8 @@ public class MainPage {
 
     @FindBy(how = How.XPATH, using = "//span[@class='cat-name']")
     public WebElement subMenuChosenCategory;
+
+    public MainPage() {
+        super(TestEnvironment.HOME_URL);
+    }
 }

@@ -6,8 +6,8 @@ import com.buildSettings.TestEnvironment;
 import com.google.inject.Inject;
 import com.pages.AccountDetailsPage;
 import com.pages.AuthenticationPage;
+import com.pages.MainPage;
 import com.pages.RegistrationPage;
-import com.pages.base.MainPage;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
@@ -28,11 +28,11 @@ import java.util.Locale;
 
 public class RegistrationPageSteps extends TestEnvironment {
 
-    private final MainPage mainPage = new MainPage();
+    private final MainPage mainPage = new MainPage().get();
     private final TestCommons testCommons = new TestCommons();
-    private final RegistrationPage registrationPage = new RegistrationPage();
-    private final AuthenticationPage authenticationPage = new AuthenticationPage();
-    private final AccountDetailsPage accountDetailsPage = new AccountDetailsPage();
+    private final RegistrationPage registrationPage = new RegistrationPage().get();
+    private final AuthenticationPage authenticationPage = new AuthenticationPage().get();
+    private final AccountDetailsPage accountDetailsPage = new AccountDetailsPage().get();
 
     private final ContextInjection contextInjection;
 
@@ -238,6 +238,7 @@ public class RegistrationPageSteps extends TestEnvironment {
     @Step("I clear my email address")
     @And("I clear my email address")
     public void iClearMyEmailAddress() throws Throwable {
+        testCommons.customClick(registrationPage.emailInput);
         registrationPage.emailInput.clear();
     }
 
@@ -497,6 +498,7 @@ public class RegistrationPageSteps extends TestEnvironment {
     @Step("I clear my email address alias")
     @And("I clear my email address alias")
     public void iClearMyEmailAddressAlias() throws Throwable {
+        testCommons.customClick(registrationPage.addressAliasInput);
         registrationPage.addressAliasInput.clear();
     }
 

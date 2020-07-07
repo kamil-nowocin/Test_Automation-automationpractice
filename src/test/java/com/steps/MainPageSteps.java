@@ -4,7 +4,7 @@ import com.DriverFactory;
 import com.buildSettings.ContextInjection;
 import com.buildSettings.TestCommons;
 import com.buildSettings.TestEnvironment;
-import com.pages.base.MainPage;
+import com.pages.MainPage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.qameta.allure.Step;
@@ -18,8 +18,7 @@ import org.testng.Assert;
 
 public class MainPageSteps extends TestEnvironment {
 
-    private final MainPage mainPage = new MainPage();
-    private final TestCommons testCommons = new TestCommons();
+    private final MainPage mainPage = new MainPage().get();
     private final AuthenticationPageSteps authenticationPageSteps = new AuthenticationPageSteps();
     private final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps(new ContextInjection());
 
@@ -43,7 +42,7 @@ public class MainPageSteps extends TestEnvironment {
         final boolean isPageReadyToExecuteTests;
 
         //ACT//
-        isPageReadyToExecuteTests = testCommons.isPageReady();
+        isPageReadyToExecuteTests = TestCommons.isPageReady();
         logger.info(String.format("Page ready: \"%S\"", isPageReadyToExecuteTests));
 
         //ASSERT//

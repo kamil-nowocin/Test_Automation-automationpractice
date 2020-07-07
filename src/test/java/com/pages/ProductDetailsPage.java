@@ -1,6 +1,6 @@
 package com.pages;
 
-import com.pages.base.MainPage;
+import com.pages.base.BasePage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -11,7 +11,7 @@ import org.openqa.selenium.support.How;
  * @author kamil.nowocin
  **/
 
-public class ProductDetailsPage extends MainPage {
+public class ProductDetailsPage extends BasePage<ProductDetailsPage> {
 
     //VIEW//
     @FindBy(how = How.XPATH, using = "//span[@id='our_price_display']")
@@ -93,4 +93,8 @@ public class ProductDetailsPage extends MainPage {
 
     @FindBy(how = How.XPATH, using = "//p[@id='add_to_cart']//span[text()='Add to cart']")
     public WebElement addToCartButton;
+
+    public ProductDetailsPage() {
+        super("/index.php");
+    }
 }
