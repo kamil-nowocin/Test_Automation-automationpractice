@@ -1,6 +1,6 @@
 package com.pages;
 
-import com.pages.base.MainPage;
+import com.pages.base.BasePage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -11,7 +11,7 @@ import org.openqa.selenium.support.How;
  * @author kamil.nowocin
  **/
 
-public class ShoppingCartSummaryPage extends MainPage {
+public class ShoppingCartSummaryPage extends BasePage<ShoppingCartSummaryPage> {
 
     /**
      * GLOBAL
@@ -117,4 +117,8 @@ public class ShoppingCartSummaryPage extends MainPage {
 
     @FindBy(how = How.XPATH, using = "//p[@class='cheque-indent']//strong")
     public WebElement paymentByBankWireSuccessful;
+
+    public ShoppingCartSummaryPage() {
+        super("/index.php");
+    }
 }

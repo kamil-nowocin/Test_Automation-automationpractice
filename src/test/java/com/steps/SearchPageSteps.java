@@ -4,8 +4,8 @@ import com.buildSettings.ContextInjection;
 import com.buildSettings.TestCommons;
 import com.buildSettings.TestEnvironment;
 import com.google.common.collect.Ordering;
+import com.pages.MainPage;
 import com.pages.SearchPage;
-import com.pages.base.MainPage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -24,9 +24,9 @@ import java.util.List;
 
 public class SearchPageSteps extends TestEnvironment {
 
-    private final MainPage mainPage = new MainPage();
+    private final MainPage mainPage = new MainPage().get();
     private final TestCommons testCommons = new TestCommons();
-    private final SearchPage searchPage = new SearchPage();
+    private final SearchPage searchPage = new SearchPage().get();
 
     @Step("I search for phrase *{0}*")
     @When("I search for phrase {string}")
@@ -50,6 +50,7 @@ public class SearchPageSteps extends TestEnvironment {
     @Then("I can see numbers of results equals to {string}")
     public void iCanSeeNumbersOfResultsEqualsTo(String expectedCountOfResults) throws Throwable {
         //ARRANGE//
+        testCommons.waitForElementToBeVisible(searchPage.searchResultsNumber);
         final String actualCountOfResults = searchPage.searchResultsNumber.getText().replaceAll("[^\\d]", "");
 
         //ACT//

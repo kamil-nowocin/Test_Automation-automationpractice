@@ -19,7 +19,7 @@ import org.testng.Assert;
 public class AuthenticationPageSteps extends TestEnvironment {
 
     private final TestCommons testCommons = new TestCommons();
-    private final AuthenticationPage authenticationPage = new AuthenticationPage();
+    private final AuthenticationPage authenticationPage = new AuthenticationPage().get();
 
     @Step("I can see login form")
     @Given("I can see login form")

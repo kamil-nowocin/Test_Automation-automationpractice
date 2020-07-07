@@ -1,6 +1,6 @@
 package com.pages;
 
-import com.pages.base.MainPage;
+import com.pages.base.BasePage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -11,7 +11,7 @@ import org.openqa.selenium.support.How;
  * @author kamil.nowocin
  **/
 
-public class SocialMediaPage extends MainPage {
+public class SocialMediaPage extends BasePage<SocialMediaPage> {
 
     //BUTTONS & INPUTS & DROPDOWN//
     @FindBy(how = How.XPATH, using = "//*[@class=\"facebook\"]")
@@ -25,4 +25,8 @@ public class SocialMediaPage extends MainPage {
 
     @FindBy(how = How.XPATH, using = "//*[@class=\"google-plus\"]")
     public WebElement googleButton;
+
+    public SocialMediaPage() {
+        super("/index.php");
+    }
 }

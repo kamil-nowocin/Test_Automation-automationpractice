@@ -1,6 +1,6 @@
 package com.pages;
 
-import com.pages.base.MainPage;
+import com.pages.base.BasePage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -11,7 +11,7 @@ import org.openqa.selenium.support.How;
  * @author kamil.nowocin
  **/
 
-public class AuthenticationPage extends MainPage {
+public class AuthenticationPage extends BasePage<AuthenticationPage> {
 
     /**
      * CREATE AN ACCOUNT
@@ -51,4 +51,8 @@ public class AuthenticationPage extends MainPage {
 
     @FindBy(how = How.XPATH, using = "//button[@id='SubmitLogin']")
     public WebElement registeredSignInButton;
+
+    public AuthenticationPage() {
+        super("/index.php");
+    }
 }

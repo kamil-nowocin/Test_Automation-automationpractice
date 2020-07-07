@@ -5,9 +5,9 @@ import com.buildSettings.ContextInjection;
 import com.buildSettings.TestCommons;
 import com.buildSettings.TestEnvironment;
 import com.google.inject.Inject;
+import com.pages.MainPage;
 import com.pages.ProductDetailsPage;
 import com.pages.ShoppingCartSummaryPage;
-import com.pages.base.MainPage;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
@@ -27,10 +27,10 @@ import java.util.List;
 
 public class ShoppingLoggedUserSteps extends TestEnvironment {
 
-    private final MainPage mainPage = new MainPage();
+    private final MainPage mainPage = new MainPage().get();
     private final TestCommons testCommons = new TestCommons();
-    private final ProductDetailsPage productDetailsPage = new ProductDetailsPage();
-    private final ShoppingCartSummaryPage shoppingCartSummaryPage = new ShoppingCartSummaryPage();
+    private final ProductDetailsPage productDetailsPage = new ProductDetailsPage().get();
+    private final ShoppingCartSummaryPage shoppingCartSummaryPage = new ShoppingCartSummaryPage().get();
 
     private final ContextInjection contextInjection;
 
