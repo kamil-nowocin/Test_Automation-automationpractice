@@ -44,7 +44,7 @@ public class TestEnvironment {
 
     protected static Faker faker = new Faker(Locale.US);
     protected static MockNeat mockNeat = MockNeat.secure();
-    public static Logger logger = LoggerFactory.getLogger(Hooks.class);
+    protected static Logger logger = LoggerFactory.getLogger(Hooks.class);
     protected static final String TODAY_DATE = new SimpleDateFormat("yyyy-MM-dd HH:ss").format(new Date());
     protected static final DecimalFormat DOLLAR_DECIMAL_FORMAT = new DecimalFormat("$#0.00", new DecimalFormatSymbols(Locale.US));
 
