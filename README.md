@@ -8,7 +8,7 @@
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/kamil-nowocin/Test_Automation-automationpractice?style=flat-square)
 [![LinkedIn](https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555)](https://linkedin.com/in/kamil-nowocin)
 # Test automation - http://www.automationpractice.com
-**Design Pattern:** Page Object Model & AAA  
+**Design Pattern:** Page Object Model with loadable components<sub><sup>(POC)</sub></sup> & AAA  
 **Following tools were used in this framework:**  
 Java, Selenium, TestNG, Cucumber, REST Assured, Gradle, Travis CI, Allure Reports, Slack API, WebDriverManager, Faker & MockNeat, BrowserStack, GitHub Pages
 ## ABOUT PROJECT
@@ -18,17 +18,17 @@ Supported browsers aka hosts:
 - *Chrome*
 - *Firefox*
 - *Opera*
-- *Internet Explorer*
 - *Safari*
+- *Internet Explorer*
 - *BrowserStack*
 ## FEATURES
-- Support for WebDriverManager
 - Support for Allure Report
-- Support for .xlsx files
-- Support for Fake & Mock data
-- Support for BrowserStack
+- Support for Slack Bot
 - Support for Parallel Testing
-- Support for custom Slack Bot
+- Support for BrowserStack
+- Support for WebDriverManager
+- Support for Fake & Mock data
+- Support for .xlsx files
 ## HOW TO RUN TESTS
 There are multiple ways to run tests from this build. It all depends on what you want to do:
 1. Right click on `.feature` file, and Run -> This will run `.feature` file on default settings.
