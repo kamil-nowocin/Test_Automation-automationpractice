@@ -1,0 +1,36 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+16:25:20 INFO  i.g.bonigarcia.wdm.WebDriverManager - Please answer the following questionnaire based on your experience with WebDriverManager. Thanks a lot!
+16:25:20 INFO  i.g.bonigarcia.wdm.WebDriverManager - ====> http://tiny.cc/wdm-survey <====
+16:25:20 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=84 in cache (valid until 16:24:36 18/08/2020 UTC)
+16:25:20 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 84.0.4147.30 (since Chrome 84 is installed in your machine)
+16:25:20 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 84.0.4147.30 found in cache
+16:25:20 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.m2/repository/webdriver/chromedriver/linux64/84.0.4147.30/chromedriver
+16:25:21 INFO  com.steps.Hooks - ================================================ TEST STARTED ================================================
+16:25:21 INFO  com.steps.Hooks - [34mTEST NAME: [US-666]/[2] I WOULD LIKE TO BUY NEW "BLOUSE"[0m
+16:25:21 INFO  com.steps.Hooks - Chosen executor: "CHROME"
+16:25:27 INFO  com.steps.Hooks - Page ready: "TRUE"
+16:25:29 INFO  com.steps.Hooks - User login: "THOR.ODINSON@EXAMPLE.COM"
+16:25:29 INFO  com.steps.Hooks - User password: "12345"
+16:25:31 INFO  com.steps.Hooks - [31mTEST RETRY (1/1): [US-666]/[2] I WOULD LIKE TO BUY NEW "BLOUSE"[0m
+16:25:31 INFO  i.g.bonigarcia.wdm.WebDriverManager - Please answer the following questionnaire based on your experience with WebDriverManager. Thanks a lot!
+16:25:31 INFO  i.g.bonigarcia.wdm.WebDriverManager - ====> http://tiny.cc/wdm-survey <====
+16:25:31 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=84 in cache (valid until 16:24:36 18/08/2020 UTC)
+16:25:31 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 84.0.4147.30 (since Chrome 84 is installed in your machine)
+16:25:31 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 84.0.4147.30 found in cache
+16:25:31 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.m2/repository/webdriver/chromedriver/linux64/84.0.4147.30/chromedriver
+16:25:32 INFO  com.steps.Hooks - ================================================ TEST STARTED ================================================
+16:25:32 INFO  com.steps.Hooks - [34mTEST NAME: [US-666]/[2] I WOULD LIKE TO BUY NEW "BLOUSE"[0m
+16:25:32 INFO  com.steps.Hooks - Chosen executor: "CHROME"
+16:25:38 INFO  com.steps.Hooks - Page ready: "TRUE"
+16:25:42 INFO  com.steps.Hooks - User login: "THOR.ODINSON@EXAMPLE.COM"
+16:25:42 INFO  com.steps.Hooks - User password: "12345"
+16:25:44 INFO  com.steps.Hooks - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+16:25:44 ERROR com.steps.Hooks - org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[@class='account']//span"}
+  (Session info: chrome=84.0.4147.125)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'travis-job-ead91f49-479a-48b7-ba95-bfae6b8eb944', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.3.0-1029-gcp', java.version: '14.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.125, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: /tmp/.com.google.Chrome.0Lbkg3}, goog:chromeOptions: {debuggerAddress: localhost:35319}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 1a2f427cbe32f091b66a0ca03251162b
+*** Element info: {Using=xpath, value=//a[@class='account']//span}
