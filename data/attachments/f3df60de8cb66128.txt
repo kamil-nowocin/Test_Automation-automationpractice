@@ -1,0 +1,33 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+16:32:44 INFO  i.g.bonigarcia.wdm.WebDriverManager - Please answer the following questionnaire based on your experience with WebDriverManager. Thanks a lot!
+16:32:44 INFO  i.g.bonigarcia.wdm.WebDriverManager - ====> http://tiny.cc/wdm-survey <====
+16:32:44 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=84 in cache (valid until 16:25:09 20/08/2020 UTC)
+16:32:44 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 84.0.4147.30 (since Chrome 84 is installed in your machine)
+16:32:44 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 84.0.4147.30 found in cache
+16:32:44 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.m2/repository/webdriver/chromedriver/linux64/84.0.4147.30/chromedriver
+16:32:45 INFO  com.steps.Hooks - ================================================ TEST STARTED ================================================
+16:32:45 INFO  com.steps.Hooks - [34mTEST NAME: [US-333]/[6] I CAN'T CREATE AN ACCOUNT, WHEN EMAIL IS ALREADY IN DATABASE[0m
+16:32:45 INFO  com.steps.Hooks - Chosen executor: "CHROME"
+16:33:04 INFO  com.steps.Hooks - Page ready: "TRUE"
+16:33:13 INFO  com.steps.Hooks - User registered email: "ASFSAFAS@WP.PL"
+16:33:29 INFO  com.steps.Hooks - [31mTEST RETRY (1/1): [US-333]/[6] I CAN'T CREATE AN ACCOUNT, WHEN EMAIL IS ALREADY IN DATABASE[0m
+16:33:29 INFO  i.g.bonigarcia.wdm.WebDriverManager - Please answer the following questionnaire based on your experience with WebDriverManager. Thanks a lot!
+16:33:29 INFO  i.g.bonigarcia.wdm.WebDriverManager - ====> http://tiny.cc/wdm-survey <====
+16:33:29 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=84 in cache (valid until 16:25:09 20/08/2020 UTC)
+16:33:29 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 84.0.4147.30 (since Chrome 84 is installed in your machine)
+16:33:29 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 84.0.4147.30 found in cache
+16:33:29 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.m2/repository/webdriver/chromedriver/linux64/84.0.4147.30/chromedriver
+16:33:30 INFO  com.steps.Hooks - ================================================ TEST STARTED ================================================
+16:33:30 INFO  com.steps.Hooks - [34mTEST NAME: [US-333]/[6] I CAN'T CREATE AN ACCOUNT, WHEN EMAIL IS ALREADY IN DATABASE[0m
+16:33:30 INFO  com.steps.Hooks - Chosen executor: "CHROME"
+16:33:38 INFO  com.steps.Hooks - Page ready: "TRUE"
+16:33:43 INFO  com.steps.Hooks - User registered email: "ASFSAFAS@WP.PL"
+16:33:47 INFO  com.steps.Hooks - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+16:33:47 ERROR com.steps.Hooks - org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=84.0.4147.135)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'travis-job-eb5c6712-e9f8-47db-8158-dc51162cfd65', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.3.0-1029-gcp', java.version: '14.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.135, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: /tmp/.com.google.Chrome.2P165g}, goog:chromeOptions: {debuggerAddress: localhost:43459}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 8243a8440c40a94f79c51919387aa559
