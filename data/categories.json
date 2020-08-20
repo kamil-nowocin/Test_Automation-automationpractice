@@ -7,13 +7,13 @@
       "name" : "null",
       "children" : [ {
         "name" : "As a developer I'd like to see working POC with .xlsx file",
-        "uid" : "7ec6e4776d143094",
+        "uid" : "f8564ab597b7f1f6",
         "parentUid" : "666d1a31450af3ae8459f14f07f9a1b4",
         "status" : "failed",
         "time" : {
-          "start" : 1597854313442,
-          "stop" : 1597854313946,
-          "duration" : 504
+          "start" : 1597940723043,
+          "stop" : 1597940723512,
+          "duration" : 469
         },
         "flaky" : false,
         "newFailed" : false,
@@ -21,16 +21,50 @@
       } ],
       "uid" : "666d1a31450af3ae8459f14f07f9a1b4"
     }, {
+      "name" : "Value which have been found didn't match expected value! expected [$3.38] but found [$0.00]",
+      "children" : [ {
+        "name" : "[US-666]/[1] I would like to buy new \"Faded Short Sleeve T-shirts\"",
+        "uid" : "adce4146f149bc03",
+        "parentUid" : "ae9fa0fa82525827240565e43ef3d79b",
+        "status" : "failed",
+        "time" : {
+          "start" : 1597940767841,
+          "stop" : 1597940796704,
+          "duration" : 28863
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "ae9fa0fa82525827240565e43ef3d79b"
+    }, {
+      "name" : "Value which have been found didn't match expected value! expected [$2.24] but found [$0.00]",
+      "children" : [ {
+        "name" : "[US-666]/[2] I would like to buy new \"Blouse\"",
+        "uid" : "34554cd2443190f1",
+        "parentUid" : "517d31d3e9f056aa3bce52cc18b0149b",
+        "status" : "failed",
+        "time" : {
+          "start" : 1597940837138,
+          "stop" : 1597940869779,
+          "duration" : 32641
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "517d31d3e9f056aa3bce52cc18b0149b"
+    }, {
       "name" : "Results which have been found didn't match expected sorting result PRICE: HIGHEST FIRST: Lists differ at element [1]: $30.50 != $28.98 expected [$30.50] but found [$28.98]",
       "children" : [ {
         "name" : "[US-555]/[7] I would like to use search box and be able to see results sorted by: \"Price: Highest first\"",
-        "uid" : "92b623876feda33d",
+        "uid" : "e3c2cef500c12004",
         "parentUid" : "3246160de76fc0de742a06aad5432502",
         "status" : "failed",
         "time" : {
-          "start" : 1597854522560,
-          "stop" : 1597854545643,
-          "duration" : 23083
+          "start" : 1597940845983,
+          "stop" : 1597940860989,
+          "duration" : 15006
         },
         "flaky" : false,
         "newFailed" : false,
@@ -41,13 +75,13 @@
       "name" : "Results which have been found didn't match expected sorting result PRICE: LOWEST FIRST: Lists differ at element [2]: $28.98 != $30.50 expected [$28.98] but found [$30.50]",
       "children" : [ {
         "name" : "[US-555]/[8] I would like to use search box and be able to see results sorted by: \"Price: Lowest first\"",
-        "uid" : "e17eb2ba35cf0894",
+        "uid" : "df3a1f64c8730a28",
         "parentUid" : "06135fb1e9171a4c5ee185041330339b",
         "status" : "failed",
         "time" : {
-          "start" : 1597854579027,
-          "stop" : 1597854606584,
-          "duration" : 27557
+          "start" : 1597940886699,
+          "stop" : 1597940901065,
+          "duration" : 14366
         },
         "flaky" : false,
         "newFailed" : false,
@@ -59,73 +93,22 @@
   }, {
     "name" : "Test defects",
     "children" : [ {
-      "name" : "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//a[@class='account']//span\"}\n  (Session info: chrome=84.0.4147.135)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-eb5c6712-e9f8-47db-8158-dc51162cfd65', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.3.0-1029-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.135, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: /tmp/.com.google.Chrome.d32usb}, goog:chromeOptions: {debuggerAddress: localhost:37279}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 0f9f48bbf5493f8728df6689e7720430\n*** Element info: {Using=xpath, value=//a[@class='account']//span}",
-      "children" : [ {
-        "name" : "[US-666]/[1] I would like to buy new \"Faded Short Sleeve T-shirts\"",
-        "uid" : "f76389eb224224ac",
-        "parentUid" : "d6fb5978fde7a01a4ede5e67af68835f",
-        "status" : "broken",
-        "time" : {
-          "start" : 1597854372649,
-          "stop" : 1597854399550,
-          "duration" : 26901
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "d6fb5978fde7a01a4ede5e67af68835f"
-    }, {
-      "name" : "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//a[@class='account']//span\"}\n  (Session info: chrome=84.0.4147.135)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-eb5c6712-e9f8-47db-8158-dc51162cfd65', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.3.0-1029-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.135, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: /tmp/.com.google.Chrome.YNW0LK}, goog:chromeOptions: {debuggerAddress: localhost:34401}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 6e932ceef27a9c520ab117a653b37f8b\n*** Element info: {Using=xpath, value=//a[@class='account']//span}",
-      "children" : [ {
-        "name" : "[US-666]/[2] I would like to buy new \"Blouse\"",
-        "uid" : "997bc4b5c748117a",
-        "parentUid" : "a0abf0d640bb5f2c1e07dfeb97083b82",
-        "status" : "broken",
-        "time" : {
-          "start" : 1597854433881,
-          "stop" : 1597854460704,
-          "duration" : 26823
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "a0abf0d640bb5f2c1e07dfeb97083b82"
-    }, {
-      "name" : "Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //p[@class='info-account']' (tried for 15 second(s) with 500 milliseconds interval)",
-      "children" : [ {
-        "name" : "[US-111]/[1] I can log into automationpractice.com using registered email \"thor.odinson@example.com\" & password \"12345\"",
-        "uid" : "460b5ea3f2dc0b48",
-        "parentUid" : "54e4661ce2e96a09b5b430cc52e0e679",
-        "status" : "broken",
-        "time" : {
-          "start" : 1597854514167,
-          "stop" : 1597854555866,
-          "duration" : 41699
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "54e4661ce2e96a09b5b430cc52e0e679"
-    }, {
-      "name" : "stale element reference: element is not attached to the page document\n  (Session info: chrome=84.0.4147.135)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-eb5c6712-e9f8-47db-8158-dc51162cfd65', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.3.0-1029-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.135, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: /tmp/.com.google.Chrome.2P165g}, goog:chromeOptions: {debuggerAddress: localhost:43459}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 8243a8440c40a94f79c51919387aa559",
+      "name" : "Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //div[@class='alert alert-danger']' (tried for 15 second(s) with 500 milliseconds interval)",
       "children" : [ {
         "name" : "[US-333]/[6] I can't create an account, when email is already in database",
-        "uid" : "55cba0dde4c9aa91",
-        "parentUid" : "2eebee12cc454e70db3dcb61b628a0be",
+        "uid" : "de8f6bea927a7f72",
+        "parentUid" : "0cba097823f931767e2419fe825ee128",
         "status" : "broken",
         "time" : {
-          "start" : 1597854810404,
-          "stop" : 1597854827500,
-          "duration" : 17096
+          "start" : 1597941008676,
+          "stop" : 1597941028909,
+          "duration" : 20233
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "2eebee12cc454e70db3dcb61b628a0be"
+      "uid" : "0cba097823f931767e2419fe825ee128"
     } ],
     "uid" : "bdbf199525818fae7a8651db9eafe741"
   } ]
