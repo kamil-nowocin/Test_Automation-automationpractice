@@ -1,0 +1,32 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+16:28:34 INFO  i.g.bonigarcia.wdm.WebDriverManager - Please answer the following questionnaire based on your experience with WebDriverManager. Thanks a lot!
+16:28:34 INFO  i.g.bonigarcia.wdm.WebDriverManager - ====> http://tiny.cc/wdm-survey <====
+16:28:34 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=84 in cache (valid until 16:26:50 24/08/2020 UTC)
+16:28:34 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 84.0.4147.30 (since Chrome 84 is installed in your machine)
+16:28:34 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 84.0.4147.30 found in cache
+16:28:34 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.m2/repository/webdriver/chromedriver/linux64/84.0.4147.30/chromedriver
+16:28:36 INFO  com.steps.Hooks - ================================================ TEST STARTED ================================================
+16:28:36 INFO  com.steps.Hooks - [34mTEST NAME: [US-555]/[7] I WOULD LIKE TO USE SEARCH BOX AND BE ABLE TO SEE RESULTS SORTED BY: "PRICE: HIGHEST FIRST"[0m
+16:28:36 INFO  com.steps.Hooks - Chosen executor: "CHROME"
+16:28:43 INFO  com.steps.Hooks - Page ready: "TRUE"
+16:28:44 INFO  com.steps.Hooks - User search for: "PRINTED DRESS"
+16:28:48 INFO  com.steps.Hooks - Found results: "5", expected: "5"
+16:28:51 INFO  com.steps.Hooks - Chosen sort option: "PRICE: HIGHEST FIRST"
+16:28:51 INFO  com.steps.Hooks - Actual sort option: "PRICE: HIGHEST FIRST"
+16:28:51 INFO  com.steps.Hooks - [31mTEST RETRY (1/1): [US-555]/[7] I WOULD LIKE TO USE SEARCH BOX AND BE ABLE TO SEE RESULTS SORTED BY: "PRICE: HIGHEST FIRST"[0m
+16:28:51 INFO  i.g.bonigarcia.wdm.WebDriverManager - Please answer the following questionnaire based on your experience with WebDriverManager. Thanks a lot!
+16:28:51 INFO  i.g.bonigarcia.wdm.WebDriverManager - ====> http://tiny.cc/wdm-survey <====
+16:28:51 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=84 in cache (valid until 16:26:50 24/08/2020 UTC)
+16:28:51 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 84.0.4147.30 (since Chrome 84 is installed in your machine)
+16:28:51 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 84.0.4147.30 found in cache
+16:28:51 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.m2/repository/webdriver/chromedriver/linux64/84.0.4147.30/chromedriver
+16:28:54 INFO  com.steps.Hooks - ================================================ TEST STARTED ================================================
+16:28:54 INFO  com.steps.Hooks - [34mTEST NAME: [US-555]/[7] I WOULD LIKE TO USE SEARCH BOX AND BE ABLE TO SEE RESULTS SORTED BY: "PRICE: HIGHEST FIRST"[0m
+16:28:54 INFO  com.steps.Hooks - Chosen executor: "CHROME"
+16:29:00 INFO  com.steps.Hooks - Page ready: "TRUE"
+16:29:01 INFO  com.steps.Hooks - User search for: "PRINTED DRESS"
+16:29:06 INFO  com.steps.Hooks - Found results: "5", expected: "5"
+16:29:09 INFO  com.steps.Hooks - Chosen sort option: "PRICE: HIGHEST FIRST"
+16:29:09 INFO  com.steps.Hooks - Actual sort option: "PRICE: HIGHEST FIRST"
+16:29:10 INFO  com.steps.Hooks - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+16:29:10 ERROR com.steps.Hooks - java.lang.AssertionError: Results which have been found didn't match expected sorting result PRICE: HIGHEST FIRST: Lists differ at element [1]: $30.50 != $28.98 expected [$30.50] but found [$28.98]
