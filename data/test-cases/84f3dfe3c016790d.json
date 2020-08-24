@@ -1,0 +1,390 @@
+{
+  "uid" : "84f3dfe3c016790d",
+  "name" : "[US-555]/[7] I would like to use search box and be able to see results sorted by: \"Price: Highest first\"",
+  "fullName" : "tests.WebAPP.SearchBox_Tests.test_7",
+  "historyId" : "4a7f8c57b8740ff479e116a1155c68a5",
+  "time" : {
+    "start" : 1598299190843,
+    "stop" : 1598299212205,
+    "duration" : 21362
+  },
+  "description" : "[US-555]/[7] As a user I would like to use search box and be able to see results sorted by: \"Price: Highest first\"",
+  "descriptionHtml" : "<p>[US-555]/[7] As a user I would like to use search box and be able to see results sorted by: &quot;Price: Highest first&quot;</p>\n",
+  "status" : "failed",
+  "statusMessage" : "Results which have been found didn't match expected sorting result PRICE: HIGHEST FIRST: Lists differ at element [1]: $30.50 != $28.98 expected [$30.50] but found [$28.98]",
+  "statusTrace" : "java.lang.AssertionError: Results which have been found didn't match expected sorting result PRICE: HIGHEST FIRST: Lists differ at element [1]: $30.50 != $28.98 expected [$30.50] but found [$28.98]\n\tat org.testng.Assert.fail(Assert.java:99)\n\tat org.testng.Assert.failNotEquals(Assert.java:1037)\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:140)\n\tat org.testng.Assert.assertEquals(Assert.java:1103)\n\tat com.steps.SearchPageSteps.iCanSeeThatResultsAreCorrectlySortedBy(SearchPageSteps.java:136)\n\tat tests.WebAPP.SearchBox_Tests.test_7(SearchBox_Tests.java:216)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:564)\n\tat org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)\n\tat org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)\n\tat org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:214)\n\tat org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)\n\tat org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)\n\tat org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)\n\tat org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)\n\tat org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)\n\tat java.base/java.lang.Thread.run(Thread.java:832)\n",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "Setting up Excel File",
+    "time" : {
+      "start" : 1598299069489,
+      "stop" : 1598299069491,
+      "duration" : 2
+    },
+    "description" : "Setting up Excel File",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "Setting up Test Class",
+    "time" : {
+      "start" : 1598299188222,
+      "stop" : 1598299190834,
+      "duration" : 2612
+    },
+    "description" : "Setting up Test Class",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "[US-555]/[7] As a user I would like to use search box and be able to see results sorted by: \"Price: Highest first\"",
+    "status" : "failed",
+    "statusMessage" : "Results which have been found didn't match expected sorting result PRICE: HIGHEST FIRST: Lists differ at element [1]: $30.50 != $28.98 expected [$30.50] but found [$28.98]",
+    "statusTrace" : "java.lang.AssertionError: Results which have been found didn't match expected sorting result PRICE: HIGHEST FIRST: Lists differ at element [1]: $30.50 != $28.98 expected [$30.50] but found [$28.98]\n\tat org.testng.Assert.fail(Assert.java:99)\n\tat org.testng.Assert.failNotEquals(Assert.java:1037)\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:140)\n\tat org.testng.Assert.assertEquals(Assert.java:1103)\n\tat com.steps.SearchPageSteps.iCanSeeThatResultsAreCorrectlySortedBy(SearchPageSteps.java:136)\n\tat tests.WebAPP.SearchBox_Tests.test_7(SearchBox_Tests.java:216)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:564)\n\tat org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)\n\tat org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)\n\tat org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:214)\n\tat org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)\n\tat org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)\n\tat org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)\n\tat org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)\n\tat org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)\n\tat java.base/java.lang.Thread.run(Thread.java:832)\n",
+    "steps" : [ {
+      "name" : "I open home page",
+      "time" : {
+        "start" : 1598299197602,
+        "stop" : 1598299200227,
+        "duration" : 2625
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I can see automationpractice.com website",
+      "time" : {
+        "start" : 1598299200227,
+        "stop" : 1598299200241,
+        "duration" : 14
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I search for phrase *Printed Dress*",
+      "time" : {
+        "start" : 1598299200241,
+        "stop" : 1598299201280,
+        "duration" : 1039
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "searchPhrase",
+        "value" : "Printed Dress"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "I click on search icon",
+      "time" : {
+        "start" : 1598299201285,
+        "stop" : 1598299205249,
+        "duration" : 3964
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I can see numbers of results equals to *5*",
+      "time" : {
+        "start" : 1598299205249,
+        "stop" : 1598299205383,
+        "duration" : 134
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "expectedCountOfResults",
+        "value" : "5"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "I can see that every results which have been found contains phrase *Printed Dress*",
+      "time" : {
+        "start" : 1598299205384,
+        "stop" : 1598299205644,
+        "duration" : 260
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "searchPhrase",
+        "value" : "Printed Dress"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "I select from Dropdown Sort by *Price: Highest first*",
+      "time" : {
+        "start" : 1598299205644,
+        "stop" : 1598299211000,
+        "duration" : 5356
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "sortBy",
+        "value" : "Price: Highest first"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "I can see that results are correctly sorted by *Price: Highest first*",
+      "time" : {
+        "start" : 1598299211000,
+        "stop" : 1598299211367,
+        "duration" : 367
+      },
+      "status" : "failed",
+      "statusMessage" : "Results which have been found didn't match expected sorting result PRICE: HIGHEST FIRST: Lists differ at element [1]: $30.50 != $28.98 expected [$30.50] but found [$28.98]",
+      "statusTrace" : "java.lang.AssertionError: Results which have been found didn't match expected sorting result PRICE: HIGHEST FIRST: Lists differ at element [1]: $30.50 != $28.98 expected [$30.50] but found [$28.98]\n\tat org.testng.Assert.fail(Assert.java:99)\n\tat org.testng.Assert.failNotEquals(Assert.java:1037)\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:140)\n\tat org.testng.Assert.assertEquals(Assert.java:1103)\n\tat com.steps.SearchPageSteps.iCanSeeThatResultsAreCorrectlySortedBy(SearchPageSteps.java:136)\n\tat tests.WebAPP.SearchBox_Tests.test_7(SearchBox_Tests.java:216)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:564)\n\tat org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)\n\tat org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)\n\tat org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:214)\n\tat org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)\n\tat org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)\n\tat org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)\n\tat org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)\n\tat org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)\n\tat java.base/java.lang.Thread.run(Thread.java:832)\n",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "sortedBy",
+        "value" : "Price: Highest first"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "69c11753e41e1230",
+      "name" : "Scenario FAIL screenshot",
+      "source" : "69c11753e41e1230.png",
+      "type" : "image/png",
+      "size" : 163662
+    }, {
+      "uid" : "c46f81c1156a31a",
+      "name" : "TestNG test FAIL logs",
+      "source" : "c46f81c1156a31a.txt",
+      "type" : "text/plain",
+      "size" : 3322
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 8,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "Teardown Test Class",
+    "time" : {
+      "start" : 1598299212255,
+      "stop" : 1598299212416,
+      "duration" : 161
+    },
+    "description" : "Teardown Test Class",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "Teardown Test Suite",
+    "time" : {
+      "start" : 1598299349550,
+      "stop" : 1598299350492,
+      "duration" : 942
+    },
+    "description" : "Teardown Test Suite",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "tests.WebAPP.SearchBox_Tests"
+  }, {
+    "name" : "testClass",
+    "value" : "tests.WebAPP.SearchBox_Tests"
+  }, {
+    "name" : "testMethod",
+    "value" : "test_7"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Automationpractice.com WEB - Kamil Nowocin"
+  }, {
+    "name" : "suite",
+    "value" : "Automated tests for WEB client"
+  }, {
+    "name" : "subSuite",
+    "value" : "tests.WebAPP.SearchBox_Tests"
+  }, {
+    "name" : "host",
+    "value" : "travis-job-78e5d27e-936b-436d-8fa4-403812c1ce13"
+  }, {
+    "name" : "thread",
+    "value" : "6343@travis-job-78e5d27e-936b-436d-8fa4-403812c1ce13.TestNG-test=Automated tests for WEB client-3(39)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "owner",
+    "value" : "Kamil Nowocin"
+  }, {
+    "name" : "story",
+    "value" : "POSITIVE FLOW"
+  }, {
+    "name" : "feature",
+    "value" : "SEARCH BOX TESTS"
+  }, {
+    "name" : "epic",
+    "value" : "Web App Tests"
+  }, {
+    "name" : "severity",
+    "value" : "critical"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ {
+    "name" : "STORY-555",
+    "url" : "https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE/STORY-555",
+    "type" : "tms"
+  }, {
+    "name" : "TAP-0037",
+    "url" : "https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE/issue/TAP-0037",
+    "type" : "issue"
+  } ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "critical",
+    "owner" : "Kamil Nowocin",
+    "retries" : [ {
+      "uid" : "66b778c51e3154c5",
+      "status" : "skipped",
+      "statusDetails" : "Results which have been found didn't match expected sorting result PRICE: HIGHEST FIRST: Lists differ at element [1]: $30.50 != $28.98 expected [$30.50] but found [$28.98]",
+      "time" : {
+        "start" : 1598299171775,
+        "stop" : 1598299188089,
+        "duration" : 16314
+      }
+    } ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 200,
+        "broken" : 7,
+        "skipped" : 16,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 223
+      },
+      "items" : [ {
+        "uid" : "db6326ffcf73eb9e",
+        "reportUrl" : "https://travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/181142506/#testresult/db6326ffcf73eb9e",
+        "status" : "failed",
+        "statusDetails" : "Results which have been found didn't match expected sorting result PRICE: HIGHEST FIRST: Lists differ at element [1]: $30.50 != $28.98 expected [$30.50] but found [$28.98]",
+        "time" : {
+          "start" : 1598298601661,
+          "stop" : 1598298619435,
+          "duration" : 17774
+        }
+      }, {
+        "uid" : "67d685763d1479b3",
+        "reportUrl" : "https://travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/181141023/#testresult/67d685763d1479b3",
+        "status" : "failed",
+        "statusDetails" : "Results which have been found didn't match expected sorting result PRICE: HIGHEST FIRST: Lists differ at element [1]: $30.50 != $28.98 expected [$30.50] but found [$28.98]",
+        "time" : {
+          "start" : 1598297854307,
+          "stop" : 1598297870056,
+          "duration" : 15749
+        }
+      }, {
+        "uid" : "6deb303375c83639",
+        "reportUrl" : "https://travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/181005637/#testresult/6deb303375c83639",
+        "status" : "failed",
+        "statusDetails" : "Results which have been found didn't match expected sorting result PRICE: HIGHEST FIRST: Lists differ at element [1]: $30.50 != $28.98 expected [$30.50] but found [$28.98]",
+        "time" : {
+          "start" : 1598200134056,
+          "stop" : 1598200150325,
+          "duration" : 16269
+        }
+      }, {
+        "uid" : "59c6132c8851d606",
+        "reportUrl" : "https://travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/180942333/#testresult/59c6132c8851d606",
+        "status" : "failed",
+        "statusDetails" : "Results which have been found didn't match expected sorting result PRICE: HIGHEST FIRST: Lists differ at element [1]: $30.50 != $28.98 expected [$30.50] but found [$28.98]",
+        "time" : {
+          "start" : 1598113669402,
+          "stop" : 1598113681560,
+          "duration" : 12158
+        }
+      }, {
+        "uid" : "4b4ff575908161d9",
+        "reportUrl" : "https://travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/180866151/#testresult/4b4ff575908161d9",
+        "status" : "failed",
+        "statusDetails" : "Results which have been found didn't match expected sorting result PRICE: HIGHEST FIRST: Lists differ at element [1]: $30.50 != $28.98 expected [$30.50] but found [$28.98]",
+        "time" : {
+          "start" : 1598027236999,
+          "stop" : 1598027249427,
+          "duration" : 12428
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "84f3dfe3c016790d.json",
+  "parameterValues" : [ ]
+}
