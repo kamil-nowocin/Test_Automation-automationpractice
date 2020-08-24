@@ -72,7 +72,7 @@ public class ContextInjection {
 
     //ORDER DATA//
     public static final double SHIPPING_PRICE = 2.00;
-    public static final double TAX_VALUE = 0.04;
+    public static final double TAX_VALUE = 0.04; //DIFFERENT STATES IN UNITED STATES HAVE DIFFERENT TAX VALUE
 
     //EXPECTED HEADERS//
     public static final String WELCOME_MESSAGE =
@@ -98,5 +98,5 @@ public class ContextInjection {
     public static final String VALUE_ERROR =
             "Value which have been found didn't match expected value!";
     public static final String _21VOID =
-            "Upssss, something went really bad! Even Michael Scofield couldn't have predicted that error! :)";
+            "Ups, something went really bad! Even Michael Scofield couldn't have predicted that error! :)";
 }

@@ -16,7 +16,7 @@ import org.testng.annotations.Test;
  **/
 
 @Epic("Web App Tests")
-@Feature("SEARCHBOX TESTS")
+@Feature("SEARCH BOX TESTS")
 @Listeners({TestNGListener.class})
 public class SearchBox_Tests extends Hooks {
 
@@ -30,10 +30,11 @@ public class SearchBox_Tests extends Hooks {
             priority = 0)
     public void test_1() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(31);
-
+        ExcelEnvironment excelEnvironment = new ExcelEnvironment();
         final MainPageSteps mainPageSteps = new MainPageSteps();
         final SearchPageSteps searchPageSteps = new SearchPageSteps();
+
+        excelEnvironment.saveTestResultsXLSX(31);
 
         //ACT//
         mainPageSteps.iOpenHomePage();
@@ -56,10 +57,11 @@ public class SearchBox_Tests extends Hooks {
             priority = 0)
     public void test_2() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(32);
-
+        ExcelEnvironment excelEnvironment = new ExcelEnvironment();
         final MainPageSteps mainPageSteps = new MainPageSteps();
         final SearchPageSteps searchPageSteps = new SearchPageSteps();
+
+        excelEnvironment.saveTestResultsXLSX(32);
 
         //ACT//
         mainPageSteps.iOpenHomePage();
@@ -82,10 +84,11 @@ public class SearchBox_Tests extends Hooks {
             priority = 0)
     public void test_3() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(33);
-
+        ExcelEnvironment excelEnvironment = new ExcelEnvironment();
         final MainPageSteps mainPageSteps = new MainPageSteps();
         final SearchPageSteps searchPageSteps = new SearchPageSteps();
+
+        excelEnvironment.saveTestResultsXLSX(33);
 
         //ACT//
         mainPageSteps.iOpenHomePage();
@@ -108,10 +111,11 @@ public class SearchBox_Tests extends Hooks {
             priority = 0)
     public void test_4() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(34);
-
+        ExcelEnvironment excelEnvironment = new ExcelEnvironment();
         final MainPageSteps mainPageSteps = new MainPageSteps();
         final SearchPageSteps searchPageSteps = new SearchPageSteps();
+
+        excelEnvironment.saveTestResultsXLSX(34);
 
         //ACT//
         mainPageSteps.iOpenHomePage();
@@ -134,10 +138,11 @@ public class SearchBox_Tests extends Hooks {
             priority = 0)
     public void test_5() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(35);
-
+        ExcelEnvironment excelEnvironment = new ExcelEnvironment();
         final MainPageSteps mainPageSteps = new MainPageSteps();
         final SearchPageSteps searchPageSteps = new SearchPageSteps();
+
+        excelEnvironment.saveTestResultsXLSX(35);
 
         //ACT//
         mainPageSteps.iOpenHomePage();
@@ -162,10 +167,11 @@ public class SearchBox_Tests extends Hooks {
             priority = 0)
     public void test_6() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(36);
-
+        ExcelEnvironment excelEnvironment = new ExcelEnvironment();
         final MainPageSteps mainPageSteps = new MainPageSteps();
         final SearchPageSteps searchPageSteps = new SearchPageSteps();
+
+        excelEnvironment.saveTestResultsXLSX(36);
 
         //ACT//
         mainPageSteps.iOpenHomePage();
@@ -191,10 +197,11 @@ public class SearchBox_Tests extends Hooks {
             priority = 0)
     public void test_7() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(37);
-
+        ExcelEnvironment excelEnvironment = new ExcelEnvironment();
         final MainPageSteps mainPageSteps = new MainPageSteps();
         final SearchPageSteps searchPageSteps = new SearchPageSteps();
+
+        excelEnvironment.saveTestResultsXLSX(37);
 
         //ACT//
         mainPageSteps.iOpenHomePage();
@@ -220,10 +227,11 @@ public class SearchBox_Tests extends Hooks {
             priority = 0)
     public void test_8() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(38);
-
+        ExcelEnvironment excelEnvironment = new ExcelEnvironment();
         final MainPageSteps mainPageSteps = new MainPageSteps();
         final SearchPageSteps searchPageSteps = new SearchPageSteps();
+
+        excelEnvironment.saveTestResultsXLSX(38);
 
         //ACT//
         mainPageSteps.iOpenHomePage();

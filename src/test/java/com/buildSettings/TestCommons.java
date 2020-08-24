@@ -44,7 +44,7 @@ public class TestCommons extends TestEnvironment {
             WebDriverWait wait = new WebDriverWait(DriverFactory.getDriver(), Timeouts.ATTRIBUTE_TIMEOUT.value);
             wait.until(ExpectedConditions.attributeContains(webElement, attribute, value));
         } catch (NotFoundException e) {
-            logger.error(String.format("Could't find attribute \"%S\" on element \"%S\" !", attribute, webElement));
+            logger.error(String.format("Couldn't find attribute \"%S\" on element \"%S\" !", attribute, webElement));
         }
     }
 
@@ -138,7 +138,7 @@ public class TestCommons extends TestEnvironment {
         webElement.sendKeys(whatToSend);
     }
 
-    public static void networkThrottling(boolean enableThrottling) throws IOException {
+    public void networkThrottling(boolean enableThrottling) throws IOException {
         Map<String, Object> map = new HashMap<>();
         if (enableThrottling) {
             map.put("offline", true);

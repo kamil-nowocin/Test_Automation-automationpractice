@@ -30,10 +30,11 @@ public class SocialMedia_Tests extends Hooks {
             priority = 0)
     public void test_1() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(41);
-
+        ExcelEnvironment excelEnvironment = new ExcelEnvironment();
         final MainPageSteps mainPageSteps = new MainPageSteps();
         final SocialMediaPageSteps mediaPageSteps = new SocialMediaPageSteps();
+
+        excelEnvironment.saveTestResultsXLSX(41);
 
         //ACT//
         mainPageSteps.iOpenHomePage();
@@ -55,10 +56,11 @@ public class SocialMedia_Tests extends Hooks {
     @Description("[US-777]/[2] I click on social media \"Twitter\" logo")
     public void test_2() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(42);
-
+        ExcelEnvironment excelEnvironment = new ExcelEnvironment();
         final MainPageSteps mainPageSteps = new MainPageSteps();
         final SocialMediaPageSteps mediaPageSteps = new SocialMediaPageSteps();
+
+        excelEnvironment.saveTestResultsXLSX(42);
 
         //ACT//
         mainPageSteps.iOpenHomePage();
@@ -80,10 +82,11 @@ public class SocialMedia_Tests extends Hooks {
     @Description("[US-777]/[3] I click on social media \"YouTube\" logo")
     public void test_3() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(43);
-
+        ExcelEnvironment excelEnvironment = new ExcelEnvironment();
         final MainPageSteps mainPageSteps = new MainPageSteps();
         final SocialMediaPageSteps mediaPageSteps = new SocialMediaPageSteps();
+
+        excelEnvironment.saveTestResultsXLSX(43);
 
         //ACT//
         mainPageSteps.iOpenHomePage();
@@ -105,10 +108,11 @@ public class SocialMedia_Tests extends Hooks {
     @Description("[US-777]/[4] I click on social media \"Google+\" logo")
     public void test_4() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(44);
-
+        ExcelEnvironment excelEnvironment = new ExcelEnvironment();
         final MainPageSteps mainPageSteps = new MainPageSteps();
         final SocialMediaPageSteps mediaPageSteps = new SocialMediaPageSteps();
+
+        excelEnvironment.saveTestResultsXLSX(44);
 
         //ACT//
         mainPageSteps.iOpenHomePage();

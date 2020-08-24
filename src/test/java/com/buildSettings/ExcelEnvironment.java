@@ -26,19 +26,19 @@ public class ExcelEnvironment extends TestEnvironment {
     public static final String TEST_DATA_EXCEL_FILE_NAME = "testdata.xlsx";
     public static final String TEST_DATA_EXCEL_SHEET_NAME = "automationData";
 
-    public static void setExcelRowNumber(int rowNumber) {
+    public void setExcelRowNumber(int rowNumber) {
         excelRowNumber = rowNumber;
     }
 
-    public static int getExcelRowNumber() {
+    public int getExcelRowNumber() {
         return excelRowNumber;
     }
 
-    public static void saveTestResultsXLSX(int whichRowNumber) {
+    public void saveTestResultsXLSX(int whichRowNumber) {
         setExcelRowNumber(whichRowNumber);
     }
 
-    public static void setExcelSheet(String excelSheetName) {
+    public void setExcelSheet(String excelSheetName) {
         testDataExcelPath = getCurrentPath()
                 + File.separator
                 + "src"
@@ -58,12 +58,12 @@ public class ExcelEnvironment extends TestEnvironment {
         }
     }
 
-    public static XSSFRow getRowData(int rowNumber) {
+    public XSSFRow getRowData(int rowNumber) {
         excelRow = excelSheet.getRow(rowNumber);
         return excelRow;
     }
 
-    public static void setCellData(int rowNumber, String stringValue, int columnNumber) {
+    public void setCellData(int rowNumber, String stringValue, int columnNumber) {
         try {
             excelRow = excelSheet.getRow(rowNumber);
             XSSFCell excelCell = excelRow.getCell(columnNumber);

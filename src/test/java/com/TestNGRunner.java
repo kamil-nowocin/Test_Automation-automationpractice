@@ -31,6 +31,8 @@ import org.testng.annotations.Test;
 public class TestNGRunner extends AbstractTestNGCucumberTests {
     private TestNGCucumberRunner testNGCucumberRunner;
 
+    private final TestEnvironment testEnvironment = new TestEnvironment();
+
     @BeforeClass(alwaysRun = true)
     public void setUpClass() {
         testNGCucumberRunner = new TestNGCucumberRunner(this.getClass());
@@ -55,7 +57,7 @@ public class TestNGRunner extends AbstractTestNGCucumberTests {
             return;
         }
         testNGCucumberRunner.finish();
-        TestEnvironment.allureWriteProperties();
-        TestEnvironment.allureWriteExecutors();
+        testEnvironment.allureWriteProperties();
+        testEnvironment.allureWriteExecutors();
     }
 }

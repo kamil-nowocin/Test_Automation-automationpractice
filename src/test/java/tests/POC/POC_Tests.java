@@ -32,16 +32,18 @@ public class POC_Tests extends Hooks {
     @Story("POC Tests")
     @Owner("Kamil Nowocin")
     @Severity(SeverityLevel.MINOR)
-    @Description("As a developer I'd like to see working POC with .xlsx file")
-    @Test(description = "As a developer I'd like to see working POC with .xlsx file",
+    @Description("[POC]/[1]As a developer I'd like to see working POC with .xlsx file")
+    @Test(description = "[POC]/[1]As a developer I'd like to see working POC with .xlsx file",
             priority = 0)
     @Parameters({"Parameter 1", "Parameter 2", "Parameter 3"})
     public void excelTest() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(50);
+        ExcelEnvironment excelEnvironment = new ExcelEnvironment();
+
+        excelEnvironment.saveTestResultsXLSX(50);
 
         //ACT//
-        testSteps(ExcelEnvironment.getRowData(1));
+        testSteps(excelEnvironment.getRowData(1));
 
         //ASSERT//
         Assert.fail();
