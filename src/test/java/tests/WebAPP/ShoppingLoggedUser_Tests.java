@@ -37,7 +37,13 @@ public class ShoppingLoggedUser_Tests extends Hooks {
             priority = 0)
     public void test_1() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(39);
+        ExcelEnvironment excelEnvironment = new ExcelEnvironment();
+        final MainPageSteps mainPageSteps = new MainPageSteps();
+        final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps(new ContextInjection());
+        final ShoppingLoggedUserSteps shoppingLoggedUserSteps = new ShoppingLoggedUserSteps(new ContextInjection());
+
+        excelEnvironment.saveTestResultsXLSX(39);
+
         List<List<String>> orderDetails = Arrays.asList
                 (
                         Arrays.asList("Quantity", "Size", "Colour"),
@@ -51,10 +57,6 @@ public class ShoppingLoggedUser_Tests extends Hooks {
                         Collections.singletonList("Pay by check")
                 );
         DataTable paymentDetailsDataTable = DataTable.create(paymentDetails);
-
-        final MainPageSteps mainPageSteps = new MainPageSteps();
-        final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps(new ContextInjection());
-        final ShoppingLoggedUserSteps shoppingLoggedUserSteps = new ShoppingLoggedUserSteps(new ContextInjection());
 
         //ACT//
         mainPageSteps.iOpenHomePage();
@@ -95,7 +97,13 @@ public class ShoppingLoggedUser_Tests extends Hooks {
             priority = 0)
     public void test_2() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(40);
+        ExcelEnvironment excelEnvironment = new ExcelEnvironment();
+        final MainPageSteps mainPageSteps = new MainPageSteps();
+        final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps(new ContextInjection());
+        final ShoppingLoggedUserSteps shoppingLoggedUserSteps = new ShoppingLoggedUserSteps(new ContextInjection());
+
+        excelEnvironment.saveTestResultsXLSX(40);
+
         List<List<String>> orderDetails = Arrays.asList
                 (
                         Arrays.asList("Quantity", "Size", "Colour"),
@@ -109,10 +117,6 @@ public class ShoppingLoggedUser_Tests extends Hooks {
                         Collections.singletonList("Pay by bank wire")
                 );
         DataTable paymentDetailsDataTable = DataTable.create(paymentDetails);
-
-        final MainPageSteps mainPageSteps = new MainPageSteps();
-        final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps(new ContextInjection());
-        final ShoppingLoggedUserSteps shoppingLoggedUserSteps = new ShoppingLoggedUserSteps(new ContextInjection());
 
         //ACT//
         mainPageSteps.iOpenHomePage();

@@ -22,7 +22,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
-import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
@@ -66,7 +65,7 @@ public class TestEnvironment {
     protected static final String TRAVIS_BUILD_NUMBER = System.getProperty
             ("travis.buildNumber", "Build was made on localhost");
     protected static final String TRAVIS_BUILD_WEB_URL = System.getProperty
-            ("travis.buildURL", "https://localhost:3000");
+            ("travis.buildURL", "Build was made on localhost");
     protected static final String TRAVIS_BRANCH = System.getProperty
             ("travis.branch", "Build was made on localhost");
     protected static final String OS_NAME = System.getProperty
@@ -75,12 +74,14 @@ public class TestEnvironment {
             ("travis.jdkVersion", "Build was made on localhost");
     protected static final String SLACK_TOKEN = System.getProperty
             ("travis.slack", "");
-    protected static final String BROWSER = System.getProperty
-            ("browser", "Chrome");
-    protected static final String HOST = System.getProperty
-            ("selenium.host", "Chrome");
-    protected static final String HOST_URL = System.getProperty
-            ("selenium.hostURL", "https://localhost:3000");
+    protected static final String DEFAULT_REMOTE_BROWSER = System.getProperty
+            ("remote.browser", "chrome");
+    protected static final String DEFAULT_TESTS_EXECUTOR = System.getProperty
+            ("tests.executor", "chrome");
+    protected static final String SELENIUM_GRID_URL = System.getProperty
+            ("selenium.gridURL", "http://localhost:4444/wd/hub");
+    protected static final String BROWSERSTACK_HOST_URL = System.getProperty
+            ("browserstack.hostURL", "https://localhost:3000");
 
     //METHODS//
     public static String getCurrentPath() {
@@ -91,13 +92,13 @@ public class TestEnvironment {
         return Instant.now().getEpochSecond();
     }
 
-    public static void allureWriteProperties() {
+    public void allureWriteProperties() {
         Properties properties = new Properties();
         properties.setProperty("All tests were executed on:", HOME_URL);
         properties.setProperty("Travis build URL:", TRAVIS_BUILD_WEB_URL);
         properties.setProperty("Travis build Run:", TRAVIS_BUILD_NUMBER);
         properties.setProperty("Branch:", TRAVIS_BRANCH);
-        properties.setProperty("Browser:", HOST);
+        properties.setProperty("Browser:", DEFAULT_TESTS_EXECUTOR);
         properties.setProperty("OS Name:", OS_NAME);
         properties.setProperty("JDK Version:", JAVA_VERSION);
         try {
@@ -107,7 +108,7 @@ public class TestEnvironment {
         }
     }
 
-    public static void allureWriteExecutors() {
+    public void allureWriteExecutors() {
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("name", EXECUTOR);
         jsonObject.put("type", EXECUTOR);
@@ -161,21 +162,18 @@ public class TestEnvironment {
         try (Stream<String> stream = Files.lines(Paths.get(path), StandardCharsets.UTF_8)) {
             stream.forEach(s -> contentBuilder.append(s).append("\n"));
         } catch (IOException e) {
-            logger.error("Failed to attach .logs object!", e);
+            logger.error("Failed to attach .log file!", e);
         }
         return contentBuilder.toString();
     }
 
     protected void deleteOldLogs() {
         try {
-            Files.walk(Paths.get(getCurrentPath()
+            FileUtils.deleteDirectory(new File(getCurrentPath()
                     + File.separator
-                    + "logs"))
-                    .filter(Files::isRegularFile)
-                    .map(Path::toFile)
-                    .forEach(File::delete);
+                    + "logs"));
         } catch (IOException e) {
-            logger.error("Failed to delete log files!", e);
+            logger.error("Failed to delete logs directory!", e);
         }
     }
 
@@ -189,7 +187,6 @@ public class TestEnvironment {
     protected enum Timeouts {
         SCRIPT_TIMEOUT(15),
         PAGE_LOAD_TIMEOUT(30),
-        FIND_ELEMENT_TIMEOUT(15),
         CLICK_TIMEOUT(15),
         ATTRIBUTE_TIMEOUT(15),
         VISIBLE_TIMEOUT(15);
@@ -201,8 +198,8 @@ public class TestEnvironment {
         }
     }
 
-    protected void displayWebDriverManagerBrowsersVersions(Boolean printStatuses) {
-        if (printStatuses) {
+    protected void displayWebDriverManagerBrowsersVersions(Boolean showBrowserVersions) {
+        if (showBrowserVersions) {
             logger.info(String.format("ChromeDriver available versions: %s", WebDriverManager.chromedriver().getDriverVersions()));
             logger.info(String.format("GeckoDriver available versions: %s", WebDriverManager.firefoxdriver().getDriverVersions()));
             logger.info(String.format("OperaDriver available versions: %s ", WebDriverManager.operadriver().getDriverVersions()));

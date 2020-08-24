@@ -24,44 +24,49 @@ public class TestNGListener extends TestEnvironment implements ITestListener {
     public static List<String> passedTests = new ArrayList<>();
     public static List<String> failedTests = new ArrayList<>();
 
+    private final SlackLogger slackLogger = new SlackLogger();
+    private final MessageBuilder messageBuilder = new MessageBuilder();
+    private final TestEnvironment testEnvironment = new TestEnvironment();
+    private final ExcelEnvironment excelEnvironment = new ExcelEnvironment();
+
     /**
      * For TestNG tests
      */
     @Override
     public synchronized void onStart(ITestContext iTestContext) {
         deleteOldLogs();
-        MessageBuilder.messageStartSuite(iTestContext);
+        messageBuilder.messageStartSuite(iTestContext);
     }
 
     @Override
     public synchronized void onFinish(ITestContext iTestContext) {
-        MessageBuilder.messageEndSuite(iTestContext);
-        TestEnvironment.allureWriteExecutors();
-        TestEnvironment.allureWriteProperties();
+        messageBuilder.messageEndSuite(iTestContext);
+        testEnvironment.allureWriteExecutors();
+        testEnvironment.allureWriteProperties();
         ContextInjection.passedTestsAmount = passedTests.size();
         ContextInjection.failedTestsAmount = failedTests.size();
-        SlackLogger.sendTestExecutionStatusToSlack(iTestContext);
+        slackLogger.sendTestExecutionStatusToSlack(iTestContext);
         suiteResultsCleaner();
     }
 
     @Override
     public synchronized void onTestStart(ITestResult iTestResult) {
-        MessageBuilder.messageStartTest(iTestResult);
+        messageBuilder.messageStartTest(iTestResult);
     }
 
     @Override
     public synchronized void onTestSuccess(ITestResult iTestResult) {
-        MessageBuilder.messageSuccessTest();
-        ExcelEnvironment.setCellData(ExcelEnvironment.getExcelRowNumber(), "PASSED", EXCEL_TC_RESULT_COLUMN);
-        ExcelEnvironment.setCellData(ExcelEnvironment.getExcelRowNumber(), MessageBuilder.getTestDescription(iTestResult), EXCEL_TC_NAME_COLUMN);
+        messageBuilder.messageSuccessTest();
+        excelEnvironment.setCellData(excelEnvironment.getExcelRowNumber(), "PASSED", EXCEL_TC_RESULT_COLUMN);
+        excelEnvironment.setCellData(excelEnvironment.getExcelRowNumber(), MessageBuilder.getTestDescription(iTestResult), EXCEL_TC_NAME_COLUMN);
         passedTests.add(MessageBuilder.getTestDescription(iTestResult));
     }
 
     @Override
     public synchronized void onTestFailure(ITestResult iTestResult) {
-        MessageBuilder.messageFailTest();
-        ExcelEnvironment.setCellData(ExcelEnvironment.getExcelRowNumber(), "FAILED", EXCEL_TC_RESULT_COLUMN);
-        ExcelEnvironment.setCellData(ExcelEnvironment.getExcelRowNumber(), MessageBuilder.getTestDescription(iTestResult), EXCEL_TC_NAME_COLUMN);
+        messageBuilder.messageFailTest();
+        excelEnvironment.setCellData(excelEnvironment.getExcelRowNumber(), "FAILED", EXCEL_TC_RESULT_COLUMN);
+        excelEnvironment.setCellData(excelEnvironment.getExcelRowNumber(), MessageBuilder.getTestDescription(iTestResult), EXCEL_TC_NAME_COLUMN);
         failedTests.add(MessageBuilder.getTestDescription(iTestResult));
         logger.error(String.valueOf(iTestResult.getThrowable()));
         allureSaveScreenshotPNG();
@@ -71,11 +76,11 @@ public class TestNGListener extends TestEnvironment implements ITestListener {
     /**
      * For Cucumber tests
      **/
-    public static void onScenarioStart(Scenario scenario) {
-        MessageBuilder.messageStartScenario(scenario);
+    public void onScenarioStart(Scenario scenario) {
+        messageBuilder.messageStartScenario(scenario);
     }
 
-    public static void onScenarioFinish(Scenario scenario) {
-        MessageBuilder.messageFinishScenario(scenario);
+    public void onScenarioFinish(Scenario scenario) {
+        messageBuilder.messageFinishScenario(scenario);
     }
 }

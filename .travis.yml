@@ -51,7 +51,7 @@ before_script:
 script:
   - ./gradlew test -Dtravis.buildNumber=$TRAVIS_BUILD_NUMBER -Dtravis.buildURL=$TRAVIS_BUILD_WEB_URL -Dtravis.branch=$TRAVIS_BRANCH -Dtravis.osName=$TRAVIS_OS_NAME -Dtravis.jdkVersion=$TRAVIS_JDK_VERSION -Dtravis.slack=$SLACK_TOKEN
   #THIS COMMAND WOULD RUN TESTS ON BROWSERSTACK
-  #- ./gradlew test -Dselenium.host=browserstack -Dselenium.hostURL=https://$USER_NAME:$ACCESS_KEY@hub-cloud.browserstack.com/wd/hub -Dbrowser=chrome
+  #- ./gradlew test -Dtests.executor=browserstack -Dbrowserstack.hostURL=https://$USER_NAME:$ACCESS_KEY@hub-cloud.browserstack.com/wd/hub -Dremote.browser=chrome
 after_script:
   - echo ========================================================================
   - echo ========================BUILD EXECUTION FINISHED========================

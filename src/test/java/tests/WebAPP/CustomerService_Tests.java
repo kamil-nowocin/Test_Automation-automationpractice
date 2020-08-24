@@ -30,10 +30,11 @@ public class CustomerService_Tests extends Hooks {
             priority = 0)
     public void test_1() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(5);
-
+        ExcelEnvironment excelEnvironment = new ExcelEnvironment();
         final MainPageSteps mainPageSteps = new MainPageSteps();
         final CustomerServicePageSteps customerServicePageSteps = new CustomerServicePageSteps();
+
+        excelEnvironment.saveTestResultsXLSX(5);
 
         //ACT//
         mainPageSteps.iOpenHomePage();
@@ -61,10 +62,11 @@ public class CustomerService_Tests extends Hooks {
             priority = 0)
     public void test_2() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(6);
-
+        ExcelEnvironment excelEnvironment = new ExcelEnvironment();
         final MainPageSteps mainPageSteps = new MainPageSteps();
         final CustomerServicePageSteps customerServicePageSteps = new CustomerServicePageSteps();
+
+        excelEnvironment.saveTestResultsXLSX(6);
 
         //ACT//
         mainPageSteps.iOpenHomePage();
@@ -91,10 +93,11 @@ public class CustomerService_Tests extends Hooks {
             priority = 0)
     public void test_3() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(7);
-
+        ExcelEnvironment excelEnvironment = new ExcelEnvironment();
         final MainPageSteps mainPageSteps = new MainPageSteps();
         final CustomerServicePageSteps customerServicePageSteps = new CustomerServicePageSteps();
+
+        excelEnvironment.saveTestResultsXLSX(7);
 
         //ACT//
         mainPageSteps.iOpenHomePage();
@@ -123,10 +126,11 @@ public class CustomerService_Tests extends Hooks {
             priority = 0)
     public void test_4() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(8);
-
+        ExcelEnvironment excelEnvironment = new ExcelEnvironment();
         final MainPageSteps mainPageSteps = new MainPageSteps();
         final CustomerServicePageSteps customerServicePageSteps = new CustomerServicePageSteps();
+
+        excelEnvironment.saveTestResultsXLSX(8);
 
         //ACT//
         mainPageSteps.iOpenHomePage();
@@ -155,10 +159,11 @@ public class CustomerService_Tests extends Hooks {
             priority = 0)
     public void test_5() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(9);
-
+        ExcelEnvironment excelEnvironment = new ExcelEnvironment();
         final MainPageSteps mainPageSteps = new MainPageSteps();
         final CustomerServicePageSteps customerServicePageSteps = new CustomerServicePageSteps();
+
+        excelEnvironment.saveTestResultsXLSX(9);
 
         //ACT//
         mainPageSteps.iOpenHomePage();
@@ -187,10 +192,11 @@ public class CustomerService_Tests extends Hooks {
             priority = 0)
     public void test_6() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(10);
-
+        ExcelEnvironment excelEnvironment = new ExcelEnvironment();
         final MainPageSteps mainPageSteps = new MainPageSteps();
         final CustomerServicePageSteps customerServicePageSteps = new CustomerServicePageSteps();
+
+        excelEnvironment.saveTestResultsXLSX(10);
 
         //ACT//
         mainPageSteps.iOpenHomePage();
@@ -219,10 +225,11 @@ public class CustomerService_Tests extends Hooks {
             priority = 0)
     public void test_7() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(11);
-
+        ExcelEnvironment excelEnvironment = new ExcelEnvironment();
         final MainPageSteps mainPageSteps = new MainPageSteps();
         final CustomerServicePageSteps customerServicePageSteps = new CustomerServicePageSteps();
+
+        excelEnvironment.saveTestResultsXLSX(11);
 
         //ACT//
         mainPageSteps.iOpenHomePage();
@@ -251,10 +258,11 @@ public class CustomerService_Tests extends Hooks {
             priority = 0)
     public void test_8() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(12);
-
+        ExcelEnvironment excelEnvironment = new ExcelEnvironment();
         final MainPageSteps mainPageSteps = new MainPageSteps();
         final CustomerServicePageSteps customerServicePageSteps = new CustomerServicePageSteps();
+
+        excelEnvironment.saveTestResultsXLSX(12);
 
         //ACT//
         mainPageSteps.iOpenHomePage();

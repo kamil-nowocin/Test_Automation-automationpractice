@@ -32,11 +32,12 @@ public class Authentication_Tests extends Hooks {
             priority = 0)
     public void test_1() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(1);
-
+        ExcelEnvironment excelEnvironment = new ExcelEnvironment();
         final MainPageSteps mainPageSteps = new MainPageSteps();
         final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps(new ContextInjection());
         final AuthenticationPageSteps authenticationPageSteps = new AuthenticationPageSteps();
+
+        excelEnvironment.saveTestResultsXLSX(1);
 
         //ACT//
         mainPageSteps.iOpenHomePage();
@@ -61,11 +62,12 @@ public class Authentication_Tests extends Hooks {
             priority = 0)
     public void test_2() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(2);
-
+        ExcelEnvironment excelEnvironment = new ExcelEnvironment();
         final MainPageSteps mainPageSteps = new MainPageSteps();
         final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps(new ContextInjection());
         final AuthenticationPageSteps authenticationPageSteps = new AuthenticationPageSteps();
+
+        excelEnvironment.saveTestResultsXLSX(2);
 
         //ACT//
         mainPageSteps.iOpenHomePage();
@@ -90,11 +92,12 @@ public class Authentication_Tests extends Hooks {
             priority = 0)
     public void test_3() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(3);
-
+        ExcelEnvironment excelEnvironment = new ExcelEnvironment();
         final MainPageSteps mainPageSteps = new MainPageSteps();
         final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps(new ContextInjection());
         final AuthenticationPageSteps authenticationPageSteps = new AuthenticationPageSteps();
+
+        excelEnvironment.saveTestResultsXLSX(3);
 
         //ACT//
         mainPageSteps.iOpenHomePage();
@@ -119,11 +122,12 @@ public class Authentication_Tests extends Hooks {
             priority = 0)
     public void test_4() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(4);
-
+        ExcelEnvironment excelEnvironment = new ExcelEnvironment();
         final MainPageSteps mainPageSteps = new MainPageSteps();
         final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps(new ContextInjection());
         final AuthenticationPageSteps authenticationPageSteps = new AuthenticationPageSteps();
+
+        excelEnvironment.saveTestResultsXLSX(4);
 
         //ACT//
         mainPageSteps.iOpenHomePage();

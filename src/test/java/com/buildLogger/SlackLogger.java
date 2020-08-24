@@ -70,7 +70,7 @@ public class SlackLogger extends TestEnvironment implements ITestListener {
         }
     }
 
-    public static void sendTestExecutionStatusToSlack(ITestContext iTestContext) {
+    public void sendTestExecutionStatusToSlack(ITestContext iTestContext) {
         int TOTAL_TEST_CASES = ContextInjection.failedTestsAmount + ContextInjection.passedTestsAmount;
         whichColor();
         try {
@@ -107,7 +107,7 @@ public class SlackLogger extends TestEnvironment implements ITestListener {
                                             .build()))
                                     .build(),
                             DividerBlock.builder().build()))
-                    .attachments(Arrays.asList(
+                    .attachments(Collections.singletonList(
                             Attachment.builder()
                                     .color(color)
                                     .blocks(Arrays.asList(
@@ -167,7 +167,7 @@ public class SlackLogger extends TestEnvironment implements ITestListener {
         }
     }
 
-    public static String slackLoggerResponse(WebhookResponse webhookResponse) {
+    public String slackLoggerResponse(WebhookResponse webhookResponse) {
         return String.format("Slack response: %d, Additional information: %s", webhookResponse.getCode(), webhookResponse.getBody());
     }
 }

@@ -38,8 +38,8 @@ There are multiple ways to run tests from this build. It all depends on what you
 4. In terminal type `./gradlew runTests` -> This will run all `.feature` files.
 5. In terminal type `./gradlew runTests {run with tags TBA}` -> This will run all `.feature` files which provided tag.
 6. In terminal type `./gradlew test` -> This will run all tests from tests package.`(src/test/java/tests)`  
-You can add some environment settings, before you run tests with this command, e.g.
-   - `-Dselenium.host="YOUR_HOST_NAME"` -> available hosts: Chrome, Firefox, Opera, Safari, Edge, IE, Safari, BrowserStack
+You can add some environment settings, before you run tests, e.g.
+   - `-Dtests.executor="YOUR_HOST_NAME"` -> available hosts: Chrome, Firefox, Opera, Safari, Edge, IE, Safari, BrowserStack
 7. Create your own runner :hammer_and_wrench:
 ## TEST RESULTS (Allure Report)
 After each CI/CD cycle run, tests results will be automatically uploaded to [kamil_nowocin.github.io/Test_Automation](https://kamil-nowocin.github.io/Test_Automation-automationpractice/)  

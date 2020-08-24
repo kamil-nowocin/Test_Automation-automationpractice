@@ -35,10 +35,11 @@ public class Registration_Tests extends Hooks {
             priority = 0)
     public void test_1() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(13);
-
+        ExcelEnvironment excelEnvironment = new ExcelEnvironment();
         final MainPageSteps mainPageSteps = new MainPageSteps();
         final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps(new ContextInjection());
+
+        excelEnvironment.saveTestResultsXLSX(13);
 
         //ACT//
         mainPageSteps.iOpenHomePage();
@@ -62,10 +63,11 @@ public class Registration_Tests extends Hooks {
             priority = 1, dependsOnMethods = {"test_1"})
     public void test_2() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(14);
-
+        ExcelEnvironment excelEnvironment = new ExcelEnvironment();
         final MainPageSteps mainPageSteps = new MainPageSteps();
         final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps(new ContextInjection());
+
+        excelEnvironment.saveTestResultsXLSX(14);
 
         //ACT//
         mainPageSteps.iOpenHomePage();
@@ -108,10 +110,11 @@ public class Registration_Tests extends Hooks {
             priority = 1, dependsOnMethods = {"test_1"})
     public void test_3() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(15);
-
+        ExcelEnvironment excelEnvironment = new ExcelEnvironment();
         final MainPageSteps mainPageSteps = new MainPageSteps();
         final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps(new ContextInjection());
+
+        excelEnvironment.saveTestResultsXLSX(15);
 
         //ACT//
         mainPageSteps.iOpenHomePage();
@@ -149,10 +152,11 @@ public class Registration_Tests extends Hooks {
             priority = 1, dependsOnMethods = {"test_1"})
     public void test_4() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(16);
-
+        ExcelEnvironment excelEnvironment = new ExcelEnvironment();
         final MainPageSteps mainPageSteps = new MainPageSteps();
         final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps(new ContextInjection());
+
+        excelEnvironment.saveTestResultsXLSX(16);
 
         //ACT//
         mainPageSteps.iOpenHomePage();
@@ -177,16 +181,18 @@ public class Registration_Tests extends Hooks {
             priority = 1, dependsOnMethods = {"test_1"})
     public void test_5() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(17);
+        ExcelEnvironment excelEnvironment = new ExcelEnvironment();
+        final MainPageSteps mainPageSteps = new MainPageSteps();
+        final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps(new ContextInjection());
+
+        excelEnvironment.saveTestResultsXLSX(17);
+
         List<List<String>> registrationDetails = Arrays.asList
                 (
                         Arrays.asList("First Name", "Last Name", "Password", "Address", "City", "State", "Postal Code", "Country", "Mobile Phone"),
                         Arrays.asList("Thor", "Odinson", "#Passwd123", "", "City", "Alaska", "99503", "United States", "700-800-900")
                 );
         DataTable registrationDetailsDataTable = DataTable.create(registrationDetails);
-
-        final MainPageSteps mainPageSteps = new MainPageSteps();
-        final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps(new ContextInjection());
 
         //ACT//
         mainPageSteps.iOpenHomePage();
@@ -215,10 +221,11 @@ public class Registration_Tests extends Hooks {
             priority = 1, dependsOnMethods = {"test_1"})
     public void test_6() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(18);
-
+        ExcelEnvironment excelEnvironment = new ExcelEnvironment();
         final MainPageSteps mainPageSteps = new MainPageSteps();
         final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps(new ContextInjection());
+
+        excelEnvironment.saveTestResultsXLSX(18);
 
         //ACT//
         mainPageSteps.iOpenHomePage();
@@ -242,10 +249,11 @@ public class Registration_Tests extends Hooks {
             priority = 1, dependsOnMethods = {"test_1"})
     public void test_7() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(19);
-
+        ExcelEnvironment excelEnvironment = new ExcelEnvironment();
         final MainPageSteps mainPageSteps = new MainPageSteps();
         final RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps(new ContextInjection());
+
+        excelEnvironment.saveTestResultsXLSX(19);
 
         //ACT//
         mainPageSteps.iOpenHomePage();

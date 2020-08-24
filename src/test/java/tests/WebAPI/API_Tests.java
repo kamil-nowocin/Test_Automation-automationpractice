@@ -30,12 +30,14 @@ public class API_Tests extends Hooks {
     @Story("HTTP STATUSES")
     @Owner("Kamil Nowocin")
     @Severity(SeverityLevel.BLOCKER)
-    @Description("[US-XXX]/[1] As a user I would like to check availability of automationpractice.com")
-    @Test(description = "[US-XXX]/[1] I would like to check availability of automationpractice.com",
+    @Description("[API]/[1] As a user I would like to check availability of automationpractice.com")
+    @Test(description = "[API]/[1] I would like to check availability of automationpractice.com",
             priority = 0)
     public void test_1() throws Throwable {
         //ARRANGE//
-        ExcelEnvironment.saveTestResultsXLSX(45);
+        ExcelEnvironment excelEnvironment = new ExcelEnvironment();
+
+        excelEnvironment.saveTestResultsXLSX(45);
 
         //ACT//
         given().when().get(restHomeURL()).then().assertThat().statusCode(200);

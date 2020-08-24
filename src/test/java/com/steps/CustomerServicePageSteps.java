@@ -169,18 +169,15 @@ public class CustomerServicePageSteps extends TestEnvironment {
     @Step("I don't choose Subject Heading")
     @When("I don't choose Subject Heading")
     public void iDonTChooseSubjectHeading() throws Throwable {
-        ;
     }
 
     @Step("I don't write an email address")
     @And("I don't write an email address")
     public void iDonTWriteAnEmailAddress() throws Throwable {
-        ;
     }
 
     @Step("I don't write message")
     @And("I don't write message")
     public void iDonTWriteMessage() throws Throwable {
-        ;
     }
 }

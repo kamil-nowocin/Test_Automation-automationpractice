@@ -26,22 +26,26 @@ import java.io.IOException;
 
 public class Hooks extends DriverFactory implements ITestListener {
 
+    private final TestCommons testCommons = new TestCommons();
+    private final TestNGListener testNGListener = new TestNGListener();
+    private final ExcelEnvironment excelEnvironment = new ExcelEnvironment();
+
     /**
      * For TestNG -> @Test annotation
      **/
-    @BeforeTest(description = "Setting up Excel File")
+    @BeforeTest(alwaysRun = true, description = "Setting up Excel File")
     public void dataSetup() {
-        ExcelEnvironment.setExcelSheet(ExcelEnvironment.TEST_DATA_EXCEL_SHEET_NAME);
+        excelEnvironment.setExcelSheet(ExcelEnvironment.TEST_DATA_EXCEL_SHEET_NAME);
     }
 
-    @BeforeMethod(description = "Setting up Test Class")
+    @BeforeMethod(alwaysRun = true, description = "Setting up Test Class")
     public void beforeTest(ITestResult iTestResult) throws IOException {
         MDC.put("testid", MessageBuilder.getTestDescription(iTestResult));
         startBrowser();
-        TestCommons.networkThrottling(false);
+        testCommons.networkThrottling(false);
     }
 
-    @AfterMethod(description = "Teardown Test Class")
+    @AfterMethod(alwaysRun = true, description = "Teardown Test Class")
     public void afterTest() {
         MDC.remove("testid");
         getDriver().close();
@@ -58,14 +62,14 @@ public class Hooks extends DriverFactory implements ITestListener {
     @Before
     public void beforeScenario(Scenario scenario) throws IOException {
         MDC.put("testid", scenario.getName().toUpperCase());
-        TestNGListener.onScenarioStart(scenario);
+        testNGListener.onScenarioStart(scenario);
         startBrowser();
-        TestCommons.networkThrottling(false);
+        testCommons.networkThrottling(false);
     }
 
     @After
     public void afterScenario(Scenario scenario) throws IOException {
-        TestNGListener.onScenarioFinish(scenario);
+        testNGListener.onScenarioFinish(scenario);
         if (scenario.isFailed()) {
             localSaveScreenshotPNG(scenario);
             allureSaveScreenshotPNG();
