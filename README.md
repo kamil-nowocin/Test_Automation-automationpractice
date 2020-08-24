@@ -10,20 +10,23 @@
 # Test automation - http://www.automationpractice.com
 **Design Pattern:** Page Object Model with loadable components<sub><sup>(POC)</sub></sup> & AAA  
 **Following tools were used in this framework:**  
-Java, Selenium, TestNG, Cucumber, REST Assured, Gradle, Travis CI, Allure Reports, Slack API, WebDriverManager, Faker & MockNeat, BrowserStack, GitHub Pages
+Java, Selenium, TestNG, Cucumber, REST Assured, Gradle, Travis CI, Allure Reports, Slack API, SeleniumGrid, WebDriverManager, Faker & MockNeat, BrowserStack, GitHub Pages
 ## ABOUT PROJECT
 Project made in my spare time to develop my skills in automation testing.  
 You don't have to download any WebDrivers - I'm using WebDriverManager, drivers will be downloaded by gradle.  
-Supported browsers aka hosts:
+Supported tests executors:
 - *Chrome*
 - *Firefox*
 - *Opera*
 - *Safari*
+- *Edge*
 - *Internet Explorer*
+- *SeleniumGrid*
 - *BrowserStack*
 ## FEATURES
 - Support for Allure Report
 - Support for Slack Bot
+- Support for SeleniumGrid
 - Support for Parallel Testing
 - Support for BrowserStack
 - Support for WebDriverManager
@@ -53,6 +56,12 @@ During CI/CD cycle run, you can see real time test results of TestNG suite execu
 | FAIL MESSAGE  | PASS MESSAGE  |
 | ------------- | ------------- |
 | ![IMG](https://raw.githubusercontent.com/kamil-nowocin/Test_Automation-automationpractice/master/src/test/resources/files/images/slack_bot_fail.png)  | ![IMG](https://raw.githubusercontent.com/kamil-nowocin/Test_Automation-automationpractice/master/src/test/resources/files/images/slack_bot_pass.png)  |
+## SELENIUM GRID (POC)
+Right now it's only available for a local host, and **it's POC feature**, however you are able to check how it works.
+#### HOW TO RUN TESTS
+1. Run SeleniumGridRunner
+2. Make sure that SeleniumGrid is running properly, check http://localhost:4444/grid/console
+3. In terminal type `./gradlew test -Dtests.executor=grid -Dremote.browser=chrome` 
 ## TEST LOGS
 There are two types of log information saved after each test run:  
 - Detailed logs in log directory. Warning! These logs will be deleted when you launch new test run.  
