@@ -2,35 +2,39 @@
   "uid" : "4b4757e66a1912dae1a509f688f20b0f",
   "name" : "categories",
   "children" : [ {
-    "name" : "Product defects",
+    "name" : "Test defects",
     "children" : [ {
-      "name" : "null",
+      "name" : "java.lang.NullPointerException",
       "children" : [ {
-        "name" : "As a developer I'd like to see working POC with .xlsx file",
-        "uid" : "c1ded2864515ccd3",
-        "parentUid" : "666d1a31450af3ae8459f14f07f9a1b4",
-        "status" : "failed",
+        "name" : "[POC]/[1]As a developer I'd like to see working POC with .xlsx file",
+        "uid" : "2eede5ac287f2ad3",
+        "parentUid" : "5592898b36d684905e31486a23088bda",
+        "status" : "broken",
         "time" : {
-          "start" : 1598200014672,
-          "stop" : 1598200015175,
-          "duration" : 503
+          "start" : 1598297731804,
+          "stop" : 1598297732186,
+          "duration" : 382
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ "Test 1", "Test 2", "Test 3" ]
       } ],
-      "uid" : "666d1a31450af3ae8459f14f07f9a1b4"
-    }, {
+      "uid" : "5592898b36d684905e31486a23088bda"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  }, {
+    "name" : "Product defects",
+    "children" : [ {
       "name" : "Results which have been found didn't match expected sorting result PRICE: HIGHEST FIRST: Lists differ at element [1]: $30.50 != $28.98 expected [$30.50] but found [$28.98]",
       "children" : [ {
         "name" : "[US-555]/[7] I would like to use search box and be able to see results sorted by: \"Price: Highest first\"",
-        "uid" : "6deb303375c83639",
+        "uid" : "67d685763d1479b3",
         "parentUid" : "3246160de76fc0de742a06aad5432502",
         "status" : "failed",
         "time" : {
-          "start" : 1598200134056,
-          "stop" : 1598200150325,
-          "duration" : 16269
+          "start" : 1598297854307,
+          "stop" : 1598297870056,
+          "duration" : 15749
         },
         "flaky" : false,
         "newFailed" : false,
@@ -41,13 +45,13 @@
       "name" : "Results which have been found didn't match expected sorting result PRICE: LOWEST FIRST: Lists differ at element [2]: $28.98 != $30.50 expected [$28.98] but found [$30.50]",
       "children" : [ {
         "name" : "[US-555]/[8] I would like to use search box and be able to see results sorted by: \"Price: Lowest first\"",
-        "uid" : "35fd01229c6a76b3",
+        "uid" : "2fd7ec07f9b9b3eb",
         "parentUid" : "06135fb1e9171a4c5ee185041330339b",
         "status" : "failed",
         "time" : {
-          "start" : 1598200167716,
-          "stop" : 1598200182317,
-          "duration" : 14601
+          "start" : 1598297885830,
+          "stop" : 1598297903926,
+          "duration" : 18096
         },
         "flaky" : false,
         "newFailed" : false,
