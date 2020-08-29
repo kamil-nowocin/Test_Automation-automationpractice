@@ -52,8 +52,6 @@ public class TestEnvironment {
     protected static final ResourceBundle RESOURCE_BUNDLE_ERROR_MESSAGES = ResourceBundle.getBundle("errorValidators");
 
     //DATA//
-    protected static final int EXCEL_TC_NAME_COLUMN = 0;
-    protected static final int EXCEL_TC_RESULT_COLUMN = 4;
     protected static final String ANSI_RED = "\u001B[31m";
     protected static final String ANSI_RESET = "\u001B[0m";
     protected static final String ANSI_BLUE = "\u001b[34m";
@@ -130,7 +128,7 @@ public class TestEnvironment {
 
     @Attachment(value = "Cucumber scenario FAIL logs", type = "text/plain")
     protected String allureSaveTextLogCucumber(Scenario scenario) {
-        return logBuilder(scenario.toString());
+        return logBuilder(scenario.getName().toUpperCase());
     }
 
     @Attachment(value = "Scenario FAIL screenshot", type = "image/png")

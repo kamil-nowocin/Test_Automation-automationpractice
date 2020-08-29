@@ -31,22 +31,22 @@ public class SocialMediaPageSteps extends TestEnvironment {
         switch (logoName.toLowerCase()) {
             case "facebook":
                 testCommons.scrollWebsiteToElement(socialMediaPage.facebookButton);
-                Assert.assertTrue(testCommons.waitForElementToBeVisible(socialMediaPage.facebookButton),
+                Assert.assertTrue(testCommons.isElementToBeVisible(socialMediaPage.facebookButton),
                         String.format(ContextInjection.VIEW_ERROR, logoName.toUpperCase()));
                 break;
             case "twitter":
                 testCommons.scrollWebsiteToElement(socialMediaPage.twitterButton);
-                Assert.assertTrue(testCommons.waitForElementToBeVisible(socialMediaPage.twitterButton),
+                Assert.assertTrue(testCommons.isElementToBeVisible(socialMediaPage.twitterButton),
                         String.format(ContextInjection.VIEW_ERROR, logoName.toUpperCase()));
                 break;
             case "youtube":
                 testCommons.scrollWebsiteToElement(socialMediaPage.youtubeButton);
-                Assert.assertTrue(testCommons.waitForElementToBeVisible(socialMediaPage.youtubeButton),
+                Assert.assertTrue(testCommons.isElementToBeVisible(socialMediaPage.youtubeButton),
                         String.format(ContextInjection.VIEW_ERROR, logoName.toUpperCase()));
                 break;
             case "google":
                 testCommons.scrollWebsiteToElement(socialMediaPage.googleButton);
-                Assert.assertTrue(testCommons.waitForElementToBeVisible(socialMediaPage.googleButton),
+                Assert.assertTrue(testCommons.isElementToBeVisible(socialMediaPage.googleButton),
                         String.format(ContextInjection.VIEW_ERROR, logoName.toUpperCase()));
                 break;
             default:
