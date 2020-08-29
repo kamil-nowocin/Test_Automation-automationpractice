@@ -39,9 +39,8 @@ addons:
   chrome: stable
 #DOWNLOAD AND INSTALL ALL REQUIRED DRIVERS
 install:
-  #- wget -N http://chromedriver.storage.googleapis.com/81.0.4044.138/chromedriver_linux64.zip -P ~/
-  #- unzip ~/chromedriver_linux64.zip -d ~/
-  #- rm ~/chromedriver_linux64.zip
+  #- wget -N http://chromedriver.storage.googleapis.com/81.0.4044.138/chromedriver_linux64.zip -P
+  #- unzip chromedriver_linux64.zip -d
   - npm install -g allure-commandline --save-dev
 before_script:
   - echo ========================================================================
