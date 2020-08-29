@@ -24,7 +24,7 @@ public class AuthenticationPageSteps extends TestEnvironment {
     @Step("I can see login form")
     @Given("I can see login form")
     public void iCanSeeLoginForm() throws Throwable {
-        Assert.assertTrue(testCommons.waitForElementToBeVisible(authenticationPage.registeredPane),
+        Assert.assertTrue(testCommons.isElementToBeVisible(authenticationPage.registeredPane),
                 String.format(ContextInjection.VIEW_ERROR, "Login form"));
     }
 

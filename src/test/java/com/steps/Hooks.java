@@ -70,11 +70,6 @@ public class Hooks extends DriverFactory implements ITestListener {
     @After
     public void afterScenario(Scenario scenario) throws IOException {
         testNGListener.onScenarioFinish(scenario);
-        if (scenario.isFailed()) {
-            localSaveScreenshotPNG(scenario);
-            allureSaveScreenshotPNG();
-            allureSaveTextLogCucumber(scenario);
-        }
         MDC.remove("testid");
         destroyDriver();
     }

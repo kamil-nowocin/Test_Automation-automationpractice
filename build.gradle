@@ -12,7 +12,7 @@ allure {
 group 'Test_Automation-automationpractice.com'
 version '1.0-SNAPSHOT'
 
-sourceCompatibility = 1.8
+sourceCompatibility = JavaVersion.VERSION_1_10
 
 repositories {
     mavenCentral()
@@ -73,17 +73,20 @@ configurations {
 }
 
 //For Cucumber .feature files
-task runTests() {
+task cucumber() {
     dependsOn assemble, compileTestJava
     doLast {
         javaexec {
             main = "io.cucumber.core.cli.Main"
-            classpath = files("./src/test/resources",
-                    project.sourceSets.main.compileClasspath,
-                    project.sourceSets.test.compileClasspath,
-                    project.sourceSets.main.runtimeClasspath,
-                    project.sourceSets.test.runtimeClasspath)
-            args = ['--plugin', 'pretty', '--glue', 'com.steps', 'src/test/resources/']
+            classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
+            args = [
+                    '--plugin', 'pretty',
+                    '--plugin', 'html:target/cucumber-report/single',
+                    '--plugin', 'json:target/reports/cucumber.json',
+                    '--glue',
+                    'com.steps',
+                    'src/test/resources',
+            ]
             systemProperties System.properties
         }
     }
@@ -98,17 +101,4 @@ test {
                 suites "src/test/resources/xml_runners/main_runner/TestNG-Runner.xml"
             }
     systemProperties System.properties
-}
-
-//Experimental runner
-task exper(type: JavaExec, dependsOn: 'classes') {
-    main = 'org.testng.TestNG'
-    classpath = files("./src/test/resources",
-            project.sourceSets.main.compileClasspath,
-            project.sourceSets.test.compileClasspath,
-            project.sourceSets.main.runtimeClasspath,
-            project.sourceSets.test.runtimeClasspath)
-    args = ["./src/test/resources/xml_runners/TestNG-WebAPP.xml",
-            "./src/test/resources/xml_runners/TestNG-WebAPI.xml",
-            "./src/test/resources/xml_runners/TestNG-POC.xml"]
 }

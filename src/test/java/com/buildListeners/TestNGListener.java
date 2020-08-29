@@ -10,6 +10,7 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,7 +20,7 @@ import java.util.List;
  * @author kamil.nowocin
  **/
 
-public class TestNGListener extends TestEnvironment implements ITestListener {
+public class TestNGListener extends ExcelEnvironment implements ITestListener {
 
     public static List<String> passedTests = new ArrayList<>();
     public static List<String> failedTests = new ArrayList<>();
@@ -80,7 +81,23 @@ public class TestNGListener extends TestEnvironment implements ITestListener {
         messageBuilder.messageStartScenario(scenario);
     }
 
-    public void onScenarioFinish(Scenario scenario) {
+    public void onScenarioFinish(Scenario scenario) throws IOException {
         messageBuilder.messageFinishScenario(scenario);
+        setExcelCucumberTestsResult(scenario);
+    }
+
+    private void setExcelCucumberTestsResult(Scenario scenario) throws IOException {
+        excelEnvironment.setExcelSheet(TEST_DATA_EXCEL_SHEET_NAME);
+        excelEnvironment.saveTestResultsXLSX(CUCUMBER_RESULT_COUNTER_ROW);
+        if (scenario.isFailed()) {
+            excelEnvironment.setCellData(excelEnvironment.getExcelRowNumber(), "FAILED", EXCEL_TC_RESULT_COLUMN);
+            localSaveScreenshotPNG(scenario);
+            allureSaveScreenshotPNG();
+            allureSaveTextLogCucumber(scenario);
+        } else {
+            excelEnvironment.setCellData(excelEnvironment.getExcelRowNumber(), "PASSED", EXCEL_TC_RESULT_COLUMN);
+        }
+        excelEnvironment.setCellData(excelEnvironment.getExcelRowNumber(), scenario.getName(), EXCEL_TC_NAME_COLUMN);
+        CUCUMBER_RESULT_COUNTER_ROW++;
     }
 }

@@ -150,9 +150,9 @@ public class ShoppingLoggedUserSteps extends TestEnvironment {
         orderCalculations();
 
         //ASSERT//
-        Assert.assertTrue(testCommons.waitForElementToBeVisible(productDetailsPage.popupPaneProductDetails),
+        Assert.assertTrue(testCommons.isElementToBeVisible(productDetailsPage.popupPaneProductDetails),
                 String.format(ContextInjection.VIEW_ERROR, "Product details popup"));
-        Assert.assertTrue(testCommons.waitForElementToBeVisible(productDetailsPage.popupPaneAddedSuccessfully),
+        Assert.assertTrue(testCommons.isElementToBeVisible(productDetailsPage.popupPaneAddedSuccessfully),
                 String.format(ContextInjection.VIEW_ERROR, "Product added successfully header"));
 
         //ASSERT - POPUP LEFT SIDE//
@@ -251,10 +251,10 @@ public class ShoppingLoggedUserSteps extends TestEnvironment {
                         ContextInjection.LABEL_ORDER_CONFIRMATION.toLowerCase(), ContextInjection.VALUE_ERROR);
 
                 if (contextInjection.paymentType.toLowerCase().equals("pay by check")) {
-                    Assert.assertTrue(testCommons.waitForElementToBeVisible(shoppingCartSummaryPage.paymentByCheckSuccessful),
+                    Assert.assertTrue(testCommons.isElementToBeVisible(shoppingCartSummaryPage.paymentByCheckSuccessful),
                             String.format(ContextInjection.VIEW_ERROR, "Order confirmation header"));
                 } else if (contextInjection.paymentType.toLowerCase().equals("pay by bank wire")) {
-                    Assert.assertTrue(testCommons.waitForElementToBeVisible(shoppingCartSummaryPage.paymentByBankWireSuccessful),
+                    Assert.assertTrue(testCommons.isElementToBeVisible(shoppingCartSummaryPage.paymentByBankWireSuccessful),
                             String.format(ContextInjection.VIEW_ERROR, "Order confirmation header"));
                 } else {
                     Assert.fail(contextInjection.paymentType + ANSI_RED + "Something went wrong! Check your payment type." + ANSI_RESET);

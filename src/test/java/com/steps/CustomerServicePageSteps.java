@@ -35,14 +35,14 @@ public class CustomerServicePageSteps extends TestEnvironment {
     @Step("I can see Contact Us form")
     @Then("I can see Contact Us form")
     public void iCanSeeContactUsForm() throws Throwable {
-        Assert.assertTrue(testCommons.waitForElementToBeVisible(customerServicePage.contactUsPane),
+        Assert.assertTrue(testCommons.isElementToBeVisible(customerServicePage.contactUsPane),
                 String.format(ContextInjection.VIEW_ERROR, "Contact Us form"));
     }
 
     @Step("I am on Customer Service Contact Us page form")
     @Given("I am on Customer Service Contact Us page form")
     public void iAmOnCustomerServiceContactUsPageForm() throws Throwable {
-        Assert.assertTrue(testCommons.waitForElementToBeVisible(customerServicePage.contactUsHeader),
+        Assert.assertTrue(testCommons.isElementToBeVisible(customerServicePage.contactUsHeader),
                 String.format(ContextInjection.VIEW_ERROR, "Customer Service Contact Us page form"));
     }
 

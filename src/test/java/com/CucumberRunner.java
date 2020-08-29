@@ -24,11 +24,12 @@ import org.testng.annotations.Test;
         plugin = {
                 "pretty", "html:target/cucumber-report/single",
                 "json:target/reports/cucumber.json",
-        }
+        },
+        publish = true
 )
 //This is experimental file and doesn't work well when using current settings.
-//If you would like to use TestNGRunner for running feature files, you have to edit build.gradle file.
-public class TestNGRunner extends AbstractTestNGCucumberTests {
+//If you would like to use CucumberRunner for running feature files, you have to edit build.gradle file.
+public class CucumberRunner extends AbstractTestNGCucumberTests {
     private TestNGCucumberRunner testNGCucumberRunner;
 
     private final TestEnvironment testEnvironment = new TestEnvironment();

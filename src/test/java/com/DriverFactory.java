@@ -178,7 +178,9 @@ public class DriverFactory extends TestEnvironment {
 
     protected void destroyDriver() {
         for (WebDriver driver : storedDrivers) {
-            driver.quit();
+            if (driver != null) {
+                driver.quit();
+            }
         }
     }
 }
