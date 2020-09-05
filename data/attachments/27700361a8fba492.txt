@@ -1,0 +1,27 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+11:53:32 DEBUG i.g.b.wdm.cache.ResolutionCache - Created new resolution cache file at /home/travis/.cache/selenium/resolution.properties
+11:53:32 DEBUG i.g.bonigarcia.wdm.versions.Shell - Running command on the shell: [google-chrome, --version]
+11:53:32 DEBUG i.g.bonigarcia.wdm.versions.Shell - Result: Google Chrome 85.0.4183.83
+11:53:33 DEBUG i.g.b.wdm.versions.VersionDetector - Latest version of chromedriver according to https://chromedriver.storage.googleapis.com/LATEST_RELEASE_85 is 85.0.4183.87
+11:53:33 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 85.0.4183.87 (resolved driver for Chrome 85)
+11:53:33 DEBUG i.g.b.wdm.cache.ResolutionCache - Storing resolution chrome=85 in cache (valid until 12:53:33 05/09/2020 UTC)
+11:53:33 DEBUG i.g.b.wdm.cache.ResolutionCache - Storing resolution chrome85=85.0.4183.87 in cache (valid until 11:53:33 06/09/2020 UTC)
+11:53:33 INFO  i.g.bonigarcia.wdm.WebDriverManager - Reading https://chromedriver.storage.googleapis.com/ to seek chromedriver
+11:53:33 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver to be downloaded chromedriver 85.0.4183.87
+11:53:33 INFO  i.g.bonigarcia.wdm.online.Downloader - Downloading https://chromedriver.storage.googleapis.com/85.0.4183.87/chromedriver_linux64.zip
+11:53:33 INFO  i.g.bonigarcia.wdm.online.Downloader - Extracting driver from compressed file chromedriver_linux64.zip
+11:53:33 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/85.0.4183.87/chromedriver
+11:53:35 INFO  com.steps.Hooks - ================================================ TEST STARTED ================================================
+11:53:35 INFO  com.steps.Hooks - [34mTEST NAME: [POC]/[1]AS A DEVELOPER I'D LIKE TO SEE WORKING POC WITH .XLSX FILE[0m
+11:53:35 INFO  com.steps.Hooks - Chosen executor: "CHROME"
+11:53:36 INFO  com.steps.Hooks - [31mTEST RETRY (1/1): [POC]/[1]AS A DEVELOPER I'D LIKE TO SEE WORKING POC WITH .XLSX FILE[0m
+11:53:36 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=85 in cache (valid until 12:53:33 05/09/2020 UTC)
+11:53:36 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome85=85.0.4183.87 in cache (valid until 11:53:33 06/09/2020 UTC)
+11:53:36 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 85.0.4183.87 (resolved driver for Chrome 85)
+11:53:36 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 85.0.4183.87 found in cache
+11:53:36 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/85.0.4183.87/chromedriver
+11:53:37 INFO  com.steps.Hooks - ================================================ TEST STARTED ================================================
+11:53:37 INFO  com.steps.Hooks - [34mTEST NAME: [POC]/[1]AS A DEVELOPER I'D LIKE TO SEE WORKING POC WITH .XLSX FILE[0m
+11:53:37 INFO  com.steps.Hooks - Chosen executor: "CHROME"
+11:53:37 INFO  com.steps.Hooks - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+11:53:37 ERROR com.steps.Hooks - java.lang.AssertionError: null
