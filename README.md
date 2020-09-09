@@ -56,7 +56,8 @@ There are multiple ways to run tests from this build. It all depends on what do 
 - Right click on `TestNG.xml` file, and Run ->  This will run all tests attached to specific xml runner
 - In terminal type `./gradlew test` -> This will run all tests from tests package.`(src/test/java/tests)`  
 You can add some environment settings, before you run tests, e.g:
-   - `-Dtests.executor="YOUR_HOST_NAME"` -> available hosts: Chrome, Firefox, Opera, Safari, Edge, IE, Safari, GRID, BrowserStack
+   - `-Dtests.executor="YOUR_HOST_NAME"` -> available hosts: Chrome, Firefox, Opera, Safari, Edge, IE, Safari, GRID, BrowserStack   
+  _**This is the best option to run tests, all tools, features are working well while runing tests via this commend**_
 ### Cucumber
 - Right click on `.feature` file, and Run -> This will run `.feature` file on default settings
 - In terminal type `./gradlew cucumber` -> This will run all `.feature` files on default settings  
