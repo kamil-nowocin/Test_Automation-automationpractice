@@ -102,14 +102,14 @@ public class RegistrationPageSteps extends TestEnvironment {
     @Step("I can see registration page form")
     @Then("I can see registration page form")
     public void iCanSeeRegistrationPageForm() throws Throwable {
-        Assert.assertTrue(testCommons.isElementToBeVisible(authenticationPage.createAccountPane),
+        Assert.assertTrue(testCommons.isElementVisible(authenticationPage.createAccountPane),
                 String.format(ContextInjection.VIEW_ERROR, "Registration page form"));
     }
 
     @Step("I can see account creation page form")
     @Then("I can see account creation page form")
     public void iCanSeeAccountCreationPageForm() throws Throwable {
-        Assert.assertTrue(testCommons.isElementToBeVisible(registrationPage.accountCreationPane),
+        Assert.assertTrue(testCommons.isElementVisible(registrationPage.accountCreationPane),
                 String.format(ContextInjection.VIEW_ERROR, "Account creation page form"));
     }
 
@@ -186,13 +186,11 @@ public class RegistrationPageSteps extends TestEnvironment {
         if (randomNumber == 1) {
             testCommons.customClick(registrationPage.mrButton);
             logger.info("User gender: \"Male\"");
-
             //ASSERT//
             Assert.assertTrue(registrationPage.mrButton.isSelected());
         } else {
             testCommons.customClick(registrationPage.mrsButton);
             logger.info("User gender: \"Female\"");
-
             //ASSERT//
             Assert.assertTrue(registrationPage.mrsButton.isSelected());
         }
@@ -511,7 +509,7 @@ public class RegistrationPageSteps extends TestEnvironment {
     @Step("I can see welcome message")
     @Then("I can see welcome message")
     public void iCanSeeWelcomeMessage() throws Throwable {
-        Assert.assertTrue(testCommons.isElementToBeVisible(accountDetailsPage.myAccountDetailsDashboard));
+        Assert.assertTrue(testCommons.isElementVisible(accountDetailsPage.myAccountDetailsDashboard));
         Assert.assertEquals(accountDetailsPage.myAccountDetailsDashboard.getText().toLowerCase(),
                 ContextInjection.WELCOME_MESSAGE.toLowerCase(), ContextInjection.VALUE_ERROR);
     }
@@ -519,14 +517,14 @@ public class RegistrationPageSteps extends TestEnvironment {
     @Step("I can see create an account error")
     @Then("I can see create an account error")
     public void iCanSeeCreateAnAccountError() throws Throwable {
-        Assert.assertTrue(testCommons.isElementToBeVisible(authenticationPage.createAnAccountError),
+        Assert.assertTrue(testCommons.isElementVisible(authenticationPage.createAnAccountError),
                 String.format(ContextInjection.VIEW_ERROR, "Create an account error header"));
     }
 
     @Step("I can see registration error")
     @Then("I can see registration error")
     public void iCanSeeRegistrationError() throws Throwable {
-        Assert.assertTrue(testCommons.isElementToBeVisible(registrationPage.registerError),
+        Assert.assertTrue(testCommons.isElementVisible(registrationPage.registerError),
                 String.format(ContextInjection.VIEW_ERROR, "Registration error header"));
     }
 

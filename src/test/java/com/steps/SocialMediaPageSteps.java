@@ -12,6 +12,7 @@ import io.qameta.allure.Step;
 import org.testng.Assert;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Test_Automation-automationpractice
@@ -31,22 +32,22 @@ public class SocialMediaPageSteps extends TestEnvironment {
         switch (logoName.toLowerCase()) {
             case "facebook":
                 testCommons.scrollWebsiteToElement(socialMediaPage.facebookButton);
-                Assert.assertTrue(testCommons.isElementToBeVisible(socialMediaPage.facebookButton),
+                Assert.assertTrue(testCommons.isElementVisible(socialMediaPage.facebookButton),
                         String.format(ContextInjection.VIEW_ERROR, logoName.toUpperCase()));
                 break;
             case "twitter":
                 testCommons.scrollWebsiteToElement(socialMediaPage.twitterButton);
-                Assert.assertTrue(testCommons.isElementToBeVisible(socialMediaPage.twitterButton),
+                Assert.assertTrue(testCommons.isElementVisible(socialMediaPage.twitterButton),
                         String.format(ContextInjection.VIEW_ERROR, logoName.toUpperCase()));
                 break;
             case "youtube":
                 testCommons.scrollWebsiteToElement(socialMediaPage.youtubeButton);
-                Assert.assertTrue(testCommons.isElementToBeVisible(socialMediaPage.youtubeButton),
+                Assert.assertTrue(testCommons.isElementVisible(socialMediaPage.youtubeButton),
                         String.format(ContextInjection.VIEW_ERROR, logoName.toUpperCase()));
                 break;
             case "google":
                 testCommons.scrollWebsiteToElement(socialMediaPage.googleButton);
-                Assert.assertTrue(testCommons.isElementToBeVisible(socialMediaPage.googleButton),
+                Assert.assertTrue(testCommons.isElementVisible(socialMediaPage.googleButton),
                         String.format(ContextInjection.VIEW_ERROR, logoName.toUpperCase()));
                 break;
             default:
@@ -81,7 +82,7 @@ public class SocialMediaPageSteps extends TestEnvironment {
     @Then("I am redirected to Selenium {string} profile")
     public void iAmRedirectedToSeleniumProfile(String logoName) throws Throwable {
         //ARRANGE//
-        ArrayList<String> browserTabs = new ArrayList<>(DriverFactory.getDriver().getWindowHandles());
+        List<String> browserTabs = new ArrayList<>(DriverFactory.getDriver().getWindowHandles());
 
         //ACT//
         DriverFactory.getDriver().switchTo().window(browserTabs.get(1));

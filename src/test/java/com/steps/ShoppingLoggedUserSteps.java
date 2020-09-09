@@ -150,9 +150,9 @@ public class ShoppingLoggedUserSteps extends TestEnvironment {
         orderCalculations();
 
         //ASSERT//
-        Assert.assertTrue(testCommons.isElementToBeVisible(productDetailsPage.popupPaneProductDetails),
+        Assert.assertTrue(testCommons.isElementVisible(productDetailsPage.popupPaneProductDetails),
                 String.format(ContextInjection.VIEW_ERROR, "Product details popup"));
-        Assert.assertTrue(testCommons.isElementToBeVisible(productDetailsPage.popupPaneAddedSuccessfully),
+        Assert.assertTrue(testCommons.isElementVisible(productDetailsPage.popupPaneAddedSuccessfully),
                 String.format(ContextInjection.VIEW_ERROR, "Product added successfully header"));
 
         //ASSERT - POPUP LEFT SIDE//
@@ -220,7 +220,6 @@ public class ShoppingLoggedUserSteps extends TestEnvironment {
                 //ASSERT//
                 Assert.assertEquals(navigationTopLabelHeaderText.toLowerCase(),
                         ContextInjection.LABEL_ADDRESSES.toLowerCase(), ContextInjection.VALUE_ERROR);
-
                 Assert.assertEquals(shoppingCartSummaryPage.readCustomerFirstLastName.getText().toLowerCase(),
                         ContextInjection.DEFAULT_CUSTOMER_FIRST_LAST_NAME.toLowerCase(), ContextInjection.VALUE_ERROR);
                 Assert.assertEquals(shoppingCartSummaryPage.readCustomerCompanyName.getText().toLowerCase(),
@@ -241,7 +240,6 @@ public class ShoppingLoggedUserSteps extends TestEnvironment {
                 //ASSERT//
                 Assert.assertEquals(navigationTopLabelHeaderText.toLowerCase(),
                         ContextInjection.LABEL_YOUR_PAYMENT_METHOD.toLowerCase(), ContextInjection.VALUE_ERROR);
-
                 Assert.assertEquals(shoppingCartSummaryPage.totalOrderPriceWithTax.getText().replaceAll("[^$0-9.]", ""),
                         DOLLAR_DECIMAL_FORMAT.format(contextInjection.totalOrderPriceWithTax), ContextInjection.VALUE_ERROR);
                 break;
@@ -249,12 +247,11 @@ public class ShoppingLoggedUserSteps extends TestEnvironment {
                 //ASSERT//
                 Assert.assertEquals(navigationTopLabelHeaderText.toLowerCase(),
                         ContextInjection.LABEL_ORDER_CONFIRMATION.toLowerCase(), ContextInjection.VALUE_ERROR);
-
                 if (contextInjection.paymentType.toLowerCase().equals("pay by check")) {
-                    Assert.assertTrue(testCommons.isElementToBeVisible(shoppingCartSummaryPage.paymentByCheckSuccessful),
+                    Assert.assertTrue(testCommons.isElementVisible(shoppingCartSummaryPage.paymentByCheckSuccessful),
                             String.format(ContextInjection.VIEW_ERROR, "Order confirmation header"));
                 } else if (contextInjection.paymentType.toLowerCase().equals("pay by bank wire")) {
-                    Assert.assertTrue(testCommons.isElementToBeVisible(shoppingCartSummaryPage.paymentByBankWireSuccessful),
+                    Assert.assertTrue(testCommons.isElementVisible(shoppingCartSummaryPage.paymentByBankWireSuccessful),
                             String.format(ContextInjection.VIEW_ERROR, "Order confirmation header"));
                 } else {
                     Assert.fail(contextInjection.paymentType + ANSI_RED + "Something went wrong! Check your payment type." + ANSI_RESET);
@@ -295,7 +292,6 @@ public class ShoppingLoggedUserSteps extends TestEnvironment {
                 if (!shoppingCartSummaryPage.myCarrierRadioButton.isSelected()) {
                     testCommons.customClick(shoppingCartSummaryPage.myCarrierRadioButton);
                 }
-
                 //ASSERT//
                 Assert.assertTrue(shoppingCartSummaryPage.myCarrierRadioButton.isSelected());
                 break;

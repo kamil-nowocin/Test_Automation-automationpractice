@@ -55,7 +55,7 @@ public class SearchPageSteps extends TestEnvironment {
 
         //ACT//
         if (expectedCountOfResults.equals("0")) {
-            Assert.assertTrue(testCommons.isElementToBeVisible(searchPage.noResultsWereFoundHeader),
+            Assert.assertTrue(testCommons.isElementVisible(searchPage.noResultsWereFoundHeader),
                     String.format(ContextInjection.VIEW_ERROR, "No results were found header"));
         }
         logger.info(String.format("Found results: \"%S\", expected: \"%S\"", actualCountOfResults, expectedCountOfResults));
@@ -75,13 +75,12 @@ public class SearchPageSteps extends TestEnvironment {
         if (!searchPage.noResultsWereFoundHeader.isDisplayed()) {
             for (WebElement productName : searchPage.productNames) {
                 for (String singlePhrase : listOfSearchedPhrases) {
-
                     //ASSERT//
                     Assert.assertTrue(productName.getText().toLowerCase().contains(singlePhrase.toLowerCase()), ContextInjection.SEARCH_ERROR);
                 }
             }
         } else {
-            Assert.assertTrue(testCommons.isElementToBeVisible(searchPage.noResultsWereFoundHeader),
+            Assert.assertTrue(testCommons.isElementVisible(searchPage.noResultsWereFoundHeader),
                     String.format(ContextInjection.VIEW_ERROR, "No result header"));
         }
     }

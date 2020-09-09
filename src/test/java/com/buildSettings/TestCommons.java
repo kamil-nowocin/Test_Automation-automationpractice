@@ -53,7 +53,7 @@ public class TestCommons extends TestEnvironment {
         }
     }
 
-    public boolean isElementToBeVisible(WebElement webElement) {
+    public boolean isElementVisible(WebElement webElement) {
         try {
             WebDriverWait wait = new WebDriverWait(DriverFactory.getDriver(), Timeouts.VISIBLE_TIMEOUT.value);
             wait.until(ExpectedConditions.visibilityOf(webElement));

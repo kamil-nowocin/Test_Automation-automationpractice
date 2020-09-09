@@ -51,7 +51,7 @@ public class TestEnvironment {
     protected static final ResourceBundle RESOURCE_BUNDLE_INVALID_EMAILS = ResourceBundle.getBundle("invalidEmails");
     protected static final ResourceBundle RESOURCE_BUNDLE_ERROR_MESSAGES = ResourceBundle.getBundle("errorValidators");
 
-    //DATA//
+    //GENERAL SETTINGS//
     protected static final String ANSI_RED = "\u001B[31m";
     protected static final String ANSI_RESET = "\u001B[0m";
     protected static final String ANSI_BLUE = "\u001b[34m";
@@ -81,7 +81,7 @@ public class TestEnvironment {
     protected static final String BROWSERSTACK_HOST_URL = System.getProperty
             ("browserstack.hostURL", "https://localhost:3000");
 
-    //METHODS//
+    //ENVIRONMENT METHODS//
     public static String getCurrentPath() {
         return Paths.get(".").toAbsolutePath().normalize().toString();
     }

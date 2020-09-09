@@ -160,7 +160,7 @@ public class DriverFactory extends TestEnvironment {
         DesiredCapabilities desiredCapabilities;
         switch (browserName.toLowerCase()) {
             case "chrome":
-                WebDriverManager.chromedriver().driverVersion("84.0.4147.30").setup();
+                WebDriverManager.chromedriver().setup();
                 desiredCapabilities = DesiredCapabilities.chrome();
                 desiredCapabilities.setBrowserName("chrome");
                 desiredCapabilities.setPlatform(Platform.MAC);
