@@ -1,0 +1,23 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+16:39:41 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=85 in cache (valid until 17:35:24 09/09/2020 UTC)
+16:39:41 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome85=85.0.4183.87 in cache (valid until 16:35:24 10/09/2020 UTC)
+16:39:41 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 85.0.4183.87 (resolved driver for Chrome 85)
+16:39:41 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 85.0.4183.87 found in cache
+16:39:41 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/85.0.4183.87/chromedriver
+16:39:43 INFO  com.steps.Hooks - ================================================ TEST STARTED ================================================
+16:39:43 INFO  com.steps.Hooks - [34mTEST NAME: [US-444]/[4] I WOULD LIKE TO SEE REGISTRATION ERROR, WHEN I DON'T FILL PASSWORD INPUT[0m
+16:39:43 INFO  com.steps.Hooks - Chosen executor: "CHROME"
+16:40:00 INFO  com.steps.Hooks - Page ready: "TRUE"
+16:40:07 INFO  com.steps.Hooks - User valid email: "6796ELOUDTALLITH@GMX.COM"
+16:40:24 INFO  com.steps.Hooks - [31mTEST RETRY (1/1): [US-444]/[4] I WOULD LIKE TO SEE REGISTRATION ERROR, WHEN I DON'T FILL PASSWORD INPUT[0m
+16:40:24 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=85 in cache (valid until 17:35:24 09/09/2020 UTC)
+16:40:24 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome85=85.0.4183.87 in cache (valid until 16:35:24 10/09/2020 UTC)
+16:40:24 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 85.0.4183.87 (resolved driver for Chrome 85)
+16:40:24 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 85.0.4183.87 found in cache
+16:40:24 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/85.0.4183.87/chromedriver
+16:40:25 INFO  com.steps.Hooks - ================================================ TEST STARTED ================================================
+16:40:25 INFO  com.steps.Hooks - [34mTEST NAME: [US-444]/[4] I WOULD LIKE TO SEE REGISTRATION ERROR, WHEN I DON'T FILL PASSWORD INPUT[0m
+16:40:25 INFO  com.steps.Hooks - Chosen executor: "CHROME"
+16:40:35 INFO  com.steps.Hooks - Page ready: "TRUE"
+16:40:50 INFO  com.steps.Hooks - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+16:40:50 ERROR com.steps.Hooks - org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //a[@class='login']' (tried for 15 second(s) with 500 milliseconds interval)

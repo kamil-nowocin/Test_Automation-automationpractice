@@ -7,13 +7,13 @@
       "name" : "null",
       "children" : [ {
         "name" : "[POC]/[1]As a developer I'd like to see working POC with .xlsx file",
-        "uid" : "17b7d96ee424da7c",
+        "uid" : "81a88aa08959c8bd",
         "parentUid" : "666d1a31450af3ae8459f14f07f9a1b4",
         "status" : "failed",
         "time" : {
-          "start" : 1599651819869,
-          "stop" : 1599651820581,
-          "duration" : 712
+          "start" : 1599669329202,
+          "stop" : 1599669329809,
+          "duration" : 607
         },
         "flaky" : false,
         "newFailed" : false,
@@ -24,13 +24,13 @@
       "name" : "Results which have been found didn't match expected sorting result PRICE: HIGHEST FIRST: Lists differ at element [1]: $30.50 != $28.98 expected [$30.50] but found [$28.98]",
       "children" : [ {
         "name" : "[US-555]/[7] I would like to use search box and be able to see results sorted by: \"Price: Highest first\"",
-        "uid" : "f9f4e9df44815e8b",
+        "uid" : "75f17f9aaeabca3f",
         "parentUid" : "3246160de76fc0de742a06aad5432502",
         "status" : "failed",
         "time" : {
-          "start" : 1599651995809,
-          "stop" : 1599652027569,
-          "duration" : 31760
+          "start" : 1599669529626,
+          "stop" : 1599669554778,
+          "duration" : 25152
         },
         "flaky" : false,
         "newFailed" : false,
@@ -38,23 +38,104 @@
       } ],
       "uid" : "3246160de76fc0de742a06aad5432502"
     }, {
-      "name" : "Results which have been found didn't match expected sorting result PRICE: LOWEST FIRST: Lists differ at element [2]: $28.98 != $30.50 expected [$28.98] but found [$30.50]",
+      "name" : "Ups, something went really bad! Even Michael Scofield couldn't have predicted that error! :) expected [http://automationpractice.com/index.php] but found [http://automationpractice.com/]",
       "children" : [ {
         "name" : "[US-555]/[8] I would like to use search box and be able to see results sorted by: \"Price: Lowest first\"",
-        "uid" : "3a0fc7d24b70dde7",
-        "parentUid" : "06135fb1e9171a4c5ee185041330339b",
+        "uid" : "899039c8b737c41e",
+        "parentUid" : "f546a49c1ef57bdabb3f77b8898137a3",
         "status" : "failed",
         "time" : {
-          "start" : 1599652055524,
-          "stop" : 1599652080117,
-          "duration" : 24593
+          "start" : 1599669592951,
+          "stop" : 1599669607972,
+          "duration" : 15021
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "[US-111]/[4] I can't log into automationpractice.com using email \"null\" & password \"12345\"",
+        "uid" : "32a89891810682aa",
+        "parentUid" : "f546a49c1ef57bdabb3f77b8898137a3",
+        "status" : "failed",
+        "time" : {
+          "start" : 1599669610157,
+          "stop" : 1599669612100,
+          "duration" : 1943
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "[US-222]/[4] I am not able to send request via contact us form, email input is invalid",
+        "uid" : "485d9735e3601275",
+        "parentUid" : "f546a49c1ef57bdabb3f77b8898137a3",
+        "status" : "failed",
+        "time" : {
+          "start" : 1599669612105,
+          "stop" : 1599669613272,
+          "duration" : 1167
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "f546a49c1ef57bdabb3f77b8898137a3"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  }, {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //form[@id='create-account_form']' (tried for 15 second(s) with 500 milliseconds interval)",
+      "children" : [ {
+        "name" : "[US-333]/[2] I can create an account by filling up all fields",
+        "uid" : "d947c8b3711f06b6",
+        "parentUid" : "83eccdfde9bad75898ac1b99009b2385",
+        "status" : "broken",
+        "time" : {
+          "start" : 1599669613290,
+          "stop" : 1599669640173,
+          "duration" : 26883
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "06135fb1e9171a4c5ee185041330339b"
+      "uid" : "83eccdfde9bad75898ac1b99009b2385"
+    }, {
+      "name" : "Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //a[@class='login']' (tried for 15 second(s) with 500 milliseconds interval)",
+      "children" : [ {
+        "name" : "[US-444]/[4] I would like to see registration error, when I don't fill password input",
+        "uid" : "8dde5b35754436b8",
+        "parentUid" : "c6975f708c5cb2f305e1e5054c64a5d0",
+        "status" : "broken",
+        "time" : {
+          "start" : 1599669625393,
+          "stop" : 1599669651202,
+          "duration" : 25809
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "c6975f708c5cb2f305e1e5054c64a5d0"
+    }, {
+      "name" : "Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //div[@id='contact-link']' (tried for 15 second(s) with 500 milliseconds interval)",
+      "children" : [ {
+        "name" : "[US-222]/[6] I am not able to send request via contact us form, email address is missing",
+        "uid" : "ab70c15e4ff999e",
+        "parentUid" : "8e627a1ed6e21b2f7fbd1c2b0f08158f",
+        "status" : "broken",
+        "time" : {
+          "start" : 1599669645949,
+          "stop" : 1599669672526,
+          "duration" : 26577
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "8e627a1ed6e21b2f7fbd1c2b0f08158f"
     } ],
-    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
   } ]
 }
