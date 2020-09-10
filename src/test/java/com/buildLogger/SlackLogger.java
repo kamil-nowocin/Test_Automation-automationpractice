@@ -42,7 +42,7 @@ public class SlackLogger extends TestEnvironment implements ITestListener {
     private static final String URL_REPOSITORY = "https://github.com/kamil-nowocin/Test_Automation-automationpractice";
     private static final String URL_REPOSITORY_IMAGES = "https://raw.githubusercontent.com/kamil-nowocin/Test_Automation-automationpractice/master/src/test/resources/files/images";
 
-    public String slackResultDetailsBuilder() {
+    private String slackResultDetailsBuilder() {
         List<String> testCaseNames = new ArrayList<>();
         int i = 1;
         if (TestNGListener.failedTests.size() == 0) {
@@ -60,7 +60,7 @@ public class SlackLogger extends TestEnvironment implements ITestListener {
         return (StringUtils.join(testCaseNames, ""));
     }
 
-    public void whichColor() {
+    private void whichColor() {
         if (ContextInjection.failedTestsAmount == 0) {
             color = "#32CD32"; //GREEN
             testAttachmentImage = (String.format("%s/green_icon.png", URL_REPOSITORY_IMAGES));
@@ -167,10 +167,10 @@ public class SlackLogger extends TestEnvironment implements ITestListener {
         }
     }
 
-    public String slackLoggerResponse(WebhookResponse webhookResponse) {
+    private String slackLoggerResponse(WebhookResponse webhookResponse) {
         if (webhookResponse.getCode() != 200) {
             return String.format("Slack response: %d, Additional information: %s", webhookResponse.getCode(), webhookResponse.getBody());
         }
-        return String.format("Slack response: %d, everything went well!", webhookResponse.getCode());
+        return String.format("Slack response: %d", webhookResponse.getCode());
     }
 }

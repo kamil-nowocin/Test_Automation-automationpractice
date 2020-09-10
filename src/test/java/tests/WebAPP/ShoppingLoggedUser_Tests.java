@@ -3,10 +3,10 @@ package tests.WebAPP;
 import com.buildListeners.TestNGListener;
 import com.buildSettings.ContextInjection;
 import com.buildSettings.ExcelEnvironment;
-import com.steps.Hooks;
 import com.steps.MainPageSteps;
 import com.steps.RegistrationPageSteps;
 import com.steps.ShoppingLoggedUserSteps;
+import com.steps.hooks.WEB_Hooks;
 import io.cucumber.datatable.DataTable;
 import io.qameta.allure.*;
 import org.testng.annotations.Listeners;
@@ -25,7 +25,7 @@ import java.util.List;
 @Epic("Web App Tests")
 @Feature("SHOPPING TESTS")
 @Listeners({TestNGListener.class})
-public class ShoppingLoggedUser_Tests extends Hooks {
+public class ShoppingLoggedUser_Tests extends WEB_Hooks {
 
     @Issue("TAP-0039")
     @TmsLink("STORY-666")

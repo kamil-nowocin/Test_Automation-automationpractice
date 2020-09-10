@@ -3,9 +3,9 @@ package tests.WebAPP;
 import com.buildListeners.TestNGListener;
 import com.buildSettings.ContextInjection;
 import com.buildSettings.ExcelEnvironment;
-import com.steps.Hooks;
 import com.steps.MainPageSteps;
 import com.steps.RegistrationPageSteps;
+import com.steps.hooks.WEB_Hooks;
 import io.qameta.allure.*;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -19,7 +19,7 @@ import org.testng.annotations.Test;
 @Epic("Web App Tests")
 @Feature("REGISTRATION VALIDATORS TESTS")
 @Listeners({TestNGListener.class})
-public class RegistrationValidators_Tests extends Hooks {
+public class RegistrationValidators_Tests extends WEB_Hooks {
 
     @Issue("TAP-0020")
     @TmsLink("STORY-444")

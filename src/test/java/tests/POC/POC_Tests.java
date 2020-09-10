@@ -2,7 +2,7 @@ package tests.POC;
 
 import com.buildListeners.TestNGListener;
 import com.buildSettings.ExcelEnvironment;
-import com.steps.Hooks;
+import com.steps.hooks.API_Hooks;
 import io.qameta.allure.*;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.testng.Assert;
@@ -19,7 +19,7 @@ import org.testng.annotations.Test;
 @Epic("POC Tests")
 @Feature("POC Tests")
 @Listeners({TestNGListener.class})
-public class POC_Tests extends Hooks {
+public class POC_Tests extends API_Hooks {
 
     @Step("Some POC step")
     public void testSteps(XSSFRow row) {

@@ -2,9 +2,9 @@ package tests.WebAPP;
 
 import com.buildListeners.TestNGListener;
 import com.buildSettings.ExcelEnvironment;
-import com.steps.Hooks;
 import com.steps.MainPageSteps;
 import com.steps.SearchPageSteps;
+import com.steps.hooks.WEB_Hooks;
 import io.qameta.allure.*;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -18,7 +18,7 @@ import org.testng.annotations.Test;
 @Epic("Web App Tests")
 @Feature("SEARCH BOX TESTS")
 @Listeners({TestNGListener.class})
-public class SearchBox_Tests extends Hooks {
+public class SearchBox_Tests extends WEB_Hooks {
 
     @Issue("TAP-0031")
     @TmsLink("STORY-555")
