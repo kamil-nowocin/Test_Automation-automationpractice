@@ -1,0 +1,22 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+14:10:01 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=85 in cache (valid until 15:10:01 10/09/2020 UTC)
+14:10:02 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome85=85.0.4183.87 in cache (valid until 14:10:01 11/09/2020 UTC)
+14:10:02 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 85.0.4183.87 (resolved driver for Chrome 85)
+14:10:02 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 85.0.4183.87 found in cache
+14:10:02 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/85.0.4183.87/chromedriver
+14:10:05 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+14:10:05 INFO  org.slf4j.Logger - [34mTEST NAME: [US-666]/[1] I WOULD LIKE TO BUY NEW "FADED SHORT SLEEVE T-SHIRTS"[0m
+14:10:05 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+14:10:22 INFO  org.slf4j.Logger - Page ready: "TRUE"
+14:10:38 INFO  org.slf4j.Logger - [31mTEST RETRY (1/1): [US-666]/[1] I WOULD LIKE TO BUY NEW "FADED SHORT SLEEVE T-SHIRTS"[0m
+14:10:38 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=85 in cache (valid until 15:10:01 10/09/2020 UTC)
+14:10:38 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome85=85.0.4183.87 in cache (valid until 14:10:01 11/09/2020 UTC)
+14:10:38 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 85.0.4183.87 (resolved driver for Chrome 85)
+14:10:38 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 85.0.4183.87 found in cache
+14:10:38 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/85.0.4183.87/chromedriver
+14:10:40 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+14:10:40 INFO  org.slf4j.Logger - [34mTEST NAME: [US-666]/[1] I WOULD LIKE TO BUY NEW "FADED SHORT SLEEVE T-SHIRTS"[0m
+14:10:40 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+14:10:57 INFO  org.slf4j.Logger - Page ready: "TRUE"
+14:11:17 INFO  org.slf4j.Logger - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+14:11:17 ERROR org.slf4j.Logger - org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //input[@id='email']' (tried for 15 second(s) with 500 milliseconds interval)
