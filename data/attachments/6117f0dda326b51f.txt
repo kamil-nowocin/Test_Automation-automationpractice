@@ -1,0 +1,22 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+11:18:22 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=85 in cache (valid until 12:13:52 11/09/2020 UTC)
+11:18:22 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome85=85.0.4183.87 in cache (valid until 11:13:52 12/09/2020 UTC)
+11:18:22 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 85.0.4183.87 (resolved driver for Chrome 85)
+11:18:22 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 85.0.4183.87 found in cache
+11:18:22 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/85.0.4183.87/chromedriver
+11:18:23 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+11:18:23 INFO  org.slf4j.Logger - [34mTEST NAME: [US-444]/[6] I WOULD LIKE TO SEE REGISTRATION ERROR, WHEN I DON'T FILL CITY INPUT[0m
+11:18:23 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+11:18:43 INFO  org.slf4j.Logger - Page ready: "TRUE"
+11:18:59 INFO  org.slf4j.Logger - [31mTEST RETRY (1/1): [US-444]/[6] I WOULD LIKE TO SEE REGISTRATION ERROR, WHEN I DON'T FILL CITY INPUT[0m
+11:18:59 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=85 in cache (valid until 12:13:52 11/09/2020 UTC)
+11:18:59 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome85=85.0.4183.87 in cache (valid until 11:13:52 12/09/2020 UTC)
+11:18:59 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 85.0.4183.87 (resolved driver for Chrome 85)
+11:18:59 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 85.0.4183.87 found in cache
+11:18:59 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/85.0.4183.87/chromedriver
+11:19:00 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+11:19:00 INFO  org.slf4j.Logger - [34mTEST NAME: [US-444]/[6] I WOULD LIKE TO SEE REGISTRATION ERROR, WHEN I DON'T FILL CITY INPUT[0m
+11:19:00 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+11:19:10 INFO  org.slf4j.Logger - Page ready: "TRUE"
+11:19:26 INFO  org.slf4j.Logger - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+11:19:26 ERROR org.slf4j.Logger - org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //a[@class='login']' (tried for 15 second(s) with 500 milliseconds interval)

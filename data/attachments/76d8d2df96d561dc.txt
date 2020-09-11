@@ -1,0 +1,32 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+11:13:53 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=85 in cache (valid until 12:13:52 11/09/2020 UTC)
+11:13:53 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome85=85.0.4183.87 in cache (valid until 11:13:52 12/09/2020 UTC)
+11:13:53 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 85.0.4183.87 (resolved driver for Chrome 85)
+11:13:53 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 85.0.4183.87 found in cache
+11:13:53 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/85.0.4183.87/chromedriver
+11:13:56 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+11:13:56 INFO  org.slf4j.Logger - [34mTEST NAME: [US-666]/[1] I WOULD LIKE TO BUY NEW "FADED SHORT SLEEVE T-SHIRTS"[0m
+11:13:56 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+11:13:58 INFO  org.slf4j.Logger - [31mTEST RETRY (1/1): [US-666]/[1] I WOULD LIKE TO BUY NEW "FADED SHORT SLEEVE T-SHIRTS"[0m
+11:13:58 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=85 in cache (valid until 12:13:52 11/09/2020 UTC)
+11:13:58 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome85=85.0.4183.87 in cache (valid until 11:13:52 12/09/2020 UTC)
+11:13:58 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 85.0.4183.87 (resolved driver for Chrome 85)
+11:13:58 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 85.0.4183.87 found in cache
+11:13:58 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/85.0.4183.87/chromedriver
+11:13:59 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+11:13:59 INFO  org.slf4j.Logger - [34mTEST NAME: [US-666]/[1] I WOULD LIKE TO BUY NEW "FADED SHORT SLEEVE T-SHIRTS"[0m
+11:13:59 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+11:14:20 INFO  org.slf4j.Logger - Page ready: "TRUE"
+11:14:34 INFO  org.slf4j.Logger - User login: "THOR.ODINSON@EXAMPLE.COM"
+11:14:35 INFO  org.slf4j.Logger - User password: "12345"
+11:14:51 INFO  org.slf4j.Logger - User clicked on: "WOMEN" submenu category
+11:14:51 INFO  org.slf4j.Logger - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+11:14:51 ERROR org.slf4j.Logger - org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span[@class='cat-name']"}
+  (Session info: chrome=85.0.4183.102)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'travis-job-8a7eefac-21b7-4a1a-b90c-7b69f5047bcd', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.3.0-1029-gcp', java.version: '14.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.102, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: /tmp/.com.google.Chrome.LyVOAQ}, goog:chromeOptions: {debuggerAddress: localhost:37473}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 35af955924ba91695bf091b54db719fb
+*** Element info: {Using=xpath, value=//span[@class='cat-name']}
