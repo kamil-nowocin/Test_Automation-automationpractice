@@ -1,5 +1,6 @@
 package com.buildListeners;
 
+import com.DriverFactory;
 import com.buildLogger.SlackLogger;
 import com.buildSettings.ContextInjection;
 import com.buildSettings.ExcelEnvironment;
@@ -70,7 +71,9 @@ public class TestNGListener extends ExcelEnvironment implements ITestListener {
         excelEnvironment.setCellData(excelEnvironment.getExcelRowNumber(), MessageBuilder.getTestDescription(iTestResult), EXCEL_TC_NAME_COLUMN);
         failedTests.add(MessageBuilder.getTestDescription(iTestResult));
         logger.error(String.valueOf(iTestResult.getThrowable()));
-        allureSaveScreenshotPNG();
+        if (DriverFactory.getDriver() != null) {
+            allureSaveScreenshotPNG();
+        }
         allureSaveTextLog(iTestResult);
     }
 

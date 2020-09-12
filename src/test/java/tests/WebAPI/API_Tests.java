@@ -2,7 +2,7 @@ package tests.WebAPI;
 
 import com.buildListeners.TestNGListener;
 import com.buildSettings.ExcelEnvironment;
-import com.steps.Hooks;
+import com.steps.hooks.API_Hooks;
 import io.qameta.allure.*;
 import io.restassured.RestAssured;
 import org.testng.annotations.Listeners;
@@ -19,7 +19,7 @@ import static io.restassured.RestAssured.given;
 @Epic("API Tests")
 @Feature("HTTP Statuses")
 @Listeners({TestNGListener.class})
-public class API_Tests extends Hooks {
+public class API_Tests extends API_Hooks {
 
     private String restHomeURL() {
         return RestAssured.baseURI = "http://automationpractice.com/";

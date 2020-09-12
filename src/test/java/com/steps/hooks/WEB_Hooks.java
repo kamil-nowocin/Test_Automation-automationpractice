@@ -1,4 +1,4 @@
-package com.steps;
+package com.steps.hooks;
 
 import com.DriverFactory;
 import com.buildListeners.TestNGListener;
@@ -24,7 +24,7 @@ import java.io.IOException;
  * @author kamil.nowocin
  **/
 
-public class Hooks extends DriverFactory implements ITestListener {
+public class WEB_Hooks extends DriverFactory implements ITestListener {
 
     private final TestCommons testCommons = new TestCommons();
     private final TestNGListener testNGListener = new TestNGListener();

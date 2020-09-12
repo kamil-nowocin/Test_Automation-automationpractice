@@ -3,7 +3,6 @@ package com.buildSettings;
 import com.DriverFactory;
 import com.buildListeners.TestNGListener;
 import com.github.javafaker.Faker;
-import com.steps.Hooks;
 import io.cucumber.java.Scenario;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.Attachment;
@@ -43,7 +42,7 @@ public class TestEnvironment {
 
     protected static Faker faker = new Faker(Locale.US);
     protected static MockNeat mockNeat = MockNeat.secure();
-    protected static Logger logger = LoggerFactory.getLogger(Hooks.class);
+    protected static Logger logger = LoggerFactory.getLogger(Logger.class);
     protected static final String TODAY_DATE = new SimpleDateFormat("yyyy-MM-dd HH:ss").format(new Date());
     protected static final DecimalFormat DOLLAR_DECIMAL_FORMAT = new DecimalFormat("$#0.00", new DecimalFormatSymbols(Locale.US));
 
