@@ -9,13 +9,13 @@
         "name" : "tests.POC.POC_Tests",
         "children" : [ {
           "name" : "[POC]/[1]As a developer I'd like to see working POC with .xlsx file",
-          "uid" : "e007422642f659c8",
+          "uid" : "916dac9753427ac",
           "parentUid" : "c1dfcfe8d88c193478a904f53edf7e76",
           "status" : "failed",
           "time" : {
-            "start" : 1601052278525,
-            "stop" : 1601052278897,
-            "duration" : 372
+            "start" : 1601138723253,
+            "stop" : 1601138723622,
+            "duration" : 369
           },
           "flaky" : false,
           "newFailed" : false,
@@ -34,13 +34,13 @@
         "name" : "tests.WebAPI.API_Tests",
         "children" : [ {
           "name" : "[API]/[1] I would like to check availability of automationpractice.com",
-          "uid" : "8b89a2489d4c29d",
+          "uid" : "33a731a88509b801",
           "parentUid" : "8c093484f12cd184182987288dc056e2",
           "status" : "passed",
           "time" : {
-            "start" : 1601052280655,
-            "stop" : 1601052286565,
-            "duration" : 5910
+            "start" : 1601138725301,
+            "stop" : 1601138729521,
+            "duration" : 4220
           },
           "flaky" : false,
           "newFailed" : false,
@@ -56,271 +56,94 @@
     "children" : [ {
       "name" : "Automated tests for WEB client",
       "children" : [ {
-        "name" : "tests.WebAPP.RegistrationValidators_Tests",
-        "children" : [ {
-          "name" : "[US-444]/[1] I would like to see registration error, when I don't fill first name input",
-          "uid" : "a9a65a24df2909c8",
-          "parentUid" : "d7cf7f0678c902c1fe134b7def373473",
-          "status" : "passed",
-          "time" : {
-            "start" : 1601052291764,
-            "stop" : 1601052343699,
-            "duration" : 51935
-          },
-          "flaky" : false,
-          "newFailed" : false,
-          "parameters" : [ ]
-        }, {
-          "name" : "[US-444]/[10] I would like to see registration error, when I don't fill mobile phone input",
-          "uid" : "e5887b92c31a1429",
-          "parentUid" : "d7cf7f0678c902c1fe134b7def373473",
-          "status" : "passed",
-          "time" : {
-            "start" : 1601052346911,
-            "stop" : 1601052382664,
-            "duration" : 35753
-          },
-          "flaky" : false,
-          "newFailed" : false,
-          "parameters" : [ ]
-        }, {
-          "name" : "[US-444]/[11] I would like to see registration error, when I don't fill email alias input",
-          "uid" : "67c0530cfcf56fcf",
-          "parentUid" : "d7cf7f0678c902c1fe134b7def373473",
-          "status" : "passed",
-          "time" : {
-            "start" : 1601052385645,
-            "stop" : 1601052415270,
-            "duration" : 29625
-          },
-          "flaky" : false,
-          "newFailed" : false,
-          "parameters" : [ ]
-        }, {
-          "name" : "[US-444]/[2] I would like to see registration error, when I don't fill last name input",
-          "uid" : "3ba9585b6cd4aa69",
-          "parentUid" : "d7cf7f0678c902c1fe134b7def373473",
-          "status" : "passed",
-          "time" : {
-            "start" : 1601052418129,
-            "stop" : 1601052449085,
-            "duration" : 30956
-          },
-          "flaky" : false,
-          "newFailed" : false,
-          "parameters" : [ ]
-        }, {
-          "name" : "[US-444]/[3] I would like to see registration error, when I don't fill email input",
-          "uid" : "371efd0dcd3819b7",
-          "parentUid" : "d7cf7f0678c902c1fe134b7def373473",
-          "status" : "passed",
-          "time" : {
-            "start" : 1601052452717,
-            "stop" : 1601052494601,
-            "duration" : 41884
-          },
-          "flaky" : false,
-          "newFailed" : false,
-          "parameters" : [ ]
-        }, {
-          "name" : "[US-444]/[4] I would like to see registration error, when I don't fill password input",
-          "uid" : "b47dbbdd0d5eb789",
-          "parentUid" : "d7cf7f0678c902c1fe134b7def373473",
-          "status" : "passed",
-          "time" : {
-            "start" : 1601052496330,
-            "stop" : 1601052522427,
-            "duration" : 26097
-          },
-          "flaky" : false,
-          "newFailed" : false,
-          "parameters" : [ ]
-        }, {
-          "name" : "[US-444]/[5] I would like to see registration error, when I don't fill address input",
-          "uid" : "4ccbea6b169e8081",
-          "parentUid" : "d7cf7f0678c902c1fe134b7def373473",
-          "status" : "passed",
-          "time" : {
-            "start" : 1601052524589,
-            "stop" : 1601052548235,
-            "duration" : 23646
-          },
-          "flaky" : false,
-          "newFailed" : false,
-          "parameters" : [ ]
-        }, {
-          "name" : "[US-444]/[6] I would like to see registration error, when I don't fill city input",
-          "uid" : "db156ac6d79f05f5",
-          "parentUid" : "d7cf7f0678c902c1fe134b7def373473",
-          "status" : "passed",
-          "time" : {
-            "start" : 1601052550083,
-            "stop" : 1601052572689,
-            "duration" : 22606
-          },
-          "flaky" : false,
-          "newFailed" : false,
-          "parameters" : [ ]
-        }, {
-          "name" : "[US-444]/[7] I would like to see registration error, when I don't fill state input",
-          "uid" : "18191cb368616e23",
-          "parentUid" : "d7cf7f0678c902c1fe134b7def373473",
-          "status" : "passed",
-          "time" : {
-            "start" : 1601052574472,
-            "stop" : 1601052597004,
-            "duration" : 22532
-          },
-          "flaky" : false,
-          "newFailed" : false,
-          "parameters" : [ ]
-        }, {
-          "name" : "[US-444]/[8] I would like to see registration error, when I don't fill postal code input",
-          "uid" : "d8ecf12ec510fd80",
-          "parentUid" : "d7cf7f0678c902c1fe134b7def373473",
-          "status" : "passed",
-          "time" : {
-            "start" : 1601052598073,
-            "stop" : 1601052614269,
-            "duration" : 16196
-          },
-          "flaky" : false,
-          "newFailed" : false,
-          "parameters" : [ ]
-        }, {
-          "name" : "[US-444]/[9] I would like to see registration error, when I don't fill country input",
-          "uid" : "775787b603f1256d",
-          "parentUid" : "d7cf7f0678c902c1fe134b7def373473",
-          "status" : "passed",
-          "time" : {
-            "start" : 1601052614976,
-            "stop" : 1601052627572,
-            "duration" : 12596
-          },
-          "flaky" : false,
-          "newFailed" : false,
-          "parameters" : [ ]
-        } ],
-        "uid" : "d7cf7f0678c902c1fe134b7def373473"
-      }, {
-        "name" : "tests.WebAPP.ShoppingLoggedUser_Tests",
-        "children" : [ {
-          "name" : "[US-666]/[1] I would like to buy new \"Faded Short Sleeve T-shirts\"",
-          "uid" : "e4b8e6077e7c3f6c",
-          "parentUid" : "8744e5fbc9492d4d9a50054d5100ab04",
-          "status" : "passed",
-          "time" : {
-            "start" : 1601052291795,
-            "stop" : 1601052356149,
-            "duration" : 64354
-          },
-          "flaky" : false,
-          "newFailed" : false,
-          "parameters" : [ ]
-        }, {
-          "name" : "[US-666]/[2] I would like to buy new \"Blouse\"",
-          "uid" : "b760171b7fe98a42",
-          "parentUid" : "8744e5fbc9492d4d9a50054d5100ab04",
-          "status" : "passed",
-          "time" : {
-            "start" : 1601052358906,
-            "stop" : 1601052412011,
-            "duration" : 53105
-          },
-          "flaky" : false,
-          "newFailed" : false,
-          "parameters" : [ ]
-        } ],
-        "uid" : "8744e5fbc9492d4d9a50054d5100ab04"
-      }, {
         "name" : "tests.WebAPP.Registration_Tests",
         "children" : [ {
           "name" : "[US-333]/[1] I check availability of registration page form",
-          "uid" : "8f1a6d589a2f3d19",
+          "uid" : "ca40f8197b8a9c58",
           "parentUid" : "9f5ea6a256a9ea000f93676577bdd0c1",
           "status" : "passed",
           "time" : {
-            "start" : 1601052291796,
-            "stop" : 1601052316272,
-            "duration" : 24476
+            "start" : 1601138734197,
+            "stop" : 1601138761047,
+            "duration" : 26850
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ ]
         }, {
           "name" : "[US-333]/[2] I can create an account by filling up all fields",
-          "uid" : "76d9370065823e51",
+          "uid" : "4ed384c504b1703",
           "parentUid" : "9f5ea6a256a9ea000f93676577bdd0c1",
           "status" : "passed",
           "time" : {
-            "start" : 1601052498260,
-            "stop" : 1601052530995,
-            "duration" : 32735
+            "start" : 1601138938241,
+            "stop" : 1601138965046,
+            "duration" : 26805
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ ]
         }, {
           "name" : "[US-333]/[3] I can create an account by filling up only required fields",
-          "uid" : "2bb47a77aed37a2f",
+          "uid" : "2d82fcedb32eb5c9",
           "parentUid" : "9f5ea6a256a9ea000f93676577bdd0c1",
           "status" : "passed",
           "time" : {
-            "start" : 1601052532040,
-            "stop" : 1601052555168,
-            "duration" : 23128
+            "start" : 1601138966315,
+            "stop" : 1601138989030,
+            "duration" : 22715
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ ]
         }, {
           "name" : "US-333]/[4] I can't create an account without filling up fields",
-          "uid" : "8225bd423571a01",
+          "uid" : "55425fe8db13a6fd",
           "parentUid" : "9f5ea6a256a9ea000f93676577bdd0c1",
           "status" : "passed",
           "time" : {
-            "start" : 1601052556975,
-            "stop" : 1601052572303,
-            "duration" : 15328
+            "start" : 1601138991490,
+            "stop" : 1601139006805,
+            "duration" : 15315
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ ]
         }, {
           "name" : "[US-333]/[5] I can't create an account, when one of required fields is missing",
-          "uid" : "23214f3eb9e7a00",
+          "uid" : "32ff6e92e22f3a5a",
           "parentUid" : "9f5ea6a256a9ea000f93676577bdd0c1",
           "status" : "passed",
           "time" : {
-            "start" : 1601052574396,
-            "stop" : 1601052596832,
-            "duration" : 22436
+            "start" : 1601139008416,
+            "stop" : 1601139026411,
+            "duration" : 17995
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ ]
         }, {
           "name" : "[US-333]/[6] I can't create an account, when email is already in database",
-          "uid" : "1d486b6d92777ba0",
+          "uid" : "db41b940c3d5ee5a",
           "parentUid" : "9f5ea6a256a9ea000f93676577bdd0c1",
           "status" : "passed",
           "time" : {
-            "start" : 1601052598035,
-            "stop" : 1601052609952,
-            "duration" : 11917
+            "start" : 1601139027761,
+            "stop" : 1601139037744,
+            "duration" : 9983
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ ]
         }, {
           "name" : "[US-333]/[7] I can't create an account, when email has wrong format",
-          "uid" : "24a7fc89c6795723",
+          "uid" : "7048ce816bc90cbe",
           "parentUid" : "9f5ea6a256a9ea000f93676577bdd0c1",
           "status" : "passed",
           "time" : {
-            "start" : 1601052611194,
-            "stop" : 1601052619689,
-            "duration" : 8495
+            "start" : 1601139038917,
+            "stop" : 1601139051576,
+            "duration" : 12659
           },
           "flaky" : false,
           "newFailed" : false,
@@ -331,104 +154,104 @@
         "name" : "tests.WebAPP.SearchBox_Tests",
         "children" : [ {
           "name" : "[US-555]/[1] I would like to use search box and be able to see results of: \"T-shirts\"",
-          "uid" : "cc2f28d201cb3092",
+          "uid" : "8ffc455d59155aa7",
           "parentUid" : "9ebc68281c9317eb5682ecd53d5736b0",
           "status" : "passed",
           "time" : {
-            "start" : 1601052291818,
-            "stop" : 1601052313813,
-            "duration" : 21995
+            "start" : 1601138734201,
+            "stop" : 1601138758238,
+            "duration" : 24037
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ ]
         }, {
           "name" : "[US-555]/[2] I would like to use search box and be able to see results of: \"Blouse\"",
-          "uid" : "c47e77ae75f84e04",
+          "uid" : "8bfb937c07798785",
           "parentUid" : "9ebc68281c9317eb5682ecd53d5736b0",
           "status" : "passed",
           "time" : {
-            "start" : 1601052316302,
-            "stop" : 1601052330257,
-            "duration" : 13955
+            "start" : 1601138760098,
+            "stop" : 1601138773784,
+            "duration" : 13686
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ ]
         }, {
           "name" : "[US-555]/[3] I would like to use search box and be able to see results of: \"Printed Dress\"",
-          "uid" : "a107acb8318a8d82",
+          "uid" : "270c62182efae30",
           "parentUid" : "9ebc68281c9317eb5682ecd53d5736b0",
           "status" : "passed",
           "time" : {
-            "start" : 1601052333078,
-            "stop" : 1601052349134,
-            "duration" : 16056
+            "start" : 1601138776674,
+            "stop" : 1601138794537,
+            "duration" : 17863
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ ]
         }, {
           "name" : "[US-555]/[4] I would like to use search box and be able to see results of: \"!@#$%^\"",
-          "uid" : "890ecc4e7d6a1d23",
+          "uid" : "baeb9919e44ad17c",
           "parentUid" : "9ebc68281c9317eb5682ecd53d5736b0",
           "status" : "passed",
           "time" : {
-            "start" : 1601052352977,
-            "stop" : 1601052367375,
-            "duration" : 14398
+            "start" : 1601138798019,
+            "stop" : 1601138813470,
+            "duration" : 15451
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ ]
         }, {
           "name" : "[US-555]/[5] I would like to use search box and be able to see results sorted by: \"Product Name: Z to A\"",
-          "uid" : "57afb7cba01b19f6",
+          "uid" : "964bcd4e1a498475",
           "parentUid" : "9ebc68281c9317eb5682ecd53d5736b0",
           "status" : "passed",
           "time" : {
-            "start" : 1601052370348,
-            "stop" : 1601052390694,
-            "duration" : 20346
+            "start" : 1601138816068,
+            "stop" : 1601138834725,
+            "duration" : 18657
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ ]
         }, {
           "name" : "[US-555]/[6] I would like to use search box and be able to see results sorted by: \"Product Name: A to Z\"",
-          "uid" : "f04a3ca37b6f192f",
+          "uid" : "d20fbc83d2def65b",
           "parentUid" : "9ebc68281c9317eb5682ecd53d5736b0",
           "status" : "passed",
           "time" : {
-            "start" : 1601052393540,
-            "stop" : 1601052414093,
-            "duration" : 20553
+            "start" : 1601138837981,
+            "stop" : 1601138856407,
+            "duration" : 18426
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ ]
         }, {
           "name" : "[US-555]/[7] I would like to use search box and be able to see results sorted by: \"Price: Highest first\"",
-          "uid" : "4fcaeed8a6f205fe",
+          "uid" : "6e785be36029bfaa",
           "parentUid" : "9ebc68281c9317eb5682ecd53d5736b0",
           "status" : "failed",
           "time" : {
-            "start" : 1601052438643,
-            "stop" : 1601052461209,
-            "duration" : 22566
+            "start" : 1601138878289,
+            "stop" : 1601138898295,
+            "duration" : 20006
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ ]
         }, {
           "name" : "[US-555]/[8] I would like to use search box and be able to see results sorted by: \"Price: Lowest first\"",
-          "uid" : "cbb1daaf6d1bdb97",
+          "uid" : "9fb80a623fbb7ec9",
           "parentUid" : "9ebc68281c9317eb5682ecd53d5736b0",
           "status" : "failed",
           "time" : {
-            "start" : 1601052488652,
-            "stop" : 1601052510686,
-            "duration" : 22034
+            "start" : 1601138919744,
+            "stop" : 1601138941826,
+            "duration" : 22082
           },
           "flaky" : false,
           "newFailed" : false,
@@ -436,55 +259,232 @@
         } ],
         "uid" : "9ebc68281c9317eb5682ecd53d5736b0"
       }, {
+        "name" : "tests.WebAPP.ShoppingLoggedUser_Tests",
+        "children" : [ {
+          "name" : "[US-666]/[1] I would like to buy new \"Faded Short Sleeve T-shirts\"",
+          "uid" : "83be871decd31a4e",
+          "parentUid" : "8744e5fbc9492d4d9a50054d5100ab04",
+          "status" : "passed",
+          "time" : {
+            "start" : 1601138734201,
+            "stop" : 1601138798779,
+            "duration" : 64578
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "[US-666]/[2] I would like to buy new \"Blouse\"",
+          "uid" : "7a446656e66d6286",
+          "parentUid" : "8744e5fbc9492d4d9a50054d5100ab04",
+          "status" : "passed",
+          "time" : {
+            "start" : 1601138802758,
+            "stop" : 1601138857257,
+            "duration" : 54499
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "8744e5fbc9492d4d9a50054d5100ab04"
+      }, {
+        "name" : "tests.WebAPP.RegistrationValidators_Tests",
+        "children" : [ {
+          "name" : "[US-444]/[1] I would like to see registration error, when I don't fill first name input",
+          "uid" : "98acebab21ea820d",
+          "parentUid" : "d7cf7f0678c902c1fe134b7def373473",
+          "status" : "passed",
+          "time" : {
+            "start" : 1601138734215,
+            "stop" : 1601138785186,
+            "duration" : 50971
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "[US-444]/[10] I would like to see registration error, when I don't fill mobile phone input",
+          "uid" : "8b959a637350517c",
+          "parentUid" : "d7cf7f0678c902c1fe134b7def373473",
+          "status" : "passed",
+          "time" : {
+            "start" : 1601138787944,
+            "stop" : 1601138821469,
+            "duration" : 33525
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "[US-444]/[11] I would like to see registration error, when I don't fill email alias input",
+          "uid" : "8fb60be446ddcf6a",
+          "parentUid" : "d7cf7f0678c902c1fe134b7def373473",
+          "status" : "passed",
+          "time" : {
+            "start" : 1601138823944,
+            "stop" : 1601138856997,
+            "duration" : 33053
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "[US-444]/[2] I would like to see registration error, when I don't fill last name input",
+          "uid" : "51a7a06571c7fd93",
+          "parentUid" : "d7cf7f0678c902c1fe134b7def373473",
+          "status" : "passed",
+          "time" : {
+            "start" : 1601138859680,
+            "stop" : 1601138891689,
+            "duration" : 32009
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "[US-444]/[3] I would like to see registration error, when I don't fill email input",
+          "uid" : "a5f9b9c7dfbb7060",
+          "parentUid" : "d7cf7f0678c902c1fe134b7def373473",
+          "status" : "passed",
+          "time" : {
+            "start" : 1601138894932,
+            "stop" : 1601138925266,
+            "duration" : 30334
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "[US-444]/[4] I would like to see registration error, when I don't fill password input",
+          "uid" : "c34be97b319c4665",
+          "parentUid" : "d7cf7f0678c902c1fe134b7def373473",
+          "status" : "passed",
+          "time" : {
+            "start" : 1601138926796,
+            "stop" : 1601138952776,
+            "duration" : 25980
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "[US-444]/[5] I would like to see registration error, when I don't fill address input",
+          "uid" : "1de17d8c2a6674cd",
+          "parentUid" : "d7cf7f0678c902c1fe134b7def373473",
+          "status" : "passed",
+          "time" : {
+            "start" : 1601138954798,
+            "stop" : 1601138977037,
+            "duration" : 22239
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "[US-444]/[6] I would like to see registration error, when I don't fill city input",
+          "uid" : "e3dc4f95ab7b2b2d",
+          "parentUid" : "d7cf7f0678c902c1fe134b7def373473",
+          "status" : "passed",
+          "time" : {
+            "start" : 1601138979087,
+            "stop" : 1601139002973,
+            "duration" : 23886
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "[US-444]/[7] I would like to see registration error, when I don't fill state input",
+          "uid" : "5ed7d028286d797c",
+          "parentUid" : "d7cf7f0678c902c1fe134b7def373473",
+          "status" : "passed",
+          "time" : {
+            "start" : 1601139004702,
+            "stop" : 1601139022973,
+            "duration" : 18271
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "[US-444]/[8] I would like to see registration error, when I don't fill postal code input",
+          "uid" : "2ef48fbf904cee43",
+          "parentUid" : "d7cf7f0678c902c1fe134b7def373473",
+          "status" : "passed",
+          "time" : {
+            "start" : 1601139024191,
+            "stop" : 1601139042308,
+            "duration" : 18117
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "[US-444]/[9] I would like to see registration error, when I don't fill country input",
+          "uid" : "b0b59d600e38c523",
+          "parentUid" : "d7cf7f0678c902c1fe134b7def373473",
+          "status" : "passed",
+          "time" : {
+            "start" : 1601139043122,
+            "stop" : 1601139058485,
+            "duration" : 15363
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "d7cf7f0678c902c1fe134b7def373473"
+      }, {
         "name" : "tests.WebAPP.SocialMedia_Tests",
         "children" : [ {
           "name" : "[US-777]/[1] I click on social media \"Facebook\" logo",
-          "uid" : "449cb4c2bfde128c",
+          "uid" : "e10e5e1dcd366d97",
           "parentUid" : "b8a68388ee10f5ce074b49e123b04598",
           "status" : "passed",
           "time" : {
-            "start" : 1601052319329,
-            "stop" : 1601052331650,
-            "duration" : 12321
+            "start" : 1601138765171,
+            "stop" : 1601138778126,
+            "duration" : 12955
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ ]
         }, {
           "name" : "[US-777]/[2] I click on social media \"Twitter\" logo",
-          "uid" : "dac360182e0b961d",
+          "uid" : "8f8a15675cd4312b",
           "parentUid" : "b8a68388ee10f5ce074b49e123b04598",
           "status" : "passed",
           "time" : {
-            "start" : 1601052334557,
-            "stop" : 1601052364507,
-            "duration" : 29950
+            "start" : 1601138781228,
+            "stop" : 1601138810351,
+            "duration" : 29123
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ ]
         }, {
           "name" : "[US-777]/[3] I click on social media \"YouTube\" logo",
-          "uid" : "7f40205dc1436e34",
+          "uid" : "4bfc1a453495e653",
           "parentUid" : "b8a68388ee10f5ce074b49e123b04598",
           "status" : "passed",
           "time" : {
-            "start" : 1601052366038,
-            "stop" : 1601052390504,
-            "duration" : 24466
+            "start" : 1601138813175,
+            "stop" : 1601138838296,
+            "duration" : 25121
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ ]
         }, {
           "name" : "[US-777]/[4] I click on social media \"Google+\" logo",
-          "uid" : "ec0bbf94b987e512",
+          "uid" : "b50ed4412bc33fa0",
           "parentUid" : "b8a68388ee10f5ce074b49e123b04598",
           "status" : "passed",
           "time" : {
-            "start" : 1601052393247,
-            "stop" : 1601052420727,
-            "duration" : 27480
+            "start" : 1601138840864,
+            "stop" : 1601138857661,
+            "duration" : 16797
           },
           "flaky" : false,
           "newFailed" : false,
@@ -495,52 +495,52 @@
         "name" : "tests.WebAPP.Authentication_Tests",
         "children" : [ {
           "name" : "[US-111]/[1] I can log into automationpractice.com using registered email \"thor.odinson@example.com\" & password \"12345\"",
-          "uid" : "47c667983067e285",
+          "uid" : "22335eaf773bac6",
           "parentUid" : "4ded6efcf87927595a59f50d0abca513",
           "status" : "passed",
           "time" : {
-            "start" : 1601052415005,
-            "stop" : 1601052432075,
-            "duration" : 17070
+            "start" : 1601138859495,
+            "stop" : 1601138877662,
+            "duration" : 18167
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ ]
         }, {
           "name" : "[US-111]/[2] I can't log into automationpractice.com using email \"thanos.ALars@example.com\" & password \"12345\"",
-          "uid" : "fccf676248d01711",
+          "uid" : "f8b4ddef5bbcc52",
           "parentUid" : "4ded6efcf87927595a59f50d0abca513",
           "status" : "passed",
           "time" : {
-            "start" : 1601052434296,
-            "stop" : 1601052451383,
-            "duration" : 17087
+            "start" : 1601138880965,
+            "stop" : 1601138895578,
+            "duration" : 14613
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ ]
         }, {
           "name" : "[US-111]/[3] I can't log into automationpractice.com using email \"thor.odinson@example.com\" & password \"null\"",
-          "uid" : "980b71475d468ab3",
+          "uid" : "7c5cb26c96423d06",
           "parentUid" : "4ded6efcf87927595a59f50d0abca513",
           "status" : "passed",
           "time" : {
-            "start" : 1601052453954,
-            "stop" : 1601052477357,
-            "duration" : 23403
+            "start" : 1601138898276,
+            "stop" : 1601138916159,
+            "duration" : 17883
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ ]
         }, {
           "name" : "[US-111]/[4] I can't log into automationpractice.com using email \"null\" & password \"12345\"",
-          "uid" : "3a2fcf20c0451da0",
+          "uid" : "eecfc535245d8cb5",
           "parentUid" : "4ded6efcf87927595a59f50d0abca513",
           "status" : "passed",
           "time" : {
-            "start" : 1601052480787,
-            "stop" : 1601052496272,
-            "duration" : 15485
+            "start" : 1601138918561,
+            "stop" : 1601138935378,
+            "duration" : 16817
           },
           "flaky" : false,
           "newFailed" : false,
@@ -551,104 +551,104 @@
         "name" : "tests.WebAPP.CustomerService_Tests",
         "children" : [ {
           "name" : "[US-222]/[1] I am able to send request via contact us form, all inputs are filled up",
-          "uid" : "12ae8f54c7839724",
+          "uid" : "684c853ef37726f0",
           "parentUid" : "b37a924bde96eb3aff748a77e91c17d5",
           "status" : "passed",
           "time" : {
-            "start" : 1601052425106,
-            "stop" : 1601052444511,
-            "duration" : 19405
+            "start" : 1601138859870,
+            "stop" : 1601138880208,
+            "duration" : 20338
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ ]
         }, {
           "name" : "[US-222]/[2] I am able to send request via contact us form, all required inputs are filled up",
-          "uid" : "a78f43191b0a75b8",
+          "uid" : "cdd8ca171bf41a93",
           "parentUid" : "b37a924bde96eb3aff748a77e91c17d5",
           "status" : "passed",
           "time" : {
-            "start" : 1601052447321,
-            "stop" : 1601052469623,
-            "duration" : 22302
+            "start" : 1601138883168,
+            "stop" : 1601138902123,
+            "duration" : 18955
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ ]
         }, {
           "name" : "[US-222]/[3] I am able to send request via contact us form witch attached file",
-          "uid" : "ef016e81585eea3b",
+          "uid" : "9f712aa7b87b8a8",
           "parentUid" : "b37a924bde96eb3aff748a77e91c17d5",
           "status" : "passed",
           "time" : {
-            "start" : 1601052472120,
-            "stop" : 1601052494776,
-            "duration" : 22656
+            "start" : 1601138905192,
+            "stop" : 1601138922637,
+            "duration" : 17445
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ ]
         }, {
           "name" : "[US-222]/[4] I am not able to send request via contact us form, email input is invalid",
-          "uid" : "bd94e343fb3deba8",
+          "uid" : "bb47455fa530a054",
           "parentUid" : "b37a924bde96eb3aff748a77e91c17d5",
           "status" : "passed",
           "time" : {
-            "start" : 1601052496711,
-            "stop" : 1601052517492,
-            "duration" : 20781
+            "start" : 1601138925307,
+            "stop" : 1601138946497,
+            "duration" : 21190
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ ]
         }, {
           "name" : "[US-222]/[5] I am not able to send request via contact us form, subject is missing",
-          "uid" : "ed77e34a17a67a37",
+          "uid" : "3fcc41083e32a04",
           "parentUid" : "b37a924bde96eb3aff748a77e91c17d5",
           "status" : "passed",
           "time" : {
-            "start" : 1601052519403,
-            "stop" : 1601052536480,
-            "duration" : 17077
+            "start" : 1601138948371,
+            "stop" : 1601138959883,
+            "duration" : 11512
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ ]
         }, {
           "name" : "[US-222]/[6] I am not able to send request via contact us form, email address is missing",
-          "uid" : "5170dd85e549eab7",
+          "uid" : "11b79ca1fe3c55af",
           "parentUid" : "b37a924bde96eb3aff748a77e91c17d5",
           "status" : "passed",
           "time" : {
-            "start" : 1601052537841,
-            "stop" : 1601052550285,
-            "duration" : 12444
+            "start" : 1601138961383,
+            "stop" : 1601138976079,
+            "duration" : 14696
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ ]
         }, {
           "name" : "[US-222]/[7] I am not able to send request via contact us form, message input is missing",
-          "uid" : "97ec39d170a2134c",
+          "uid" : "167e4aec6a636f23",
           "parentUid" : "b37a924bde96eb3aff748a77e91c17d5",
           "status" : "passed",
           "time" : {
-            "start" : 1601052552178,
-            "stop" : 1601052564663,
-            "duration" : 12485
+            "start" : 1601138977932,
+            "stop" : 1601138990178,
+            "duration" : 12246
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ ]
         }, {
           "name" : "[US-222]/[8] I am not able to send request via contact us form, all inputs are missing",
-          "uid" : "1db234b8a4f769d0",
+          "uid" : "4f4c59f017d89afd",
           "parentUid" : "b37a924bde96eb3aff748a77e91c17d5",
           "status" : "passed",
           "time" : {
-            "start" : 1601052566629,
-            "stop" : 1601052578831,
-            "duration" : 12202
+            "start" : 1601138992080,
+            "stop" : 1601139003845,
+            "duration" : 11765
           },
           "flaky" : false,
           "newFailed" : false,
