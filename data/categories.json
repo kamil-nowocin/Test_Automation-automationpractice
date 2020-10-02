@@ -7,13 +7,13 @@
       "name" : "null",
       "children" : [ {
         "name" : "[POC]/[1]As a developer I'd like to see working POC with .xlsx file",
-        "uid" : "8f0d0c15d193e057",
+        "uid" : "d010a0dad89c6f21",
         "parentUid" : "666d1a31450af3ae8459f14f07f9a1b4",
         "status" : "failed",
         "time" : {
-          "start" : 1601570840045,
-          "stop" : 1601570840437,
-          "duration" : 392
+          "start" : 1601657279695,
+          "stop" : 1601657280094,
+          "duration" : 399
         },
         "flaky" : false,
         "newFailed" : false,
@@ -21,33 +21,16 @@
       } ],
       "uid" : "666d1a31450af3ae8459f14f07f9a1b4"
     }, {
-      "name" : "Results which have been found didn't match expected sorting result PRICE: HIGHEST FIRST: Lists differ at element [1]: $30.50 != $28.98 expected [$30.50] but found [$28.98]",
-      "children" : [ {
-        "name" : "[US-555]/[7] I would like to use search box and be able to see results sorted by: \"Price: Highest first\"",
-        "uid" : "5f2392d8582f3d6c",
-        "parentUid" : "3246160de76fc0de742a06aad5432502",
-        "status" : "failed",
-        "time" : {
-          "start" : 1601570991019,
-          "stop" : 1601571012210,
-          "duration" : 21191
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "3246160de76fc0de742a06aad5432502"
-    }, {
       "name" : "Results which have been found didn't match expected sorting result PRICE: LOWEST FIRST: Lists differ at element [2]: $28.98 != $30.50 expected [$28.98] but found [$30.50]",
       "children" : [ {
         "name" : "[US-555]/[8] I would like to use search box and be able to see results sorted by: \"Price: Lowest first\"",
-        "uid" : "817b0f599c439733",
+        "uid" : "51a840236e1ebeb3",
         "parentUid" : "06135fb1e9171a4c5ee185041330339b",
         "status" : "failed",
         "time" : {
-          "start" : 1601571041607,
-          "stop" : 1601571065533,
-          "duration" : 23926
+          "start" : 1601657480720,
+          "stop" : 1601657502764,
+          "duration" : 22044
         },
         "flaky" : false,
         "newFailed" : false,
@@ -56,5 +39,26 @@
       "uid" : "06135fb1e9171a4c5ee185041330339b"
     } ],
     "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  }, {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "stale element reference: element is not attached to the page document\n  (Session info: chrome=85.0.4183.121)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-de437e0a-0126-48e5-ae6d-7e53e9bdd769', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.3.0-1029-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.121, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: /tmp/.com.google.Chrome.d99Gz6}, goog:chromeOptions: {debuggerAddress: localhost:40565}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 1494f6f00defc0df9ffbef85bf4ae88c",
+      "children" : [ {
+        "name" : "[US-555]/[7] I would like to use search box and be able to see results sorted by: \"Price: Highest first\"",
+        "uid" : "7a0ffa7eed344e0",
+        "parentUid" : "2ae8a2e95fec7d947466946b4bda1461",
+        "status" : "broken",
+        "time" : {
+          "start" : 1601657441378,
+          "stop" : 1601657458600,
+          "duration" : 17222
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "2ae8a2e95fec7d947466946b4bda1461"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
   } ]
 }
