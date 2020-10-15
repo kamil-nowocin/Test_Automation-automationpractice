@@ -1,0 +1,38 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+16:56:37 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=86 in cache (valid until 17:56:37 15/10/2020 UTC)
+16:56:37 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome86=86.0.4240.22 in cache (valid until 16:56:37 16/10/2020 UTC)
+16:56:37 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 86.0.4240.22 (resolved driver for Chrome 86)
+16:56:38 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 86.0.4240.22 found in cache
+16:56:38 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/86.0.4240.22/chromedriver
+16:56:40 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+16:56:40 INFO  org.slf4j.Logger - [34mTEST NAME: [US-666]/[1] I WOULD LIKE TO BUY NEW "FADED SHORT SLEEVE T-SHIRTS"[0m
+16:56:40 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+16:56:56 INFO  org.slf4j.Logger - Page ready: "TRUE"
+16:57:01 INFO  org.slf4j.Logger - User login: "THOR.ODINSON@EXAMPLE.COM"
+16:57:01 INFO  org.slf4j.Logger - User password: "12345"
+16:57:12 INFO  org.slf4j.Logger - User clicked on: "WOMEN" submenu category
+16:57:18 INFO  org.slf4j.Logger - User clicked on product: "FADED SHORT SLEEVE T-SHIRTS"
+16:57:20 INFO  org.slf4j.Logger - Chosen product details:
+ > Quantity: "5"
+ > Size: "M"
+ > Color: "BLUE"
+16:57:32 INFO  org.slf4j.Logger - User order comment: "THIS IS ALL WRONG. I DON'T KNOW WHAT IT IS. BUT WHEN I KISS YOU, IT'S LIKE I'M KISSING... MY BROTHER. I GUESS THAT DOESN'T MAKE ANY SENSE, DOES IT?"
+16:57:34 INFO  org.slf4j.Logger - User chosen shipping method: "MY CARRIER"
+16:57:35 INFO  org.slf4j.Logger - User selected Terms of Service checkbox
+16:58:05 INFO  org.slf4j.Logger - [31mTEST RETRY (1/1): [US-666]/[1] I WOULD LIKE TO BUY NEW "FADED SHORT SLEEVE T-SHIRTS"[0m
+16:58:05 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=86 in cache (valid until 17:56:37 15/10/2020 UTC)
+16:58:05 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome86=86.0.4240.22 in cache (valid until 16:56:37 16/10/2020 UTC)
+16:58:05 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 86.0.4240.22 (resolved driver for Chrome 86)
+16:58:05 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 86.0.4240.22 found in cache
+16:58:05 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/86.0.4240.22/chromedriver
+16:58:07 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+16:58:07 INFO  org.slf4j.Logger - [34mTEST NAME: [US-666]/[1] I WOULD LIKE TO BUY NEW "FADED SHORT SLEEVE T-SHIRTS"[0m
+16:58:07 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+17:00:28 INFO  org.slf4j.Logger - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+17:00:28 ERROR org.slf4j.Logger - org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 28.793
+  (Session info: chrome=86.0.4240.75)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'travis-job-2ea36805-2f32-4ebc-900b-b89ae115d89c', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.3.0-1029-gcp', java.version: '14.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.75, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: /tmp/.com.google.Chrome.AZX4Iy}, goog:chromeOptions: {debuggerAddress: localhost:45255}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 23990262edcb7842b2562266e9ce40a2
