@@ -1,0 +1,372 @@
+{
+  "uid" : "eafd53138dbfcf7",
+  "name" : "[US-555]/[7] I would like to use search box and be able to see results sorted by: \"Price: Highest first\"",
+  "fullName" : "tests.WebAPP.SearchBox_Tests.test_7",
+  "historyId" : "4a7f8c57b8740ff479e116a1155c68a5",
+  "time" : {
+    "start" : 1604855495933,
+    "stop" : 1604855515587,
+    "duration" : 19654
+  },
+  "description" : "[US-555]/[7] As a user I would like to use search box and be able to see results sorted by: \"Price: Highest first\"",
+  "descriptionHtml" : "<p>[US-555]/[7] As a user I would like to use search box and be able to see results sorted by: &quot;Price: Highest first&quot;</p>\n",
+  "status" : "broken",
+  "statusMessage" : "stale element reference: element is not attached to the page document\n  (Session info: chrome=86.0.4240.183)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-b2a033b1-da32-446a-9172-58090622cb30', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.3.0-1029-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.183, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: /tmp/.com.google.Chrome.oHcKo6}, goog:chromeOptions: {debuggerAddress: localhost:33967}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: d9b508d4279a46d1a842b9ecd5391603",
+  "statusTrace" : "org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document\n  (Session info: chrome=86.0.4240.183)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-b2a033b1-da32-446a-9172-58090622cb30', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.3.0-1029-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.183, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: /tmp/.com.google.Chrome.oHcKo6}, goog:chromeOptions: {debuggerAddress: localhost:33967}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: d9b508d4279a46d1a842b9ecd5391603\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\n\tat org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)\n\tat org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:166)\n\tat jdk.internal.reflect.GeneratedMethodAccessor32.invoke(Unknown Source)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:564)\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)\n\tat com.sun.proxy.$Proxy48.getText(Unknown Source)\n\tat com.steps.SearchPageSteps.iSelectFromDropdownSortBy(SearchPageSteps.java:111)\n\tat tests.WebAPP.SearchBox_Tests.test_7(SearchBox_Tests.java:213)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:564)\n\tat org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)\n\tat org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)\n\tat org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:214)\n\tat org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)\n\tat org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)\n\tat org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)\n\tat org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)\n\tat org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)\n\tat java.base/java.lang.Thread.run(Thread.java:832)\n",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "Setting up Test Class",
+    "time" : {
+      "start" : 1604855492837,
+      "stop" : 1604855495929,
+      "duration" : 3092
+    },
+    "description" : "Setting up Test Class",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "Setting up Excel File",
+    "time" : {
+      "start" : 1604855341311,
+      "stop" : 1604855341352,
+      "duration" : 41
+    },
+    "description" : "Setting up Excel File",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "[US-555]/[7] As a user I would like to use search box and be able to see results sorted by: \"Price: Highest first\"",
+    "status" : "broken",
+    "statusMessage" : "stale element reference: element is not attached to the page document\n  (Session info: chrome=86.0.4240.183)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-b2a033b1-da32-446a-9172-58090622cb30', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.3.0-1029-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.183, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: /tmp/.com.google.Chrome.oHcKo6}, goog:chromeOptions: {debuggerAddress: localhost:33967}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: d9b508d4279a46d1a842b9ecd5391603",
+    "statusTrace" : "org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document\n  (Session info: chrome=86.0.4240.183)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-b2a033b1-da32-446a-9172-58090622cb30', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.3.0-1029-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.183, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: /tmp/.com.google.Chrome.oHcKo6}, goog:chromeOptions: {debuggerAddress: localhost:33967}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: d9b508d4279a46d1a842b9ecd5391603\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\n\tat org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)\n\tat org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:166)\n\tat jdk.internal.reflect.GeneratedMethodAccessor32.invoke(Unknown Source)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:564)\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)\n\tat com.sun.proxy.$Proxy48.getText(Unknown Source)\n\tat com.steps.SearchPageSteps.iSelectFromDropdownSortBy(SearchPageSteps.java:111)\n\tat tests.WebAPP.SearchBox_Tests.test_7(SearchBox_Tests.java:213)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:564)\n\tat org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)\n\tat org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)\n\tat org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:214)\n\tat org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)\n\tat org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)\n\tat org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)\n\tat org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)\n\tat org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)\n\tat java.base/java.lang.Thread.run(Thread.java:832)\n",
+    "steps" : [ {
+      "name" : "I open home page",
+      "time" : {
+        "start" : 1604855501365,
+        "stop" : 1604855504751,
+        "duration" : 3386
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I can see automationpractice.com website",
+      "time" : {
+        "start" : 1604855504751,
+        "stop" : 1604855504756,
+        "duration" : 5
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I search for phrase *Printed Dress*",
+      "time" : {
+        "start" : 1604855504756,
+        "stop" : 1604855505126,
+        "duration" : 370
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "searchPhrase",
+        "value" : "Printed Dress"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "I click on search icon",
+      "time" : {
+        "start" : 1604855505126,
+        "stop" : 1604855510025,
+        "duration" : 4899
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I can see numbers of results equals to *5*",
+      "time" : {
+        "start" : 1604855510025,
+        "stop" : 1604855510292,
+        "duration" : 267
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "expectedCountOfResults",
+        "value" : "5"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "I can see that every results which have been found contains phrase *Printed Dress*",
+      "time" : {
+        "start" : 1604855510292,
+        "stop" : 1604855511034,
+        "duration" : 742
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "searchPhrase",
+        "value" : "Printed Dress"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "I select from Dropdown Sort by *Price: Highest first*",
+      "time" : {
+        "start" : 1604855511034,
+        "stop" : 1604855513673,
+        "duration" : 2639
+      },
+      "status" : "broken",
+      "statusMessage" : "stale element reference: element is not attached to the page document\n  (Session info: chrome=86.0.4240.183)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-b2a033b1-da32-446a-9172-58090622cb30', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.3.0-1029-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.183, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: /tmp/.com.google.Chrome.oHcKo6}, goog:chromeOptions: {debuggerAddress: localhost:33967}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: d9b508d4279a46d1a842b9ecd5391603",
+      "statusTrace" : "org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document\n  (Session info: chrome=86.0.4240.183)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-b2a033b1-da32-446a-9172-58090622cb30', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.3.0-1029-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.183, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: /tmp/.com.google.Chrome.oHcKo6}, goog:chromeOptions: {debuggerAddress: localhost:33967}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: d9b508d4279a46d1a842b9ecd5391603\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\n\tat org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)\n\tat org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:166)\n\tat jdk.internal.reflect.GeneratedMethodAccessor32.invoke(Unknown Source)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:564)\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)\n\tat com.sun.proxy.$Proxy48.getText(Unknown Source)\n\tat com.steps.SearchPageSteps.iSelectFromDropdownSortBy(SearchPageSteps.java:111)\n\tat tests.WebAPP.SearchBox_Tests.test_7(SearchBox_Tests.java:213)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:564)\n\tat org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)\n\tat org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)\n\tat org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:214)\n\tat org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)\n\tat org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)\n\tat org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)\n\tat org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)\n\tat org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)\n\tat java.base/java.lang.Thread.run(Thread.java:832)\n",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "sortBy",
+        "value" : "Price: Highest first"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "4fe1e9b7599445d7",
+      "name" : "Scenario FAIL screenshot",
+      "source" : "4fe1e9b7599445d7.png",
+      "type" : "image/png",
+      "size" : 163661
+    }, {
+      "uid" : "3d1dd3bb75430efa",
+      "name" : "TestNG test FAIL logs",
+      "source" : "3d1dd3bb75430efa.txt",
+      "type" : "text/plain",
+      "size" : 4244
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 7,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "Teardown Test Class",
+    "time" : {
+      "start" : 1604855515614,
+      "stop" : 1604855515688,
+      "duration" : 74
+    },
+    "description" : "Teardown Test Class",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "Teardown Test Suite",
+    "time" : {
+      "start" : 1604855671325,
+      "stop" : 1604855672211,
+      "duration" : 886
+    },
+    "description" : "Teardown Test Suite",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "tests.WebAPP.SearchBox_Tests"
+  }, {
+    "name" : "testClass",
+    "value" : "tests.WebAPP.SearchBox_Tests"
+  }, {
+    "name" : "testMethod",
+    "value" : "test_7"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Automationpractice.com WEB - Kamil Nowocin"
+  }, {
+    "name" : "suite",
+    "value" : "Automated tests for WEB client"
+  }, {
+    "name" : "subSuite",
+    "value" : "tests.WebAPP.SearchBox_Tests"
+  }, {
+    "name" : "host",
+    "value" : "travis-job-b2a033b1-da32-446a-9172-58090622cb30"
+  }, {
+    "name" : "thread",
+    "value" : "6224@travis-job-b2a033b1-da32-446a-9172-58090622cb30.TestNG-test=Automated tests for WEB client-3(25)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "owner",
+    "value" : "Kamil Nowocin"
+  }, {
+    "name" : "story",
+    "value" : "POSITIVE FLOW"
+  }, {
+    "name" : "feature",
+    "value" : "SEARCH BOX TESTS"
+  }, {
+    "name" : "epic",
+    "value" : "Web App Tests"
+  }, {
+    "name" : "severity",
+    "value" : "critical"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ {
+    "name" : "TAP-0037",
+    "url" : "https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE/issue/TAP-0037",
+    "type" : "issue"
+  }, {
+    "name" : "STORY-555",
+    "url" : "https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE/STORY-555",
+    "type" : "tms"
+  } ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "critical",
+    "owner" : "Kamil Nowocin",
+    "retries" : [ {
+      "uid" : "a996494f9d8a5966",
+      "status" : "skipped",
+      "statusDetails" : "Results which have been found didn't match expected sorting result PRICE: HIGHEST FIRST: Lists differ at element [1]: $30.50 != $28.98 expected [$30.50] but found [$28.98]",
+      "time" : {
+        "start" : 1604855470838,
+        "stop" : 1604855492771,
+        "duration" : 21933
+      }
+    } ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 289,
+        "broken" : 12,
+        "skipped" : 16,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 317
+      },
+      "items" : [ {
+        "uid" : "a7a653a46ac4425e",
+        "reportUrl" : "https://travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/199055718/#testresult/a7a653a46ac4425e",
+        "status" : "failed",
+        "statusDetails" : "Results which have been found didn't match expected sorting result PRICE: HIGHEST FIRST: Lists differ at element [1]: $30.50 != $28.98 expected [$30.50] but found [$28.98]",
+        "time" : {
+          "start" : 1604769016640,
+          "stop" : 1604769033986,
+          "duration" : 17346
+        }
+      }, {
+        "uid" : "8b9e5e51be99018",
+        "reportUrl" : "https://travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/198935589/#testresult/8b9e5e51be99018",
+        "status" : "failed",
+        "statusDetails" : "Results which have been found didn't match expected sorting result PRICE: HIGHEST FIRST: Lists differ at element [1]: $30.50 != $28.98 expected [$30.50] but found [$28.98]",
+        "time" : {
+          "start" : 1604682570362,
+          "stop" : 1604682594500,
+          "duration" : 24138
+        }
+      }, {
+        "uid" : "175dedc0d01e44cf",
+        "reportUrl" : "https://travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/198512149/#testresult/175dedc0d01e44cf",
+        "status" : "failed",
+        "statusDetails" : "Results which have been found didn't match expected sorting result PRICE: HIGHEST FIRST: Lists differ at element [1]: $30.50 != $28.98 expected [$30.50] but found [$28.98]",
+        "time" : {
+          "start" : 1604596167139,
+          "stop" : 1604596188141,
+          "duration" : 21002
+        }
+      }, {
+        "uid" : "ebbee32c59e6afc1",
+        "reportUrl" : "https://travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/198278439/#testresult/ebbee32c59e6afc1",
+        "status" : "failed",
+        "statusDetails" : "Results which have been found didn't match expected sorting result PRICE: HIGHEST FIRST: Lists differ at element [1]: $30.50 != $28.98 expected [$30.50] but found [$28.98]",
+        "time" : {
+          "start" : 1604509695648,
+          "stop" : 1604509714450,
+          "duration" : 18802
+        }
+      }, {
+        "uid" : "1828c6541c4472d9",
+        "reportUrl" : "https://travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/197924617/#testresult/1828c6541c4472d9",
+        "status" : "failed",
+        "statusDetails" : "Results which have been found didn't match expected sorting result PRICE: HIGHEST FIRST: Lists differ at element [1]: $30.50 != $28.98 expected [$30.50] but found [$28.98]",
+        "time" : {
+          "start" : 1604423308872,
+          "stop" : 1604423331081,
+          "duration" : 22209
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "eafd53138dbfcf7.json",
+  "parameterValues" : [ ]
+}
