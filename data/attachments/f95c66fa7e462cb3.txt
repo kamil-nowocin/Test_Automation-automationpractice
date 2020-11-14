@@ -1,0 +1,35 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+17:13:48 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=86 in cache (valid until 18:11:49 14/11/2020 UTC)
+17:13:48 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome86=86.0.4240.22 in cache (valid until 17:11:49 15/11/2020 UTC)
+17:13:48 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 86.0.4240.22 (resolved driver for Chrome 86)
+17:13:48 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 86.0.4240.22 found in cache
+17:13:48 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/86.0.4240.22/chromedriver
+17:13:50 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+17:13:50 INFO  org.slf4j.Logger - [34mTEST NAME: [US-555]/[7] I WOULD LIKE TO USE SEARCH BOX AND BE ABLE TO SEE RESULTS SORTED BY: "PRICE: HIGHEST FIRST"[0m
+17:13:50 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+17:14:02 INFO  org.slf4j.Logger - Page ready: "TRUE"
+17:14:03 INFO  org.slf4j.Logger - User search for: "PRINTED DRESS"
+17:14:08 INFO  org.slf4j.Logger - Found results: "5", expected: "5"
+17:14:13 INFO  org.slf4j.Logger - Chosen sort option: "PRICE: HIGHEST FIRST"
+17:14:14 INFO  org.slf4j.Logger - [31mTEST RETRY (1/1): [US-555]/[7] I WOULD LIKE TO USE SEARCH BOX AND BE ABLE TO SEE RESULTS SORTED BY: "PRICE: HIGHEST FIRST"[0m
+17:14:14 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=86 in cache (valid until 18:11:49 14/11/2020 UTC)
+17:14:14 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome86=86.0.4240.22 in cache (valid until 17:11:49 15/11/2020 UTC)
+17:14:14 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 86.0.4240.22 (resolved driver for Chrome 86)
+17:14:14 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 86.0.4240.22 found in cache
+17:14:14 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/86.0.4240.22/chromedriver
+17:14:16 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+17:14:16 INFO  org.slf4j.Logger - [34mTEST NAME: [US-555]/[7] I WOULD LIKE TO USE SEARCH BOX AND BE ABLE TO SEE RESULTS SORTED BY: "PRICE: HIGHEST FIRST"[0m
+17:14:16 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+17:14:25 INFO  org.slf4j.Logger - Page ready: "TRUE"
+17:14:26 INFO  org.slf4j.Logger - User search for: "PRINTED DRESS"
+17:14:29 INFO  org.slf4j.Logger - Found results: "5", expected: "5"
+17:14:32 INFO  org.slf4j.Logger - Chosen sort option: "PRICE: HIGHEST FIRST"
+17:14:32 INFO  org.slf4j.Logger - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+17:14:33 ERROR org.slf4j.Logger - org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=86.0.4240.198)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'travis-job-f82804c4-f592-4748-bd3f-42cc19d947fe', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.3.0-1029-gcp', java.version: '14.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.198, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: /tmp/.com.google.Chrome.kh60yP}, goog:chromeOptions: {debuggerAddress: localhost:40637}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: cc0946aa0ce967a7f9fb0bc0e68d0126
