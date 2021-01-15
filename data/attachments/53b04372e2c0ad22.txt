@@ -1,0 +1,30 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+08:50:35 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=87 in cache (valid until 09:48:03 15/01/2021 UTC)
+08:50:35 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome87=87.0.4280.88 in cache (valid until 08:48:03 16/01/2021 UTC)
+08:50:35 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 87.0.4280.88 (resolved driver for Chrome 87)
+08:50:35 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 87.0.4280.88 found in cache
+08:50:35 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/87.0.4280.88/chromedriver
+08:50:37 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+08:50:37 INFO  org.slf4j.Logger - [34mTEST NAME: [US-555]/[8] I WOULD LIKE TO USE SEARCH BOX AND BE ABLE TO SEE RESULTS SORTED BY: "PRICE: LOWEST FIRST"[0m
+08:50:37 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+08:50:48 INFO  org.slf4j.Logger - Page ready: "TRUE"
+08:50:49 INFO  org.slf4j.Logger - User search for: "PRINTED DRESS"
+08:50:56 INFO  org.slf4j.Logger - Found results: "5", expected: "5"
+08:50:59 INFO  org.slf4j.Logger - Chosen sort option: "PRICE: LOWEST FIRST"
+08:50:59 INFO  org.slf4j.Logger - Actual sort option: "PRICE: LOWEST FIRST"
+08:51:00 INFO  org.slf4j.Logger - [31mTEST RETRY (1/1): [US-555]/[8] I WOULD LIKE TO USE SEARCH BOX AND BE ABLE TO SEE RESULTS SORTED BY: "PRICE: LOWEST FIRST"[0m
+08:51:00 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=87 in cache (valid until 09:48:03 15/01/2021 UTC)
+08:51:00 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome87=87.0.4280.88 in cache (valid until 08:48:03 16/01/2021 UTC)
+08:51:00 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 87.0.4280.88 (resolved driver for Chrome 87)
+08:51:00 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 87.0.4280.88 found in cache
+08:51:00 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/87.0.4280.88/chromedriver
+08:51:01 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+08:51:01 INFO  org.slf4j.Logger - [34mTEST NAME: [US-555]/[8] I WOULD LIKE TO USE SEARCH BOX AND BE ABLE TO SEE RESULTS SORTED BY: "PRICE: LOWEST FIRST"[0m
+08:51:01 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+08:51:11 INFO  org.slf4j.Logger - Page ready: "TRUE"
+08:51:12 INFO  org.slf4j.Logger - User search for: "PRINTED DRESS"
+08:51:16 INFO  org.slf4j.Logger - Found results: "5", expected: "5"
+08:51:20 INFO  org.slf4j.Logger - Chosen sort option: "PRICE: LOWEST FIRST"
+08:51:20 INFO  org.slf4j.Logger - Actual sort option: "PRICE: LOWEST FIRST"
+08:51:20 INFO  org.slf4j.Logger - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+08:51:20 ERROR org.slf4j.Logger - java.lang.AssertionError: Results which have been found didn't match expected sorting result PRICE: LOWEST FIRST: Lists differ at element [2]: $28.98 != $30.50 expected [$28.98] but found [$30.50]
