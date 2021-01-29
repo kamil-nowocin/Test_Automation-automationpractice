@@ -7,13 +7,13 @@
       "name" : "null",
       "children" : [ {
         "name" : "[POC]/[1]As a developer I'd like to see working POC with .xlsx file",
-        "uid" : "c7775e43f481bd38",
+        "uid" : "89aa6de3741b557b",
         "parentUid" : "666d1a31450af3ae8459f14f07f9a1b4",
         "status" : "failed",
         "time" : {
-          "start" : 1611305287123,
-          "stop" : 1611305287442,
-          "duration" : 319
+          "start" : 1611910141817,
+          "stop" : 1611910142189,
+          "duration" : 372
         },
         "flaky" : false,
         "newFailed" : false,
@@ -24,13 +24,13 @@
       "name" : "Results which have been found didn't match expected sorting result PRICE: HIGHEST FIRST: Lists differ at element [1]: $30.50 != $28.98 expected [$30.50] but found [$28.98]",
       "children" : [ {
         "name" : "[US-555]/[7] I would like to use search box and be able to see results sorted by: \"Price: Highest first\"",
-        "uid" : "af397f205462a722",
+        "uid" : "e7fbec02c178849f",
         "parentUid" : "3246160de76fc0de742a06aad5432502",
         "status" : "failed",
         "time" : {
-          "start" : 1611305436511,
-          "stop" : 1611305455840,
-          "duration" : 19329
+          "start" : 1611910280532,
+          "stop" : 1611910298618,
+          "duration" : 18086
         },
         "flaky" : false,
         "newFailed" : false,
@@ -41,13 +41,13 @@
       "name" : "Results which have been found didn't match expected sorting result PRICE: LOWEST FIRST: Lists differ at element [2]: $28.98 != $30.50 expected [$28.98] but found [$30.50]",
       "children" : [ {
         "name" : "[US-555]/[8] I would like to use search box and be able to see results sorted by: \"Price: Lowest first\"",
-        "uid" : "9e47528ff8f37289",
+        "uid" : "7bfcf4b6a1ff80dc",
         "parentUid" : "06135fb1e9171a4c5ee185041330339b",
         "status" : "failed",
         "time" : {
-          "start" : 1611305476936,
-          "stop" : 1611305494487,
-          "duration" : 17551
+          "start" : 1611910321676,
+          "stop" : 1611910341367,
+          "duration" : 19691
         },
         "flaky" : false,
         "newFailed" : false,
@@ -56,5 +56,77 @@
       "uid" : "06135fb1e9171a4c5ee185041330339b"
     } ],
     "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  }, {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//a[@class='account']//span\"}\n  (Session info: chrome=88.0.4324.96)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-2ee9650d-2b98-4521-98b8-e9aaa594e8cc', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1032-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 88.0.4324.96, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: /tmp/.com.google.Chrome.YHYdyM}, goog:chromeOptions: {debuggerAddress: localhost:46833}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 0d06e479074591a3d223cc38bae450c7\n*** Element info: {Using=xpath, value=//a[@class='account']//span}",
+      "children" : [ {
+        "name" : "[US-666]/[1] I would like to buy new \"Faded Short Sleeve T-shirts\"",
+        "uid" : "c6f583d4473182f5",
+        "parentUid" : "f283f4d35115e10531e6646a2b1edad1",
+        "status" : "broken",
+        "time" : {
+          "start" : 1611910177535,
+          "stop" : 1611910193532,
+          "duration" : 15997
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "f283f4d35115e10531e6646a2b1edad1"
+    }, {
+      "name" : "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//a[@class='account']//span\"}\n  (Session info: chrome=88.0.4324.96)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-2ee9650d-2b98-4521-98b8-e9aaa594e8cc', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1032-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 88.0.4324.96, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: /tmp/.com.google.Chrome.pIMFLE}, goog:chromeOptions: {debuggerAddress: localhost:39907}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: cdd0c37a3616513c784d90f101331dcc\n*** Element info: {Using=xpath, value=//a[@class='account']//span}",
+      "children" : [ {
+        "name" : "[US-666]/[2] I would like to buy new \"Blouse\"",
+        "uid" : "6ca5794e6b9094bb",
+        "parentUid" : "426aab2078bd36ac7fd7574d61072b75",
+        "status" : "broken",
+        "time" : {
+          "start" : 1611910213492,
+          "stop" : 1611910233567,
+          "duration" : 20075
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "426aab2078bd36ac7fd7574d61072b75"
+    }, {
+      "name" : "Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //p[@class='info-account']' (tried for 15 second(s) with 500 milliseconds interval)",
+      "children" : [ {
+        "name" : "[US-111]/[1] I can log into automationpractice.com using registered email \"thor.odinson@example.com\" & password \"12345\"",
+        "uid" : "1b6ac5996293971c",
+        "parentUid" : "54e4661ce2e96a09b5b430cc52e0e679",
+        "status" : "broken",
+        "time" : {
+          "start" : 1611910271347,
+          "stop" : 1611910303909,
+          "duration" : 32562
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "54e4661ce2e96a09b5b430cc52e0e679"
+    }, {
+      "name" : "Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //div[@class='alert alert-danger']' (tried for 15 second(s) with 500 milliseconds interval)",
+      "children" : [ {
+        "name" : "[US-333]/[6] I can't create an account, when email is already in database",
+        "uid" : "aa07e276f871a2bd",
+        "parentUid" : "0cba097823f931767e2419fe825ee128",
+        "status" : "broken",
+        "time" : {
+          "start" : 1611910459864,
+          "stop" : 1611910480561,
+          "duration" : 20697
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "0cba097823f931767e2419fe825ee128"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
   } ]
 }
