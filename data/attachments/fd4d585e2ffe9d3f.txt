@@ -1,0 +1,22 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+08:56:05 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=88 in cache (valid until 09:50:12 12/02/2021 UTC)
+08:56:05 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome88=88.0.4324.96 in cache (valid until 08:50:12 13/02/2021 UTC)
+08:56:05 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 88.0.4324.96 (resolved driver for Chrome 88)
+08:56:05 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 88.0.4324.96 found in cache
+08:56:05 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/88.0.4324.96/chromedriver
+08:56:06 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+08:56:06 INFO  org.slf4j.Logger - [34mTEST NAME: [US-111]/[4] I CAN'T LOG INTO AUTOMATIONPRACTICE.COM USING EMAIL "NULL" & PASSWORD "12345"[0m
+08:56:06 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+08:56:34 INFO  org.slf4j.Logger - Page ready: "TRUE"
+08:56:54 INFO  org.slf4j.Logger - [31mTEST RETRY (1/1): [US-111]/[4] I CAN'T LOG INTO AUTOMATIONPRACTICE.COM USING EMAIL "NULL" & PASSWORD "12345"[0m
+08:56:54 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=88 in cache (valid until 09:50:12 12/02/2021 UTC)
+08:56:54 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome88=88.0.4324.96 in cache (valid until 08:50:12 13/02/2021 UTC)
+08:56:54 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 88.0.4324.96 (resolved driver for Chrome 88)
+08:56:54 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 88.0.4324.96 found in cache
+08:56:54 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/88.0.4324.96/chromedriver
+08:56:55 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+08:56:55 INFO  org.slf4j.Logger - [34mTEST NAME: [US-111]/[4] I CAN'T LOG INTO AUTOMATIONPRACTICE.COM USING EMAIL "NULL" & PASSWORD "12345"[0m
+08:56:55 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+08:57:05 INFO  org.slf4j.Logger - Page ready: "TRUE"
+08:57:21 INFO  org.slf4j.Logger - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+08:57:21 ERROR org.slf4j.Logger - org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //a[@class='login']' (tried for 15 second(s) with 500 milliseconds interval)

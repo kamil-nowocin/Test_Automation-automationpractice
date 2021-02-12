@@ -1,0 +1,26 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+08:51:48 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=88 in cache (valid until 09:50:12 12/02/2021 UTC)
+08:51:48 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome88=88.0.4324.96 in cache (valid until 08:50:12 13/02/2021 UTC)
+08:51:48 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 88.0.4324.96 (resolved driver for Chrome 88)
+08:51:48 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 88.0.4324.96 found in cache
+08:51:48 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/88.0.4324.96/chromedriver
+08:51:49 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+08:51:49 INFO  org.slf4j.Logger - [34mTEST NAME: [US-666]/[2] I WOULD LIKE TO BUY NEW "BLOUSE"[0m
+08:51:49 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+08:52:08 INFO  org.slf4j.Logger - Page ready: "TRUE"
+08:52:21 INFO  org.slf4j.Logger - User login: "THOR.ODINSON@EXAMPLE.COM"
+08:52:21 INFO  org.slf4j.Logger - User password: "12345"
+08:52:49 INFO  org.slf4j.Logger - User clicked on: "WOMEN" submenu category
+08:52:49 INFO  org.slf4j.Logger - User clicked on product: "BLOUSE"
+08:52:49 INFO  org.slf4j.Logger - [31mTEST RETRY (1/1): [US-666]/[2] I WOULD LIKE TO BUY NEW "BLOUSE"[0m
+08:52:50 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=88 in cache (valid until 09:50:12 12/02/2021 UTC)
+08:52:50 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome88=88.0.4324.96 in cache (valid until 08:50:12 13/02/2021 UTC)
+08:52:50 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 88.0.4324.96 (resolved driver for Chrome 88)
+08:52:50 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 88.0.4324.96 found in cache
+08:52:50 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/88.0.4324.96/chromedriver
+08:52:51 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+08:52:51 INFO  org.slf4j.Logger - [34mTEST NAME: [US-666]/[2] I WOULD LIKE TO BUY NEW "BLOUSE"[0m
+08:52:51 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+08:53:11 INFO  org.slf4j.Logger - Page ready: "TRUE"
+08:53:26 INFO  org.slf4j.Logger - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+08:53:26 ERROR org.slf4j.Logger - org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //a[@class='login']' (tried for 15 second(s) with 500 milliseconds interval)
