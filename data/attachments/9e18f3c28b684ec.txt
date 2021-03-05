@@ -1,0 +1,24 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+08:54:10 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=89 in cache (valid until 09:50:29 05/03/2021 UTC)
+08:54:10 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome89=89.0.4389.23 in cache (valid until 08:50:29 06/03/2021 UTC)
+08:54:10 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 89.0.4389.23 (resolved driver for Chrome 89)
+08:54:10 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 89.0.4389.23 found in cache
+08:54:10 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/89.0.4389.23/chromedriver
+08:54:11 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+08:54:11 INFO  org.slf4j.Logger - [34mTEST NAME: [US-333]/[6] I CAN'T CREATE AN ACCOUNT, WHEN EMAIL IS ALREADY IN DATABASE[0m
+08:54:11 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+08:54:15 INFO  org.slf4j.Logger - Page ready: "TRUE"
+08:54:17 INFO  org.slf4j.Logger - User registered email: "ASFSAFAS@WP.PL"
+08:54:33 INFO  org.slf4j.Logger - [31mTEST RETRY (1/1): [US-333]/[6] I CAN'T CREATE AN ACCOUNT, WHEN EMAIL IS ALREADY IN DATABASE[0m
+08:54:33 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=89 in cache (valid until 09:50:29 05/03/2021 UTC)
+08:54:33 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome89=89.0.4389.23 in cache (valid until 08:50:29 06/03/2021 UTC)
+08:54:33 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 89.0.4389.23 (resolved driver for Chrome 89)
+08:54:33 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 89.0.4389.23 found in cache
+08:54:33 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/89.0.4389.23/chromedriver
+08:54:33 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+08:54:33 INFO  org.slf4j.Logger - [34mTEST NAME: [US-333]/[6] I CAN'T CREATE AN ACCOUNT, WHEN EMAIL IS ALREADY IN DATABASE[0m
+08:54:33 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+08:54:36 INFO  org.slf4j.Logger - Page ready: "TRUE"
+08:54:37 INFO  org.slf4j.Logger - User registered email: "ASFSAFAS@WP.PL"
+08:54:52 INFO  org.slf4j.Logger - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+08:54:52 ERROR org.slf4j.Logger - org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //div[@class='alert alert-danger']' (tried for 15 second(s) with 500 milliseconds interval)
