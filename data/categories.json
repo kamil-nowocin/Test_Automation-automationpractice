@@ -7,13 +7,13 @@
       "name" : "null",
       "children" : [ {
         "name" : "[POC]/[1]As a developer I'd like to see working POC with .xlsx file",
-        "uid" : "b16ea721541e8576",
+        "uid" : "c8866f2dbf155e6d",
         "parentUid" : "666d1a31450af3ae8459f14f07f9a1b4",
         "status" : "failed",
         "time" : {
-          "start" : 1621587365026,
-          "stop" : 1621587365339,
-          "duration" : 313
+          "start" : 1622192174265,
+          "stop" : 1622192174551,
+          "duration" : 286
         },
         "flaky" : false,
         "newFailed" : false,
@@ -21,33 +21,16 @@
       } ],
       "uid" : "666d1a31450af3ae8459f14f07f9a1b4"
     }, {
-      "name" : "Results which have been found didn't match expected sorting result PRICE: HIGHEST FIRST: Lists differ at element [1]: $30.50 != $28.98 expected [$30.50] but found [$28.98]",
-      "children" : [ {
-        "name" : "[US-555]/[7] I would like to use search box and be able to see results sorted by: \"Price: Highest first\"",
-        "uid" : "1f6019cf1a33044f",
-        "parentUid" : "3246160de76fc0de742a06aad5432502",
-        "status" : "failed",
-        "time" : {
-          "start" : 1621587509513,
-          "stop" : 1621587534470,
-          "duration" : 24957
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "3246160de76fc0de742a06aad5432502"
-    }, {
       "name" : "Results which have been found didn't match expected sorting result PRICE: LOWEST FIRST: Lists differ at element [2]: $28.98 != $30.50 expected [$28.98] but found [$30.50]",
       "children" : [ {
         "name" : "[US-555]/[8] I would like to use search box and be able to see results sorted by: \"Price: Lowest first\"",
-        "uid" : "755ee4b552af8eb0",
+        "uid" : "e057a844ce83f02a",
         "parentUid" : "06135fb1e9171a4c5ee185041330339b",
         "status" : "failed",
         "time" : {
-          "start" : 1621587556823,
-          "stop" : 1621587578319,
-          "duration" : 21496
+          "start" : 1622192424534,
+          "stop" : 1622192449898,
+          "duration" : 25364
         },
         "flaky" : false,
         "newFailed" : false,
@@ -59,16 +42,33 @@
   }, {
     "name" : "Test defects",
     "children" : [ {
+      "name" : "Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //span[@class='heading-counter']' (tried for 15 second(s) with 500 milliseconds interval)",
+      "children" : [ {
+        "name" : "[US-555]/[7] I would like to use search box and be able to see results sorted by: \"Price: Highest first\"",
+        "uid" : "6bb798e4b4b1361b",
+        "parentUid" : "e170f5d0ffe3d62b76a0a9230c0cb828",
+        "status" : "broken",
+        "time" : {
+          "start" : 1622192356859,
+          "stop" : 1622192390720,
+          "duration" : 33861
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "e170f5d0ffe3d62b76a0a9230c0cb828"
+    }, {
       "name" : "Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //div[@class='alert alert-danger']' (tried for 15 second(s) with 500 milliseconds interval)",
       "children" : [ {
         "name" : "[US-333]/[6] I can't create an account, when email is already in database",
-        "uid" : "917153858884cbe5",
+        "uid" : "af5133137c60f5c8",
         "parentUid" : "0cba097823f931767e2419fe825ee128",
         "status" : "broken",
         "time" : {
-          "start" : 1621587681498,
-          "stop" : 1621587702038,
-          "duration" : 20540
+          "start" : 1622192613344,
+          "stop" : 1622192634652,
+          "duration" : 21308
         },
         "flaky" : false,
         "newFailed" : false,
