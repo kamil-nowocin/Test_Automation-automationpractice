@@ -1,0 +1,33 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+09:00:09 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=91 in cache (valid until 09:57:18 04/06/2021 UTC)
+09:00:09 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome91=91.0.4472.19 in cache (valid until 08:57:18 05/06/2021 UTC)
+09:00:09 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 91.0.4472.19 (resolved driver for Chrome 91)
+09:00:09 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 91.0.4472.19 found in cache
+09:00:09 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/91.0.4472.19/chromedriver
+09:00:10 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:00:10 INFO  org.slf4j.Logger - [34mTEST NAME: [US-222]/[1] I AM ABLE TO SEND REQUEST VIA CONTACT US FORM, ALL INPUTS ARE FILLED UP[0m
+09:00:10 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:00:10 INFO  org.slf4j.Logger - [31mTEST RETRY (1/1): [US-222]/[1] I AM ABLE TO SEND REQUEST VIA CONTACT US FORM, ALL INPUTS ARE FILLED UP[0m
+09:00:10 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=91 in cache (valid until 09:57:18 04/06/2021 UTC)
+09:00:10 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome91=91.0.4472.19 in cache (valid until 08:57:18 05/06/2021 UTC)
+09:00:10 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 91.0.4472.19 (resolved driver for Chrome 91)
+09:00:10 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 91.0.4472.19 found in cache
+09:00:10 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/91.0.4472.19/chromedriver
+09:00:11 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:00:11 INFO  org.slf4j.Logger - [34mTEST NAME: [US-222]/[1] I AM ABLE TO SEND REQUEST VIA CONTACT US FORM, ALL INPUTS ARE FILLED UP[0m
+09:00:11 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:00:36 INFO  org.slf4j.Logger - Page ready: "TRUE"
+09:00:44 INFO  org.slf4j.Logger - Chosen subject: "CUSTOMER SERVICE"
+09:00:44 INFO  org.slf4j.Logger - User valid email: "WALECHRISTOPHER@EMAIL.COM"
+09:00:44 INFO  org.slf4j.Logger - Order reference: "NIKXGJAEV6"
+09:00:44 INFO  org.slf4j.Logger - Message: "WHEN CHUCK NORRIS GIVES A METHOD AN ARGUMENT, THE METHOD LOSES."
+09:00:45 INFO  org.slf4j.Logger - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+09:00:45 ERROR org.slf4j.Logger - org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//p[@class='alert alert-success']"}
+  (Session info: chrome=91.0.4472.77)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'travis-job-2c9cd264-baa0-48a4-8818-406e5fdeebf6', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1032-gcp', java.version: '14.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.77, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: /tmp/.com.google.Chrome.HaRfVh}, goog:chromeOptions: {debuggerAddress: localhost:34139}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 8e31992f83b7784868e729c1f97f93f2
+*** Element info: {Using=xpath, value=//p[@class='alert alert-success']}

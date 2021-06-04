@@ -1,0 +1,21 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+09:01:50 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=91 in cache (valid until 09:57:18 04/06/2021 UTC)
+09:01:50 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome91=91.0.4472.19 in cache (valid until 08:57:18 05/06/2021 UTC)
+09:01:50 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 91.0.4472.19 (resolved driver for Chrome 91)
+09:01:50 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 91.0.4472.19 found in cache
+09:01:50 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/91.0.4472.19/chromedriver
+09:01:51 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:01:51 INFO  org.slf4j.Logger - [34mTEST NAME: [US-222]/[4] I AM NOT ABLE TO SEND REQUEST VIA CONTACT US FORM, EMAIL INPUT IS INVALID[0m
+09:01:51 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:01:56 INFO  org.slf4j.Logger - [31mTEST RETRY (1/1): [US-222]/[4] I AM NOT ABLE TO SEND REQUEST VIA CONTACT US FORM, EMAIL INPUT IS INVALID[0m
+09:01:56 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=91 in cache (valid until 09:57:18 04/06/2021 UTC)
+09:01:56 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome91=91.0.4472.19 in cache (valid until 08:57:18 05/06/2021 UTC)
+09:01:56 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 91.0.4472.19 (resolved driver for Chrome 91)
+09:01:56 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 91.0.4472.19 found in cache
+09:01:56 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/91.0.4472.19/chromedriver
+09:01:57 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:01:57 INFO  org.slf4j.Logger - [34mTEST NAME: [US-222]/[4] I AM NOT ABLE TO SEND REQUEST VIA CONTACT US FORM, EMAIL INPUT IS INVALID[0m
+09:01:57 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:02:07 INFO  org.slf4j.Logger - Page ready: "TRUE"
+09:02:22 INFO  org.slf4j.Logger - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+09:02:22 ERROR org.slf4j.Logger - org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //div[@id='contact-link']' (tried for 15 second(s) with 500 milliseconds interval)
