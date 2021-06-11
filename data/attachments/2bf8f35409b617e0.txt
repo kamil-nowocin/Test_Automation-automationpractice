@@ -1,0 +1,36 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+08:59:49 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=91 in cache (valid until 09:57:27 11/06/2021 UTC)
+08:59:49 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome91=91.0.4472.19 in cache (valid until 08:57:27 12/06/2021 UTC)
+08:59:49 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 91.0.4472.19 (resolved driver for Chrome 91)
+08:59:49 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 91.0.4472.19 found in cache
+08:59:49 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/91.0.4472.19/chromedriver
+08:59:50 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+08:59:50 INFO  org.slf4j.Logger - [34mTEST NAME: [US-555]/[7] I WOULD LIKE TO USE SEARCH BOX AND BE ABLE TO SEE RESULTS SORTED BY: "PRICE: HIGHEST FIRST"[0m
+08:59:50 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:00:00 INFO  org.slf4j.Logger - Page ready: "TRUE"
+09:00:00 INFO  org.slf4j.Logger - User search for: "PRINTED DRESS"
+09:00:06 INFO  org.slf4j.Logger - Found results: "5", expected: "5"
+09:00:11 INFO  org.slf4j.Logger - Chosen sort option: "PRICE: HIGHEST FIRST"
+09:00:11 INFO  org.slf4j.Logger - Actual sort option: "PRICE: HIGHEST FIRST"
+09:00:11 INFO  org.slf4j.Logger - [31mTEST RETRY (1/1): [US-555]/[7] I WOULD LIKE TO USE SEARCH BOX AND BE ABLE TO SEE RESULTS SORTED BY: "PRICE: HIGHEST FIRST"[0m
+09:00:11 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=91 in cache (valid until 09:57:27 11/06/2021 UTC)
+09:00:11 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome91=91.0.4472.19 in cache (valid until 08:57:27 12/06/2021 UTC)
+09:00:11 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 91.0.4472.19 (resolved driver for Chrome 91)
+09:00:11 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 91.0.4472.19 found in cache
+09:00:11 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/91.0.4472.19/chromedriver
+09:00:12 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:00:12 INFO  org.slf4j.Logger - [34mTEST NAME: [US-555]/[7] I WOULD LIKE TO USE SEARCH BOX AND BE ABLE TO SEE RESULTS SORTED BY: "PRICE: HIGHEST FIRST"[0m
+09:00:12 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:00:20 INFO  org.slf4j.Logger - Page ready: "TRUE"
+09:00:21 INFO  org.slf4j.Logger - User search for: "PRINTED DRESS"
+09:00:24 INFO  org.slf4j.Logger - Found results: "5", expected: "5"
+09:00:27 INFO  org.slf4j.Logger - Chosen sort option: "PRICE: HIGHEST FIRST"
+09:00:28 INFO  org.slf4j.Logger - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+09:00:28 ERROR org.slf4j.Logger - org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=91.0.4472.101)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'travis-job-c9a0beeb-6617-4a8a-951c-9db167b597a0', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1032-gcp', java.version: '14.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.101, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: /tmp/.com.google.Chrome.3PJfh0}, goog:chromeOptions: {debuggerAddress: localhost:44945}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 0c814e6a1870b94b579692cfa65845b2
