@@ -1,0 +1,29 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+08:58:37 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=91 in cache (valid until 09:58:25 25/06/2021 UTC)
+08:58:37 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome91=91.0.4472.101 in cache (valid until 08:58:25 26/06/2021 UTC)
+08:58:37 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 91.0.4472.101 (resolved driver for Chrome 91)
+08:58:37 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 91.0.4472.101 found in cache
+08:58:37 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/91.0.4472.101/chromedriver
+08:58:37 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+08:58:37 INFO  org.slf4j.Logger - [34mTEST NAME: [US-666]/[2] I WOULD LIKE TO BUY NEW "BLOUSE"[0m
+08:58:37 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+08:59:01 INFO  org.slf4j.Logger - Page ready: "TRUE"
+08:59:14 INFO  org.slf4j.Logger - User login: "THOR.ODINSON@EXAMPLE.COM"
+08:59:14 INFO  org.slf4j.Logger - User password: "12345"
+08:59:38 INFO  org.slf4j.Logger - User clicked on: "WOMEN" submenu category
+08:59:46 INFO  org.slf4j.Logger - User clicked on product: "BLOUSE"
+08:59:46 INFO  org.slf4j.Logger - Chosen product details:
+ > Quantity: "2"
+ > Size: "S"
+ > Color: "BLACK"
+09:00:09 INFO  org.slf4j.Logger - [31mTEST RETRY (1/1): [US-666]/[2] I WOULD LIKE TO BUY NEW "BLOUSE"[0m
+09:00:09 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=91 in cache (valid until 09:58:25 25/06/2021 UTC)
+09:00:09 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome91=91.0.4472.101 in cache (valid until 08:58:25 26/06/2021 UTC)
+09:00:09 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 91.0.4472.101 (resolved driver for Chrome 91)
+09:00:09 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 91.0.4472.101 found in cache
+09:00:09 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/91.0.4472.101/chromedriver
+09:00:11 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:00:11 INFO  org.slf4j.Logger - [34mTEST NAME: [US-666]/[2] I WOULD LIKE TO BUY NEW "BLOUSE"[0m
+09:00:11 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:00:11 INFO  org.slf4j.Logger - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+09:00:11 ERROR org.slf4j.Logger - java.lang.AssertionError: Ups, something went really bad! Even Michael Scofield couldn't have predicted that error! :) expected [http://automationpractice.com/index.php] but found [http://automationpractice.com/]

@@ -1,0 +1,41 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+08:59:34 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=91 in cache (valid until 09:58:25 25/06/2021 UTC)
+08:59:34 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome91=91.0.4472.101 in cache (valid until 08:58:25 26/06/2021 UTC)
+08:59:34 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 91.0.4472.101 (resolved driver for Chrome 91)
+08:59:34 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 91.0.4472.101 found in cache
+08:59:34 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/91.0.4472.101/chromedriver
+08:59:35 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+08:59:35 INFO  org.slf4j.Logger - [34mTEST NAME: [US-444]/[11] I WOULD LIKE TO SEE REGISTRATION ERROR, WHEN I DON'T FILL EMAIL ALIAS INPUT[0m
+08:59:35 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+08:59:35 INFO  org.slf4j.Logger - [31mTEST RETRY (1/1): [US-444]/[11] I WOULD LIKE TO SEE REGISTRATION ERROR, WHEN I DON'T FILL EMAIL ALIAS INPUT[0m
+08:59:35 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=91 in cache (valid until 09:58:25 25/06/2021 UTC)
+08:59:35 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome91=91.0.4472.101 in cache (valid until 08:58:25 26/06/2021 UTC)
+08:59:35 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 91.0.4472.101 (resolved driver for Chrome 91)
+08:59:35 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 91.0.4472.101 found in cache
+08:59:35 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/91.0.4472.101/chromedriver
+08:59:36 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+08:59:36 INFO  org.slf4j.Logger - [34mTEST NAME: [US-444]/[11] I WOULD LIKE TO SEE REGISTRATION ERROR, WHEN I DON'T FILL EMAIL ALIAS INPUT[0m
+08:59:36 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+08:59:59 INFO  org.slf4j.Logger - Page ready: "TRUE"
+09:00:12 INFO  org.slf4j.Logger - User valid email: "EB895VEILEDJANA@HOTMAIL.COM"
+09:00:21 INFO  org.slf4j.Logger - User gender: "Male"
+09:00:21 INFO  org.slf4j.Logger - User first name: "WILLARD"
+09:00:21 INFO  org.slf4j.Logger - User last name: "FRATUS"
+09:00:21 INFO  org.slf4j.Logger - User password: "PE[RSONAGE"
+09:00:22 INFO  org.slf4j.Logger - User birthday: "11-12-1936"
+09:00:24 INFO  org.slf4j.Logger - User address: "LABADIE DRIVE2429"
+09:00:24 INFO  org.slf4j.Logger - User chosen country: "UNITED STATES"
+09:00:25 INFO  org.slf4j.Logger - User chosen city: "LAKEPORT"
+09:00:25 INFO  org.slf4j.Logger - User chosen state: "VIRGINIA"
+09:00:25 INFO  org.slf4j.Logger - User postal code: "96530"
+09:00:25 INFO  org.slf4j.Logger - User mobile phone number: "(740) 985-5431"
+09:00:26 INFO  org.slf4j.Logger - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+09:00:26 ERROR org.slf4j.Logger - org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='alert alert-danger']"}
+  (Session info: chrome=91.0.4472.114)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'travis-job-66885426-151e-4f99-ac23-f86f8de233e0', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1032-gcp', java.version: '14.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.114, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: /tmp/.com.google.Chrome.XtDglZ}, goog:chromeOptions: {debuggerAddress: localhost:42417}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: e0b257e9e3700c99251fc561ae8d7892
+*** Element info: {Using=xpath, value=//div[@class='alert alert-danger']}
