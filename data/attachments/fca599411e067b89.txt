@@ -1,0 +1,21 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+08:59:46 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=91 in cache (valid until 09:59:45 09/07/2021 UTC)
+08:59:46 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome91=91.0.4472.101 in cache (valid until 08:59:45 10/07/2021 UTC)
+08:59:46 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 91.0.4472.101 (resolved driver for Chrome 91)
+08:59:46 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 91.0.4472.101 found in cache
+08:59:46 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/91.0.4472.101/chromedriver
+08:59:48 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+08:59:48 INFO  org.slf4j.Logger - [34mTEST NAME: [US-555]/[1] I WOULD LIKE TO USE SEARCH BOX AND BE ABLE TO SEE RESULTS OF: "T-SHIRTS"[0m
+08:59:48 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+08:59:49 INFO  org.slf4j.Logger - [31mTEST RETRY (1/1): [US-555]/[1] I WOULD LIKE TO USE SEARCH BOX AND BE ABLE TO SEE RESULTS OF: "T-SHIRTS"[0m
+08:59:50 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=91 in cache (valid until 09:59:45 09/07/2021 UTC)
+08:59:50 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome91=91.0.4472.101 in cache (valid until 08:59:45 10/07/2021 UTC)
+08:59:50 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 91.0.4472.101 (resolved driver for Chrome 91)
+08:59:50 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 91.0.4472.101 found in cache
+08:59:50 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/91.0.4472.101/chromedriver
+08:59:51 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+08:59:51 INFO  org.slf4j.Logger - [34mTEST NAME: [US-555]/[1] I WOULD LIKE TO USE SEARCH BOX AND BE ABLE TO SEE RESULTS OF: "T-SHIRTS"[0m
+08:59:51 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:00:00 INFO  org.slf4j.Logger - Page ready: "TRUE"
+09:00:16 INFO  org.slf4j.Logger - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+09:00:16 ERROR org.slf4j.Logger - org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //input[@class='search_query form-control ac_input']' (tried for 15 second(s) with 500 milliseconds interval)
