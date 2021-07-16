@@ -1,0 +1,21 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+08:59:52 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=91 in cache (valid until 09:59:52 16/07/2021 UTC)
+08:59:52 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome91=91.0.4472.101 in cache (valid until 08:59:52 17/07/2021 UTC)
+08:59:52 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 91.0.4472.101 (resolved driver for Chrome 91)
+08:59:52 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 91.0.4472.101 found in cache
+08:59:52 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/91.0.4472.101/chromedriver
+08:59:55 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+08:59:55 INFO  org.slf4j.Logger - [34mTEST NAME: [US-333]/[1] I CHECK AVAILABILITY OF REGISTRATION PAGE FORM[0m
+08:59:55 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+08:59:56 INFO  org.slf4j.Logger - [31mTEST RETRY (1/1): [US-333]/[1] I CHECK AVAILABILITY OF REGISTRATION PAGE FORM[0m
+08:59:57 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=91 in cache (valid until 09:59:52 16/07/2021 UTC)
+08:59:57 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome91=91.0.4472.101 in cache (valid until 08:59:52 17/07/2021 UTC)
+08:59:57 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 91.0.4472.101 (resolved driver for Chrome 91)
+08:59:57 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 91.0.4472.101 found in cache
+08:59:57 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/91.0.4472.101/chromedriver
+08:59:58 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+08:59:58 INFO  org.slf4j.Logger - [34mTEST NAME: [US-333]/[1] I CHECK AVAILABILITY OF REGISTRATION PAGE FORM[0m
+08:59:58 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:00:17 INFO  org.slf4j.Logger - Page ready: "TRUE"
+09:00:33 INFO  org.slf4j.Logger - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+09:00:33 ERROR org.slf4j.Logger - org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //a[@class='login']' (tried for 15 second(s) with 500 milliseconds interval)

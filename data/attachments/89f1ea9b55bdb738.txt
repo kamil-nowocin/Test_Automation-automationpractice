@@ -1,0 +1,34 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+09:04:21 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=91 in cache (valid until 09:59:52 16/07/2021 UTC)
+09:04:21 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome91=91.0.4472.101 in cache (valid until 08:59:52 17/07/2021 UTC)
+09:04:21 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 91.0.4472.101 (resolved driver for Chrome 91)
+09:04:21 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 91.0.4472.101 found in cache
+09:04:21 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/91.0.4472.101/chromedriver
+09:04:22 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:04:22 INFO  org.slf4j.Logger - [34mTEST NAME: [US-222]/[5] I AM NOT ABLE TO SEND REQUEST VIA CONTACT US FORM, SUBJECT IS MISSING[0m
+09:04:22 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:04:47 INFO  org.slf4j.Logger - Page ready: "TRUE"
+09:05:03 INFO  org.slf4j.Logger - [31mTEST RETRY (1/1): [US-222]/[5] I AM NOT ABLE TO SEND REQUEST VIA CONTACT US FORM, SUBJECT IS MISSING[0m
+09:05:03 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=91 in cache (valid until 09:59:52 16/07/2021 UTC)
+09:05:03 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome91=91.0.4472.101 in cache (valid until 08:59:52 17/07/2021 UTC)
+09:05:03 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 91.0.4472.101 (resolved driver for Chrome 91)
+09:05:03 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 91.0.4472.101 found in cache
+09:05:03 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/91.0.4472.101/chromedriver
+09:05:03 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:05:03 INFO  org.slf4j.Logger - [34mTEST NAME: [US-222]/[5] I AM NOT ABLE TO SEND REQUEST VIA CONTACT US FORM, SUBJECT IS MISSING[0m
+09:05:03 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:05:30 INFO  org.slf4j.Logger - Page ready: "TRUE"
+09:05:37 INFO  org.slf4j.Logger - User valid email: "VULNEDRANDALL@YAHOO.CO.UK"
+09:05:38 INFO  org.slf4j.Logger - Order reference: "IWTCCK0KZO"
+09:05:38 INFO  org.slf4j.Logger - Uploaded file name: "TESTPHOTO.JPG"
+09:05:38 INFO  org.slf4j.Logger - Message: "CHUCK NORRIS'S KEYBOARD DOESN'T HAVE A CTRL KEY BECAUSE NOTHING CONTROLS CHUCK NORRIS."
+09:05:38 INFO  org.slf4j.Logger - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+09:05:38 ERROR org.slf4j.Logger - org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='alert alert-danger']//li"}
+  (Session info: chrome=91.0.4472.164)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'travis-job-87e00e69-6042-4da2-8c90-c0f6f51812a5', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1032-gcp', java.version: '14.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.164, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: /tmp/.com.google.Chrome.SkdeoI}, goog:chromeOptions: {debuggerAddress: localhost:35403}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: e82b6a1093bf9004f4de834cbb3118d8
+*** Element info: {Using=xpath, value=//div[@class='alert alert-danger']//li}
