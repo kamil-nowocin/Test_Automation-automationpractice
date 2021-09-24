@@ -7,13 +7,13 @@
       "name" : "null",
       "children" : [ {
         "name" : "[POC]/[1]As a developer I'd like to see working POC with .xlsx file",
-        "uid" : "da8f389854ece463",
+        "uid" : "e2c83dbb5b381257",
         "parentUid" : "666d1a31450af3ae8459f14f07f9a1b4",
         "status" : "failed",
         "time" : {
-          "start" : 1631869443121,
-          "stop" : 1631869443413,
-          "duration" : 292
+          "start" : 1632474247737,
+          "stop" : 1632474248058,
+          "duration" : 321
         },
         "flaky" : false,
         "newFailed" : false,
@@ -21,16 +21,33 @@
       } ],
       "uid" : "666d1a31450af3ae8459f14f07f9a1b4"
     }, {
+      "name" : "Ups, something went really bad! Even Michael Scofield couldn't have predicted that error! :) expected [http://automationpractice.com/index.php] but found [http://automationpractice.com/]",
+      "children" : [ {
+        "name" : "[US-777]/[3] I click on social media \"YouTube\" logo",
+        "uid" : "218ea1bcc5d60ebd",
+        "parentUid" : "f546a49c1ef57bdabb3f77b8898137a3",
+        "status" : "failed",
+        "time" : {
+          "start" : 1632474435062,
+          "stop" : 1632474440518,
+          "duration" : 5456
+        },
+        "flaky" : true,
+        "newFailed" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "f546a49c1ef57bdabb3f77b8898137a3"
+    }, {
       "name" : "Results which have been found didn't match expected sorting result PRICE: HIGHEST FIRST: Lists differ at element [1]: $30.50 != $28.98 expected [$30.50] but found [$28.98]",
       "children" : [ {
         "name" : "[US-555]/[7] I would like to use search box and be able to see results sorted by: \"Price: Highest first\"",
-        "uid" : "b3cee6fe8c92589d",
+        "uid" : "fd5eadafd00c7e4b",
         "parentUid" : "3246160de76fc0de742a06aad5432502",
         "status" : "failed",
         "time" : {
-          "start" : 1631869562642,
-          "stop" : 1631869576990,
-          "duration" : 14348
+          "start" : 1632474550819,
+          "stop" : 1632474594084,
+          "duration" : 43265
         },
         "flaky" : false,
         "newFailed" : false,
@@ -41,13 +58,13 @@
       "name" : "Results which have been found didn't match expected sorting result PRICE: LOWEST FIRST: Lists differ at element [2]: $28.98 != $30.50 expected [$28.98] but found [$30.50]",
       "children" : [ {
         "name" : "[US-555]/[8] I would like to use search box and be able to see results sorted by: \"Price: Lowest first\"",
-        "uid" : "ecaef6ef7c2f98ae",
+        "uid" : "c7277f669ee7ebf2",
         "parentUid" : "06135fb1e9171a4c5ee185041330339b",
         "status" : "failed",
         "time" : {
-          "start" : 1631869601521,
-          "stop" : 1631869629525,
-          "duration" : 28004
+          "start" : 1632474635183,
+          "stop" : 1632474670206,
+          "duration" : 35023
         },
         "flaky" : false,
         "newFailed" : false,
@@ -59,16 +76,50 @@
   }, {
     "name" : "Test defects",
     "children" : [ {
+      "name" : "Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //*[@class=\"twitter\"]' (tried for 15 second(s) with 500 milliseconds interval)",
+      "children" : [ {
+        "name" : "[US-777]/[2] I click on social media \"Twitter\" logo",
+        "uid" : "24723beef3eaf693",
+        "parentUid" : "3b5ca559e1ae43d6729954f35d79e32d",
+        "status" : "broken",
+        "time" : {
+          "start" : 1632474367189,
+          "stop" : 1632474400298,
+          "duration" : 33109
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "3b5ca559e1ae43d6729954f35d79e32d"
+    }, {
+      "name" : "Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //a[@class='login']' (tried for 15 second(s) with 500 milliseconds interval)",
+      "children" : [ {
+        "name" : "[US-111]/[1] I can log into automationpractice.com using registered email \"thor.odinson@example.com\" & password \"12345\"",
+        "uid" : "667176d396c9d119",
+        "parentUid" : "c6975f708c5cb2f305e1e5054c64a5d0",
+        "status" : "broken",
+        "time" : {
+          "start" : 1632474495192,
+          "stop" : 1632474529074,
+          "duration" : 33882
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "c6975f708c5cb2f305e1e5054c64a5d0"
+    }, {
       "name" : "Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //div[@class='alert alert-danger']' (tried for 15 second(s) with 500 milliseconds interval)",
       "children" : [ {
         "name" : "[US-333]/[6] I can't create an account, when email is already in database",
-        "uid" : "3fecd9d2ea901cea",
+        "uid" : "e2c6fe468c4d2b01",
         "parentUid" : "0cba097823f931767e2419fe825ee128",
         "status" : "broken",
         "time" : {
-          "start" : 1631869728883,
-          "stop" : 1631869748933,
-          "duration" : 20050
+          "start" : 1632474931242,
+          "stop" : 1632474980282,
+          "duration" : 49040
         },
         "flaky" : false,
         "newFailed" : false,
