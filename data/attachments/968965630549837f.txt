@@ -1,0 +1,31 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+09:10:36 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=94 in cache (valid until 10:06:04 15/10/2021 UTC)
+09:10:36 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome94=94.0.4606.61 in cache (valid until 09:06:04 16/10/2021 UTC)
+09:10:36 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 94.0.4606.61 (resolved driver for Chrome 94)
+09:10:36 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 94.0.4606.61 found in cache
+09:10:36 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/94.0.4606.61/chromedriver
+09:10:37 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:10:37 INFO  org.slf4j.Logger - [34mTEST NAME: [US-333]/[6] I CAN'T CREATE AN ACCOUNT, WHEN EMAIL IS ALREADY IN DATABASE[0m
+09:10:37 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:10:46 INFO  org.slf4j.Logger - Page ready: "TRUE"
+09:10:52 INFO  org.slf4j.Logger - User registered email: "ASFSAFAS@WP.PL"
+09:10:54 INFO  org.slf4j.Logger - [31mTEST RETRY (1/1): [US-333]/[6] I CAN'T CREATE AN ACCOUNT, WHEN EMAIL IS ALREADY IN DATABASE[0m
+09:10:55 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=94 in cache (valid until 10:06:04 15/10/2021 UTC)
+09:10:55 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome94=94.0.4606.61 in cache (valid until 09:06:04 16/10/2021 UTC)
+09:10:55 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 94.0.4606.61 (resolved driver for Chrome 94)
+09:10:55 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 94.0.4606.61 found in cache
+09:10:55 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/94.0.4606.61/chromedriver
+09:10:55 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:10:55 INFO  org.slf4j.Logger - [34mTEST NAME: [US-333]/[6] I CAN'T CREATE AN ACCOUNT, WHEN EMAIL IS ALREADY IN DATABASE[0m
+09:10:55 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:11:00 INFO  org.slf4j.Logger - Page ready: "TRUE"
+09:11:03 INFO  org.slf4j.Logger - User registered email: "ASFSAFAS@WP.PL"
+09:11:05 INFO  org.slf4j.Logger - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+09:11:05 ERROR org.slf4j.Logger - org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=94.0.4606.81)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'travis-job-92b577b0-e125-47e2-9575-5ccf0ca4320b', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1049-gcp', java.version: '14.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.81, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: /tmp/.com.google.Chrome.mBqWS5}, goog:chromeOptions: {debuggerAddress: localhost:44471}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 841573a79b1c080d7c748cb8e0380f72
