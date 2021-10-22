@@ -1,0 +1,554 @@
+{
+  "uid" : "127d16473423ea53",
+  "name" : "[US-333]/[5] I can't create an account, when one of required fields is missing",
+  "fullName" : "tests.WebAPP.Registration_Tests.test_5",
+  "historyId" : "fd2c3e9daa5d973f4588b999665c6b31",
+  "time" : {
+    "start" : 1634893802632,
+    "stop" : 1634893818250,
+    "duration" : 15618
+  },
+  "description" : "[US-333]/[5] As a user I can't create an account, when one of required fields is missing",
+  "descriptionHtml" : "<p>[US-333]/[5] As a user I can't create an account, when one of required fields is missing</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "Setting up Test Class",
+    "time" : {
+      "start" : 1634893802044,
+      "stop" : 1634893802629,
+      "duration" : 585
+    },
+    "description" : "Setting up Test Class",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "Setting up Excel File",
+    "time" : {
+      "start" : 1634893600426,
+      "stop" : 1634893600461,
+      "duration" : 35
+    },
+    "description" : "Setting up Excel File",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "[US-333]/[5] As a user I can't create an account, when one of required fields is missing",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "I open home page",
+      "time" : {
+        "start" : 1634893804723,
+        "stop" : 1634893807773,
+        "duration" : 3050
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I can see automationpractice.com website",
+      "time" : {
+        "start" : 1634893807773,
+        "stop" : 1634893807778,
+        "duration" : 5
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I click on Sign in button",
+      "time" : {
+        "start" : 1634893807778,
+        "stop" : 1634893810993,
+        "duration" : 3215
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I can see registration page form",
+      "time" : {
+        "start" : 1634893810993,
+        "stop" : 1634893811069,
+        "duration" : 76
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I write an email address",
+      "time" : {
+        "start" : 1634893811069,
+        "stop" : 1634893811248,
+        "duration" : 179
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I click on Create An Account button",
+      "time" : {
+        "start" : 1634893811248,
+        "stop" : 1634893811326,
+        "duration" : 78
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I write following data to registration form",
+      "time" : {
+        "start" : 1634893811326,
+        "stop" : 1634893816654,
+        "duration" : 5328
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "dataTable",
+        "value" : "      | First Name | Last Name | Password   | Address | City | State  | Postal Code | Country       | Mobile Phone |\n      | Thor       | Odinson   | #Passwd123 | [empty] | City | Alaska | 99503       | United States | 700-800-900  |\n"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "I check if email is already written and valid",
+      "time" : {
+        "start" : 1634893816654,
+        "stop" : 1634893816683,
+        "duration" : 29
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I check if my first & last name are already written and are correct",
+      "time" : {
+        "start" : 1634893816683,
+        "stop" : 1634893816757,
+        "duration" : 74
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I write my address alias",
+      "time" : {
+        "start" : 1634893816757,
+        "stop" : 1634893817019,
+        "duration" : 262
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I click on Register button",
+      "time" : {
+        "start" : 1634893817019,
+        "stop" : 1634893818167,
+        "duration" : 1148
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I can see warning message about missing *one element* input",
+      "time" : {
+        "start" : 1634893818168,
+        "stop" : 1634893818222,
+        "duration" : 54
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "stringName",
+        "value" : "one element"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 12,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "Teardown Test Class",
+    "time" : {
+      "start" : 1634893818251,
+      "stop" : 1634893818320,
+      "duration" : 69
+    },
+    "description" : "Teardown Test Class",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "Teardown Test Suite",
+    "time" : {
+      "start" : 1634893889783,
+      "stop" : 1634893890772,
+      "duration" : 989
+    },
+    "description" : "Teardown Test Suite",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "tests.WebAPP.Registration_Tests"
+  }, {
+    "name" : "testClass",
+    "value" : "tests.WebAPP.Registration_Tests"
+  }, {
+    "name" : "testMethod",
+    "value" : "test_5"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Automationpractice.com WEB - Kamil Nowocin"
+  }, {
+    "name" : "suite",
+    "value" : "Automated tests for WEB client"
+  }, {
+    "name" : "subSuite",
+    "value" : "tests.WebAPP.Registration_Tests"
+  }, {
+    "name" : "host",
+    "value" : "travis-job-fc218f3e-5d23-42e7-822a-f964ad9a1d45"
+  }, {
+    "name" : "thread",
+    "value" : "4832@travis-job-fc218f3e-5d23-42e7-822a-f964ad9a1d45.TestNG-test=Automated tests for WEB client-2(24)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "owner",
+    "value" : "Kamil Nowocin"
+  }, {
+    "name" : "story",
+    "value" : "NEGATIVE FLOW"
+  }, {
+    "name" : "feature",
+    "value" : "REGISTRATION TESTS"
+  }, {
+    "name" : "epic",
+    "value" : "Web App Tests"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ {
+    "name" : "TAP-0017",
+    "url" : "https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE/issue/TAP-0017",
+    "type" : "issue"
+  }, {
+    "name" : "STORY-333",
+    "url" : "https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE/STORY-333",
+    "type" : "tms"
+  } ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "owner" : "Kamil Nowocin",
+    "retries" : [ {
+      "uid" : "ee13b6b65cb0fd51",
+      "status" : "skipped",
+      "statusDetails" : "Value which have been found didn't match expected value! expected [alaska] but found []",
+      "time" : {
+        "start" : 1634893790477,
+        "stop" : 1634893801966,
+        "duration" : 11489
+      }
+    } ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 8,
+        "skipped" : 25,
+        "passed" : 343,
+        "unknown" : 0,
+        "total" : 376
+      },
+      "items" : [ {
+        "uid" : "18438d87bcaf73e0",
+        "reportUrl" : "https://app.travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/239895805/#testresult/18438d87bcaf73e0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1634289016047,
+          "stop" : 1634289036699,
+          "duration" : 20652
+        }
+      }, {
+        "uid" : "b96f90390a0198d1",
+        "reportUrl" : "https://app.travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/239408969/#testresult/b96f90390a0198d1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1633684093871,
+          "stop" : 1633684109715,
+          "duration" : 15844
+        }
+      }, {
+        "uid" : "9dba36317540bbc8",
+        "reportUrl" : "https://app.travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/238906135/#testresult/9dba36317540bbc8",
+        "status" : "passed",
+        "time" : {
+          "start" : 1633079461881,
+          "stop" : 1633079470141,
+          "duration" : 8260
+        }
+      }, {
+        "uid" : "7f30d3579ab5d150",
+        "reportUrl" : "https://app.travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/238410707/#testresult/7f30d3579ab5d150",
+        "status" : "passed",
+        "time" : {
+          "start" : 1632474818868,
+          "stop" : 1632474879034,
+          "duration" : 60166
+        }
+      }, {
+        "uid" : "4bddff03034f9490",
+        "reportUrl" : "https://app.travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/237891579/#testresult/4bddff03034f9490",
+        "status" : "passed",
+        "time" : {
+          "start" : 1631869671422,
+          "stop" : 1631869689763,
+          "duration" : 18341
+        }
+      }, {
+        "uid" : "34226fb7b58eced5",
+        "reportUrl" : "https://app.travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/237361813/#testresult/34226fb7b58eced5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1631264839549,
+          "stop" : 1631264859129,
+          "duration" : 19580
+        }
+      }, {
+        "uid" : "bd827737bad85bf1",
+        "reportUrl" : "https://app.travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/236877523/#testresult/bd827737bad85bf1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1630660017086,
+          "stop" : 1630660031065,
+          "duration" : 13979
+        }
+      }, {
+        "uid" : "c79b7b3a9d795ab4",
+        "reportUrl" : "https://app.travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/235844149/#testresult/c79b7b3a9d795ab4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629450309450,
+          "stop" : 1629450322800,
+          "duration" : 13350
+        }
+      }, {
+        "uid" : "b41f524a5403093c",
+        "reportUrl" : "https://app.travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/235264230/#testresult/b41f524a5403093c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1628845749731,
+          "stop" : 1628845774666,
+          "duration" : 24935
+        }
+      }, {
+        "uid" : "f878e3c9aa23bad1",
+        "reportUrl" : "https://app.travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/234678055/#testresult/f878e3c9aa23bad1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1628241105838,
+          "stop" : 1628241146913,
+          "duration" : 41075
+        }
+      }, {
+        "uid" : "fe25cf14cd6dd28e",
+        "reportUrl" : "https://app.travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/234076887/#testresult/fe25cf14cd6dd28e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1627635854979,
+          "stop" : 1627635870295,
+          "duration" : 15316
+        }
+      }, {
+        "uid" : "e1aa2709a78c227b",
+        "reportUrl" : "https://app.travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/233498285/#testresult/e1aa2709a78c227b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1627031008052,
+          "stop" : 1627031024860,
+          "duration" : 16808
+        }
+      }, {
+        "uid" : "21df106848c01818",
+        "reportUrl" : "https://app.travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/232925473/#testresult/21df106848c01818",
+        "status" : "skipped",
+        "statusDetails" : "Method Registration_Tests.test_5()[pri:1, instance:tests.WebAPP.Registration_Tests@2ea13e23] depends on not successfully finished methods",
+        "time" : {
+          "start" : 1626426275122,
+          "stop" : 1626426275122,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "8093a56351cabc2e",
+        "reportUrl" : "https://app.travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/232263792/#testresult/8093a56351cabc2e",
+        "status" : "skipped",
+        "statusDetails" : "Method Registration_Tests.test_5()[pri:1, instance:tests.WebAPP.Registration_Tests@6b265959] depends on not successfully finished methods",
+        "time" : {
+          "start" : 1625821417518,
+          "stop" : 1625821417518,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "f98c1eb84b84e0e0",
+        "reportUrl" : "https://app.travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/231604571/#testresult/f98c1eb84b84e0e0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1625216573709,
+          "stop" : 1625216589192,
+          "duration" : 15483
+        }
+      }, {
+        "uid" : "d4d33af58444791",
+        "reportUrl" : "https://travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/230838061/#testresult/d4d33af58444791",
+        "status" : "broken",
+        "statusDetails" : "Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //a[@class='login']' (tried for 15 second(s) with 500 milliseconds interval)",
+        "time" : {
+          "start" : 1624612028594,
+          "stop" : 1624612061107,
+          "duration" : 32513
+        }
+      }, {
+        "uid" : "28bdd90944a8f13e",
+        "reportUrl" : "https://travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/229856441/#testresult/28bdd90944a8f13e",
+        "status" : "broken",
+        "statusDetails" : "Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //form[@id='create-account_form']' (tried for 15 second(s) with 500 milliseconds interval)",
+        "time" : {
+          "start" : 1624007043934,
+          "stop" : 1624007089444,
+          "duration" : 45510
+        }
+      }, {
+        "uid" : "ff8aa979b8801fc1",
+        "reportUrl" : "https://travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/228691879/#testresult/ff8aa979b8801fc1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1623402155812,
+          "stop" : 1623402177567,
+          "duration" : 21755
+        }
+      }, {
+        "uid" : "79886cde90fc3788",
+        "reportUrl" : "https://travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/227965352/#testresult/79886cde90fc3788",
+        "status" : "skipped",
+        "statusDetails" : "Method Registration_Tests.test_5()[pri:1, instance:tests.WebAPP.Registration_Tests@7e1915bb] depends on not successfully finished methods",
+        "time" : {
+          "start" : 1622797399889,
+          "stop" : 1622797399890,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "2d555bee5fd7174e",
+        "reportUrl" : "https://travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/227236943/#testresult/2d555bee5fd7174e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1622192570930,
+          "stop" : 1622192591082,
+          "duration" : 20152
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "127d16473423ea53.json",
+  "parameterValues" : [ ]
+}
