@@ -1,0 +1,26 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+09:10:24 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=95 in cache (valid until 10:06:51 29/10/2021 UTC)
+09:10:24 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome95=95.0.4638.54 in cache (valid until 09:06:51 30/10/2021 UTC)
+09:10:24 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 95.0.4638.54 (resolved driver for Chrome 95)
+09:10:24 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 95.0.4638.54 found in cache
+09:10:24 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/95.0.4638.54/chromedriver
+09:10:25 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:10:25 INFO  org.slf4j.Logger - [34mTEST NAME: [US-555]/[7] I WOULD LIKE TO USE SEARCH BOX AND BE ABLE TO SEE RESULTS SORTED BY: "PRICE: HIGHEST FIRST"[0m
+09:10:25 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:10:48 INFO  org.slf4j.Logger - Page ready: "TRUE"
+09:10:48 INFO  org.slf4j.Logger - User search for: "PRINTED DRESS"
+09:10:57 INFO  org.slf4j.Logger - Found results: "5", expected: "5"
+09:11:05 INFO  org.slf4j.Logger - Chosen sort option: "PRICE: HIGHEST FIRST"
+09:11:05 INFO  org.slf4j.Logger - Actual sort option: "PRICE: HIGHEST FIRST"
+09:11:05 INFO  org.slf4j.Logger - [31mTEST RETRY (1/1): [US-555]/[7] I WOULD LIKE TO USE SEARCH BOX AND BE ABLE TO SEE RESULTS SORTED BY: "PRICE: HIGHEST FIRST"[0m
+09:11:05 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=95 in cache (valid until 10:06:51 29/10/2021 UTC)
+09:11:05 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome95=95.0.4638.54 in cache (valid until 09:06:51 30/10/2021 UTC)
+09:11:05 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 95.0.4638.54 (resolved driver for Chrome 95)
+09:11:05 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 95.0.4638.54 found in cache
+09:11:05 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/95.0.4638.54/chromedriver
+09:11:06 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:11:06 INFO  org.slf4j.Logger - [34mTEST NAME: [US-555]/[7] I WOULD LIKE TO USE SEARCH BOX AND BE ABLE TO SEE RESULTS SORTED BY: "PRICE: HIGHEST FIRST"[0m
+09:11:06 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:11:23 INFO  org.slf4j.Logger - Page ready: "TRUE"
+09:11:38 INFO  org.slf4j.Logger - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+09:11:38 ERROR org.slf4j.Logger - org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //input[@class='search_query form-control ac_input']' (tried for 15 second(s) with 500 milliseconds interval)
