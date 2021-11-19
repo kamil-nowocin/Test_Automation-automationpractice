@@ -1,0 +1,24 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+09:13:28 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=96 in cache (valid until 10:08:36 19/11/2021 UTC)
+09:13:28 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome96=96.0.4664.45 in cache (valid until 09:08:36 20/11/2021 UTC)
+09:13:28 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 96.0.4664.45 (resolved driver for Chrome 96)
+09:13:28 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 96.0.4664.45 found in cache
+09:13:28 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/96.0.4664.45/chromedriver
+09:13:29 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:13:29 INFO  org.slf4j.Logger - [34mTEST NAME: [US-444]/[4] I WOULD LIKE TO SEE REGISTRATION ERROR, WHEN I DON'T FILL PASSWORD INPUT[0m
+09:13:29 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:13:54 INFO  org.slf4j.Logger - Page ready: "TRUE"
+09:14:05 INFO  org.slf4j.Logger - User valid email: "2E724PERKESTEBAN@GMX.COM"
+09:14:20 INFO  org.slf4j.Logger - [31mTEST RETRY (1/1): [US-444]/[4] I WOULD LIKE TO SEE REGISTRATION ERROR, WHEN I DON'T FILL PASSWORD INPUT[0m
+09:14:20 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=96 in cache (valid until 10:08:36 19/11/2021 UTC)
+09:14:20 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome96=96.0.4664.45 in cache (valid until 09:08:36 20/11/2021 UTC)
+09:14:20 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 96.0.4664.45 (resolved driver for Chrome 96)
+09:14:20 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 96.0.4664.45 found in cache
+09:14:20 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/96.0.4664.45/chromedriver
+09:14:21 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:14:21 INFO  org.slf4j.Logger - [34mTEST NAME: [US-444]/[4] I WOULD LIKE TO SEE REGISTRATION ERROR, WHEN I DON'T FILL PASSWORD INPUT[0m
+09:14:21 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:14:41 INFO  org.slf4j.Logger - Page ready: "TRUE"
+09:14:52 INFO  org.slf4j.Logger - User valid email: "DC1C6ICEDSIERER@ATT.NET"
+09:15:08 INFO  org.slf4j.Logger - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+09:15:08 ERROR org.slf4j.Logger - org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //input[@id='id_gender1']' (tried for 15 second(s) with 500 milliseconds interval)
