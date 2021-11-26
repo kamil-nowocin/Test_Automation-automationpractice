@@ -1,0 +1,22 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+09:18:38 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=96 in cache (valid until 10:09:09 26/11/2021 UTC)
+09:18:38 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome96=96.0.4664.45 in cache (valid until 09:09:09 27/11/2021 UTC)
+09:18:38 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 96.0.4664.45 (resolved driver for Chrome 96)
+09:18:38 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 96.0.4664.45 found in cache
+09:18:38 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/96.0.4664.45/chromedriver
+09:18:38 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:18:38 INFO  org.slf4j.Logger - [34mTEST NAME: US-333]/[4] I CAN'T CREATE AN ACCOUNT WITHOUT FILLING UP FIELDS[0m
+09:18:38 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:18:57 INFO  org.slf4j.Logger - Page ready: "TRUE"
+09:19:12 INFO  org.slf4j.Logger - [31mTEST RETRY (1/1): US-333]/[4] I CAN'T CREATE AN ACCOUNT WITHOUT FILLING UP FIELDS[0m
+09:19:12 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=96 in cache (valid until 10:09:09 26/11/2021 UTC)
+09:19:12 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome96=96.0.4664.45 in cache (valid until 09:09:09 27/11/2021 UTC)
+09:19:12 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 96.0.4664.45 (resolved driver for Chrome 96)
+09:19:12 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 96.0.4664.45 found in cache
+09:19:12 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/96.0.4664.45/chromedriver
+09:19:13 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:19:13 INFO  org.slf4j.Logger - [34mTEST NAME: US-333]/[4] I CAN'T CREATE AN ACCOUNT WITHOUT FILLING UP FIELDS[0m
+09:19:13 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:19:31 INFO  org.slf4j.Logger - Page ready: "TRUE"
+09:19:46 INFO  org.slf4j.Logger - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+09:19:46 ERROR org.slf4j.Logger - org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //form[@id='create-account_form']' (tried for 15 second(s) with 500 milliseconds interval)
