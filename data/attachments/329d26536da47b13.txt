@@ -1,0 +1,42 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+09:11:47 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=97 in cache (valid until 10:11:46 07/01/2022 UTC)
+09:11:47 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome97=97.0.4692.71 in cache (valid until 09:11:46 08/01/2022 UTC)
+09:11:47 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 97.0.4692.71 (resolved driver for Chrome 97)
+09:11:47 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 97.0.4692.71 found in cache
+09:11:47 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/97.0.4692.71/chromedriver
+09:11:50 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:11:50 INFO  org.slf4j.Logger - [34mTEST NAME: [US-666]/[1] I WOULD LIKE TO BUY NEW "FADED SHORT SLEEVE T-SHIRTS"[0m
+09:11:50 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:12:10 INFO  org.slf4j.Logger - Page ready: "TRUE"
+09:12:20 INFO  org.slf4j.Logger - User login: "THOR.ODINSON@EXAMPLE.COM"
+09:12:21 INFO  org.slf4j.Logger - User password: "12345"
+09:12:42 INFO  org.slf4j.Logger - User clicked on: "WOMEN" submenu category
+09:12:53 INFO  org.slf4j.Logger - User clicked on product: "FADED SHORT SLEEVE T-SHIRTS"
+09:12:54 INFO  org.slf4j.Logger - Chosen product details:
+ > Quantity: "5"
+ > Size: "M"
+ > Color: "BLUE"
+09:13:10 INFO  org.slf4j.Logger - [31mTEST RETRY (1/1): [US-666]/[1] I WOULD LIKE TO BUY NEW "FADED SHORT SLEEVE T-SHIRTS"[0m
+09:13:10 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=97 in cache (valid until 10:11:46 07/01/2022 UTC)
+09:13:10 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome97=97.0.4692.71 in cache (valid until 09:11:46 08/01/2022 UTC)
+09:13:10 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 97.0.4692.71 (resolved driver for Chrome 97)
+09:13:10 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 97.0.4692.71 found in cache
+09:13:10 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/97.0.4692.71/chromedriver
+09:13:11 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:13:11 INFO  org.slf4j.Logger - [34mTEST NAME: [US-666]/[1] I WOULD LIKE TO BUY NEW "FADED SHORT SLEEVE T-SHIRTS"[0m
+09:13:11 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:13:37 INFO  org.slf4j.Logger - Page ready: "TRUE"
+09:13:50 INFO  org.slf4j.Logger - User login: "THOR.ODINSON@EXAMPLE.COM"
+09:13:50 INFO  org.slf4j.Logger - User password: "12345"
+09:14:19 INFO  org.slf4j.Logger - User clicked on: "WOMEN" submenu category
+09:14:29 INFO  org.slf4j.Logger - User clicked on product: "FADED SHORT SLEEVE T-SHIRTS"
+09:14:30 INFO  org.slf4j.Logger - Chosen product details:
+ > Quantity: "5"
+ > Size: "M"
+ > Color: "BLUE"
+09:14:58 INFO  org.slf4j.Logger - User order comment: "HEY, MCFLY! I THOUGHT I TOLD YOU NEVER TO COME IN HERE."
+09:15:07 INFO  org.slf4j.Logger - User chosen shipping method: "MY CARRIER"
+09:15:08 INFO  org.slf4j.Logger - User selected Terms of Service checkbox
+09:15:16 INFO  org.slf4j.Logger - User chosen payment method: "PAY BY CHECK"
+09:15:32 INFO  org.slf4j.Logger - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+09:15:32 ERROR org.slf4j.Logger - org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //button[@class='button btn btn-default button-medium']//span' (tried for 15 second(s) with 500 milliseconds interval)
