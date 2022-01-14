@@ -1,0 +1,34 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+09:14:16 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=97 in cache (valid until 10:12:11 14/01/2022 UTC)
+09:14:16 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome97=97.0.4692.71 in cache (valid until 09:12:11 15/01/2022 UTC)
+09:14:16 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 97.0.4692.71 (resolved driver for Chrome 97)
+09:14:16 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 97.0.4692.71 found in cache
+09:14:16 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/97.0.4692.71/chromedriver
+09:14:17 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:14:17 INFO  org.slf4j.Logger - [34mTEST NAME: [US-444]/[11] I WOULD LIKE TO SEE REGISTRATION ERROR, WHEN I DON'T FILL EMAIL ALIAS INPUT[0m
+09:14:17 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:14:22 INFO  org.slf4j.Logger - Page ready: "TRUE"
+09:14:25 INFO  org.slf4j.Logger - User valid email: "7B4B5FLEXEDELVIN@MAIL.COM"
+09:14:28 INFO  org.slf4j.Logger - User gender: "Male"
+09:14:28 INFO  org.slf4j.Logger - User first name: "ALLEEN"
+09:14:28 INFO  org.slf4j.Logger - User last name: "THANAS"
+09:14:28 INFO  org.slf4j.Logger - User password: "DUMBWAITE>R"
+09:14:28 INFO  org.slf4j.Logger - User birthday: "11-2-2010"
+09:14:28 INFO  org.slf4j.Logger - [31mTEST RETRY (1/1): [US-444]/[11] I WOULD LIKE TO SEE REGISTRATION ERROR, WHEN I DON'T FILL EMAIL ALIAS INPUT[0m
+09:14:28 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=97 in cache (valid until 10:12:11 14/01/2022 UTC)
+09:14:28 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome97=97.0.4692.71 in cache (valid until 09:12:11 15/01/2022 UTC)
+09:14:28 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 97.0.4692.71 (resolved driver for Chrome 97)
+09:14:28 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 97.0.4692.71 found in cache
+09:14:28 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/97.0.4692.71/chromedriver
+09:14:30 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:14:30 INFO  org.slf4j.Logger - [34mTEST NAME: [US-444]/[11] I WOULD LIKE TO SEE REGISTRATION ERROR, WHEN I DON'T FILL EMAIL ALIAS INPUT[0m
+09:14:30 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:14:35 INFO  org.slf4j.Logger - Page ready: "TRUE"
+09:14:37 INFO  org.slf4j.Logger - User valid email: "B0273THUSCREST@COMCAST.NET"
+09:14:53 INFO  org.slf4j.Logger - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+09:14:53 ERROR org.slf4j.Logger - org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on LINUX (19cced89cd2fe97136f03249e559e39a)] -> xpath: //input[@id='id_gender1']] (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'travis-job-0f2a2af2-c261-4654-b0a2-e077ac609b96', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1058-gcp', java.version: '14.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.71, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: /tmp/.com.google.Chrome.Yi5Prm}, goog:chromeOptions: {debuggerAddress: localhost:35651}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 19cced89cd2fe97136f03249e559e39a
