@@ -1,0 +1,36 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+09:18:50 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=98 in cache (valid until 10:14:37 18/02/2022 UTC)
+09:18:50 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome98=98.0.4758.102 in cache (valid until 09:14:37 19/02/2022 UTC)
+09:18:50 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 98.0.4758.102 (resolved driver for Chrome 98)
+09:18:50 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 98.0.4758.102 found in cache
+09:18:50 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/98.0.4758.102/chromedriver
+09:18:50 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:18:50 INFO  org.slf4j.Logger - [34mTEST NAME: [US-444]/[4] I WOULD LIKE TO SEE REGISTRATION ERROR, WHEN I DON'T FILL PASSWORD INPUT[0m
+09:18:50 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:19:03 INFO  org.slf4j.Logger - Page ready: "TRUE"
+09:19:09 INFO  org.slf4j.Logger - User valid email: "B6561STRAITPAUL@HOTMAIL.CO.UK"
+09:19:24 INFO  org.slf4j.Logger - [31mTEST RETRY (1/1): [US-444]/[4] I WOULD LIKE TO SEE REGISTRATION ERROR, WHEN I DON'T FILL PASSWORD INPUT[0m
+09:19:24 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=98 in cache (valid until 10:14:37 18/02/2022 UTC)
+09:19:24 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome98=98.0.4758.102 in cache (valid until 09:14:37 19/02/2022 UTC)
+09:19:24 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 98.0.4758.102 (resolved driver for Chrome 98)
+09:19:24 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 98.0.4758.102 found in cache
+09:19:24 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/98.0.4758.102/chromedriver
+09:19:25 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:19:25 INFO  org.slf4j.Logger - [34mTEST NAME: [US-444]/[4] I WOULD LIKE TO SEE REGISTRATION ERROR, WHEN I DON'T FILL PASSWORD INPUT[0m
+09:19:25 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:19:38 INFO  org.slf4j.Logger - Page ready: "TRUE"
+09:19:43 INFO  org.slf4j.Logger - User valid email: "BC36DFUNKEDMACKENZIE@MSN.COM"
+09:19:47 INFO  org.slf4j.Logger - User gender: "Female"
+09:19:47 INFO  org.slf4j.Logger - User first name: "GRAHAM"
+09:19:47 INFO  org.slf4j.Logger - User last name: "ACKROYD"
+09:19:47 INFO  org.slf4j.Logger - User birthday: "24-3-1901"
+09:19:47 INFO  org.slf4j.Logger - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+09:19:47 ERROR org.slf4j.Logger - org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='uniform-days']//span"}
+  (Session info: chrome=98.0.4758.102)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'travis-job-4bb869b5-27bf-40f7-98ab-6a5160b4036c', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1062-gcp', java.version: '14.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: /tmp/.com.google.Chrome.8KyJlo}, goog:chromeOptions: {debuggerAddress: localhost:36437}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 0d3ddca317bfa3021eb873442f9b20e7
+*** Element info: {Using=xpath, value=//div[@id='uniform-days']//span}
