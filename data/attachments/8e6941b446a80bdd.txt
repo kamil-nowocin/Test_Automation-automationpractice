@@ -1,0 +1,34 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+09:19:32 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=99 in cache (valid until 10:15:41 11/03/2022 UTC)
+09:19:32 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome99=99.0.4844.51 in cache (valid until 09:15:41 12/03/2022 UTC)
+09:19:32 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 99.0.4844.51 (resolved driver for Chrome 99)
+09:19:32 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 99.0.4844.51 found in cache
+09:19:32 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/99.0.4844.51/chromedriver
+09:19:33 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:19:33 INFO  org.slf4j.Logger - [34mTEST NAME: [US-222]/[3] I AM ABLE TO SEND REQUEST VIA CONTACT US FORM WITCH ATTACHED FILE[0m
+09:19:33 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:19:36 INFO  org.slf4j.Logger - [31mTEST RETRY (1/1): [US-222]/[3] I AM ABLE TO SEND REQUEST VIA CONTACT US FORM WITCH ATTACHED FILE[0m
+09:19:36 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=99 in cache (valid until 10:15:41 11/03/2022 UTC)
+09:19:36 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome99=99.0.4844.51 in cache (valid until 09:15:41 12/03/2022 UTC)
+09:19:36 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 99.0.4844.51 (resolved driver for Chrome 99)
+09:19:36 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 99.0.4844.51 found in cache
+09:19:36 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/99.0.4844.51/chromedriver
+09:19:36 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:19:36 INFO  org.slf4j.Logger - [34mTEST NAME: [US-222]/[3] I AM ABLE TO SEND REQUEST VIA CONTACT US FORM WITCH ATTACHED FILE[0m
+09:19:36 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:19:49 INFO  org.slf4j.Logger - Page ready: "TRUE"
+09:19:54 INFO  org.slf4j.Logger - Chosen subject: "CUSTOMER SERVICE"
+09:19:55 INFO  org.slf4j.Logger - User valid email: "QUADRATEEEL@LIVE.COM"
+09:19:55 INFO  org.slf4j.Logger - Order reference: "HMTSGWNIF8"
+09:19:55 INFO  org.slf4j.Logger - Uploaded file name: "TESTPHOTO.JPG"
+09:19:55 INFO  org.slf4j.Logger - Message: "CHUCK NORRIS DOESN'T NEED GARBAGE COLLECTION BECAUSE HE DOESN'T CALL .DISPOSE(), HE CALLS .DROPKICK()."
+09:19:55 INFO  org.slf4j.Logger - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+09:19:55 ERROR org.slf4j.Logger - org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//p[@class='alert alert-success']"}
+  (Session info: chrome=99.0.4844.51)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'travis-job-94a0b5ce-87e9-4d74-b70f-92b09b464a53', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1062-gcp', java.version: '14.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.51, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: /tmp/.com.google.Chrome.ccfdeN}, goog:chromeOptions: {debuggerAddress: localhost:40373}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: eff12062d13dbe1a27de08e22eaa4e00
+*** Element info: {Using=xpath, value=//p[@class='alert alert-success']}

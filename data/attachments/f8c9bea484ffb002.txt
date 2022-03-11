@@ -1,0 +1,41 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+09:16:30 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=99 in cache (valid until 10:15:41 11/03/2022 UTC)
+09:16:30 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome99=99.0.4844.51 in cache (valid until 09:15:41 12/03/2022 UTC)
+09:16:30 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 99.0.4844.51 (resolved driver for Chrome 99)
+09:16:30 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 99.0.4844.51 found in cache
+09:16:30 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/99.0.4844.51/chromedriver
+09:16:30 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:16:30 INFO  org.slf4j.Logger - [34mTEST NAME: [US-444]/[10] I WOULD LIKE TO SEE REGISTRATION ERROR, WHEN I DON'T FILL MOBILE PHONE INPUT[0m
+09:16:30 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:16:34 INFO  org.slf4j.Logger - [31mTEST RETRY (1/1): [US-444]/[10] I WOULD LIKE TO SEE REGISTRATION ERROR, WHEN I DON'T FILL MOBILE PHONE INPUT[0m
+09:16:34 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=99 in cache (valid until 10:15:41 11/03/2022 UTC)
+09:16:34 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome99=99.0.4844.51 in cache (valid until 09:15:41 12/03/2022 UTC)
+09:16:34 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 99.0.4844.51 (resolved driver for Chrome 99)
+09:16:34 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 99.0.4844.51 found in cache
+09:16:34 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/99.0.4844.51/chromedriver
+09:16:35 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:16:35 INFO  org.slf4j.Logger - [34mTEST NAME: [US-444]/[10] I WOULD LIKE TO SEE REGISTRATION ERROR, WHEN I DON'T FILL MOBILE PHONE INPUT[0m
+09:16:35 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:16:48 INFO  org.slf4j.Logger - Page ready: "TRUE"
+09:16:55 INFO  org.slf4j.Logger - User valid email: "5B3C6PLOPSQUIRT@COMCAST.NET"
+09:17:01 INFO  org.slf4j.Logger - User gender: "Male"
+09:17:01 INFO  org.slf4j.Logger - User first name: "ISAAC"
+09:17:01 INFO  org.slf4j.Logger - User last name: "PETROCHELLO"
+09:17:01 INFO  org.slf4j.Logger - User password: ".COMPLETIONS"
+09:17:02 INFO  org.slf4j.Logger - User birthday: "11-8-1997"
+09:17:04 INFO  org.slf4j.Logger - User address: "MOSCISKI MILL55941"
+09:17:04 INFO  org.slf4j.Logger - User chosen country: "UNITED STATES"
+09:17:04 INFO  org.slf4j.Logger - User chosen city: "MCCLOUD"
+09:17:05 INFO  org.slf4j.Logger - User chosen state: "NEW YORK"
+09:17:05 INFO  org.slf4j.Logger - User postal code: "71409"
+09:17:05 INFO  org.slf4j.Logger - User alias: "AFOOTSTOMP@YAHOO.COM"
+09:17:05 INFO  org.slf4j.Logger - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+09:17:05 ERROR org.slf4j.Logger - org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='alert alert-danger']"}
+  (Session info: chrome=99.0.4844.51)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'travis-job-94a0b5ce-87e9-4d74-b70f-92b09b464a53', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1062-gcp', java.version: '14.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.51, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: /tmp/.com.google.Chrome.qg0OrB}, goog:chromeOptions: {debuggerAddress: localhost:33589}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: e04319157789c188bedc703faf4366a4
+*** Element info: {Using=xpath, value=//div[@class='alert alert-danger']}
