@@ -1,0 +1,21 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+09:20:55 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=99 in cache (valid until 10:16:54 25/03/2022 UTC)
+09:20:55 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome99=99.0.4844.51 in cache (valid until 09:16:54 26/03/2022 UTC)
+09:20:55 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 99.0.4844.51 (resolved driver for Chrome 99)
+09:20:55 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 99.0.4844.51 found in cache
+09:20:55 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/99.0.4844.51/chromedriver
+09:20:56 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:20:56 INFO  org.slf4j.Logger - [34mTEST NAME: [US-222]/[3] I AM ABLE TO SEND REQUEST VIA CONTACT US FORM WITCH ATTACHED FILE[0m
+09:20:56 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:21:00 INFO  org.slf4j.Logger - [31mTEST RETRY (1/1): [US-222]/[3] I AM ABLE TO SEND REQUEST VIA CONTACT US FORM WITCH ATTACHED FILE[0m
+09:21:00 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=99 in cache (valid until 10:16:54 25/03/2022 UTC)
+09:21:00 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome99=99.0.4844.51 in cache (valid until 09:16:54 26/03/2022 UTC)
+09:21:00 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 99.0.4844.51 (resolved driver for Chrome 99)
+09:21:00 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 99.0.4844.51 found in cache
+09:21:00 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/99.0.4844.51/chromedriver
+09:21:01 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:21:01 INFO  org.slf4j.Logger - [34mTEST NAME: [US-222]/[3] I AM ABLE TO SEND REQUEST VIA CONTACT US FORM WITCH ATTACHED FILE[0m
+09:21:01 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:21:17 INFO  org.slf4j.Logger - Page ready: "TRUE"
+09:21:32 INFO  org.slf4j.Logger - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+09:21:32 ERROR org.slf4j.Logger - org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //div[@id='contact-link']' (tried for 15 second(s) with 500 milliseconds interval)

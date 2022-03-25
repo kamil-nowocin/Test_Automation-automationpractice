@@ -1,0 +1,34 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+09:21:15 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=99 in cache (valid until 10:16:54 25/03/2022 UTC)
+09:21:15 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome99=99.0.4844.51 in cache (valid until 09:16:54 26/03/2022 UTC)
+09:21:15 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 99.0.4844.51 (resolved driver for Chrome 99)
+09:21:15 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 99.0.4844.51 found in cache
+09:21:15 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/99.0.4844.51/chromedriver
+09:21:15 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:21:15 INFO  org.slf4j.Logger - [34mTEST NAME: [US-333]/[3] I CAN CREATE AN ACCOUNT BY FILLING UP ONLY REQUIRED FIELDS[0m
+09:21:15 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:21:25 INFO  org.slf4j.Logger - Page ready: "TRUE"
+09:21:35 INFO  org.slf4j.Logger - User valid email: "96D24WOUNDARETHA@VERIZON.NET"
+09:21:44 INFO  org.slf4j.Logger - User first name: "LAVERN"
+09:21:45 INFO  org.slf4j.Logger - User last name: "LODEN"
+09:21:45 INFO  org.slf4j.Logger - User password: "E!XPOSES4"
+09:21:45 INFO  org.slf4j.Logger - User addresses: "FELIPE TURNPIKE" and "SUITE 7842924"
+09:21:45 INFO  org.slf4j.Logger - User chosen country: "UNITED STATES"
+09:21:45 INFO  org.slf4j.Logger - User chosen city: "ANGWIN"
+09:21:45 INFO  org.slf4j.Logger - User chosen state: "KENTUCKY"
+09:21:46 INFO  org.slf4j.Logger - User postal code: "37290"
+09:21:46 INFO  org.slf4j.Logger - User additional information: "CHUCK NORRIS CAN SPAWN THREADS THAT COMPLETE BEFORE THEY ARE STARTED."
+09:21:46 INFO  org.slf4j.Logger - User mobile phone number: "1-202-339-1970"
+09:21:46 INFO  org.slf4j.Logger - User alias: "PIPINGTHRILL@MAC.COM"
+09:22:07 INFO  org.slf4j.Logger - [31mTEST RETRY (1/1): [US-333]/[3] I CAN CREATE AN ACCOUNT BY FILLING UP ONLY REQUIRED FIELDS[0m
+09:22:07 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=99 in cache (valid until 10:16:54 25/03/2022 UTC)
+09:22:07 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome99=99.0.4844.51 in cache (valid until 09:16:54 26/03/2022 UTC)
+09:22:07 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 99.0.4844.51 (resolved driver for Chrome 99)
+09:22:07 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 99.0.4844.51 found in cache
+09:22:07 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/99.0.4844.51/chromedriver
+09:22:08 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:22:08 INFO  org.slf4j.Logger - [34mTEST NAME: [US-333]/[3] I CAN CREATE AN ACCOUNT BY FILLING UP ONLY REQUIRED FIELDS[0m
+09:22:08 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:22:21 INFO  org.slf4j.Logger - Page ready: "TRUE"
+09:22:37 INFO  org.slf4j.Logger - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+09:22:37 ERROR org.slf4j.Logger - org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //a[@class='login']' (tried for 15 second(s) with 500 milliseconds interval)

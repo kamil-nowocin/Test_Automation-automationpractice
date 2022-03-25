@@ -1,0 +1,37 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+09:20:19 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=99 in cache (valid until 10:16:54 25/03/2022 UTC)
+09:20:19 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome99=99.0.4844.51 in cache (valid until 09:16:54 26/03/2022 UTC)
+09:20:19 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 99.0.4844.51 (resolved driver for Chrome 99)
+09:20:19 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 99.0.4844.51 found in cache
+09:20:19 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/99.0.4844.51/chromedriver
+09:20:20 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:20:20 INFO  org.slf4j.Logger - [34mTEST NAME: [US-555]/[8] I WOULD LIKE TO USE SEARCH BOX AND BE ABLE TO SEE RESULTS SORTED BY: "PRICE: LOWEST FIRST"[0m
+09:20:20 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:20:40 INFO  org.slf4j.Logger - Page ready: "TRUE"
+09:20:40 INFO  org.slf4j.Logger - User search for: "PRINTED DRESS"
+09:20:47 INFO  org.slf4j.Logger - Found results: "5", expected: "5"
+09:20:55 INFO  org.slf4j.Logger - Chosen sort option: "PRICE: LOWEST FIRST"
+09:20:55 INFO  org.slf4j.Logger - Actual sort option: "PRICE: LOWEST FIRST"
+09:20:55 INFO  org.slf4j.Logger - [31mTEST RETRY (1/1): [US-555]/[8] I WOULD LIKE TO USE SEARCH BOX AND BE ABLE TO SEE RESULTS SORTED BY: "PRICE: LOWEST FIRST"[0m
+09:20:55 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=99 in cache (valid until 10:16:54 25/03/2022 UTC)
+09:20:55 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome99=99.0.4844.51 in cache (valid until 09:16:54 26/03/2022 UTC)
+09:20:55 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 99.0.4844.51 (resolved driver for Chrome 99)
+09:20:55 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 99.0.4844.51 found in cache
+09:20:55 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/99.0.4844.51/chromedriver
+09:20:56 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:20:56 INFO  org.slf4j.Logger - [34mTEST NAME: [US-555]/[8] I WOULD LIKE TO USE SEARCH BOX AND BE ABLE TO SEE RESULTS SORTED BY: "PRICE: LOWEST FIRST"[0m
+09:20:56 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:21:19 INFO  org.slf4j.Logger - Page ready: "TRUE"
+09:21:19 INFO  org.slf4j.Logger - User search for: "PRINTED DRESS"
+09:21:26 INFO  org.slf4j.Logger - Found results: "5", expected: "5"
+09:21:26 INFO  org.slf4j.Logger - Chosen sort option: "PRICE: LOWEST FIRST"
+09:21:26 INFO  org.slf4j.Logger - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+09:21:26 ERROR org.slf4j.Logger - org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='uniform-selectProductSort']//span"}
+  (Session info: chrome=99.0.4844.82)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'travis-job-65cdeae4-555e-41d5-8853-164f42add71b', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1062-gcp', java.version: '14.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.82, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: /tmp/.com.google.Chrome.dY8vFx}, goog:chromeOptions: {debuggerAddress: localhost:34587}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: de7c68145fd25283779f5225844e2975
+*** Element info: {Using=xpath, value=//div[@id='uniform-selectProductSort']//span}

@@ -1,0 +1,453 @@
+{
+  "uid" : "966174d079393c89",
+  "name" : "[US-111]/[2] I can't log into automationpractice.com using email \"thanos.ALars@example.com\" & password \"12345\"",
+  "fullName" : "tests.WebAPP.Authentication_Tests.test_2",
+  "historyId" : "9b3069251ad31cc0a7516a6160d05383",
+  "time" : {
+    "start" : 1648199989237,
+    "stop" : 1648200026422,
+    "duration" : 37185
+  },
+  "description" : "[US-111]/[2] As a user I can't log into automationpractice.com using email \"thanos.ALars@example.com\" & password \"12345\"",
+  "descriptionHtml" : "<p>[US-111]/[2] As a user I can't log into automationpractice.com using email &quot;thanos.ALars@example.com&quot; &amp; password &quot;12345&quot;</p>\n",
+  "status" : "broken",
+  "statusMessage" : "Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //form[@id='login_form']' (tried for 15 second(s) with 500 milliseconds interval)",
+  "statusTrace" : "org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //form[@id='login_form']' (tried for 15 second(s) with 500 milliseconds interval)\n\tat org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)\n\tat com.buildSettings.TestCommons.isElementVisible(TestCommons.java:59)\n\tat com.steps.AuthenticationPageSteps.iCanSeeLoginForm(AuthenticationPageSteps.java:27)\n\tat tests.WebAPP.Authentication_Tests.test_2(Authentication_Tests.java:76)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:564)\n\tat org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)\n\tat org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)\n\tat org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:214)\n\tat org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)\n\tat org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)\n\tat org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)\n\tat org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)\n\tat org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)\n\tat java.base/java.lang.Thread.run(Thread.java:832)\nCaused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//form[@id='login_form']\"}\n  (Session info: chrome=99.0.4844.82)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-65cdeae4-555e-41d5-8853-164f42add71b', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1062-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.82, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: /tmp/.com.google.Chrome.4BTAa3}, goog:chromeOptions: {debuggerAddress: localhost:43745}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 0f2108bc93c552b96d34657505ed31d6\n*** Element info: {Using=xpath, value=//form[@id='login_form']}\n\tat jdk.internal.reflect.GeneratedConstructorAccessor44.newInstance(Unknown Source)\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:353)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)\n\tat com.sun.proxy.$Proxy48.isDisplayed(Unknown Source)\n\tat org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)\n\tat org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)\n\tat org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)\n\tat org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)\n\t... 18 more\n",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : true,
+  "newPassed" : false,
+  "retriesCount" : 1,
+  "retriesStatusChange" : true,
+  "beforeStages" : [ {
+    "name" : "Setting up Excel File",
+    "time" : {
+      "start" : 1648199813761,
+      "stop" : 1648199813845,
+      "duration" : 84
+    },
+    "description" : "Setting up Excel File",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "Setting up Test Class",
+    "time" : {
+      "start" : 1648199988606,
+      "stop" : 1648199989233,
+      "duration" : 627
+    },
+    "description" : "Setting up Test Class",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "[US-111]/[2] As a user I can't log into automationpractice.com using email \"thanos.ALars@example.com\" & password \"12345\"",
+    "status" : "broken",
+    "statusMessage" : "Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //form[@id='login_form']' (tried for 15 second(s) with 500 milliseconds interval)",
+    "statusTrace" : "org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //form[@id='login_form']' (tried for 15 second(s) with 500 milliseconds interval)\n\tat org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)\n\tat com.buildSettings.TestCommons.isElementVisible(TestCommons.java:59)\n\tat com.steps.AuthenticationPageSteps.iCanSeeLoginForm(AuthenticationPageSteps.java:27)\n\tat tests.WebAPP.Authentication_Tests.test_2(Authentication_Tests.java:76)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:564)\n\tat org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)\n\tat org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)\n\tat org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:214)\n\tat org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)\n\tat org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)\n\tat org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)\n\tat org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)\n\tat org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)\n\tat java.base/java.lang.Thread.run(Thread.java:832)\nCaused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//form[@id='login_form']\"}\n  (Session info: chrome=99.0.4844.82)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-65cdeae4-555e-41d5-8853-164f42add71b', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1062-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.82, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: /tmp/.com.google.Chrome.4BTAa3}, goog:chromeOptions: {debuggerAddress: localhost:43745}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 0f2108bc93c552b96d34657505ed31d6\n*** Element info: {Using=xpath, value=//form[@id='login_form']}\n\tat jdk.internal.reflect.GeneratedConstructorAccessor44.newInstance(Unknown Source)\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:353)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)\n\tat com.sun.proxy.$Proxy48.isDisplayed(Unknown Source)\n\tat org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)\n\tat org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)\n\tat org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)\n\tat org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)\n\t... 18 more\n",
+    "steps" : [ {
+      "name" : "I open home page",
+      "time" : {
+        "start" : 1648199997927,
+        "stop" : 1648200007277,
+        "duration" : 9350
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I can see automationpractice.com website",
+      "time" : {
+        "start" : 1648200007278,
+        "stop" : 1648200007287,
+        "duration" : 9
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I click on Sign in button",
+      "time" : {
+        "start" : 1648200007287,
+        "stop" : 1648200010859,
+        "duration" : 3572
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I can see login form",
+      "time" : {
+        "start" : 1648200010860,
+        "stop" : 1648200026277,
+        "duration" : 15417
+      },
+      "status" : "broken",
+      "statusMessage" : "Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //form[@id='login_form']' (tried for 15 second(s) with 500 milliseconds interval)",
+      "statusTrace" : "org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //form[@id='login_form']' (tried for 15 second(s) with 500 milliseconds interval)\n\tat org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)\n\tat com.buildSettings.TestCommons.isElementVisible(TestCommons.java:59)\n\tat com.steps.AuthenticationPageSteps.iCanSeeLoginForm(AuthenticationPageSteps.java:27)\n\tat tests.WebAPP.Authentication_Tests.test_2(Authentication_Tests.java:76)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:564)\n\tat org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)\n\tat org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)\n\tat org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:214)\n\tat org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)\n\tat org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)\n\tat org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)\n\tat org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)\n\tat org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)\n\tat java.base/java.lang.Thread.run(Thread.java:832)\nCaused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//form[@id='login_form']\"}\n  (Session info: chrome=99.0.4844.82)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-65cdeae4-555e-41d5-8853-164f42add71b', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1062-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.82, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: /tmp/.com.google.Chrome.4BTAa3}, goog:chromeOptions: {debuggerAddress: localhost:43745}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 0f2108bc93c552b96d34657505ed31d6\n*** Element info: {Using=xpath, value=//form[@id='login_form']}\n\tat jdk.internal.reflect.GeneratedConstructorAccessor44.newInstance(Unknown Source)\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:353)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)\n\tat com.sun.proxy.$Proxy48.isDisplayed(Unknown Source)\n\tat org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)\n\tat org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)\n\tat org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)\n\tat org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)\n\t... 18 more\n",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "22147166218cfd16",
+      "name" : "Scenario FAIL screenshot",
+      "source" : "22147166218cfd16.png",
+      "type" : "image/png",
+      "size" : 18331
+    }, {
+      "uid" : "1d17e13d9749d8ae",
+      "name" : "TestNG test FAIL logs",
+      "source" : "1d17e13d9749d8ae.txt",
+      "type" : "text/plain",
+      "size" : 2707
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 4,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "Teardown Test Class",
+    "time" : {
+      "start" : 1648200026432,
+      "stop" : 1648200026522,
+      "duration" : 90
+    },
+    "description" : "Teardown Test Class",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "Teardown Test Suite",
+    "time" : {
+      "start" : 1648200249192,
+      "stop" : 1648200250347,
+      "duration" : 1155
+    },
+    "description" : "Teardown Test Suite",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "tests.WebAPP.Authentication_Tests"
+  }, {
+    "name" : "testClass",
+    "value" : "tests.WebAPP.Authentication_Tests"
+  }, {
+    "name" : "testMethod",
+    "value" : "test_2"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Automationpractice.com WEB - Kamil Nowocin"
+  }, {
+    "name" : "suite",
+    "value" : "Automated tests for WEB client"
+  }, {
+    "name" : "subSuite",
+    "value" : "tests.WebAPP.Authentication_Tests"
+  }, {
+    "name" : "host",
+    "value" : "travis-job-65cdeae4-555e-41d5-8853-164f42add71b"
+  }, {
+    "name" : "thread",
+    "value" : "4579@travis-job-65cdeae4-555e-41d5-8853-164f42add71b.TestNG-test=Automated tests for WEB client-2(24)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "story",
+    "value" : "NEGATIVE FLOW"
+  }, {
+    "name" : "owner",
+    "value" : "Kamil Nowocin"
+  }, {
+    "name" : "feature",
+    "value" : "LOGIN TESTS"
+  }, {
+    "name" : "epic",
+    "value" : "Web App Tests"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ {
+    "name" : "STORY-111",
+    "url" : "https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE/STORY-111",
+    "type" : "tms"
+  }, {
+    "name" : "TAP-0002",
+    "url" : "https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE/issue/TAP-0002",
+    "type" : "issue"
+  } ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "owner" : "Kamil Nowocin",
+    "retries" : [ {
+      "uid" : "a6a8170ac9cccc03",
+      "status" : "skipped",
+      "statusDetails" : "Ups, something went really bad! Even Michael Scofield couldn't have predicted that error! :) expected [http://automationpractice.com/index.php] but found [http://automationpractice.com/]",
+      "time" : {
+        "start" : 1648199983696,
+        "stop" : 1648199988532,
+        "duration" : 4836
+      }
+    } ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 7,
+        "broken" : 4,
+        "skipped" : 15,
+        "passed" : 380,
+        "unknown" : 0,
+        "total" : 406
+      },
+      "items" : [ {
+        "uid" : "75c1f4392bb96891",
+        "reportUrl" : "https://app.travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/248092754/#testresult/75c1f4392bb96891",
+        "status" : "passed",
+        "time" : {
+          "start" : 1647595160186,
+          "stop" : 1647595203640,
+          "duration" : 43454
+        }
+      }, {
+        "uid" : "dd96d41b7475c3d1",
+        "reportUrl" : "https://app.travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/247748235/#testresult/dd96d41b7475c3d1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1646990281423,
+          "stop" : 1646990313044,
+          "duration" : 31621
+        }
+      }, {
+        "uid" : "7dd0a945095ce9f9",
+        "reportUrl" : "https://app.travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/247400089/#testresult/7dd0a945095ce9f9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1646385421136,
+          "stop" : 1646385430984,
+          "duration" : 9848
+        }
+      }, {
+        "uid" : "65b92d1bd6d1e51f",
+        "reportUrl" : "https://app.travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/247052515/#testresult/65b92d1bd6d1e51f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1645780768536,
+          "stop" : 1645780821010,
+          "duration" : 52474
+        }
+      }, {
+        "uid" : "39d1c4cffeafe336",
+        "reportUrl" : "https://app.travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/246687955/#testresult/39d1c4cffeafe336",
+        "status" : "passed",
+        "time" : {
+          "start" : 1645175776905,
+          "stop" : 1645175796721,
+          "duration" : 19816
+        }
+      }, {
+        "uid" : "7d15ed88fc8aa412",
+        "reportUrl" : "https://app.travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/246291444/#testresult/7d15ed88fc8aa412",
+        "status" : "passed",
+        "time" : {
+          "start" : 1644570933689,
+          "stop" : 1644570949669,
+          "duration" : 15980
+        }
+      }, {
+        "uid" : "6d9abd2a39a95ec2",
+        "reportUrl" : "https://app.travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/245914980/#testresult/6d9abd2a39a95ec2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1643966188753,
+          "stop" : 1643966207800,
+          "duration" : 19047
+        }
+      }, {
+        "uid" : "4a593fbe0c53adf3",
+        "reportUrl" : "https://app.travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/245554025/#testresult/4a593fbe0c53adf3",
+        "status" : "failed",
+        "statusDetails" : "Ups, something went really bad! Even Michael Scofield couldn't have predicted that error! :) expected [http://automationpractice.com/index.php] but found [http://automationpractice.com/]",
+        "time" : {
+          "start" : 1643361231794,
+          "stop" : 1643361233984,
+          "duration" : 2190
+        }
+      }, {
+        "uid" : "be6010cd1b09410e",
+        "reportUrl" : "https://app.travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/245173334/#testresult/be6010cd1b09410e",
+        "status" : "failed",
+        "statusDetails" : "Ups, something went really bad! Even Michael Scofield couldn't have predicted that error! :) expected [http://automationpractice.com/index.php] but found [http://automationpractice.com/]",
+        "time" : {
+          "start" : 1642756392148,
+          "stop" : 1642756395487,
+          "duration" : 3339
+        }
+      }, {
+        "uid" : "78928ad20720dd1f",
+        "reportUrl" : "https://app.travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/244811527/#testresult/78928ad20720dd1f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1642151620688,
+          "stop" : 1642151634728,
+          "duration" : 14040
+        }
+      }, {
+        "uid" : "f15f8cefffd89adc",
+        "reportUrl" : "https://app.travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/244440957/#testresult/f15f8cefffd89adc",
+        "status" : "passed",
+        "time" : {
+          "start" : 1641546932077,
+          "stop" : 1641546976777,
+          "duration" : 44700
+        }
+      }, {
+        "uid" : "9e7aff8650b00469",
+        "reportUrl" : "https://app.travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/244147706/#testresult/9e7aff8650b00469",
+        "status" : "passed",
+        "time" : {
+          "start" : 1640942173184,
+          "stop" : 1640942219624,
+          "duration" : 46440
+        }
+      }, {
+        "uid" : "b4709e0b8eeb6c09",
+        "reportUrl" : "https://app.travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/243964521/#testresult/b4709e0b8eeb6c09",
+        "status" : "failed",
+        "statusDetails" : "Ups, something went really bad! Even Michael Scofield couldn't have predicted that error! :) expected [http://automationpractice.com/index.php] but found [http://automationpractice.com/]",
+        "time" : {
+          "start" : 1640337305756,
+          "stop" : 1640337306165,
+          "duration" : 409
+        }
+      }, {
+        "uid" : "b4362bf68fe6804a",
+        "reportUrl" : "https://app.travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/243640386/#testresult/b4362bf68fe6804a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1639732308608,
+          "stop" : 1639732323896,
+          "duration" : 15288
+        }
+      }, {
+        "uid" : "ec2c33dc194c47d3",
+        "reportUrl" : "https://app.travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/243245152/#testresult/ec2c33dc194c47d3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1639127600136,
+          "stop" : 1639127645880,
+          "duration" : 45744
+        }
+      }, {
+        "uid" : "f26a709c96b2a1da",
+        "reportUrl" : "https://app.travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/242857562/#testresult/f26a709c96b2a1da",
+        "status" : "passed",
+        "time" : {
+          "start" : 1638522761285,
+          "stop" : 1638522806503,
+          "duration" : 45218
+        }
+      }, {
+        "uid" : "e4805d54fb4ad1f3",
+        "reportUrl" : "https://app.travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/242450597/#testresult/e4805d54fb4ad1f3",
+        "status" : "failed",
+        "statusDetails" : "Ups, something went really bad! Even Michael Scofield couldn't have predicted that error! :) expected [http://automationpractice.com/index.php] but found [http://automationpractice.com/]",
+        "time" : {
+          "start" : 1637918025188,
+          "stop" : 1637918031673,
+          "duration" : 6485
+        }
+      }, {
+        "uid" : "46b62877f6574288",
+        "reportUrl" : "https://app.travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/242075764/#testresult/46b62877f6574288",
+        "status" : "passed",
+        "time" : {
+          "start" : 1637313116068,
+          "stop" : 1637313159705,
+          "duration" : 43637
+        }
+      }, {
+        "uid" : "bdbef354599f2186",
+        "reportUrl" : "https://app.travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/241663207/#testresult/bdbef354599f2186",
+        "status" : "passed",
+        "time" : {
+          "start" : 1636708125473,
+          "stop" : 1636708138311,
+          "duration" : 12838
+        }
+      }, {
+        "uid" : "5e815c30dec558e3",
+        "reportUrl" : "https://app.travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/241241489/#testresult/5e815c30dec558e3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1636103311952,
+          "stop" : 1636103321582,
+          "duration" : 9630
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "966174d079393c89.json",
+  "parameterValues" : [ ]
+}
