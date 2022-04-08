@@ -1,0 +1,36 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+09:17:44 DEBUG i.g.b.wdm.cache.ResolutionCache - Created new resolution cache file at /home/travis/.cache/selenium/resolution.properties
+09:17:44 DEBUG i.g.bonigarcia.wdm.versions.Shell - Running command on the shell: [google-chrome, --version]
+09:17:44 DEBUG i.g.bonigarcia.wdm.versions.Shell - Result: Google Chrome 100.0.4896.75
+09:17:44 DEBUG i.g.b.wdm.versions.VersionDetector - Latest version of chromedriver according to https://chromedriver.storage.googleapis.com/LATEST_RELEASE_100 is 100.0.4896.60
+09:17:44 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 100.0.4896.60 (resolved driver for Chrome 100)
+09:17:44 DEBUG i.g.b.wdm.cache.ResolutionCache - Storing resolution chrome=100 in cache (valid until 10:17:44 08/04/2022 UTC)
+09:17:44 DEBUG i.g.b.wdm.cache.ResolutionCache - Storing resolution chrome100=100.0.4896.60 in cache (valid until 09:17:44 09/04/2022 UTC)
+09:17:44 INFO  i.g.bonigarcia.wdm.WebDriverManager - Reading https://chromedriver.storage.googleapis.com/ to seek chromedriver
+09:17:45 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver to be downloaded chromedriver 100.0.4896.60
+09:17:45 INFO  i.g.bonigarcia.wdm.online.Downloader - Downloading https://chromedriver.storage.googleapis.com/100.0.4896.60/chromedriver_linux64.zip
+09:17:45 INFO  i.g.bonigarcia.wdm.online.Downloader - Extracting driver from compressed file chromedriver_linux64.zip
+09:17:45 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/100.0.4896.60/chromedriver
+09:17:48 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:17:48 INFO  org.slf4j.Logger - [34mTEST NAME: [US-444]/[1] I WOULD LIKE TO SEE REGISTRATION ERROR, WHEN I DON'T FILL FIRST NAME INPUT[0m
+09:17:48 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:17:59 INFO  org.slf4j.Logger - Page ready: "TRUE"
+09:18:08 INFO  org.slf4j.Logger - User valid email: "4EB9BKEMPTCHRISTINE@YAHOO.CO.UK"
+09:18:24 INFO  org.slf4j.Logger - [31mTEST RETRY (1/1): [US-444]/[1] I WOULD LIKE TO SEE REGISTRATION ERROR, WHEN I DON'T FILL FIRST NAME INPUT[0m
+09:18:24 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=100 in cache (valid until 10:17:44 08/04/2022 UTC)
+09:18:24 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome100=100.0.4896.60 in cache (valid until 09:17:44 09/04/2022 UTC)
+09:18:24 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 100.0.4896.60 (resolved driver for Chrome 100)
+09:18:24 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 100.0.4896.60 found in cache
+09:18:24 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/100.0.4896.60/chromedriver
+09:18:25 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:18:25 INFO  org.slf4j.Logger - [34mTEST NAME: [US-444]/[1] I WOULD LIKE TO SEE REGISTRATION ERROR, WHEN I DON'T FILL FIRST NAME INPUT[0m
+09:18:25 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:18:43 INFO  org.slf4j.Logger - Page ready: "TRUE"
+09:18:55 INFO  org.slf4j.Logger - User valid email: "C8C7CCOUTHIECORLISS@GMAIL.COM"
+09:19:11 INFO  org.slf4j.Logger - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+09:19:11 ERROR org.slf4j.Logger - org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on LINUX (cf5f8a9afae53992232322dc114c95c6)] -> xpath: //input[@id='id_gender1']] (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'travis-job-6a0ccf01-4740-4435-baf5-b746dbd2af1e', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1068-gcp', java.version: '14.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.75, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: /tmp/.com.google.Chrome.ZUDLl1}, goog:chromeOptions: {debuggerAddress: localhost:36339}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: cf5f8a9afae53992232322dc114c95c6

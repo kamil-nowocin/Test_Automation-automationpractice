@@ -1,0 +1,37 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+09:23:42 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=100 in cache (valid until 10:17:44 08/04/2022 UTC)
+09:23:42 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome100=100.0.4896.60 in cache (valid until 09:17:44 09/04/2022 UTC)
+09:23:42 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 100.0.4896.60 (resolved driver for Chrome 100)
+09:23:42 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 100.0.4896.60 found in cache
+09:23:42 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/100.0.4896.60/chromedriver
+09:23:43 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:23:43 INFO  org.slf4j.Logger - [34mTEST NAME: [US-333]/[2] I CAN CREATE AN ACCOUNT BY FILLING UP ALL FIELDS[0m
+09:23:43 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:24:04 INFO  org.slf4j.Logger - Page ready: "TRUE"
+09:24:12 INFO  org.slf4j.Logger - User valid email: "F59D2LUXEKATHRINE@ATT.NET"
+09:24:27 INFO  org.slf4j.Logger - [31mTEST RETRY (1/1): [US-333]/[2] I CAN CREATE AN ACCOUNT BY FILLING UP ALL FIELDS[0m
+09:24:27 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=100 in cache (valid until 10:17:44 08/04/2022 UTC)
+09:24:27 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome100=100.0.4896.60 in cache (valid until 09:17:44 09/04/2022 UTC)
+09:24:27 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 100.0.4896.60 (resolved driver for Chrome 100)
+09:24:27 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 100.0.4896.60 found in cache
+09:24:27 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/100.0.4896.60/chromedriver
+09:24:28 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:24:28 INFO  org.slf4j.Logger - [34mTEST NAME: [US-333]/[2] I CAN CREATE AN ACCOUNT BY FILLING UP ALL FIELDS[0m
+09:24:28 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:24:50 INFO  org.slf4j.Logger - Page ready: "TRUE"
+09:25:01 INFO  org.slf4j.Logger - User valid email: "2E4E6FABBILLY@HOTMAIL.CO.UK"
+09:25:06 INFO  org.slf4j.Logger - User gender: "Female"
+09:25:07 INFO  org.slf4j.Logger - User first name: "ISMAEL"
+09:25:07 INFO  org.slf4j.Logger - User last name: "SCANTLIN"
+09:25:07 INFO  org.slf4j.Logger - User password: "SE}ISMOGRAPH"
+09:25:07 INFO  org.slf4j.Logger - User birthday: "2-6-2002"
+09:25:07 INFO  org.slf4j.Logger - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+09:25:07 ERROR org.slf4j.Logger - org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='uniform-days']//span"}
+  (Session info: chrome=100.0.4896.75)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'travis-job-6a0ccf01-4740-4435-baf5-b746dbd2af1e', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1068-gcp', java.version: '14.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.75, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: /tmp/.com.google.Chrome.LICAIj}, goog:chromeOptions: {debuggerAddress: localhost:35179}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 93a6a5d501beeeb04834626421bb914f
+*** Element info: {Using=xpath, value=//div[@id='uniform-days']//span}
