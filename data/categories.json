@@ -7,13 +7,13 @@
       "name" : "null",
       "children" : [ {
         "name" : "[POC]/[1]As a developer I'd like to see working POC with .xlsx file",
-        "uid" : "3787ac579213baab",
+        "uid" : "930798fa6c8e0a73",
         "parentUid" : "666d1a31450af3ae8459f14f07f9a1b4",
         "status" : "failed",
         "time" : {
-          "start" : 1649409457798,
-          "stop" : 1649409458148,
-          "duration" : 350
+          "start" : 1650014291148,
+          "stop" : 1650014291426,
+          "duration" : 278
         },
         "flaky" : false,
         "newFailed" : false,
@@ -25,37 +25,16 @@
       } ],
       "uid" : "666d1a31450af3ae8459f14f07f9a1b4"
     }, {
-      "name" : "Ups, something went really bad! Even Michael Scofield couldn't have predicted that error! :) expected [http://automationpractice.com/index.php] but found [http://automationpractice.com/]",
-      "children" : [ {
-        "name" : "[US-777]/[4] I click on social media \"Google+\" logo",
-        "uid" : "89d90f81f5fc903d",
-        "parentUid" : "f546a49c1ef57bdabb3f77b8898137a3",
-        "status" : "failed",
-        "time" : {
-          "start" : 1649409572501,
-          "stop" : 1649409572925,
-          "duration" : 424
-        },
-        "flaky" : false,
-        "newFailed" : true,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 1,
-        "retriesStatusChange" : true,
-        "parameters" : [ ]
-      } ],
-      "uid" : "f546a49c1ef57bdabb3f77b8898137a3"
-    }, {
       "name" : "Results which have been found didn't match expected sorting result PRICE: HIGHEST FIRST: Lists differ at element [1]: $30.50 != $28.98 expected [$30.50] but found [$28.98]",
       "children" : [ {
         "name" : "[US-555]/[7] I would like to use search box and be able to see results sorted by: \"Price: Highest first\"",
-        "uid" : "6a134a41ca8af002",
+        "uid" : "3eaa79656acd8ff7",
         "parentUid" : "3246160de76fc0de742a06aad5432502",
         "status" : "failed",
         "time" : {
-          "start" : 1649409696735,
-          "stop" : 1649409750716,
-          "duration" : 53981
+          "start" : 1650014470329,
+          "stop" : 1650014490943,
+          "duration" : 20614
         },
         "flaky" : true,
         "newFailed" : false,
@@ -70,13 +49,13 @@
       "name" : "Results which have been found didn't match expected sorting result PRICE: LOWEST FIRST: Lists differ at element [2]: $28.98 != $30.50 expected [$28.98] but found [$30.50]",
       "children" : [ {
         "name" : "[US-555]/[8] I would like to use search box and be able to see results sorted by: \"Price: Lowest first\"",
-        "uid" : "11133c2fd2925fa1",
+        "uid" : "7b30ceb9c951bce",
         "parentUid" : "06135fb1e9171a4c5ee185041330339b",
         "status" : "failed",
         "time" : {
-          "start" : 1649409802153,
-          "stop" : 1649409840260,
-          "duration" : 38107
+          "start" : 1650014513846,
+          "stop" : 1650014525540,
+          "duration" : 11694
         },
         "flaky" : true,
         "newFailed" : false,
@@ -87,21 +66,42 @@
         "parameters" : [ ]
       } ],
       "uid" : "06135fb1e9171a4c5ee185041330339b"
+    }, {
+      "name" : "Value which have been found didn't match expected value! expected [alaska] but found []",
+      "children" : [ {
+        "name" : "[US-333]/[5] I can't create an account, when one of required fields is missing",
+        "uid" : "108f4548dc8ffc9",
+        "parentUid" : "bd620809b5428f6fd08b1ffd2f1ea635",
+        "status" : "failed",
+        "time" : {
+          "start" : 1650014594306,
+          "stop" : 1650014614036,
+          "duration" : 19730
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 1,
+        "retriesStatusChange" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "bd620809b5428f6fd08b1ffd2f1ea635"
     } ],
     "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
   }, {
     "name" : "Test defects",
     "children" : [ {
-      "name" : "Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on LINUX (cf5f8a9afae53992232322dc114c95c6)] -> xpath: //input[@id='id_gender1']] (tried for 15 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-6a0ccf01-4740-4435-baf5-b746dbd2af1e', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1068-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.75, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: /tmp/.com.google.Chrome.ZUDLl1}, goog:chromeOptions: {debuggerAddress: localhost:36339}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: cf5f8a9afae53992232322dc114c95c6",
+      "name" : "Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on LINUX (2254d88b59ca5f1dd834a494582aebbb)] -> xpath: //input[@id='id_gender1']] (tried for 15 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-bb8e82a5-07ed-4b0e-8110-9139d8232328', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1068-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.127, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: /tmp/.com.google.Chrome.adDqND}, goog:chromeOptions: {debuggerAddress: localhost:36285}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 2254d88b59ca5f1dd834a494582aebbb",
       "children" : [ {
         "name" : "[US-444]/[1] I would like to see registration error, when I don't fill first name input",
-        "uid" : "8d8bff6720dd4b2e",
-        "parentUid" : "14832daa40893db56950658130bf9068",
+        "uid" : "899d6dab1df8e116",
+        "parentUid" : "44b712dadf1f8d8e4a928ad2c29cd28e",
         "status" : "broken",
         "time" : {
-          "start" : 1649409505079,
-          "stop" : 1649409552427,
-          "duration" : 47348
+          "start" : 1650014340671,
+          "stop" : 1650014386802,
+          "duration" : 46131
         },
         "flaky" : false,
         "newFailed" : false,
@@ -111,41 +111,20 @@
         "retriesStatusChange" : true,
         "parameters" : [ ]
       } ],
-      "uid" : "14832daa40893db56950658130bf9068"
+      "uid" : "44b712dadf1f8d8e4a928ad2c29cd28e"
     }, {
-      "name" : "Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on LINUX (3a2f5eb93bdc297d63547816e314d1b6)] -> xpath: //input[@id='id_gender1']] (tried for 15 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-6a0ccf01-4740-4435-baf5-b746dbd2af1e', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1068-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.75, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: /tmp/.com.google.Chrome.PSWMpu}, goog:chromeOptions: {debuggerAddress: localhost:42397}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 3a2f5eb93bdc297d63547816e314d1b6",
+      "name" : "Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on LINUX (9bc96400646591a8cb70e929a9ad39f5)] -> xpath: //input[@id='id_gender1']] (tried for 15 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-bb8e82a5-07ed-4b0e-8110-9139d8232328', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1068-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.127, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: /tmp/.com.google.Chrome.E9gmW7}, goog:chromeOptions: {debuggerAddress: localhost:46351}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 9bc96400646591a8cb70e929a9ad39f5",
       "children" : [ {
         "name" : "[US-444]/[10] I would like to see registration error, when I don't fill mobile phone input",
-        "uid" : "cf5b33caf4911968",
-        "parentUid" : "da43616f8513a03bd667c94eec9cbc8f",
+        "uid" : "8a212425b3cc2887",
+        "parentUid" : "58da10189f07f766d8d06fef2ca90caa",
         "status" : "broken",
         "time" : {
-          "start" : 1649409589391,
-          "stop" : 1649409647138,
-          "duration" : 57747
+          "start" : 1650014429188,
+          "stop" : 1650014463614,
+          "duration" : 34426
         },
         "flaky" : true,
-        "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : true,
-        "retriesCount" : 1,
-        "retriesStatusChange" : true,
-        "parameters" : [ ]
-      } ],
-      "uid" : "da43616f8513a03bd667c94eec9cbc8f"
-    }, {
-      "name" : "Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on LINUX (da8f1c04a59eba9c3a04de55c758d78d)] -> xpath: //input[@id='id_gender1']] (tried for 15 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-6a0ccf01-4740-4435-baf5-b746dbd2af1e', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1068-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.75, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: /tmp/.com.google.Chrome.gqO8sx}, goog:chromeOptions: {debuggerAddress: localhost:35187}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: da8f1c04a59eba9c3a04de55c758d78d",
-      "children" : [ {
-        "name" : "[US-444]/[2] I would like to see registration error, when I don't fill last name input",
-        "uid" : "9f4ab4b462d8e8b1",
-        "parentUid" : "2cc5739a5d8df2fc8cd487f51289a0cd",
-        "status" : "broken",
-        "time" : {
-          "start" : 1649409800114,
-          "stop" : 1649409848407,
-          "duration" : 48293
-        },
-        "flaky" : false,
         "newFailed" : false,
         "newPassed" : false,
         "newBroken" : false,
@@ -153,41 +132,20 @@
         "retriesStatusChange" : true,
         "parameters" : [ ]
       } ],
-      "uid" : "2cc5739a5d8df2fc8cd487f51289a0cd"
+      "uid" : "58da10189f07f766d8d06fef2ca90caa"
     }, {
-      "name" : "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//div[@id='uniform-days']//span\"}\n  (Session info: chrome=100.0.4896.75)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-6a0ccf01-4740-4435-baf5-b746dbd2af1e', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1068-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.75, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: /tmp/.com.google.Chrome.LICAIj}, goog:chromeOptions: {debuggerAddress: localhost:35179}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 93a6a5d501beeeb04834626421bb914f\n*** Element info: {Using=xpath, value=//div[@id='uniform-days']//span}",
+      "name" : "Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on LINUX (821488c384a7c5c72be1859ca6545f92)] -> xpath: //input[@id='id_gender2']] (tried for 15 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-bb8e82a5-07ed-4b0e-8110-9139d8232328', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1068-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.127, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: /tmp/.com.google.Chrome.LgQnsI}, goog:chromeOptions: {debuggerAddress: localhost:40587}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 821488c384a7c5c72be1859ca6545f92",
       "children" : [ {
         "name" : "[US-333]/[2] I can create an account by filling up all fields",
-        "uid" : "9941cdeb718caf26",
-        "parentUid" : "36983ad22a072ec10b655ef806bd4575",
+        "uid" : "e792534c27532802",
+        "parentUid" : "06915f4ee69e1fa110ac5fa0ecb9cb15",
         "status" : "broken",
         "time" : {
-          "start" : 1649409868364,
-          "stop" : 1649409907946,
-          "duration" : 39582
+          "start" : 1650014523816,
+          "stop" : 1650014548041,
+          "duration" : 24225
         },
         "flaky" : true,
-        "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : true,
-        "retriesCount" : 1,
-        "retriesStatusChange" : true,
-        "parameters" : [ ]
-      } ],
-      "uid" : "36983ad22a072ec10b655ef806bd4575"
-    }, {
-      "name" : "Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on LINUX (0060f80c2c16274d7eabc47bad0a2dd5)] -> xpath: //input[@id='id_gender1']] (tried for 15 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-6a0ccf01-4740-4435-baf5-b746dbd2af1e', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1068-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.75, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: /tmp/.com.google.Chrome.1Z1Ol7}, goog:chromeOptions: {debuggerAddress: localhost:40569}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 0060f80c2c16274d7eabc47bad0a2dd5",
-      "children" : [ {
-        "name" : "[US-444]/[3] I would like to see registration error, when I don't fill email input",
-        "uid" : "cfccc3c8345c41f2",
-        "parentUid" : "8223a1c5db9bb67512487c81f837447f",
-        "status" : "broken",
-        "time" : {
-          "start" : 1649409885316,
-          "stop" : 1649409930417,
-          "duration" : 45101
-        },
-        "flaky" : false,
         "newFailed" : false,
         "newPassed" : false,
         "newBroken" : false,
@@ -195,39 +153,39 @@
         "retriesStatusChange" : true,
         "parameters" : [ ]
       } ],
-      "uid" : "8223a1c5db9bb67512487c81f837447f"
+      "uid" : "06915f4ee69e1fa110ac5fa0ecb9cb15"
     }, {
-      "name" : "Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on LINUX (8e51bbc6113016e76961287a5ac6bf09)] -> xpath: //input[@id='id_gender1']] (tried for 15 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-6a0ccf01-4740-4435-baf5-b746dbd2af1e', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1068-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.75, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: /tmp/.com.google.Chrome.yDSX9E}, goog:chromeOptions: {debuggerAddress: localhost:42761}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 8e51bbc6113016e76961287a5ac6bf09",
+      "name" : "Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on LINUX (902a50f30cd78192155b91569f9cbe7c)] -> xpath: //input[@id='id_gender2']] (tried for 15 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-bb8e82a5-07ed-4b0e-8110-9139d8232328', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1068-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.127, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: /tmp/.com.google.Chrome.Z3p3Qh}, goog:chromeOptions: {debuggerAddress: localhost:35521}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 902a50f30cd78192155b91569f9cbe7c",
       "children" : [ {
         "name" : "[US-444]/[4] I would like to see registration error, when I don't fill password input",
-        "uid" : "2b4913a58e439e48",
-        "parentUid" : "b53c378584bed048c518411ac443dc43",
+        "uid" : "b9829decb707a50f",
+        "parentUid" : "775e56c32ac90f8bc50c69649c8d9c5e",
         "status" : "broken",
         "time" : {
-          "start" : 1649409968834,
-          "stop" : 1649410017397,
-          "duration" : 48563
+          "start" : 1650014608935,
+          "stop" : 1650014633745,
+          "duration" : 24810
         },
         "flaky" : true,
         "newFailed" : false,
         "newPassed" : false,
-        "newBroken" : true,
+        "newBroken" : false,
         "retriesCount" : 1,
         "retriesStatusChange" : true,
         "parameters" : [ ]
       } ],
-      "uid" : "b53c378584bed048c518411ac443dc43"
+      "uid" : "775e56c32ac90f8bc50c69649c8d9c5e"
     }, {
       "name" : "Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //div[@class='alert alert-danger']' (tried for 15 second(s) with 500 milliseconds interval)",
       "children" : [ {
         "name" : "[US-333]/[6] I can't create an account, when email is already in database",
-        "uid" : "36da78072a502c5",
+        "uid" : "19dabd5ab58f4536",
         "parentUid" : "0cba097823f931767e2419fe825ee128",
         "status" : "broken",
         "time" : {
-          "start" : 1649410082137,
-          "stop" : 1649410111095,
-          "duration" : 28958
+          "start" : 1650014638037,
+          "stop" : 1650014657682,
+          "duration" : 19645
         },
         "flaky" : false,
         "newFailed" : false,
@@ -238,6 +196,27 @@
         "parameters" : [ ]
       } ],
       "uid" : "0cba097823f931767e2419fe825ee128"
+    }, {
+      "name" : "Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on LINUX (87786afc6ac5b9e2f8eca4c8b28da073)] -> xpath: //input[@id='id_gender2']] (tried for 15 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-bb8e82a5-07ed-4b0e-8110-9139d8232328', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1068-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.127, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: /tmp/.com.google.Chrome.ok6cwv}, goog:chromeOptions: {debuggerAddress: localhost:40481}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 87786afc6ac5b9e2f8eca4c8b28da073",
+      "children" : [ {
+        "name" : "[US-444]/[5] I would like to see registration error, when I don't fill address input",
+        "uid" : "b50a46edab686426",
+        "parentUid" : "e6babca752dec87eb5492b797fd9cd6e",
+        "status" : "broken",
+        "time" : {
+          "start" : 1650014653857,
+          "stop" : 1650014675826,
+          "duration" : 21969
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : true,
+        "retriesCount" : 1,
+        "retriesStatusChange" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "e6babca752dec87eb5492b797fd9cd6e"
     } ],
     "uid" : "bdbf199525818fae7a8651db9eafe741"
   } ]
