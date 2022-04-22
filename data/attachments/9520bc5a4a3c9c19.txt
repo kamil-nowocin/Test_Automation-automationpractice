@@ -1,0 +1,29 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+09:21:23 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=100 in cache (valid until 10:18:27 22/04/2022 UTC)
+09:21:23 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome100=100.0.4896.60 in cache (valid until 09:18:27 23/04/2022 UTC)
+09:21:23 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 100.0.4896.60 (resolved driver for Chrome 100)
+09:21:23 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 100.0.4896.60 found in cache
+09:21:23 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/100.0.4896.60/chromedriver
+09:21:23 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:21:23 INFO  org.slf4j.Logger - [34mTEST NAME: [US-333]/[2] I CAN CREATE AN ACCOUNT BY FILLING UP ALL FIELDS[0m
+09:21:23 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:21:44 INFO  org.slf4j.Logger - Page ready: "TRUE"
+09:21:55 INFO  org.slf4j.Logger - User valid email: "868B9ZONKEDLOUIS@ME.COM"
+09:22:10 INFO  org.slf4j.Logger - [31mTEST RETRY (1/1): [US-333]/[2] I CAN CREATE AN ACCOUNT BY FILLING UP ALL FIELDS[0m
+09:22:10 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=100 in cache (valid until 10:18:27 22/04/2022 UTC)
+09:22:10 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome100=100.0.4896.60 in cache (valid until 09:18:27 23/04/2022 UTC)
+09:22:10 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 100.0.4896.60 (resolved driver for Chrome 100)
+09:22:10 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 100.0.4896.60 found in cache
+09:22:10 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/100.0.4896.60/chromedriver
+09:22:11 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:22:11 INFO  org.slf4j.Logger - [34mTEST NAME: [US-333]/[2] I CAN CREATE AN ACCOUNT BY FILLING UP ALL FIELDS[0m
+09:22:11 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:22:32 INFO  org.slf4j.Logger - Page ready: "TRUE"
+09:22:45 INFO  org.slf4j.Logger - User valid email: "B006BKEPTDELL@VERIZON.NET"
+09:23:00 INFO  org.slf4j.Logger - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+09:23:00 ERROR org.slf4j.Logger - org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on LINUX (3f5ef3c33b690ba938cb802e68266469)] -> xpath: //input[@id='id_gender2']] (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'travis-job-e770cd6f-cd04-489d-bc02-12674a5b12e1', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1068-gcp', java.version: '14.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.127, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: /tmp/.com.google.Chrome.4cf4t8}, goog:chromeOptions: {debuggerAddress: localhost:44293}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 3f5ef3c33b690ba938cb802e68266469
