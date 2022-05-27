@@ -1,0 +1,41 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+09:21:11 DEBUG i.g.b.wdm.cache.ResolutionCache - Created new resolution cache file at /home/travis/.cache/selenium/resolution.properties
+09:21:11 DEBUG i.g.bonigarcia.wdm.versions.Shell - Running command on the shell: [google-chrome, --version]
+09:21:11 DEBUG i.g.bonigarcia.wdm.versions.Shell - Result: Google Chrome 102.0.5005.61
+09:21:11 DEBUG i.g.b.wdm.versions.VersionDetector - Latest version of chromedriver according to https://chromedriver.storage.googleapis.com/LATEST_RELEASE_102 is 102.0.5005.61
+09:21:11 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 102.0.5005.61 (resolved driver for Chrome 102)
+09:21:11 DEBUG i.g.b.wdm.cache.ResolutionCache - Storing resolution chrome=102 in cache (valid until 10:21:11 27/05/2022 UTC)
+09:21:11 DEBUG i.g.b.wdm.cache.ResolutionCache - Storing resolution chrome102=102.0.5005.61 in cache (valid until 09:21:11 28/05/2022 UTC)
+09:21:11 INFO  i.g.bonigarcia.wdm.WebDriverManager - Reading https://chromedriver.storage.googleapis.com/ to seek chromedriver
+09:21:11 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver to be downloaded chromedriver 102.0.5005.61
+09:21:11 INFO  i.g.bonigarcia.wdm.online.Downloader - Downloading https://chromedriver.storage.googleapis.com/102.0.5005.61/chromedriver_linux64.zip
+09:21:12 INFO  i.g.bonigarcia.wdm.online.Downloader - Extracting driver from compressed file chromedriver_linux64.zip
+09:21:12 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/102.0.5005.61/chromedriver
+09:21:15 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:21:15 INFO  org.slf4j.Logger - [34mTEST NAME: [US-666]/[1] I WOULD LIKE TO BUY NEW "FADED SHORT SLEEVE T-SHIRTS"[0m
+09:21:15 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:21:52 INFO  org.slf4j.Logger - Page ready: "TRUE"
+09:22:10 INFO  org.slf4j.Logger - User login: "THOR.ODINSON@EXAMPLE.COM"
+09:22:10 INFO  org.slf4j.Logger - User password: "12345"
+09:22:44 INFO  org.slf4j.Logger - User clicked on: "WOMEN" submenu category
+09:22:57 INFO  org.slf4j.Logger - User clicked on product: "FADED SHORT SLEEVE T-SHIRTS"
+09:22:58 INFO  org.slf4j.Logger - Chosen product details:
+ > Quantity: "5"
+ > Size: "M"
+ > Color: "BLUE"
+09:23:39 INFO  org.slf4j.Logger - User order comment: "SILENCE, EARTHLING. MY NAME IS DARTH VADER. I AM AN EXTRATERRESTRIAL FROM THE PLANET VULCAN!"
+09:23:48 INFO  org.slf4j.Logger - User chosen shipping method: "MY CARRIER"
+09:23:49 INFO  org.slf4j.Logger - User selected Terms of Service checkbox
+09:24:15 INFO  org.slf4j.Logger - User chosen payment method: "PAY BY CHECK"
+09:24:45 INFO  org.slf4j.Logger - [31mTEST RETRY (1/1): [US-666]/[1] I WOULD LIKE TO BUY NEW "FADED SHORT SLEEVE T-SHIRTS"[0m
+09:24:45 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=102 in cache (valid until 10:21:11 27/05/2022 UTC)
+09:24:45 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome102=102.0.5005.61 in cache (valid until 09:21:11 28/05/2022 UTC)
+09:24:45 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 102.0.5005.61 (resolved driver for Chrome 102)
+09:24:45 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 102.0.5005.61 found in cache
+09:24:45 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/102.0.5005.61/chromedriver
+09:24:46 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:24:46 INFO  org.slf4j.Logger - [34mTEST NAME: [US-666]/[1] I WOULD LIKE TO BUY NEW "FADED SHORT SLEEVE T-SHIRTS"[0m
+09:24:46 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:25:21 INFO  org.slf4j.Logger - Page ready: "TRUE"
+09:25:42 INFO  org.slf4j.Logger - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+09:25:42 ERROR org.slf4j.Logger - org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //input[@id='email']' (tried for 15 second(s) with 500 milliseconds interval)
