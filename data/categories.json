@@ -7,13 +7,13 @@
       "name" : "null",
       "children" : [ {
         "name" : "[POC]/[1]As a developer I'd like to see working POC with .xlsx file",
-        "uid" : "b923a732ffbfe49b",
+        "uid" : "21dc9de7f53336a",
         "parentUid" : "666d1a31450af3ae8459f14f07f9a1b4",
         "status" : "failed",
         "time" : {
-          "start" : 1653643252731,
-          "stop" : 1653643253008,
-          "duration" : 277
+          "start" : 1654852891271,
+          "stop" : 1654852891596,
+          "duration" : 325
         },
         "flaky" : false,
         "newFailed" : false,
@@ -25,16 +25,37 @@
       } ],
       "uid" : "666d1a31450af3ae8459f14f07f9a1b4"
     }, {
+      "name" : "1 expectation failed.\nExpected status code <200> but was <508>.\n",
+      "children" : [ {
+        "name" : "[API]/[1] I would like to check availability of automationpractice.com",
+        "uid" : "a95a5218eaff231a",
+        "parentUid" : "92f845c47cab5ff48db84c7301564fc6",
+        "status" : "failed",
+        "time" : {
+          "start" : 1654852896148,
+          "stop" : 1654852896311,
+          "duration" : 163
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 1,
+        "retriesStatusChange" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "92f845c47cab5ff48db84c7301564fc6"
+    }, {
       "name" : "Ups, something went really bad! Even Michael Scofield couldn't have predicted that error! :) expected [http://automationpractice.com/index.php] but found [http://automationpractice.com/]",
       "children" : [ {
         "name" : "[US-333]/[1] I check availability of registration page form",
-        "uid" : "8adde68ab8dbbe9",
+        "uid" : "e62501d65d2f26b1",
         "parentUid" : "f546a49c1ef57bdabb3f77b8898137a3",
         "status" : "failed",
         "time" : {
-          "start" : 1653643316746,
-          "stop" : 1653643317153,
-          "duration" : 407
+          "start" : 1654852906664,
+          "stop" : 1654852907164,
+          "duration" : 500
         },
         "flaky" : false,
         "newFailed" : false,
@@ -44,133 +65,14 @@
         "retriesStatusChange" : true,
         "parameters" : [ ]
       }, {
-        "name" : "[US-444]/[1] I would like to see registration error, when I don't fill first name input",
-        "uid" : "21e0a1bd0a861cdd",
+        "name" : "[US-666]/[1] I would like to buy new \"Faded Short Sleeve T-shirts\"",
+        "uid" : "d779586e8e169338",
         "parentUid" : "f546a49c1ef57bdabb3f77b8898137a3",
         "status" : "failed",
         "time" : {
-          "start" : 1653643335321,
-          "stop" : 1653643341564,
-          "duration" : 6243
-        },
-        "flaky" : false,
-        "newFailed" : true,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 1,
-        "retriesStatusChange" : true,
-        "parameters" : [ ]
-      }, {
-        "name" : "[US-555]/[2] I would like to use search box and be able to see results of: \"Blouse\"",
-        "uid" : "90d9c87a73eff1f4",
-        "parentUid" : "f546a49c1ef57bdabb3f77b8898137a3",
-        "status" : "failed",
-        "time" : {
-          "start" : 1653643343782,
-          "stop" : 1653643344120,
-          "duration" : 338
-        },
-        "flaky" : false,
-        "newFailed" : true,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 1,
-        "retriesStatusChange" : true,
-        "parameters" : [ ]
-      }, {
-        "name" : "[US-555]/[5] I would like to use search box and be able to see results sorted by: \"Product Name: Z to A\"",
-        "uid" : "94762557b4e8489c",
-        "parentUid" : "f546a49c1ef57bdabb3f77b8898137a3",
-        "status" : "failed",
-        "time" : {
-          "start" : 1653643470535,
-          "stop" : 1653643470922,
-          "duration" : 387
-        },
-        "flaky" : false,
-        "newFailed" : true,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 1,
-        "retriesStatusChange" : true,
-        "parameters" : [ ]
-      }, {
-        "name" : "[US-555]/[7] I would like to use search box and be able to see results sorted by: \"Price: Highest first\"",
-        "uid" : "77df578940123d83",
-        "parentUid" : "f546a49c1ef57bdabb3f77b8898137a3",
-        "status" : "failed",
-        "time" : {
-          "start" : 1653643543638,
-          "stop" : 1653643544188,
-          "duration" : 550
-        },
-        "flaky" : true,
-        "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 1,
-        "retriesStatusChange" : true,
-        "parameters" : [ ]
-      }, {
-        "name" : "[US-555]/[8] I would like to use search box and be able to see results sorted by: \"Price: Lowest first\"",
-        "uid" : "8978e4633435e4f4",
-        "parentUid" : "f546a49c1ef57bdabb3f77b8898137a3",
-        "status" : "failed",
-        "time" : {
-          "start" : 1653643546399,
-          "stop" : 1653643547121,
-          "duration" : 722
-        },
-        "flaky" : true,
-        "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 1,
-        "retriesStatusChange" : true,
-        "parameters" : [ ]
-      }, {
-        "name" : "[US-444]/[3] I would like to see registration error, when I don't fill email input",
-        "uid" : "efb857c8b6ed271a",
-        "parentUid" : "f546a49c1ef57bdabb3f77b8898137a3",
-        "status" : "failed",
-        "time" : {
-          "start" : 1653643548599,
-          "stop" : 1653643556428,
-          "duration" : 7829
-        },
-        "flaky" : false,
-        "newFailed" : true,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 1,
-        "retriesStatusChange" : true,
-        "parameters" : [ ]
-      }, {
-        "name" : "[US-444]/[4] I would like to see registration error, when I don't fill password input",
-        "uid" : "fbea7c2b23fd341d",
-        "parentUid" : "f546a49c1ef57bdabb3f77b8898137a3",
-        "status" : "failed",
-        "time" : {
-          "start" : 1653643577685,
-          "stop" : 1653643578024,
-          "duration" : 339
-        },
-        "flaky" : false,
-        "newFailed" : true,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 1,
-        "retriesStatusChange" : true,
-        "parameters" : [ ]
-      }, {
-        "name" : "[US-222]/[1] I am able to send request via contact us form, all inputs are filled up",
-        "uid" : "a4cfad1270e82110",
-        "parentUid" : "f546a49c1ef57bdabb3f77b8898137a3",
-        "status" : "failed",
-        "time" : {
-          "start" : 1653643594085,
-          "stop" : 1653643594457,
-          "duration" : 372
+          "start" : 1654852936839,
+          "stop" : 1654852941815,
+          "duration" : 4976
         },
         "flaky" : false,
         "newFailed" : true,
@@ -181,174 +83,13 @@
         "parameters" : [ ]
       }, {
         "name" : "[US-222]/[2] I am able to send request via contact us form, all required inputs are filled up",
-        "uid" : "cbd1411ecee10de1",
+        "uid" : "b3b14c559cbcba8f",
         "parentUid" : "f546a49c1ef57bdabb3f77b8898137a3",
         "status" : "failed",
         "time" : {
-          "start" : 1653643603740,
-          "stop" : 1653643610321,
-          "duration" : 6581
-        },
-        "flaky" : false,
-        "newFailed" : true,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 1,
-        "retriesStatusChange" : true,
-        "parameters" : [ ]
-      }, {
-        "name" : "[US-444]/[6] I would like to see registration error, when I don't fill city input",
-        "uid" : "2402a7669de588db",
-        "parentUid" : "f546a49c1ef57bdabb3f77b8898137a3",
-        "status" : "failed",
-        "time" : {
-          "start" : 1653643682709,
-          "stop" : 1653643689985,
-          "duration" : 7276
-        },
-        "flaky" : true,
-        "newFailed" : true,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 1,
-        "retriesStatusChange" : true,
-        "parameters" : [ ]
-      }, {
-        "name" : "[US-111]/[4] I can't log into automationpractice.com using email \"null\" & password \"12345\"",
-        "uid" : "efd6a165d96d5315",
-        "parentUid" : "f546a49c1ef57bdabb3f77b8898137a3",
-        "status" : "failed",
-        "time" : {
-          "start" : 1653643692920,
-          "stop" : 1653643712074,
-          "duration" : 19154
-        },
-        "flaky" : false,
-        "newFailed" : true,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 1,
-        "retriesStatusChange" : true,
-        "parameters" : [ ]
-      }, {
-        "name" : "[US-222]/[5] I am not able to send request via contact us form, subject is missing",
-        "uid" : "d1b8b6d00f316bdd",
-        "parentUid" : "f546a49c1ef57bdabb3f77b8898137a3",
-        "status" : "failed",
-        "time" : {
-          "start" : 1653643738934,
-          "stop" : 1653643739198,
-          "duration" : 264
-        },
-        "flaky" : false,
-        "newFailed" : true,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 1,
-        "retriesStatusChange" : true,
-        "parameters" : [ ]
-      }, {
-        "name" : "[US-222]/[6] I am not able to send request via contact us form, email address is missing",
-        "uid" : "63ee722658f00e17",
-        "parentUid" : "f546a49c1ef57bdabb3f77b8898137a3",
-        "status" : "failed",
-        "time" : {
-          "start" : 1653643740629,
-          "stop" : 1653643740916,
-          "duration" : 287
-        },
-        "flaky" : true,
-        "newFailed" : true,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 1,
-        "retriesStatusChange" : true,
-        "parameters" : [ ]
-      }, {
-        "name" : "[US-444]/[7] I would like to see registration error, when I don't fill state input",
-        "uid" : "24148fcec7925102",
-        "parentUid" : "f546a49c1ef57bdabb3f77b8898137a3",
-        "status" : "failed",
-        "time" : {
-          "start" : 1653643763350,
-          "stop" : 1653643771332,
-          "duration" : 7982
-        },
-        "flaky" : false,
-        "newFailed" : true,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 1,
-        "retriesStatusChange" : true,
-        "parameters" : [ ]
-      }, {
-        "name" : "[US-222]/[8] I am not able to send request via contact us form, all inputs are missing",
-        "uid" : "d85df9ba4e4b714f",
-        "parentUid" : "f546a49c1ef57bdabb3f77b8898137a3",
-        "status" : "failed",
-        "time" : {
-          "start" : 1653643789618,
-          "stop" : 1653643789934,
-          "duration" : 316
-        },
-        "flaky" : true,
-        "newFailed" : true,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 1,
-        "retriesStatusChange" : true,
-        "parameters" : [ ]
-      }, {
-        "name" : "[US-444]/[8] I would like to see registration error, when I don't fill postal code input",
-        "uid" : "c4ff3fc22da09eb1",
-        "parentUid" : "f546a49c1ef57bdabb3f77b8898137a3",
-        "status" : "failed",
-        "time" : {
-          "start" : 1653643836409,
-          "stop" : 1653643836711,
-          "duration" : 302
-        },
-        "flaky" : true,
-        "newFailed" : true,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 1,
-        "retriesStatusChange" : true,
-        "parameters" : [ ]
-      } ],
-      "uid" : "f546a49c1ef57bdabb3f77b8898137a3"
-    } ],
-    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
-  }, {
-    "name" : "Test defects",
-    "children" : [ {
-      "name" : "Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //input[@id='email_create']' (tried for 15 second(s) with 500 milliseconds interval)",
-      "children" : [ {
-        "name" : "[US-444]/[10] I would like to see registration error, when I don't fill mobile phone input",
-        "uid" : "ae8dff9ce798c3f3",
-        "parentUid" : "aba9e5c9999c7d21677ec8655b3fba9d",
-        "status" : "broken",
-        "time" : {
-          "start" : 1653643351179,
-          "stop" : 1653643391346,
-          "duration" : 40167
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : true,
-        "retriesCount" : 1,
-        "retriesStatusChange" : true,
-        "parameters" : [ ]
-      }, {
-        "name" : "[US-444]/[11] I would like to see registration error, when I don't fill email alias input",
-        "uid" : "1fb6a81164134541",
-        "parentUid" : "aba9e5c9999c7d21677ec8655b3fba9d",
-        "status" : "broken",
-        "time" : {
-          "start" : 1653643433459,
-          "stop" : 1653643474757,
-          "duration" : 41298
+          "start" : 1654853087432,
+          "stop" : 1654853093098,
+          "duration" : 5666
         },
         "flaky" : false,
         "newFailed" : false,
@@ -358,118 +99,51 @@
         "retriesStatusChange" : true,
         "parameters" : [ ]
       }, {
-        "name" : "[US-444]/[5] I would like to see registration error, when I don't fill address input",
-        "uid" : "6f43f1db41beefb4",
-        "parentUid" : "aba9e5c9999c7d21677ec8655b3fba9d",
-        "status" : "broken",
+        "name" : "[US-555]/[5] I would like to use search box and be able to see results sorted by: \"Product Name: Z to A\"",
+        "uid" : "321d011d294ad228",
+        "parentUid" : "f546a49c1ef57bdabb3f77b8898137a3",
+        "status" : "failed",
         "time" : {
-          "start" : 1653643579584,
-          "stop" : 1653643618383,
-          "duration" : 38799
+          "start" : 1654853089691,
+          "stop" : 1654853090053,
+          "duration" : 362
         },
         "flaky" : false,
         "newFailed" : false,
         "newPassed" : false,
-        "newBroken" : true,
-        "retriesCount" : 1,
-        "retriesStatusChange" : true,
-        "parameters" : [ ]
-      } ],
-      "uid" : "aba9e5c9999c7d21677ec8655b3fba9d"
-    }, {
-      "name" : "Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //input[@class='search_query form-control ac_input']' (tried for 15 second(s) with 500 milliseconds interval)",
-      "children" : [ {
-        "name" : "[US-555]/[3] I would like to use search box and be able to see results of: \"Printed Dress\"",
-        "uid" : "ba5b69aeca2d2a66",
-        "parentUid" : "fe04df73fe54526ac971bb4e6bf97dce",
-        "status" : "broken",
-        "time" : {
-          "start" : 1653643352830,
-          "stop" : 1653643391655,
-          "duration" : 38825
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : true,
-        "retriesCount" : 1,
-        "retriesStatusChange" : true,
-        "parameters" : [ ]
-      } ],
-      "uid" : "fe04df73fe54526ac971bb4e6bf97dce"
-    }, {
-      "name" : "Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //input[@id='email']' (tried for 15 second(s) with 500 milliseconds interval)",
-      "children" : [ {
-        "name" : "[US-666]/[1] I would like to buy new \"Faded Short Sleeve T-shirts\"",
-        "uid" : "2b2d85aa8bc73966",
-        "parentUid" : "75d95af23e691faac64cc8b220a40eaf",
-        "status" : "broken",
-        "time" : {
-          "start" : 1653643486016,
-          "stop" : 1653643542199,
-          "duration" : 56183
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : true,
-        "retriesCount" : 1,
-        "retriesStatusChange" : true,
-        "parameters" : [ ]
-      } ],
-      "uid" : "75d95af23e691faac64cc8b220a40eaf"
-    }, {
-      "name" : "Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //form[@id='login_form']' (tried for 15 second(s) with 500 milliseconds interval)",
-      "children" : [ {
-        "name" : "[US-111]/[1] I can log into automationpractice.com using registered email \"thor.odinson@example.com\" & password \"12345\"",
-        "uid" : "aab828dd4dd64f7d",
-        "parentUid" : "8980164a2496cf7fd08f01d389068844",
-        "status" : "broken",
-        "time" : {
-          "start" : 1653643487469,
-          "stop" : 1653643546077,
-          "duration" : 58608
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : true,
+        "newBroken" : false,
         "retriesCount" : 1,
         "retriesStatusChange" : true,
         "parameters" : [ ]
       }, {
         "name" : "[US-111]/[2] I can't log into automationpractice.com using email \"thanos.ALars@example.com\" & password \"12345\"",
-        "uid" : "b1aec3b098cbad88",
-        "parentUid" : "8980164a2496cf7fd08f01d389068844",
-        "status" : "broken",
+        "uid" : "2773dab6a84387d8",
+        "parentUid" : "f546a49c1ef57bdabb3f77b8898137a3",
+        "status" : "failed",
         "time" : {
-          "start" : 1653643555488,
-          "stop" : 1653643589872,
-          "duration" : 34384
+          "start" : 1654853093097,
+          "stop" : 1654853098574,
+          "duration" : 5477
         },
         "flaky" : false,
-        "newFailed" : false,
+        "newFailed" : true,
         "newPassed" : false,
-        "newBroken" : true,
+        "newBroken" : false,
         "retriesCount" : 1,
         "retriesStatusChange" : true,
         "parameters" : [ ]
-      } ],
-      "uid" : "8980164a2496cf7fd08f01d389068844"
-    }, {
-      "name" : "Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //a[@class='login']' (tried for 15 second(s) with 500 milliseconds interval)",
-      "children" : [ {
-        "name" : "[US-444]/[2] I would like to see registration error, when I don't fill last name input",
-        "uid" : "d2a918d3270ef614",
-        "parentUid" : "c6975f708c5cb2f305e1e5054c64a5d0",
-        "status" : "broken",
+      }, {
+        "name" : "[US-444]/[11] I would like to see registration error, when I don't fill email alias input",
+        "uid" : "c2a347ffae0cdd3c",
+        "parentUid" : "f546a49c1ef57bdabb3f77b8898137a3",
+        "status" : "failed",
         "time" : {
-          "start" : 1653643505829,
-          "stop" : 1653643545460,
-          "duration" : 39631
+          "start" : 1654853099576,
+          "stop" : 1654853105579,
+          "duration" : 6003
         },
-        "flaky" : true,
-        "newFailed" : false,
+        "flaky" : false,
+        "newFailed" : true,
         "newPassed" : false,
         "newBroken" : false,
         "retriesCount" : 1,
@@ -477,15 +151,192 @@
         "parameters" : [ ]
       }, {
         "name" : "[US-111]/[3] I can't log into automationpractice.com using email \"thor.odinson@example.com\" & password \"null\"",
-        "uid" : "60227e408d6755f8",
+        "uid" : "9090532b59a68a32",
+        "parentUid" : "f546a49c1ef57bdabb3f77b8898137a3",
+        "status" : "failed",
+        "time" : {
+          "start" : 1654853140977,
+          "stop" : 1654853146606,
+          "duration" : 5629
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 1,
+        "retriesStatusChange" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "[US-444]/[3] I would like to see registration error, when I don't fill email input",
+        "uid" : "3320422e943606cd",
+        "parentUid" : "f546a49c1ef57bdabb3f77b8898137a3",
+        "status" : "failed",
+        "time" : {
+          "start" : 1654853143844,
+          "stop" : 1654853158438,
+          "duration" : 14594
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 1,
+        "retriesStatusChange" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "[US-444]/[6] I would like to see registration error, when I don't fill city input",
+        "uid" : "59bfbb69f4e76efa",
+        "parentUid" : "f546a49c1ef57bdabb3f77b8898137a3",
+        "status" : "failed",
+        "time" : {
+          "start" : 1654853317974,
+          "stop" : 1654853318302,
+          "duration" : 328
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 1,
+        "retriesStatusChange" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "f546a49c1ef57bdabb3f77b8898137a3"
+    }, {
+      "name" : "Results which have been found didn't match expected sorting result PRICE: LOWEST FIRST: Lists differ at element [2]: $28.98 != $30.50 expected [$28.98] but found [$30.50]",
+      "children" : [ {
+        "name" : "[US-555]/[8] I would like to use search box and be able to see results sorted by: \"Price: Lowest first\"",
+        "uid" : "22a3d651978b1082",
+        "parentUid" : "06135fb1e9171a4c5ee185041330339b",
+        "status" : "failed",
+        "time" : {
+          "start" : 1654853216391,
+          "stop" : 1654853238479,
+          "duration" : 22088
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 1,
+        "retriesStatusChange" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "06135fb1e9171a4c5ee185041330339b"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  }, {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on LINUX (bf9e25c187ed290ffce1ef44f627e395)] -> xpath: //input[@id='id_gender1']] (tried for 15 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-f6205103-a6d3-4b2f-b055-7d3baa1d5106', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1075-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.115, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: /tmp/.com.google.Chrome.CZshu9}, goog:chromeOptions: {debuggerAddress: localhost:39223}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: bf9e25c187ed290ffce1ef44f627e395",
+      "children" : [ {
+        "name" : "[US-444]/[1] I would like to see registration error, when I don't fill first name input",
+        "uid" : "58f8f0e82a6357c1",
+        "parentUid" : "8674f2b9e7af87d4eab8683243506e87",
+        "status" : "broken",
+        "time" : {
+          "start" : 1654852944312,
+          "stop" : 1654852997345,
+          "duration" : 53033
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : true,
+        "retriesCount" : 1,
+        "retriesStatusChange" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "8674f2b9e7af87d4eab8683243506e87"
+    }, {
+      "name" : "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//span[@class='cat-name']\"}\n  (Session info: chrome=102.0.5005.115)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-f6205103-a6d3-4b2f-b055-7d3baa1d5106', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1075-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.115, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: /tmp/.com.google.Chrome.tXuIaY}, goog:chromeOptions: {debuggerAddress: localhost:38207}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 62c12173548e801499c74167e86b5e71\n*** Element info: {Using=xpath, value=//span[@class='cat-name']}",
+      "children" : [ {
+        "name" : "[US-666]/[2] I would like to buy new \"Blouse\"",
+        "uid" : "d0068cb88efc2c52",
+        "parentUid" : "b93518544e16d0677f006a384eedbcc1",
+        "status" : "broken",
+        "time" : {
+          "start" : 1654852991576,
+          "stop" : 1654853041192,
+          "duration" : 49616
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 1,
+        "retriesStatusChange" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "b93518544e16d0677f006a384eedbcc1"
+    }, {
+      "name" : "Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on LINUX (cb1b98ddfe4a969dbd352b4e6bdcc6c5)] -> xpath: //input[@id='id_gender1']] (tried for 15 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-f6205103-a6d3-4b2f-b055-7d3baa1d5106', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1075-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.115, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: /tmp/.com.google.Chrome.l5jHj8}, goog:chromeOptions: {debuggerAddress: localhost:45801}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: cb1b98ddfe4a969dbd352b4e6bdcc6c5",
+      "children" : [ {
+        "name" : "[US-444]/[10] I would like to see registration error, when I don't fill mobile phone input",
+        "uid" : "c904fb5eb587a357",
+        "parentUid" : "b989f37146cc7665e3181c961fe7c21d",
+        "status" : "broken",
+        "time" : {
+          "start" : 1654853044070,
+          "stop" : 1654853092822,
+          "duration" : 48752
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 1,
+        "retriesStatusChange" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "b989f37146cc7665e3181c961fe7c21d"
+    }, {
+      "name" : "Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //a[@class='login']' (tried for 15 second(s) with 500 milliseconds interval)",
+      "children" : [ {
+        "name" : "[US-111]/[1] I can log into automationpractice.com using registered email \"thor.odinson@example.com\" & password \"12345\"",
+        "uid" : "367f331c2bca0a66",
         "parentUid" : "c6975f708c5cb2f305e1e5054c64a5d0",
         "status" : "broken",
         "time" : {
-          "start" : 1653643608642,
-          "stop" : 1653643648798,
-          "duration" : 40156
+          "start" : 1654853057741,
+          "stop" : 1654853090800,
+          "duration" : 33059
         },
         "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 1,
+        "retriesStatusChange" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "[US-444]/[2] I would like to see registration error, when I don't fill last name input",
+        "uid" : "f9a8d387792fff3f",
+        "parentUid" : "c6975f708c5cb2f305e1e5054c64a5d0",
+        "status" : "broken",
+        "time" : {
+          "start" : 1654853109278,
+          "stop" : 1654853142166,
+          "duration" : 32888
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 1,
+        "retriesStatusChange" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "[US-444]/[8] I would like to see registration error, when I don't fill postal code input",
+        "uid" : "66c32dd688df8234",
+        "parentUid" : "c6975f708c5cb2f305e1e5054c64a5d0",
+        "status" : "broken",
+        "time" : {
+          "start" : 1654853444049,
+          "stop" : 1654853474495,
+          "duration" : 30446
+        },
+        "flaky" : true,
         "newFailed" : false,
         "newPassed" : false,
         "newBroken" : true,
@@ -495,37 +346,16 @@
       } ],
       "uid" : "c6975f708c5cb2f305e1e5054c64a5d0"
     }, {
-      "name" : "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//a[@class='account']//span\"}\n  (Session info: chrome=102.0.5005.61)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-35211d32-70ed-48bf-a03e-b131654554ea', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1068-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.61, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: /tmp/.com.google.Chrome.I2kP9K}, goog:chromeOptions: {debuggerAddress: localhost:39361}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: a8aedd8bdcd46e855a5959ffefa39da7\n*** Element info: {Using=xpath, value=//a[@class='account']//span}",
+      "name" : "Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //input[@class='search_query form-control ac_input']' (tried for 15 second(s) with 500 milliseconds interval)",
       "children" : [ {
-        "name" : "[US-666]/[2] I would like to buy new \"Blouse\"",
-        "uid" : "d511a4b740c11b28",
-        "parentUid" : "d3e8dccb5aef038b8f04c895fae1012b",
+        "name" : "[US-555]/[7] I would like to use search box and be able to see results sorted by: \"Price: Highest first\"",
+        "uid" : "1201fcafd2f4e5e4",
+        "parentUid" : "fe04df73fe54526ac971bb4e6bf97dce",
         "status" : "broken",
         "time" : {
-          "start" : 1653643544256,
-          "stop" : 1653643580356,
-          "duration" : 36100
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : true,
-        "retriesCount" : 1,
-        "retriesStatusChange" : true,
-        "parameters" : [ ]
-      } ],
-      "uid" : "d3e8dccb5aef038b8f04c895fae1012b"
-    }, {
-      "name" : "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//div[@class='alert alert-danger']//li\"}\n  (Session info: chrome=102.0.5005.61)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-35211d32-70ed-48bf-a03e-b131654554ea', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1068-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.61, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: /tmp/.com.google.Chrome.6zrAEY}, goog:chromeOptions: {debuggerAddress: localhost:44177}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: c0d3ec1651bca76f7f87a1162bba2805\n*** Element info: {Using=xpath, value=//div[@class='alert alert-danger']//li}",
-      "children" : [ {
-        "name" : "[US-222]/[7] I am not able to send request via contact us form, message input is missing",
-        "uid" : "e8ca6a158bf80b6e",
-        "parentUid" : "c2f07d4cc1b8f59ae2fb21a71ada866b",
-        "status" : "broken",
-        "time" : {
-          "start" : 1653643749120,
-          "stop" : 1653643788132,
-          "duration" : 39012
+          "start" : 1654853145144,
+          "stop" : 1654853179569,
+          "duration" : 34425
         },
         "flaky" : true,
         "newFailed" : false,
@@ -535,7 +365,70 @@
         "retriesStatusChange" : true,
         "parameters" : [ ]
       } ],
-      "uid" : "c2f07d4cc1b8f59ae2fb21a71ada866b"
+      "uid" : "fe04df73fe54526ac971bb4e6bf97dce"
+    }, {
+      "name" : "Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on LINUX (1d882d10828a0947d5e38b995e40c2f2)] -> xpath: //input[@id='id_gender1']] (tried for 15 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-f6205103-a6d3-4b2f-b055-7d3baa1d5106', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1075-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.115, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: /tmp/.com.google.Chrome.xVjYop}, goog:chromeOptions: {debuggerAddress: localhost:38571}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 1d882d10828a0947d5e38b995e40c2f2",
+      "children" : [ {
+        "name" : "[US-444]/[4] I would like to see registration error, when I don't fill password input",
+        "uid" : "1ddc89c80b98be78",
+        "parentUid" : "a07a6bc4b35fd9505d4a1db12ae36b75",
+        "status" : "broken",
+        "time" : {
+          "start" : 1654853208093,
+          "stop" : 1654853240422,
+          "duration" : 32329
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : true,
+        "retriesCount" : 1,
+        "retriesStatusChange" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "a07a6bc4b35fd9505d4a1db12ae36b75"
+    }, {
+      "name" : "Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on LINUX (5e6905201076d5435a8aa37afa9fe11e)] -> xpath: //input[@id='id_gender1']] (tried for 15 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-f6205103-a6d3-4b2f-b055-7d3baa1d5106', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1075-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.115, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: /tmp/.com.google.Chrome.wogS2N}, goog:chromeOptions: {debuggerAddress: localhost:45315}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 5e6905201076d5435a8aa37afa9fe11e",
+      "children" : [ {
+        "name" : "[US-444]/[5] I would like to see registration error, when I don't fill address input",
+        "uid" : "10dec4d26374914c",
+        "parentUid" : "836f203816ab404342c8016134b6cd48",
+        "status" : "broken",
+        "time" : {
+          "start" : 1654853267678,
+          "stop" : 1654853316451,
+          "duration" : 48773
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 1,
+        "retriesStatusChange" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "836f203816ab404342c8016134b6cd48"
+    }, {
+      "name" : "Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //div[@id='contact-link']' (tried for 15 second(s) with 500 milliseconds interval)",
+      "children" : [ {
+        "name" : "[US-222]/[8] I am not able to send request via contact us form, all inputs are missing",
+        "uid" : "1a76daa0f70a5333",
+        "parentUid" : "8e627a1ed6e21b2f7fbd1c2b0f08158f",
+        "status" : "broken",
+        "time" : {
+          "start" : 1654853276318,
+          "stop" : 1654853308685,
+          "duration" : 32367
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : true,
+        "retriesCount" : 1,
+        "retriesStatusChange" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "8e627a1ed6e21b2f7fbd1c2b0f08158f"
     } ],
     "uid" : "bdbf199525818fae7a8651db9eafe741"
   } ]

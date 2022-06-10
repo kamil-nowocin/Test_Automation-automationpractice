@@ -1,0 +1,22 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+09:23:32 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=102 in cache (valid until 10:21:37 10/06/2022 UTC)
+09:23:32 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome102=102.0.5005.61 in cache (valid until 09:21:37 11/06/2022 UTC)
+09:23:32 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 102.0.5005.61 (resolved driver for Chrome 102)
+09:23:32 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 102.0.5005.61 found in cache
+09:23:32 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/102.0.5005.61/chromedriver
+09:23:33 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:23:33 INFO  org.slf4j.Logger - [34mTEST NAME: [US-111]/[1] I CAN LOG INTO AUTOMATIONPRACTICE.COM USING REGISTERED EMAIL "THOR.ODINSON@EXAMPLE.COM" & PASSWORD "12345"[0m
+09:23:33 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:23:56 INFO  org.slf4j.Logger - Page ready: "TRUE"
+09:24:17 INFO  org.slf4j.Logger - [31mTEST RETRY (1/1): [US-111]/[1] I CAN LOG INTO AUTOMATIONPRACTICE.COM USING REGISTERED EMAIL "THOR.ODINSON@EXAMPLE.COM" & PASSWORD "12345"[0m
+09:24:17 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=102 in cache (valid until 10:21:37 10/06/2022 UTC)
+09:24:17 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome102=102.0.5005.61 in cache (valid until 09:21:37 11/06/2022 UTC)
+09:24:17 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 102.0.5005.61 (resolved driver for Chrome 102)
+09:24:17 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 102.0.5005.61 found in cache
+09:24:17 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/102.0.5005.61/chromedriver
+09:24:17 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:24:17 INFO  org.slf4j.Logger - [34mTEST NAME: [US-111]/[1] I CAN LOG INTO AUTOMATIONPRACTICE.COM USING REGISTERED EMAIL "THOR.ODINSON@EXAMPLE.COM" & PASSWORD "12345"[0m
+09:24:17 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:24:35 INFO  org.slf4j.Logger - Page ready: "TRUE"
+09:24:50 INFO  org.slf4j.Logger - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+09:24:50 ERROR org.slf4j.Logger - org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //a[@class='login']' (tried for 15 second(s) with 500 milliseconds interval)

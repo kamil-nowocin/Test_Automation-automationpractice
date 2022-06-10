@@ -1,0 +1,28 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+09:21:36 DEBUG i.g.b.wdm.cache.ResolutionCache - Created new resolution cache file at /home/travis/.cache/selenium/resolution.properties
+09:21:36 DEBUG i.g.bonigarcia.wdm.versions.Shell - Running command on the shell: [google-chrome, --version]
+09:21:36 DEBUG i.g.bonigarcia.wdm.versions.Shell - Result: Google Chrome 102.0.5005.115
+09:21:37 DEBUG i.g.b.wdm.versions.VersionDetector - Latest version of chromedriver according to https://chromedriver.storage.googleapis.com/LATEST_RELEASE_102 is 102.0.5005.61
+09:21:37 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 102.0.5005.61 (resolved driver for Chrome 102)
+09:21:37 DEBUG i.g.b.wdm.cache.ResolutionCache - Storing resolution chrome=102 in cache (valid until 10:21:37 10/06/2022 UTC)
+09:21:37 DEBUG i.g.b.wdm.cache.ResolutionCache - Storing resolution chrome102=102.0.5005.61 in cache (valid until 09:21:37 11/06/2022 UTC)
+09:21:37 INFO  i.g.bonigarcia.wdm.WebDriverManager - Reading https://chromedriver.storage.googleapis.com/ to seek chromedriver
+09:21:37 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver to be downloaded chromedriver 102.0.5005.61
+09:21:37 INFO  i.g.bonigarcia.wdm.online.Downloader - Downloading https://chromedriver.storage.googleapis.com/102.0.5005.61/chromedriver_linux64.zip
+09:21:37 INFO  i.g.bonigarcia.wdm.online.Downloader - Extracting driver from compressed file chromedriver_linux64.zip
+09:21:37 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/102.0.5005.61/chromedriver
+09:21:40 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:21:40 INFO  org.slf4j.Logger - [34mTEST NAME: [US-666]/[1] I WOULD LIKE TO BUY NEW "FADED SHORT SLEEVE T-SHIRTS"[0m
+09:21:40 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:22:00 INFO  org.slf4j.Logger - Page ready: "TRUE"
+09:22:16 INFO  org.slf4j.Logger - [31mTEST RETRY (1/1): [US-666]/[1] I WOULD LIKE TO BUY NEW "FADED SHORT SLEEVE T-SHIRTS"[0m
+09:22:16 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=102 in cache (valid until 10:21:37 10/06/2022 UTC)
+09:22:16 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome102=102.0.5005.61 in cache (valid until 09:21:37 11/06/2022 UTC)
+09:22:16 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 102.0.5005.61 (resolved driver for Chrome 102)
+09:22:16 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 102.0.5005.61 found in cache
+09:22:16 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/102.0.5005.61/chromedriver
+09:22:16 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:22:16 INFO  org.slf4j.Logger - [34mTEST NAME: [US-666]/[1] I WOULD LIKE TO BUY NEW "FADED SHORT SLEEVE T-SHIRTS"[0m
+09:22:16 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:22:21 INFO  org.slf4j.Logger - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+09:22:21 ERROR org.slf4j.Logger - java.lang.AssertionError: Ups, something went really bad! Even Michael Scofield couldn't have predicted that error! :) expected [http://automationpractice.com/index.php] but found [http://automationpractice.com/]

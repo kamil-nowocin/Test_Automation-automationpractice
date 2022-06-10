@@ -1,0 +1,21 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+09:25:34 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=102 in cache (valid until 10:21:37 10/06/2022 UTC)
+09:25:34 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome102=102.0.5005.61 in cache (valid until 09:21:37 11/06/2022 UTC)
+09:25:34 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 102.0.5005.61 (resolved driver for Chrome 102)
+09:25:34 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 102.0.5005.61 found in cache
+09:25:34 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/102.0.5005.61/chromedriver
+09:25:34 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:25:34 INFO  org.slf4j.Logger - [34mTEST NAME: [US-555]/[7] I WOULD LIKE TO USE SEARCH BOX AND BE ABLE TO SEE RESULTS SORTED BY: "PRICE: HIGHEST FIRST"[0m
+09:25:34 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:25:44 INFO  org.slf4j.Logger - [31mTEST RETRY (1/1): [US-555]/[7] I WOULD LIKE TO USE SEARCH BOX AND BE ABLE TO SEE RESULTS SORTED BY: "PRICE: HIGHEST FIRST"[0m
+09:25:44 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=102 in cache (valid until 10:21:37 10/06/2022 UTC)
+09:25:44 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome102=102.0.5005.61 in cache (valid until 09:21:37 11/06/2022 UTC)
+09:25:44 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 102.0.5005.61 (resolved driver for Chrome 102)
+09:25:44 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 102.0.5005.61 found in cache
+09:25:44 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/102.0.5005.61/chromedriver
+09:25:45 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:25:45 INFO  org.slf4j.Logger - [34mTEST NAME: [US-555]/[7] I WOULD LIKE TO USE SEARCH BOX AND BE ABLE TO SEE RESULTS SORTED BY: "PRICE: HIGHEST FIRST"[0m
+09:25:45 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:26:04 INFO  org.slf4j.Logger - Page ready: "TRUE"
+09:26:19 INFO  org.slf4j.Logger - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+09:26:19 ERROR org.slf4j.Logger - org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //input[@class='search_query form-control ac_input']' (tried for 15 second(s) with 500 milliseconds interval)

@@ -1,0 +1,33 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+09:22:21 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=102 in cache (valid until 10:21:37 10/06/2022 UTC)
+09:22:21 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome102=102.0.5005.61 in cache (valid until 09:21:37 11/06/2022 UTC)
+09:22:21 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 102.0.5005.61 (resolved driver for Chrome 102)
+09:22:21 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 102.0.5005.61 found in cache
+09:22:21 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/102.0.5005.61/chromedriver
+09:22:22 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:22:22 INFO  org.slf4j.Logger - [34mTEST NAME: [US-666]/[2] I WOULD LIKE TO BUY NEW "BLOUSE"[0m
+09:22:22 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:22:49 INFO  org.slf4j.Logger - Page ready: "TRUE"
+09:23:10 INFO  org.slf4j.Logger - [31mTEST RETRY (1/1): [US-666]/[2] I WOULD LIKE TO BUY NEW "BLOUSE"[0m
+09:23:10 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=102 in cache (valid until 10:21:37 10/06/2022 UTC)
+09:23:10 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome102=102.0.5005.61 in cache (valid until 09:21:37 11/06/2022 UTC)
+09:23:10 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 102.0.5005.61 (resolved driver for Chrome 102)
+09:23:10 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 102.0.5005.61 found in cache
+09:23:10 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/102.0.5005.61/chromedriver
+09:23:11 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:23:11 INFO  org.slf4j.Logger - [34mTEST NAME: [US-666]/[2] I WOULD LIKE TO BUY NEW "BLOUSE"[0m
+09:23:11 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:23:35 INFO  org.slf4j.Logger - Page ready: "TRUE"
+09:23:46 INFO  org.slf4j.Logger - User login: "THOR.ODINSON@EXAMPLE.COM"
+09:23:46 INFO  org.slf4j.Logger - User password: "12345"
+09:24:00 INFO  org.slf4j.Logger - User clicked on: "WOMEN" submenu category
+09:24:00 INFO  org.slf4j.Logger - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+09:24:01 ERROR org.slf4j.Logger - org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span[@class='cat-name']"}
+  (Session info: chrome=102.0.5005.115)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'travis-job-f6205103-a6d3-4b2f-b055-7d3baa1d5106', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1075-gcp', java.version: '14.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.115, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: /tmp/.com.google.Chrome.tXuIaY}, goog:chromeOptions: {debuggerAddress: localhost:38207}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 62c12173548e801499c74167e86b5e71
+*** Element info: {Using=xpath, value=//span[@class='cat-name']}
