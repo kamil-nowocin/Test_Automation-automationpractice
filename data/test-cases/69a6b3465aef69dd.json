@@ -1,0 +1,496 @@
+{
+  "uid" : "69a6b3465aef69dd",
+  "name" : "[US-555]/[6] I would like to use search box and be able to see results sorted by: \"Product Name: A to Z\"",
+  "fullName" : "tests.WebAPP.SearchBox_Tests.test_6",
+  "historyId" : "e2a114185d10a9b7ab4118d3634d11f4",
+  "time" : {
+    "start" : 1655457820835,
+    "stop" : 1655457856603,
+    "duration" : 35768
+  },
+  "description" : "[US-555]/[6] As a user I would like to use search box and be able to see results sorted by: \"Product Name: A to Z\"",
+  "descriptionHtml" : "<p>[US-555]/[6] As a user I would like to use search box and be able to see results sorted by: &quot;Product Name: A to Z&quot;</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ {
+    "name" : "Setting up Excel File",
+    "time" : {
+      "start" : 1655457707525,
+      "stop" : 1655457707613,
+      "duration" : 88
+    },
+    "description" : "Setting up Excel File",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "Setting up Test Class",
+    "time" : {
+      "start" : 1655457820201,
+      "stop" : 1655457820817,
+      "duration" : 616
+    },
+    "description" : "Setting up Test Class",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "[US-555]/[6] As a user I would like to use search box and be able to see results sorted by: \"Product Name: A to Z\"",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "I open home page",
+      "time" : {
+        "start" : 1655457834161,
+        "stop" : 1655457844990,
+        "duration" : 10829
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I can see automationpractice.com website",
+      "time" : {
+        "start" : 1655457844990,
+        "stop" : 1655457845000,
+        "duration" : 10
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I search for phrase *Printed Dress*",
+      "time" : {
+        "start" : 1655457845001,
+        "stop" : 1655457845111,
+        "duration" : 110
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "searchPhrase",
+        "value" : "Printed Dress"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "I click on search icon",
+      "time" : {
+        "start" : 1655457845111,
+        "stop" : 1655457849761,
+        "duration" : 4650
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I can see numbers of results equals to *5*",
+      "time" : {
+        "start" : 1655457849761,
+        "stop" : 1655457849809,
+        "duration" : 48
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "expectedCountOfResults",
+        "value" : "5"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "I can see that every results which have been found contains phrase *Printed Dress*",
+      "time" : {
+        "start" : 1655457849809,
+        "stop" : 1655457849916,
+        "duration" : 107
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "searchPhrase",
+        "value" : "Printed Dress"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "I select from Dropdown Sort by *Product Name: A to Z*",
+      "time" : {
+        "start" : 1655457849916,
+        "stop" : 1655457856468,
+        "duration" : 6552
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "sortBy",
+        "value" : "Product Name: A to Z"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "I can see that results are correctly sorted by *Product Name: A to Z*",
+      "time" : {
+        "start" : 1655457856468,
+        "stop" : 1655457856566,
+        "duration" : 98
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "sortedBy",
+        "value" : "Product Name: A to Z"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 8,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "Teardown Test Class",
+    "time" : {
+      "start" : 1655457856605,
+      "stop" : 1655457856687,
+      "duration" : 82
+    },
+    "description" : "Teardown Test Class",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "Teardown Test Suite",
+    "time" : {
+      "start" : 1655458371208,
+      "stop" : 1655458372283,
+      "duration" : 1075
+    },
+    "description" : "Teardown Test Suite",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "tests.WebAPP.SearchBox_Tests"
+  }, {
+    "name" : "testClass",
+    "value" : "tests.WebAPP.SearchBox_Tests"
+  }, {
+    "name" : "testMethod",
+    "value" : "test_6"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Automationpractice.com WEB - Kamil Nowocin"
+  }, {
+    "name" : "suite",
+    "value" : "Automated tests for WEB client"
+  }, {
+    "name" : "subSuite",
+    "value" : "tests.WebAPP.SearchBox_Tests"
+  }, {
+    "name" : "host",
+    "value" : "travis-job-12919a17-5441-47db-9264-0b734f855c51"
+  }, {
+    "name" : "thread",
+    "value" : "4404@travis-job-12919a17-5441-47db-9264-0b734f855c51.TestNG-test=Automated tests for WEB client-3(25)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "story",
+    "value" : "POSITIVE FLOW"
+  }, {
+    "name" : "owner",
+    "value" : "Kamil Nowocin"
+  }, {
+    "name" : "epic",
+    "value" : "Web App Tests"
+  }, {
+    "name" : "feature",
+    "value" : "SEARCH BOX TESTS"
+  }, {
+    "name" : "severity",
+    "value" : "critical"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ {
+    "name" : "TAP-0036",
+    "url" : "https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE/issue/TAP-0036",
+    "type" : "issue"
+  }, {
+    "name" : "STORY-555",
+    "url" : "https://tracker.FAKE.com/jira/browse/AUTOMATION_PRACTICE/STORY-555",
+    "type" : "tms"
+  } ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "critical",
+    "owner" : "Kamil Nowocin",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 4,
+        "broken" : 8,
+        "skipped" : 14,
+        "passed" : 383,
+        "unknown" : 0,
+        "total" : 409
+      },
+      "items" : [ {
+        "uid" : "57887e56f08545ac",
+        "reportUrl" : "https://app.travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/251799801/#testresult/57887e56f08545ac",
+        "status" : "passed",
+        "time" : {
+          "start" : 1654853090859,
+          "stop" : 1654853134056,
+          "duration" : 43197
+        }
+      }, {
+        "uid" : "3a8497f6720356aa",
+        "reportUrl" : "https://app.travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/251202991/#testresult/3a8497f6720356aa",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653643471839,
+          "stop" : 1653643534984,
+          "duration" : 63145
+        }
+      }, {
+        "uid" : "a8a4668f238ec110",
+        "reportUrl" : "https://app.travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/250914721/#testresult/a8a4668f238ec110",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653038638851,
+          "stop" : 1653038687070,
+          "duration" : 48219
+        }
+      }, {
+        "uid" : "59c3d9607d7a8ba4",
+        "reportUrl" : "https://app.travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/250614814/#testresult/59c3d9607d7a8ba4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1652433792132,
+          "stop" : 1652433838510,
+          "duration" : 46378
+        }
+      }, {
+        "uid" : "9be82a481e521587",
+        "reportUrl" : "https://app.travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/250306724/#testresult/9be82a481e521587",
+        "status" : "passed",
+        "time" : {
+          "start" : 1651828968852,
+          "stop" : 1651828994285,
+          "duration" : 25433
+        }
+      }, {
+        "uid" : "4e2fe620e4b2923d",
+        "reportUrl" : "https://app.travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/250038525/#testresult/4e2fe620e4b2923d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1651224080100,
+          "stop" : 1651224135052,
+          "duration" : 54952
+        }
+      }, {
+        "uid" : "39adeb768b094cc3",
+        "reportUrl" : "https://app.travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/249734656/#testresult/39adeb768b094cc3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1650619199197,
+          "stop" : 1650619214836,
+          "duration" : 15639
+        }
+      }, {
+        "uid" : "b9f1fa51d0cdfe11",
+        "reportUrl" : "https://app.travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/249462194/#testresult/b9f1fa51d0cdfe11",
+        "status" : "passed",
+        "time" : {
+          "start" : 1650014441376,
+          "stop" : 1650014457361,
+          "duration" : 15985
+        }
+      }, {
+        "uid" : "626568d349f41e6c",
+        "reportUrl" : "https://app.travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/249127487/#testresult/626568d349f41e6c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1649409646122,
+          "stop" : 1649409670384,
+          "duration" : 24262
+        }
+      }, {
+        "uid" : "e883df3891038e19",
+        "reportUrl" : "https://app.travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/248784009/#testresult/e883df3891038e19",
+        "status" : "passed",
+        "time" : {
+          "start" : 1648804720462,
+          "stop" : 1648804741408,
+          "duration" : 20946
+        }
+      }, {
+        "uid" : "f05d3f057918323d",
+        "reportUrl" : "https://app.travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/248427856/#testresult/f05d3f057918323d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1648199938228,
+          "stop" : 1648199961492,
+          "duration" : 23264
+        }
+      }, {
+        "uid" : "7d30ff4f9cd9d346",
+        "reportUrl" : "https://app.travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/248092754/#testresult/7d30ff4f9cd9d346",
+        "status" : "passed",
+        "time" : {
+          "start" : 1647595131142,
+          "stop" : 1647595169169,
+          "duration" : 38027
+        }
+      }, {
+        "uid" : "9d2c410fee15ff2f",
+        "reportUrl" : "https://app.travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/247748235/#testresult/9d2c410fee15ff2f",
+        "status" : "broken",
+        "statusDetails" : "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//div[@id='uniform-selectProductSort']//span\"}\n  (Session info: chrome=99.0.4844.51)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-94a0b5ce-87e9-4d74-b70f-92b09b464a53', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1062-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.51, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: /tmp/.com.google.Chrome.AooPxB}, goog:chromeOptions: {debuggerAddress: localhost:39431}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: c8ddbc24b897c73ece7a7691e3619e4a\n*** Element info: {Using=xpath, value=//div[@id='uniform-selectProductSort']//span}",
+        "time" : {
+          "start" : 1646990266337,
+          "stop" : 1646990285902,
+          "duration" : 19565
+        }
+      }, {
+        "uid" : "fd184171ca0ca5b1",
+        "reportUrl" : "https://app.travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/247400089/#testresult/fd184171ca0ca5b1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1646385408827,
+          "stop" : 1646385421566,
+          "duration" : 12739
+        }
+      }, {
+        "uid" : "512977ee0e145303",
+        "reportUrl" : "https://app.travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/247052515/#testresult/512977ee0e145303",
+        "status" : "passed",
+        "time" : {
+          "start" : 1645780754253,
+          "stop" : 1645780807932,
+          "duration" : 53679
+        }
+      }, {
+        "uid" : "e5e907238b416c61",
+        "reportUrl" : "https://app.travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/246687955/#testresult/e5e907238b416c61",
+        "status" : "passed",
+        "time" : {
+          "start" : 1645175752778,
+          "stop" : 1645175774988,
+          "duration" : 22210
+        }
+      }, {
+        "uid" : "41af4d9ff2e33123",
+        "reportUrl" : "https://app.travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/246291444/#testresult/41af4d9ff2e33123",
+        "status" : "passed",
+        "time" : {
+          "start" : 1644570920037,
+          "stop" : 1644570941201,
+          "duration" : 21164
+        }
+      }, {
+        "uid" : "d7d97f00c965d2ae",
+        "reportUrl" : "https://app.travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/245914980/#testresult/d7d97f00c965d2ae",
+        "status" : "passed",
+        "time" : {
+          "start" : 1643966171735,
+          "stop" : 1643966191898,
+          "duration" : 20163
+        }
+      }, {
+        "uid" : "ba34aecdf25c78e",
+        "reportUrl" : "https://app.travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/245554025/#testresult/ba34aecdf25c78e",
+        "status" : "failed",
+        "statusDetails" : "Ups, something went really bad! Even Michael Scofield couldn't have predicted that error! :) expected [http://automationpractice.com/index.php] but found [http://automationpractice.com/]",
+        "time" : {
+          "start" : 1643361243739,
+          "stop" : 1643361245694,
+          "duration" : 1955
+        }
+      }, {
+        "uid" : "48ec45d86afc0b95",
+        "reportUrl" : "https://app.travis-ci.com/kamil-nowocin/Test_Automation-automationpractice/builds/245173334/#testresult/48ec45d86afc0b95",
+        "status" : "failed",
+        "statusDetails" : "Ups, something went really bad! Even Michael Scofield couldn't have predicted that error! :) expected [http://automationpractice.com/index.php] but found [http://automationpractice.com/]",
+        "time" : {
+          "start" : 1642756407183,
+          "stop" : 1642756410278,
+          "duration" : 3095
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "69a6b3465aef69dd.json",
+  "parameterValues" : [ ]
+}

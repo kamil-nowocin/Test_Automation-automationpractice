@@ -1,0 +1,38 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+09:25:18 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=102 in cache (valid until 10:21:48 17/06/2022 UTC)
+09:25:18 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome102=102.0.5005.61 in cache (valid until 09:21:48 18/06/2022 UTC)
+09:25:18 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 102.0.5005.61 (resolved driver for Chrome 102)
+09:25:18 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 102.0.5005.61 found in cache
+09:25:18 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/102.0.5005.61/chromedriver
+09:25:19 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:25:19 INFO  org.slf4j.Logger - [34mTEST NAME: [US-444]/[3] I WOULD LIKE TO SEE REGISTRATION ERROR, WHEN I DON'T FILL EMAIL INPUT[0m
+09:25:19 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:25:42 INFO  org.slf4j.Logger - Page ready: "TRUE"
+09:25:51 INFO  org.slf4j.Logger - User valid email: "DEA5FPLAINLYPRAWN@COMCAST.NET"
+09:25:58 INFO  org.slf4j.Logger - User gender: "Male"
+09:25:58 INFO  org.slf4j.Logger - User first name: "ROGER"
+09:25:58 INFO  org.slf4j.Logger - User last name: "ROTE"
+09:25:59 INFO  org.slf4j.Logger - User password: "EYEL%ASHES"
+09:25:59 INFO  org.slf4j.Logger - User birthday: "21-8-1964"
+09:25:59 INFO  org.slf4j.Logger - User address: "CREMIN RANCH509"
+09:25:59 INFO  org.slf4j.Logger - User chosen country: "UNITED STATES"
+09:25:59 INFO  org.slf4j.Logger - User chosen city: "GALLIANO"
+09:26:00 INFO  org.slf4j.Logger - User chosen state: "MASSACHUSETTS"
+09:26:00 INFO  org.slf4j.Logger - [31mTEST RETRY (1/1): [US-444]/[3] I WOULD LIKE TO SEE REGISTRATION ERROR, WHEN I DON'T FILL EMAIL INPUT[0m
+09:26:00 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=102 in cache (valid until 10:21:48 17/06/2022 UTC)
+09:26:00 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome102=102.0.5005.61 in cache (valid until 09:21:48 18/06/2022 UTC)
+09:26:00 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 102.0.5005.61 (resolved driver for Chrome 102)
+09:26:00 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 102.0.5005.61 found in cache
+09:26:00 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/102.0.5005.61/chromedriver
+09:26:00 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:26:00 INFO  org.slf4j.Logger - [34mTEST NAME: [US-444]/[3] I WOULD LIKE TO SEE REGISTRATION ERROR, WHEN I DON'T FILL EMAIL INPUT[0m
+09:26:00 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:26:23 INFO  org.slf4j.Logger - Page ready: "TRUE"
+09:26:33 INFO  org.slf4j.Logger - User valid email: "E3900QUITBUREAU@ATT.NET"
+09:26:49 INFO  org.slf4j.Logger - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+09:26:49 ERROR org.slf4j.Logger - org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on LINUX (46ec2c4384812c30b700e3ed411b38f3)] -> xpath: //input[@id='id_gender2']] (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'travis-job-12919a17-5441-47db-9264-0b734f855c51', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1078-gcp', java.version: '14.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.115, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: /tmp/.com.google.Chrome.s5rCZH}, goog:chromeOptions: {debuggerAddress: localhost:37521}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 46ec2c4384812c30b700e3ed411b38f3
