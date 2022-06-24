@@ -7,13 +7,13 @@
       "name" : "null",
       "children" : [ {
         "name" : "[POC]/[1]As a developer I'd like to see working POC with .xlsx file",
-        "uid" : "b67b58eb5200baed",
+        "uid" : "50448b5442b0dfdd",
         "parentUid" : "666d1a31450af3ae8459f14f07f9a1b4",
         "status" : "failed",
         "time" : {
-          "start" : 1655457701398,
-          "stop" : 1655457701738,
-          "duration" : 340
+          "start" : 1656062506135,
+          "stop" : 1656062506424,
+          "duration" : 289
         },
         "flaky" : false,
         "newFailed" : false,
@@ -27,17 +27,17 @@
     }, {
       "name" : "Ups, something went really bad! Even Michael Scofield couldn't have predicted that error! :) expected [http://automationpractice.com/index.php] but found [http://automationpractice.com/]",
       "children" : [ {
-        "name" : "[US-444]/[1] I would like to see registration error, when I don't fill first name input",
-        "uid" : "b6ca76e6005fd5dc",
+        "name" : "[US-555]/[7] I would like to use search box and be able to see results sorted by: \"Price: Highest first\"",
+        "uid" : "a9871547270000bc",
         "parentUid" : "f546a49c1ef57bdabb3f77b8898137a3",
         "status" : "failed",
         "time" : {
-          "start" : 1655457752684,
-          "stop" : 1655457760709,
-          "duration" : 8025
+          "start" : 1656062726700,
+          "stop" : 1656062733638,
+          "duration" : 6938
         },
-        "flaky" : false,
-        "newFailed" : true,
+        "flaky" : true,
+        "newFailed" : false,
         "newPassed" : false,
         "newBroken" : false,
         "retriesCount" : 1,
@@ -45,63 +45,168 @@
         "parameters" : [ ]
       } ],
       "uid" : "f546a49c1ef57bdabb3f77b8898137a3"
-    }, {
-      "name" : "Results which have been found didn't match expected sorting result PRICE: HIGHEST FIRST: Lists differ at element [1]: $30.50 != $28.98 expected [$30.50] but found [$28.98]",
-      "children" : [ {
-        "name" : "[US-555]/[7] I would like to use search box and be able to see results sorted by: \"Price: Highest first\"",
-        "uid" : "3d3df7d68494d8e6",
-        "parentUid" : "3246160de76fc0de742a06aad5432502",
-        "status" : "failed",
-        "time" : {
-          "start" : 1655457878857,
-          "stop" : 1655457910451,
-          "duration" : 31594
-        },
-        "flaky" : true,
-        "newFailed" : true,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 1,
-        "retriesStatusChange" : true,
-        "parameters" : [ ]
-      } ],
-      "uid" : "3246160de76fc0de742a06aad5432502"
-    }, {
-      "name" : "Results which have been found didn't match expected sorting result PRICE: LOWEST FIRST: Lists differ at element [2]: $28.98 != $30.50 expected [$28.98] but found [$30.50]",
-      "children" : [ {
-        "name" : "[US-555]/[8] I would like to use search box and be able to see results sorted by: \"Price: Lowest first\"",
-        "uid" : "16577276e892efc5",
-        "parentUid" : "06135fb1e9171a4c5ee185041330339b",
-        "status" : "failed",
-        "time" : {
-          "start" : 1655457951617,
-          "stop" : 1655457991744,
-          "duration" : 40127
-        },
-        "flaky" : true,
-        "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 1,
-        "retriesStatusChange" : true,
-        "parameters" : [ ]
-      } ],
-      "uid" : "06135fb1e9171a4c5ee185041330339b"
     } ],
     "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
   }, {
     "name" : "Test defects",
     "children" : [ {
-      "name" : "Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on LINUX (fb85028bbd1cedc181bec6364b310a98)] -> xpath: //input[@id='id_gender1']] (tried for 15 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-12919a17-5441-47db-9264-0b734f855c51', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1078-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.115, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: /tmp/.com.google.Chrome.msYpBC}, goog:chromeOptions: {debuggerAddress: localhost:44395}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: fb85028bbd1cedc181bec6364b310a98",
+      "name" : "unknown error: cannot determine loading status\nfrom unknown error: unexpected command response\n  (Session info: chrome=103.0.5060.53)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-25887fd1-bd1f-44bc-9887-be193e8470fc', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1080-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: /tmp/.com.google.Chrome.AmRVbj}, goog:chromeOptions: {debuggerAddress: localhost:33995}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: ba93ef86e55ea612575ec9f875c552b5",
+      "children" : [ {
+        "name" : "[US-333]/[1] I check availability of registration page form",
+        "uid" : "f43ad0e7a4ea7432",
+        "parentUid" : "aee2bb5a06c4fd80d0d61d0539934811",
+        "status" : "broken",
+        "time" : {
+          "start" : 1656062544929,
+          "stop" : 1656062564064,
+          "duration" : 19135
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : true,
+        "retriesCount" : 1,
+        "retriesStatusChange" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "aee2bb5a06c4fd80d0d61d0539934811"
+    }, {
+      "name" : "unknown error: cannot determine loading status\nfrom unknown error: unexpected command response\n  (Session info: chrome=103.0.5060.53)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-25887fd1-bd1f-44bc-9887-be193e8470fc', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1080-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: /tmp/.com.google.Chrome.STozNP}, goog:chromeOptions: {debuggerAddress: localhost:39515}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 81c817172e78d81543b8836034e2866a",
+      "children" : [ {
+        "name" : "[US-444]/[1] I would like to see registration error, when I don't fill first name input",
+        "uid" : "d7d3a4e8165aef79",
+        "parentUid" : "e51c66170fbe4c021f0c9ce3c9f1601c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1656062545053,
+          "stop" : 1656062565683,
+          "duration" : 20630
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : true,
+        "retriesCount" : 1,
+        "retriesStatusChange" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "e51c66170fbe4c021f0c9ce3c9f1601c"
+    }, {
+      "name" : "unknown error: cannot determine loading status\nfrom unknown error: unexpected command response\n  (Session info: chrome=103.0.5060.53)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-25887fd1-bd1f-44bc-9887-be193e8470fc', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1080-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: /tmp/.com.google.Chrome.WEVVDH}, goog:chromeOptions: {debuggerAddress: localhost:34715}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 2848b3d18f7dffe6b83c4dbf2ff6e1be",
+      "children" : [ {
+        "name" : "[US-555]/[2] I would like to use search box and be able to see results of: \"Blouse\"",
+        "uid" : "17771df527651c1e",
+        "parentUid" : "7a6d85fe6643f1b2f4ddb83c8fce97af",
+        "status" : "broken",
+        "time" : {
+          "start" : 1656062566844,
+          "stop" : 1656062576628,
+          "duration" : 9784
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : true,
+        "retriesCount" : 1,
+        "retriesStatusChange" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "7a6d85fe6643f1b2f4ddb83c8fce97af"
+    }, {
+      "name" : "unknown error: unexpected command response\n  (Session info: chrome=103.0.5060.53)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-25887fd1-bd1f-44bc-9887-be193e8470fc', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1080-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: /tmp/.com.google.Chrome.DMrDkG}, goog:chromeOptions: {debuggerAddress: localhost:35481}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 897059abc86c6846502db72dd53cb48c",
+      "children" : [ {
+        "name" : "[US-777]/[1] I click on social media \"Facebook\" logo",
+        "uid" : "163f941b8cba4fe9",
+        "parentUid" : "93abcd442ac2e208811e381d5986eb29",
+        "status" : "broken",
+        "time" : {
+          "start" : 1656062572800,
+          "stop" : 1656062584274,
+          "duration" : 11474
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : true,
+        "retriesCount" : 1,
+        "retriesStatusChange" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "93abcd442ac2e208811e381d5986eb29"
+    }, {
+      "name" : "unknown error: cannot determine loading status\nfrom unknown error: unexpected command response\n  (Session info: chrome=103.0.5060.53)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-25887fd1-bd1f-44bc-9887-be193e8470fc', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1080-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: /tmp/.com.google.Chrome.thTI6N}, goog:chromeOptions: {debuggerAddress: localhost:44307}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 009d2f49f7b4661f884e090b3e5eee59",
+      "children" : [ {
+        "name" : "[US-444]/[10] I would like to see registration error, when I don't fill mobile phone input",
+        "uid" : "1867dc50d8f11427",
+        "parentUid" : "02e3ab84aef27d695772ebc8a45e96e3",
+        "status" : "broken",
+        "time" : {
+          "start" : 1656062577777,
+          "stop" : 1656062589504,
+          "duration" : 11727
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : true,
+        "retriesCount" : 1,
+        "retriesStatusChange" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "02e3ab84aef27d695772ebc8a45e96e3"
+    }, {
+      "name" : "unknown error: cannot determine loading status\nfrom unknown error: unexpected command response\n  (Session info: chrome=103.0.5060.53)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-25887fd1-bd1f-44bc-9887-be193e8470fc', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1080-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: /tmp/.com.google.Chrome.weYIJz}, goog:chromeOptions: {debuggerAddress: localhost:33409}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 1be2a84a569a5b75d345a3bdf884c059",
+      "children" : [ {
+        "name" : "[US-555]/[3] I would like to use search box and be able to see results of: \"Printed Dress\"",
+        "uid" : "68f1e09d0a8ce3a8",
+        "parentUid" : "66e44de9a1b757b80dd12b32c82e1ec6",
+        "status" : "broken",
+        "time" : {
+          "start" : 1656062589500,
+          "stop" : 1656062600247,
+          "duration" : 10747
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : true,
+        "retriesCount" : 1,
+        "retriesStatusChange" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "66e44de9a1b757b80dd12b32c82e1ec6"
+    }, {
+      "name" : "unknown error: cannot determine loading status\nfrom unknown error: unexpected command response\n  (Session info: chrome=103.0.5060.53)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-25887fd1-bd1f-44bc-9887-be193e8470fc', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1080-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: /tmp/.com.google.Chrome.FgZbun}, goog:chromeOptions: {debuggerAddress: localhost:42801}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 2a29b517d8dd51d88b13d33c03a70e9d",
       "children" : [ {
         "name" : "[US-444]/[11] I would like to see registration error, when I don't fill email alias input",
-        "uid" : "ae88f97491aecba2",
-        "parentUid" : "c29ce9946fe964212d6ee67461a4493c",
+        "uid" : "c95c871e032ab852",
+        "parentUid" : "c255ce462a1479a057acf178b9db2732",
         "status" : "broken",
         "time" : {
-          "start" : 1655457827366,
-          "stop" : 1655457872087,
-          "duration" : 44721
+          "start" : 1656062602525,
+          "stop" : 1656062613038,
+          "duration" : 10513
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 1,
+        "retriesStatusChange" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "c255ce462a1479a057acf178b9db2732"
+    }, {
+      "name" : "unknown error: cannot determine loading status\nfrom unknown error: unexpected command response\n  (Session info: chrome=103.0.5060.53)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-25887fd1-bd1f-44bc-9887-be193e8470fc', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1080-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: /tmp/.com.google.Chrome.bdFB2S}, goog:chromeOptions: {debuggerAddress: localhost:40425}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 925ddd8008a442f5588218c055349e29",
+      "children" : [ {
+        "name" : "[US-555]/[4] I would like to use search box and be able to see results of: \"!@#$%^\"",
+        "uid" : "12f467e690c3690e",
+        "parentUid" : "4dbe8a201f6d53c1c79d95162ddce76f",
+        "status" : "broken",
+        "time" : {
+          "start" : 1656062615204,
+          "stop" : 1656062625534,
+          "duration" : 10330
         },
         "flaky" : false,
         "newFailed" : false,
@@ -111,39 +216,123 @@
         "retriesStatusChange" : true,
         "parameters" : [ ]
       } ],
-      "uid" : "c29ce9946fe964212d6ee67461a4493c"
+      "uid" : "4dbe8a201f6d53c1c79d95162ddce76f"
     }, {
-      "name" : "Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on LINUX (46ec2c4384812c30b700e3ed411b38f3)] -> xpath: //input[@id='id_gender2']] (tried for 15 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-12919a17-5441-47db-9264-0b734f855c51', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1078-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.115, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: /tmp/.com.google.Chrome.s5rCZH}, goog:chromeOptions: {debuggerAddress: localhost:37521}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 46ec2c4384812c30b700e3ed411b38f3",
+      "name" : "unknown error: unexpected command response\n  (Session info: chrome=103.0.5060.53)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-25887fd1-bd1f-44bc-9887-be193e8470fc', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1080-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: /tmp/.com.google.Chrome.t878kV}, goog:chromeOptions: {debuggerAddress: localhost:40231}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: bd862dba0d1fdf6d2d14a9eaa8038786",
+      "children" : [ {
+        "name" : "[US-666]/[2] I would like to buy new \"Blouse\"",
+        "uid" : "65684f00e5ca60e7",
+        "parentUid" : "bac8fcf08adf5491de6bab000b0c7899",
+        "status" : "broken",
+        "time" : {
+          "start" : 1656062615432,
+          "stop" : 1656062627216,
+          "duration" : 11784
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : true,
+        "retriesCount" : 1,
+        "retriesStatusChange" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "bac8fcf08adf5491de6bab000b0c7899"
+    }, {
+      "name" : "unknown error: cannot determine loading status\nfrom unknown error: unexpected command response\n  (Session info: chrome=103.0.5060.53)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-25887fd1-bd1f-44bc-9887-be193e8470fc', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1080-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: /tmp/.com.google.Chrome.ilIwyM}, goog:chromeOptions: {debuggerAddress: localhost:38983}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 8ca21cca0817b70fcbd4880c780dc1a9",
+      "children" : [ {
+        "name" : "[US-777]/[3] I click on social media \"YouTube\" logo",
+        "uid" : "cc3334762d883775",
+        "parentUid" : "dd0db150dab18232d0d6f403bfbea18c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1656062615944,
+          "stop" : 1656062628631,
+          "duration" : 12687
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : true,
+        "retriesCount" : 1,
+        "retriesStatusChange" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "dd0db150dab18232d0d6f403bfbea18c"
+    }, {
+      "name" : "unknown error: unexpected command response\n  (Session info: chrome=103.0.5060.53)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-25887fd1-bd1f-44bc-9887-be193e8470fc', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1080-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: /tmp/.com.google.Chrome.GWzff6}, goog:chromeOptions: {debuggerAddress: localhost:46313}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: df1c80fc99540d5899072ef5cdfd2789",
+      "children" : [ {
+        "name" : "[US-444]/[2] I would like to see registration error, when I don't fill last name input",
+        "uid" : "aefec27ba1a0eb67",
+        "parentUid" : "0f1f8837921102e373ce01490d12a4a0",
+        "status" : "broken",
+        "time" : {
+          "start" : 1656062621952,
+          "stop" : 1656062632403,
+          "duration" : 10451
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : true,
+        "retriesCount" : 1,
+        "retriesStatusChange" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "0f1f8837921102e373ce01490d12a4a0"
+    }, {
+      "name" : "unknown error: unexpected command response\n  (Session info: chrome=103.0.5060.53)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-25887fd1-bd1f-44bc-9887-be193e8470fc', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1080-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: /tmp/.com.google.Chrome.PNJpsH}, goog:chromeOptions: {debuggerAddress: localhost:44807}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 18c1a3bf55ae6aa3306bebc18b071979",
+      "children" : [ {
+        "name" : "[US-555]/[5] I would like to use search box and be able to see results sorted by: \"Product Name: Z to A\"",
+        "uid" : "3a14b430583d56da",
+        "parentUid" : "52bedc62c3b579113e59bb3a0eb4c9b3",
+        "status" : "broken",
+        "time" : {
+          "start" : 1656062642757,
+          "stop" : 1656062657401,
+          "duration" : 14644
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : true,
+        "retriesCount" : 1,
+        "retriesStatusChange" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "52bedc62c3b579113e59bb3a0eb4c9b3"
+    }, {
+      "name" : "unknown error: cannot determine loading status\nfrom unknown error: unexpected command response\n  (Session info: chrome=103.0.5060.53)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-25887fd1-bd1f-44bc-9887-be193e8470fc', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1080-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: /tmp/.com.google.Chrome.3TcSgy}, goog:chromeOptions: {debuggerAddress: localhost:32825}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: ebcf084f2a6f07d29debf5ea1e23ddc1",
+      "children" : [ {
+        "name" : "[US-777]/[4] I click on social media \"Google+\" logo",
+        "uid" : "8a2318fe25b9c57e",
+        "parentUid" : "9b2e311e9c2a32cd643ab1061feacba0",
+        "status" : "broken",
+        "time" : {
+          "start" : 1656062643824,
+          "stop" : 1656062660468,
+          "duration" : 16644
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : true,
+        "retriesCount" : 1,
+        "retriesStatusChange" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "9b2e311e9c2a32cd643ab1061feacba0"
+    }, {
+      "name" : "unknown error: cannot determine loading status\nfrom unknown error: unexpected command response\n  (Session info: chrome=103.0.5060.53)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-25887fd1-bd1f-44bc-9887-be193e8470fc', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1080-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: /tmp/.com.google.Chrome.J3X7t2}, goog:chromeOptions: {debuggerAddress: localhost:37093}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 6e915e1947ac29dfcdd31dcfaf7f242a",
       "children" : [ {
         "name" : "[US-444]/[3] I would like to see registration error, when I don't fill email input",
-        "uid" : "c056793c690787b5",
-        "parentUid" : "5cbcea0d3cbf0be430a6d70238a613c3",
+        "uid" : "a4c4c614c2cb391b",
+        "parentUid" : "06acc5a60c249f774e1ebae84d855b3a",
         "status" : "broken",
         "time" : {
-          "start" : 1655457960981,
-          "stop" : 1655458009215,
-          "duration" : 48234
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : true,
-        "retriesCount" : 1,
-        "retriesStatusChange" : true,
-        "parameters" : [ ]
-      } ],
-      "uid" : "5cbcea0d3cbf0be430a6d70238a613c3"
-    }, {
-      "name" : "Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on LINUX (fe40110f6f26db028773d705cf6b5fd8)] -> xpath: //input[@id='id_gender1']] (tried for 15 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-12919a17-5441-47db-9264-0b734f855c51', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1078-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.115, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: /tmp/.com.google.Chrome.jEZmIA}, goog:chromeOptions: {debuggerAddress: localhost:36099}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: fe40110f6f26db028773d705cf6b5fd8",
-      "children" : [ {
-        "name" : "[US-333]/[2] I can create an account by filling up all fields",
-        "uid" : "ffc0bfd9712bfdc0",
-        "parentUid" : "4b503f50da280ad216e2d704ba8ef5f7",
-        "status" : "broken",
-        "time" : {
-          "start" : 1655458042826,
-          "stop" : 1655458090947,
-          "duration" : 48121
+          "start" : 1656062643875,
+          "stop" : 1656062661887,
+          "duration" : 18012
         },
         "flaky" : false,
         "newFailed" : false,
@@ -153,18 +342,60 @@
         "retriesStatusChange" : true,
         "parameters" : [ ]
       } ],
-      "uid" : "4b503f50da280ad216e2d704ba8ef5f7"
+      "uid" : "06acc5a60c249f774e1ebae84d855b3a"
     }, {
-      "name" : "Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on LINUX (d98cadcacb297b876010d8e0eea97c5c)] -> xpath: //input[@id='id_gender2']] (tried for 15 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-12919a17-5441-47db-9264-0b734f855c51', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1078-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.115, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: /tmp/.com.google.Chrome.egIsY6}, goog:chromeOptions: {debuggerAddress: localhost:45321}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: d98cadcacb297b876010d8e0eea97c5c",
+      "name" : "unknown error: cannot determine loading status\nfrom unknown error: unexpected command response\n  (Session info: chrome=103.0.5060.53)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-25887fd1-bd1f-44bc-9887-be193e8470fc', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1080-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: /tmp/.com.google.Chrome.lWtE9V}, goog:chromeOptions: {debuggerAddress: localhost:33697}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 3bbd83331a347225d39ccec48da57708",
+      "children" : [ {
+        "name" : "[US-222]/[1] I am able to send request via contact us form, all inputs are filled up",
+        "uid" : "f05e22a8ccd0f54f",
+        "parentUid" : "736ae998322ad0f4548943ee8d2014ed",
+        "status" : "broken",
+        "time" : {
+          "start" : 1656062676928,
+          "stop" : 1656062697249,
+          "duration" : 20321
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : true,
+        "retriesCount" : 1,
+        "retriesStatusChange" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "736ae998322ad0f4548943ee8d2014ed"
+    }, {
+      "name" : "unknown error: unexpected command response\n  (Session info: chrome=103.0.5060.53)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-25887fd1-bd1f-44bc-9887-be193e8470fc', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1080-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: /tmp/.com.google.Chrome.wlSFut}, goog:chromeOptions: {debuggerAddress: localhost:39725}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 3447947c2599ef6de12d908d9af596ab",
+      "children" : [ {
+        "name" : "[US-555]/[6] I would like to use search box and be able to see results sorted by: \"Product Name: A to Z\"",
+        "uid" : "d050fadc8f2d9cc5",
+        "parentUid" : "8ba30b0dba764393fd66c797afeee2bc",
+        "status" : "broken",
+        "time" : {
+          "start" : 1656062682978,
+          "stop" : 1656062703342,
+          "duration" : 20364
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : true,
+        "retriesCount" : 1,
+        "retriesStatusChange" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "8ba30b0dba764393fd66c797afeee2bc"
+    }, {
+      "name" : "unknown error: cannot determine loading status\nfrom unknown error: unexpected command response\n  (Session info: chrome=103.0.5060.53)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-25887fd1-bd1f-44bc-9887-be193e8470fc', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1080-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: /tmp/.com.google.Chrome.0poQkq}, goog:chromeOptions: {debuggerAddress: localhost:40491}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 2837e06750c4b37dc82b38b7df10074c",
       "children" : [ {
         "name" : "[US-444]/[4] I would like to see registration error, when I don't fill password input",
-        "uid" : "378a26abd50a79fb",
-        "parentUid" : "b32b543383d22df0bbea8f20cb300716",
+        "uid" : "f8e849c0dc023049",
+        "parentUid" : "6ff9076bc50c48bfd428dd226d090f90",
         "status" : "broken",
         "time" : {
-          "start" : 1655458059427,
-          "stop" : 1655458107072,
-          "duration" : 47645
+          "start" : 1656062686963,
+          "stop" : 1656062707643,
+          "duration" : 20680
         },
         "flaky" : false,
         "newFailed" : false,
@@ -174,20 +405,20 @@
         "retriesStatusChange" : true,
         "parameters" : [ ]
       } ],
-      "uid" : "b32b543383d22df0bbea8f20cb300716"
+      "uid" : "6ff9076bc50c48bfd428dd226d090f90"
     }, {
-      "name" : "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//div[@class='alert alert-danger']//li\"}\n  (Session info: chrome=102.0.5005.115)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-12919a17-5441-47db-9264-0b734f855c51', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1078-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.115, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: /tmp/.com.google.Chrome.7hHSHF}, goog:chromeOptions: {debuggerAddress: localhost:34461}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 669c2d6b3e539c15f31e1135e33047d0\n*** Element info: {Using=xpath, value=//div[@class='alert alert-danger']//li}",
+      "name" : "unknown error: cannot determine loading status\nfrom unknown error: unexpected command response\n  (Session info: chrome=103.0.5060.53)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-25887fd1-bd1f-44bc-9887-be193e8470fc', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1080-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: /tmp/.com.google.Chrome.lHexp4}, goog:chromeOptions: {debuggerAddress: localhost:40385}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 498e6b5c9d084d076ceaaa667168fe4a",
       "children" : [ {
-        "name" : "[US-222]/[4] I am not able to send request via contact us form, email input is invalid",
-        "uid" : "1b0c3af4aa3cd1d8",
-        "parentUid" : "981a0ee8342b0ac7aa6c3ec0677f668b",
+        "name" : "[US-111]/[2] I can't log into automationpractice.com using email \"thanos.ALars@example.com\" & password \"12345\"",
+        "uid" : "feac631342c4ecb",
+        "parentUid" : "8d58f0be30bf6016a28b9a2614161b22",
         "status" : "broken",
         "time" : {
-          "start" : 1655458095264,
-          "stop" : 1655458108398,
-          "duration" : 13134
+          "start" : 1656062691374,
+          "stop" : 1656062715035,
+          "duration" : 23661
         },
-        "flaky" : false,
+        "flaky" : true,
         "newFailed" : false,
         "newPassed" : false,
         "newBroken" : true,
@@ -195,18 +426,39 @@
         "retriesStatusChange" : true,
         "parameters" : [ ]
       } ],
-      "uid" : "981a0ee8342b0ac7aa6c3ec0677f668b"
+      "uid" : "8d58f0be30bf6016a28b9a2614161b22"
     }, {
-      "name" : "Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on LINUX (d067f69263a3c591a78ad37d35c3390e)] -> xpath: //input[@id='id_gender1']] (tried for 15 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-12919a17-5441-47db-9264-0b734f855c51', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1078-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.115, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: /tmp/.com.google.Chrome.EMwNIY}, goog:chromeOptions: {debuggerAddress: localhost:46769}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: d067f69263a3c591a78ad37d35c3390e",
+      "name" : "unknown error: cannot determine loading status\nfrom unknown error: unexpected command response\n  (Session info: chrome=103.0.5060.53)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-25887fd1-bd1f-44bc-9887-be193e8470fc', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1080-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: /tmp/.com.google.Chrome.LnDZjx}, goog:chromeOptions: {debuggerAddress: localhost:41743}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: ad5c010be4714eaab96255a300590257",
+      "children" : [ {
+        "name" : "[US-222]/[2] I am able to send request via contact us form, all required inputs are filled up",
+        "uid" : "68bda7a3f7e38724",
+        "parentUid" : "d27e5904f6c71ac9ff46bd81eff8a046",
+        "status" : "broken",
+        "time" : {
+          "start" : 1656062722078,
+          "stop" : 1656062751034,
+          "duration" : 28956
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : true,
+        "retriesCount" : 1,
+        "retriesStatusChange" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "d27e5904f6c71ac9ff46bd81eff8a046"
+    }, {
+      "name" : "unknown error: unexpected command response\n  (Session info: chrome=103.0.5060.53)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-25887fd1-bd1f-44bc-9887-be193e8470fc', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1080-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: /tmp/.com.google.Chrome.KmCMJJ}, goog:chromeOptions: {debuggerAddress: localhost:35629}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 0d085205e8cb6810e05f1f8510682d0f",
       "children" : [ {
         "name" : "[US-444]/[5] I would like to see registration error, when I don't fill address input",
-        "uid" : "da88c989e9a03ce7",
-        "parentUid" : "9a8fe858e6c26d844ba58e43a74db6ad",
+        "uid" : "d1cef4003527db96",
+        "parentUid" : "db75adb51b77e616a2c5bd75edea041e",
         "status" : "broken",
         "time" : {
-          "start" : 1655458161369,
-          "stop" : 1655458225044,
-          "duration" : 63675
+          "start" : 1656062737442,
+          "stop" : 1656062762839,
+          "duration" : 25397
         },
         "flaky" : false,
         "newFailed" : false,
@@ -216,60 +468,81 @@
         "retriesStatusChange" : true,
         "parameters" : [ ]
       } ],
-      "uid" : "9a8fe858e6c26d844ba58e43a74db6ad"
+      "uid" : "db75adb51b77e616a2c5bd75edea041e"
     }, {
-      "name" : "Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on LINUX (d7f2d57a463a7616c3d57f6fed9a5a50)] -> xpath: //input[@id='id_gender1']] (tried for 15 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-12919a17-5441-47db-9264-0b734f855c51', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1078-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.115, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: /tmp/.com.google.Chrome.ZpZf2P}, goog:chromeOptions: {debuggerAddress: localhost:37849}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: d7f2d57a463a7616c3d57f6fed9a5a50",
+      "name" : "unknown error: cannot determine loading status\nfrom unknown error: unexpected command response\n  (Session info: chrome=103.0.5060.53)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-25887fd1-bd1f-44bc-9887-be193e8470fc', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1080-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: /tmp/.com.google.Chrome.ScRAAH}, goog:chromeOptions: {debuggerAddress: localhost:45927}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 11c8193b521544edc869f69d6d8214fd",
+      "children" : [ {
+        "name" : "[US-111]/[3] I can't log into automationpractice.com using email \"thor.odinson@example.com\" & password \"null\"",
+        "uid" : "4d763075e464c0b7",
+        "parentUid" : "5c5e1e4f142fb1b6d770b5694241bc57",
+        "status" : "broken",
+        "time" : {
+          "start" : 1656062743290,
+          "stop" : 1656062768740,
+          "duration" : 25450
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : true,
+        "retriesCount" : 1,
+        "retriesStatusChange" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "5c5e1e4f142fb1b6d770b5694241bc57"
+    }, {
+      "name" : "unknown error: cannot determine loading status\nfrom unknown error: unexpected command response\n  (Session info: chrome=103.0.5060.53)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-25887fd1-bd1f-44bc-9887-be193e8470fc', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1080-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: /tmp/.com.google.Chrome.rrd7YD}, goog:chromeOptions: {debuggerAddress: localhost:37789}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 30588cb62b059d48a74c9370e0f7152e",
+      "children" : [ {
+        "name" : "[US-555]/[8] I would like to use search box and be able to see results sorted by: \"Price: Lowest first\"",
+        "uid" : "939abdfaa2c406ba",
+        "parentUid" : "d20c63e28487ed305c197231f19cbcb6",
+        "status" : "broken",
+        "time" : {
+          "start" : 1656062760385,
+          "stop" : 1656062785915,
+          "duration" : 25530
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : true,
+        "retriesCount" : 1,
+        "retriesStatusChange" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "d20c63e28487ed305c197231f19cbcb6"
+    }, {
+      "name" : "unknown error: cannot determine loading status\nfrom unknown error: unexpected command response\n  (Session info: chrome=103.0.5060.53)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-25887fd1-bd1f-44bc-9887-be193e8470fc', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1080-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: /tmp/.com.google.Chrome.ATcQvf}, goog:chromeOptions: {debuggerAddress: localhost:32953}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 39ce0d9dd4cfe937a68c3a253046fa41",
+      "children" : [ {
+        "name" : "[US-222]/[3] I am able to send request via contact us form witch attached file",
+        "uid" : "982c7dc41ce101cf",
+        "parentUid" : "07a4a0182d4a70731e86a8b3175eb92d",
+        "status" : "broken",
+        "time" : {
+          "start" : 1656062777294,
+          "stop" : 1656062800691,
+          "duration" : 23397
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : true,
+        "retriesCount" : 1,
+        "retriesStatusChange" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "07a4a0182d4a70731e86a8b3175eb92d"
+    }, {
+      "name" : "unknown error: cannot determine loading status\nfrom unknown error: unexpected command response\n  (Session info: chrome=103.0.5060.53)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-25887fd1-bd1f-44bc-9887-be193e8470fc', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1080-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: /tmp/.com.google.Chrome.iWRbEw}, goog:chromeOptions: {debuggerAddress: localhost:43871}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: a20ee7b6cb3c849044634bfe1db6e8cd",
       "children" : [ {
         "name" : "[US-444]/[6] I would like to see registration error, when I don't fill city input",
-        "uid" : "42654fc191da5e27",
-        "parentUid" : "bdd2f904cb4c8c77c0ea5775fc255372",
+        "uid" : "503461789903eb5b",
+        "parentUid" : "cdfa098ca76291a08b496f527f12c4a2",
         "status" : "broken",
         "time" : {
-          "start" : 1655458257392,
-          "stop" : 1655458289853,
-          "duration" : 32461
-        },
-        "flaky" : true,
-        "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : true,
-        "retriesCount" : 1,
-        "retriesStatusChange" : true,
-        "parameters" : [ ]
-      } ],
-      "uid" : "bdd2f904cb4c8c77c0ea5775fc255372"
-    }, {
-      "name" : "Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //div[@class='alert alert-danger']' (tried for 15 second(s) with 500 milliseconds interval)",
-      "children" : [ {
-        "name" : "[US-333]/[6] I can't create an account, when email is already in database",
-        "uid" : "9a3abaab28bbc40",
-        "parentUid" : "0cba097823f931767e2419fe825ee128",
-        "status" : "broken",
-        "time" : {
-          "start" : 1655458313488,
-          "stop" : 1655458339755,
-          "duration" : 26267
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : true,
-        "retriesCount" : 1,
-        "retriesStatusChange" : true,
-        "parameters" : [ ]
-      } ],
-      "uid" : "0cba097823f931767e2419fe825ee128"
-    }, {
-      "name" : "Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on LINUX (2557482cf953ddeef42a146a21a1b6c4)] -> xpath: //input[@id='id_gender1']] (tried for 15 second(s) with 500 milliseconds interval)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-12919a17-5441-47db-9264-0b734f855c51', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1078-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.115, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: /tmp/.com.google.Chrome.2LcMRk}, goog:chromeOptions: {debuggerAddress: localhost:42507}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 2557482cf953ddeef42a146a21a1b6c4",
-      "children" : [ {
-        "name" : "[US-444]/[8] I would like to see registration error, when I don't fill postal code input",
-        "uid" : "cc933d6a6575173e",
-        "parentUid" : "840159b84a76060195a14d5b83fdab5f",
-        "status" : "broken",
-        "time" : {
-          "start" : 1655458335132,
-          "stop" : 1655458356827,
-          "duration" : 21695
+          "start" : 1656062790726,
+          "stop" : 1656062802337,
+          "duration" : 11611
         },
         "flaky" : true,
         "newFailed" : false,
@@ -279,7 +552,196 @@
         "retriesStatusChange" : true,
         "parameters" : [ ]
       } ],
-      "uid" : "840159b84a76060195a14d5b83fdab5f"
+      "uid" : "cdfa098ca76291a08b496f527f12c4a2"
+    }, {
+      "name" : "unknown error: cannot determine loading status\nfrom unknown error: unexpected command response\n  (Session info: chrome=103.0.5060.53)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-25887fd1-bd1f-44bc-9887-be193e8470fc', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1080-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: /tmp/.com.google.Chrome.DAtWxW}, goog:chromeOptions: {debuggerAddress: localhost:36641}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: c09a912343e11a26626257fa8b9a362c",
+      "children" : [ {
+        "name" : "[US-111]/[4] I can't log into automationpractice.com using email \"null\" & password \"12345\"",
+        "uid" : "eb56d67c2bc4ff35",
+        "parentUid" : "63fce81464a632c04f409a94dd46a32c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1656062794010,
+          "stop" : 1656062804382,
+          "duration" : 10372
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : true,
+        "retriesCount" : 1,
+        "retriesStatusChange" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "63fce81464a632c04f409a94dd46a32c"
+    }, {
+      "name" : "unknown error: unexpected command response\n  (Session info: chrome=103.0.5060.53)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-25887fd1-bd1f-44bc-9887-be193e8470fc', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1080-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: /tmp/.com.google.Chrome.OvytGx}, goog:chromeOptions: {debuggerAddress: localhost:41797}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 7dfbec35ba40cc62bbe5a87bdd745558",
+      "children" : [ {
+        "name" : "[US-444]/[7] I would like to see registration error, when I don't fill state input",
+        "uid" : "ffea12eede7b8a96",
+        "parentUid" : "d3fff5c674e2837342f0f64a35d945d7",
+        "status" : "broken",
+        "time" : {
+          "start" : 1656062810144,
+          "stop" : 1656062814485,
+          "duration" : 4341
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : true,
+        "retriesCount" : 1,
+        "retriesStatusChange" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "d3fff5c674e2837342f0f64a35d945d7"
+    }, {
+      "name" : "unknown error: cannot determine loading status\nfrom unknown error: unexpected command response\n  (Session info: chrome=103.0.5060.53)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-25887fd1-bd1f-44bc-9887-be193e8470fc', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1080-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: /tmp/.com.google.Chrome.HqH9Hz}, goog:chromeOptions: {debuggerAddress: localhost:38025}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: fa0548dc766eb1f959df96823b31bcbf",
+      "children" : [ {
+        "name" : "[US-222]/[4] I am not able to send request via contact us form, email input is invalid",
+        "uid" : "6dbbd563a23862b7",
+        "parentUid" : "880464e9a4701101db28c3882ca1926e",
+        "status" : "broken",
+        "time" : {
+          "start" : 1656062810159,
+          "stop" : 1656062815361,
+          "duration" : 5202
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 1,
+        "retriesStatusChange" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "880464e9a4701101db28c3882ca1926e"
+    }, {
+      "name" : "unknown error: cannot determine loading status\nfrom unknown error: unexpected command response\n  (Session info: chrome=103.0.5060.53)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-25887fd1-bd1f-44bc-9887-be193e8470fc', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1080-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: /tmp/.com.google.Chrome.rdPRNK}, goog:chromeOptions: {debuggerAddress: localhost:39215}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: b71999949488d177af467235c92b59d9",
+      "children" : [ {
+        "name" : "[US-444]/[8] I would like to see registration error, when I don't fill postal code input",
+        "uid" : "1559bf33589dbfca",
+        "parentUid" : "e2de4f063ed818235b206a8ff25c57b8",
+        "status" : "broken",
+        "time" : {
+          "start" : 1656062826422,
+          "stop" : 1656062842580,
+          "duration" : 16158
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 1,
+        "retriesStatusChange" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "e2de4f063ed818235b206a8ff25c57b8"
+    }, {
+      "name" : "unknown error: cannot determine loading status\nfrom unknown error: unexpected command response\n  (Session info: chrome=103.0.5060.53)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-25887fd1-bd1f-44bc-9887-be193e8470fc', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1080-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: /tmp/.com.google.Chrome.sUhTBn}, goog:chromeOptions: {debuggerAddress: localhost:42841}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: bb1771db7765925c6c344b29bf11f1b9",
+      "children" : [ {
+        "name" : "[US-222]/[5] I am not able to send request via contact us form, subject is missing",
+        "uid" : "9dabf49f7026b37",
+        "parentUid" : "d15b161e6906dfbff69e333606735505",
+        "status" : "broken",
+        "time" : {
+          "start" : 1656062826971,
+          "stop" : 1656062843410,
+          "duration" : 16439
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : true,
+        "retriesCount" : 1,
+        "retriesStatusChange" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "d15b161e6906dfbff69e333606735505"
+    }, {
+      "name" : "unknown error: cannot determine loading status\nfrom unknown error: unexpected command response\n  (Session info: chrome=103.0.5060.53)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-25887fd1-bd1f-44bc-9887-be193e8470fc', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1080-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: /tmp/.com.google.Chrome.IPPxKK}, goog:chromeOptions: {debuggerAddress: localhost:37665}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 0e3f8b6f9553e2314f6a6be76cc69ac5",
+      "children" : [ {
+        "name" : "[US-222]/[6] I am not able to send request via contact us form, email address is missing",
+        "uid" : "4466369e8dedfec4",
+        "parentUid" : "62a5c4c2b584986903628d6ebce5e472",
+        "status" : "broken",
+        "time" : {
+          "start" : 1656062855833,
+          "stop" : 1656062868648,
+          "duration" : 12815
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : true,
+        "retriesCount" : 1,
+        "retriesStatusChange" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "62a5c4c2b584986903628d6ebce5e472"
+    }, {
+      "name" : "unknown error: cannot determine loading status\nfrom unknown error: unexpected command response\n  (Session info: chrome=103.0.5060.53)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-25887fd1-bd1f-44bc-9887-be193e8470fc', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1080-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: /tmp/.com.google.Chrome.atiFoY}, goog:chromeOptions: {debuggerAddress: localhost:33575}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 81e80c827c1b0aab50974f53c3963e74",
+      "children" : [ {
+        "name" : "[US-444]/[9] I would like to see registration error, when I don't fill country input",
+        "uid" : "31c64f963b1fef8a",
+        "parentUid" : "ed55af8d9f5bde107a474db6e7527719",
+        "status" : "broken",
+        "time" : {
+          "start" : 1656062875978,
+          "stop" : 1656062892944,
+          "duration" : 16966
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : true,
+        "retriesCount" : 1,
+        "retriesStatusChange" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "ed55af8d9f5bde107a474db6e7527719"
+    }, {
+      "name" : "unknown error: cannot determine loading status\nfrom unknown error: unexpected command response\n  (Session info: chrome=103.0.5060.53)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-25887fd1-bd1f-44bc-9887-be193e8470fc', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1080-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: /tmp/.com.google.Chrome.oqzYpB}, goog:chromeOptions: {debuggerAddress: localhost:40961}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: cd85d1a16e1c905b21caac736b993afb",
+      "children" : [ {
+        "name" : "[US-222]/[7] I am not able to send request via contact us form, message input is missing",
+        "uid" : "1bcaf4c73ddd8d3",
+        "parentUid" : "6c788b5ba32b1fdd6d3a905cb409336c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1656062878405,
+          "stop" : 1656062894726,
+          "duration" : 16321
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : true,
+        "retriesCount" : 1,
+        "retriesStatusChange" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "6c788b5ba32b1fdd6d3a905cb409336c"
+    }, {
+      "name" : "unknown error: unexpected command response\n  (Session info: chrome=103.0.5060.53)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'travis-job-25887fd1-bd1f-44bc-9887-be193e8470fc', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1080-gcp', java.version: '14.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: /tmp/.com.google.Chrome.4tZWFF}, goog:chromeOptions: {debuggerAddress: localhost:36639}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 81449b17a1bd3584009f6d6589701b90",
+      "children" : [ {
+        "name" : "[US-222]/[8] I am not able to send request via contact us form, all inputs are missing",
+        "uid" : "858121dc17a4a2a4",
+        "parentUid" : "0ce72d5c83dc492874f710f9fe346a66",
+        "status" : "broken",
+        "time" : {
+          "start" : 1656062904271,
+          "stop" : 1656062916972,
+          "duration" : 12701
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : true,
+        "retriesCount" : 1,
+        "retriesStatusChange" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "0ce72d5c83dc492874f710f9fe346a66"
     } ],
     "uid" : "bdbf199525818fae7a8651db9eafe741"
   } ]
