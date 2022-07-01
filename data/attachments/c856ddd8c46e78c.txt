@@ -1,0 +1,26 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+09:26:54 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=103 in cache (valid until 10:22:36 01/07/2022 UTC)
+09:26:54 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome103=103.0.5060.53 in cache (valid until 09:22:36 02/07/2022 UTC)
+09:26:54 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 103.0.5060.53 (resolved driver for Chrome 103)
+09:26:54 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 103.0.5060.53 found in cache
+09:26:54 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/103.0.5060.53/chromedriver
+09:26:55 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:26:55 INFO  org.slf4j.Logger - [34mTEST NAME: US-333]/[4] I CAN'T CREATE AN ACCOUNT WITHOUT FILLING UP FIELDS[0m
+09:26:55 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:27:04 INFO  org.slf4j.Logger - [31mTEST RETRY (1/1): US-333]/[4] I CAN'T CREATE AN ACCOUNT WITHOUT FILLING UP FIELDS[0m
+09:27:04 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=103 in cache (valid until 10:22:36 01/07/2022 UTC)
+09:27:04 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome103=103.0.5060.53 in cache (valid until 09:22:36 02/07/2022 UTC)
+09:27:04 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 103.0.5060.53 (resolved driver for Chrome 103)
+09:27:04 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 103.0.5060.53 found in cache
+09:27:04 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/103.0.5060.53/chromedriver
+09:27:04 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:27:04 INFO  org.slf4j.Logger - [34mTEST NAME: US-333]/[4] I CAN'T CREATE AN ACCOUNT WITHOUT FILLING UP FIELDS[0m
+09:27:04 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:27:17 INFO  org.slf4j.Logger - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+09:27:18 ERROR org.slf4j.Logger - org.openqa.selenium.WebDriverException: unknown error: unexpected command response
+  (Session info: chrome=103.0.5060.53)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'travis-job-cb9eab59-5ed5-4fab-81b7-ec633d891b06', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1080-gcp', java.version: '14.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: /tmp/.com.google.Chrome.rMg71Z}, goog:chromeOptions: {debuggerAddress: localhost:33443}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 094304f4e011892a17522ba254a62bff
