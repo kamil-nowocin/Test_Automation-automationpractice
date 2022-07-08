@@ -1,0 +1,21 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+09:23:43 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=103 in cache (valid until 10:23:27 08/07/2022 UTC)
+09:23:43 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome103=103.0.5060.53 in cache (valid until 09:23:27 09/07/2022 UTC)
+09:23:43 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 103.0.5060.53 (resolved driver for Chrome 103)
+09:23:43 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 103.0.5060.53 found in cache
+09:23:43 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/103.0.5060.53/chromedriver
+09:23:43 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:23:43 INFO  org.slf4j.Logger - [34mTEST NAME: [US-111]/[2] I CAN'T LOG INTO AUTOMATIONPRACTICE.COM USING EMAIL "THANOS.ALARS@EXAMPLE.COM" & PASSWORD "12345"[0m
+09:23:43 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:23:44 INFO  org.slf4j.Logger - Page ready: "TRUE"
+09:24:00 INFO  org.slf4j.Logger - [31mTEST RETRY (1/1): [US-111]/[2] I CAN'T LOG INTO AUTOMATIONPRACTICE.COM USING EMAIL "THANOS.ALARS@EXAMPLE.COM" & PASSWORD "12345"[0m
+09:24:00 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=103 in cache (valid until 10:23:27 08/07/2022 UTC)
+09:24:00 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome103=103.0.5060.53 in cache (valid until 09:23:27 09/07/2022 UTC)
+09:24:00 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 103.0.5060.53 (resolved driver for Chrome 103)
+09:24:00 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 103.0.5060.53 found in cache
+09:24:00 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/103.0.5060.53/chromedriver
+09:24:01 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:24:01 INFO  org.slf4j.Logger - [34mTEST NAME: [US-111]/[2] I CAN'T LOG INTO AUTOMATIONPRACTICE.COM USING EMAIL "THANOS.ALARS@EXAMPLE.COM" & PASSWORD "12345"[0m
+09:24:01 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:24:04 INFO  org.slf4j.Logger - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+09:24:04 ERROR org.slf4j.Logger - java.lang.AssertionError: Ups, something went really bad! Even Michael Scofield couldn't have predicted that error! :) expected [http://automationpractice.com/index.php] but found [http://automationpractice.com/]
