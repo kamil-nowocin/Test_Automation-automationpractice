@@ -1,0 +1,27 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+09:26:43 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=103 in cache (valid until 10:23:23 15/07/2022 UTC)
+09:26:43 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome103=103.0.5060.53 in cache (valid until 09:23:23 16/07/2022 UTC)
+09:26:43 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 103.0.5060.53 (resolved driver for Chrome 103)
+09:26:43 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 103.0.5060.53 found in cache
+09:26:43 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/103.0.5060.53/chromedriver
+09:26:44 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:26:44 INFO  org.slf4j.Logger - [34mTEST NAME: [US-555]/[8] I WOULD LIKE TO USE SEARCH BOX AND BE ABLE TO SEE RESULTS SORTED BY: "PRICE: LOWEST FIRST"[0m
+09:26:44 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:27:07 INFO  org.slf4j.Logger - [31mTEST RETRY (1/1): [US-555]/[8] I WOULD LIKE TO USE SEARCH BOX AND BE ABLE TO SEE RESULTS SORTED BY: "PRICE: LOWEST FIRST"[0m
+09:27:07 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=103 in cache (valid until 10:23:23 15/07/2022 UTC)
+09:27:07 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome103=103.0.5060.53 in cache (valid until 09:23:23 16/07/2022 UTC)
+09:27:07 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 103.0.5060.53 (resolved driver for Chrome 103)
+09:27:07 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 103.0.5060.53 found in cache
+09:27:07 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/103.0.5060.53/chromedriver
+09:27:08 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:27:08 INFO  org.slf4j.Logger - [34mTEST NAME: [US-555]/[8] I WOULD LIKE TO USE SEARCH BOX AND BE ABLE TO SEE RESULTS SORTED BY: "PRICE: LOWEST FIRST"[0m
+09:27:08 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:27:26 INFO  org.slf4j.Logger - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+09:27:26 ERROR org.slf4j.Logger - org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
+from unknown error: unexpected command response
+  (Session info: chrome=103.0.5060.114)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'travis-job-15cdc169-8e30-4cb8-91b4-a9263fb7f21d', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1080-gcp', java.version: '14.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.114, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: /tmp/.com.google.Chrome.ghtvqn}, goog:chromeOptions: {debuggerAddress: localhost:39259}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: de1d6d75bf54c23739666ce3673cc600
