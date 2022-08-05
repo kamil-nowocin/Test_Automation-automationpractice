@@ -1,0 +1,41 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+09:25:21 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=104 in cache (valid until 10:25:19 05/08/2022 UTC)
+09:25:21 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome104=104.0.5112.79 in cache (valid until 09:25:19 06/08/2022 UTC)
+09:25:21 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 104.0.5112.79 (resolved driver for Chrome 104)
+09:25:21 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 104.0.5112.79 found in cache
+09:25:21 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/104.0.5112.79/chromedriver
+09:25:23 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:25:23 INFO  org.slf4j.Logger - [34mTEST NAME: [US-666]/[1] I WOULD LIKE TO BUY NEW "FADED SHORT SLEEVE T-SHIRTS"[0m
+09:25:23 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:25:38 INFO  org.slf4j.Logger - Page ready: "TRUE"
+09:25:54 INFO  org.slf4j.Logger - User login: "THOR.ODINSON@EXAMPLE.COM"
+09:25:54 INFO  org.slf4j.Logger - User password: "12345"
+09:26:27 INFO  org.slf4j.Logger - User clicked on: "WOMEN" submenu category
+09:26:44 INFO  org.slf4j.Logger - User clicked on product: "FADED SHORT SLEEVE T-SHIRTS"
+09:26:45 INFO  org.slf4j.Logger - Chosen product details:
+ > Quantity: "5"
+ > Size: "M"
+ > Color: "BLUE"
+09:27:32 INFO  org.slf4j.Logger - User order comment: "NO! IT REQUIRES SOMETHING WITH A LITTLE MORE KICK...PLUTONIUM!"
+09:27:48 INFO  org.slf4j.Logger - [31mTEST RETRY (1/1): [US-666]/[1] I WOULD LIKE TO BUY NEW "FADED SHORT SLEEVE T-SHIRTS"[0m
+09:27:48 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=104 in cache (valid until 10:25:19 05/08/2022 UTC)
+09:27:48 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome104=104.0.5112.79 in cache (valid until 09:25:19 06/08/2022 UTC)
+09:27:48 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 104.0.5112.79 (resolved driver for Chrome 104)
+09:27:48 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 104.0.5112.79 found in cache
+09:27:48 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/104.0.5112.79/chromedriver
+09:27:49 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:27:49 INFO  org.slf4j.Logger - [34mTEST NAME: [US-666]/[1] I WOULD LIKE TO BUY NEW "FADED SHORT SLEEVE T-SHIRTS"[0m
+09:27:49 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:28:24 INFO  org.slf4j.Logger - Page ready: "TRUE"
+09:28:40 INFO  org.slf4j.Logger - User login: "THOR.ODINSON@EXAMPLE.COM"
+09:28:40 INFO  org.slf4j.Logger - User password: "12345"
+09:28:40 INFO  org.slf4j.Logger - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+09:28:40 ERROR org.slf4j.Logger - org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[@class='account']//span"}
+  (Session info: chrome=104.0.5112.79)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'travis-job-12e4fc89-6dff-443d-b80b-88decf99b40d', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1080-gcp', java.version: '14.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.79, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: /tmp/.com.google.Chrome.iTRfgT}, goog:chromeOptions: {debuggerAddress: localhost:36935}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 281a641c2a3b4680d4b712a0bb9bada7
+*** Element info: {Using=xpath, value=//a[@class='account']//span}

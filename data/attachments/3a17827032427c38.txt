@@ -1,0 +1,36 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+09:36:07 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=104 in cache (valid until 10:25:19 05/08/2022 UTC)
+09:36:07 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome104=104.0.5112.79 in cache (valid until 09:25:19 06/08/2022 UTC)
+09:36:07 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 104.0.5112.79 (resolved driver for Chrome 104)
+09:36:07 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 104.0.5112.79 found in cache
+09:36:07 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/104.0.5112.79/chromedriver
+09:36:08 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:36:08 INFO  org.slf4j.Logger - [34mTEST NAME: [US-333]/[5] I CAN'T CREATE AN ACCOUNT, WHEN ONE OF REQUIRED FIELDS IS MISSING[0m
+09:36:08 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:36:36 INFO  org.slf4j.Logger - Page ready: "TRUE"
+09:36:56 INFO  org.slf4j.Logger - User valid email: "60AC0TENTHFUEHRER@YAHOO.CO.UK"
+09:37:06 INFO  org.slf4j.Logger - User first name: "THOR"
+09:37:06 INFO  org.slf4j.Logger - User last name: "ODINSON"
+09:37:06 INFO  org.slf4j.Logger - User password: "#PASSWD123"
+09:37:06 INFO  org.slf4j.Logger - User address: ""
+09:37:06 INFO  org.slf4j.Logger - User city: "CITY"
+09:37:07 INFO  org.slf4j.Logger - User state: "ALASKA"
+09:37:07 INFO  org.slf4j.Logger - [31mTEST RETRY (1/1): [US-333]/[5] I CAN'T CREATE AN ACCOUNT, WHEN ONE OF REQUIRED FIELDS IS MISSING[0m
+09:37:07 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=104 in cache (valid until 10:25:19 05/08/2022 UTC)
+09:37:07 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome104=104.0.5112.79 in cache (valid until 09:25:19 06/08/2022 UTC)
+09:37:07 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 104.0.5112.79 (resolved driver for Chrome 104)
+09:37:07 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 104.0.5112.79 found in cache
+09:37:07 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/104.0.5112.79/chromedriver
+09:37:07 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:37:07 INFO  org.slf4j.Logger - [34mTEST NAME: [US-333]/[5] I CAN'T CREATE AN ACCOUNT, WHEN ONE OF REQUIRED FIELDS IS MISSING[0m
+09:37:07 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:37:33 INFO  org.slf4j.Logger - Page ready: "TRUE"
+09:37:45 INFO  org.slf4j.Logger - User valid email: "024EBCONDEMNEDGRINDSTAFF@YAHOO.COM"
+09:37:56 INFO  org.slf4j.Logger - User first name: "THOR"
+09:37:56 INFO  org.slf4j.Logger - User last name: "ODINSON"
+09:37:56 INFO  org.slf4j.Logger - User password: "#PASSWD123"
+09:37:56 INFO  org.slf4j.Logger - User address: ""
+09:37:57 INFO  org.slf4j.Logger - User city: "CITY"
+09:37:57 INFO  org.slf4j.Logger - User state: "ALASKA"
+09:37:57 INFO  org.slf4j.Logger - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+09:37:57 ERROR org.slf4j.Logger - java.lang.AssertionError: Value which have been found didn't match expected value! expected [alaska] but found []
