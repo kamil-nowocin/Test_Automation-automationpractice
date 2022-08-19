@@ -1,0 +1,30 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+09:28:51 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=104 in cache (valid until 10:26:57 19/08/2022 UTC)
+09:28:51 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome104=104.0.5112.79 in cache (valid until 09:26:57 20/08/2022 UTC)
+09:28:51 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 104.0.5112.79 (resolved driver for Chrome 104)
+09:28:51 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 104.0.5112.79 found in cache
+09:28:51 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/104.0.5112.79/chromedriver
+09:28:52 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:28:52 INFO  org.slf4j.Logger - [34mTEST NAME: [US-666]/[2] I WOULD LIKE TO BUY NEW "BLOUSE"[0m
+09:28:52 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:28:52 INFO  org.slf4j.Logger - [31mTEST RETRY (1/1): [US-666]/[2] I WOULD LIKE TO BUY NEW "BLOUSE"[0m
+09:28:52 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=104 in cache (valid until 10:26:57 19/08/2022 UTC)
+09:28:52 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome104=104.0.5112.79 in cache (valid until 09:26:57 20/08/2022 UTC)
+09:28:52 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 104.0.5112.79 (resolved driver for Chrome 104)
+09:28:52 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 104.0.5112.79 found in cache
+09:28:52 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/104.0.5112.79/chromedriver
+09:28:53 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:28:53 INFO  org.slf4j.Logger - [34mTEST NAME: [US-666]/[2] I WOULD LIKE TO BUY NEW "BLOUSE"[0m
+09:28:53 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:29:26 INFO  org.slf4j.Logger - Page ready: "TRUE"
+09:29:45 INFO  org.slf4j.Logger - User login: "THOR.ODINSON@EXAMPLE.COM"
+09:29:45 INFO  org.slf4j.Logger - User password: "12345"
+09:30:09 INFO  org.slf4j.Logger - User clicked on: "WOMEN" submenu category
+09:30:15 INFO  org.slf4j.Logger - User clicked on product: "BLOUSE"
+09:30:15 INFO  org.slf4j.Logger - Chosen product details:
+ > Quantity: "2"
+ > Size: "S"
+ > Color: "BLACK"
+09:30:44 INFO  org.slf4j.Logger - User order comment: "ALL RIGHT. THIS IS AN OLDIE, BUT, UH... WELL, IT'S AN OLDIE WHERE I COME FROM."
+09:31:00 INFO  org.slf4j.Logger - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+09:31:00 ERROR org.slf4j.Logger - org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //span[@class='navigation_page']' (tried for 15 second(s) with 500 milliseconds interval)
