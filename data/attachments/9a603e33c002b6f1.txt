@@ -1,0 +1,32 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+09:32:35 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=104 in cache (valid until 10:28:10 26/08/2022 UTC)
+09:32:35 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome104=104.0.5112.79 in cache (valid until 09:28:10 27/08/2022 UTC)
+09:32:35 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 104.0.5112.79 (resolved driver for Chrome 104)
+09:32:35 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 104.0.5112.79 found in cache
+09:32:35 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/104.0.5112.79/chromedriver
+09:32:36 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:32:36 INFO  org.slf4j.Logger - [34mTEST NAME: [US-444]/[11] I WOULD LIKE TO SEE REGISTRATION ERROR, WHEN I DON'T FILL EMAIL ALIAS INPUT[0m
+09:32:36 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:33:06 INFO  org.slf4j.Logger - Page ready: "TRUE"
+09:33:29 INFO  org.slf4j.Logger - [31mTEST RETRY (1/1): [US-444]/[11] I WOULD LIKE TO SEE REGISTRATION ERROR, WHEN I DON'T FILL EMAIL ALIAS INPUT[0m
+09:33:29 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=104 in cache (valid until 10:28:10 26/08/2022 UTC)
+09:33:29 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome104=104.0.5112.79 in cache (valid until 09:28:10 27/08/2022 UTC)
+09:33:29 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 104.0.5112.79 (resolved driver for Chrome 104)
+09:33:29 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 104.0.5112.79 found in cache
+09:33:29 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/104.0.5112.79/chromedriver
+09:33:30 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:33:30 INFO  org.slf4j.Logger - [34mTEST NAME: [US-444]/[11] I WOULD LIKE TO SEE REGISTRATION ERROR, WHEN I DON'T FILL EMAIL ALIAS INPUT[0m
+09:33:30 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:34:06 INFO  org.slf4j.Logger - Page ready: "TRUE"
+09:34:23 INFO  org.slf4j.Logger - User valid email: "45022DEALARCHIE@GMX.COM"
+09:34:35 INFO  org.slf4j.Logger - User gender: "Female"
+09:34:35 INFO  org.slf4j.Logger - User first name: "GERALYN"
+09:34:36 INFO  org.slf4j.Logger - User last name: "ROCQUE"
+09:34:36 INFO  org.slf4j.Logger - User password: "MAN&NISHNESS"
+09:34:36 INFO  org.slf4j.Logger - User birthday: "11-1-1932"
+09:34:36 INFO  org.slf4j.Logger - User address: "SCHULIST LOCKS5209"
+09:34:36 INFO  org.slf4j.Logger - User chosen country: "UNITED STATES"
+09:34:37 INFO  org.slf4j.Logger - User chosen city: "WESTWOOD LAKE"
+09:34:37 INFO  org.slf4j.Logger - User chosen state: "UTAH"
+09:34:37 INFO  org.slf4j.Logger - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+09:34:37 ERROR org.slf4j.Logger - java.lang.AssertionError: Value which have been found didn't match expected value! expected [utah] but found []
