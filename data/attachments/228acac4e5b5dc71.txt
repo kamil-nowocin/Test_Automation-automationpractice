@@ -1,0 +1,29 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+09:27:42 DEBUG i.g.b.wdm.cache.ResolutionCache - Created new resolution cache file at /home/travis/.cache/selenium/resolution.properties
+09:27:43 DEBUG i.g.bonigarcia.wdm.versions.Shell - Running command on the shell: [google-chrome, --version]
+09:27:43 DEBUG i.g.bonigarcia.wdm.versions.Shell - Result: Google Chrome 105.0.5195.52
+09:27:43 DEBUG i.g.b.wdm.versions.VersionDetector - Latest version of chromedriver according to https://chromedriver.storage.googleapis.com/LATEST_RELEASE_105 is 105.0.5195.52
+09:27:43 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 105.0.5195.52 (resolved driver for Chrome 105)
+09:27:43 DEBUG i.g.b.wdm.cache.ResolutionCache - Storing resolution chrome=105 in cache (valid until 10:27:43 02/09/2022 UTC)
+09:27:43 DEBUG i.g.b.wdm.cache.ResolutionCache - Storing resolution chrome105=105.0.5195.52 in cache (valid until 09:27:43 03/09/2022 UTC)
+09:27:43 INFO  i.g.bonigarcia.wdm.WebDriverManager - Reading https://chromedriver.storage.googleapis.com/ to seek chromedriver
+09:27:43 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver to be downloaded chromedriver 105.0.5195.52
+09:27:43 INFO  i.g.bonigarcia.wdm.online.Downloader - Downloading https://chromedriver.storage.googleapis.com/105.0.5195.52/chromedriver_linux64.zip
+09:27:44 INFO  i.g.bonigarcia.wdm.online.Downloader - Extracting driver from compressed file chromedriver_linux64.zip
+09:27:44 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/105.0.5195.52/chromedriver
+09:27:46 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:27:46 INFO  org.slf4j.Logger - [34mTEST NAME: [US-444]/[1] I WOULD LIKE TO SEE REGISTRATION ERROR, WHEN I DON'T FILL FIRST NAME INPUT[0m
+09:27:46 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:28:08 INFO  org.slf4j.Logger - Page ready: "TRUE"
+09:28:13 INFO  org.slf4j.Logger - User valid email: "D4104UNTAMETINTS@AOL.COM"
+09:28:28 INFO  org.slf4j.Logger - [31mTEST RETRY (1/1): [US-444]/[1] I WOULD LIKE TO SEE REGISTRATION ERROR, WHEN I DON'T FILL FIRST NAME INPUT[0m
+09:28:28 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=105 in cache (valid until 10:27:43 02/09/2022 UTC)
+09:28:28 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome105=105.0.5195.52 in cache (valid until 09:27:43 03/09/2022 UTC)
+09:28:28 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 105.0.5195.52 (resolved driver for Chrome 105)
+09:28:28 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 105.0.5195.52 found in cache
+09:28:28 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/105.0.5195.52/chromedriver
+09:28:29 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:28:29 INFO  org.slf4j.Logger - [34mTEST NAME: [US-444]/[1] I WOULD LIKE TO SEE REGISTRATION ERROR, WHEN I DON'T FILL FIRST NAME INPUT[0m
+09:28:29 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:28:41 INFO  org.slf4j.Logger - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+09:28:41 ERROR org.slf4j.Logger - java.lang.AssertionError: Ups, something went really bad! Even Michael Scofield couldn't have predicted that error! :) expected [http://automationpractice.com/index.php] but found [http://automationpractice.com/]
