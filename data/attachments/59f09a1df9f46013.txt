@@ -1,0 +1,29 @@
+#logback.classic pattern: %d{HH:mm:ss} %-5level %logger{36} - %msg%n
+09:33:06 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=105 in cache (valid until 10:28:29 09/09/2022 UTC)
+09:33:06 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome105=105.0.5195.52 in cache (valid until 09:28:29 10/09/2022 UTC)
+09:33:06 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 105.0.5195.52 (resolved driver for Chrome 105)
+09:33:06 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 105.0.5195.52 found in cache
+09:33:06 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/105.0.5195.52/chromedriver
+09:33:07 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:33:07 INFO  org.slf4j.Logger - [34mTEST NAME: [US-444]/[2] I WOULD LIKE TO SEE REGISTRATION ERROR, WHEN I DON'T FILL LAST NAME INPUT[0m
+09:33:07 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:33:21 INFO  org.slf4j.Logger - Page ready: "TRUE"
+09:33:25 INFO  org.slf4j.Logger - User valid email: "B08A9LOOPEDPERALES@VERIZON.NET"
+09:33:41 INFO  org.slf4j.Logger - [31mTEST RETRY (1/1): [US-444]/[2] I WOULD LIKE TO SEE REGISTRATION ERROR, WHEN I DON'T FILL LAST NAME INPUT[0m
+09:33:41 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=105 in cache (valid until 10:28:29 09/09/2022 UTC)
+09:33:41 DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome105=105.0.5195.52 in cache (valid until 09:28:29 10/09/2022 UTC)
+09:33:41 INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 105.0.5195.52 (resolved driver for Chrome 105)
+09:33:41 DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 105.0.5195.52 found in cache
+09:33:41 INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/travis/.cache/selenium/chromedriver/linux64/105.0.5195.52/chromedriver
+09:33:42 INFO  org.slf4j.Logger - ================================================ TEST STARTED ================================================
+09:33:42 INFO  org.slf4j.Logger - [34mTEST NAME: [US-444]/[2] I WOULD LIKE TO SEE REGISTRATION ERROR, WHEN I DON'T FILL LAST NAME INPUT[0m
+09:33:42 INFO  org.slf4j.Logger - Chosen executor: "CHROME"
+09:33:58 INFO  org.slf4j.Logger - Page ready: "TRUE"
+09:34:06 INFO  org.slf4j.Logger - User valid email: "9E62FFRUITFULVANNIELLO@LIVE.COM"
+09:34:21 INFO  org.slf4j.Logger - ====================================== TEST FINISHED WITH [31mFAILED STATUS [0m======================================
+09:34:21 ERROR org.slf4j.Logger - org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on LINUX (d1fd95c27688158e27166b18162e6908)] -> xpath: //input[@id='id_gender1']] (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'travis-job-caceada5-fd3c-45c6-bc4d-19b656a26328', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-1080-gcp', java.version: '14.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: /tmp/.com.google.Chrome.P7ScKG}, goog:chromeOptions: {debuggerAddress: localhost:42541}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: d1fd95c27688158e27166b18162e6908
